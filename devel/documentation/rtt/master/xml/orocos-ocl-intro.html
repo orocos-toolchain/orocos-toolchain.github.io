@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Tutorial on the Component Interface</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document gives an introduction on the different aspects of interfacing an Orocos component. This is an excerpt from the Component Builder's Manual and walks through the 'Hello World' program." /></head><body><div class="book"><div class="titlepage"><div><div><h1 class="title"><a id="idp52030112"></a>
+      Tutorial on the Component Interface
+    </h1></div><div><h2 class="subtitle"><span class="emphasis"><em>Open RObot COntrol Software</em></span>
+    </h2></div><div><h2 class="subtitle">2.8.1</h2></div><div><p class="copyright">Copyright © 2002,2003,2004,2005,2006 Peter Soetens, FMTC</p></div><div><div class="legalnotice"><a id="idp52037040"></a><p>
+	Orocos Version 2.8.1.
+      </p><p>
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.1 or
+	any later version published by the Free Software Foundation, with no
+	Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+	Texts. A copy of this license can be found at
+	<a class="ulink" href="http://www.fsf.org/copyleft/fdl.html" target="_top">http://www.fsf.org/copyleft/fdl.html</a>.
+      </p></div></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><p>
+	This document gives an introduction on the different aspects
+	of interfacing an <acronym class="acronym">Orocos</acronym> component. This is an excerpt from 
+	the Component Builder's Manual and walks through the 'Hello World'
+	program.
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="chapter"><a href="#orocos-ocl-intro">1. </a></span></dt><dd><dl><dt><span class="section"><a href="#task-context-intro">1. Introduction</a></span></dt><dt><span class="section"><a href="#idp61519696">2. Hello World !</a></span></dt><dd><dl><dt><span class="section"><a href="#idp51820720">2.1. Using the Deployer</a></span></dt><dt><span class="section"><a href="#idp51986880">2.2. Starting your First Application</a></span></dt><dt><span class="section"><a href="#idp62901408">2.3. Displaying a TaskContext</a></span></dt><dt><span class="section"><a href="#idp62916448">2.4. Listing the Interface</a></span></dt><dt><span class="section"><a href="#idp62923312">2.5. Calling an Operation</a></span></dt><dt><span class="section"><a href="#idp62927200">2.6. Sending a Operation</a></span></dt><dt><span class="section"><a href="#idp62934288">2.7. Changing Values</a></span></dt><dt><span class="section"><a href="#idp62940736">2.8. Reading and Writing Ports</a></span></dt><dt><span class="section"><a href="#idp62946544">2.9. Last Words</a></span></dt></dl></dd></dl></dd></dl></div><div class="list-of-figures"><p><strong>List of Figures</strong></p><dl><dt>1.1. <a href="#fig-task-peers">
+	Typical application example for distributed control
+      </a></dt><dt>1.2. <a href="#fig-hello-world-deployment">
+	  Dynamic vs static loading of components
+	</a></dt><dt>1.3. <a href="#fig-hello-world">
+	Schematic Overview of the Hello Component.
+      </a></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="orocos-ocl-intro"></a>Chapter 1. </h1></div></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#task-context-intro">1. Introduction</a></span></dt><dt><span class="section"><a href="#idp61519696">2. Hello World !</a></span></dt><dd><dl><dt><span class="section"><a href="#idp51820720">2.1. Using the Deployer</a></span></dt><dt><span class="section"><a href="#idp51986880">2.2. Starting your First Application</a></span></dt><dt><span class="section"><a href="#idp62901408">2.3. Displaying a TaskContext</a></span></dt><dt><span class="section"><a href="#idp62916448">2.4. Listing the Interface</a></span></dt><dt><span class="section"><a href="#idp62923312">2.5. Calling an Operation</a></span></dt><dt><span class="section"><a href="#idp62927200">2.6. Sending a Operation</a></span></dt><dt><span class="section"><a href="#idp62934288">2.7. Changing Values</a></span></dt><dt><span class="section"><a href="#idp62940736">2.8. Reading and Writing Ports</a></span></dt><dt><span class="section"><a href="#idp62946544">2.9. Last Words</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="task-context-intro"></a>1. Introduction</h2></div></div></div><p>
+      This manual documents how multi-threaded components can be
+      defined in <acronym class="acronym">Orocos</acronym> such that they form a thread-safe
+      robotics/machine control application.  Each control component is
+      defined as a "TaskContext", which defines the environment or
+      "context" in which an application specific task is executed. The
+      context is described by the three Orocos primitives: Operation, Property,
+      and Data Port. This document defines how a user
+      can write his own task context and how it can be used in an
+      application.
+    </p><div class="figure"><a id="fig-task-peers"></a><p class="title"><strong>Figure 1.1. 
+	Typical application example for distributed control
+      </strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/TaskPeers2.png" alt="Typical application example for distributed control" /><div class="caption"><p>
+	    Components are loaded into the process by a deployer,
+	    which gets its configuration through an XML file.
+	    Communication between processes is transparant to the
+	    component, but your data must be known to Orocos
+	    (cfr 'typekits' and 'transports'). Most new users start
+	    with a single process however, using the 'deployer'
+	    application.
+	  </p></div></div></div></div><br class="figure-break" /><p>
+      A component is a basic unit of functionality which executes one
+      or more (real-time) programs in a single thread.  The program
+      can vary from a mere C/C++ function over a real-time program
+      script to a real-time hierarchical state machine. The focus is
+      completely on thread-safe time determinism. Meaning, that the
+      system is free of priority-inversions, and all operations are
+      lock-free.  Real-time components can communicate with non
+      real-time components (and vice verse) transparently.
+    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+	In this manual, the words task and component are used as equal
+	words, meaning a software component built using the C++
+	TaskContext class.
+      </p></td></tr></table></div><p>
+      The Orocos Component Model enables :
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Lock free, thread-safe, inter-component communication in a single process.</p></li><li class="listitem"><p>Thread-safe, inter-process communication between (distributed) processes.</p></li><li class="listitem"><p>Communication between hard Real-Time and non Real-Time components.</p></li><li class="listitem"><p>Deterministic execution time during communication
+	  for the higher priority thread.</p></li><li class="listitem"><p>Synchronous and asynchronous communication between components.</p></li><li class="listitem"><p>Interfaces for run-time component introspection.</p></li><li class="listitem"><p>C++ class implementations and scripting interface for all the above.</p></li></ul></div><p>
+    </p><p>
+      The Scripting chapter gives more details about script syntax
+      for state machines and programs.
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp61519696"></a>2. Hello World !</h2></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
+				Before you proceed, make sure you printed the <a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.x/doc-xml/orocos_cheat_sheet.pdf" target="_top">Orocos Cheat Sheet</a> and
+				<a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.x/doc-xml/rtt_cheat_sheet.pdf" target="_top">RTT Cheat Sheet</a> ! They will definately guide you through this lengthy
+				text.
+			</p></td></tr></table></div><p>
+      This section introduces tasks through the "hello world"
+      application, for which you will create a component package using the
+			<span class="command"><strong>orocreate-pkg</strong></span> command on the command line:
+			</p><pre class="programlisting">$	rosrun ocl orocreate-pkg HelloWorld    # ... for ROS users 
+			</pre><p>
+			</p><pre class="programlisting">$	orocreate-pkg HelloWorld    # ... for non-ROS users 
+			</pre><p>
+    </p><p>
+			In a properly configured installation, you'll be able to enter this
+			directory and build your package right away:
+			</p><pre class="programlisting">$	cd HelloWorld
+$ make
+			</pre><p>
+			In case you are <span class="emphasis"><em>not</em></span> using ROS to manage your packages, you also need to 
+			install your package:
+			</p><pre class="programlisting">$ make install
+			</pre><p>
+		</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51820720"></a>2.1. Using the Deployer</h3></div></div></div><p>
+	The way we interact with TaskContexts during development of an
+	Orocos application is through the <span class="emphasis"><em>deployer
+	</em></span>.  This application consists of the 
+	<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../../../ocl/v2.x/api/html/classOCL_1_1DeploymentComponent.html">DeploymentComponent</a> which is responsible
+	for creating applications out of component libraries and the 
+	<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../../../ocl/v2.x/api/html/classOCL_1_1DeploymentComponent.html">DeploymentComponent</a>  which is a powerful console
+	tool which helps you to explore, execute and debug
+	componentss in running
+	programs. 
+			</p><p>
+			The TaskBrowser uses the GNU readline library to easily enter
+			commands to the tasks in your system. This means you can press
+			TAB to complete your commands or press the up arrow to scroll
+			through previous commands. 
+      </p><p>
+				You can start the deployer in any directory like this:
+				</p><pre class="programlisting"> $ deployer-gnulinux
+				</pre><p>
+				or in a ROS environment:
+				</p><pre class="programlisting"> $ rosrun ocl deployer-gnulinux
+				</pre><p>
+			</p><p>
+				This is going to be your primary tool to explore the Orocos
+				component model so get your seatbelts fastened!
+			</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51986880"></a>2.2. Starting your First Application</h3></div></div></div><p>
+	Now let's start the HelloWorld application we just created with
+	<span class="command"><strong>orocreate-pkg</strong></span>.
+      </p><p>
+	Create an 'helloworld.ops' Orocos Program Script (ops) file with
+	these contents:
+	</p><pre class="programlisting">
+ require("print")        // necessary for 'print.ln'
+ import("HelloWorld")    // 'HelloWorld' is a directory name to import      
+
+ print.ln("Script imported HelloWorld package:")
+ displayComponentTypes() // Function of the DeploymentComponent
+ 
+ loadComponent("Hello", "HelloWorld") // Creates a new component of type 'HelloWorld'
+ print.ln("Script created Hello Component with period: " + Hello.getPeriod() )
+</pre><p>
+        and load it into the deployer using this command:
+	<span class="command"><strong>$ deployer-gnulinux -s helloworld.ops -linfo</strong></span>
+	This command imports the HelloWorld package and any component library 
+	in there. Then it creates a component with name "Hello". We call this
+	a dynamic deployment, since the decision to create components is done
+	at run-time.
+			</p><p>
+			You could also create your component in a C++ program. We call this
+			static deployment, since the components are fixed at compilation time.
+			The figure below illustrates this difference:
+      </p><div class="figure"><a id="fig-hello-world-deployment"></a><p class="title"><strong>Figure 1.2. 
+	  Dynamic vs static loading of components
+	</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/HelloDeployment.png" alt="Dynamic vs static loading of components" /><div class="caption"><p>The 'helloworld' executable is a static deployment of one component in a process, which
+	    means it is hard-coded in the helloworld.cpp file.
+	    In contrast, using the deployer application allows you to load a component library dynamically.
+	    </p></div></div></div></div><br class="figure-break" /><p>
+      The output of the deployer should be similar to what we show below. Finally, type <span class="command"><strong>cd
+	Hello</strong></span> to start with the exercise.
+      </p><pre class="screen">
+0.000 [ Info   ][Logger] Real-time memory: 14096 bytes free of 20480 allocated.
+0.000 [ Info   ][Logger] No RTT_COMPONENT_PATH set. Using default: <span class="emphasis"><em>.../rtt/install/lib/orocos</em></span>
+0.000 [ Info   ][Logger] plugin 'rtt' not loaded before.
+
+<span class="emphasis"><em>...</em></span>
+
+0.046 [ Info   ][Logger] Loading Service or Plugin scripting in TaskContext Deployer
+0.047 [ Info   ][Logger] Found complete interface of requested service 'scripting'
+0.047 [ Info   ][Logger] Running Script helloworld.ops ...
+0.050 [ Info   ][DeploymentComponent::import] Importing directory <span class="emphasis"><em>.../HelloWorld/lib/orocos/gnulinux</em></span> ...
+0.050 [ Info   ][DeploymentComponent::import] Loaded component type 'HelloWorld'
+Script imported HelloWorld package:
+I can create the following component types: 
+   HelloWorld
+   OCL::ConsoleReporting
+   OCL::FileReporting
+   OCL::HMIConsoleOutput
+   OCL::HelloWorld
+   OCL::TcpReporting
+   OCL::TimerComponent
+   OCL::logging::Appender
+   OCL::logging::FileAppender
+   OCL::logging::LoggingService
+   OCL::logging::OstreamAppender
+   TaskContext
+0.052 [ Info   ][Thread] Creating Thread for scheduler: 0
+0.052 [ Info   ][Hello] Thread created with scheduler type '0', priority 0, cpu affinity 15 and period 0.
+HelloWorld constructed !
+0.052 [ Info   ][DeploymentComponent::loadComponent] Adding Hello as new peer:  OK.
+Script created Hello Component with period: 0
+0.053 [ Info   ][Thread] Creating Thread for scheduler: 0
+0.053 [ Info   ][TaskBrowser] Thread created with scheduler type '0', priority 0, cpu affinity 15 and period 0.
+   Switched to : Deployer
+0.053 [ Info   ][Logger] Entering Task Deployer
+
+  This console reader allows you to browse and manipulate TaskContexts.
+  You can type in an operation, expression, create or change variables.
+  (type 'help' for instructions and 'ls' for context info)
+    TAB completion and HISTORY is available ('bash' like)
+
+Deployer [S]&gt; cd Hello
+   Switched to : Hello
+Hello [S]&gt;
+      </pre><p>
+	The first <span class="command"><strong>[ Info ]</strong></span> lines are printed by the
+	Orocos <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1Logger.html">Logger</a>, which has been
+	configured to display informative messages to
+	console with the <span class="command"><strong>-linfo</strong></span> program option.
+	Normally, only warnings or worse are displayed by
+	Orocos. You can always watch the log file 'orocos.log' in the
+	same directory to see all messages.  After the <span class="command"><strong>[Log
+	Level]</strong></span>, the <span class="command"><strong>[Origin]</strong></span> of the
+	message is printed, and finally the message itself. These
+	messages leave a trace of what was going on in the main()
+	function before the prompt appeared.
+      </p><p>
+	Depending on what you type, the TaskBrowser will act
+	differently.  The built-in commands <span class="command"><strong>cd</strong></span>,
+	<span class="command"><strong>help</strong></span>, <span class="command"><strong>quit</strong></span>,
+	<span class="command"><strong>ls</strong></span> etc,  are seen as commands to the TaskBrowser
+	itself, if you typed something else, it tries to execute your
+	command according to the Orocos scripting language syntax.
+      </p><pre class="screen">
+Hello[R] &gt; <span class="command"><strong>1+1</strong></span>
+   = <span class="command"><strong>2</strong></span>
+      </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp62901408"></a>2.3. Displaying a TaskContext</h3></div></div></div><p>
+      A component's interface consists of: Attributes and Properties, Operations,
+      and Data Flow ports which are all public.
+      The class <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1TaskContext.html">TaskContext</a> 
+      groups all these interfaces and serves as the basic building
+      block of applications. A component developer 'builds'
+      these interfaces using the instructions found in this manual.
+    </p><div class="figure"><a id="fig-hello-world"></a><p class="title"><strong>Figure 1.3. 
+	Schematic Overview of the Hello Component.
+      </strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/HelloWorld.png" alt="Schematic Overview of the Hello Component." /><div class="caption"><p>Our hello world component.
+	  </p></div></div></div></div><br class="figure-break" /><p>
+	To display the contents of the current component, type
+	<span class="command"><strong>ls</strong></span>, and switch to one of the listed peers
+	with <span class="command"><strong>cd</strong></span>, while <span class="command"><strong>cd ..</strong></span>
+	takes you one peer back in history. We have two peers here:
+	the Deployer and your component, Hello.
+      </p><pre class="screen">
+Hello [S]&gt; <span class="command"><strong>ls</strong></span>
+
+ Listing TaskContext Hello[S] :
+
+ Configuration Properties: (none)
+
+ Provided Interface:
+  Attributes   : (none)
+  Operations   : activate cleanup configure error getCpuAffinity getPeriod inFatalError inRunTimeError isActive isConfigured isRunning setCpuAffinity setPeriod start stop trigger update 
+
+ Data Flow Ports: (none)
+
+ Services: 
+(none)
+
+ Requires Operations :  (none)
+ Requests Services   :  (none)
+
+ Peers        : (none)
+Hello [S]&gt;
+      </pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>To get a quick overview of the commands, type
+	<span class="command"><strong>help</strong></span>.
+	</p></td></tr></table></div><p>
+	The first line shows the status between square brackets. The [S] here
+	means that the component is in the stopped state. Other states can 
+	be 'R' - Running, 'U' - Unconfigured, 'E' - run-time Error, 'F' - Fatal error,
+	'X' - C++ eXception in user code.
+      </p><p>
+	First you get a list of the Properties and Attributes
+	(alphabetical) of the current component. Properties are meant
+	for configuration and can be written to disk. Attributes export
+	a C++ class value to the interface, to be usable by scripts or
+	for debugging and are not persistent.
+      </p><p>
+	Next, the operations of this component are listed: each component
+	has some universal functions like activate, start, getPeriod etc.
+      </p><p>
+				You can see that the component is pretty empty: no data flow ports,
+				services or peers. We will add some of these right away.
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp62916448"></a>2.4. Listing the Interface</h3></div></div></div><p>
+	To get an overview of the Task's interface, you can use the help
+	command, for example <span class="emphasis"><em>help this</em></span> or <span class="emphasis"><em>help this.activate</em></span>
+	or just short: <span class="emphasis"><em>help activate</em></span>
+			</p><pre class="screen">
+Hello [R]&gt; <span class="command"><strong>help this</strong></span>
+
+Printing Interface of 'Hello' :
+
+ <span class="emphasis"><em>activate</em></span>( ) : bool
+   Activate the Execution Engine of this TaskContext (= events and commands).
+ <span class="emphasis"><em>cleanup</em></span>( ) : bool
+   Reset this TaskContext to the PreOperational state (write properties etc).
+...
+   Stop the Execution Engine of this TaskContext.
+
+Hello [R]&gt; <span class="command"><strong>help getPeriod</strong></span>
+ <span class="emphasis"><em>getPeriod</em></span>( ) : double
+Get the configured execution period. -1.0: no thread associated, 0.0: non periodic, &gt; 0.0: the period.
+
+Hello [R]&gt; 
+      </pre><p>
+	Now we get more details about the operations
+	registered in the public interface. We see now that
+	the <span class="emphasis"><em>getPeriod</em></span> operations takes no arguments
+	You can invoke each operation right away.
+    </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp62923312"></a>2.5. Calling an Operation</h3></div></div></div><pre class="screen">
+Hello [R]&gt; <span class="command"><strong>getPeriod()</strong></span>
+ = <span class="command"><strong>0</strong></span>
+      </pre><p>
+	Operations are called directly and the TaskBrowser prints the
+	result. The return value of getPeriod() was a double, which is
+	0. This works just like calling a 'C' function.
+	You can express calling explicitly by writing:
+	<span class="command"><strong>getPeriod.call()</strong></span>.
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp62927200"></a>2.6. Sending a Operation</h3></div></div></div><p>
+	When an operation is <span class="emphasis"><em>sent</em></span> to
+	the Hello component, another thread will execute it on
+	behalf of the sender. Each sent method returns a SendHandle object.
+      </p><pre class="screen">
+Hello [R]&gt; <span class="command"><strong>getPeriod.send()</strong></span>
+ = (unknown_t)
+      </pre><p>
+	The returned SendHandle must be stored in a SendHandle attribute
+	to be useful:
+      </p><pre class="screen">
+Hello [R]&gt; <span class="command"><strong>var SendHandle sh</strong></span>
+Hello [R]&gt; <span class="command"><strong>sh = getPeriod.send()</strong></span>
+ = true
+Hello [R]&gt; <span class="command"><strong>sh.collectIfDone( ret )</strong></span>
+ = SendSuccess
+Hello [R]&gt; <span class="command"><strong>ret</strong></span>
+ = 0
+      </pre><p>
+				SendHandles are further explained down the document.
+				They are not required understanding for a first discovery
+				of the Orocos world.
+			</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp62934288"></a>2.7. Changing Values</h3></div></div></div><p>
+	Besides calling or sending component methods, you can alter the
+	attributes of any task, program or state machine. The
+	TaskBrowser will confirm validity of the assignment with
+	the contents of the variable. Since Hello doesn't have any 
+	attributes, we create one dynamically:
+      </p><pre class="screen">
+Hello [R]&gt; <span class="command"><strong>var string the_attribute = "HelloWorld"</strong></span>
+Hello [R]&gt; <span class="command"><strong>the_attribute</strong></span>
+ = <span class="command"><strong>Hello World</strong></span>
+Hello [R]&gt; <span class="command"><strong>the_attribute = "Veni Vidi Vici !"</strong></span>
+ = <span class="command"><strong>"Veni Vidi Vici !"</strong></span>
+Hello [R]&gt; <span class="command"><strong>the_attribute</strong></span>
+ = <span class="command"><strong>Veni Vidi Vici !</strong></span>
+      </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp62940736"></a>2.8. Reading and Writing Ports</h3></div></div></div><p>
+	The Data Ports allow seamless communication of calculation or 
+	measurement results between components. Adding and using ports is
+	described in <a class="xref" href="#">???</a>.
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp62946544"></a>2.9. Last Words</h3></div></div></div><p>
+	Last but not least, hitting TAB twice, will show you a list of
+	possible completions, such as peers, services or methods.
+      </p><p>
+	TAB completion works even across peers, such that you can type
+	a TAB completed command to another peer than the current peer.
+      </p><p>
+	In order to quit the TaskBrowser, enter <span class="command"><strong>quit</strong></span>:
+      </p><pre class="screen">
+ Hello [R]&gt; <span class="command"><strong>quit</strong></span>
+
+1575.720 [ Info   ][ExecutionEngine::setActivity] Hello is disconnected from its activity.
+1575.741 [ Info   ][Logger] Orocos Logging Deactivated.      
+      </pre><p>
+	The TaskBrowser Component is application independent, so that
+	your end user-application might need a more suitable
+	interface. However, for testing and inspecting what is
+	happening inside your real-time programs, it is a very useful
+	tool. The next sections show how you can add properties,
+	methods etc to a TaskContext.
+      </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+	  If you want a more in-depth tutorial, see the rtt-exercises
+	  package which covers each aspect also shown in this manual.
+	</p></td></tr></table></div></div></div></div></div></body></html>

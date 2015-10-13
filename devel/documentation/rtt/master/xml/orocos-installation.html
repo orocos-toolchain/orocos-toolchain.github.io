@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The OROCOS Real-Time Toolkit Installation Guide</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document explains how the Real-Time Toolkit of Orocos, the Open RObot COntrol Software project must be installed and configured." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp52030224"></a>
+      The OROCOS Real-Time Toolkit Installation Guide 
+    </h2></div><div><h3 class="subtitle"><em><span class="emphasis"><em>Real-Time Toolkit Version 2.8.1</em></span></em></h3></div><div><p class="copyright">Copyright © 2002,2003,2004,2005,2006,2007,2008,2009,2010 Peter Soetens, FMTC</p></div><div><div class="legalnotice"><a id="idp55642976"></a><p>
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.1 or
+	any later version published by the Free Software Foundation, with no
+	Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+	Texts. A copy of this license can be found at
+	<a class="ulink" href="http://www.fsf.org/copyleft/fdl.html" target="_top">http://www.fsf.org/copyleft/fdl.html</a>.
+      </p></div></div><div><div class="revhistory"><table style="border-style:solid; width:100%;" summary="Revision History"><tr><th align="left" valign="top" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 1.0.0</td><td align="left">27 Oct 2006</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Simplified build system.</td></tr><tr><td align="left">Revision 1.0.1</td><td align="left">21 Nov 2006</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Updated build/run/doc dependencies.</td></tr><tr><td align="left">Revision 1.1.0</td><td align="left">13 Apr 2007</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Rewritten for Orocos 1.2.0.</td></tr><tr><td align="left">Revision 1.2.1</td><td align="left">02 June 2007</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Minor clarifications.</td></tr><tr><td align="left">Revision 1.4.0</td><td align="left">22 Nov 2007</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Changes in the library name (-target) and .pc files</td></tr><tr><td align="left">Revision 1.4.1</td><td align="left">12 Feb 2008</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Added Debian/Ubuntu packages install instructions and updated
+	Getting started/Makefile section.</td></tr><tr><td align="left">Revision 1.4.2</td><td align="left">22 Apr 2008</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Improved/fixed Debian/Ubuntu package install instructions.</td></tr><tr><td align="left">Revision 1.6.0</td><td align="left">02 Aug 2008</td><td align="left">kg</td></tr><tr><td align="left" colspan="3">Added Mac OS X install instructions.</td></tr><tr><td align="left">Revision 1.10.0</td><td align="left">14 Sept 2009</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Added pointers to win32 install instructions</td></tr><tr><td align="left">Revision 1.10.1</td><td align="left">14 Oct 2009</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Clarified instructions for non-standard environments, cleanups.</td></tr><tr><td align="left">Revision 2.0.0</td><td align="left">28 Aug 2010</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Update to 2.0.0 release.</td></tr><tr><td align="left">Revision 2.1.0</td><td align="left">11 Oct 2010</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Added UseOrocos.cmake macros.</td></tr></table></div></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><p>
+	This document explains how the
+	Real-Time Toolkit of <a class="ulink" href="http://www.orocos.org" target="_top"><acronym class="acronym">Orocos</acronym></a>,
+	the <span class="emphasis"><em>Open RObot COntrol Software</em></span> project
+	must be installed and configured.
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#first-source-tree">1.  Setting up your <acronym class="acronym">Orocos</acronym> build environment </a></span></dt><dd><dl><dt><span class="section"><a href="#setup_intro">1.1. Introduction</a></span></dt><dt><span class="section"><a href="#basic-install-win32">1.2. Basic Real-Time Toolkit Installation on Windows-like systems</a></span></dt><dt><span class="section"><a href="#basic-install-unix">1.3. Basic Real-Time Toolkit Installation on Unix-like systems</a></span></dt></dl></dd><dt><span class="section"><a href="#getting-started">2. Getting Started with the Code</a></span></dt><dd><dl><dt><span class="section"><a href="#idp56716176">2.1. Examples</a></span></dt><dt><span class="section"><a href="#idp56718176">2.2. Building components and applications</a></span></dt><dt><span class="section"><a href="#idp56744416">2.3. What about main() ?</a></span></dt></dl></dd><dt><span class="section"><a href="#install-configure">3. Detailed Configuration using 'CMake'</a></span></dt><dd><dl><dt><span class="section"><a href="#idp56756560">3.1. Real-Time Toolkit Build Configuration</a></span></dt><dt><span class="section"><a href="#idp56764800">3.2. Configuring the target Operating System</a></span></dt><dt><span class="section"><a href="#install-flags">3.3. Setting Build Compiler Flags</a></span></dt><dt><span class="section"><a href="#general_setup_rtai">3.4. Building for RTAI / LXRT</a></span></dt><dt><span class="section"><a href="#general_setup_xeno">3.5. Building for Xenomai (version 2.2.0 or newer)</a></span></dt><dt><span class="section"><a href="#install-config-corba">3.6. Configuring for CORBA</a></span></dt></dl></dd><dt><span class="section"><a href="#cross-compile">4. Cross Compiling Orocos</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="first-source-tree"></a>1.  Setting up your <acronym class="acronym">Orocos</acronym> build environment </h2></div></div></div><p>
+      </p><div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Warning: Big Fat Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/icons/warning.png" /></td><th align="left">Big Fat Warning</th></tr><tr><td align="left" valign="top"><p> We're gradually moving
+    the contents of the installation manual into the wiki.
+  Check out the <a class="ulink" href="http://www.orocos.org/wiki/rtt/installation" target="_top">The RTT installation wiki</a>
+  for completeness.</p></td></tr></table></div><p>
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="setup_intro"></a>1.1. Introduction</h3></div></div></div><p>
+	This sections explains the supported Orocos targets
+	and the Orocos versioning scheme.
+      </p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="supported-platforms"></a>1.1.1. Supported platforms (targets)</h4></div></div></div><p>
+	  <acronym class="acronym">Orocos</acronym> was designed with portability in mind. Currently, we support RTAI/LXRT
+	  (<a class="ulink" href="http://www.rtai.org" target="_top">http://www.rtai.org</a>), GNU/Linux
+	  userspace, Xenomai (<a class="ulink" href="http://www.xenomai.org" target="_top">Xenomai.org</a>), Mac OS X (<a class="ulink" href="http://www.apple.com/macosx/" target="_top">apple.com</a>) and native Windows
+	  using Microsoft Visual Studio. So,
+	  you can first write your software as a normal Linux/Mac OS X
+	  program, using the framework for testing and debugging
+	  purposes in plain userspace (Linux/Mac OS X) and recompile
+	  later to a real-time target or MS Windows.
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="vers-scheme"></a>1.1.2. The versioning scheme</h4></div></div></div><p>
+	  A particular version is represented by three
+	  numbers separated by dots.For example :
+	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>2.2.1 : Release 2, Feature update 2, bug-fix revision
+		1.</p></li></ul></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="build-deps"></a>1.1.3. Dependencies on other Libraries</h4></div></div></div><p>Before you install Orocos, verify that you have the
+	following software installed on your platform : </p><div class="table"><a id="idp51954368"></a><p class="title"><strong>Table 1. Build Requirements</strong></p><div class="table-contents"><table summary="Build Requirements" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>Program / Library</th><th><span class="emphasis"><em>Minimum</em></span> Version</th><th>Description</th></tr></thead><tbody><tr><td>CMake</td><td>2.6.3  (all platforms)</td><td>See <a class="ulink" href="http://www.cmake.org/cmake/resources/software.html" target="_top">resources on cmake.org</a>
+		for pre-compiled packages in case your distribution
+		does not support this version</td></tr><tr><td>Boost C++ Library</td><td>1.33.0 (1.40.0 recommended!)</td><td><a class="ulink" href="http://www.boost.org" target="_top">Boost.org</a> from version
+		1.33.0 on has a very efficient (time/space) lock-free
+		smart pointer implementation which is used by
+		Orocos. 1.36.0 has boost::intrusive which we require on Windows with MSVS.
+		1.40.0 has a shared_ptr implementation we require when building Service objects.</td></tr><tr><td>Boost C++ Test Library</td><td>1.33.0 (During build only)</td><td><a class="ulink" href="http://www.boost.org" target="_top">Boost.org</a> test
+		library ('unit_test_framework') is required if you build the RTT
+		from source and ENABLE_TESTS=ON (default). The RTT libraries
+		don't depend on this library, it is only used for building
+		our unit tests.</td></tr><tr><td>Boost C++ Thread Library</td><td>1.33.0 (Mac OS-X only)</td><td><a class="ulink" href="http://www.boost.org" target="_top">Boost.org</a> thread
+		library is required on Mac OS-X.</td></tr><tr><td>Boost C++ Serialization Library</td><td>1.37.0</td><td><a class="ulink" href="http://www.boost.org" target="_top">Boost.org</a> serialization
+		library is required for the type system and the MQueue transport.</td></tr><tr><td>GNU gcc / g++ Compilers</td><td>3.4.0  (Linux/Cygwin/Mac OS X)</td><td><a class="ulink" href="http://gcc.gnu.org" target="_top">gcc.gnu.org</a>
+		Orocos builds with the GCC 4.x series as well.</td></tr><tr><td>MSVS Compilers</td><td>2005</td><td>One can download the MS VisualStudio 2008 Express edition for free.</td></tr><tr><td>Xerces C++ Parser</td><td>2.1 (Optional)</td><td><a class="ulink" href="http://xml.apache.org/xerces-c/" target="_top">Xerces website</a>
+		Versions 2.1 until 3.1 are known to work. If not found, an internal
+		XML parser is used.</td></tr><tr><td>ACE &amp; TAO</td><td>TAO 1.3 (Optional)</td><td><a class="ulink" href="http://www.cs.wustl.edu/~schmidt/" target="_top">ACE &amp; TAO website</a>
+		When you start your components in a networked environment,
+		TAO can be used to set up communication between components.
+		CORBA is used as a 'background' transport and is hidden for normal users.
+		</td></tr><tr><td>Omniorb</td><td>4 (Optional)</td><td><a class="ulink" href="http://omniorb.sourceforge.net/" target="_top">Omniorb website</a>
+		Omniorb is more robust and faster than TAO, but has less features.
+		CORBA is used as a 'background' transport and is hidden for normal users.
+		</td></tr></tbody></table></div></div><br class="table-break" /><p>
+	  All these packages are provided by most Linux distributions.  In Mac OS X, 
+	  you can install them easily using <a class="ulink" href="http://www.finkproject.org" target="_top">fink</a> or <a class="ulink" href="http://www.macports.org/" target="_top">macports</a>.
+	  Take also a look on the Orocos.org <a class="ulink" href="http://www.orocos.org/rtt/source" target="_top">RTT download</a> page
+	  for the latest information.
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="basic-install-win32"></a>1.2. Basic Real-Time Toolkit Installation on Windows-like systems</h3></div></div></div><p>
+	We documented this on the on-line wiki for the various flavours/options 
+	one has on the MS Windows platform: 
+	<a class="ulink" href="http://www.orocos.org/wiki/rtt/rtt-ms-windows" target="_top">RTT on MS Windows</a>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="basic-install-unix"></a>1.3. Basic Real-Time Toolkit Installation on Unix-like systems</h3></div></div></div><p>
+	The RTT uses the <a class="ulink" href="http://www.cmake.org" target="_top">CMake</a>
+	build system for configuring and building the library.
+      </p><p>
+	The tool you will need is <span class="command"><strong>cmake</strong></span>
+	Most linux distros have a cmake package, and so do fink/macports in OS X.
+	In Debian, you can use the official Debian version using
+	</p><pre class="screen">  apt-get install cmake</pre><p>
+	If this does not work for you, you can download cmake from
+	the <a class="ulink" href="http://www.cmake.org" target="_top">CMake homepage</a>.
+      </p><p>
+	Next, download the <code class="filename">orocos-rtt-2.8.1-src.tar.bz2</code> package from the
+	Orocos webpage and extract it using :
+	  </p><pre class="screen"><span class="command"><strong>  tar -xvjf orocos-rtt-2.8.1-src.tar.bz2</strong></span></pre><p>
+      </p><p>
+	  This section provides quick installation instructions if you
+	  want to install the RTT on a <span class="emphasis"><em>standard</em></span> GNU/Linux system.  Please check out
+	  <a class="xref" href="#install-configure" title="3. Detailed Configuration using 'CMake'">Section 3, “Detailed Configuration using 'CMake'”</a>  for installation on other OSes and/or if you
+	  want to change the default configuration settings.
+	</p><p>
+	  </p><pre class="screen"><span class="command"><strong> 
+  mkdir orocos-rtt-2.8.1/build 
+  cd orocos-rtt-2.8.1/build
+  cmake .. -DOROCOS_TARGET=&lt;target&gt; [-DCMAKE_PREFIX_PATH=/opt/orocos] [-DCMAKE_INSTALL_PREFIX=/usr/local] [-DLINUX_SOURCE_DIR=/usr/src/linux]
+  make
+  make install</strong></span> </pre><p>
+        </p><p>
+	  Where
+	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><code class="option">OROCOS_TARGET</code>:
+	      &lt;target&gt; is one of 'gnulinux', 'lxrt', 'xenomai', 'macosx', 'win32'. When none is specified,
+	      'gnulinux' is used.</p></li><li class="listitem"><p><code class="option">CMAKE_PREFIX_PATH</code>: used to specify
+		places to look for libraries such as Boost, TAO/ACE etc.
+	    </p></li><li class="listitem"><p><code class="option">CMAKE_INSTALL_PREFIX</code>: specifies where
+	    to install the RTT.</p></li><li class="listitem"><p><code class="option">LINUX_SOURCE_DIR</code>: is required for RTAI/LXRT
+	    and older Xenomai version (&lt;2.2.0). It points to
+	    the source location of the RTAI/Xenomai patched Linux kernel.</p></li></ul></div><p>
+	</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+	    See <a class="xref" href="#install-configure" title="3. Detailed Configuration using 'CMake'">Section 3, “Detailed Configuration using 'CMake'”</a> for specifying non standard include and library paths
+	    to search for dependencies.
+	  </p></td></tr></table></div><p>
+	  The <span class="command"><strong>make</strong></span> command will have created a
+	  <code class="filename">liborocos-rtt-&lt;target&gt;.so</code> library, and if
+	  CORBA is enabled a <code class="filename">liborocos-rtt-corba-&lt;target&gt;.so</code>
+	  library. 
+	</p><p>
+	  The <span class="command"><strong>make docapi</strong></span> and
+	  <span class="command"><strong>make docpdf dochtml</strong></span> (both in 'build') commands build 
+	  API documentation and PDF/HTML documentation in the build/doc directory.
+	</p><p>
+	Orocos can optionally (<span class="emphasis"><em> but recommended</em></span>)
+	be installed on your system with </p><pre class="screen"> make install</pre><p> 
+	The default directory is
+	<code class="filename">/usr/local</code>, but can be changed
+	with the <code class="option">CMAKE_INSTALL_PREFIX</code> option : </p><pre class="screen">
+	cmake .. -DCMAKE_INSTALL_PREFIX=/opt/orocos/</pre><p>
+	If you choose not to install Orocos, you can find the build's result
+	in the <code class="filename">build/rtt</code> directory.
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="getting-started"></a>2. Getting Started with the Code</h2></div></div></div><p>
+      This Section provides a short overview of how to proceed next using the
+      <acronym class="acronym">Orocos</acronym> Real-Time Toolkit.
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp56716176"></a>2.1. Examples</h3></div></div></div><p>
+	We're still porting the examples to the 2.x API. The most up to date
+	examples are the RTT 2.x exercises which you can find on the
+	<a class="ulink" href="http://www.orocos.org/wiki/orocos/toolchain/getting-started" target="_top">
+	  Getting Started</a> webpage.
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp56718176"></a>2.2. Building components and applications</h3></div></div></div><p>
+	Below, we provide two ways of building Orocos components: using
+	CMake or a plain Makefile. Use this in combination with the code
+	found in the <a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.x/doc-xml/orocos-components-manual.html" target="_top">Orocos
+	Component Builder's Manual</a>.
+      </p><div class="example"><a id="idp56720096"></a><p class="title"><strong>Example 1. A CMakeLists.txt file for an Orocos Application or Component</strong></p><div class="example-contents"><p>
+	    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This file is automatically generated for you when you use the
+				<span class="command"><strong>&gt;orocreate-pkg</strong></span> program.
+	      </p></td></tr></table></div><p>
+	    You can build a component using this example CMakeLists.txt file:
+	    </p><pre class="programlisting">cmake_minimum_required(VERSION 2.6.3)
+
+project(myrobot)
+
+find_package(Orocos-RTT)
+
+# Defines all our macros below:
+include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
+
+# Creates libhardware.so, libvcontrol.so and libpcontrol.so
+# and installs in lib/orocos/myrobot/
+orocos_component(hardware hardware.cpp)
+orocos_component(vcontrol VelocityControl.cpp)
+orocos_component(pcontrol PositionControl.cpp)
+#   Each .cpp file contains one Orocos Component, using the
+#   ORO_CREATE_COMPONENT macro.
+
+# Creates libmyrobot-support.so and installs it in
+# lib/
+orocos_library(support support.cpp)
+#   support.cpp is a 'helper' library you wrote.
+
+# Creates libmyrobot-types.so typekit using typegen
+# and installs it in lib/orocos/myrobot/types/
+orocos_typegen_headers(RobotControlData.hpp RobotMeasurements.hpp)
+#   These are headers that define the data types your
+#   components understand
+
+
+# Creates libmyrobot-debug.so
+# and installs in lib/orocos/myrobot/plugins/
+orocos_plugin(myrobot-debug debugrobot.cpp)                                                                                                                                                                                                 
+#   debugrobot.cpp must implement the RTT plugin API.
+
+# Installs header in include/orocos/myrobot
+orocos_install_headers( hardware.hpp )
+#   Just some header you like to install
+
+# Finishes up our package by generating a set of .pc files
+# This allows other packages to depend on this package and
+# automatically link with it.
+orocos_generate_package()
+	    </pre><p>
+	  </p></div></div><br class="example-break" /><div class="example"><a id="idp51816096"></a><p class="title"><strong>Example 2. A Makefile for an Orocos Application or Component</strong></p><div class="example-contents"><p>
+	    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>We strongly recommend using the cmake macros above.
+	      </p></td></tr></table></div><p>
+	    You can compile your program with a Makefile
+	    resembling this one : 
+	    </p><pre class="programlisting">  OROPATH=/usr/local
+
+  all: myprogram mycomponent.so
+
+  # Build a purely RTT application for gnulinux (not recommended).
+  # Use the 'OCL' settings below if you use the TaskBrowser or other OCL functionality.
+  #
+  CXXFLAGS=`PKG_CONFIG_PATH=${OROPATH}/lib/pkgconfig pkg-config orocos-rtt-gnulinux --cflags`
+  LDFLAGS=`PKG_CONFIG_PATH=${OROPATH}/lib/pkgconfig pkg-config orocos-rtt-gnulinux --libs`
+
+  myprogram: myprogram.cpp
+        g++ myprogram.cpp ${CXXFLAGS} ${LDFLAGS} -o myprogram
+
+
+  # Building dynamic loadable components requires the OCL to be installed as well:
+  #
+  CXXFLAGS=`PKG_CONFIG_PATH=${OROPATH}/lib/pkgconfig pkg-config orocos-ocl-gnulinux --cflags`
+  LDFLAGS=`PKG_CONFIG_PATH=${OROPATH}/lib/pkgconfig pkg-config orocos-ocl-gnulinux --libs`
+
+  mycomonent.so: mycomponent.cpp
+        g++ mycomponent.cpp ${CXXFLAGS} ${LDFLAGS} -fPIC -shared -DRTT_COMPONENT  -o mycomponent.so
+</pre><p>
+	    Where your replace <span class="emphasis"><em>gnulinux</em></span> with the target
+	    for which you wish to compile. If you use parts of the OCL,
+	    use the flags from <code class="filename">orocos-ocl-gnulinux</code>.
+	  </p><p>
+	    We recommend reading the <a class="ulink" href="http://www.orocos.org/ocl/deployment" target="_top">Deployment
+	    Component</a> manual for building and loading Orocos
+	    components into an application.
+	  </p><p>
+	    These flags must be extended with compile and link options
+	    for your particular application. 
+	  </p><p>
+	    </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>The <code class="option">LDFLAGS</code> option must be placed after
+	      the <code class="filename">.cpp</code> or <code class="filename">.o</code>
+	      files in the gcc command.</p></td></tr></table></div><p>
+	    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Make sure you have read <a class="xref" href="#install-configure" title="3. Detailed Configuration using 'CMake'">Section 3, “Detailed Configuration using 'CMake'”</a>
+	      for your target if you application has compilation or link errors
+	      ( for example when using LXRT ).
+	      </p></td></tr></table></div><p>
+	  </p></div></div><br class="example-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp56744416"></a>2.3. What about main() ?</h3></div></div></div><p>
+	In case you also want to write an executable that runs
+	components, your main() function needs to be named
+	ORO_main().
+      </p><p>
+	Some care must be taken in initialising the realtime
+	environment. First of all, you need to provide a function
+	  <code class="function">int ORO_main(int argc, char** argv)
+	    {...}</code>, defined in &lt;rtt/os/main.h&gt; which contains your program :
+      </p><pre class="programlisting">  #include &lt;rtt/os/main.h&gt;
+	      
+  int ORO_main(int argc, char** argv)
+  {
+     // Your code, do not use 'exit()', use 'return' to 
+     // allow Orocos to cleanup system resources.
+  } </pre><p>
+	  If you do not use this function, it is possible that 
+	  some (OS dependent) Orocos functionality will not work.
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="install-configure"></a>3. Detailed Configuration using 'CMake'</h2></div></div></div><p>
+	If you have some of the Orocos dependencies installed in
+	non-standard locations, you have to specify
+	this using cmake variables <span class="emphasis"><em>before</em></span> running
+	the cmake configuration.  Specify header locations using
+	the <code class="option">CMAKE_INCLUDE_PATH</code> variable (e.g. using
+	bash and fink in Mac OS X, the boost library headers are
+	installed in /sw/include, so you would specify 
+        </p><pre class="screen">export CMAKE_INCLUDE_PATH=/sw/include;/boost/include</pre><p>
+	For libraries in not default locations, use
+	the </p><pre class="screen">export CMAKE_LIBRARY_PATH=/sw/libs;/boost/lib</pre><p> variable. 
+	When your installation directory has a standard layout, you can also
+	use a single </p><pre class="screen">export CMAKE_PREFIX_PATH=/boost</pre><p> statement. For more
+	information,
+	see <a class="ulink" href="http://www.cmake.org/Wiki/CMake_Useful_Variables#Environment_Variables" target="_top">cmake
+	useful variables</a> link.
+      </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
+	In order to avoid setting these global exports repeatedly, the RTT
+	build system reads a file in which you can specify your
+	build environment. This file is the <code class="filename">orocos-rtt.cmake</code> file,
+	which you obtain by making a copy from <code class="filename">orocos-rtt-2.8.1/orocos-rtt.default.cmake</code>
+	into the same directory. The advantage is that this file lives in the
+	rtt top source directory, such that it can be re-used across builds.
+	<span class="emphasis"><em>Using this file is recommended!</em></span>
+      </p></td></tr></table></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp56756560"></a>3.1. Real-Time Toolkit Build Configuration</h3></div></div></div><p>
+	  The RTT can be configured depending on your target. 
+	  For embedded targets, the large scripting infrastructure and
+	  use of exceptions can be left out. When CORBA is available,
+	  an additional library is built which allows components to
+	  communicate over a network.
+	</p><p>
+	  In order to configure the RTT in detail, you
+	  need to invoke the <span class="command"><strong>ccmake</strong></span> command:
+	</p><pre class="screen"><span class="command"><strong> 
+  cd orocos-rtt-2.8.1/build
+  ccmake ..</strong></span> </pre><p>
+	  from your build directory. It will offer a configuration
+	  screen.  The keys to use are 'arrows'/'enter' to modify a
+	  setting, 'c' to run a configuration check (may be required
+	  multiple times), 'g' to generate the makefiles. If an
+	  additional configuration check is required, the 'g' key can
+	  not be used and you must press again 'c' and examine the output.
+	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp56760848"></a>3.1.1. RTT with CORBA plugin</h4></div></div></div><p>
+	    In order to enable CORBA, a valid installation of TAO or OMNIORB must be
+	    detected on your system and you must turn the <code class="option">ENABLE_CORBA</code>
+	    option on (using ccmake).
+	    Enabling CORBA does not modify the RTT library and
+	    builds and installs an additional library and headers.
+	  </p><p>
+	    Alternatively, you can re-run cmake:
+	  </p><pre class="screen">  cmake .. -DENABLE_CORBA=ON</pre><p>
+	    See <a class="xref" href="#install-config-corba" title="3.6. Configuring for CORBA">Section 3.6, “Configuring for CORBA”</a> for full configuration details
+	    when using the CORBA transport.
+	  </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp56764800"></a>3.2. Configuring the target Operating System</h3></div></div></div><p>
+	Move to the <code class="option">OROCOS_TARGET</code>, press enter and type 
+	on of the following supported targets (all in lowercase):
+	</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>gnulinux</p></li><li class="listitem"><p>macosx</p></li><li class="listitem"><p>xenomai</p></li><li class="listitem"><p>lxrt</p></li><li class="listitem"><p>win32</p></li></ul></div><p>
+	The xenomai and lxrt targets require the presence of the
+	<code class="option">LINUX_SOURCE_DIR</code> option since these targets
+	require Linux headers during the Orocos build.  To use the
+	LibC Kernel headers in
+	<code class="filename">/usr/include/linux</code>, specify
+	<code class="option">/usr</code>.  Inspect the output to find any errors.
+      </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>From Xenomai version 2.2.0 on, Xenomai configuration
+      does no longer require the --with-linux option.</p></td></tr></table></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="install-flags"></a>3.3. Setting Build Compiler Flags</h3></div></div></div><p>
+	You can set the compiler flags using the <code class="option">CMAKE_BUILD_TYPE</code>
+	option. You may edit this field to contain:
+	</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Release</p></li><li class="listitem"><p>Debug</p></li><li class="listitem"><p>RelWithDebInfo</p></li><li class="listitem"><p>MinSizeRel</p></li><li class="listitem"><p>None</p></li></ul></div><p>
+	In case you choose None, you must set the CMAKE_C_FLAGS, CMAKE_CXX_FLAGS
+	manually. Consult the CMake manuals for all details.
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="general_setup_rtai"></a>3.4. Building for RTAI / LXRT</h3></div></div></div><p>
+	Orocos has been tested with RTAI 3.0, 3.1, 3.2, 3.3, 3.4, 3.5 and 3.6.
+	The latest version of RTAI is recommended for RTAI users.
+	You can obtain it from 
+	<a class="ulink" href="http://www.rtai.org" target="_top">
+	  the RTAI home page</a>.
+	Read The README.* files in the
+	<code class="filename">rtai</code> directory for detailed
+	build instructions, as these depend on the RTAI version.
+      </p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp56779520"></a>3.4.1.  RTAI settings </h4></div></div></div><p>
+	  RTAI comes with documentation for configuration and
+	  installation.  During 'make menuconfig', make sure that
+	  you enable the following options (<span class="emphasis"><em>in addition to
+	  options you feel you need for your application</em></span>) :
+	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>General -&gt; 'Enable extended configuration mode'</p></li><li class="listitem"><p>Core System -&gt; Native RTAI schedulers &gt;
+	      Scheduler options -&gt; 'Number of LXRT slots' ('1000') </p></li><li class="listitem"><p>Machine -&gt; 'Enable FPU support'</p></li><li class="listitem"><p>Core System -&gt; Native RTAI schedulers &gt;
+	      IPC support -&gt; Semaphores, Fifos, Bits (or Events) and Mailboxes</p></li><li class="listitem"><p>Add-ons -&gt; 'Comedi Support over LXRT' (if you intend to use the
+	      Orocos Comedi Drivers)</p></li><li class="listitem"><p>Core System -&gt; Native RTAI schedulers &gt;
+	      'LXRT scheduler (kernel and user-space tasks)'</p></li></ul></div><p>
+	  After configuring you must run 'make' and 'make install' in your RTAI directory:
+	  <span class="command"><strong>make</strong></span>
+	  <span class="command"><strong>sudo make install</strong></span>
+	</p><p>
+	  After installation, RTAI can be found in
+	  <code class="filename">/usr/realtime</code>. You'll have to specify
+	  this directory in the <code class="option">RTAI_INSTALL_DIR</code> option
+	  during 'ccmake'.
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp56790096"></a>3.4.2. Loading RTAI with LXRT</h4></div></div></div><p>
+	  LXRT is a all-in-one scheduler that works for kernel and userspace.
+	  So if you use this, you can still run kernel programs but have the ability
+	  to run realtime programs in userspace. Orocos provides you the libraries
+	  to build these programs.
+	  Make sure that the following RTAI kernel modules are loaded
+	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>rtai_sem</p></li><li class="listitem"><p>rtai_lxrt</p></li><li class="listitem"><p>rtai_hal</p></li><li class="listitem"><p>adeos (depends on RTAI version)</p></li></ul></div><p>
+	  For example, by executing as root:
+	  <span class="command"><strong>modprobe rtai_lxrt; modprobe rtai_sem</strong></span>.
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp56794640"></a>3.4.3. Compiling Applications with LXRT</h4></div></div></div><p>
+	  Application which use LXRT as a target need special flags when being
+	  compiled and linked. Especially :
+	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+		Compiling : <code class="option">-I/usr/realtime/include</code>
+	      </p><p>
+		This is the RTAI headers installation directory.
+	      </p></li><li class="listitem"><p>
+		Linking : <code class="option">-L/usr/realtime/lib -llxrt</code> for dynamic (.so) linking OR add
+		<code class="option"> /usr/realtime/liblxrt.a </code> for static (.a) linking.
+	      </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
+		  You might also need to add
+		  <code class="filename">/usr/realtime/lib</code> to the
+		  <code class="filename">/etc/ld.so.conf</code> file and rerun
+		  <span class="command"><strong>ldconfig</strong></span>, such that liblxrt.so
+		  can be found.  This option is not needed if you
+		  configured RTAI with LXRT-static-inlining.
+		</p></td></tr></table></div></li></ul></div><p>
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="general_setup_xeno"></a>3.5. Building for Xenomai (version 2.2.0 or newer)</h3></div></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+	For older Xenomai versions, consult the Xenomai README of that
+	version.</p></td></tr></table></div><p>
+	Xenomai provides a real-time scheduler for Linux applications.
+	See <a class="ulink" href="http://www.xenomai.org" target="_top"> the Xenomai home
+	page</a>. Xenomai requires a patch one needs to apply upon
+	the Linux kernel, using the
+	<span class="command"><strong>scripts/prepare-kernel.sh</strong></span> script. See the
+	Xenomai installation manual. When applied, one needs to enable
+	the <code class="option">General Setup -&gt; Interrupt Pipeline</code>
+	option during Linux kernel configuration and next the
+	<code class="option">Real-Time Sub-system -&gt; </code>,
+	<code class="option">Xenomai</code> and <code class="option">Nucleus</code>. Enable
+	the <code class="option">Native</code> skin, <code class="option">Semaphores</code>,
+	<code class="option">Mutexes</code> and <code class="option">Memory Heap</code>. Finally
+	enable the <code class="option">Posix</code> skin as well.
+      </p><p>
+	When the Linux kernel is built, do in the Xenomai directory:
+	<span class="command"><strong>./configure ; make; make install</strong></span>.
+      </p><p>
+	You'll have to specify the install directory in the
+	<code class="option">CMAKE_PATH_PREFIX</code> option during 'cmake'.
+      </p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp56811408"></a>3.5.1. Loading Xenomai</h4></div></div></div><p>
+	  The RTT uses the native Xenomai API to address the real-time
+	  scheduler. The Xenomai kernel modules can be found in
+	  <code class="filename">/usr/xenomai/modules</code>.  Only the
+	  following kernel modules need to be loaded:
+	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>xeno_hal.ko</p></li><li class="listitem"><p>xeno_nucleus.ko</p></li><li class="listitem"><p>xeno_native.ko</p></li></ul></div><p> 
+	  in that order.  For example, by executing
+	  as root: <span class="command"><strong>insmod xeno_hal.ko; insmod
+	  xeno_nucleus.ko; insmod xeno_native.ko</strong></span>.
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp56816112"></a>3.5.2. Compiling Applications with Xenomai</h4></div></div></div><p>
+	  Application which use Xenomai as a target need special flags
+	  when being compiled and linked. Especially :
+	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+		Compiling : <code class="option">-I/usr/xenomai/include</code>
+	      </p><p>
+		This is the Xenomai headers installation directory.
+	      </p></li><li class="listitem"><p>
+		Linking : <code class="option">-L/usr/xenomai/lib
+		-lnative</code> for dynamic (.so) linking OR add
+		<code class="option"> /usr/xenomai/libnative.a </code> for
+		static (.a) linking.
+	      </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
+		  You might also need to add
+		  <code class="filename">/usr/xenomai/lib</code> to the
+		  <code class="filename">/etc/ld.so.conf</code> file and rerun
+		  <span class="command"><strong>ldconfig</strong></span>, such that libnative.so
+		  can be found automatically.
+		</p></td></tr></table></div></li></ul></div><p>
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="install-config-corba"></a>3.6. Configuring for CORBA</h3></div></div></div><p>
+	In case your application benefits from remote access over a
+	network, the RTT can be used with 'The Ace Orb' (
+	<span class="emphasis"><em>TAO</em></span>) or OMNIORB-4. The RTT was tested with TAO 1.3.x,
+	1.4.x, 1.5x and 1.6.x and OMNIORB 4.1.x. There are two major TAO development lines. One line
+	is prepared by <a class="ulink" href="http://www.ociweb.com" target="_top">OCI (Object Computing
+	Inc.)</a> and the other by the <a class="ulink" href="http://www.dre.vanderbilt.edu/" target="_top">DOC group</a>. You
+	can find the latest OCI TAO version on <a class="ulink" href="http://www.theaceorb.com" target="_top">OCI's TAO website</a>.  The
+	DOC group's TAO version can be found on the
+	<a class="ulink" href="http://www.cs.wustl.edu/~schmidt/TAO.html" target="_top">
+	Real-time CORBA with TAO (The ACE ORB) website</a>.
+	Debian and Ubuntu users use the latter version when they
+	install from .deb packages.
+      </p><p>
+	If you need commercial support for any TAO release or seek
+	expert advice on which TAO version or development line to use,
+	consult the
+	<a class="ulink" href="http://www.cs.wustl.edu/~schmidt/commercial-support.html" target="_top">
+	  commercial support website</a>.
+      </p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp56829584"></a>3.6.1. TAO installation (Optional)</h4></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>Debian or Ubuntu users can skip this step and just
+	  do <span class="command"><strong>sudo aptitude install libtao-orbsvcs-dev tao-idl gperf-ace tao-naming</strong></span> .
+	  Orocos software will automatically detect the installed TAO software.
+	  </p></td></tr></table></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+	    If your distribution does not provide the TAO libraries,
+	    or you want to use the OCI version, you need to build
+	    manually. These instructions are for building on
+	    Linux. See the ACE and TAO installation manuals for
+	    building on your platform.
+	  </p><p>
+	    Orocos requires the ACE, TAO and TAO-orbsvcs libraries and
+	    header files to be installed on your workstation. If you
+	    used manual installation, <span class="emphasis"><em> the ACE_ROOT and
+	    TAO_ROOT variables must be set.</em></span>
+	  </p></td></tr></table></div><p>
+	  You need to make an ACE/TAO build on your workstation.
+	  Download the package here: <a class="ulink" href="http://www.theaceorb.com/downloads/1.4a/index.html" target="_top">OCI
+	  Download</a>. Unpack the tar-ball, and enter 
+	  <code class="filename">ACE_wrappers</code>. Then do:
+	  <span class="command"><strong>  export ACE_ROOT=$(pwd)
+  export TAO_ROOT=$(pwd)/TAO
+	  </strong></span> Configure ACE for Linux by doing: 
+	  <span class="command"><strong>  ln -s ace/config-linux.h ace/config.h
+  ln -s include/makeinclude/platform_linux.GNU include/makeinclude/platform_macros.GNU
+	  </strong></span> Finally, type:
+	  <span class="command"><strong>  make
+  cd TAO
+  make
+  cd orbsvcs
+  make
+	  </strong></span> This finishes your TAO build.
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp56837840"></a>3.6.2. Configuring the RTT for TAO or OMNIORB</h4></div></div></div><p>
+	  Orocos RTT defaults to TAO. If you want to use the
+	  OMNIORB implementation, run from your <code class="filename">build</code> directory:
+	  </p><pre class="screen">  cmake .. -DENABLE_CORBA=ON -DCORBA_IMPLEMENTATION=OMNIORB </pre><p>
+	  To specify TAO explicitly (or change back) use:
+	  </p><pre class="screen">  cmake .. -DENABLE_CORBA=ON -DCORBA_IMPLEMENTATION=TAO </pre><p>
+	</p><p>
+	  The RTT will first try to detect your location of ACE and
+	  TAO using the ACE_ROOT and TAO_ROOT variables and if these
+	  are not set, using the standard include paths. If TAO or
+	  OMNIORB is found you can enable CORBA support
+	  (<code class="option">ENABLE_CORBA</code>) within CMake.
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp56842160"></a>3.6.3. Application Development with TAO</h4></div></div></div><p>
+	  Once you compile and link your application with Orocos and with the
+	  CORBA functionality enabled, you must provide the correct include
+	  and link flags in your own Makefile if TAO and ACE are not
+	  installed in the default path. Then you must add:
+	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+		Compiling : <code class="option">-I/path/to/ACE_wrappers -I/path/to/ACE_wrappers/TAO -I/path/to/ACE_wrappers/TAO/orbsvcs</code>
+	      </p><p>
+		This is the ACE build directory in case you use OCI's
+		TAO packages. This option is not needed if you used
+		your distribution's TAO installation, in that case,
+		TAO is in the standard include path.
+	      </p></li><li class="listitem"><p>
+		Linking : <code class="option">-L/path/to/ACE_wrappers/lib -lTAO -lACE -lTAO_PortableServer -lTAO_CosNaming</code>
+	      </p><p>
+		This is again the ACE build directory in case you use OCI's
+		TAO packages. The <span class="emphasis"><em>first</em></span> option is not needed if you used
+		your distribution's TAO installation, in that case,
+		TAO is in the standard library path.
+	      </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
+		  You also need to add
+		  <code class="filename">/path/to/ACE_wrappers/lib</code> to the
+		  <code class="filename">/etc/ld.so.conf</code> file and rerun
+		  <span class="command"><strong>ldconfig</strong></span>, such that these libraries
+		  can be found.  Or you can before you start your application
+		  type </p><pre class="screen">export LD_LIBRARY_PATH=/path/to/ACE_wrappers/lib</pre><p>.
+		</p></td></tr></table></div></li></ul></div><p>
+	</p></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="cross-compile"></a>4. Cross Compiling Orocos</h2></div></div></div><p>
+      This section lists some points of attention when
+      cross-compiling Orocos.
+    </p><p>
+      Run plain "cmake" or "ccmake" with the following options:
+      </p><pre class="screen"><span class="command"><strong> 
+      CC=cross-gcc CXX=cross-g++ LD=cross-ld cmake .. -DCROSS_COMPILE=cross-</strong></span></pre><p>
+      and substitute the 'cross-' prefix with your target tripplet, 
+      for example with 'powerpc-linux-gnu-'. This works roughly when
+      running on Linux stations, but is not the official 'CMake' approach.
+    </p><p>
+      For having native cross compilation support, follow the instructions on the
+      <a class="ulink" href="http://www.cmake.org/Wiki/CMake_Cross_Compiling" target="_top">
+      CMake Cross Compiling page</a>.
+    </p></div></div></body></html>

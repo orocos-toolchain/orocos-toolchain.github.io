@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Distributing Communication with Real-Time Message Queues</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document explains the principles of the MQueue Library of Orocos, the Open RObot COntrol Software project. It enables real-time communication between processes on the same node." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp51950144"></a>Distributing Communication with Real-Time Message Queues</h2></div><div><p class="copyright">Copyright © 2009 Peter Soetens</p></div><div><div class="legalnotice"><a id="idp55428272"></a><p>
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.1 or
+	any later version published by the Free Software Foundation, with no
+	Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+	Texts. A copy of this license can be found at
+	<a class="ulink" href="http://www.fsf.org/copyleft/fdl.html" target="_top">http://www.fsf.org/copyleft/fdl.html</a>.
+      </p></div></div><div><div class="revhistory"><table style="border-style:solid; width:100%;" summary="Revision History"><tr><th align="left" valign="top" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 0.1</td><td align="left">November 2, 2009</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Initial version</td></tr></table></div></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><p>
+	This document explains the principles of the
+	<span class="emphasis"><em>MQueue Library</em></span> of <acronym class="acronym">Orocos</acronym>, the <span class="emphasis"><em>Open
+	RObot COntrol Software</em></span> project. It enables real-time
+	communication between processes on the same node.
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idp53203232">1. Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#idp55805504">1.1. Status</a></span></dt><dt><span class="section"><a href="#idp55191520">1.2. Requirements and Setup</a></span></dt></dl></dd><dt><span class="section"><a href="#idp53398208">2. Transporting user types.</a></span></dt><dd><dl><dt><span class="section"><a href="#idp55061696">2.1. Transporting 'simple' data types</a></span></dt><dt><span class="section"><a href="#idp54303968">2.2. Transporting 'complex' data types</a></span></dt></dl></dd><dt><span class="section"><a href="#idp54310832">3. Connecting ports using the MQueue transport</a></span></dt><dd><dl><dt><span class="section"><a href="#idp54313120">3.1. Bare C++ connection</a></span></dt><dt><span class="section"><a href="#idp51880480">3.2. CORBA managed connections</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp53203232"></a>1. Overview</h2></div></div></div><p>
+      This transport allows to do inter-process communication between Orocos processes
+      on the same node. It uses the POSIX messages queues where available. This includes
+      GNU/Linux systems and Xenomai.
+    </p><p>
+      The MQueue transport provides:
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Connection and Communication of Orocos data flow streams between processes</p></li><li class="listitem"><p>The ability to set these up using C++ syntax.</p></li><li class="listitem"><p>The ability to set these up using the Corba transport by creating the MQueue as an 'Out-Of-Band' transport.</p></li></ul></div><p> 
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp55805504"></a>1.1. Status</h3></div></div></div><p>
+	As of this writing, MQueues only transport data flow as streams.
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp55191520"></a>1.2. Requirements and Setup</h3></div></div></div><p>
+	You must enable the <code class="option">ENABLE_MQUEUE</code> flag in 
+	CMake. This will, depending on your target, try to detect
+	your mqueue.h header file and library. MQueue also requires the boost::serialization
+	library.
+      </p><p>
+	Only Gnu/Linux and Xenomai installations which provide this header can be used.
+      </p><p>
+	The transport must get to know your data type. There are two options. If your
+	data type is only Plain Old Data (POD), meaning, it does not contain any pointers
+	or dynamically sized objects, the transport can byte-copy your data. 
+	If your data type is more complex, it must use the boost::serialization
+	library to transport your type and your type must be known to this framework.
+      </p><p>
+	See below on how to do this.
+      </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp53398208"></a>2. Transporting user types.</h2></div></div></div><p>
+      Be sure to read the 'Writing Plugins' manual such that your data type is already
+      known to the RTT framework. This section extends that work to make the known data type
+      transportable over MQueues.
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp55061696"></a>2.1. Transporting 'simple' data types</h3></div></div></div><p>
+	Simple data types without pointers or dynamically sized objects,
+	can be transported quite easily. They are added as such:
+      </p><pre class="programlisting">  // myapp.cpp
+  #include &lt;rtt/types/TemplateTypeInfo.hpp&gt;
+  #include &lt;rtt/transports/mqueue/MQTemplateProtocol.hpp&gt;
+
+  using namespace RTT;
+  using namespace RTT::mqueue;
+  using namespace RTT::types;
+
+  struct MyData {
+    double x,y,x;
+    int stamp;
+  };
+
+  int ORO_main(int argc, char** argv)
+  {
+
+     // Add your type to the Orocos type system (see: Writing plugins)
+     Types()-&gt;addType( new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TemplateTypeInfo.html">TemplateTypeInfo</a>&lt;MyData, false&gt;("MyData") );
+
+     // New: Install the template protocol for your data type.
+     Types()-&gt;getType("MyData")-&gt;addTransport(ORO_MQUEUE_PROTOCOL_ID, new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1mqueue_1_1MQTemplateProtocol.html">MQTemplateProtocol</a>&lt;MyData&gt;() );
+
+     // rest of your program can now transport MyData between processes.
+
+  } </pre><p>
+      As the code shows, only one line of code is necessary to register simple types to this transport.
+      </p><p>
+	In practice, you'll want to write a plugin which contains this code such that your data type is loaded in every
+	Orocos application that you start.
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp54303968"></a>2.2. Transporting 'complex' data types</h3></div></div></div><p>
+	Data types like std::vector or similar can't just be byte-copied.
+	They need special treatment for reading and writing their contents.
+	Orocos uses the boost::serialization library for this. This library
+	already understands the standard containers (vector,list,...) and is
+	easily extendable to learn your types. Adding complex data goes as such:
+      </p><pre class="programlisting">  // myapp.cpp
+  #include &lt;rtt/types/TemplateTypeInfo.hpp&gt;
+  #include &lt;rtt/transports/mqueue/MQSerializationProtocol.hpp&gt;
+
+  using namespace RTT;
+  using namespace RTT::mqueue;
+  using namespace RTT::types;
+
+  struct MyComplexData {
+    double x,y,x;
+    std::vector&lt;int&gt; stamps;
+    MyComplexData() { stamps.resize(10, -1); }
+  };
+
+  // New: define the marshalling using boost::serialization syntax:
+  namespace boost {
+  namespace serialization {
+
+  template&lt;class Archive&gt;
+  void serialize(Archive &amp; ar, MyComplexData &amp; d, const unsigned int version)
+  {
+    ar &amp; d.x;
+    ar &amp; d.y;
+    ar &amp; d.z;
+    ar &amp; d.samps; // boost knows std::vector !
+  }
+  }
+  }
+
+  int ORO_main(int argc, char** argv)
+  {
+
+     // Add your type to the Orocos type system (see: Writing plugins). Same as simple case.
+     Types()-&gt;addType( new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TemplateTypeInfo.html">TemplateTypeInfo</a>&lt;MyComplexData, false&gt;("MyComplexData") );
+
+     // New: Install the Serialization template protocol for your data type.
+     Types()-&gt;getType("MyComplexData")-&gt;addTransport(ORO_MQUEUE_PROTOCOL_ID, new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1mqueue_1_1MQSerializationProtocol.html">MQSerializationProtocol</a>&lt;MyComplexData&gt;() );
+
+     // rest of your program can now transport MyComplexData between processes.
+
+  } </pre><p>
+      When comparing this to the previous section, only two things changed: We defined
+      a serialize() function, and used the MQSerializationProtocol instead of the MQTemplateProtocol
+      to register our data transport. You can find a tutorial on writing your own serialization
+      function on: <a class="ulink" href="http://www.boost.org/doc/libs/1_40_0/libs/serialization/doc/index.html" target="_top">The Boost Serialization Website</a>.
+    </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp54310832"></a>3. Connecting ports using the MQueue transport</h2></div></div></div><p>
+      Orocos will not try to use this transport by default when connecting
+      data flow ports. You must tell it explicitly to do so. This is 
+      done using the <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1ConnPolicy.html">ConnPolicy</a> object, which
+      describes how connections should be made. 
+    </p><p>
+      In addition to filling in this object, you need to setup an outgoing
+      data stream on the output port, and an incomming data stream at the
+      input port which you wish to connect. This can be done in C++ with
+      or without the help from the CORBA transport.
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp54313120"></a>3.1. Bare C++ connection</h3></div></div></div><p>
+	If you don't want to use CORBA for setting up a connection,
+	you need to use the createStream function to setup a data flow
+	stream in each process. This requires you to choose a name
+	of the connection and use this name in both processes:
+      </p><pre class="programlisting">// process1.cpp:
+ 
+  // Your port is probably created in a component:
+  OutputPort&lt;MyData&gt; p_out("name");
+
+  // Create a ConnPolicy object:
+  ConnPolicy policy = buffer(10); // buffered connection with 10 elements.
+  policy.transport = ORO_MQUEUE_PROTOCOL_ID; // the MQueue protocol id
+  policy.name_id   = "mydata_conn";          // the connection id
+
+  p_out.createStream( policy );
+  // done in proces1.cpp
+
+// process2.cpp:
+
+  // Your port is probably created in a component:
+  InputPort&lt;MyData&gt; p_in("indata");
+
+  // Create a ConnPolicy object:
+  ConnPolicy policy = ConnPolicy::buffer(10); // buffered connection with 10 elements.
+  policy.transport = ORO_MQUEUE_PROTOCOL_ID; // the MQueue protocol id
+  policy.name_id   = "mydata_conn";          // the connection id
+
+  p_in.createStream( policy );
+  // done in proces2.cpp . We can now transmit data from process1 to
+  // process2 .
+</pre><p>
+       Both ends must specify the same connection policy. Also, the
+       RTT assumes that the createStream is first done on the output
+       side, and then on the input side. This is because it is an
+       error to connect an input side without an output side producing
+       data.  When an output side opens a connection, it will send in
+       a test data sample, which will notify the input side that
+       someone is sending, and that the connection is probably
+       correctly set up.
+      </p><p>
+	If either output or input would disapear after the connection
+	has been setup (because their process crashed or did not clean
+	up), the other side will not notice this.  You can re-start
+	your component, and the ports will find each other again.
+      </p><p>
+	If you want proper connection management, you need to use
+	the CORBA approach below, which keeps track of appearing and
+	disappearing connections.
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51880480"></a>3.2. CORBA managed connections</h3></div></div></div><p>
+      The CORBA transport supports 'Out-Of-Band' (OOB) connections for data flow.
+      This means that CORBA itself is used to setup the connection between
+      both ports, but the actual data transfer is done using OOB protocol.
+      In our case, CORBA will be used to setup or destroy MQueue streams.
+    </p><p>
+      This has several advantages: 
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p> 
+	  Dead streams are cleaned up. CORBA can detect connection loss.
+	</p></li><li class="listitem"><p>
+	  You don't need to figure out a common connection name, the transport
+	  will find one for you and CORBA will sync both sides.
+	</p></li><li class="listitem"><p>
+	  Creating out-of-band connections using the CORBA transport
+	  has the same syntax as creating normal connections.
+	</p></li><li class="listitem"><p> 
+	  The CORBA transport will make sure that first your output
+	  stream is created and then your input stream, and will cleanup
+	  the output stream if the input stream could not be created.
+	</p></li></ul></div><p> 
+      So it's more robust, but it requires the CORBA transport.
+    </p><p>
+      An Out-Of-Band connection is always setup like this:
+      </p><pre class="programlisting">  TaskContext *task_a, *task_b;
+  // init task_a, task_b...
+
+  ConnPolicy policy = ConnPolicy::buffer(10);
+
+  // override default transport policy to trigger out-of-band:
+  policy.transport = ORO_MQUEUE_PROTOCOL_ID;
+
+  // this is the standard way for connecting ports:
+  task_a-&gt;ports()-&gt;getPort("name")-&gt;connectTo( task_b-&gt;ports()-&gt;getPort("outdata"), policy );
+      </pre><p>
+      The important part here is that a policy.transport is set, while using the connectTo
+      function of <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1base_1_1PortInterface.html">PortInterface</a>. Normally, setting the
+      transport is not necessary, because the RTT will figure out itself what the best
+      means of transport is. For example, if both ports are in the same process, a direct
+      connection is made, if one or both components are proxies, the transport will use
+      the transport of the proxies, in our case CORBA. However, the transport flag overrides
+      this, and the connection logic will pick this up and use the specified transport.
+    </p><p>
+      Overriding the transport parameter even works when you want to test over-CORBA
+      or over-MQueue transport with using two process-local ports. The only thing to
+      do is to set the transport parameter to the protocol ID.
+    </p><p>
+      Finally, if you want to use the CORBA IDL interface to connect two ports over
+      the mqueue transport, the workflow is fairly identical. The code below is
+      for C++, but the equivalent can be done in any CORBA enabled language:
+    </p><p>
+      </p><pre class="programlisting">  #include &lt;rtt/transports/corba/CorbaConnPolicy.hpp&gt;
+  // ...
+  using namespace RTT::corba;
+
+  CControlTask_var task_a, task_b;
+  // init task_a, task_b...
+
+  CConnPolicy cpolicy = toCORBA( RTT::ConnPolicy::buffer(10) );
+
+  // override default transport policy to trigger out-of-band:
+  cpolicy.transport = ORO_MQUEUE_PROTOCOL_ID;
+
+  // this is the standard way for connecting ports in CORBA:
+  CDataFlowInterface_var dataflow_a = task_a-&gt;ports();
+  CDataFlowInterface_var dataflow_b = task_b-&gt;ports();
+
+  dataflow_a-&gt;createConnection("name", dataflow_b, "outdata", cpolicy );
+      </pre><p>
+      Similar as connectTo above, the createConnection function creates a fully
+      managed connection between two data flow ports. We used the toCORBA function
+      from CorbaConnPolicy.hpp to convert RTT policy objects to CORBA policy objects.
+      Both RTT::ConnPolicy and RTT::corba::CConnPolicy structs are exactly the same,
+      but RTT functions require the former and CORBA functions the latter.
+    </p><p>
+      Alternatively, you can use the create streams functions directly from
+      the CORBA interface, in order to create unmanaged streams. In that case,
+      the code becomes:
+      </p><pre class="programlisting">  #include &lt;rtt/transports/corba/CorbaConnPolicy.hpp&gt;
+  // ...
+  using namespace RTT::corba;
+
+  CControlTask_var task_a, task_b;
+  // init task_a, task_b...
+
+  CConnPolicy cpolicy = toCORBA( RTT::ConnPolicy::buffer(10) );
+
+  // override default transport policy and provide a name:
+  cpolicy.transport = ORO_MQUEUE_PROTOCOL_ID;
+  cpolicy.name_id = "stream_name";
+
+  // this is the standard way for connecting ports in CORBA:
+  CDataFlowInterface_var dataflow_a = task_a-&gt;ports();
+  CDataFlowInterface_var dataflow_b = task_b-&gt;ports();
+
+  dataflow_b-&gt;createStream("outdata", cpolicy );
+  dataflow_a-&gt;createStream("name", cpolicy );
+      </pre><p>
+      Note that creating message queues like this leaves out all management
+      code and will not detect broken connections. It has the same constraints
+      as if the streams were setup in C++, as shown in the previous section.
+    </p></div></div></div></body></html>

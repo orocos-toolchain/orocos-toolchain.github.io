@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Orocos Toolchain 2.6 Release Series Changes, New Features, and Fixes</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp52011424"></a>
+      <acronym class="acronym">Orocos</acronym> Toolchain 2.6 Release Series
+      Changes, New Features, and Fixes 
+    </h2></div><div><h3 class="subtitle"><em>
+			<span class="emphasis"><em>Open RObot COntrol Software</em></span>
+    </em></h3></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#upgrading">1. Upgrading from RTT 1.x to Toolchain 2.x</a></span></dt><dt><span class="section"><a href="#caveats">2. Important Caveats</a></span></dt><dt><span class="section"><a href="#ros">3. ROS Users</a></span></dt><dt><span class="section"><a href="#idp52116784">4. Improvements</a></span></dt><dd><dl><dt><span class="section"><a href="#idp52117456">4.1. Building</a></span></dt><dt><span class="section"><a href="#idp52123952">4.2. TaskContext and Services</a></span></dt><dt><span class="section"><a href="#idp51945584">4.3. Data Types, Toolkits and Typekits</a></span></dt><dt><span class="section"><a href="#idp51950832">4.4. Operating Systems</a></span></dt></dl></dd><dt><span class="section"><a href="#idp51953104">5. Orocos Component Library (OCL)</a></span></dt><dd><dl><dt><span class="section"><a href="#idp51953792">5.1. Lua scripting</a></span></dt><dt><span class="section"><a href="#idp51958304">5.2. Reporting</a></span></dt><dt><span class="section"><a href="#idp51960560">5.3. Deployment</a></span></dt></dl></dd><dt><span class="appendix"><a href="#idp51964176">1. About Orocos</a></span></dt></dl></div><p>
+    This document provides a quick overview of what changed between
+    the <acronym class="acronym">Orocos</acronym> Toolchain 2.5 and version 2.6.
+  </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="upgrading"></a>1. Upgrading from RTT 1.x to Toolchain 2.x</h2></div></div></div><p>
+			Please consult the online wiki for all available information about the 1.x to 2.x transition:
+			<a class="ulink" href="http://www.orocos.org/wiki/rtt/rtt-20" target="_top">The Road to RTT 2.0</a>.  The
+			Real-Time Toolkit is no longer released as a single entity, but as part of a complete set of
+			tools and libraries for creating real-time applications.  See also the changes documents of
+			the previous major releases:
+		 </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.0.x/doc-xml/orocos-rtt-changes.html" target="_top">Toolchain 2.0 Changes</a></p></li><li class="listitem"><p><a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.1.x/doc-xml/orocos-rtt-changes.html" target="_top">Toolchain 2.1 Changes</a></p></li><li class="listitem"><p><a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.2.x/doc-xml/orocos-rtt-changes.html" target="_top">Toolchain 2.2 Changes</a></p></li><li class="listitem"><p><a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.3.x/doc-xml/orocos-rtt-changes.html" target="_top">Toolchain 2.3 Changes</a></p></li><li class="listitem"><p><a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.4.x/doc-xml/orocos-rtt-changes.html" target="_top">Toolchain 2.4 Changes</a></p></li><li class="listitem"><p><a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.5.x/doc-xml/orocos-rtt-changes.html" target="_top">Toolchain 2.5 Changes</a></p></li></ul></div><p>
+		</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="caveats"></a>2. Important Caveats</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					This release is binary incompatible with RTT 2.5.x. You need to recompile the
+					whole toolchain and all your applications in order to use this release.
+				</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p> <span class="emphasis"><em>Take care that all previously built components and plugins in the
+				&lt;install&gt;/lib/orocos directory and subdirectories are removed, since the component
+				and plugin loaders may get confused if older versions are found.</em></span>
+				</p></td></tr></table></div></li><li class="listitem"><p>
+					The rttlua DeploymentComponent's name has been changed from "deployer" to "Deployer" in
+					order to be compatible with the existing deployer application. This change only influences
+					Lua users and requires each occurence of getPeer("deployer") to be changed by getPeer("Deployer").
+				</p><p>
+					You can do the renaming in your existing source trees with this Shell command:
+					<span class="command"><strong> find . ! -path  "*.git*" -name "*.lua" -print0 | xargs -0 sed -i "s/\"deployer\"/\"Deployer\"/g;s/\'deployer\'/\'Deployer\'/g"
+					</strong></span>
+				</p></li><li class="listitem"><p>
+					There was an API change in the (RTT internal) <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>
+					class. If you inherited directly or indirectly from this class, you'll probably need to
+					inherit from <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TypeInfoGenerator.html">TypeInfoGenerator</a> instead and fabricate a
+					<code class="function">installTypeInfoObject()</code> function. There is generally no change needed on your
+					side if you inherited from <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TemplateTypeInfo.html">TemplateTypeInfo</a>,
+					<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1StructTypeInfo.html">StructTypeInfo</a> or similar classes, since these classes
+					have implemented <code class="function">installTypeInfoObject()</code> function for you and inherit
+					from <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TypeInfoGenerator.html">TypeInfoGenerator</a>.
+				</p></li><li class="listitem"><p>
+					There was an API change in the (RTT internal)
+					<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1marsh_1_1PropertyLoader.html">PropertyLoader</a> class. It requires now a TaskContext or
+					Service in the constructor and no longer as argument to the rest of the API.
+				</p></li><li class="listitem"><p>
+					<span class="emphasis"><em>We no longer load component libraries with the RTLD_GLOBAL flag.</em></span>
+				</p><p>
+				
+					This means you must link
+					with all required libraries at link time, and not rely on symbol resolution during the
+					loading by the deployer.
+				</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ros"></a>3. ROS Users</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p> The Orocos Toolchain 2.6.x will only be released in ROS Fuerte and later.
+				</p></li><li class="listitem"><p>
+					We fixed issues of conflicting typekits (see more on that below). This means that its
+					allowed now to load typekits from ROS and non-ROS packages, describing the same
+					structs.
+				</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp52116784"></a>4. Improvements</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp52117456"></a>4.1. Building</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					<span class="emphasis"><em>ROS_ROOT is no longer influencing your build, unless you're in a ROS_PACKAGE_PATH</em></span>
+					The last cornercases of ROS_ROOT influencing our build behavior have been ironed out in this release.
+				</p><p>
+					This fixes integration issues with AutoProj.
+				</p></li><li class="listitem"><p>
+					<span class="emphasis"><em>RTT and OCL builds with clang++ 3.0</em></span>
+				</p><p>
+					This allows you to speed up RTT builds significantly. When you enabled CORBA, only the OMNIORB transport compiles fine
+					in clang.
+				</p></li><li class="listitem"><p>
+					<span class="emphasis"><em>It's now possible to create applications that setup a CORBA proxy, without
+					linking to TAO/OMNIORB directly, but only to the RTT corba transport.</em></span> See the
+					<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1corba_1_1TaskContextFactory.html">TaskContextFactory</a> class.
+				</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp52123952"></a>4.2. TaskContext and Services</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						<span class="emphasis"><em> A new connection type has been introduced, CIRCULAR_BUFFER</em></span>
+					</p><p>
+						This new type can be used in the ConnPolicy.type field in order to have circular
+						buffers instead of the classical non-circular buffer.
+					</p></li><li class="listitem"><p>
+						<span class="emphasis"><em>Exceptions thrown in operations are now detected and handled.</em></span> 
+					</p><p>When an operation threw an exception, this resulted in undefined behavior. The exception is
+						now caught by RTT and the caller side receives an std::runtime_exception exception.
+						Passing exceptions is not supported, so this is a last-resort solution to cope with
+						misbehaving operations.
+					</p></li><li class="listitem"><p>
+						<span class="emphasis"><em>The ComponentLoader is from now on part of RTT instead of OCL.</em></span>
+					</p><p>
+						This means you no longer need a DeploymentComponent to import typekits or component
+						packages.
+					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51945584"></a>4.3. Data Types, Toolkits and Typekits</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>We restructured typekits such that it is now allowed to load multiple typekits for the same type.</em></span></p><p>
+						If these typekits name the type differently, the names will function as an alias. Also,
+						TypeInfo object pointers are now constant and can no longer become invalid in a running
+						application.  The restructuring allows one to install a TypeInfo object and later-on
+						add features such as type decomposition or transports. The classical TypeInfo subclasses
+						all have been adapted, but if you created your own TypeInfo variant, you will need to
+						update your code minimally.
+					</p><p>
+						See the Caveats section above in case you wrote a custom typekit.
+					</p></li><li class="listitem"><p>
+						<span class="emphasis"><em>The internal function getMember is now much more efficient and faster.</em></span> 
+					</p><p>
+					There's now also
+						a real-time version of getMember, if you provide it a ReferenceDataSource such that a
+						reference to the member can be given without allocating a DataSource for it.
+					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51950832"></a>4.4. Operating Systems</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						Creating a Linux thread now prints the TID or PID instead of the POSIX id, such that
+						RTT threads can be correlated to normal Unix tools such as top or ps.
+					</p></li></ul></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp51953104"></a>5. Orocos Component Library (OCL)</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51953792"></a>5.1. Lua scripting</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						rttlua and tlsf-rttlua now support CORBA and Log4cpp logging as well.
+					</p></li><li class="listitem"><p>
+						tlsf-rttlua is now capable of executing RTT operations in hard real-time, as long
+						as they are assigned to an operation variable in a non-critical-time section.
+					</p></li><li class="listitem"><p>
+						Consult the  <a class="ulink" href="http://www.orocos.org/wiki/orocos/toolchain/orocostoolchainluacookbook" target="_top">LuaCookbook</a>
+						for the latest changes
+					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51958304"></a>5.2. Reporting</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						The reporting component has been rewritten (again) boosting its performance sometimes a
+						1000-fold (but at least a 100-fold), especially when using the NetCDF reporting component. We can now reliably log
+						a dozen ports at 1kHz, using only 10% cpu on an Intel i7 system.
+					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51960560"></a>5.3. Deployment</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+						A <span class="emphasis"><em>-d or --daemon</em></span> flag has been added to the deployer to let it
+						run in the background. You can use the new signal catching functions in the deployer
+						API to catch shutdown/restart signals.
+					</p></li><li class="listitem"><p>
+						Two new operations were added: setFileDescriptorActivity and connectOperations.
+					</p></li></ul></div></div></div><div class="appendix"><h2 class="title" style="clear: both"><a id="idp51964176"></a>1. About Orocos</h2><p>
+			Please send your Orocos questions to <a class="ulink" href="mailto: orocos-users at lists.mech.kuleuven.be" target="_top">
+			orocos-users at lists.mech.kuleuven.be </a>. 
+		</p><p>
+			These pages are maintained by <a class="ulink" href="http://www.orocos.org/orocos/whatis" target="_top">the Orocos
+			team</a>.
+		</p><p>
+			For questions related to the use of the Orocos Software, please consult these
+			web pages and the <a class="ulink" href="http://www.orocos.org/rtt" target="_top">Orocos RTT manuals</a>. If
+			that fails, the  <a class="ulink" href="mailto:orocos-dev at lists.mech.kuleuven.be" target="_top">
+			orocos-dev at lists.mech.kuleuven.be </a> mailing list might help.
+			Please
+			send comments on these web pages and the development of Orocos to
+			our developer mailing list at  <a class="ulink" href="mailto:orocos-dev at lists.mech.kuleuven.be" target="_top">
+			orocos-dev at lists.mech.kuleuven.be </a>. All of
+			our lists have <a class="ulink" href="http://lists.mech.kuleuven.be/mailman/listinfo/orocos-users" target="_top">public
+			archives</a> ( <a class="ulink" href="http://lists.mech.kuleuven.be/mailman/listinfo/orocos-dev" target="_top"> dev public
+			archive</a> ) .
+		</p><p>
+			Copyright (C) The SourceWorks
+		</p><p>
+			Verbatim copying and distribution of this entire article is
+			permitted in any medium, provided this notice is preserved.
+		</p></div></div></body></html>
