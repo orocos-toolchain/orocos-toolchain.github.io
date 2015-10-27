@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extending the Real-Time Toolkit with your own Data Types</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document is an introduction to making user defined types (classes) visible within Orocos. You need to read this document when you want to see the value of an object you defined yourself, for example in the TaskBrowser component or in an Orocos script. Other uses are reading and writing objects to and from XML and generally, anything a built-in Orocos type can do, so can yours." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp51865392"></a>Extending the Real-Time Toolkit with your own Data Types</h2></div><div><p class="copyright">Copyright © 2006,2007,2009, 2010 Peter Soetens, FMTC, Peter Soetens, The SourceWorks</p></div><div><div class="legalnotice"><a id="idp55705584"></a><p>
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.1 or
+	any later version published by the Free Software Foundation, with no
+	Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+	Texts. A copy of this license can be found at
+	<a class="ulink" href="http://www.fsf.org/copyleft/fdl.html" target="_top">http://www.fsf.org/copyleft/fdl.html</a>.
+      </p></div></div><div><div class="revhistory"><table style="border-style:solid; width:100%;" summary="Revision History"><tr><th align="left" valign="top" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 2.0.1</td><td align="left">7 Sept 2010</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Updated status of typegen</td></tr><tr><td align="left">Revision 2.0.0</td><td align="left">21 Jun 2010</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Reworked for RTT-2.0</td></tr><tr><td align="left">Revision 1.8.0</td><td align="left">5 Feb 2009</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Added Dot operator and toolkit plugin examples</td></tr><tr><td align="left">Revision 1.0.1</td><td align="left">24 Nov 2006</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Separated from the Developer's Manual.</td></tr></table></div></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><p>
+	This document is an introduction to making user defined types
+	(classes) visible within <acronym class="acronym">Orocos</acronym>. You need to read this
+	document when you want to see the value of an object you
+	defined yourself, for example in the TaskBrowser component or
+	in an Orocos script. Other uses are reading and writing
+	objects to and from XML and generally, anything a built-in
+	Orocos type can do, so can yours.
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idp56850720">1. The Orocos Type System : Typekits</a></span></dt><dd><dl><dt><span class="section"><a href="#idp55246944">1.1. Loading Typekits</a></span></dt><dt><span class="section"><a href="#idp54495792">1.2. Generating Typekits</a></span></dt></dl></dd><dt><span class="section"><a href="#idp51812656">2. Creating a Typekit in C++</a></span></dt><dd><dl><dt><span class="section"><a href="#idp51814832">2.1. Telling the RTT about a struct</a></span></dt><dt><span class="section"><a href="#idp51831344">2.2. Telling the RTT about a complex data type</a></span></dt><dt><span class="section"><a href="#idp57426144">2.3. Struct versus Sequence</a></span></dt><dt><span class="section"><a href="#idp57438560">2.4. Displaying and Reading</a></span></dt><dt><span class="section"><a href="#idp57447216">2.5. Reading/Writing data from/to XML</a></span></dt><dt><span class="section"><a href="#idp57463664">2.6. Network transfer using CORBA</a></span></dt></dl></dd><dt><span class="section"><a href="#idp57468480">3. Building your own Typekit</a></span></dt><dd><dl><dt><span class="section"><a href="#overloading-operators">3.1. Loading Operators</a></span></dt><dt><span class="section"><a href="#overloading-constructors">3.2. Loading Constructors</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp56850720"></a>1. The Orocos Type System : Typekits</h2></div></div></div><p>
+      Most applications define their own classes or structs to exchange
+      data between components. It is easy to tell the RTT about these
+      user defined types such that they can be displayed, stored to XML,
+      used in the scripting engine and transfered between processes or over a network
+      connection.
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp55246944"></a>1.1. Loading Typekits</h3></div></div></div><p>
+	Orocos uses the 'Typekit' principle to make it aware of user
+	types. The RTT's typekit has built-in support for
+	the C++ types <code class="classname">int</code>,<code class="classname">unsigned
+	int</code>,<code class="classname">double</code>,<code class="classname">float</code>,
+	<code class="classname">char</code>,<code class="classname">bool</code>,
+	<code class="classname">vector&lt;double&gt;</code> and
+	<code class="classname">string</code>. The idea is that user contributed typekits
+	are added at runtime.
+      </p><p>
+	A typekit is loaded as a plugin, as shown in the 
+	RTT Plugin Manual, from the <code class="filename">types</code> sudirectories
+	of the <code class="filename">RTT_COMPONENT_PATH</code> directories.
+	In case you want to load typekits manually, you can use
+	the <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1plugin_1_1PluginLoader.html">PluginLoader</a> class
+	which manages all loading and locating of RTT plugins.
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp54495792"></a>1.2. Generating Typekits</h3></div></div></div><p>
+	There are two tools available to generate Typekits for users.
+	The primary one is typegen, which generates typekits from existing C++
+	structs defined in headers. The second is based on ROS, and generates typekits
+	for ROS Messages (which are used in ros topics).
+      </p><p>
+	This table lists the pro's and con's of these two approaches:
+	</p><div class="table"><a id="typekit-generator-table"></a><p class="title"><strong>Table 1. Typekit generators</strong></p><div class="table-contents"><table summary="Typekit generators" border="1"><colgroup><col /><col /><col /><col /></colgroup><thead><tr><th>Generator</th><th>Pro's</th><th>Con's</th><th>Status</th></tr></thead><tbody><tr><td>typegen</td><td>
+		  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Works with existing C++ classes</p></li><li class="listitem"><p>Stable and tested</p></li><li class="listitem"><p>Usable with the CORBA transport</p></li><li class="listitem"><p>Usable with the mqueue transport</p></li><li class="listitem"><p>Usable for scripting, XML.</p></li></ul></div>
+		</td><td>
+		  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Requires all data members to be public</p></li><li class="listitem"><p>Ignores base classes and all data within</p></li><li class="listitem"><p>Does not handle typedefs</p></li><li class="listitem"><p>Requires to be built with 'autoproj'</p></li><li class="listitem"><p>Does not provide scripting constructors or operators</p></li></ul></div>
+		</td><td>
+		  Available for RTT 2.x, Available for RTT 1.x
+		</td></tr><tr><td>rosgen</td><td>
+		  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Compatible with ROS messages</p></li><li class="listitem"><p>Easy to use with many predefined data structures available.</p></li></ul></div>
+		</td><td>
+		  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Can not be used with existing C++ data types</p></li><li class="listitem"><p>Depends on ROS</p></li><li class="listitem"><p>Not compatible with the CORBA or mqueue transport</p></li><li class="listitem"><p>Does not provide scripting constructors or operators</p></li></ul></div>
+		</td><td>
+		  Not available for RTT 1.x, Available for RTT 2.x.
+		</td></tr></tbody></table></div></div><p><br class="table-break" />	
+      </p><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
+	  These tools are mature for most applications and users
+	  should only write typekits by hand if they want to extend
+	  beyond what typegen/rosgen offer. In practice, this means
+	  writing a typekit for a complex data type or adding
+	  specialized constructors or operators for scripting.
+	</p></td></tr></table></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp51800736"></a>1.2.1. Using <span class="command"><strong>typegen</strong></span></h4></div></div></div><p>
+	  Typegen requires that you have built the Orocos Toolchain with <span class="command"><strong>autoproj</strong></span>
+	  and that you have 'sourced' the <code class="filename">env.sh</code> file in your shell. You
+	  can use typegen as such:
+	  </p><pre class="screen">  cd myproject/src
+  typegen -o types myproject MyData.hpp
+	  </pre><p>
+	  Which will create a directory <code class="filename">types</code> which contains all necessary files to 
+	  build the typekit with name <span class="emphasis"><em>myproject</em></span> for all classes and structs defined in <code class="filename">MyData.hpp</code>.
+	  You can list more than one header such that they are handled by the same typekit.
+	</p><p>
+	  To test your typekit, you can do afterwards:
+	  </p><pre class="screen">  cd myproject/src/types
+  CMAKE_INSTALL_PREFIX=/opt/orocos CMAKE_PREFIX_PATH=/opt/orocos cmake .
+  make install
+	  </pre><p>
+	  These variables tell cmake where to find Orocos and where to install the typekit:
+	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p> CMAKE_INSTALL_PREFIX : where to install to (a single directory)</p></li><li class="listitem"><p> CMAKE_PREFIX_PATH : where to look for the installed Orocos Toolchain (a list of directories, similar to the PATH variable)</p></li></ul></div><p>
+	</p><p>
+	  After make install finishes, you will see that your data types show up in the 
+	  deployer and taskbrowser applications, provided that the RTT_COMPONENT_PATH
+	  variable contains the '/opt/orocos/lib/orocos' directory (= CMAKE_PREFIX_PATH + lib/orocos ).
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp51809888"></a>1.2.2. Using <span class="command"><strong>rosgen</strong></span></h4></div></div></div><p>Under development. Consult the mailinglist or the wiki pages for this tool.
+	<a class="ulink" href="http://www.ros.org/news/2010/09/first-development-release-of-orocos-toolchain-ros-v010.html" target="_top">Announcement</a>.</p></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp51812656"></a>2. Creating a Typekit in C++</h2></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
+	  Only continue here if you are sure you can not use typegen/rosgen !
+	</p></td></tr></table></div><p>
+      In case you don't use any of the typekit generators, you need to
+      write a typekit yourself. This has been simplified in RTT
+      2.x, but the hardest part remains providing network transport
+      for data types.
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51814832"></a>2.1. Telling the RTT about a struct</h3></div></div></div><p>
+	Say that you have an application which transfers data
+	in a struct <code class="classname">ControlData</code> :
+	</p><pre class="programlisting">  /** Note: you may also use 'class' instead of 'struct': */
+  struct ControlData {
+    double x, y, z;
+    int sample_nbr;
+  };</pre><p>
+        When you would use a DataPort&lt;ControlData&gt; and ask the
+	taskbrowser to display the data port. You would see:
+	</p><pre class="screen">  ... <span class="emphasis"><em>unknown_t</em></span> ... </pre><p>
+	instead of <span class="emphasis"><em>ControlData</em></span>. The RTT has no
+	clue on the name of your data and how to display it.
+      </p><p>
+        How can you tell the RTT how to handle this data type? In case
+				your data type is a struct and allows public read/write access to
+				its data members, you are encouraged to use the form:
+				<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1StructTypeInfo.html">StructTypeInfo</a>&lt;ClassName&gt;. Read it as:
+				provide RTT type information for this class or struct.
+      </p><p>
+				This type info kind requires
+				a helper function which is compabible with the boost::serialization
+				library (and <span class="emphasis"><em>must</em></span> be declared in that namespace)
+				and which is easy to write:
+				</p><pre class="programlisting">  #include &lt;rtt/types/StructTypeInfo.hpp&gt;
+
+  namespace boost {
+    namespace serialization {
+      // The helper function which you write yourself:
+      template&lt;class Archive&gt;
+      void serialize( Archive &amp; a, ControlData &amp; cd, unsigned int) {
+         using boost::serialization::make_nvp;
+         a &amp; make_nvp("x", cd.x);
+         a &amp; make_nvp("y", cd.y);
+         a &amp; make_nvp("z", cd.z);
+         a &amp; make_nvp("sample_nbr", cd.sample_nbr);
+      }
+    }
+  }
+
+  // The RTT helper class which uses the above function behind the scenes:
+  struct ControlDataTypeInfo
+    : public RTT::types::StructTypeInfo&lt;ControlData&gt;
+  {
+     ControlDataTypeInfo()
+        : RTT::types::StructTypeInfo&lt;ControlData&gt;("ControlData")
+     {}
+  };
+
+  // Tell the RTT the name and type of this struct:
+  RTT::types::Types()-&gt;addType( new ControlDataTypeInfo() );
+	</pre><p>
+	</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+		In case you write your serialize with 'getter' functions, for
+		example, </p><pre class="programlisting">cd.getX()</pre><p>, the 
+		getX() function <span class="emphasis"><em>must</em></span> return a reference to
+		x, i.e. have the signature: <code class="function">x&amp; getX()</code>.
+		Returning <code class="function">const x&amp; getX()</code> or  <code class="function">x getX()</code>
+		will not work and the code will not compile.
+	</p></td></tr></table></div><p>
+	From now on, the RTT knows the 'ControlData' type name and allows
+	you to write it to XML, use it in scripts and access its member
+	variables. For example, you may write in a script:
+	</p><pre class="programlisting">  var ControlData mycd;
+  mycd.x = 2 * mycd.y  = 2 * mycd.z = 1; // (x,y,z)=(4,2,1)
+  mycd.sample_nbr = 1;
+  
+  var ControlData mycd2 = mycd;
+  // ... </pre><p>
+      </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+	  The type is now usable as a 'var' in a script, however,
+	  you may need to add a constructor as
+	  well. See <a class="xref" href="#overloading-constructors" title="3.2. Loading Constructors">Section 3.2, “Loading Constructors”</a>. 
+	</p></td></tr></table></div><p>
+				If your struct or class contains other complex types, for
+				example, ControlData's sample_nbr field is a struct 'Sample' itself,
+				you need to apply the same method for that struct: create a
+				serialize() function and register the type with the StructTypeInfo
+				class. In case one of the fields is an array or sequence type, 
+				another approach is taken, as explained below.
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51831344"></a>2.2. Telling the RTT about a complex data type</h3></div></div></div><p>
+				It is not recommended to use complex data types for communicating
+				between components. Especially if your data contains pointers to
+				other data, it is possible that it can't be sent between components.
+				This section tells you how you can add 'whatever' type to a typekit,
+				but you'll have to implement all functions yourself.
+			</p><p>
+				Reasons to follow this path are:
+				</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>It's impossible to provide a serialize() function.</p></li><li class="listitem"><p>You want full control over XML format, member access in scripting etc.</p></li><li class="listitem"><p>The XML and scripting representations look different.</p></li></ul></div><p>
+				It is however recommend to use the StructTypeInfo if a serialize()
+				function can be written, and then to override the required functions
+				as shown in the next sections.
+			</p><p>
+				Complex classes must be carefully written such that they contain:
+				</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>A default constructor</p></li><li class="listitem"><p>A copy constructor that can initialize a default constructed object</p></li></ul></div><p>
+				</p><pre class="programlisting">  /** class has read-only members */
+ class ControlClass {
+    const int joints;
+ public:
+    // Mandatory !
+    ControlClass() : joints(-1) {}
+    // Mandatory !
+    ControlClass(const ControlClass&amp; orig ) : mjoints(orig.mjoints) {}
+
+    ControlClass( int joints ) : mjoints(joints)
+		int getJoints() { return joints; }
+  };</pre><p>
+	      The way to add this type to the typekit is by inheriting from the
+				<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TemplateTypeInfo.html">TemplateTypeInfo</a>&lt;ControlClass&gt; class and then
+				to specialize one by one the required functions, as explained 
+				in the next sections:
+				</p><pre class="programlisting">   // The RTT helper class for any class which has default constructor and copy constructor:
+  struct ControlClassTypeInfo
+    : public RTT::types::TemplateTypeInfo&lt;ControlClass&gt;
+  {
+     ControlClassTypeInfo()
+        : RTT::types::TemplateTypeInfo&lt;ControlClass&gt;("ControlClass")
+     {}
+
+     // Note: you'll have to implement virtual functions here,
+     // as documented by the <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a> class.
+  };
+
+  // Tell the RTT the name and type of this class:
+  RTT::types::Types()-&gt;addType( new ControlClassTypeInfo() );</pre><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp57426144"></a>2.3. Struct versus Sequence</h3></div></div></div><p> The ControlData struct is clearly a 'struct' in the C/C++
+			sense. But sometimes, you have datatypes that behave more like
+			sequences. For example, a std::vector&lt;ControlData&gt; or a
+			ControlData[100] field in another struct. In that case, we register
+			the resulting type as a  <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1SequenceTypeInfo.html">SequenceTypeInfo</a>&lt;ClassName&gt;.
+			For example:
+			</p><pre class="programlisting">  #include &lt;rtt/types/SequenceTypeInfo.hpp&gt;
+  #include &lt;rtt/types/CArrayTypeInfo.hpp&gt;
+  #include &lt;rtt/types/BoostArrayTypeInfo.hpp&gt;
+
+ // Register a <span class="emphasis"><em>std::vector&lt;ControlData&gt;</em></span> (or compatible) :
+ RTT::types::Types()-&gt;addType( new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1SequenceTypeInfo.html">SequenceTypeInfo</a>&lt;std::vector&lt;ControlData&gt; &gt;("std.vector&lt;ControlData&gt;") );
+
+ // Register a C-Array <span class="emphasis"><em>ControlData[ N ]</em></span> or <span class="emphasis"><em>ControlData*</em></span> :
+ RTT::types::Types()-&gt;addType( new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1CArrayTypeInfo.html">CArrayTypeInfo</a>&lt;types::carray&lt;ControlData&gt; &gt;("ControlData[]") );
+
+ // Register a Boost-Array <span class="emphasis"><em>boost::array&lt;ControlData&gt;</em></span> :
+ RTT::types::Types()-&gt;addType( new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1BoostArrayTypeInfo.html">BoostArrayTypeInfo</a>&lt;boost::array&lt;ControlData&gt; &gt;("boost.array&lt;ControlData&gt;") );
+	</pre><p>Note that we have adapted TypeInfo's type name argument to fit the scripting
+	  type name syntax.
+		</p><p>
+			In case a type is one of these sequence, it does not need to provide 
+			a serialize() function !
+		</p><p>
+	  Here's a complete example of combining a Struct and a Sequence:
+	</p><pre class="programlisting">  #include &lt;rtt/types/SequenceTypeInfo.hpp&gt;
+  #include &lt;rtt/types/StructTypeInfo.hpp&gt;
+  #include &lt;rtt/types/CArrayTypeInfo.hpp&gt;
+
+  struct ControlData {
+    double x, y, z;
+    int sample_nbr;
+  };
+
+  struct ControlDataSet {
+    // warning: strings may render your type non-real-time.
+    string setname;
+
+    // Variable size data set:
+    vector&lt;ControlData&gt; dataset;
+    
+    // Fixed size array:
+    unsigned int timestamp[2];
+  };
+
+  namespace boost {
+    namespace serialization {
+		   // The helper function which you write yourself for ControlData:
+		   template&lt;class Archive&gt;
+		   void serialize( Archive &amp; a, ControlData &amp; cd, unsigned int) {
+		      using boost::serialization::make_nvp;
+		      a &amp; make_nvp("x", cd.x);
+		      a &amp; make_nvp("y", cd.y);
+		      a &amp; make_nvp("z", cd.z);
+		      a &amp; make_nvp("sample_nbr", cd.sample_nbr);
+		   }
+
+		   // The helper function which you write yourself for ControlDataSet:
+		   template&lt;class Archive&gt;
+		   void serialize( Archive &amp; a, ControlDataSet &amp; cds, unsigned int) {
+		      using boost::serialization::make_nvp;
+          using boost::serialization::make_array;
+		      a &amp; make_nvp("setname", cds.setname);
+		      a &amp; make_nvp("dataset", cds.dataset);
+
+          // NOTE: we require 'make_array' + size of array for fixed size arrays.
+		      a &amp; make_nvp("timestamp", make_array( cds.timestamp, 2) );
+		   }
+		}  
+  }
+
+  // Tell the RTT the name and type of a struct:
+  RTT::types::Types()-&gt;addType( new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1StructTypeInfo.html">StructTypeInfo</a>&lt;ControlData&gt;("ControlData") );
+  // Register a std::vector (or compatible) for ControlData:
+  RTT::types::Types()-&gt;addType( new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1SequenceTypeInfo.html">SequenceTypeInfo</a>&lt;std::vector&lt;ControlData&gt; &gt;("std.vector&lt;ControlData&gt;") );
+
+  // Register an array for unsigned ints (NOTE: use of types::carray&lt;unsigned int&gt; instead of 'unsigned int'):
+  RTT::types::Types()-&gt;addType( new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1CArrayTypeInfo.html">CArrayTypeInfo</a>&lt;types::carray&lt;unsigned int&gt; &gt;("uint[]") );
+
+  // Tell the RTT the name and type of a struct:
+  RTT::types::Types()-&gt;addType( new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1StructTypeInfo.html">StructTypeInfo</a>&lt;ControlDataSet&gt;("ControlDataSet") );
+	</pre><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp57438560"></a>2.4. Displaying and Reading</h3></div></div></div><p>
+				There is no default implementation for reading or writing
+				your data to a stream. You need to implement this yourself.
+				This is optional for most types, since most code will use
+				the introspection functions ( getMember() ) of your type
+				to learn about the internals.
+			</p><p>	
+				In order to tell the RTT how to display your type, you
+				may overload the <code class="function">TypeInfo::read</code> and
+				<code class="function">TypeInfo::write</code> functions
+				OR define <code class="function">operator&lt;&lt;()</code> and 
+				<code class="function">operator&gt;&gt;()</code>  for your type (preferred).
+				The code below shows the latter option:
+			</p><pre class="programlisting">  #include &lt;rtt/types/StructTypeInfo.hpp&gt;
+  #include &lt;ostream&gt;
+  #include &lt;istream&gt;
+
+  // Displaying:
+  std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, const ControlData&amp; cd) {
+     return os &lt;&lt; '('&lt;&lt; cd.x &lt;&lt; ',' &lt;&lt; cd.y &lt;&lt; ',' &lt;&lt; cd.z &lt;&lt; '): ' &lt;&lt; cd.sample_nbr;
+  }
+
+  // Reading :
+  std::istream&amp; operator&gt;&gt;(std::istream&amp; is, ControlData&amp; cd) {
+     char c;
+     return is &gt;&gt; c &gt;&gt; cd.x &gt;&gt; c &gt;&gt; cd.y &gt;&gt; c &gt;&gt; cd.z &gt;&gt; c &gt;&gt; c &gt;&gt; cd.sample_nbr; // 'c' reads '(' ',' ',' ')' and ':'
+  }
+  // ...
+  // The 'true' argument means: <span class="emphasis"><em> it has operator&lt;&lt; and operator&gt;&gt;</em></span>
+  struct ControlDataTypeInfo
+    : public RTT::types::StructTypeInfo&lt;ControlData,<span class="emphasis"><em>true</em></span>&gt;
+  {
+     ControlDataTypeInfo()
+        : RTT::types::StructTypeInfo&lt;ControlData,<span class="emphasis"><em>true</em></span>&gt;("ControlData")
+     {}
+  };
+
+  // Tell the RTT the name and type of this struct
+  RTT::types::Types()-&gt;addType( new ControlDataTypeInfo() );
+	</pre><p>
+	  If you use the above line of code to add the type, the RTT will be
+	  able to display it as well, for example in the TaskBrowser.
+	  Other subsystems may use your operators
+	  to exchange data in a text-based form. However, in order to
+	  'construct' your type in a script or at the TaskBrowser prompt,
+	  you need to add a constructor as shown in <a class="xref" href="#overloading-constructors" title="3.2. Loading Constructors">Section 3.2, “Loading Constructors”</a>. 
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp57447216"></a>2.5. Reading/Writing data from/to XML</h3></div></div></div><p>
+	  Every data type that has been defined using the StructTypeInfo
+	  and a proper serialization function, can be written to XML.
+	  The ControlStruct data type will be encoded like this:
+	</p><pre class="programlisting">
+  &lt;struct name="MyData" type="ControlData"&gt;
+    &lt;simple name="x" type="double"&gt;
+       &lt;value&gt;0.12&lt;/value&gt;
+    &lt;/simple&gt;
+    &lt;simple name="y" type="double"&gt;
+       &lt;value&gt;1.23&lt;/value&gt;
+    &lt;/simple&gt;
+    &lt;simple name="z" type="double"&gt;
+       &lt;value&gt;3.21&lt;/value&gt;
+    &lt;/simple&gt;
+    &lt;simple name="sample_nbr" type="short"&gt;
+       &lt;value&gt;3123&lt;/value&gt;
+    &lt;/simple&gt;
+  &lt;/struct&gt;
+	</pre><p>
+				In case you didn't use the StructTypeInfo or you want to override the default
+				you may implement the <code class="function">composeType()</code> and 
+				<code class="function">decomposeType()</code> functions of 
+				the <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a> class, which is explained
+				in the next two sections.
+			</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp57452096"></a>2.5.1. Changing how your data is written to XML</h4></div></div></div><p>
+					In case the default XML format is not good for you, or you inherited from
+					TemplateTypeInfo, you need to inform Orocos of the structure of your data type.
+					It must be given a 'decompose' function: Of which primitive types
+					does the data consists ? Representing structured data is what
+					Orocos <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1Property.html">Property</a> objects do.
+					Here is how to tell Orocos how the "ControlData" is structured:
+	</p><pre class="programlisting">  // We use StructTypeInfo, so we override the defaults...
+  struct ControlDataTypeInfo
+    : public StructTypeInfo&lt;ControlData,true&gt;
+  {
+     // ... other functions omitted
+
+     // this is a helper function, which is called by composeType() of the same class:
+     virtual bool decomposeTypeImpl(const ControlData&amp; in, PropertyBag&amp; targetbag ) const {
+         targetbag.setType("ControlData");
+         targetbag.add( new Property&lt;double&gt;("X", "X value of my Data", in.x ) );
+         targetbag.add( new Property&lt;double&gt;("Y", "Y value of my Data", in.y ) );
+         targetbag.add( new Property&lt;double&gt;("Z", "Z value of my Data", in.z ) );
+         targetbag.add( new Property&lt;int&gt;("Sample", "The sample number of the Data", in.sample_nbr ) );
+         return true;
+     }
+  }</pre><p>
+					This function reads as such: For each member of your struct, add a
+					<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1Property.html">Property</a> of the correct
+					type to the targetbag and initialize it with the value of the 'in' parameter.
+					<code class="function">setType()</code> is mandatory and can be used lateron to
+					determine the version or type of your XML representation.  Next,
+					if Orocos tries to write an XML file with ControlData in it,
+					it will look like:
+				</p><pre class="programlisting">
+  &lt;struct name="MyData" type="ControlData"&gt;
+    &lt;simple name="X" type="double"&gt;
+       &lt;description&gt;X value of my Data&lt;/description&gt;
+       &lt;value&gt;0.12&lt;/value&gt;
+    &lt;/simple&gt;
+    &lt;simple name="Y" type="double"&gt;
+       &lt;description&gt;Y value of my Data&lt;/description&gt;
+       &lt;value&gt;1.23&lt;/value&gt;
+    &lt;/simple&gt;
+    &lt;simple name="Z" type="double"&gt;
+       &lt;description&gt;Z value of my Data&lt;/description&gt;
+       &lt;value&gt;3.21&lt;/value&gt;
+    &lt;/simple&gt;
+    &lt;simple name="Sample" type="short"&gt;
+       &lt;description&gt;The sample number of the Data&lt;/description&gt;
+       &lt;value&gt;3123&lt;/value&gt;
+    &lt;/simple&gt;
+  &lt;/struct&gt;
+	</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp57458032"></a>2.5.2. Changing how data is read from XML</h4></div></div></div><p>
+					When you modified the default writing to XML, you probably need
+					to modify the default reading as well.
+					This step is called 'composition', and means: put all the 
+					individual XML elements back into one data structure.
+				</p><p>
+					Here is how to tell Orocos how the "ControlData" is read:
+				</p><pre class="programlisting">  // ...
+  struct ControlDataTypeInfo
+    : public TemplateTypeInfo&lt;ControlData,true&gt;
+  {
+
+     // ... other functions omitted
+
+     virtual bool composeTypeImpl(const PropertyBag&amp; bag, ControlData&amp; out ) const 
+     {
+        if ( bag.getType() == std::string("ControlData") ) // check the type
+        {  
+          Property&lt;double&gt;* x = targetbag.getProperty("X");
+          Property&lt;double&gt;* y = targetbag.getProperty("Y");
+          Property&lt;double&gt;* z = targetbag.getProperty("Z");
+          Property&lt;int&gt;* t = targetbag.getProperty("Sample");
+
+          if ( !x || !y || !z || !t )
+              return false;
+
+          out.x = x-&gt;get();
+          out.y = y-&gt;get();
+          out.z = z-&gt;get();
+          out.sample_nbr = t-&gt;get();
+          return true;
+        }
+        return false; // unknown type !
+     }
+  }</pre><p>
+					First the type is checked and then the properties are located in the bag, it should look
+					just like we stored them. If not, return false, otherwise, read the values and store them
+					in the out variable.
+				</p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp57463664"></a>2.6. Network transfer using CORBA</h3></div></div></div><p>
+	  In order to transfer your data between components using the
+	  CORBA network transport, the RTT requires that you provide the conversion
+	  from your type to a CORBA::Any type and back. This procedure is
+	  done automatically if you use <span class="command"><strong>orogen</strong></span>.
+	</p><p>
+	  The first step is describing your struct in IDL and generate
+	  the 'client' headers with 'Any' support. Next you
+	  create such a struct, fill it with your data type's data
+	  and next 'stream' it to an Any. The other way around is
+	  required as well.
+	</p><p>
+	  In addition, you will need the CORBA support of the RTT
+	  enabled in your build configuration.
+	</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+	    This procedure is discussed in detail <a class="ulink" href="http://www.orocos.org/wiki/rtt/simple-examples/developing-plugins-and-toolkits/part-3-transport-plugin" target="_top">on the Orocos wiki</a>.
+	  </p></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp57468480"></a>3. Building your own Typekit</h2></div></div></div><p>
+	The number of types may grow in your application to such
+	a number or diversity that it may be convenient to 
+	build your own typekit and make it a plugin.
+	Non-Orocos libraries benefit from this system as well because
+	they can introduce their data types into Orocos.
+      </p><p>
+	Each typekit must define a class that inherits from the
+	<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TypekitPlugin.html">TypekitPlugin</a> class and implement
+	four functions: <code class="function">loadTypes()</code>,
+	<code class="function">loadConstructors</code>,
+	<code class="function">loadOperators()</code> and
+	<code class="function">getName()</code>.
+      </p><p>
+	The name of a typekit must be unique. Each typekit will be loaded
+	no more than once. The loadTypes function contains all 
+	'StructTypeInfo' constructs to tell the RTT about the types
+	of your typekit. The loadOperators function contains all
+	operations that can be performed on your data such as addition ('+'),
+	indexing ('[i]'), comparison ('==') etc. Finally, type constructors
+	are added in the loadConstructors function. They allow a newly
+	created script variable to be initialised with a (set of) values.
+      </p><p>
+	Mimick the code of the
+	<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1RealTimeTypekitPlugin.html">RealTimeTypekitPlugin</a> to build
+	your own.
+      </p><p> Your typekit header file might look like:
+      </p><pre class="programlisting">  #ifndef ORO_MY_TYPEKIT_HPP
+  #define ORO_MY_TYPEKIT_HPP
+
+  #include &lt;rtt/types/TypekitPlugin.hpp&gt;
+
+  namespace MyApp
+  {
+    /**
+     * This interface defines the types of my application
+     */
+    class MyTypekitPlugin
+       : public RTT::types::TypekitPlugin
+    {
+    public:
+        virtual std::string getName();
+
+        virtual bool loadTypes();
+        virtual bool loadConstructors();
+        virtual bool loadOperators();
+    };
+  }
+  #endif</pre><p>
+      The mytypekit.cpp files looks like:
+      </p><pre class="programlisting">
+  #include "mytypekit.hpp"
+
+  namespace MyApp {
+    std::string MyTypekitPlugin::getName() { return "MyTypekit"; }
+
+    bool MyTypekitPlugin::loadTypes() {
+      // Tell the RTT the name and type of this struct
+      RTT::types::Types()-&gt;addType( new ControlDataTypeInfo() );
+    }  
+
+    /** ...Add the other example code of this manual here as well... */
+    bool MyTypekitPlugin::loadConstructors() {
+      // ...
+    }
+    bool MyTypekitPlugin::loadOperators() {
+      // ...
+    }
+  } // namespace MyApp
+
+  /** Register the class as a plugin */
+  ORO_TYPEKIT_PLUGIN( MyApp::MyTypekitPlugin ); </pre><p>
+	Next compile the .cpp file as a shared library and put it in
+	the <code class="filename">types</code> subdirectory of the RTT_COMPONENT_PATH.
+      </p><p>
+	The Plugin Manual explains more in detail how plugins are
+	located or can be loaded from C++ code. The class that 
+	manages plugin loading is the <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1plugin_1_1PluginLoader.html">PluginLoader</a>.
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="overloading-operators"></a>3.1. Loading Operators</h3></div></div></div><p>
+	  Some data types may support mathematical operations. In that case,
+	  you can register these operators to the RTT type system such that
+	  you can use them in your scripts. In case your type does not need
+	  such operations, this section can be skipped.
+	</p><p>
+	  Operator are stored in the class <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1OperatorRepository.html">OperatorRepository</a>
+	  in <code class="filename">Operators.hpp</code>.  The list of
+	  supported operators is set by the typekit and added to the OperatorRepository
+	  It looks something like this:
+	  </p><pre class="programlisting">
+bool loadOperators() {
+  OperatorRepository::shared_ptr oreg = RTT::operators();
+  // boolean stuff:
+  oreg-&gt;add( newUnaryOperator( "!", std::logical_not&lt;bool&gt;() ) );
+  oreg-&gt;add( newBinaryOperator( "&amp;&amp;", std::logical_and&lt;bool&gt;() ) );
+  oreg-&gt;add( newBinaryOperator( "||", std::logical_or&lt;bool&gt;() ) );
+  oreg-&gt;add( newBinaryOperator( "==", std::equal_to&lt;bool&gt;() ) );
+  oreg-&gt;add( newBinaryOperator( "!=", std::not_equal_to&lt;bool&gt;() ) );
+  return true;
+} </pre><p>
+	  Adding your own should not be terribly hard.  The hardest
+	  part is that as the second argument to newUnaryOperator,
+	  newBinaryOperator or newTernaryOperator, you need to specify
+	  a STL Adaptable Functor, and even though the STL provides
+	  many predefined one's, it does not provide all possible
+	  combinations, and you might end up having to write your
+	  own.  The STL does not at all provide any "ternary
+	  operators", so if you need one of those, you'll definitely
+	  have to write it yourself.
+	</p><p>
+	  Note that this section is only about adding overloads for
+	  existing operators, if you want to add new operators to
+	  the scripting engine, the parsers need to be extended as well.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="overloading-constructors"></a>3.2. Loading Constructors</h3></div></div></div><p>
+	  Constructors can only be added <span class="emphasis"><em>after</em></span> a 
+	  type has been loaded using <code class="function">addType</code>.
+	  Say that the ControlData struct has a constructor:
+	</p><pre class="programlisting">  struct ControlData {
+    // Don't forget to supply the default constructor
+    // as well.
+    ControlData() 
+      : x(0), y(0), z(0), sample_nbr(0)
+    {}
+    ControlData(double a, double b, double c) 
+      : x(a), y(b), z(c), sample_nbr(0)
+    {}
+    double x, y, z;
+    int sample_nbr;
+  }</pre><p>
+	  This constructor is not automatically known to the type system.
+	  You need to write a constructor function and add that to the
+	  type info:
+        </p><pre class="programlisting">
+  // This 'factory' function constructs one object.
+  ControlData createCD(double a, double b, double c) {
+    return ControlData(a,b,c);
+  }
+
+  // Tell the RTT a constructor is available:
+  // Attention: "ControlData" must have been added before with 'addType' !
+  RTT::types::Types()-&gt;type("ControlData")-&gt;addConstructor( newConstructor(&amp;createCD) );
+	</pre><p>
+	  From now on, one can write in a script:
+	</p><pre class="programlisting">  var ControlData cd = ControlData(3.4, 5.0, 1.7);</pre><p>
+	  Multiple constructors can be added for the same type. The first
+	  one that matches with the given arguments is then taken. For example:
+	</p><pre class="programlisting">
+  // Add 'ControlData( 3.0 )' constructor:
+  ControlData createCD_2(double a) {
+    return ControlData(a,a,a);
+  }
+
+  // Tell the RTT a constructor is available:
+  RTT::types::Types()-&gt;type("ControlData")-&gt;addConstructor( newConstructor(&amp;createCD_2) );
+	</pre></div></div></div></body></html>
