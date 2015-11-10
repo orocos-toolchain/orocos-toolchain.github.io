@@ -139,12 +139,14 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual <a class="el" href="classRTT_1_1Service.html">Service</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OutputPort.html#a1cf40612f7336461fbe3b7af72f66690">createPortObject</a> ()</td></tr>
 <tr class="memdesc:a1cf40612f7336461fbe3b7af72f66690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create accessor Object for this Port, for addition to a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> Object interface. <br/></td></tr>
 <tr class="separator:a1cf40612f7336461fbe3b7af72f66690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f815bb706364754a1dd4ea4a70ba6c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html">internal::ConnInputEndpoint</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OutputPort.html#a6f815bb706364754a1dd4ea4a70ba6c8">getEndpoint</a> () const </td></tr>
-<tr class="memdesc:a6f815bb706364754a1dd4ea4a70ba6c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the input or output endpoint of this port (if any).  <a href="#a6f815bb706364754a1dd4ea4a70ba6c8">More...</a><br/></td></tr>
-<tr class="separator:a6f815bb706364754a1dd4ea4a70ba6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b88a5bc815d5c30c5be71a16418ecd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OutputPort.html#a4b88a5bc815d5c30c5be71a16418ecd8">getSharedBuffer</a> () const </td></tr>
-<tr class="memdesc:a4b88a5bc815d5c30c5be71a16418ecd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shared input or output buffer of this port (if any).  <a href="#a4b88a5bc815d5c30c5be71a16418ecd8">More...</a><br/></td></tr>
-<tr class="separator:a4b88a5bc815d5c30c5be71a16418ecd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ae7bf04bea7938d3c45007958f05690"><td class="memItemLeft" align="right" valign="top">virtual <br class="typebreak"/>
+<a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html">internal::ConnInputEndpoint</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OutputPort.html#a9ae7bf04bea7938d3c45007958f05690">getEndpoint</a> () const </td></tr>
+<tr class="memdesc:a9ae7bf04bea7938d3c45007958f05690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the input or output endpoint of this port (if any).  <a href="#a9ae7bf04bea7938d3c45007958f05690">More...</a><br/></td></tr>
+<tr class="separator:a9ae7bf04bea7938d3c45007958f05690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aba34a5fa73e5d4bfdc66c4fd8778ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7aba34a5fa73e5d4bfdc66c4fd8778ed"></a>
+virtual <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a><br class="typebreak"/>
+&lt; T &gt;::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getSharedBuffer</b> () const </td></tr>
+<tr class="separator:a7aba34a5fa73e5d4bfdc66c4fd8778ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaba7cd2c1376d1d3cc1d7ad59e509dd1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html#aaba7cd2c1376d1d3cc1d7ad59e509dd1">addConnection</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *port_id, ChannelElementBase::shared_ptr channel_input, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy)</td></tr>
 <tr class="memdesc:aaba7cd2c1376d1d3cc1d7ad59e509dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new connection to this output port and initializes the connection if required by <em>policy</em>.  <a href="#aaba7cd2c1376d1d3cc1d7ad59e509dd1">More...</a><br/></td></tr>
 <tr class="separator:aaba7cd2c1376d1d3cc1d7ad59e509dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -607,7 +609,7 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a6f815bb706364754a1dd4ea4a70ba6c8"></a>
+<a class="anchor" id="a9ae7bf04bea7938d3c45007958f05690"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -617,7 +619,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html">internal::ConnInputEndpoint</a>&lt;T&gt;* <a class="el" href="classRTT_1_1OutputPort.html">RTT::OutputPort</a>&lt; T &gt;::getEndpoint </td>
+          <td class="memname">virtual <a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html">internal::ConnInputEndpoint</a>&lt;T&gt;* <a class="el" href="classRTT_1_1OutputPort.html">RTT::OutputPort</a>&lt; T &gt;::getEndpoint </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -637,7 +639,7 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="OutputPort_8hpp_source.html#l00333">333</a> of file <a class="el" href="OutputPort_8hpp_source.html">OutputPort.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00227">RTT::OutputPort&lt; T &gt;::clear()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00339">RTT::OutputPort&lt; T &gt;::getSharedBuffer()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00209">RTT::OutputPort&lt; T &gt;::setDataSample()</a>, and <a class="el" href="OutputPort_8hpp_source.html#l00243">RTT::OutputPort&lt; T &gt;::write()</a>.</p>
+<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00227">RTT::OutputPort&lt; T &gt;::clear()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00209">RTT::OutputPort&lt; T &gt;::setDataSample()</a>, and <a class="el" href="OutputPort_8hpp_source.html#l00243">RTT::OutputPort&lt; T &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -739,42 +741,6 @@ template&lt;typename T&gt; </div>
 <p>Definition at line <a class="el" href="PortInterface_8hpp_source.html#l00219">219</a> of file <a class="el" href="PortInterface_8hpp_source.html">PortInterface.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="ConnInputEndPoint_8hpp_source.html#l00072">RTT::internal::ConnInputEndpoint&lt; T &gt;::disconnect()</a>, and <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00129">RTT::internal::ConnOutputEndpoint&lt; T &gt;::disconnect()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4b88a5bc815d5c30c5be71a16418ecd8"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt;T&gt;* <a class="el" href="classRTT_1_1OutputPort.html">RTT::OutputPort</a>&lt; T &gt;::getSharedBuffer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the shared input or output buffer of this port (if any). </p>
-<p>This method provides access to the internals of this port in order to access connected channel objects directly. </p>
-
-<p>Implements <a class="el" href="classRTT_1_1base_1_1PortInterface.html#a85d84331b9c07b304a9657ce6efee9c1">RTT::base::PortInterface</a>.</p>
-
-<p>Definition at line <a class="el" href="OutputPort_8hpp_source.html#l00339">339</a> of file <a class="el" href="OutputPort_8hpp_source.html">OutputPort.hpp</a>.</p>
-
-<p>References <a class="el" href="OutputPort_8hpp_source.html#l00333">RTT::OutputPort&lt; T &gt;::getEndpoint()</a>.</p>
-
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>.</p>
 
 </div>
 </div>
@@ -999,7 +965,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 6 2015 13:12:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2015 13:00:22 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -3133,18 +3133,11 @@
       <anchor>abd981129bffa516bca0e3cef0935aff4</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>internal::ConnOutputEndpoint&lt; T &gt; *</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual internal::ConnOutputEndpoint&lt; T &gt; *</type>
       <name>getEndpoint</name>
       <anchorfile>classRTT_1_1InputPort.html</anchorfile>
-      <anchor>ab91c08c5dacc3b1ab3e2ea38e58df40f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>base::ChannelElement&lt; T &gt; *</type>
-      <name>getSharedBuffer</name>
-      <anchorfile>classRTT_1_1InputPort.html</anchorfile>
-      <anchor>a593797279333dd4528e919258b6389e9</anchor>
+      <anchor>ab96f706f941d8cefa9576c25b1a221f2</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4174,18 +4167,11 @@
       <anchor>a1cf40612f7336461fbe3b7af72f66690</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>internal::ConnInputEndpoint&lt; T &gt; *</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual internal::ConnInputEndpoint&lt; T &gt; *</type>
       <name>getEndpoint</name>
       <anchorfile>classRTT_1_1OutputPort.html</anchorfile>
-      <anchor>a6f815bb706364754a1dd4ea4a70ba6c8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>base::ChannelElement&lt; T &gt; *</type>
-      <name>getSharedBuffer</name>
-      <anchorfile>classRTT_1_1OutputPort.html</anchorfile>
-      <anchor>a4b88a5bc815d5c30c5be71a16418ecd8</anchor>
+      <anchor>a9ae7bf04bea7938d3c45007958f05690</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -7409,13 +7395,6 @@
       <name>getEndpoint</name>
       <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
       <anchor>af8d42fb68c00a6be39f2da0e57a8f47c</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual ChannelElementBase *</type>
-      <name>getSharedBuffer</name>
-      <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
-      <anchor>a85d84331b9c07b304a9657ce6efee9c1</anchor>
       <arglist>() const =0</arglist>
     </member>
   </compound>

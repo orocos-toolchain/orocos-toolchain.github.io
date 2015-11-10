@@ -207,8 +207,8 @@
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html#a7dcc89cab2e2ddb78eb00262691325c7">removeOutput</a>(shared_ptr());</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html#a07f2b157dd0ff6a6f0159a782dc17771">removeInput</a>(shared_ptr());</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html#a7dcc89cab2e2ddb78eb00262691325c7">ChannelElementBase::removeOutput</a>(shared_ptr());</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html#a07f2b157dd0ff6a6f0159a782dc17771">ChannelElementBase::removeInput</a>(shared_ptr());</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
@@ -395,7 +395,7 @@
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;{</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">if</span> (!output) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <a class="code" href="classRTT_1_1os_1_1MutexLock.html">RTT::os::MutexLock</a> lock(outputs_lock);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    assert(std::find(outputs.begin(), outputs.end(), output) == outputs.end());</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="comment">// assert(std::find(outputs.begin(), outputs.end(), output) == outputs.end());</span></div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">if</span> (std::find(outputs.begin(), outputs.end(), output) != outputs.end()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    outputs.push_back(Output(output, mandatory));</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -601,7 +601,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 6 2015 13:12:03 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2015 13:00:18 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

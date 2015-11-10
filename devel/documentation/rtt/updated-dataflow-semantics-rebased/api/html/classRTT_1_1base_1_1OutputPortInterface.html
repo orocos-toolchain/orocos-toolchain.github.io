@@ -198,9 +198,6 @@ virtual <a class="el" href="classRTT_1_1Service.html">Service</a> *&#160;</td><t
 <tr class="memitem:af8d42fb68c00a6be39f2da0e57a8f47c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#af8d42fb68c00a6be39f2da0e57a8f47c">getEndpoint</a> () const =0</td></tr>
 <tr class="memdesc:af8d42fb68c00a6be39f2da0e57a8f47c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the input or output endpoint of this port (if any).  <a href="#af8d42fb68c00a6be39f2da0e57a8f47c">More...</a><br/></td></tr>
 <tr class="separator:af8d42fb68c00a6be39f2da0e57a8f47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85d84331b9c07b304a9657ce6efee9c1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#a85d84331b9c07b304a9657ce6efee9c1">getSharedBuffer</a> () const =0</td></tr>
-<tr class="memdesc:a85d84331b9c07b304a9657ce6efee9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shared input or output buffer of this port (if any).  <a href="#a85d84331b9c07b304a9657ce6efee9c1">More...</a><br/></td></tr>
-<tr class="separator:a85d84331b9c07b304a9657ce6efee9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9affe57d417800aae5ee2ec5baeca578"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9affe57d417800aae5ee2ec5baeca578"></a>
 virtual <br class="typebreak"/>
 internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#a9affe57d417800aae5ee2ec5baeca578">getSharedConnection</a> () const </td></tr>
@@ -575,7 +572,7 @@ Protected Attributes</h2></td></tr>
 <p>Returns the input or output endpoint of this port (if any). </p>
 <p>This method provides access to the internals of this port in order to access connected channel objects directly. </p>
 
-<p>Implemented in <a class="el" href="classRTT_1_1OutputPort.html#a6f815bb706364754a1dd4ea4a70ba6c8">RTT::OutputPort&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1InputPort.html#ab91c08c5dacc3b1ab3e2ea38e58df40f">RTT::InputPort&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1OutputPort.html#a9ae7bf04bea7938d3c45007958f05690">RTT::OutputPort&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1InputPort.html#ab96f706f941d8cefa9576c25b1a221f2">RTT::InputPort&lt; T &gt;</a>.</p>
 
 <p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00078">RTT::internal::ConnectionManager::eraseConnection()</a>.</p>
 
@@ -610,34 +607,6 @@ Protected Attributes</h2></td></tr>
 <p>Definition at line <a class="el" href="PortInterface_8hpp_source.html#l00219">219</a> of file <a class="el" href="PortInterface_8hpp_source.html">PortInterface.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="ConnInputEndPoint_8hpp_source.html#l00072">RTT::internal::ConnInputEndpoint&lt; T &gt;::disconnect()</a>, and <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00129">RTT::internal::ConnOutputEndpoint&lt; T &gt;::disconnect()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a85d84331b9c07b304a9657ce6efee9c1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>* RTT::base::PortInterface::getSharedBuffer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the shared input or output buffer of this port (if any). </p>
-<p>This method provides access to the internals of this port in order to access connected channel objects directly. </p>
-
-<p>Implemented in <a class="el" href="classRTT_1_1OutputPort.html#a4b88a5bc815d5c30c5be71a16418ecd8">RTT::OutputPort&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1InputPort.html#a593797279333dd4528e919258b6389e9">RTT::InputPort&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -778,7 +747,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 6 2015 13:12:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2015 13:00:23 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
