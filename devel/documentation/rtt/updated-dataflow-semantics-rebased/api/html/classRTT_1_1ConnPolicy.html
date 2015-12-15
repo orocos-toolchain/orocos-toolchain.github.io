@@ -116,12 +116,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:adbb615689773110a6c329c8b631fa1ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ConnPolicy.html#adbb615689773110a6c329c8b631fa1ee">pull</a></td></tr>
 <tr class="memdesc:adbb615689773110a6c329c8b631fa1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, then the sink will have to pull data.  <a href="#adbb615689773110a6c329c8b631fa1ee">More...</a><br/></td></tr>
 <tr class="separator:adbb615689773110a6c329c8b631fa1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0562162409bb8452f97bd0f381575f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">ReadPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ConnPolicy.html#ae0562162409bb8452f97bd0f381575f1">read_policy</a></td></tr>
-<tr class="memdesc:ae0562162409bb8452f97bd0f381575f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The policy on how to read from this connection.  <a href="#ae0562162409bb8452f97bd0f381575f1">More...</a><br/></td></tr>
-<tr class="separator:ae0562162409bb8452f97bd0f381575f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ead873a2cb599a096adae9f59c58a5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">WritePolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ConnPolicy.html#a6ead873a2cb599a096adae9f59c58a5a">write_policy</a></td></tr>
-<tr class="memdesc:a6ead873a2cb599a096adae9f59c58a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The policy on how to write to this connection.  <a href="#a6ead873a2cb599a096adae9f59c58a5a">More...</a><br/></td></tr>
-<tr class="separator:a6ead873a2cb599a096adae9f59c58a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700a61ba2e9543496e638d93de38d004"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ConnPolicy.html#a700a61ba2e9543496e638d93de38d004">buffer_policy</a></td></tr>
+<tr class="memdesc:a700a61ba2e9543496e638d93de38d004"><td class="mdescLeft">&#160;</td><td class="mdescRight">The policy on how buffer elements will be installed for this connection, which influences the behavior of reads and writes if the port has muliple connections.  <a href="#a700a61ba2e9543496e638d93de38d004">More...</a><br/></td></tr>
+<tr class="separator:a700a61ba2e9543496e638d93de38d004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac70f15548f9b856b0a4dbd8e09bab102"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ConnPolicy.html#ac70f15548f9b856b0a4dbd8e09bab102">max_threads</a></td></tr>
 <tr class="memdesc:ac70f15548f9b856b0a4dbd8e09bab102"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of threads that will access the connection data or buffer object.  <a href="#ac70f15548f9b856b0a4dbd8e09bab102">More...</a><br/></td></tr>
 <tr class="separator:ac70f15548f9b856b0a4dbd8e09bab102"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,11 +186,7 @@ static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>PULL</b>
 <p class="endli"></p>
 </li>
 <li>
-<p class="startli">the read policy, which influences in what way multiple connections to the same input port are read. The default is PreferLastRead, where the input port first checks the connection where it read the last sample from and only then starts to iterate over all others. See <a class="el" href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">ReadPolicy</a> to see all available options. Not all combinations of read policy and the pull flag are valid and non-standard transports can have additional restrictions.</p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli">the write policy, which influences how an output port serves multiple connections. By default, all connections are written independently (WritePrivate). See <a class="el" href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">WritePolicy</a> to see all available options.</p>
+<p class="startli">the buffer policy, which controls how multiple connections to the same input or output port are handled in case of concurrent or subsequent read and write operations. See <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> to see all available options. Not all combinations of buffer policies and the pull flag are valid and non-standard transports can have additional restrictions.</p>
 <p class="endli"></p>
 </li>
 <li>
@@ -212,7 +205,7 @@ static const bool&#160;</td><td class="memItemRight" valign="bottom"><b>PULL</b>
 the name of the connection. Can be used to coordinate out of band transport such that they can find each other by name. In practice, the name contains a port number or file descriptor to be opened. You only need to provide a name_id if you're using out-of-band transports without supervisor, for example, when using MQueues without Corba. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00113">113</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00107">107</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7d530653f7af6434a806a74f4a091abc"></a>
 <div class="memitem">
@@ -246,7 +239,7 @@ the name of the connection. Can be used to coordinate out of band transport such
 </dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00124">124</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00122">122</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
 
 </div>
 </div>
@@ -293,7 +286,7 @@ the name of the connection. Can be used to coordinate out of band transport such
 </dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00138">138</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00135">135</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
 
 </div>
 </div>
@@ -354,9 +347,9 @@ the name of the connection. Can be used to coordinate out of band transport such
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the specified policy. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00078">78</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00077">77</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00209">init</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00202">lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00215">pull</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00199">size</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00196">type</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00203">init</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00196">lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00209">pull</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00193">size</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00190">type</a>.</p>
 
 <p>Referenced by <a class="el" href="OutputPortInterface_8cpp_source.html#l00087">RTT::base::OutputPortInterface::createBufferConnection()</a>.</p>
 
@@ -418,9 +411,9 @@ the name of the connection. Can be used to coordinate out of band transport such
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the specified policy. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00089">89</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00088">88</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00209">init</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00202">lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00215">pull</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00199">size</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00196">type</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00203">init</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00196">lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00209">pull</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00193">size</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00190">type</a>.</p>
 
 </div>
 </div>
@@ -473,9 +466,9 @@ the name of the connection. Can be used to coordinate out of band transport such
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the specified policy. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00100">100</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00099">99</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00209">init</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00202">lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00215">pull</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00196">type</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00203">init</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00196">lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00209">pull</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00190">type</a>.</p>
 
 <p>Referenced by <a class="el" href="OutputPortInterface_8cpp_source.html#l00084">RTT::base::OutputPortInterface::createDataConnection()</a>.</p>
 
@@ -505,15 +498,34 @@ the name of the connection. Can be used to coordinate out of band transport such
 <p>Returns the process-wide default <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">ConnPolicy</a> that serves as a template for new <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">ConnPolicy</a> instances. </p>
 <p>This method returns a non-const reference and you can change the defaults. This is not thread-safe and should only be done very early in the deployment phase, before the first component is loaded and before connecting ports. </p>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00072">72</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8cpp_source.html#l00071">71</a> of file <a class="el" href="ConnPolicy_8cpp_source.html">ConnPolicy.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnPolicy_8cpp_source.html#l00110">ConnPolicy()</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8cpp_source.html#l00109">ConnPolicy()</a>.</p>
 
-<p>Referenced by <a class="el" href="RealTimeTypekitGlobals_8cpp_source.html#l00054">RTT::types::RealTimeTypekitPlugin::loadGlobals()</a>.</p>
+<p>Referenced by <a class="el" href="RealTimeTypekitGlobals_8cpp_source.html#l00053">RTT::types::RealTimeTypekitPlugin::loadGlobals()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a700a61ba2e9543496e638d93de38d004"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> RTT::ConnPolicy::buffer_policy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The policy on how buffer elements will be installed for this connection, which influences the behavior of reads and writes if the port has muliple connections. </p>
+<p>See <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> enum for possible options. </p>
+
+<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00216">216</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00310">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00157">RTT::internal::ConnFactory::buildDataStorage()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00471">RTT::internal::ConnFactory::createConnection()</a>, and <a class="el" href="ChannelBufferElement_8hpp_source.html#l00085">RTT::internal::ChannelBufferElement&lt; T &gt;::read()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6b4b2c1bc23e0b582bc3b42689c49a67"></a>
 <div class="memitem">
 <div class="memproto">
@@ -535,7 +547,7 @@ the name of the connection. Can be used to coordinate out of band transport such
 <p>Suggest the payload size of the data sent over this channel. </p>
 <p>Connections can use this value to optimize transmission or prepare the communication channel for real-time communication. This value might be overruled by the transport protocol if it can make a better guess. The interpretation of data_size is transport specific. It may be bytes, it may be something else. Leave this value set to zero, unless the transport documents otherwise. </p>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00257">257</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00248">248</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00255">RTT::corba::RemoteOutputPort::createConnection()</a>, and <a class="el" href="RemotePorts_8cpp_source.html#l00206">RTT::corba::RemoteInputPort::createConnection()</a>.</p>
 
@@ -554,9 +566,9 @@ the name of the connection. Can be used to coordinate out of band transport such
 <p>If true, one should initialize the connection's value with the last value written on the writer port. </p>
 <p>This is only possible if the writer port has the keepsLastWrittenValue() flag set (i.e. if it remembers what was the last written value). </p>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00209">209</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00203">203</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnPolicy_8cpp_source.html#l00078">buffer()</a>, <a class="el" href="ConnPolicy_8cpp_source.html#l00089">circularBuffer()</a>, and <a class="el" href="ConnPolicy_8cpp_source.html#l00100">data()</a>.</p>
+<p>Referenced by <a class="el" href="ConnPolicy_8cpp_source.html#l00077">buffer()</a>, <a class="el" href="ConnPolicy_8cpp_source.html#l00088">circularBuffer()</a>, and <a class="el" href="ConnPolicy_8cpp_source.html#l00099">data()</a>.</p>
 
 </div>
 </div>
@@ -573,9 +585,9 @@ the name of the connection. Can be used to coordinate out of band transport such
 <p>Whether the connection described by this connection policy is mandatory, which means that write operations will fail if the connection could not be served, e.g. </p>
 <p>due to a full input buffer or because of a broken remote connection. By default, all connections are mandatory. </p>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00241">241</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00232">232</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, and <a class="el" href="ConnFactory_8hpp_source.html#l00418">RTT::internal::ConnFactory::buildSharedConnection()</a>.</p>
+<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, and <a class="el" href="ConnFactory_8hpp_source.html#l00405">RTT::internal::ConnFactory::buildSharedConnection()</a>.</p>
 
 </div>
 </div>
@@ -592,7 +604,7 @@ the name of the connection. Can be used to coordinate out of band transport such
 <p>The maximum number of threads that will access the connection data or buffer object. </p>
 <p>This only needs to be specified for lock-free data structures. If 0, the number of threads will be determined by a simple heuristic depending on the read and write policies of the connection. </p>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00233">233</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00224">224</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
 
 </div>
 </div>
@@ -617,9 +629,9 @@ the name of the connection. Can be used to coordinate out of band transport such
 <p>The name of this connection. </p>
 <p>May be used by transports to define a 'topic' or lookup name to connect two data streams. If you leave this empty (recommended), the protocol will choose an appropriate name itself. Only specify a name to work around name clashes or if the transport protocol documents to do so. </p>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00265">265</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00256">256</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00255">RTT::corba::RemoteOutputPort::createConnection()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00206">RTT::corba::RemoteInputPort::createConnection()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00597">RTT::internal::ConnFactory::createOutOfBandConnection()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00553">RTT::internal::ConnFactory::createStream()</a>, and <a class="el" href="ConnFactory_8cpp_source.html#l00263">RTT::internal::ConnFactory::findSharedConnection()</a>.</p>
+<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00255">RTT::corba::RemoteOutputPort::createConnection()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00206">RTT::corba::RemoteInputPort::createConnection()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00589">RTT::internal::ConnFactory::createOutOfBandConnection()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00545">RTT::internal::ConnFactory::createStream()</a>, and <a class="el" href="ConnFactory_8cpp_source.html#l00262">RTT::internal::ConnFactory::findSharedConnection()</a>.</p>
 
 </div>
 </div>
@@ -636,28 +648,9 @@ the name of the connection. Can be used to coordinate out of band transport such
 <p>If true, then the sink will have to pull data. </p>
 <p>Otherwise, it is pushed from the source. In both cases, the reader side is notified that new data is available by <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#aa985c67248dbe492db1f53b5b7c54c21" title="Signals that there is new data available on this channel By default, the channel element forwards the...">base::ChannelElementBase::signal()</a> </p>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00215">215</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00209">209</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnPolicy_8cpp_source.html#l00078">buffer()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00316">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, <a class="el" href="ConnPolicy_8cpp_source.html#l00089">circularBuffer()</a>, and <a class="el" href="ConnPolicy_8cpp_source.html#l00100">data()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae0562162409bb8452f97bd0f381575f1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">ReadPolicy</a> RTT::ConnPolicy::read_policy</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The policy on how to read from this connection. </p>
-<p>See <a class="el" href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">ReadPolicy</a> for possible options. </p>
-
-<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00220">220</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00316">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00157">RTT::internal::ConnFactory::buildDataStorage()</a>, and <a class="el" href="ConnFactory_8hpp_source.html#l00484">RTT::internal::ConnFactory::createConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnPolicy_8cpp_source.html#l00077">buffer()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00310">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, <a class="el" href="ConnPolicy_8cpp_source.html#l00088">circularBuffer()</a>, and <a class="el" href="ConnPolicy_8cpp_source.html#l00099">data()</a>.</p>
 
 </div>
 </div>
@@ -674,28 +667,9 @@ the name of the connection. Can be used to coordinate out of band transport such
 <p>The prefered transport used. </p>
 <p>0 is local (in process), a higher number is used for inter-process or networked communication transports. </p>
 
-<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00247">247</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00238">238</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, and <a class="el" href="ConnFactory_8hpp_source.html#l00484">RTT::internal::ConnFactory::createConnection()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6ead873a2cb599a096adae9f59c58a5a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">WritePolicy</a> RTT::ConnPolicy::write_policy</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The policy on how to write to this connection. </p>
-<p>See <a class="el" href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">WritePolicy</a> for possible options. </p>
-
-<p>Definition at line <a class="el" href="ConnPolicy_8hpp_source.html#l00225">225</a> of file <a class="el" href="ConnPolicy_8hpp_source.html">ConnPolicy.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00316">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00484">RTT::internal::ConnFactory::createConnection()</a>, and <a class="el" href="ChannelBufferElement_8hpp_source.html#l00085">RTT::internal::ChannelBufferElement&lt; T &gt;::read()</a>.</p>
+<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, and <a class="el" href="ConnFactory_8hpp_source.html#l00471">RTT::internal::ConnFactory::createConnection()</a>.</p>
 
 </div>
 </div>
@@ -706,7 +680,7 @@ the name of the connection. Can be used to coordinate out of band transport such
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 2 2015 21:17:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 15 2015 15:07:00 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

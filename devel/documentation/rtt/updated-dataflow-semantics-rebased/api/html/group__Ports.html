@@ -78,77 +78,49 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gae22e6ac583182b833fabf1b9c25fffbe"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">RTT::ReadPolicy</a> { <b>UnspecifiedReadPolicy</b>, 
-<b>ReadShared</b>, 
-<b>ReadUnordered</b>
+<tr class="memitem:gadc680c5e9ed12ee0889933483c89b7ea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">RTT::BufferPolicy</a> { <br/>
+&#160;&#160;<b>UnspecifiedBufferPolicy</b>, 
+<b>PerConnection</b>, 
+<b>PerInputPort</b>, 
+<b>PerOutputPort</b>, 
+<br/>
+&#160;&#160;<b>Shared</b>
+<br/>
  }</td></tr>
-<tr class="memdesc:gae22e6ac583182b833fabf1b9c25fffbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A read policy describes how a read operation should select from which channel/connection it reads if multiple channels are available.  <a href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">More...</a><br/></td></tr>
-<tr class="separator:gae22e6ac583182b833fabf1b9c25fffbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1270adff83aa86fcb42c0b21a15e0cb3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">RTT::WritePolicy</a> { <b>UnspecifiedWritePolicy</b>, 
-<b>WritePrivate</b>, 
-<b>WriteShared</b>
- }</td></tr>
-<tr class="memdesc:ga1270adff83aa86fcb42c0b21a15e0cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">A WritePolicy describes how a write operation serves multiple outgoing connections.  <a href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">More...</a><br/></td></tr>
-<tr class="separator:ga1270adff83aa86fcb42c0b21a15e0cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:gadc680c5e9ed12ee0889933483c89b7ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The BufferPolicy controls how multiple connections to the same input or output port are handled in case of concurrent or subsequent read and write operations.  <a href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">More...</a><br/></td></tr>
+<tr class="separator:gadc680c5e9ed12ee0889933483c89b7ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Ports send or receive data from other components. </p>
 <p>The connection between ports may do buffering or impose other policies, as defined by the ConnPolicy class. </p>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="gae22e6ac583182b833fabf1b9c25fffbe"></a>
+<a class="anchor" id="gadc680c5e9ed12ee0889933483c89b7ea"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">RTT::ReadPolicy</a></td>
+          <td class="memname">enum <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">RTT::BufferPolicy</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>A read policy describes how a read operation should select from which channel/connection it reads if multiple channels are available. </p>
+<p>The BufferPolicy controls how multiple connections to the same input or output port are handled in case of concurrent or subsequent read and write operations. </p>
 <p>Possible values:</p>
 <ul>
-<li>ReadShared: The input buffer is shared among all connections.</li>
-<li>ReadUnordered: The <a class="el" href="classRTT_1_1InputPort.html" title="A component&#39;s data input port. ">InputPort</a> polls all connections in the order the connections have been established, but it prefers the last connection where data has been successfully read from. In fact there are no guarantees for the order in which samples from different connections are read.</li>
-</ul>
-<p>Special values:</p>
-<ul>
-<li>UnspecifiedReadPolicy: No specific ReadPolicy was set yet. This is the default ReadPolicy for an unconnected <a class="el" href="classRTT_1_1InputPort.html" title="A component&#39;s data input port. ">InputPort</a>. Do not use this value in <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a>. </li>
+<li>PerConnection: Buffers (or data objects) will be installed per connection (per pair of output and input port/stream). Input ports with multiple connections first try to read from the last read channel first, then poll all connections in the order they have been made (which in practice means there are no guarantees on the order if multiple writers write concurrently). This is the default buffer policy.</li>
+<li>PerInputPort: Every input port has a single input buffer (or data object) and all connected output ports/streams will write to the same buffer. This policy requires that pull == false for remote connections or input streams.</li>
+<li>PerOutputPort: Every output has a single output buffer (or data object) and all connected readers "consume" elements from this buffer. Exactly one connected input port or output stream will see every written sample as NewData. This policy requires that pull == true for remote connections or output streams.</li>
+<li>Shared: The buffer (or data object) is shared between all connected input and output ports. It can have an arbitrary number of writers and readers. Ports can be connected to an existing shared connection instance either by connecting it to a port that is already part of the shared connection group, or with a special createConnection() method. This was the default buffer policy in the days of <a class="el" href="namespaceRTT.html" title="Contains TaskContext, Activity, OperationCaller, Operation, Property, InputPort, OutputPort, Attribute. ">RTT</a> v1. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="ReadPolicy_8hpp_source.html#l00055">55</a> of file <a class="el" href="ReadPolicy_8hpp_source.html">ReadPolicy.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga1270adff83aa86fcb42c0b21a15e0cb3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">RTT::WritePolicy</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A WritePolicy describes how a write operation serves multiple outgoing connections. </p>
-<p>Possible values:</p>
-<ul>
-<li>WritePrivate: Every connection will receive its own private copy of the written data sample. Read operations have no influence on each other.</li>
-<li>WriteShared: The output buffer is shared among all connections, so read operations can influence the outcome of another.</li>
-</ul>
-<p>Special values:</p>
-<ul>
-<li>UnspecifiedWritePolicy: No specific WritePolicy was set yet. This is the default WritePolicy for an unconnected <a class="el" href="classRTT_1_1OutputPort.html" title="A component&#39;s data output port. ">OutputPort</a>. Do not use this value in <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a>. </li>
-</ul>
-
-<p>Definition at line <a class="el" href="WritePolicy_8hpp_source.html#l00054">54</a> of file <a class="el" href="WritePolicy_8hpp_source.html">WritePolicy.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferPolicy_8hpp_source.html#l00074">74</a> of file <a class="el" href="BufferPolicy_8hpp_source.html">BufferPolicy.hpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 2 2015 21:17:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 15 2015 15:07:00 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

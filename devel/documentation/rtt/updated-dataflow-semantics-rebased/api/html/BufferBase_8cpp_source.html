@@ -118,28 +118,26 @@
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;BufferBase::Options::Options(<span class="keyword">const</span> <a class="code" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;policy)</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    : circular_(policy.type == <a class="code" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a>::CIRCULAR_BUFFER)</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    , max_threads_(2)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    , multiple_writers_(policy.read_policy == ReadShared)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    , multiple_readers_(policy.write_policy == WriteShared)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    , multiple_writers_(policy.buffer_policy == PerInputPort || policy.buffer_policy == Shared)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    , multiple_readers_(policy.buffer_policy == PerOutputPort || policy.buffer_policy == Shared)</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (policy.<a class="code" href="classRTT_1_1ConnPolicy.html#ac70f15548f9b856b0a4dbd8e09bab102">max_threads</a> == 0) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (policy.<a class="code" href="classRTT_1_1ConnPolicy.html#ae0562162409bb8452f97bd0f381575f1">read_policy</a> == ReadShared) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (multiple_writers_) {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            max_threads_ += 10;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (policy.<a class="code" href="classRTT_1_1ConnPolicy.html#a6ead873a2cb599a096adae9f59c58a5a">write_policy</a> == WriteShared) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (multiple_readers_) {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            max_threads_ += 10;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        max_threads_ = policy.<a class="code" href="classRTT_1_1ConnPolicy.html#ac70f15548f9b856b0a4dbd8e09bab102">max_threads</a>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="ttc" id="classRTT_1_1ConnPolicy_html_ae0562162409bb8452f97bd0f381575f1"><div class="ttname"><a href="classRTT_1_1ConnPolicy.html#ae0562162409bb8452f97bd0f381575f1">RTT::ConnPolicy::read_policy</a></div><div class="ttdeci">ReadPolicy read_policy</div><div class="ttdoc">The policy on how to read from this connection. </div><div class="ttdef"><b>Definition:</b> <a href="ConnPolicy_8hpp_source.html#l00220">ConnPolicy.hpp:220</a></div></div>
-<div class="ttc" id="classRTT_1_1ConnPolicy_html"><div class="ttname"><a href="classRTT_1_1ConnPolicy.html">RTT::ConnPolicy</a></div><div class="ttdoc">A connection policy object describes how a given connection should behave. </div><div class="ttdef"><b>Definition:</b> <a href="ConnPolicy_8hpp_source.html#l00113">ConnPolicy.hpp:113</a></div></div>
-<div class="ttc" id="classRTT_1_1ConnPolicy_html_a6ead873a2cb599a096adae9f59c58a5a"><div class="ttname"><a href="classRTT_1_1ConnPolicy.html#a6ead873a2cb599a096adae9f59c58a5a">RTT::ConnPolicy::write_policy</a></div><div class="ttdeci">WritePolicy write_policy</div><div class="ttdoc">The policy on how to write to this connection. </div><div class="ttdef"><b>Definition:</b> <a href="ConnPolicy_8hpp_source.html#l00225">ConnPolicy.hpp:225</a></div></div>
-<div class="ttc" id="classRTT_1_1ConnPolicy_html_ac70f15548f9b856b0a4dbd8e09bab102"><div class="ttname"><a href="classRTT_1_1ConnPolicy.html#ac70f15548f9b856b0a4dbd8e09bab102">RTT::ConnPolicy::max_threads</a></div><div class="ttdeci">int max_threads</div><div class="ttdoc">The maximum number of threads that will access the connection data or buffer object. </div><div class="ttdef"><b>Definition:</b> <a href="ConnPolicy_8hpp_source.html#l00233">ConnPolicy.hpp:233</a></div></div>
+<div class="ttc" id="classRTT_1_1ConnPolicy_html"><div class="ttname"><a href="classRTT_1_1ConnPolicy.html">RTT::ConnPolicy</a></div><div class="ttdoc">A connection policy object describes how a given connection should behave. </div><div class="ttdef"><b>Definition:</b> <a href="ConnPolicy_8hpp_source.html#l00107">ConnPolicy.hpp:107</a></div></div>
+<div class="ttc" id="classRTT_1_1ConnPolicy_html_ac70f15548f9b856b0a4dbd8e09bab102"><div class="ttname"><a href="classRTT_1_1ConnPolicy.html#ac70f15548f9b856b0a4dbd8e09bab102">RTT::ConnPolicy::max_threads</a></div><div class="ttdeci">int max_threads</div><div class="ttdoc">The maximum number of threads that will access the connection data or buffer object. </div><div class="ttdef"><b>Definition:</b> <a href="ConnPolicy_8hpp_source.html#l00224">ConnPolicy.hpp:224</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 2 2015 21:17:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 15 2015 15:06:57 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

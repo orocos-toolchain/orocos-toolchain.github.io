@@ -259,7 +259,7 @@ template&lt;typename T &gt; </div>
 
 <p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00224">224</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00354">RTT::base::MultipleOutputsChannelElementBase::connected()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00071">RTT::base::ChannelElementBase::connectTo()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00209">RTT::base::ChannelElementBase::getConnPolicy()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00333">RTT::OutputPort&lt; T &gt;::getEndpoint()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00173">RTT::OutputPort&lt; T &gt;::getLastWrittenValue()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00202">RTT::ConnPolicy::lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00215">RTT::ConnPolicy::pull</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00220">RTT::ConnPolicy::read_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00199">RTT::ConnPolicy::size</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00196">RTT::ConnPolicy::type</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00225">RTT::ConnPolicy::write_policy</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00216">RTT::ConnPolicy::buffer_policy</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00352">RTT::base::MultipleOutputsChannelElementBase::connected()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00070">RTT::base::ChannelElementBase::connectTo()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00222">RTT::base::ChannelElementBase::getBufferPolicy()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00208">RTT::base::ChannelElementBase::getConnPolicy()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00333">RTT::OutputPort&lt; T &gt;::getEndpoint()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00173">RTT::OutputPort&lt; T &gt;::getLastWrittenValue()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00196">RTT::ConnPolicy::lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00209">RTT::ConnPolicy::pull</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00212">RTT::base::ChannelElementBase::setBufferPolicy()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00193">RTT::ConnPolicy::size</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00190">RTT::ConnPolicy::type</a>.</p>
 
 </div>
 </div>
@@ -360,9 +360,9 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1internal_1_1ConnFactory.html#ade4224c94c2fc87d16e5122a4f9737f5" title="Creates the input endpoint (starting point) of a communication channel and adds it to an OutputPort...">buildChannelInput</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00316">316</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00310">310</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00234">RTT::base::MultipleInputsChannelElementBase::connected()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00071">RTT::base::ChannelElementBase::connectTo()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00209">RTT::base::ChannelElementBase::getConnPolicy()</a>, <a class="el" href="InputPort_8hpp_source.html#l00227">RTT::InputPort&lt; T &gt;::getEndpoint()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00202">RTT::ConnPolicy::lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00215">RTT::ConnPolicy::pull</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00220">RTT::ConnPolicy::read_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00199">RTT::ConnPolicy::size</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00196">RTT::ConnPolicy::type</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00225">RTT::ConnPolicy::write_policy</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00216">RTT::ConnPolicy::buffer_policy</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00249">RTT::base::MultipleInputsChannelElementBase::connected()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00070">RTT::base::ChannelElementBase::connectTo()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00222">RTT::base::ChannelElementBase::getBufferPolicy()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00208">RTT::base::ChannelElementBase::getConnPolicy()</a>, <a class="el" href="InputPort_8hpp_source.html#l00227">RTT::InputPort&lt; T &gt;::getEndpoint()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00196">RTT::ConnPolicy::lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00209">RTT::ConnPolicy::pull</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00212">RTT::base::ChannelElementBase::setBufferPolicy()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00193">RTT::ConnPolicy::size</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00190">RTT::ConnPolicy::type</a>.</p>
 
 </div>
 </div>
@@ -440,7 +440,7 @@ template&lt;typename T &gt; </div>
 
 <p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00157">157</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
 
-<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00202">RTT::ConnPolicy::lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00220">RTT::ConnPolicy::read_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00199">RTT::ConnPolicy::size</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00196">RTT::ConnPolicy::type</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00216">RTT::ConnPolicy::buffer_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00196">RTT::ConnPolicy::lock_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00193">RTT::ConnPolicy::size</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00190">RTT::ConnPolicy::type</a>.</p>
 
 </div>
 </div>
@@ -548,9 +548,9 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html" title="Base class for shared connection elements. ">SharedConnectionBase</a> element. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00418">418</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00405">405</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
 
-<p>References <a class="el" href="InputPortInterface_8cpp_source.html#l00133">RTT::base::InputPortInterface::createConnection()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00173">RTT::OutputPort&lt; T &gt;::getLastWrittenValue()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="PortInterface_8cpp_source.html#l00067">RTT::base::PortInterface::isLocal()</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00241">RTT::ConnPolicy::mandatory</a>.</p>
+<p>References <a class="el" href="InputPortInterface_8cpp_source.html#l00133">RTT::base::InputPortInterface::createConnection()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00173">RTT::OutputPort&lt; T &gt;::getLastWrittenValue()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="PortInterface_8cpp_source.html#l00071">RTT::base::PortInterface::isLocal()</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00232">RTT::ConnPolicy::mandatory</a>.</p>
 
 </div>
 </div>
@@ -598,9 +598,9 @@ template&lt;typename T &gt; </div>
 <p>This function contains all logic to decide on how connections must be created to local or remote input ports.</p>
 <p>In order to set up out-of-band communication between input_port and output_port, use a different transport number in the policy parameter than the transport of the input port. </p>
 
-<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00484">484</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00471">471</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
 
-<p>References <a class="el" href="OutputPort_8hpp_source.html#l00173">RTT::OutputPort&lt; T &gt;::getLastWrittenValue()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="PortInterface_8cpp_source.html#l00067">RTT::base::PortInterface::isLocal()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00220">RTT::ConnPolicy::read_policy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00247">RTT::ConnPolicy::transport</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00225">RTT::ConnPolicy::write_policy</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00216">RTT::ConnPolicy::buffer_policy</a>, <a class="el" href="PortInterface_8cpp_source.html#l00067">RTT::base::PortInterface::connectedTo()</a>, <a class="el" href="OutputPort_8hpp_source.html#l00173">RTT::OutputPort&lt; T &gt;::getLastWrittenValue()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="PortInterface_8cpp_source.html#l00071">RTT::base::PortInterface::isLocal()</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00238">RTT::ConnPolicy::transport</a>.</p>
 
 <p>Referenced by <a class="el" href="OutputPort_8hpp_source.html#l00304">RTT::OutputPort&lt; T &gt;::createConnection()</a>.</p>
 
@@ -650,9 +650,9 @@ template&lt;class T &gt; </div>
 <p>This means that both input and output port are present in the same process. This function is used when the policy dictates a transport protocol, but both ports are local. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the out-of-band connection was successfully setup. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00597">597</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00589">589</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
 
-<p>References <a class="el" href="OutputPort_8hpp_source.html#l00173">RTT::OutputPort&lt; T &gt;::getLastWrittenValue()</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00265">RTT::ConnPolicy::name_id</a>.</p>
+<p>References <a class="el" href="OutputPort_8hpp_source.html#l00173">RTT::OutputPort&lt; T &gt;::getLastWrittenValue()</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00256">RTT::ConnPolicy::name_id</a>.</p>
 
 </div>
 </div>
@@ -700,9 +700,9 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the stream could be created and connected to output_port. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00553">553</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00545">545</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
 
-<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00265">RTT::ConnPolicy::name_id</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00256">RTT::ConnPolicy::name_id</a>.</p>
 
 <p>Referenced by <a class="el" href="InputPort_8hpp_source.html#l00205">RTT::InputPort&lt; T &gt;::createStream()</a>, and <a class="el" href="OutputPort_8hpp_source.html#l00309">RTT::OutputPort&lt; T &gt;::createStream()</a>.</p>
 
@@ -752,9 +752,9 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the stream could be created and connected to input_port. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00570">570</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00562">562</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
 
-<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00265">RTT::ConnPolicy::name_id</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00256">RTT::ConnPolicy::name_id</a>.</p>
 
 </div>
 </div>
@@ -815,9 +815,9 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if an exiting <a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html" title="Base class for shared connection elements. ">SharedConnectionBase</a> instance could be found. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnFactory_8cpp_source.html#l00263">263</a> of file <a class="el" href="ConnFactory_8cpp_source.html">ConnFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnFactory_8cpp_source.html#l00262">262</a> of file <a class="el" href="ConnFactory_8cpp_source.html">ConnFactory.cpp</a>.</p>
 
-<p>References <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="PortInterface_8cpp_source.html#l00105">RTT::base::PortInterface::getSharedConnection()</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00265">RTT::ConnPolicy::name_id</a>.</p>
+<p>References <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="PortInterface_8cpp_source.html#l00109">RTT::base::PortInterface::getSharedConnection()</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00256">RTT::ConnPolicy::name_id</a>.</p>
 
 </div>
 </div>
@@ -828,7 +828,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 2 2015 21:17:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 15 2015 15:07:01 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

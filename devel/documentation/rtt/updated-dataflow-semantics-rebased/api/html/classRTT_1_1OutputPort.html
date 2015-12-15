@@ -200,6 +200,10 @@ const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memitem:a4bed453e1d7211b72d81707efe1bd192"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">PortInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#a4bed453e1d7211b72d81707efe1bd192">doc</a> (const std::string &amp;desc)</td></tr>
 <tr class="memdesc:a4bed453e1d7211b72d81707efe1bd192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the documentation of this port.  <a href="#a4bed453e1d7211b72d81707efe1bd192">More...</a><br/></td></tr>
 <tr class="separator:a4bed453e1d7211b72d81707efe1bd192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac700cd806a5dfc2e8923177c376544e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac700cd806a5dfc2e8923177c376544e0"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#ac700cd806a5dfc2e8923177c376544e0">connectedTo</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">PortInterface</a> *port)</td></tr>
+<tr class="memdesc:ac700cd806a5dfc2e8923177c376544e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this port is connected to the given port. <br/></td></tr>
+<tr class="separator:ac700cd806a5dfc2e8923177c376544e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae32595f49031daead1d5c98d28b91c32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae32595f49031daead1d5c98d28b91c32"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#ae32595f49031daead1d5c98d28b91c32">isLocal</a> () const </td></tr>
 <tr class="memdesc:ae32595f49031daead1d5c98d28b91c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this port is located on this process, and false otherwise. <br/></td></tr>
@@ -353,7 +357,7 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="OutputPortInterface_8cpp_source.html#l00073">73</a> of file <a class="el" href="OutputPortInterface_8cpp_source.html">OutputPortInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8cpp_source.html#l00112">RTT::internal::ConnectionManager::addConnection()</a>, and <a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html#af6d02e9f514b641a4c10dc3a3cb92b9e">RTT::base::OutputPortInterface::connectionAdded()</a>.</p>
+<p>References <a class="el" href="ConnectionManager_8cpp_source.html#l00122">RTT::internal::ConnectionManager::addConnection()</a>, and <a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html#af6d02e9f514b641a4c10dc3a3cb92b9e">RTT::base::OutputPortInterface::connectionAdded()</a>.</p>
 
 </div>
 </div>
@@ -385,7 +389,7 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="OutputPort_8hpp_source.html#l00227">227</a> of file <a class="el" href="OutputPort_8hpp_source.html">OutputPort.hpp</a>.</p>
 
-<p>References <a class="el" href="OutputPort_8hpp_source.html#l00333">RTT::OutputPort&lt; T &gt;::getEndpoint()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00141">RTT::internal::ConnectionManager::getSharedConnection()</a>.</p>
+<p>References <a class="el" href="OutputPort_8hpp_source.html#l00333">RTT::OutputPort&lt; T &gt;::getEndpoint()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00146">RTT::internal::ConnectionManager::getSharedConnection()</a>.</p>
 
 </div>
 </div>
@@ -538,7 +542,7 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="OutputPort_8hpp_source.html#l00309">309</a> of file <a class="el" href="OutputPort_8hpp_source.html">OutputPort.hpp</a>.</p>
 
-<p>References <a class="el" href="ConnFactory_8hpp_source.html#l00553">RTT::internal::ConnFactory::createStream()</a>.</p>
+<p>References <a class="el" href="ConnFactory_8hpp_source.html#l00545">RTT::internal::ConnFactory::createStream()</a>.</p>
 
 </div>
 </div>
@@ -671,7 +675,7 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="OutputPort_8hpp_source.html#l00173">173</a> of file <a class="el" href="OutputPort_8hpp_source.html">OutputPort.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00418">RTT::internal::ConnFactory::buildSharedConnection()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00484">RTT::internal::ConnFactory::createConnection()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00597">RTT::internal::ConnFactory::createOutOfBandConnection()</a>, and <a class="el" href="OutputPort_8hpp_source.html#l00319">RTT::OutputPort&lt; T &gt;::createPortObject()</a>.</p>
+<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00405">RTT::internal::ConnFactory::buildSharedConnection()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00471">RTT::internal::ConnFactory::createConnection()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00589">RTT::internal::ConnFactory::createOutOfBandConnection()</a>, and <a class="el" href="OutputPort_8hpp_source.html#l00319">RTT::OutputPort&lt; T &gt;::createPortObject()</a>.</p>
 
 </div>
 </div>
@@ -738,7 +742,7 @@ template&lt;typename T&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>null if no such manager is available, or the manager otherwise. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd>ConnectionManager::getChannels() for a list of all connections of this port. </dd></dl>
 
-<p>Definition at line <a class="el" href="PortInterface_8hpp_source.html#l00219">219</a> of file <a class="el" href="PortInterface_8hpp_source.html">PortInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="PortInterface_8hpp_source.html#l00222">222</a> of file <a class="el" href="PortInterface_8hpp_source.html">PortInterface.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="ConnInputEndPoint_8hpp_source.html#l00072">RTT::internal::ConnInputEndpoint&lt; T &gt;::disconnect()</a>, and <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00129">RTT::internal::ConnOutputEndpoint&lt; T &gt;::disconnect()</a>.</p>
 
@@ -805,7 +809,7 @@ template&lt;typename T&gt; </div>
 <p>Removes a user created connection from this port. </p>
 <p>This is an advanced method, prefer to use <a class="el" href="classRTT_1_1base_1_1PortInterface.html#aa9f3cecab5a948799111fc2671f5057c" title="Removes any connection that either go to or come from this port. ">disconnect()</a> or a method from a subclass of <a class="el" href="classRTT_1_1base_1_1PortInterface.html" title="The base class of every data flow port. ">PortInterface</a>. </p>
 
-<p>Definition at line <a class="el" href="PortInterface_8cpp_source.html#l00091">91</a> of file <a class="el" href="PortInterface_8cpp_source.html">PortInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PortInterface_8cpp_source.html#l00095">95</a> of file <a class="el" href="PortInterface_8cpp_source.html">PortInterface.cpp</a>.</p>
 
 </div>
 </div>
@@ -873,7 +877,7 @@ template&lt;typename T&gt; </div>
 <p>Once a port is added to a <a class="el" href="classRTT_1_1DataFlowInterface.html" title="The Interface of a TaskContext which exposes its data-flow ports. ">DataFlowInterface</a>, it gets a pointer to that interface. </p>
 <p>This allows advanced ports to track back to which component they belong. </p>
 
-<p>Definition at line <a class="el" href="PortInterface_8cpp_source.html#l00096">96</a> of file <a class="el" href="PortInterface_8cpp_source.html">PortInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PortInterface_8cpp_source.html#l00100">100</a> of file <a class="el" href="PortInterface_8cpp_source.html">PortInterface.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00082">RTT::DataFlowInterface::addLocalPort()</a>.</p>
 
@@ -965,7 +969,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 2 2015 21:17:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 15 2015 15:07:00 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

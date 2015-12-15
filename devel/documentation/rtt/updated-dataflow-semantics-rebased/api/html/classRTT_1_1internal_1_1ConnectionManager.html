@@ -103,6 +103,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#af26261c2f336fa248c386d390774e409">connected</a> () const </td></tr>
 <tr class="memdesc:af26261c2f336fa248c386d390774e409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if there is at least one connection registered in this port's list of outputs. <br/></td></tr>
 <tr class="separator:af26261c2f336fa248c386d390774e409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ea48d83495b212fc88039c0c52e794"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4ea48d83495b212fc88039c0c52e794"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#aa4ea48d83495b212fc88039c0c52e794">connectedTo</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port)</td></tr>
+<tr class="memdesc:aa4ea48d83495b212fc88039c0c52e794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if there exists a connection to the given port. <br/></td></tr>
+<tr class="separator:aa4ea48d83495b212fc88039c0c52e794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd1045b3445ff91659ef5b855fb608bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd1045b3445ff91659ef5b855fb608bc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#abd1045b3445ff91659ef5b855fb608bc">disconnect</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port)</td></tr>
 <tr class="memdesc:abd1045b3445ff91659ef5b855fb608bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the connection that connects this port to <code>port</code>. <br/></td></tr>
@@ -228,9 +232,9 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 <p>This is the last step in adding a connection to an output port and also validates if the connection is sound. </p>
 <dl class="section return"><dt>Returns</dt><dd>false if the connection failed to work, true otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00112">112</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00122">122</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00173">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00162">connections</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00167">shared_connection</a>.</p>
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00178">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00167">connections</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00172">shared_connection</a>.</p>
 
 <p>Referenced by <a class="el" href="OutputPortInterface_8cpp_source.html#l00073">RTT::base::OutputPortInterface::addConnection()</a>, and <a class="el" href="InputPortInterface_8cpp_source.html#l00100">RTT::base::InputPortInterface::addConnection()</a>.</p>
 
@@ -273,7 +277,7 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 
 <p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00078">78</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00162">connections</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00132">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="classRTT_1_1base_1_1PortInterface.html#af8d42fb68c00a6be39f2da0e57a8f47c">RTT::base::PortInterface::getEndpoint()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00156">mport</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00167">shared_connection</a>.</p>
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00167">connections</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00131">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="classRTT_1_1base_1_1PortInterface.html#af8d42fb68c00a6be39f2da0e57a8f47c">RTT::base::PortInterface::getEndpoint()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00161">mport</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00172">shared_connection</a>.</p>
 
 <p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>.</p>
 
@@ -303,7 +307,7 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 <p>Returns true if this manager manages only one connection. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00129">129</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00134">134</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -329,9 +333,9 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 <p>A list of all our connections. </p>
 <p>Only non-null if two or more connections were added. </p>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00162">162</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00167">167</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00112">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00109">connected()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00078">eraseConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00122">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00109">connected()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00112">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00078">eraseConnection()</a>.</p>
 
 </div>
 </div>
@@ -342,7 +346,7 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 2 2015 21:17:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 15 2015 15:07:01 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

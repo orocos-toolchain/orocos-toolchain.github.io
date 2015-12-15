@@ -879,16 +879,9 @@
     <class kind="class">RTT::OutputPort</class>
     <member kind="enumeration">
       <type></type>
-      <name>ReadPolicy</name>
+      <name>BufferPolicy</name>
       <anchorfile>group__Ports.html</anchorfile>
-      <anchor>gae22e6ac583182b833fabf1b9c25fffbe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>WritePolicy</name>
-      <anchorfile>group__Ports.html</anchorfile>
-      <anchor>ga1270adff83aa86fcb42c0b21a15e0cb3</anchor>
+      <anchor>gadc680c5e9ed12ee0889933483c89b7ea</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1317,6 +1310,13 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>BufferPolicy</name>
+      <anchorfile>group__Ports.html</anchorfile>
+      <anchor>gadc680c5e9ed12ee0889933483c89b7ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>FlowStatus</name>
       <anchorfile>namespaceRTT.html</anchorfile>
       <anchor>aa92dce4aa147272a093143330ef11ab6</anchor>
@@ -1334,13 +1334,6 @@
       <name>LoggerLevel</name>
       <anchorfile>namespaceRTT.html</anchorfile>
       <anchor>a97636c8c36d7c811e3e32130c4079f2e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ReadPolicy</name>
-      <anchorfile>group__Ports.html</anchorfile>
-      <anchor>gae22e6ac583182b833fabf1b9c25fffbe</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -1369,13 +1362,6 @@
       <name>SendSuccess</name>
       <anchorfile>namespaceRTT.html</anchorfile>
       <anchor>a55cf62997a93f05db722902f1cf269d8ac2238d6401bf694b7bf24405b40e0b96</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>WritePolicy</name>
-      <anchorfile>group__Ports.html</anchorfile>
-      <anchor>ga1270adff83aa86fcb42c0b21a15e0cb3</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -2479,17 +2465,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>ReadPolicy</type>
-      <name>read_policy</name>
+      <type>BufferPolicy</type>
+      <name>buffer_policy</name>
       <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
-      <anchor>ae0562162409bb8452f97bd0f381575f1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>WritePolicy</type>
-      <name>write_policy</name>
-      <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
-      <anchor>a6ead873a2cb599a096adae9f59c58a5a</anchor>
+      <anchor>a700a61ba2e9543496e638d93de38d004</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -3237,6 +3216,13 @@
       <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
       <anchor>a4bed453e1d7211b72d81707efe1bd192</anchor>
       <arglist>(const std::string &amp;desc)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>connectedTo</name>
+      <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
+      <anchor>ac700cd806a5dfc2e8923177c376544e0</anchor>
+      <arglist>(PortInterface *port)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -6625,6 +6611,20 @@
       <name>getConnPolicy</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
       <anchor>a41b0d0d3b22eb597141eebae0401cf97</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setBufferPolicy</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>acfcaf61e56c91ad4aa63c604ac7f761d</anchor>
+      <arglist>(BufferPolicy policy, bool force=false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual BufferPolicy</type>
+      <name>getBufferPolicy</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a877444985ef48ee5d3e9f1297d6239a4</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
@@ -13384,6 +13384,13 @@
       <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
       <anchor>af26261c2f336fa248c386d390774e409</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>connectedTo</name>
+      <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
+      <anchor>aa4ea48d83495b212fc88039c0c52e794</anchor>
+      <arglist>(base::PortInterface *port)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -26417,6 +26424,8 @@
     <file>ArgumentDescription.hpp</file>
     <file>Attribute.cpp</file>
     <file>Attribute.hpp</file>
+    <file>BufferPolicy.cpp</file>
+    <file>BufferPolicy.hpp</file>
     <file>Component.hpp</file>
     <file>ConfigurationInterface.cpp</file>
     <file>ConfigurationInterface.hpp</file>
@@ -26448,8 +26457,6 @@
     <file>Property.hpp</file>
     <file>PropertyBag.cpp</file>
     <file>PropertyBag.hpp</file>
-    <file>ReadPolicy.cpp</file>
-    <file>ReadPolicy.hpp</file>
     <file>rt_string.hpp</file>
     <file>rtt-detail-fwd.hpp</file>
     <file>rtt-fwd.hpp</file>
@@ -26464,8 +26471,6 @@
     <file>TaskContext.cpp</file>
     <file>TaskContext.hpp</file>
     <file>Time.hpp</file>
-    <file>WritePolicy.cpp</file>
-    <file>WritePolicy.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rtt</name>

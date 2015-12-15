@@ -267,6 +267,17 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a5bc5629360f41b73f0afd3e901ca4915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Users can choose if an operation's function is executed in the component's thread (<em>OwnThread</em>) or in the thread of the caller (<em>ClientThread</em>). <br/></td></tr>
 <tr class="separator:a5bc5629360f41b73f0afd3e901ca4915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc680c5e9ed12ee0889933483c89b7ea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> { <br/>
+&#160;&#160;<b>UnspecifiedBufferPolicy</b>, 
+<b>PerConnection</b>, 
+<b>PerInputPort</b>, 
+<b>PerOutputPort</b>, 
+<br/>
+&#160;&#160;<b>Shared</b>
+<br/>
+ }</td></tr>
+<tr class="memdesc:gadc680c5e9ed12ee0889933483c89b7ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The BufferPolicy controls how multiple connections to the same input or output port are handled in case of concurrent or subsequent read and write operations.  <a href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">More...</a><br/></td></tr>
+<tr class="separator:gadc680c5e9ed12ee0889933483c89b7ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa92dce4aa147272a093143330ef11ab6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a> { <b>NoData</b> = 0, 
 <b>OldData</b> = 1, 
 <b>NewData</b> = 2
@@ -293,12 +304,6 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a97636c8c36d7c811e3e32130c4079f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate all log-levels from absolute silence to everything.  <a href="namespaceRTT.html#a97636c8c36d7c811e3e32130c4079f2e">More...</a><br/></td></tr>
 <tr class="separator:a97636c8c36d7c811e3e32130c4079f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae22e6ac583182b833fabf1b9c25fffbe"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">ReadPolicy</a> { <b>UnspecifiedReadPolicy</b>, 
-<b>ReadShared</b>, 
-<b>ReadUnordered</b>
- }</td></tr>
-<tr class="memdesc:gae22e6ac583182b833fabf1b9c25fffbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A read policy describes how a read operation should select from which channel/connection it reads if multiple channels are available.  <a href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">More...</a><br/></td></tr>
-<tr class="separator:gae22e6ac583182b833fabf1b9c25fffbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55cf62997a93f05db722902f1cf269d8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8">SendStatus</a> { <b>CollectFailure</b> = -2, 
 <a class="el" href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8a42f07f26d5ce4ed50ab024545fb43b73">SendFailure</a> = -1, 
 <a class="el" href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8abdb36c13e4f40fcc2f2e707565a3be5e">SendNotReady</a> = 0, 
@@ -306,15 +311,15 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a55cf62997a93f05db722902f1cf269d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status of a send() or collect() invocation.  <a href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8">More...</a><br/></td></tr>
 <tr class="separator:a55cf62997a93f05db722902f1cf269d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1270adff83aa86fcb42c0b21a15e0cb3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">WritePolicy</a> { <b>UnspecifiedWritePolicy</b>, 
-<b>WritePrivate</b>, 
-<b>WriteShared</b>
- }</td></tr>
-<tr class="memdesc:ga1270adff83aa86fcb42c0b21a15e0cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">A WritePolicy describes how a write operation serves multiple outgoing connections.  <a href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">More...</a><br/></td></tr>
-<tr class="separator:ga1270adff83aa86fcb42c0b21a15e0cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a43d29279b7e176077cf24cbc1c9cb355"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43d29279b7e176077cf24cbc1c9cb355"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> &amp;bp)</td></tr>
+<tr class="separator:a43d29279b7e176077cf24cbc1c9cb355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ba3769ce5d5ced9d2cd35f59575bba5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ba3769ce5d5ced9d2cd35f59575bba5"></a>
+std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;&gt;</b> (std::istream &amp;is, <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> &amp;bp)</td></tr>
+<tr class="separator:a8ba3769ce5d5ced9d2cd35f59575bba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aeba2679de300a90c177900a192a802"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8aeba2679de300a90c177900a192a802"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;cp)</td></tr>
 <tr class="separator:a8aeba2679de300a90c177900a192a802"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -439,12 +444,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>updateOrRefreshProper
 <tr class="memitem:ga31f10f4c00aa98cc2f37f5aafd45c2c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CoreLibProperties.html#ga31f10f4c00aa98cc2f37f5aafd45c2c2">flattenPropertyBag</a> (<a class="el" href="classRTT_1_1PropertyBag.html">PropertyBag</a> &amp;target, const std::string &amp;separator=&quot;.&quot;)</td></tr>
 <tr class="memdesc:ga31f10f4c00aa98cc2f37f5aafd45c2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function flattens a <a class="el" href="classRTT_1_1PropertyBag.html" title="A container for holding references to properties. ">PropertyBag</a> recursively.  <a href="group__CoreLibProperties.html#ga31f10f4c00aa98cc2f37f5aafd45c2c2">More...</a><br/></td></tr>
 <tr class="separator:ga31f10f4c00aa98cc2f37f5aafd45c2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5217ad87a3cfd7cce7df3fac719def62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5217ad87a3cfd7cce7df3fac719def62"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">ReadPolicy</a> &amp;rp)</td></tr>
-<tr class="separator:a5217ad87a3cfd7cce7df3fac719def62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa842c8884d8cad00c1688edf3a3a2ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa842c8884d8cad00c1688edf3a3a2ca"></a>
-std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;&gt;</b> (std::istream &amp;is, <a class="el" href="group__Ports.html#gae22e6ac583182b833fabf1b9c25fffbe">ReadPolicy</a> &amp;rp)</td></tr>
-<tr class="separator:afa842c8884d8cad00c1688edf3a3a2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ef845312403a3d0526a75e072fde7e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ef845312403a3d0526a75e072fde7e7"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT.html#a0ef845312403a3d0526a75e072fde7e7">makeString</a> (const <a class="el" href="namespaceRTT.html#a02540e90c90320b427952f03a2f08eea">RTT::rt_string</a> &amp;str)</td></tr>
 <tr class="memdesc:a0ef845312403a3d0526a75e072fde7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert from real-time string to std::string <br/></td></tr>
@@ -465,12 +464,6 @@ std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 OperatorRepository::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT.html#a3b0541a7ad9c9d02e774ae63d867ae87">operators</a> ()</td></tr>
 <tr class="memdesc:a3b0541a7ad9c9d02e774ae63d867ae87"><td class="mdescLeft">&#160;</td><td class="mdescRight">This global function provides the short notation for <a class="el" href="classRTT_1_1types_1_1OperatorRepository.html#a24b7a406c7b5333ecb769a2104ff3587" title="Returns a shared pointer to the singleton of this class. ">OperatorRepository::Instance()</a> <br/></td></tr>
 <tr class="separator:a3b0541a7ad9c9d02e774ae63d867ae87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc349f4eedda3368c09b310ec251a8c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc349f4eedda3368c09b310ec251a8c4"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">WritePolicy</a> &amp;wp)</td></tr>
-<tr class="separator:adc349f4eedda3368c09b310ec251a8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08dd32c52f481f406c8a2bc8cdd624a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08dd32c52f481f406c8a2bc8cdd624a4"></a>
-std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;&gt;</b> (std::istream &amp;is, <a class="el" href="group__Ports.html#ga1270adff83aa86fcb42c0b21a15e0cb3">WritePolicy</a> &amp;wp)</td></tr>
-<tr class="separator:a08dd32c52f481f406c8a2bc8cdd624a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -666,7 +659,7 @@ const long&#160;</td><td class="memItemRight" valign="bottom"><b>PSECS_IN_NSECS<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 2 2015 21:17:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 15 2015 15:07:00 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
