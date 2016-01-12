@@ -106,6 +106,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af28ce2d9f7370819cb9bcd3222cc67e3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferBase.html#af28ce2d9f7370819cb9bcd3222cc67e3">clear</a> ()=0</td></tr>
 <tr class="memdesc:af28ce2d9f7370819cb9bcd3222cc67e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all contents of this buffer.  <a href="#af28ce2d9f7370819cb9bcd3222cc67e3">More...</a><br/></td></tr>
 <tr class="separator:af28ce2d9f7370819cb9bcd3222cc67e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96dcac8a88fc650c8c2803dcf2bb13e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96dcac8a88fc650c8c2803dcf2bb13e3"></a>
+virtual size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferBase.html#a96dcac8a88fc650c8c2803dcf2bb13e3">dropped</a> () const =0</td></tr>
+<tr class="memdesc:a96dcac8a88fc650c8c2803dcf2bb13e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of dropped samples, because the buffer was full. <br/></td></tr>
+<tr class="separator:a96dcac8a88fc650c8c2803dcf2bb13e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Any <a class="el" href="classRTT_1_1base_1_1Buffer.html" title="This object represents the default thread-safe buffer implementation used by Orocos objects...">Buffer</a> has a capacity, size and can be empty or full. </p>
@@ -166,7 +170,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#ac462fc20b959fad08ca187b1ce5f8ec7">RTT::base::BufferLocked&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a4aed664f7fe4e75c6081fbd0c615d617">RTT::base::BufferUnSync&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a3102c9253f531e8df423f5482cf91c03">RTT::base::BufferLockFree&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00106">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00129">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>.</p>
 
 </div>
 </div>
@@ -261,7 +265,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 15 2015 16:26:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 12 2016 19:17:38 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

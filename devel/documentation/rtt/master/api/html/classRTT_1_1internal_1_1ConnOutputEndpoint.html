@@ -122,6 +122,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>data_sample</
 <tr class="memitem:ad5ff532488d78a5e3f2a4aa13328cc3b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#ad5ff532488d78a5e3f2a4aa13328cc3b">getConnID</a> () const </td></tr>
 <tr class="memdesc:ad5ff532488d78a5e3f2a4aa13328cc3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the Connection ID of this channel.  <a href="#ad5ff532488d78a5e3f2a4aa13328cc3b">More...</a><br/></td></tr>
 <tr class="separator:ad5ff532488d78a5e3f2a4aa13328cc3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d96d73ffae8886ab693a6574a3eeb80"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#a6d96d73ffae8886ab693a6574a3eeb80">getElementName</a> () const </td></tr>
+<tr class="memdesc:a6d96d73ffae8886ab693a6574a3eeb80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the class name of this element.  <a href="#a6d96d73ffae8886ab693a6574a3eeb80">More...</a><br/></td></tr>
+<tr class="separator:a6d96d73ffae8886ab693a6574a3eeb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8995494df01a2b71b4c1365ddd15696"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8995494df01a2b71b4c1365ddd15696"></a>
 shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getOutput</b> ()</td></tr>
 <tr class="separator:ad8995494df01a2b71b4c1365ddd15696"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,6 +158,15 @@ virtual value_t&#160;</td><td class="memItemRight" valign="bottom"><b>data_sampl
 <tr class="memitem:ac280457e88649d5e78a76ef1a89df62a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#ac280457e88649d5e78a76ef1a89df62a">clear</a> ()</td></tr>
 <tr class="memdesc:ac280457e88649d5e78a76ef1a89df62a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears any data stored by the channel.  <a href="#ac280457e88649d5e78a76ef1a89df62a">More...</a><br/></td></tr>
 <tr class="separator:ac280457e88649d5e78a76ef1a89df62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2237a004c5db9ff66ed81c5e87b2baaf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a2237a004c5db9ff66ed81c5e87b2baaf">isRemoteElement</a> () const </td></tr>
+<tr class="memdesc:a2237a004c5db9ff66ed81c5e87b2baaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function may be used to identify, if the current element uses a network transport, to send the data to the next Element in the logical chain.  <a href="#a2237a004c5db9ff66ed81c5e87b2baaf">More...</a><br/></td></tr>
+<tr class="separator:a2237a004c5db9ff66ed81c5e87b2baaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4eab0475a5e1e42963a89661d9d12f"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a1d4eab0475a5e1e42963a89661d9d12f">getRemoteURI</a> () const </td></tr>
+<tr class="memdesc:a1d4eab0475a5e1e42963a89661d9d12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the URI of the next channel element in the logical chain.  <a href="#a1d4eab0475a5e1e42963a89661d9d12f">More...</a><br/></td></tr>
+<tr class="separator:a1d4eab0475a5e1e42963a89661d9d12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017def07a5edc5d4d088bbc1ccb6873a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a017def07a5edc5d4d088bbc1ccb6873a">getLocalURI</a> () const </td></tr>
+<tr class="memdesc:a017def07a5edc5d4d088bbc1ccb6873a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function return the URI of this element.  <a href="#a017def07a5edc5d4d088bbc1ccb6873a">More...</a><br/></td></tr>
+<tr class="separator:a017def07a5edc5d4d088bbc1ccb6873a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -252,11 +264,11 @@ template&lt;typename T&gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1ChannelBufferElement.html#a766e9a0251cc25682d14e84c54fb7545">RTT::internal::ChannelBufferElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1ChannelDataElement.html#ab9014c1217fce59552a19c929881a856">RTT::internal::ChannelDataElement&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00116">116</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00117">117</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00058">RTT::base::ChannelElementBase::getInput()</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00059">RTT::base::ChannelElementBase::getInput()</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelDataElement_8hpp_source.html#l00097">RTT::internal::ChannelDataElement&lt; T &gt;::clear()</a>, and <a class="el" href="ChannelBufferElement_8hpp_source.html#l00106">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelDataElement_8hpp_source.html#l00097">RTT::internal::ChannelDataElement&lt; T &gt;::clear()</a>, and <a class="el" href="ChannelBufferElement_8hpp_source.html#l00129">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>.</p>
 
 </div>
 </div>
@@ -329,7 +341,7 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00100">100</a> of file <a class="el" href="ConnOutputEndPoint_8hpp_source.html">ConnOutputEndPoint.hpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00075">RTT::base::ChannelElementBase::disconnect()</a>, and <a class="el" href="InputPortInterface_8cpp_source.html#l00133">RTT::base::InputPortInterface::removeConnection()</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00076">RTT::base::ChannelElementBase::disconnect()</a>, and <a class="el" href="InputPortInterface_8cpp_source.html#l00133">RTT::base::InputPortInterface::removeConnection()</a>.</p>
 
 </div>
 </div>
@@ -366,6 +378,39 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a6d96d73ffae8886ab693a6574a3eeb80"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html">RTT::internal::ConnOutputEndpoint</a>&lt; T &gt;::getElementName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the class name of this element. </p>
+<p>This is primary useful for special case handling in the connection tracking. </p>
+<dl class="section return"><dt>Returns</dt><dd>The name of the class of the ChannelElement </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#aa2bc1d9562c6b1a2797a144997a2c54f">RTT::base::ChannelElementBase</a>.</p>
+
+<p>Definition at line <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00139">139</a> of file <a class="el" href="ConnOutputEndPoint_8hpp_source.html">ConnOutputEndPoint.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a63e9f77c9197ba424d824ff44b38349f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -391,9 +436,42 @@ template&lt;typename T&gt; </div>
 <p>Will return the channel element the furthest away from the input port, or <em>this</em> if none. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a7abd277448530efc8817ca36cf0238f8" title="Returns the current input channel element. ">getInput()</a> ? <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a7abd277448530efc8817ca36cf0238f8" title="Returns the current input channel element. ">getInput()</a>-&gt;<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a63e9f77c9197ba424d824ff44b38349f" title="Returns the first input channel element of this connection. ">getInputEndPoint()</a> : this </dd></dl>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00096">96</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00097">97</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00058">RTT::base::ChannelElementBase::getInput()</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00059">RTT::base::ChannelElementBase::getInput()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a017def07a5edc5d4d088bbc1ccb6873a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ChannelElementBase::getLocalURI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function return the URI of this element. </p>
+<p>The URI must be unique. </p>
+<dl class="section return"><dt>Returns</dt><dd>URI of this element. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#abf1600b52dd92f337b5742fbaad0ed7a">RTT::corba::RemoteChannelElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a92de07aadda7043a8ce1b74ad33774ad">RTT::mqueue::MQChannelElement&lt; T &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00152">152</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00187">RTT::mqueue::MQChannelElement&lt; T &gt;::getLocalURI()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00391">RTT::corba::RemoteChannelElement&lt; T &gt;::getLocalURI()</a>.</p>
 
 </div>
 </div>
@@ -422,9 +500,9 @@ template&lt;typename T&gt; </div>
 <p>Will return the channel element the furthest away from the output port, or <em>this</em> if none. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a17b16a344228234a2f6d51559c7522c8" title="Returns the next channel element in the channel&#39;s propagation direction. ">getOutput()</a> ? <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a17b16a344228234a2f6d51559c7522c8" title="Returns the next channel element in the channel&#39;s propagation direction. ">getOutput()</a>-&gt;<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a63e9f77c9197ba424d824ff44b38349f" title="Returns the first input channel element of this connection. ">getInputEndPoint()</a> : this </dd></dl>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00101">101</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00102">102</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00063">RTT::base::ChannelElementBase::getOutput()</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00064">RTT::base::ChannelElementBase::getOutput()</a>.</p>
 
 </div>
 </div>
@@ -460,6 +538,39 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a1d4eab0475a5e1e42963a89661d9d12f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ChannelElementBase::getRemoteURI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function returns the URI of the next channel element in the logical chain. </p>
+<p>The URI must be unique. E.g: In the local case output-&gt;<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a017def07a5edc5d4d088bbc1ccb6873a" title="This function return the URI of this element. ">getLocalURI()</a> In the remote case the URI of the remote channel element.</p>
+<dl class="section return"><dt>Returns</dt><dd>URI of the next element. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a39d8fa0d035c119106a0822a790d799d">RTT::corba::RemoteChannelElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a63c1ccd3e23783738c942b72294f693a">RTT::mqueue::MQChannelElement&lt; T &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00144">144</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00177">RTT::mqueue::MQChannelElement&lt; T &gt;::getRemoteURI()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00380">RTT::corba::RemoteChannelElement&lt; T &gt;::getRemoteURI()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a00280e7765cf99c11e19344dc8c8c498"></a>
 <div class="memitem">
 <div class="memproto">
@@ -491,7 +602,37 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00087">87</a> of file <a class="el" href="ConnOutputEndPoint_8hpp_source.html">ConnOutputEndPoint.hpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00107">RTT::base::ChannelElementBase::inputReady()</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00108">RTT::base::ChannelElementBase::inputReady()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2237a004c5db9ff66ed81c5e87b2baaf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ChannelElementBase::isRemoteElement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function may be used to identify, if the current element uses a network transport, to send the data to the next Element in the logical chain. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if a network transport is used. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a0eddae46526c29d62c88d93c0e770908">RTT::corba::RemoteChannelElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a10bfcee86c4f172889c6e4faecfdfcc8">RTT::mqueue::MQChannelElement&lt; T &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00140">140</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 </div>
 </div>
@@ -538,7 +679,7 @@ template&lt;typename T&gt; </div>
 
 <p>References <a class="el" href="ChannelElement_8hpp_source.html#l00116">RTT::base::ChannelElement&lt; T &gt;::read()</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelElement_8hpp_source.html#l00116">RTT::base::ChannelElement&lt; T &gt;::read()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00276">RTT::corba::RemoteChannelElement&lt; T &gt;::read()</a>, and <a class="el" href="MQChannelElement_8hpp_source.html#l00132">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelElement_8hpp_source.html#l00116">RTT::base::ChannelElement&lt; T &gt;::read()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00280">RTT::corba::RemoteChannelElement&lt; T &gt;::read()</a>, and <a class="el" href="MQChannelElement_8hpp_source.html#l00132">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>.</p>
 
 </div>
 </div>
@@ -599,7 +740,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00068">68</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00069">69</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00219">RTT::internal::ConnFactory::buildBufferedChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00255">RTT::internal::ConnFactory::buildBufferedChannelOutput()</a>, and <a class="el" href="ConnFactory_8hpp_source.html#l00199">RTT::internal::ConnFactory::buildChannelInput()</a>.</p>
 
@@ -673,7 +814,7 @@ template&lt;typename T&gt; </div>
 
 <p>References <a class="el" href="ChannelElement_8hpp_source.html#l00103">RTT::base::ChannelElement&lt; T &gt;::write()</a>.</p>
 
-<p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00132">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00103">RTT::base::ChannelElement&lt; T &gt;::write()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00338">RTT::corba::RemoteChannelElement&lt; T &gt;::write()</a>.</p>
+<p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00132">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00103">RTT::base::ChannelElement&lt; T &gt;::write()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00342">RTT::corba::RemoteChannelElement&lt; T &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -683,7 +824,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 15 2015 16:26:32 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 12 2016 19:17:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

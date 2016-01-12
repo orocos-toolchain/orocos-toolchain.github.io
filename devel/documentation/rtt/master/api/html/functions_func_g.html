@@ -279,6 +279,15 @@
 <li>getDriveValue()
 : <a class="el" href="classRTT_1_1dev_1_1AxisInterface.html#aa8d42b9ab30375c1b7fb0bcc3c5de308">RTT::dev::AxisInterface</a>
 </li>
+<li>getElementName()
+: <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#aa2bc1d9562c6b1a2797a144997a2c54f">RTT::base::ChannelElementBase</a>
+, <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#af49c702d3ed5f1e06f4b8e4e98331fd3">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1ChannelBufferElement.html#aea9ca772ae81980b716639999b258ce1">RTT::internal::ChannelBufferElement&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1ChannelDataElement.html#ac73ce4889bf3ff1c3137a1a2bda5b67d">RTT::internal::ChannelDataElement&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html#adc8b82059a9ed58c1c76982cd22e2ccc">RTT::internal::ConnInputEndpoint&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#a6d96d73ffae8886ab693a6574a3eeb80">RTT::internal::ConnOutputEndpoint&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a6014e7d5f669cf248922d7c943088c32">RTT::mqueue::MQChannelElement&lt; T &gt;</a>
+</li>
 <li>getEnable()
 : <a class="el" href="classRTT_1_1dev_1_1AxisInterface.html#ac46fa472a92954e24e49b70c59b0bd90">RTT::dev::AxisInterface</a>
 , <a class="el" href="classRTT_1_1dev_1_1DriveInterface.html#a2f18f345acfaea4270cf5e1e3410b0b3">RTT::dev::DriveInterface</a>
@@ -348,6 +357,11 @@
 , <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a2fa2c4209eefd648901964361c47394b">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>
 , <a class="el" href="classRTT_1_1OperationInterfacePart.html#aac9cfc91ff488aab9fa1d5a702701ee8">RTT::OperationInterfacePart</a>
 , <a class="el" href="classRTT_1_1Service.html#a3f714307df9151bee776127196832859">RTT::Service</a>
+</li>
+<li>getLocalURI()
+: <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a017def07a5edc5d4d088bbc1ccb6873a">RTT::base::ChannelElementBase</a>
+, <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#abf1600b52dd92f337b5742fbaad0ed7a">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a92de07aadda7043a8ce1b74ad33774ad">RTT::mqueue::MQChannelElement&lt; T &gt;</a>
 </li>
 <li>getLogLevel()
 : <a class="el" href="classRTT_1_1Logger.html#a6cd3858f608c39ebb571d0940f1ca771">RTT::Logger</a>
@@ -612,6 +626,11 @@
 <li>getRemoteInterface()
 : <a class="el" href="classRTT_1_1corba_1_1CDataFlowInterface__i.html#adac84a4049a3512dd8611feff829dc65">RTT::corba::CDataFlowInterface_i</a>
 </li>
+<li>getRemoteURI()
+: <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a1d4eab0475a5e1e42963a89661d9d12f">RTT::base::ChannelElementBase</a>
+, <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a39d8fa0d035c119106a0822a790d799d">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a63c1ccd3e23783738c942b72294f693a">RTT::mqueue::MQChannelElement&lt; T &gt;</a>
+</li>
 <li>getRequest()
 : <a class="el" href="interfaceRTT_1_1corba_1_1CServiceRequester.html#a1dce1f6242504a134fc1c75ca5a8da5b">RTT::corba::CServiceRequester</a>
 </li>
@@ -720,7 +739,7 @@
 : <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a6c7eb9108377ea236a034970ce1882e5">RTT::base::TaskCore</a>
 </li>
 <li>getTask()
-: <a class="el" href="classRTT_1_1os_1_1MainThread.html#a93c1f84349499f248a18b6c008bd04aa">RTT::os::MainThread</a>
+: <a class="el" href="classRTT_1_1os_1_1MainThread.html#a169daea0cd8577045e36dbcf772e7ab6">RTT::os::MainThread</a>
 , <a class="el" href="classRTT_1_1os_1_1Thread.html#a6773640897f8ae122da0b4e14630414a">RTT::os::Thread</a>
 , <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#ab1d1abcb68728cd30853437905dfa6e5">RTT::os::ThreadInterface</a>
 </li>
@@ -824,13 +843,13 @@
 </li>
 <li>getTypeName()
 : <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a438819b60f39ad1bcbe0fe7812c00771">RTT::base::DataSourceBase</a>
-, <a class="el" href="classRTT_1_1internal_1_1DataSource.html#aae5e9522e0119094179eebbf5db1cfd8">RTT::internal::DataSource&lt; T &gt;</a>
 </li>
 <li>GetTypeName()
 : <a class="el" href="classRTT_1_1internal_1_1DataSource.html#aba21a204dda5f619f0a49db240edd3ff">RTT::internal::DataSource&lt; T &gt;</a>
 </li>
 <li>getTypeName()
-: <a class="el" href="structRTT_1_1internal_1_1DataSourceTypeInfo.html#ad8d82673cc5b52082e3d5b711e9e278b">RTT::internal::DataSourceTypeInfo&lt; T &gt;</a>
+: <a class="el" href="classRTT_1_1internal_1_1DataSource.html#aae5e9522e0119094179eebbf5db1cfd8">RTT::internal::DataSource&lt; T &gt;</a>
+, <a class="el" href="structRTT_1_1internal_1_1DataSourceTypeInfo.html#ad8d82673cc5b52082e3d5b711e9e278b">RTT::internal::DataSourceTypeInfo&lt; T &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1DataSourceTypeInfo_3_01void_01_4.html#a9e82236668ae8ac790da8a9bb85aec7a">RTT::internal::DataSourceTypeInfo&lt; void &gt;</a>
 , <a class="el" href="classRTT_1_1types_1_1EmptyTypeInfo.html#ae7a04297039598aa6d89408da55e3beb">RTT::types::EmptyTypeInfo</a>
 , <a class="el" href="classRTT_1_1types_1_1PrimitiveTypeInfo.html#ac96c9d976f5f18113638cc4e87ab4bcd">RTT::types::PrimitiveTypeInfo&lt; T, use_ostream &gt;</a>
@@ -864,7 +883,7 @@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 15 2015 16:26:34 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 12 2016 19:17:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

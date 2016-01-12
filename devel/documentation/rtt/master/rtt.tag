@@ -5314,6 +5314,13 @@
       <arglist>(const std::string &amp;service_name)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>loadPlugin</name>
+      <anchorfile>classRTT_1_1TaskContext.html</anchorfile>
+      <anchor>ae775d497a2c66831079c104a9414d5bf</anchor>
+      <arglist>(const std::string &amp;pluginPath)</arglist>
+    </member>
+    <member kind="function">
       <type>Operation&lt; Signature &gt; &amp;</type>
       <name>addOperation</name>
       <anchorfile>classRTT_1_1TaskContext.html</anchorfile>
@@ -5976,6 +5983,13 @@
       <anchor>a3102c9253f531e8df423f5482cf91c03</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual size_type</type>
+      <name>dropped</name>
+      <anchorfile>classRTT_1_1base_1_1BufferLockFree.html</anchorfile>
+      <anchor>a58d82df95c343f2269425f7edbb239d9</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function">
       <type>bool</type>
       <name>Push</name>
@@ -6056,6 +6070,13 @@
       <anchorfile>classRTT_1_1base_1_1BufferBase.html</anchorfile>
       <anchor>af28ce2d9f7370819cb9bcd3222cc67e3</anchor>
       <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual size_type</type>
+      <name>dropped</name>
+      <anchorfile>classRTT_1_1base_1_1BufferBase.html</anchorfile>
+      <anchor>a96dcac8a88fc650c8c2803dcf2bb13e3</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6230,6 +6251,13 @@
       <anchor>a7e51f8910a5f585412fcd9d838709e19</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>dropped</name>
+      <anchorfile>classRTT_1_1base_1_1BufferLocked.html</anchorfile>
+      <anchor>a1e40bb36a5d26fd3d4ef10022d77eee9</anchor>
+      <arglist>() const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>RTT::base::BufferLockFree</name>
@@ -6354,6 +6382,13 @@
       <anchor>a0ca69e02ee81da2f67abf5450b63ecb5</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual size_type</type>
+      <name>dropped</name>
+      <anchorfile>classRTT_1_1base_1_1BufferUnSync.html</anchorfile>
+      <anchor>a2a3c9b44d587beaa5dc961e481d9eb59</anchor>
+      <arglist>() const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>RTT::base::ChannelElement</name>
@@ -6449,6 +6484,34 @@
       <name>getConnID</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
       <anchor>a4a66b7e5834d3d1fabb9181184759b85</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>isRemoteElement</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a2237a004c5db9ff66ed81c5e87b2baaf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getRemoteURI</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a1d4eab0475a5e1e42963a89661d9d12f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getLocalURI</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a017def07a5edc5d4d088bbc1ccb6873a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getElementName</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>aa2bc1d9562c6b1a2797a144997a2c54f</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -8829,6 +8892,34 @@
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
       <anchor>aaaefd5fa013897851d813c3e9778252d</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>isRemoteElement</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
+      <anchor>a0eddae46526c29d62c88d93c0e770908</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getRemoteURI</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
+      <anchor>a39d8fa0d035c119106a0822a790d799d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getLocalURI</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
+      <anchor>abf1600b52dd92f337b5742fbaad0ed7a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getElementName</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
+      <anchor>af49c702d3ed5f1e06f4b8e4e98331fd3</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -12698,6 +12789,13 @@
       <anchor>a23852c04325f2dd577debe9f3241536b</anchor>
       <arglist>(param_t sample)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getElementName</name>
+      <anchorfile>classRTT_1_1internal_1_1ChannelBufferElement.html</anchorfile>
+      <anchor>aea9ca772ae81980b716639999b258ce1</anchor>
+      <arglist>() const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>RTT::internal::ChannelDataElement</name>
@@ -12731,6 +12829,13 @@
       <anchorfile>classRTT_1_1internal_1_1ChannelDataElement.html</anchorfile>
       <anchor>a040ccad120939a8731161be85ad1e9d6</anchor>
       <arglist>(param_t sample)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getElementName</name>
+      <anchorfile>classRTT_1_1internal_1_1ChannelDataElement.html</anchorfile>
+      <anchor>ac73ce4889bf3ff1c3137a1a2bda5b67d</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -12843,6 +12948,20 @@
       <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
       <anchor>a9c6df47283369b04b9bb850e9132aa47</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>lock</name>
+      <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
+      <anchor>aba75892d4a0f46c3618463025f7ffd15</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>unlock</name>
+      <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
+      <anchor>a263b371598bc5777f737df7a6c091e1b</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -13062,6 +13181,13 @@
       <anchor>aaf91c67a9b34563fd8ce7199bc651a19</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>getElementName</name>
+      <anchorfile>classRTT_1_1internal_1_1ConnInputEndpoint.html</anchorfile>
+      <anchor>adc8b82059a9ed58c1c76982cd22e2ccc</anchor>
+      <arglist>() const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>RTT::internal::ConnOutputEndpoint</name>
@@ -13115,6 +13241,13 @@
       <name>getConnID</name>
       <anchorfile>classRTT_1_1internal_1_1ConnOutputEndpoint.html</anchorfile>
       <anchor>ad5ff532488d78a5e3f2a4aa13328cc3b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>getElementName</name>
+      <anchorfile>classRTT_1_1internal_1_1ConnOutputEndpoint.html</anchorfile>
+      <anchor>a6d96d73ffae8886ab693a6574a3eeb80</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -18057,6 +18190,34 @@
       <anchorfile>classRTT_1_1mqueue_1_1MQChannelElement.html</anchorfile>
       <anchor>a55fe940009876e637d6c4164eadbdf91</anchor>
       <arglist>(typename base::ChannelElement&lt; T &gt;::param_t sample)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>isRemoteElement</name>
+      <anchorfile>classRTT_1_1mqueue_1_1MQChannelElement.html</anchorfile>
+      <anchor>a10bfcee86c4f172889c6e4faecfdfcc8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getRemoteURI</name>
+      <anchorfile>classRTT_1_1mqueue_1_1MQChannelElement.html</anchorfile>
+      <anchor>a63c1ccd3e23783738c942b72294f693a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getLocalURI</name>
+      <anchorfile>classRTT_1_1mqueue_1_1MQChannelElement.html</anchorfile>
+      <anchor>a92de07aadda7043a8ce1b74ad33774ad</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string</type>
+      <name>getElementName</name>
+      <anchorfile>classRTT_1_1mqueue_1_1MQChannelElement.html</anchorfile>
+      <anchor>a6014e7d5f669cf248922d7c943088c32</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>

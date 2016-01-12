@@ -142,6 +142,10 @@ virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <tr class="memitem:af28ce2d9f7370819cb9bcd3222cc67e3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferBase.html#af28ce2d9f7370819cb9bcd3222cc67e3">clear</a> ()=0</td></tr>
 <tr class="memdesc:af28ce2d9f7370819cb9bcd3222cc67e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all contents of this buffer.  <a href="#af28ce2d9f7370819cb9bcd3222cc67e3">More...</a><br/></td></tr>
 <tr class="separator:af28ce2d9f7370819cb9bcd3222cc67e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96dcac8a88fc650c8c2803dcf2bb13e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96dcac8a88fc650c8c2803dcf2bb13e3"></a>
+virtual size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferBase.html#a96dcac8a88fc650c8c2803dcf2bb13e3">dropped</a> () const =0</td></tr>
+<tr class="memdesc:a96dcac8a88fc650c8c2803dcf2bb13e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of dropped samples, because the buffer was full. <br/></td></tr>
+<tr class="separator:a96dcac8a88fc650c8c2803dcf2bb13e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
@@ -210,7 +214,7 @@ class RTT::base::BufferInterface&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#ac462fc20b959fad08ca187b1ce5f8ec7">RTT::base::BufferLocked&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a4aed664f7fe4e75c6081fbd0c615d617">RTT::base::BufferUnSync&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a3102c9253f531e8df423f5482cf91c03">RTT::base::BufferLockFree&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00106">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00129">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>.</p>
 
 </div>
 </div>
@@ -243,7 +247,7 @@ template&lt;class T&gt; </div>
 
 <p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a9d9fbf417f40fdb4daac425204a1f6de">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#a18abf8891fc5e738ef735cfbf28d7232">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a8a834e79974647f6eb9afa1d1b8d1c07">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00115">RTT::internal::ChannelBufferElement&lt; T &gt;::data_sample()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00138">RTT::internal::ChannelBufferElement&lt; T &gt;::data_sample()</a>.</p>
 
 </div>
 </div>
@@ -407,7 +411,7 @@ template&lt;class T&gt; </div>
 
 <p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a5dacf9d5b735dfac6f4dfa4f696269f1">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#a9d5c7746021b536811d97c73cec7608f">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a42b4c5b14f1df3cf2deb43964604dc07">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00083">RTT::internal::ChannelBufferElement&lt; T &gt;::read()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00106">RTT::internal::ChannelBufferElement&lt; T &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -446,7 +450,7 @@ template&lt;class T&gt; </div>
 
 <p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a12edb0da59fa45b2cd7bda7cb1aac797">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#a2983e51d6c3b7527cde54432bf6b8c53">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a9129e1a9d2a9cc29f738746f6bcdb957">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00072">RTT::internal::ChannelBufferElement&lt; T &gt;::write()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00095">RTT::internal::ChannelBufferElement&lt; T &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -521,7 +525,7 @@ template&lt;class T&gt; </div>
 
 <p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a7a0bb28801aa18093fddcfbe38ce8823">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#ab29941aa65d94aaf8169f14d1efd0730">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a9d39ebc891decb54616680f4d28439dc">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00106">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>, and <a class="el" href="ChannelBufferElement_8hpp_source.html#l00083">RTT::internal::ChannelBufferElement&lt; T &gt;::read()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00129">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>, and <a class="el" href="ChannelBufferElement_8hpp_source.html#l00106">RTT::internal::ChannelBufferElement&lt; T &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -559,7 +563,7 @@ template&lt;class T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 15 2015 16:26:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 12 2016 19:17:38 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
