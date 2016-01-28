@@ -310,204 +310,211 @@
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">if</span> (task-&gt;wait_policy == ORO_WAIT_ABS)</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;          <span class="comment">// program next period:</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;          <span class="comment">// 1. convert period to timespec</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;          TIME_SPEC ts = ticks2timespec( <a class="code" href="fosi__interface_8h.html#ae12eda76d0ccfdc818ad52786346ec5c">nano2ticks</a>( task-&gt;period) );</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;          <span class="comment">// 2. Add ts to periodMark (danger: tn guards for overflows!)</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;          NANO_TIME tn = (task-&gt;periodMark.tv_nsec + ts.tv_nsec);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;          task-&gt;periodMark.tv_nsec = tn % 1000000000LL;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;          task-&gt;periodMark.tv_sec += ts.tv_sec + tn / 1000000000LL;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        }</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        {</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;          TIME_SPEC ts = ticks2timespec( <a class="code" href="fosi__interface_8h.html#ae12eda76d0ccfdc818ad52786346ec5c">nano2ticks</a>( task-&gt;period) );</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;          TIME_SPEC now = ticks2timespec( <a class="code" href="fosi__interface_8h.html#a86faa704540130956d12e5df711c48aa">rtos_get_time_ns</a>() );</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;          NANO_TIME tn = (now.tv_nsec + ts.tv_nsec);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;          task-&gt;periodMark.tv_nsec = tn % 1000000000LL;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;          task-&gt;periodMark.tv_sec = ts.tv_sec + now.tv_sec + tn / 1000000000LL;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">return</span> now &gt; wake ? -1 : 0;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#ad70c7f423aab28b0d75cf4d124f4b2b3">  277</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">void</span> <a class="code" href="namespaceRTT_1_1os.html#ad70c7f423aab28b0d75cf4d124f4b2b3">rtos_task_delete</a>(RTOS_TASK* mytask) {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        pthread_join( mytask-&gt;thread, 0);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        pthread_attr_destroy( &amp;(mytask-&gt;attr) );</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        free(mytask-&gt;name);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
-<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a10cd773604c82f6bd44adbd91a6d7ac5">  283</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">int</span> <a class="code" href="namespaceRTT_1_1os.html#a10cd773604c82f6bd44adbd91a6d7ac5">rtos_task_check_scheduler</a>(<span class="keywordtype">int</span>* scheduler)</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#ifdef ORO_OS_LINUX_CAP_NG</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span>(capng_get_caps_process()) {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;Failed to retrieve capabilities (lowering to SCHED_OTHER).&quot;</span> &lt;&lt;endlog();</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            *scheduler = SCHED_OTHER;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordflow">if</span> (*scheduler != SCHED_OTHER &amp;&amp; geteuid() != 0</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;#ifdef ORO_OS_LINUX_CAP_NG</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            &amp;&amp; capng_have_capability(CAPNG_EFFECTIVE, CAP_SYS_NICE)==0</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;#endif</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            ) {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="comment">// they&#39;re not root and they want a real-time priority, which _might_</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="comment">// be acceptable if they&#39;re using pam_limits and have set the rtprio ulimit</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            <span class="comment">// (see &quot;/etc/security/limits.conf&quot; and &quot;ulimit -a&quot;)</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="keyword">struct </span>rlimit r;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">if</span> ((0 != getrlimit(RLIMIT_RTPRIO, &amp;r)) || (0 == r.rlim_cur))</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                log(Warning) &lt;&lt; <span class="stringliteral">&quot;Lowering scheduler type to SCHED_OTHER for non-privileged users..&quot;</span> &lt;&lt;endlog();</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                *scheduler = SCHED_OTHER;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">if</span> (*scheduler != SCHED_OTHER &amp;&amp; *scheduler != SCHED_FIFO &amp;&amp; *scheduler != SCHED_RR ) {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;Unknown scheduler type.&quot;</span> &lt;&lt;endlog();</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            *scheduler = SCHED_OTHER;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    INTERNAL_QUAL <span class="keywordtype">int</span> <a class="code" href="namespaceRTT_1_1os.html#a0e8344bb99f804040e197a841a141776">rtos_task_check_priority</a>(<span class="keywordtype">int</span>* scheduler, <span class="keywordtype">int</span>* priority)</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordtype">int</span> ret = 0;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="comment">// check scheduler first.</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        ret = <a class="code" href="namespaceRTT_1_1os.html#a10cd773604c82f6bd44adbd91a6d7ac5">rtos_task_check_scheduler</a>(scheduler);</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="comment">// correct priority</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">if</span> (*scheduler == SCHED_OTHER) {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keywordflow">if</span> ( *priority != 0 ) {</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                <span class="keywordflow">if</span> (*priority != LowestPriority)</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    log(Warning) &lt;&lt; <span class="stringliteral">&quot;Forcing priority (&quot;</span>&lt;&lt;*priority&lt;&lt;<span class="stringliteral">&quot;) of thread with SCHED_OTHER policy to 0.&quot;</span> &lt;&lt;endlog();</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                *priority = 0;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                ret = -1;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="comment">// SCHED_FIFO/SCHED_RR:</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordflow">if</span> (*priority &lt;= 0){</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                log(Warning) &lt;&lt; <span class="stringliteral">&quot;Forcing priority (&quot;</span>&lt;&lt;*priority&lt;&lt;<span class="stringliteral">&quot;) of thread with !SCHED_OTHER policy to 1.&quot;</span> &lt;&lt;endlog();</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                *priority = 1;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;          <span class="comment">// in the case of overrun by more than 4 periods,</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;          <span class="comment">// skip all the updates before now, with the next update aligned to period</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;          <span class="keywordtype">int</span> maxDelayInPeriods = 4;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;          NANO_TIME period = task-&gt;period;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;          <span class="keywordflow">if</span> (now - wake &gt; maxDelayInPeriods*period) {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            period = period * ((now - wake) / period);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;          }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;          <span class="comment">// program next period:</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;          <span class="comment">// 1. convert period to timespec</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;          TIME_SPEC ts = ticks2timespec( <a class="code" href="fosi__interface_8h.html#ae12eda76d0ccfdc818ad52786346ec5c">nano2ticks</a>(period) );</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;          <span class="comment">// 2. Add ts to periodMark (danger: tn guards for overflows!)</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;          NANO_TIME tn = (task-&gt;periodMark.tv_nsec + ts.tv_nsec);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;          task-&gt;periodMark.tv_nsec = tn % 1000000000LL;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;          task-&gt;periodMark.tv_sec += ts.tv_sec + tn / 1000000000LL;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;          TIME_SPEC ts = ticks2timespec( <a class="code" href="fosi__interface_8h.html#ae12eda76d0ccfdc818ad52786346ec5c">nano2ticks</a>( task-&gt;period) );</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;          TIME_SPEC now = ticks2timespec( <a class="code" href="fosi__interface_8h.html#a86faa704540130956d12e5df711c48aa">rtos_get_time_ns</a>() );</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;          NANO_TIME tn = (now.tv_nsec + ts.tv_nsec);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;          task-&gt;periodMark.tv_nsec = tn % 1000000000LL;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;          task-&gt;periodMark.tv_sec = ts.tv_sec + now.tv_sec + tn / 1000000000LL;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">return</span> now &gt; wake ? -1 : 0;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#ad70c7f423aab28b0d75cf4d124f4b2b3">  284</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">void</span> <a class="code" href="namespaceRTT_1_1os.html#ad70c7f423aab28b0d75cf4d124f4b2b3">rtos_task_delete</a>(RTOS_TASK* mytask) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        pthread_join( mytask-&gt;thread, 0);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        pthread_attr_destroy( &amp;(mytask-&gt;attr) );</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        free(mytask-&gt;name);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a10cd773604c82f6bd44adbd91a6d7ac5">  290</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">int</span> <a class="code" href="namespaceRTT_1_1os.html#a10cd773604c82f6bd44adbd91a6d7ac5">rtos_task_check_scheduler</a>(<span class="keywordtype">int</span>* scheduler)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#ifdef ORO_OS_LINUX_CAP_NG</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">if</span>(capng_get_caps_process()) {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;Failed to retrieve capabilities (lowering to SCHED_OTHER).&quot;</span> &lt;&lt;endlog();</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            *scheduler = SCHED_OTHER;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">if</span> (*scheduler != SCHED_OTHER &amp;&amp; geteuid() != 0</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;#ifdef ORO_OS_LINUX_CAP_NG</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            &amp;&amp; capng_have_capability(CAPNG_EFFECTIVE, CAP_SYS_NICE)==0</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;#endif</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            ) {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="comment">// they&#39;re not root and they want a real-time priority, which _might_</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="comment">// be acceptable if they&#39;re using pam_limits and have set the rtprio ulimit</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="comment">// (see &quot;/etc/security/limits.conf&quot; and &quot;ulimit -a&quot;)</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keyword">struct </span>rlimit r;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">if</span> ((0 != getrlimit(RLIMIT_RTPRIO, &amp;r)) || (0 == r.rlim_cur))</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                log(Warning) &lt;&lt; <span class="stringliteral">&quot;Lowering scheduler type to SCHED_OTHER for non-privileged users..&quot;</span> &lt;&lt;endlog();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                *scheduler = SCHED_OTHER;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">if</span> (*scheduler != SCHED_OTHER &amp;&amp; *scheduler != SCHED_FIFO &amp;&amp; *scheduler != SCHED_RR ) {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;Unknown scheduler type.&quot;</span> &lt;&lt;endlog();</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            *scheduler = SCHED_OTHER;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    INTERNAL_QUAL <span class="keywordtype">int</span> <a class="code" href="namespaceRTT_1_1os.html#a0e8344bb99f804040e197a841a141776">rtos_task_check_priority</a>(<span class="keywordtype">int</span>* scheduler, <span class="keywordtype">int</span>* priority)</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordtype">int</span> ret = 0;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="comment">// check scheduler first.</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        ret = <a class="code" href="namespaceRTT_1_1os.html#a10cd773604c82f6bd44adbd91a6d7ac5">rtos_task_check_scheduler</a>(scheduler);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="comment">// correct priority</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">if</span> (*scheduler == SCHED_OTHER) {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordflow">if</span> ( *priority != 0 ) {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                <span class="keywordflow">if</span> (*priority != LowestPriority)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                    log(Warning) &lt;&lt; <span class="stringliteral">&quot;Forcing priority (&quot;</span>&lt;&lt;*priority&lt;&lt;<span class="stringliteral">&quot;) of thread with SCHED_OTHER policy to 0.&quot;</span> &lt;&lt;endlog();</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                *priority = 0;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                ret = -1;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            }</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keywordflow">if</span> (*priority &gt; 99){</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                log(Warning) &lt;&lt; <span class="stringliteral">&quot;Forcing priority (&quot;</span>&lt;&lt;*priority&lt;&lt;<span class="stringliteral">&quot;) of thread with !SCHED_OTHER policy to 99.&quot;</span> &lt;&lt;endlog();</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                *priority = 99;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                ret = -1;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            }</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            <span class="comment">// and limit them according to pam_Limits (only if not root)</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="keywordflow">if</span> ( geteuid() != 0 </div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;#ifdef ORO_OS_LINUX_CAP_NG</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                 &amp;&amp; !capng_have_capability(CAPNG_EFFECTIVE, CAP_SYS_NICE)</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;#endif</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                 )</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            {</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                <span class="keyword">struct </span>rlimit   r;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                <span class="keywordflow">if</span> (0 == getrlimit(RLIMIT_RTPRIO, &amp;r))</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    <span class="keywordflow">if</span> (*priority &gt; (<span class="keywordtype">int</span>)r.rlim_cur)</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                    {</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                        log(Warning) &lt;&lt; <span class="stringliteral">&quot;Forcing priority (&quot;</span>&lt;&lt;*priority&lt;&lt;<span class="stringliteral">&quot;) of thread with !SCHED_OTHER policy to the pam_limit of &quot;</span> &lt;&lt; r.rlim_cur &lt;&lt;endlog();</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                        *priority = r.rlim_cur;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                        ret = -1;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                    }</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                }</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                {</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                    <span class="comment">// this should not be possible, but do something intelligent</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                    *priority = 1;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                    ret = -1;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        }</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a9473decdf2a1119eeba68486701e61b7">  372</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">int</span> <a class="code" href="namespaceRTT_1_1os.html#a9473decdf2a1119eeba68486701e61b7">rtos_task_set_priority</a>(RTOS_TASK * task, <span class="keywordtype">int</span> priority)</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    {</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordtype">int</span> policy = 0;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keyword">struct </span>sched_param param;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="comment">// first retrieve thread scheduling parameters:</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keywordflow">if</span>( task &amp;&amp; task-&gt;thread != 0 &amp;&amp; pthread_getschedparam(task-&gt;thread, &amp;policy, &amp;param) == 0) {</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="namespaceRTT_1_1os.html#a0e8344bb99f804040e197a841a141776">rtos_task_check_priority</a>( &amp;policy, &amp;priority ) != 0 )</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            param.sched_priority = priority;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            task-&gt;priority = priority; <span class="comment">// store for set_scheduler</span></div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            <span class="comment">// write new policy:</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <span class="keywordflow">return</span> pthread_setschedparam( task-&gt;thread, policy, &amp;param);</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        }</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    }</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a2d1e79384fef5400db0cc6d3f8b2a621">  388</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">int</span> <a class="code" href="namespaceRTT_1_1os.html#a2d1e79384fef5400db0cc6d3f8b2a621">rtos_task_get_priority</a>(<span class="keyword">const</span> RTOS_TASK *task)</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    {</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="comment">// if sched_other, return the &#39;virtual&#39; priority</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordtype">int</span> policy = 0;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keyword">struct </span>sched_param param;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="comment">// first retrieve thread scheduling parameters:</span></div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">if</span> ( task == 0 )</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <span class="keywordflow">if</span> ( task-&gt;thread == 0 || pthread_getschedparam(task-&gt;thread, &amp;policy, &amp;param) != 0)</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            <span class="keywordflow">return</span> task-&gt;priority;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">return</span> param.sched_priority;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    }</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
-<div class="line"><a name="l00401"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a8cca55292cd209cd35936a92a0fc7ede">  401</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">int</span> <a class="code" href="namespaceRTT_1_1os.html#a8cca55292cd209cd35936a92a0fc7ede">rtos_task_set_cpu_affinity</a>(RTOS_TASK * task, <span class="keywordtype">unsigned</span> cpu_affinity)</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    {</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">if</span> ( cpu_affinity == 0 ) <span class="comment">// clears the mask.</span></div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            cpu_affinity = ~0;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordflow">if</span>( task &amp;&amp; task-&gt;thread != 0 ) {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            cpu_set_t cs;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            CPU_ZERO(&amp;cs);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; 8*<span class="keyword">sizeof</span>(cpu_affinity); i++)</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                {</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                    <span class="keywordflow">if</span>(cpu_affinity &amp; (1 &lt;&lt; i)) { CPU_SET(i, &amp;cs); }</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                }</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;            <span class="keywordflow">return</span> pthread_setaffinity_np(task-&gt;thread, <span class="keyword">sizeof</span>(cs), &amp;cs);</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        }</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    }</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a1eafae3a1b7a4151fc63bcf64f939861">  417</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">unsigned</span> <a class="code" href="namespaceRTT_1_1os.html#a1eafae3a1b7a4151fc63bcf64f939861">rtos_task_get_cpu_affinity</a>(<span class="keyword">const</span> RTOS_TASK *task)</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    {</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">if</span>( task &amp;&amp; task-&gt;thread != 0) {</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keywordtype">unsigned</span> cpu_affinity = 0;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        cpu_set_t cs;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        pthread_getaffinity_np(task-&gt;thread, <span class="keyword">sizeof</span>(cs), &amp;cs);</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; 8*<span class="keyword">sizeof</span>(cpu_affinity); i++)</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        {</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;          <span class="keywordflow">if</span>(CPU_ISSET(i, &amp;cs)) { cpu_affinity |= (1 &lt;&lt; i); }</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        }</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        <span class="keywordflow">return</span> cpu_affinity;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;     }</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="keywordflow">return</span> ~0;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        }</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
-<div class="line"><a name="l00432"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a72a4a1e7cfe5a457476e9308c76c8a7c">  432</a></span>&#160;    INTERNAL_QUAL <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="namespaceRTT_1_1os.html#a72a4a1e7cfe5a457476e9308c76c8a7c">rtos_task_get_name</a>(<span class="keyword">const</span> RTOS_TASK* task)</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    {</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="keywordflow">return</span> task-&gt;name;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    }</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    }</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="preprocessor">#undef INTERNAL_QUAL</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            <span class="comment">// SCHED_FIFO/SCHED_RR:</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <span class="keywordflow">if</span> (*priority &lt;= 0){</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                log(Warning) &lt;&lt; <span class="stringliteral">&quot;Forcing priority (&quot;</span>&lt;&lt;*priority&lt;&lt;<span class="stringliteral">&quot;) of thread with !SCHED_OTHER policy to 1.&quot;</span> &lt;&lt;endlog();</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                *priority = 1;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                ret = -1;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            }</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="keywordflow">if</span> (*priority &gt; 99){</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                log(Warning) &lt;&lt; <span class="stringliteral">&quot;Forcing priority (&quot;</span>&lt;&lt;*priority&lt;&lt;<span class="stringliteral">&quot;) of thread with !SCHED_OTHER policy to 99.&quot;</span> &lt;&lt;endlog();</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                *priority = 99;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                ret = -1;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            }</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="comment">// and limit them according to pam_Limits (only if not root)</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keywordflow">if</span> ( geteuid() != 0 </div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;#ifdef ORO_OS_LINUX_CAP_NG</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                 &amp;&amp; !capng_have_capability(CAPNG_EFFECTIVE, CAP_SYS_NICE)</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;#endif</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                 )</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                <span class="keyword">struct </span>rlimit   r;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                <span class="keywordflow">if</span> (0 == getrlimit(RLIMIT_RTPRIO, &amp;r))</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                    <span class="keywordflow">if</span> (*priority &gt; (<span class="keywordtype">int</span>)r.rlim_cur)</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                    {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                        log(Warning) &lt;&lt; <span class="stringliteral">&quot;Forcing priority (&quot;</span>&lt;&lt;*priority&lt;&lt;<span class="stringliteral">&quot;) of thread with !SCHED_OTHER policy to the pam_limit of &quot;</span> &lt;&lt; r.rlim_cur &lt;&lt;endlog();</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                        *priority = r.rlim_cur;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                        ret = -1;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                    }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                    <span class="comment">// this should not be possible, but do something intelligent</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                    *priority = 1;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                    ret = -1;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
+<div class="line"><a name="l00379"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a9473decdf2a1119eeba68486701e61b7">  379</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">int</span> <a class="code" href="namespaceRTT_1_1os.html#a9473decdf2a1119eeba68486701e61b7">rtos_task_set_priority</a>(RTOS_TASK * task, <span class="keywordtype">int</span> priority)</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordtype">int</span> policy = 0;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <span class="keyword">struct </span>sched_param param;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="comment">// first retrieve thread scheduling parameters:</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keywordflow">if</span>( task &amp;&amp; task-&gt;thread != 0 &amp;&amp; pthread_getschedparam(task-&gt;thread, &amp;policy, &amp;param) == 0) {</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="namespaceRTT_1_1os.html#a0e8344bb99f804040e197a841a141776">rtos_task_check_priority</a>( &amp;policy, &amp;priority ) != 0 )</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            param.sched_priority = priority;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            task-&gt;priority = priority; <span class="comment">// store for set_scheduler</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            <span class="comment">// write new policy:</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            <span class="keywordflow">return</span> pthread_setschedparam( task-&gt;thread, policy, &amp;param);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    }</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
+<div class="line"><a name="l00395"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a2d1e79384fef5400db0cc6d3f8b2a621">  395</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">int</span> <a class="code" href="namespaceRTT_1_1os.html#a2d1e79384fef5400db0cc6d3f8b2a621">rtos_task_get_priority</a>(<span class="keyword">const</span> RTOS_TASK *task)</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    {</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="comment">// if sched_other, return the &#39;virtual&#39; priority</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordtype">int</span> policy = 0;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keyword">struct </span>sched_param param;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="comment">// first retrieve thread scheduling parameters:</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keywordflow">if</span> ( task == 0 )</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">if</span> ( task-&gt;thread == 0 || pthread_getschedparam(task-&gt;thread, &amp;policy, &amp;param) != 0)</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            <span class="keywordflow">return</span> task-&gt;priority;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="keywordflow">return</span> param.sched_priority;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    }</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
+<div class="line"><a name="l00408"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a8cca55292cd209cd35936a92a0fc7ede">  408</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">int</span> <a class="code" href="namespaceRTT_1_1os.html#a8cca55292cd209cd35936a92a0fc7ede">rtos_task_set_cpu_affinity</a>(RTOS_TASK * task, <span class="keywordtype">unsigned</span> cpu_affinity)</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    {</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">if</span> ( cpu_affinity == 0 ) <span class="comment">// clears the mask.</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            cpu_affinity = ~0;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keywordflow">if</span>( task &amp;&amp; task-&gt;thread != 0 ) {</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            cpu_set_t cs;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            CPU_ZERO(&amp;cs);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; 8*<span class="keyword">sizeof</span>(cpu_affinity); i++)</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                {</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                    <span class="keywordflow">if</span>(cpu_affinity &amp; (1 &lt;&lt; i)) { CPU_SET(i, &amp;cs); }</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            <span class="keywordflow">return</span> pthread_setaffinity_np(task-&gt;thread, <span class="keyword">sizeof</span>(cs), &amp;cs);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        }</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
+<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a1eafae3a1b7a4151fc63bcf64f939861">  424</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">unsigned</span> <a class="code" href="namespaceRTT_1_1os.html#a1eafae3a1b7a4151fc63bcf64f939861">rtos_task_get_cpu_affinity</a>(<span class="keyword">const</span> RTOS_TASK *task)</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    {</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <span class="keywordflow">if</span>( task &amp;&amp; task-&gt;thread != 0) {</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        <span class="keywordtype">unsigned</span> cpu_affinity = 0;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        cpu_set_t cs;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        pthread_getaffinity_np(task-&gt;thread, <span class="keyword">sizeof</span>(cs), &amp;cs);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; 8*<span class="keyword">sizeof</span>(cpu_affinity); i++)</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        {</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;          <span class="keywordflow">if</span>(CPU_ISSET(i, &amp;cs)) { cpu_affinity |= (1 &lt;&lt; i); }</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        }</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="keywordflow">return</span> cpu_affinity;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;     }</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        <span class="keywordflow">return</span> ~0;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        }</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
+<div class="line"><a name="l00439"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#a72a4a1e7cfe5a457476e9308c76c8a7c">  439</a></span>&#160;    INTERNAL_QUAL <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="namespaceRTT_1_1os.html#a72a4a1e7cfe5a457476e9308c76c8a7c">rtos_task_get_name</a>(<span class="keyword">const</span> RTOS_TASK* task)</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    {</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        <span class="keywordflow">return</span> task-&gt;name;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    }</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;}</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">#undef INTERNAL_QUAL</span></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_a05b4c086c593b54c5b81b83d525fe20d"><div class="ttname"><a href="namespaceRTT_1_1os.html#a05b4c086c593b54c5b81b83d525fe20d">RTT::os::rtos_task_is_self</a></div><div class="ttdeci">int rtos_task_is_self(const RTOS_TASK *task)</div><div class="ttdoc">Returns 1 when task is the task struct of the thread calling this function, 0 otherwise. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00190">fosi_internal.cpp:190</a></div></div>
-<div class="ttc" id="namespaceRTT_1_1os_html_a2d1e79384fef5400db0cc6d3f8b2a621"><div class="ttname"><a href="namespaceRTT_1_1os.html#a2d1e79384fef5400db0cc6d3f8b2a621">RTT::os::rtos_task_get_priority</a></div><div class="ttdeci">int rtos_task_get_priority(const RTOS_TASK *task)</div><div class="ttdoc">Return the priority of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00388">fosi_internal.cpp:388</a></div></div>
+<div class="ttc" id="namespaceRTT_1_1os_html_a2d1e79384fef5400db0cc6d3f8b2a621"><div class="ttname"><a href="namespaceRTT_1_1os.html#a2d1e79384fef5400db0cc6d3f8b2a621">RTT::os::rtos_task_get_priority</a></div><div class="ttdeci">int rtos_task_get_priority(const RTOS_TASK *task)</div><div class="ttdoc">Return the priority of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00395">fosi_internal.cpp:395</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_ab54481e0c77bd488ff10d09e9819a3f6"><div class="ttname"><a href="namespaceRTT_1_1os.html#ab54481e0c77bd488ff10d09e9819a3f6">RTT::os::rtos_task_make_periodic</a></div><div class="ttdeci">INTERNAL_QUAL void rtos_task_make_periodic(RTOS_TASK *mytask, NANO_TIME nanosecs)</div><div class="ttdoc">This function is to inform the RTOS that a thread is switching between periodic or non-periodic execu...</div><div class="ttdef"><b>Definition:</b> <a href="ecos_2fosi__internal_8cpp_source.html#l00105">fosi_internal.cpp:105</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_a0e8344bb99f804040e197a841a141776"><div class="ttname"><a href="namespaceRTT_1_1os.html#a0e8344bb99f804040e197a841a141776">RTT::os::rtos_task_check_priority</a></div><div class="ttdeci">INTERNAL_QUAL int rtos_task_check_priority(int *scheduler, int *priority)</div><div class="ttdoc">This function checks (and corrects) a given priority within a given scheduler type. </div><div class="ttdef"><b>Definition:</b> <a href="ecos_2fosi__internal_8cpp_source.html#l00244">fosi_internal.cpp:244</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_a5f2df2e67170d279a3b073f9d992b014"><div class="ttname"><a href="namespaceRTT_1_1os.html#a5f2df2e67170d279a3b073f9d992b014">RTT::os::rtos_task_get_pid</a></div><div class="ttdeci">unsigned int rtos_task_get_pid(const RTOS_TASK *task)</div><div class="ttdoc">Returns the process ID the OS gave to the task task. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00183">fosi_internal.cpp:183</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_acd19e0cae31ab63a81fad180b3bdd0cb"><div class="ttname"><a href="namespaceRTT_1_1os.html#acd19e0cae31ab63a81fad180b3bdd0cb">RTT::os::rtos_task_delete_main</a></div><div class="ttdeci">INTERNAL_QUAL int rtos_task_delete_main(RTOS_TASK *main_task)</div><div class="ttdoc">Cleanup the main thread. </div><div class="ttdef"><b>Definition:</b> <a href="ecos_2fosi__internal_8cpp_source.html#l00050">fosi_internal.cpp:50</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_a602ffa710e4c011f181051f7480e6a44"><div class="ttname"><a href="namespaceRTT_1_1os.html#a602ffa710e4c011f181051f7480e6a44">RTT::os::rtos_task_set_scheduler</a></div><div class="ttdeci">int rtos_task_set_scheduler(RTOS_TASK *t, int sched_type)</div><div class="ttdoc">Set the scheduler of a given task t to a the type sched_type. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00197">fosi_internal.cpp:197</a></div></div>
-<div class="ttc" id="namespaceRTT_1_1os_html_a8cca55292cd209cd35936a92a0fc7ede"><div class="ttname"><a href="namespaceRTT_1_1os.html#a8cca55292cd209cd35936a92a0fc7ede">RTT::os::rtos_task_set_cpu_affinity</a></div><div class="ttdeci">int rtos_task_set_cpu_affinity(RTOS_TASK *task, unsigned cpu_affinity)</div><div class="ttdoc">Set the cpu affinity of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00401">fosi_internal.cpp:401</a></div></div>
-<div class="ttc" id="namespaceRTT_1_1os_html_a1eafae3a1b7a4151fc63bcf64f939861"><div class="ttname"><a href="namespaceRTT_1_1os.html#a1eafae3a1b7a4151fc63bcf64f939861">RTT::os::rtos_task_get_cpu_affinity</a></div><div class="ttdeci">unsigned rtos_task_get_cpu_affinity(const RTOS_TASK *task)</div><div class="ttdoc">Return the cpu affinity of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00417">fosi_internal.cpp:417</a></div></div>
+<div class="ttc" id="namespaceRTT_1_1os_html_a8cca55292cd209cd35936a92a0fc7ede"><div class="ttname"><a href="namespaceRTT_1_1os.html#a8cca55292cd209cd35936a92a0fc7ede">RTT::os::rtos_task_set_cpu_affinity</a></div><div class="ttdeci">int rtos_task_set_cpu_affinity(RTOS_TASK *task, unsigned cpu_affinity)</div><div class="ttdoc">Set the cpu affinity of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00408">fosi_internal.cpp:408</a></div></div>
+<div class="ttc" id="namespaceRTT_1_1os_html_a1eafae3a1b7a4151fc63bcf64f939861"><div class="ttname"><a href="namespaceRTT_1_1os.html#a1eafae3a1b7a4151fc63bcf64f939861">RTT::os::rtos_task_get_cpu_affinity</a></div><div class="ttdeci">unsigned rtos_task_get_cpu_affinity(const RTOS_TASK *task)</div><div class="ttdoc">Return the cpu affinity of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00424">fosi_internal.cpp:424</a></div></div>
 <div class="ttc" id="fosi__interface_8h_html_a86faa704540130956d12e5df711c48aa"><div class="ttname"><a href="fosi__interface_8h.html#a86faa704540130956d12e5df711c48aa">rtos_get_time_ns</a></div><div class="ttdeci">NANO_TIME rtos_get_time_ns(void)</div><div class="ttdoc">Get &quot;system&quot; time in nanoseconds. </div><div class="ttdef"><b>Definition:</b> <a href="ecos_2fosi_8h_source.html#l00113">fosi.h:113</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_ac1ccb6a3b312871524744cba9872fe6e"><div class="ttname"><a href="namespaceRTT_1_1os.html#ac1ccb6a3b312871524744cba9872fe6e">RTT::os::rtos_task_set_wait_period_policy</a></div><div class="ttdeci">void rtos_task_set_wait_period_policy(RTOS_TASK *task, int policy)</div><div class="ttdoc">Set the wait policy of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00236">fosi_internal.cpp:236</a></div></div>
-<div class="ttc" id="namespaceRTT_1_1os_html_ad70c7f423aab28b0d75cf4d124f4b2b3"><div class="ttname"><a href="namespaceRTT_1_1os.html#ad70c7f423aab28b0d75cf4d124f4b2b3">RTT::os::rtos_task_delete</a></div><div class="ttdeci">void rtos_task_delete(RTOS_TASK *mytask)</div><div class="ttdoc">This function must join the thread created with rtos_task_create and then clean up the RTOS_TASK stru...</div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00277">fosi_internal.cpp:277</a></div></div>
-<div class="ttc" id="namespaceRTT_1_1os_html_a9473decdf2a1119eeba68486701e61b7"><div class="ttname"><a href="namespaceRTT_1_1os.html#a9473decdf2a1119eeba68486701e61b7">RTT::os::rtos_task_set_priority</a></div><div class="ttdeci">int rtos_task_set_priority(RTOS_TASK *task, int priority)</div><div class="ttdoc">Set the priority of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00372">fosi_internal.cpp:372</a></div></div>
-<div class="ttc" id="namespaceRTT_1_1os_html_a72a4a1e7cfe5a457476e9308c76c8a7c"><div class="ttname"><a href="namespaceRTT_1_1os.html#a72a4a1e7cfe5a457476e9308c76c8a7c">RTT::os::rtos_task_get_name</a></div><div class="ttdeci">const char * rtos_task_get_name(const RTOS_TASK *task)</div><div class="ttdoc">Returns the name by which a task is known in the RTOS. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00432">fosi_internal.cpp:432</a></div></div>
-<div class="ttc" id="namespaceRTT_1_1os_html_a10cd773604c82f6bd44adbd91a6d7ac5"><div class="ttname"><a href="namespaceRTT_1_1os.html#a10cd773604c82f6bd44adbd91a6d7ac5">RTT::os::rtos_task_check_scheduler</a></div><div class="ttdeci">int rtos_task_check_scheduler(int *sched_type)</div><div class="ttdoc">This function checks (and corrects) if the given sched_type is valid for this RTOS. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00283">fosi_internal.cpp:283</a></div></div>
+<div class="ttc" id="namespaceRTT_1_1os_html_ad70c7f423aab28b0d75cf4d124f4b2b3"><div class="ttname"><a href="namespaceRTT_1_1os.html#ad70c7f423aab28b0d75cf4d124f4b2b3">RTT::os::rtos_task_delete</a></div><div class="ttdeci">void rtos_task_delete(RTOS_TASK *mytask)</div><div class="ttdoc">This function must join the thread created with rtos_task_create and then clean up the RTOS_TASK stru...</div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00284">fosi_internal.cpp:284</a></div></div>
+<div class="ttc" id="namespaceRTT_1_1os_html_a9473decdf2a1119eeba68486701e61b7"><div class="ttname"><a href="namespaceRTT_1_1os.html#a9473decdf2a1119eeba68486701e61b7">RTT::os::rtos_task_set_priority</a></div><div class="ttdeci">int rtos_task_set_priority(RTOS_TASK *task, int priority)</div><div class="ttdoc">Set the priority of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00379">fosi_internal.cpp:379</a></div></div>
+<div class="ttc" id="namespaceRTT_1_1os_html_a72a4a1e7cfe5a457476e9308c76c8a7c"><div class="ttname"><a href="namespaceRTT_1_1os.html#a72a4a1e7cfe5a457476e9308c76c8a7c">RTT::os::rtos_task_get_name</a></div><div class="ttdeci">const char * rtos_task_get_name(const RTOS_TASK *task)</div><div class="ttdoc">Returns the name by which a task is known in the RTOS. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00439">fosi_internal.cpp:439</a></div></div>
+<div class="ttc" id="namespaceRTT_1_1os_html_a10cd773604c82f6bd44adbd91a6d7ac5"><div class="ttname"><a href="namespaceRTT_1_1os.html#a10cd773604c82f6bd44adbd91a6d7ac5">RTT::os::rtos_task_check_scheduler</a></div><div class="ttdeci">int rtos_task_check_scheduler(int *sched_type)</div><div class="ttdoc">This function checks (and corrects) if the given sched_type is valid for this RTOS. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00290">fosi_internal.cpp:290</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_adbb2de6b7e0f9b404d92162095511528"><div class="ttname"><a href="namespaceRTT_1_1os.html#adbb2de6b7e0f9b404d92162095511528">RTT::os::rtos_task_wait_period</a></div><div class="ttdeci">int rtos_task_wait_period(RTOS_TASK *task)</div><div class="ttdoc">This function is called by a periodic thread which wants to go to sleep and wake up the next period...</div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00241">fosi_internal.cpp:241</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_a1747cd3054d03590167081addcdb31d2"><div class="ttname"><a href="namespaceRTT_1_1os.html#a1747cd3054d03590167081addcdb31d2">RTT::os::rtos_task_yield</a></div><div class="ttdeci">INTERNAL_QUAL void rtos_task_yield(RTOS_TASK *)</div><div class="ttdoc">Yields the current thread. </div><div class="ttdef"><b>Definition:</b> <a href="ecos_2fosi__internal_8cpp_source.html#l00095">fosi_internal.cpp:95</a></div></div>
 <div class="ttc" id="fosi__interface_8h_html_ae12eda76d0ccfdc818ad52786346ec5c"><div class="ttname"><a href="fosi__interface_8h.html#ae12eda76d0ccfdc818ad52786346ec5c">nano2ticks</a></div><div class="ttdeci">TICK_TIME nano2ticks(NANO_TIME nano)</div><div class="ttdoc">Time conversions from nano seconds to system ticks. </div><div class="ttdef"><b>Definition:</b> <a href="ecos_2fosi_8h_source.html#l00100">fosi.h:100</a></div></div>
@@ -518,7 +525,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 28 2016 18:07:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 28 2016 18:11:43 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
