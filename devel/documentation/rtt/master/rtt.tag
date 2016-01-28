@@ -18729,8 +18729,8 @@
       <type>int</type>
       <name>read</name>
       <anchorfile>classRTT_1_1os_1_1AtomicInt.html</anchorfile>
-      <anchor>a68999a11810cf3e5d83120e6c7b756be</anchor>
-      <arglist>()</arglist>
+      <anchor>a278817ee29aed7c546d141ce7a873807</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>

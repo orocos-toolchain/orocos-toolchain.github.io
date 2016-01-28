@@ -100,7 +100,7 @@
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;ThreadInterface::ThreadInterface()</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classRTT_1_1os_1_1ThreadInterface.html#a25fb4baabceaf85e83ccb1f8e4d7d99c">threadnb</a> = <a class="code" href="namespaceRTT_1_1os.html#ae6e8bb6fecf005ff4ecf3b57db4b26c8">threads</a>.<a class="code" href="classRTT_1_1os_1_1AtomicInt.html#a68999a11810cf3e5d83120e6c7b756be">read</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classRTT_1_1os_1_1ThreadInterface.html#a25fb4baabceaf85e83ccb1f8e4d7d99c">threadnb</a> = <a class="code" href="namespaceRTT_1_1os.html#ae6e8bb6fecf005ff4ecf3b57db4b26c8">threads</a>.<a class="code" href="classRTT_1_1os_1_1AtomicInt.html#a278817ee29aed7c546d141ce7a873807">read</a>();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="namespaceRTT_1_1os.html#ae6e8bb6fecf005ff4ecf3b57db4b26c8">threads</a>.inc();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
@@ -117,14 +117,14 @@
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 <div class="ttc" id="namespaceRTT_1_1os_html_a05b4c086c593b54c5b81b83d525fe20d"><div class="ttname"><a href="namespaceRTT_1_1os.html#a05b4c086c593b54c5b81b83d525fe20d">RTT::os::rtos_task_is_self</a></div><div class="ttdeci">int rtos_task_is_self(const RTOS_TASK *task)</div><div class="ttdoc">Returns 1 when task is the task struct of the thread calling this function, 0 otherwise. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00190">fosi_internal.cpp:190</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1ThreadInterface_html_ab1d1abcb68728cd30853437905dfa6e5"><div class="ttname"><a href="classRTT_1_1os_1_1ThreadInterface.html#ab1d1abcb68728cd30853437905dfa6e5">RTT::os::ThreadInterface::getTask</a></div><div class="ttdeci">virtual RTOS_TASK * getTask()=0</div><div class="ttdoc">Get the RTOS_TASK pointer. </div></div>
-<div class="ttc" id="classRTT_1_1os_1_1AtomicInt_html_a68999a11810cf3e5d83120e6c7b756be"><div class="ttname"><a href="classRTT_1_1os_1_1AtomicInt.html#a68999a11810cf3e5d83120e6c7b756be">RTT::os::AtomicInt::read</a></div><div class="ttdeci">int read()</div><div class="ttdoc">Read the current value of the integer. </div><div class="ttdef"><b>Definition:</b> <a href="Atomic_8hpp_source.html#l00077">Atomic.hpp:77</a></div></div>
 <div class="ttc" id="fosi__internal__interface_8hpp_html"><div class="ttname"><a href="fosi__internal__interface_8hpp.html">fosi_internal_interface.hpp</a></div><div class="ttdoc">This file has all the (periodic) thread specific interfaces. </div></div>
 <div class="ttc" id="classRTT_1_1os_1_1ThreadInterface_html_a25fb4baabceaf85e83ccb1f8e4d7d99c"><div class="ttname"><a href="classRTT_1_1os_1_1ThreadInterface.html#a25fb4baabceaf85e83ccb1f8e4d7d99c">RTT::os::ThreadInterface::threadnb</a></div><div class="ttdeci">int threadnb</div><div class="ttdoc">Threads are given an unique number, which follows thread creation order. </div><div class="ttdef"><b>Definition:</b> <a href="ThreadInterface_8hpp_source.html#l00223">ThreadInterface.hpp:223</a></div></div>
+<div class="ttc" id="classRTT_1_1os_1_1AtomicInt_html_a278817ee29aed7c546d141ce7a873807"><div class="ttname"><a href="classRTT_1_1os_1_1AtomicInt.html#a278817ee29aed7c546d141ce7a873807">RTT::os::AtomicInt::read</a></div><div class="ttdeci">int read() const </div><div class="ttdoc">Read the current value of the integer. </div><div class="ttdef"><b>Definition:</b> <a href="Atomic_8hpp_source.html#l00077">Atomic.hpp:77</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_ae6e8bb6fecf005ff4ecf3b57db4b26c8"><div class="ttname"><a href="namespaceRTT_1_1os.html#ae6e8bb6fecf005ff4ecf3b57db4b26c8">RTT::os::threads</a></div><div class="ttdeci">AtomicInt threads(0)</div><div class="ttdoc">The number of threads in addition to the main() thread. </div><div class="ttdef"><b>Definition:</b> <a href="threads_8hpp_source.html#l00054">threads.hpp:54</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 14 2016 22:15:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 28 2016 18:07:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
