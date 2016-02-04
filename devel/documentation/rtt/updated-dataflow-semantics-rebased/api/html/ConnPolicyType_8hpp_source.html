@@ -107,7 +107,7 @@
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            a &amp; boost::serialization::make_nvp(<span class="stringliteral">&quot;lock_policy&quot;</span>, c.<a class="code" href="classRTT_1_1ConnPolicy.html#a81987dec8fc26fd596223728663f9a03">lock_policy</a> );</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            a &amp; boost::serialization::make_nvp(<span class="stringliteral">&quot;init&quot;</span>, c.<a class="code" href="classRTT_1_1ConnPolicy.html#a5da839ba68d6ff35ddc44171562ed356">init</a> );</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            a &amp; boost::serialization::make_nvp(<span class="stringliteral">&quot;pull&quot;</span>, c.<a class="code" href="classRTT_1_1ConnPolicy.html#adbb615689773110a6c329c8b631fa1ee">pull</a> );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            a &amp; boost::serialization::make_nvp(<span class="stringliteral">&quot;buffer_policy&quot;</span>, c.<a class="code" href="classRTT_1_1ConnPolicy.html#a700a61ba2e9543496e638d93de38d004">buffer_policy</a> );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            a &amp; boost::serialization::make_nvp(<span class="stringliteral">&quot;buffer_policy&quot;</span>, *reinterpret_cast&lt;int*&gt;(&amp;c.<a class="code" href="classRTT_1_1ConnPolicy.html#a700a61ba2e9543496e638d93de38d004">buffer_policy</a>) );</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            a &amp; boost::serialization::make_nvp(<span class="stringliteral">&quot;mandatory&quot;</span>, c.<a class="code" href="classRTT_1_1ConnPolicy.html#a9a9cce505121d17b64ee2b9da3bd5580">mandatory</a> );</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            a &amp; boost::serialization::make_nvp(<span class="stringliteral">&quot;transport&quot;</span>, c.<a class="code" href="classRTT_1_1ConnPolicy.html#a3e6dc850be01332f49787012ab499a9d">transport</a> );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            a &amp; boost::serialization::make_nvp(<span class="stringliteral">&quot;data_size&quot;</span>, c.<a class="code" href="classRTT_1_1ConnPolicy.html#a6b4b2c1bc23e0b582bc3b42689c49a67">data_size</a> );</div>
@@ -132,7 +132,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 15 2015 15:06:59 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 4 2016 20:13:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
