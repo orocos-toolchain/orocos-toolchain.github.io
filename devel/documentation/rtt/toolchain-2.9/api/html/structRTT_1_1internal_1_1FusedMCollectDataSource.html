@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -100,11 +100,11 @@ typedef <br class="typebreak"/>
 boost::function_types::parameter_types<br class="typebreak"/>
 &lt; CollectSignature &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>arg_types</b></td></tr>
 <tr class="separator:a9372f4bf2b2f5c7c9646d8d47d961e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeb22c7257a5025bbdb6d3158a45945c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeeb22c7257a5025bbdb6d3158a45945c"></a>
+<tr class="memitem:a279ec962f91d97ef2d5540b3c0a3140f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a279ec962f91d97ef2d5540b3c0a3140f"></a>
 typedef mpl::push_front<br class="typebreak"/>
 &lt; arg_types, <a class="el" href="classRTT_1_1SendHandle.html">SendHandle</a><br class="typebreak"/>
-&lt; Signature &gt; &amp; &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>handle_and_arg_types</b></td></tr>
-<tr class="separator:aeeb22c7257a5025bbdb6d3158a45945c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&lt; Signature &gt; &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>handle_and_arg_types</b></td></tr>
+<tr class="separator:a279ec962f91d97ef2d5540b3c0a3140f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72731ea77cdd141956d5cfc76f70c126"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72731ea77cdd141956d5cfc76f70c126"></a>
 typedef <a class="el" href="structRTT_1_1internal_1_1create__sequence.html">create_sequence</a><br class="typebreak"/>
 &lt; handle_and_arg_types &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>SequenceFactory</b></td></tr>
@@ -128,7 +128,7 @@ typedef boost::intrusive_ptr<br class="typebreak"/>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a36e2af6e6fc448178a77eedaf4787480"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36e2af6e6fc448178a77eedaf4787480"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FusedMCollectDataSource</b> (const DataSourceSequence &amp;s, <a class="el" href="classRTT_1_1internal_1_1DataSource.html">DataSource</a>&lt; bool &gt;::shared_ptr blocking)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FusedMCollectDataSource</b> (const DataSourceSequence &amp;s, <a class="el" href="classRTT_1_1internal_1_1DataSource.html">DataSource</a>&lt; bool &gt;::<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">shared_ptr</a> blocking)</td></tr>
 <tr class="separator:a36e2af6e6fc448178a77eedaf4787480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae0495da742541fe1ca1c7daeff751a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae0495da742541fe1ca1c7daeff751a4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setArguments</b> (const DataSourceSequence &amp;a1)</td></tr>
@@ -143,6 +143,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setArguments</b> (con
 <a class="el" href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8">value_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1FusedMCollectDataSource.html#adf22f3e0d0fd9278d6689e553472f047">get</a> () const </td></tr>
 <tr class="memdesc:adf22f3e0d0fd9278d6689e553472f047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the data as type <em>T</em>. <br/></td></tr>
 <tr class="separator:adf22f3e0d0fd9278d6689e553472f047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82bb294eb1159740c2dd361555d78cc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82bb294eb1159740c2dd361555d78cc9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1FusedMCollectDataSource.html#a82bb294eb1159740c2dd361555d78cc9">reset</a> ()</td></tr>
+<tr class="memdesc:a82bb294eb1159740c2dd361555d78cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the data to initial values. <br/></td></tr>
+<tr class="separator:a82bb294eb1159740c2dd361555d78cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aadfd3794bc8d5bad249970a2dfd84e"><td class="memItemLeft" align="right" valign="top">virtual <br class="typebreak"/>
 <a class="el" href="structRTT_1_1internal_1_1FusedMCollectDataSource.html">FusedMCollectDataSource</a><br class="typebreak"/>
 &lt; Signature &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1FusedMCollectDataSource.html#a9aadfd3794bc8d5bad249970a2dfd84e">clone</a> () const </td></tr>
@@ -184,10 +188,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a35cceaaf3408fe63d5232687bfbaab6c">deref</a> () const </td></tr>
 <tr class="memdesc:a35cceaaf3408fe63d5232687bfbaab6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the reference count by one and delete this on zero. <br/></td></tr>
 <tr class="separator:a35cceaaf3408fe63d5232687bfbaab6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a882d3d557fc92b1c1dc4ff34c8e97999"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a882d3d557fc92b1c1dc4ff34c8e97999"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a882d3d557fc92b1c1dc4ff34c8e97999">reset</a> ()</td></tr>
-<tr class="memdesc:a882d3d557fc92b1c1dc4ff34c8e97999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the data to initial values. <br/></td></tr>
-<tr class="separator:a882d3d557fc92b1c1dc4ff34c8e97999"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77cc82b4e05ee828eb6882bf2705617e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a77cc82b4e05ee828eb6882bf2705617e">isAssignable</a> () const </td></tr>
 <tr class="memdesc:a77cc82b4e05ee828eb6882bf2705617e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this object can be cast to an AssignableDataSource.  <a href="#a77cc82b4e05ee828eb6882bf2705617e">More...</a><br/></td></tr>
 <tr class="separator:a77cc82b4e05ee828eb6882bf2705617e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,7 +254,7 @@ Public Attributes</h2></td></tr>
 DataSourceSequence&#160;</td><td class="memItemRight" valign="bottom"><b>args</b></td></tr>
 <tr class="separator:ae85033559ef90f180eb0100aa776ed51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a614861f2f71fb0daa277d20bf4663ee8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a614861f2f71fb0daa277d20bf4663ee8"></a>
-<a class="el" href="classRTT_1_1internal_1_1DataSource.html">DataSource</a>&lt; bool &gt;::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>isblocking</b></td></tr>
+<a class="el" href="classRTT_1_1internal_1_1DataSource.html">DataSource</a>&lt; bool &gt;::<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isblocking</b></td></tr>
 <tr class="separator:a614861f2f71fb0daa277d20bf4663ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00441272d84bea42c46f418e44818404"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00441272d84bea42c46f418e44818404"></a>
 <a class="el" href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8">SendStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ss</b></td></tr>
@@ -279,7 +279,7 @@ struct RTT::internal::FusedMCollectDataSource&lt; Signature &gt;</h3>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00398">398</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00410">410</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a9aadfd3794bc8d5bad249970a2dfd84e"></a>
 <div class="memitem">
@@ -309,7 +309,7 @@ template&lt;typename Signature&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1internal_1_1DataSource.html#a8bd1aaa1016ba9103ac01e5ed8e4a2f1">RTT::internal::DataSource&lt; SendStatus &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00450">450</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00467">467</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
 
 </div>
 </div>
@@ -342,7 +342,7 @@ template&lt;typename Signature&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1internal_1_1DataSource.html#ae260418b87ff337f1acfa8204fe86ade">RTT::internal::DataSource&lt; SendStatus &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00454">454</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00471">471</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,6 +371,8 @@ template&lt;typename Signature&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>true on successful evaluation. </dd></dl>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a60c089be384c07fda88a031fcaa9dd6f">RTT::base::DataSourceBase</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classRTT_1_1scripting_1_1CmdFunction.html#a45809891e010dc9973d1bc7c22f6ae79">RTT::scripting::CmdFunction</a>.</p>
 
 </div>
 </div>
@@ -408,7 +410,7 @@ template&lt;typename Signature&gt; </div>
 
 <p>Definition at line <a class="el" href="DataSource_8cpp_source.html#l00124">124</a> of file <a class="el" href="DataSource_8cpp_source.html">DataSource.cpp</a>.</p>
 
-<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00335">RTT::types::TypeInfo::getMember()</a>, and <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a79c71f0c57abdb17f557ff1a0fa62399">RTT::base::DataSourceBase::getTypeInfo()</a>.</p>
+<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00336">RTT::types::TypeInfo::getMember()</a>, and <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a79c71f0c57abdb17f557ff1a0fa62399">RTT::base::DataSourceBase::getTypeInfo()</a>.</p>
 
 </div>
 </div>
@@ -449,7 +451,7 @@ template&lt;typename Signature&gt; </div>
 
 <p>Definition at line <a class="el" href="DataSource_8cpp_source.html#l00130">130</a> of file <a class="el" href="DataSource_8cpp_source.html">DataSource.cpp</a>.</p>
 
-<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00335">RTT::types::TypeInfo::getMember()</a>, and <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a79c71f0c57abdb17f557ff1a0fa62399">RTT::base::DataSourceBase::getTypeInfo()</a>.</p>
+<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00336">RTT::types::TypeInfo::getMember()</a>, and <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a79c71f0c57abdb17f557ff1a0fa62399">RTT::base::DataSourceBase::getTypeInfo()</a>.</p>
 
 </div>
 </div>
@@ -479,7 +481,7 @@ template&lt;typename Signature&gt; </div>
 
 <p>Definition at line <a class="el" href="DataSource_8cpp_source.html#l00134">134</a> of file <a class="el" href="DataSource_8cpp_source.html">DataSource.cpp</a>.</p>
 
-<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00323">RTT::types::TypeInfo::getMemberNames()</a>, and <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a79c71f0c57abdb17f557ff1a0fa62399">RTT::base::DataSourceBase::getTypeInfo()</a>.</p>
+<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00324">RTT::types::TypeInfo::getMemberNames()</a>, and <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a79c71f0c57abdb17f557ff1a0fa62399">RTT::base::DataSourceBase::getTypeInfo()</a>.</p>
 
 </div>
 </div>
@@ -535,7 +537,7 @@ template&lt;typename Signature&gt; </div>
 <p>Returns a pointer to the sample contained in this data source, if there is any, and if it is an lvalue. </p>
 <p>Returns 0 otherwise </p>
 
-<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; DataSourceType &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; types::carray&lt; T &gt; &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; remove_cr&lt; boost::function_traits&lt; Signature &gt;::result_type &gt;::type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; ds_type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; RTT::scripting::ProgramInterface * &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; value_t &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; bool &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; DataSourceType &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; types::carray&lt; T &gt; &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; remove_cr&lt; boost::function_traits&lt; Signature &gt;::result_type &gt;::type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; ds_type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; value_t &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a5519827f47fdfdea189cf01666e81a29">RTT::internal::AssignableDataSource&lt; bool &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="DataSource_8cpp_source.html#l00115">115</a> of file <a class="el" href="DataSource_8cpp_source.html">DataSource.cpp</a>.</p>
 
@@ -565,7 +567,7 @@ template&lt;typename Signature&gt; </div>
 <p>Returns true if this object can be cast to an AssignableDataSource. </p>
 <p>When this method returns true, all update functions below will return as well when valid input is given. </p>
 
-<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; DataSourceType &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; types::carray&lt; T &gt; &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; remove_cr&lt; boost::function_traits&lt; Signature &gt;::result_type &gt;::type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; ds_type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; RTT::scripting::ProgramInterface * &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; value_t &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; bool &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; DataSourceType &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; types::carray&lt; T &gt; &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; remove_cr&lt; boost::function_traits&lt; Signature &gt;::result_type &gt;::type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; ds_type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; value_t &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#abf2dfcdb08b91febf963cd4a806ba43e">RTT::internal::AssignableDataSource&lt; bool &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="DataSource_8cpp_source.html#l00104">104</a> of file <a class="el" href="DataSource_8cpp_source.html">DataSource.cpp</a>.</p>
 
@@ -600,7 +602,7 @@ template&lt;typename Signature&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1internal_1_1DataSource.html#a7c10d4f18a3e7de9bbd534eb232d850e">RTT::internal::DataSource&lt; SendStatus &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00434">434</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00446">446</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
 
 </div>
 </div>
@@ -721,7 +723,7 @@ template&lt;typename Signature&gt; </div>
 <dl class="section pre"><dt>Precondition</dt><dd>this-&gt;<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a77cc82b4e05ee828eb6882bf2705617e" title="Returns true if this object can be cast to an AssignableDataSource. ">isAssignable()</a> == true </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>false if the DataSources are of different type OR if the contents of this <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a> can not be updated. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; DataSourceType &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; types::carray&lt; T &gt; &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; remove_cr&lt; boost::function_traits&lt; Signature &gt;::result_type &gt;::type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; ds_type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; RTT::scripting::ProgramInterface * &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; value_t &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; bool &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; DataSourceType &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; types::carray&lt; T &gt; &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; remove_cr&lt; boost::function_traits&lt; Signature &gt;::result_type &gt;::type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; ds_type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; value_t &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a9b7a379cdbb70860714ab653673d0957">RTT::internal::AssignableDataSource&lt; bool &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="DataSource_8cpp_source.html#l00108">108</a> of file <a class="el" href="DataSource_8cpp_source.html">DataSource.cpp</a>.</p>
 
@@ -753,7 +755,7 @@ template&lt;typename Signature&gt; </div>
 <dl class="section pre"><dt>Precondition</dt><dd>this-&gt;<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a77cc82b4e05ee828eb6882bf2705617e" title="Returns true if this object can be cast to an AssignableDataSource. ">isAssignable()</a> == true </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>zero if the <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a> types do not match OR if the contents of this <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a> can not be updated. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; DataSourceType &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; types::carray&lt; T &gt; &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; remove_cr&lt; boost::function_traits&lt; Signature &gt;::result_type &gt;::type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; ds_type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; RTT::scripting::ProgramInterface * &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; value_t &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; bool &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; DataSourceType &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; types::carray&lt; T &gt; &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; remove_cr&lt; boost::function_traits&lt; Signature &gt;::result_type &gt;::type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; ds_type &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; value_t &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#ad4a5d078288ce2e01e66122b79aebe69">RTT::internal::AssignableDataSource&lt; bool &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="DataSource_8cpp_source.html#l00120">120</a> of file <a class="el" href="DataSource_8cpp_source.html">DataSource.cpp</a>.</p>
 
@@ -787,7 +789,7 @@ template&lt;typename Signature&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1internal_1_1DataSource.html#a04b9910d4e1813478a32fec421870beb">RTT::internal::DataSource&lt; SendStatus &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00429">429</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00441">441</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
 
 </div>
 </div>
@@ -854,7 +856,7 @@ template&lt;typename Signature&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -155,11 +155,12 @@
 , <a class="el" href="classRTT_1_1types_1_1TypeInfo.html#aec788a2aaad79fafff41793bcff417bd">RTT::types::TypeInfo</a>
 </li>
 <li>inputReady()
-: <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a69e529e0b3dcc4316cb00f3ff957505b">RTT::base::ChannelElementBase</a>
-, <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aaaefd5fa013897851d813c3e9778252d">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
-, <a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html#a608f3db8f81b53ccb1870c66e633b017">RTT::internal::ConnInputEndpoint&lt; T &gt;</a>
-, <a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#a00280e7765cf99c11e19344dc8c8c498">RTT::internal::ConnOutputEndpoint&lt; T &gt;</a>
-, <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a5be071ead3000be6c082385cf9d887d5">RTT::mqueue::MQChannelElement&lt; T &gt;</a>
+: <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a1d5804375c6925e005af865deb89869b">RTT::base::ChannelElementBase</a>
+, <a class="el" href="classRTT_1_1base_1_1MultipleInputsChannelElementBase.html#abd5acfb89e2d87238d3bcccfd2c09945">RTT::base::MultipleInputsChannelElementBase</a>
+, <a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#a9fd6b00e2dcacb71653c523b1b8232be">RTT::corba::CChannelElement</a>
+, <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#ad00cd8f96e88a8b78d2a475d9971e5b2">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html#a21acf7f21791ade77736ee3e488d7a64">RTT::internal::ConnInputEndpoint&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#ae9ab319ed9ee5c9fa59ba4089ebe62c3">RTT::mqueue::MQChannelElement&lt; T &gt;</a>
 </li>
 <li>inRunTimeError()
 : <a class="el" href="classRTT_1_1base_1_1TaskCore.html#ae96c196ff77840408229ccd5018fc9c9">RTT::base::TaskCore</a>
@@ -191,7 +192,7 @@
 <li>Instance()
 : <a class="el" href="classRTT_1_1corba_1_1CorbaDispatcher.html#aca6bacb6ce1fde7d76d2b920d39a2f4b">RTT::corba::CorbaDispatcher</a>
 , <a class="el" href="classRTT_1_1extras_1_1SimulationThread.html#a44a6658d0d9786ca5e22fbc67ecfe276">RTT::extras::SimulationThread</a>
-, <a class="el" href="classRTT_1_1extras_1_1TimerThread.html#ad46631862a6726bc5eb5e64f64c156ea">RTT::extras::TimerThread</a>
+, <a class="el" href="classRTT_1_1extras_1_1TimerThread.html#a0c7e7c1f4676b2c9cd52690e7a994213">RTT::extras::TimerThread</a>
 , <a class="el" href="classRTT_1_1internal_1_1GlobalEngine.html#acd69e0c7eae8ec2010c6729e1f85d968">RTT::internal::GlobalEngine</a>
 , <a class="el" href="classRTT_1_1Logger.html#a44f149cf8333bea87dfcefb48c1381c9">RTT::Logger</a>
 , <a class="el" href="classRTT_1_1os_1_1MainThread.html#aea2ffbfc1774c1704a4b467037eec45f">RTT::os::MainThread</a>
@@ -279,16 +280,18 @@
 : <a class="el" href="classRTT_1_1dev_1_1AxisInterface.html#ad9e41a4386bd0b3faccbea01ccf54d9d">RTT::dev::AxisInterface</a>
 </li>
 <li>isEmpty()
-: <a class="el" href="classRTT_1_1internal_1_1AtomicMWSRQueue.html#a0a9cb01e242d90ee380f7493088bf37f">RTT::internal::AtomicMWSRQueue&lt; T &gt;</a>
-, <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a6955f2bcbdd68cac4d345631423be92c">RTT::internal::AtomicQueue&lt; T &gt;</a>
+: <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#aa6a2c459f755717fac10fc81d59df15d">RTT::internal::AtomicMWMRQueue&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1AtomicMWSRQueue.html#a0a9cb01e242d90ee380f7493088bf37f">RTT::internal::AtomicMWSRQueue&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#ad0a478087ac3ec7a80fd5e9d99d7c137">RTT::internal::AtomicQueue&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1LockedQueue.html#a352f3783157153c2301ba640e4edd0c0">RTT::internal::LockedQueue&lt; T &gt;</a>
 </li>
 <li>isEnabled()
 : <a class="el" href="classRTT_1_1dev_1_1DriveInterface.html#af0e7dfe1c189f751e1fb811b18bfa5eb">RTT::dev::DriveInterface</a>
 </li>
 <li>isFull()
-: <a class="el" href="classRTT_1_1internal_1_1AtomicMWSRQueue.html#a8b23d4d0a8a912ea7c8a064d267a70f8">RTT::internal::AtomicMWSRQueue&lt; T &gt;</a>
-, <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a9bdf3c197df813915af1588ff3fac338">RTT::internal::AtomicQueue&lt; T &gt;</a>
+: <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a73005e4ebe9ad7eb9c43633ee074296b">RTT::internal::AtomicMWMRQueue&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1AtomicMWSRQueue.html#a8b23d4d0a8a912ea7c8a064d267a70f8">RTT::internal::AtomicMWSRQueue&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#af0d9d213effe63b6d5d50c2a0a92704c">RTT::internal::AtomicQueue&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1LockedQueue.html#aac54f7b695dac1b2a40a2dccf1e1437e">RTT::internal::LockedQueue&lt; T &gt;</a>
 </li>
 <li>isLoaded()
@@ -354,7 +357,7 @@
 , <a class="el" href="classRTT_1_1scripting_1_1ProgramInterface.html#aac6e08f27bfd9a7ca9a484546bf33ed8">RTT::scripting::ProgramInterface</a>
 </li>
 <li>isSend()
-: <a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a55d9c21f679c735ac63b2482d3b19145">RTT::base::OperationCallerInterface</a>
+: <a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#aec3e3f1b780d11824c07461bf4cfeee7">RTT::base::OperationCallerInterface</a>
 </li>
 <li>isSingleConnection()
 : <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2ebdd0bb795856f2f1b4e38d782d9dae">RTT::internal::ConnectionManager</a>
@@ -406,13 +409,13 @@
 : <a class="el" href="classRTT_1_1marsh_1_1TiXmlBase.html#aae479a08edc5d3b98498d3124cbc453a">RTT::marsh::TiXmlBase</a>
 </li>
 <li>IterateChildren()
-: <a class="el" href="classRTT_1_1marsh_1_1TiXmlNode.html#a8e827f3c3d2caf8a13e87a5b7c119c2d">RTT::marsh::TiXmlNode</a>
+: <a class="el" href="classRTT_1_1marsh_1_1TiXmlNode.html#aae96266878edbbb4f683d314f43df1d9">RTT::marsh::TiXmlNode</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

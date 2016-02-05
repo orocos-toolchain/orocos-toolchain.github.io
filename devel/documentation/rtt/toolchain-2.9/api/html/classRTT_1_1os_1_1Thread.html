@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -57,6 +57,7 @@
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classRTT_1_1os_1_1Thread-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -75,7 +76,7 @@ Inheritance diagram for RTT::os::Thread:</div>
   <img src="classRTT_1_1os_1_1Thread.png" usemap="#RTT::os::Thread_map" alt=""/>
   <map id="RTT::os::Thread_map" name="RTT::os::Thread_map">
 <area href="classRTT_1_1os_1_1ThreadInterface.html" title="A thread which is being run. " alt="RTT::os::ThreadInterface" shape="rect" coords="742,0,944,24"/>
-<area href="classRTT_1_1Activity.html" title="An Activity is an object that represents a thread. " alt="RTT::Activity" shape="rect" coords="424,112,626,136"/>
+<area href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. " alt="RTT::Activity" shape="rect" coords="424,112,626,136"/>
 <area href="classRTT_1_1extras_1_1TimerThread.html" title="This Periodic Thread is meant for executing a PeriodicActivity object periodically. " alt="RTT::extras::TimerThread" shape="rect" coords="1060,112,1262,136"/>
 <area href="classRTT_1_1corba_1_1CorbaDispatcher.html" title="This object sends over data flow messages from local buffers to a remote channel element. " alt="RTT::corba::CorbaDispatcher" shape="rect" coords="0,168,202,192"/>
 <area href="classRTT_1_1corba_1_1OrbRunner.html" title="Class which runs an orb in an Orocos thread. " alt="RTT::corba::OrbRunner" shape="rect" coords="212,168,414,192"/>
@@ -88,7 +89,7 @@ Inheritance diagram for RTT::os::Thread:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a105c5739f2637b3c7a47b895343e20c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a105c5739f2637b3c7a47b895343e20c1">Thread</a> (int scheduler, int priority, double period, unsigned cpu_affinity, const std::string &amp;name)</td></tr>
+<tr class="memitem:a105c5739f2637b3c7a47b895343e20c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a105c5739f2637b3c7a47b895343e20c1">Thread</a> (int scheduler, int priority, double <a class="el" href="classRTT_1_1os_1_1Thread.html#a02acd637f8631315695dfd8a8cdd3de6">period</a>, unsigned cpu_affinity, const std::string &amp;name)</td></tr>
 <tr class="memdesc:a105c5739f2637b3c7a47b895343e20c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classRTT_1_1os_1_1Thread.html" title="A Thread object executes user code in its own thread. ">Thread</a> with a given scheduler type, priority and a name.  <a href="#a105c5739f2637b3c7a47b895343e20c1">More...</a><br/></td></tr>
 <tr class="separator:a105c5739f2637b3c7a47b895343e20c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3c97f7252b4ba41e06edf63cf7412de"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ad3c97f7252b4ba41e06edf63cf7412de">start</a> ()</td></tr>
@@ -218,9 +219,67 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>emergencyStop</b> ()<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a94f375df5f026684f8724185b930c584"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94f375df5f026684f8724185b930c584"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a94f375df5f026684f8724185b930c584">msched_type</a></td></tr>
+<tr class="memdesc:a94f375df5f026684f8724185b930c584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desired scheduler type. <br/></td></tr>
+<tr class="separator:a94f375df5f026684f8724185b930c584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae4e5b4743923f0797b26e939ffe5b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adae4e5b4743923f0797b26e939ffe5b7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#adae4e5b4743923f0797b26e939ffe5b7">active</a></td></tr>
+<tr class="memdesc:adae4e5b4743923f0797b26e939ffe5b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">When set to 1, the thread will run, when set to 0 the thread will stop ( <a class="el" href="classRTT_1_1os_1_1Thread.html#a0e351c9ab63970389eee3f2e9b602adb" title="Returns whether the thread is active. ">isActive()</a> ) <br/></td></tr>
+<tr class="separator:adae4e5b4743923f0797b26e939ffe5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad0eccac77f5c77cbd5690c7de784e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ad0eccac77f5c77cbd5690c7de784e2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a4ad0eccac77f5c77cbd5690c7de784e2">prepareForExit</a></td></tr>
+<tr class="memdesc:a4ad0eccac77f5c77cbd5690c7de784e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the thread that it should exit. <br/></td></tr>
+<tr class="separator:a4ad0eccac77f5c77cbd5690c7de784e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7cd90b220ad93c165775e8348e9aed8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7cd90b220ad93c165775e8348e9aed8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ad7cd90b220ad93c165775e8348e9aed8">inloop</a></td></tr>
+<tr class="memdesc:ad7cd90b220ad93c165775e8348e9aed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is true when in the loop (<a class="el" href="classRTT_1_1os_1_1Thread.html#a49de57cf538992cb54fdc20658094aab" title="Returns whether the thread is running. ">isRunning()</a> ) <br/></td></tr>
+<tr class="separator:ad7cd90b220ad93c165775e8348e9aed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dcdfd94eb560ea59f26498299ec90d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dcdfd94eb560ea59f26498299ec90d5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a6dcdfd94eb560ea59f26498299ec90d5">running</a></td></tr>
+<tr class="memdesc:a6dcdfd94eb560ea59f26498299ec90d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if <a class="el" href="classRTT_1_1os_1_1Thread.html#aa818917a1c75631736a079246328d9a8">step()</a> or <a class="el" href="classRTT_1_1os_1_1Thread.html#ae1d49c238372d1336e21ec9b3adc6349">loop()</a> should be executed. <br/></td></tr>
+<tr class="separator:a6dcdfd94eb560ea59f26498299ec90d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6258b13c0ed5c38eb045430b97fcd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf6258b13c0ed5c38eb045430b97fcd9"></a>
+RTOS_TASK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#abf6258b13c0ed5c38eb045430b97fcd9">rtos_task</a></td></tr>
+<tr class="memdesc:abf6258b13c0ed5c38eb045430b97fcd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The realtime task structure created by this object. <br/></td></tr>
+<tr class="separator:abf6258b13c0ed5c38eb045430b97fcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64bc10f4712bbd143cc447169b77e594"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64bc10f4712bbd143cc447169b77e594"></a>
+rt_sem_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a64bc10f4712bbd143cc447169b77e594">sem</a></td></tr>
+<tr class="memdesc:a64bc10f4712bbd143cc447169b77e594"><td class="mdescLeft">&#160;</td><td class="mdescRight">The semaphore used for starting the thread. <br/></td></tr>
+<tr class="separator:a64bc10f4712bbd143cc447169b77e594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87576530375ca0b5570cc14e7b65ca5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab87576530375ca0b5570cc14e7b65ca5"></a>
+<a class="el" href="classRTT_1_1os_1_1MutexRecursive.html">MutexRecursive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ab87576530375ca0b5570cc14e7b65ca5">breaker</a></td></tr>
+<tr class="memdesc:ab87576530375ca0b5570cc14e7b65ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to implement synchronising <a class="el" href="classRTT_1_1os_1_1Thread.html#a138e3536f1de8b4361f0db9ad9dfd07d">breakLoop()</a>. <br/></td></tr>
+<tr class="separator:ab87576530375ca0b5570cc14e7b65ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf2c15d2b691b5401695e038296cca69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf2c15d2b691b5401695e038296cca69"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#aaf2c15d2b691b5401695e038296cca69">maxOverRun</a></td></tr>
+<tr class="memdesc:aaf2c15d2b691b5401695e038296cca69"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum times a periodic overrun may happen, or -1 if unlimited. <br/></td></tr>
+<tr class="separator:aaf2c15d2b691b5401695e038296cca69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02acd637f8631315695dfd8a8cdd3de6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02acd637f8631315695dfd8a8cdd3de6"></a>
+<a class="el" href="fosi__interface_8h.html#a384fff99a7383ab85bc17d20e28bb581">NANO_TIME</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a02acd637f8631315695dfd8a8cdd3de6">period</a></td></tr>
+<tr class="memdesc:a02acd637f8631315695dfd8a8cdd3de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The period as it is passed to the operating system. <br/></td></tr>
+<tr class="separator:a02acd637f8631315695dfd8a8cdd3de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5db64c49d83e14a634c0e8cf6422a53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5db64c49d83e14a634c0e8cf6422a53"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#af5db64c49d83e14a634c0e8cf6422a53">stopTimeout</a></td></tr>
+<tr class="memdesc:af5db64c49d83e14a634c0e8cf6422a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">The timeout, in seconds, for <a class="el" href="classRTT_1_1os_1_1Thread.html#a49ccf6e01b1cbde69452d4449de4f237" title="Stop the Thread. ">stop()</a> <br/></td></tr>
+<tr class="separator:af5db64c49d83e14a634c0e8cf6422a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25fb4baabceaf85e83ccb1f8e4d7d99c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#a25fb4baabceaf85e83ccb1f8e4d7d99c">threadnb</a></td></tr>
 <tr class="memdesc:a25fb4baabceaf85e83ccb1f8e4d7d99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Threads are given an unique number, which follows thread creation order.  <a href="#a25fb4baabceaf85e83ccb1f8e4d7d99c">More...</a><br/></td></tr>
 <tr class="separator:a25fb4baabceaf85e83ccb1f8e4d7d99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a0963ed3103fccd151ec151398a3a20e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0963ed3103fccd151ec151398a3a20e4"></a>
+static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>default_stack_size</b> = 0</td></tr>
+<tr class="separator:a0963ed3103fccd151ec151398a3a20e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7374ef37bb1b188e6e3c79dd4f6e231e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7374ef37bb1b188e6e3c79dd4f6e231e"></a>
+static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a7374ef37bb1b188e6e3c79dd4f6e231e">lock_timeout_no_period_in_s</a> = 1.0</td></tr>
+<tr class="memdesc:a7374ef37bb1b188e6e3c79dd4f6e231e"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration of the lock timeout in seconds <br/></td></tr>
+<tr class="separator:a7374ef37bb1b188e6e3c79dd4f6e231e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a891ddc39c519e3561aa6277978cc2b89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a891ddc39c519e3561aa6277978cc2b89"></a>
+static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a891ddc39c519e3561aa6277978cc2b89">lock_timeout_period_factor</a> = 10.0</td></tr>
+<tr class="memdesc:a891ddc39c519e3561aa6277978cc2b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration of the lock timeout for periodic tasks in seconds <br/></td></tr>
+<tr class="separator:a891ddc39c519e3561aa6277978cc2b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -328,7 +387,7 @@ periodic behaviour</h1>
 </div><div class="memdoc">
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a1e8f7d948dce8a8eafd420f6a4baf574" title="This method is called by the framework to break out of the loop() method. ">base::RunnableInterface::breakLoop()</a> </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1OrbRunner.html#ac94669e3014408393e4de70a55b84cb9">RTT::corba::OrbRunner</a>, <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ad8b977911405631693b5a0fcba5883b4">RTT::extras::FileDescriptorActivity</a>, <a class="el" href="classRTT_1_1mqueue_1_1Dispatcher.html#a5f8b2380de8ee28723acefffa9b9ce3b">RTT::mqueue::Dispatcher</a>, <a class="el" href="classRTT_1_1Activity.html#a9a3adbca4b1a350c6feb854f994d98d6">RTT::Activity</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaDispatcher.html#ab358dd8df3cf1eee18b7fa7906d6f243">RTT::corba::CorbaDispatcher</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1OrbRunner.html#ac94669e3014408393e4de70a55b84cb9">RTT::corba::OrbRunner</a>, <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ad8b977911405631693b5a0fcba5883b4">RTT::extras::FileDescriptorActivity</a>, <a class="el" href="classRTT_1_1Activity.html#a9a3adbca4b1a350c6feb854f994d98d6">RTT::Activity</a>, <a class="el" href="classRTT_1_1mqueue_1_1Dispatcher.html#a5f8b2380de8ee28723acefffa9b9ce3b">RTT::mqueue::Dispatcher</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaDispatcher.html#ab358dd8df3cf1eee18b7fa7906d6f243">RTT::corba::CorbaDispatcher</a>.</p>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00520">520</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
@@ -393,9 +452,9 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00605">605</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00417">RTT::os::rtos_task_get_cpu_affinity()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00449">RTT::os::rtos_task_get_cpu_affinity()</a>.</p>
 
-<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00163">RTT::Activity::getCpuAffinity()</a>.</p>
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00334">RTT::Activity::getCpuAffinity()</a>.</p>
 
 </div>
 </div>
@@ -429,7 +488,9 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00590">590</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00148">RTT::Activity::getPeriod()</a>, <a class="el" href="Thread_8cpp_source.html#l00407">getStopTimeout()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00122">RTT::extras::SimulationThread::run()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00086">RTT::extras::SimulationThread::SimulationThread()</a>, and <a class="el" href="SimulationThread_8cpp_source.html#l00166">RTT::extras::SimulationThread::step()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00350">period</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00407">getStopTimeout()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00122">RTT::extras::SimulationThread::run()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00086">RTT::extras::SimulationThread::SimulationThread()</a>, and <a class="el" href="SimulationThread_8cpp_source.html#l00166">RTT::extras::SimulationThread::step()</a>.</p>
 
 </div>
 </div>
@@ -461,6 +522,8 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00595">595</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
+<p>References <a class="el" href="Thread_8hpp_source.html#l00350">period</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2c3b1dfb00f9f103582bc17267ba6b5b"></a>
@@ -491,7 +554,7 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00610">610</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00183">RTT::os::rtos_task_get_pid()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00207">RTT::os::rtos_task_get_pid()</a>.</p>
 
 </div>
 </div>
@@ -524,7 +587,7 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00585">585</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00388">RTT::os::rtos_task_get_priority()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00420">RTT::os::rtos_task_get_priority()</a>.</p>
 
 <p>Referenced by <a class="el" href="SimulationThread_8cpp_source.html#l00086">RTT::extras::SimulationThread::SimulationThread()</a>.</p>
 
@@ -559,7 +622,7 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00487">487</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00214">RTT::os::rtos_task_get_scheduler()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00238">RTT::os::rtos_task_get_scheduler()</a>.</p>
 
 <p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00468">setScheduler()</a>.</p>
 
@@ -583,9 +646,9 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00407">407</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="Thread_8cpp_source.html#l00590">getPeriod()</a>.</p>
+<p>References <a class="el" href="Thread_8cpp_source.html#l00590">getPeriod()</a>, <a class="el" href="Thread_8hpp_source.html#l00293">lock_timeout_no_period_in_s</a>, <a class="el" href="Thread_8hpp_source.html#l00298">lock_timeout_period_factor</a>, <a class="el" href="Thread_8hpp_source.html#l00350">period</a>, and <a class="el" href="Thread_8hpp_source.html#l00355">stopTimeout</a>.</p>
 
-<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00416">stop()</a>.</p>
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00416">stop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00274">RTT::Activity::stop()</a>.</p>
 
 </div>
 </div>
@@ -617,7 +680,7 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00204">204</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00074">RTT::os::thread_function()</a>.</p>
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00172">RTT::Activity::loop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00074">RTT::os::thread_function()</a>.</p>
 
 </div>
 </div>
@@ -681,7 +744,9 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00463">463</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00144">RTT::Activity::isActive()</a>, <a class="el" href="Thread_8cpp_source.html#l00337">start()</a>, and <a class="el" href="Activity_8cpp_source.html#l00132">RTT::Activity::trigger()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00309">active</a>.</p>
+
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00326">RTT::Activity::isActive()</a>, <a class="el" href="Thread_8cpp_source.html#l00337">start()</a>, and <a class="el" href="Activity_8cpp_source.html#l00145">RTT::Activity::trigger()</a>.</p>
 
 </div>
 </div>
@@ -715,7 +780,9 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00458">458</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="SimulationThread_8cpp_source.html#l00103">RTT::extras::SimulationThread::isRunning()</a>, and <a class="el" href="Activity_8cpp_source.html#l00140">RTT::Activity::isRunning()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00324">running</a>.</p>
+
+<p>Referenced by <a class="el" href="SimulationThread_8cpp_source.html#l00103">RTT::extras::SimulationThread::isRunning()</a>, and <a class="el" href="Activity_8cpp_source.html#l00322">RTT::Activity::isRunning()</a>.</p>
 
 </div>
 </div>
@@ -739,7 +806,7 @@ periodic behaviour</h1>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic thread. ">base::RunnableInterface::loop()</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic Activity. ">base::RunnableInterface::loop()</a> </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1OrbRunner.html#a3a4a1d3b98cf13236d3782223ec1d8ac">RTT::corba::OrbRunner</a>, <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6c8e8b54ca6f7dbf6ef902a26f039231">RTT::extras::FileDescriptorActivity</a>, <a class="el" href="classRTT_1_1Activity.html#a1305eb1c8dfd10dbd0473b766c52a587">RTT::Activity</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaDispatcher.html#a0663c335e8a2d196b606a048b8d3256b">RTT::corba::CorbaDispatcher</a>, and <a class="el" href="classRTT_1_1mqueue_1_1Dispatcher.html#acc9a9ea14d577dfd8b11f5ceaee2ca91">RTT::mqueue::Dispatcher</a>.</p>
 
@@ -781,9 +848,9 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00600">600</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00401">RTT::os::rtos_task_set_cpu_affinity()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00433">RTT::os::rtos_task_set_cpu_affinity()</a>.</p>
 
-<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00168">RTT::Activity::setCpuAffinity()</a>.</p>
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00339">RTT::Activity::setCpuAffinity()</a>.</p>
 
 </div>
 </div>
@@ -819,6 +886,8 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00070">70</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
+<p>References <a class="el" href="Thread_8hpp_source.html#l00293">lock_timeout_no_period_in_s</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a23e7a11b0a3d3c3b45d50478470d411e"></a>
@@ -852,6 +921,8 @@ periodic behaviour</h1>
 </dl>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00072">72</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8hpp_source.html#l00298">lock_timeout_period_factor</a>.</p>
 
 </div>
 </div>
@@ -890,7 +961,7 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00535">535</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00153">RTT::Activity::setPeriod()</a>, and <a class="el" href="Thread_8cpp_source.html#l00564">setPeriod()</a>.</p>
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00068">RTT::Activity::Activity()</a>, and <a class="el" href="Thread_8cpp_source.html#l00564">setPeriod()</a>.</p>
 
 </div>
 </div>
@@ -929,7 +1000,7 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00575">575</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00372">RTT::os::rtos_task_set_priority()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00404">RTT::os::rtos_task_set_priority()</a>.</p>
 
 </div>
 </div>
@@ -973,7 +1044,7 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00468">468</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="threads_8cpp_source.html#l00046">RTT::os::CheckScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00487">getScheduler()</a>, <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00432">RTT::os::rtos_task_get_name()</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00197">RTT::os::rtos_task_set_scheduler()</a>.</p>
+<p>References <a class="el" href="threads_8cpp_source.html#l00046">RTT::os::CheckScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00487">getScheduler()</a>, <a class="el" href="Thread_8hpp_source.html#l00303">msched_type</a>, <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00464">RTT::os::rtos_task_get_name()</a>, <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00221">RTT::os::rtos_task_set_scheduler()</a>, and <a class="el" href="Thread_8hpp_source.html#l00334">sem</a>.</p>
 
 <p>Referenced by <a class="el" href="SimulationThread_8cpp_source.html#l00086">RTT::extras::SimulationThread::SimulationThread()</a>.</p>
 
@@ -1033,6 +1104,8 @@ periodic behaviour</h1>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00402">402</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
+<p>References <a class="el" href="Thread_8hpp_source.html#l00355">stopTimeout</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a404bc82a8a3b36d7a2a95a457fd2a739"></a>
@@ -1060,16 +1133,18 @@ periodic behaviour</h1>
 <p>Set the wait policy of a periodic thread. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">The</td><td>wait policy between ORO_WAIT_ABS (absolute wait) and ORO_WAIT_REL (relative wait) </td></tr>
+    <tr><td class="paramname">The</td><td>wait policy can be ORO_WAIT_ABS (absolute wait) and ORO_WAIT_REL (relative wait, with respect to current time) </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Implements <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#a14584665c85d0217fbcd7b8510fc8716">RTT::os::ThreadInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00646">646</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1Activity.html#a88f76de00cef3bb28fd77dcb1b2b19c4">RTT::Activity</a>.</p>
 
-<p>References <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00236">RTT::os::rtos_task_set_wait_period_policy()</a>.</p>
+<p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00647">647</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00260">RTT::os::rtos_task_set_wait_period_policy()</a>.</p>
 
 </div>
 </div>
@@ -1106,9 +1181,9 @@ The <a class="el" href="classRTT_1_1os_1_1Thread.html" title="A Thread object ex
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00337">337</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="Thread_8cpp_source.html#l00526">initialize()</a>, <a class="el" href="Thread_8cpp_source.html#l00463">isActive()</a>, and <a class="el" href="ecos_2fosi__internal_8cpp_source.html#l00105">RTT::os::rtos_task_make_periodic()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00309">active</a>, <a class="el" href="Thread_8cpp_source.html#l00526">initialize()</a>, <a class="el" href="Thread_8cpp_source.html#l00463">isActive()</a>, <a class="el" href="Thread_8hpp_source.html#l00350">period</a>, <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, <a class="el" href="ecos_2fosi__internal_8cpp_source.html#l00106">RTT::os::rtos_task_make_periodic()</a>, <a class="el" href="Thread_8hpp_source.html#l00324">running</a>, and <a class="el" href="Thread_8hpp_source.html#l00334">sem</a>.</p>
 
-<p>Referenced by <a class="el" href="SimulationThread_8cpp_source.html#l00108">RTT::extras::SimulationThread::start()</a>, <a class="el" href="Activity_8cpp_source.html#l00124">RTT::Activity::start()</a>, and <a class="el" href="Activity_8cpp_source.html#l00132">RTT::Activity::trigger()</a>.</p>
+<p>Referenced by <a class="el" href="SimulationThread_8cpp_source.html#l00108">RTT::extras::SimulationThread::start()</a>, <a class="el" href="Activity_8cpp_source.html#l00269">RTT::Activity::start()</a>, <a class="el" href="Activity_8cpp_source.html#l00162">RTT::Activity::timeout()</a>, and <a class="el" href="Activity_8cpp_source.html#l00145">RTT::Activity::trigger()</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1207,7 @@ The <a class="el" href="classRTT_1_1os_1_1Thread.html" title="A Thread object ex
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be periodically executed when this class is run in a periodic thread...">base::RunnableInterface::step()</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be (periodically) executed when this object is run in an Activity. ">base::RunnableInterface::step()</a> </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113">RTT::extras::FileDescriptorActivity</a>, <a class="el" href="classRTT_1_1Activity.html#a87b4be7d3090736f3a1ab36640e6e7f0">RTT::Activity</a>, <a class="el" href="classRTT_1_1extras_1_1TimerThread.html#ae15e9e4ec6850b57502a6e36072bb5d9">RTT::extras::TimerThread</a>, and <a class="el" href="classRTT_1_1extras_1_1SimulationThread.html#afd9b0ea50a09b728300087e1b28df332">RTT::extras::SimulationThread</a>.</p>
 
@@ -1175,9 +1250,9 @@ The <a class="el" href="classRTT_1_1os_1_1Thread.html" title="A Thread object ex
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00416">416</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="Thread_8cpp_source.html#l00520">breakLoop()</a>, <a class="el" href="Thread_8cpp_source.html#l00531">finalize()</a>, <a class="el" href="Thread_8cpp_source.html#l00631">getName()</a>, <a class="el" href="Thread_8cpp_source.html#l00407">getStopTimeout()</a>, <a class="el" href="MutexLock_8hpp_source.html#l00168">RTT::os::MutexTimedLock::isSuccessful()</a>, and <a class="el" href="ecos_2fosi__internal_8cpp_source.html#l00105">RTT::os::rtos_task_make_periodic()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00309">active</a>, <a class="el" href="Thread_8hpp_source.html#l00339">breaker</a>, <a class="el" href="Thread_8cpp_source.html#l00520">breakLoop()</a>, <a class="el" href="Thread_8cpp_source.html#l00531">finalize()</a>, <a class="el" href="Thread_8cpp_source.html#l00632">getName()</a>, <a class="el" href="Thread_8cpp_source.html#l00407">getStopTimeout()</a>, <a class="el" href="Thread_8hpp_source.html#l00319">inloop</a>, <a class="el" href="MutexLock_8hpp_source.html#l00168">RTT::os::MutexTimedLock::isSuccessful()</a>, <a class="el" href="Thread_8hpp_source.html#l00350">period</a>, <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, <a class="el" href="ecos_2fosi__internal_8cpp_source.html#l00106">RTT::os::rtos_task_make_periodic()</a>, and <a class="el" href="Thread_8hpp_source.html#l00324">running</a>.</p>
 
-<p>Referenced by <a class="el" href="SimulationThread_8cpp_source.html#l00166">RTT::extras::SimulationThread::step()</a>, <a class="el" href="Activity_8cpp_source.html#l00128">RTT::Activity::stop()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00098">RTT::extras::SimulationThread::~SimulationThread()</a>, and <a class="el" href="TimerThread_8cpp_source.html#l00102">RTT::extras::TimerThread::~TimerThread()</a>.</p>
+<p>Referenced by <a class="el" href="SimulationThread_8cpp_source.html#l00166">RTT::extras::SimulationThread::step()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00098">RTT::extras::SimulationThread::~SimulationThread()</a>, and <a class="el" href="TimerThread_8cpp_source.html#l00102">RTT::extras::TimerThread::~TimerThread()</a>.</p>
 
 </div>
 </div>
@@ -1208,7 +1283,9 @@ The <a class="el" href="classRTT_1_1os_1_1Thread.html" title="A Thread object ex
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00620">620</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00277">RTT::os::rtos_task_delete()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00309">active</a>, <a class="el" href="Thread_8hpp_source.html#l00314">prepareForExit</a>, <a class="el" href="Thread_8hpp_source.html#l00329">rtos_task</a>, <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00308">RTT::os::rtos_task_delete()</a>, and <a class="el" href="Thread_8hpp_source.html#l00334">sem</a>.</p>
+
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00103">RTT::Activity::~Activity()</a>.</p>
 
 </div>
 </div>
@@ -1263,7 +1340,7 @@ The <a class="el" href="classRTT_1_1os_1_1Thread.html" title="A Thread object ex
 <p>Threads are given an unique number, which follows thread creation order. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceRTT_1_1os.html#ae6e8bb6fecf005ff4ecf3b57db4b26c8" title="The number of threads in addition to the main() thread. ">os::threads</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="ThreadInterface_8hpp_source.html#l00223">223</a> of file <a class="el" href="ThreadInterface_8hpp_source.html">ThreadInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ThreadInterface_8hpp_source.html#l00224">224</a> of file <a class="el" href="ThreadInterface_8hpp_source.html">ThreadInterface.hpp</a>.</p>
 
 </div>
 </div>
@@ -1274,7 +1351,7 @@ The <a class="el" href="classRTT_1_1os_1_1Thread.html" title="A Thread object ex
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

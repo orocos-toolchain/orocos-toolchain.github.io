@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -86,6 +86,10 @@ Public Member Functions</h2></td></tr>
 std::vector<br class="typebreak"/>
 &lt; <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>assignCommands</b> ()</td></tr>
 <tr class="separator:a9d9f8c622266de14be5e910285f7a85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b373609e5868726aa7dbf42c6251df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73b373609e5868726aa7dbf42c6251df"></a>
+std::vector<br class="typebreak"/>
+&lt; <a class="el" href="classRTT_1_1scripting_1_1ConditionInterface.html">scripting::ConditionInterface</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>assignConditions</b> ()</td></tr>
+<tr class="separator:a73b373609e5868726aa7dbf42c6251df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7504b676ab6ec6048bcd5f1569eae2e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7504b676ab6ec6048bcd5f1569eae2e2"></a>
 <a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lastDefinedValue</b> ()</td></tr>
 <tr class="separator:a7504b676ab6ec6048bcd5f1569eae2e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,7 +196,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>The parser that parses alias definitions. </p>
 <p>This does not work via an assignment, and it is not necessary to check <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a68f173c84f66d02c71eed3b31dceb1ae" title="This base::ActionInterface holds the command assigning a value to a variable that should be included ...">assignCommand()</a> after this.. </p>
 
-<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00367">367</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00371">371</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
 </div>
 </div>
@@ -220,7 +224,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>This <a class="el" href="classRTT_1_1base_1_1ActionInterface.html" title="Based on the software pattern &#39;command&#39;, this interface allows execution of action objects...">base::ActionInterface</a> holds the command assigning a value to a variable that should be included in the program. </p>
 <p>After a constant definition, variable definition or variable assignment is parsed, you should check it, and include it in your program if it is non-zero. </p>
 
-<p>Definition at line <a class="el" href="ValueChangeParser_8hpp_source.html#l00157">157</a> of file <a class="el" href="ValueChangeParser_8hpp_source.html">ValueChangeParser.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ValueChangeParser_8hpp_source.html#l00158">158</a> of file <a class="el" href="ValueChangeParser_8hpp_source.html">ValueChangeParser.hpp</a>.</p>
 
 </div>
 </div>
@@ -240,7 +244,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>The parser that parses a bare variable definition. </p>
 <p>These do not get initialised where they are defined, so it is not necessary to check <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a68f173c84f66d02c71eed3b31dceb1ae" title="This base::ActionInterface holds the command assigning a value to a variable that should be included ...">assignCommand()</a> after this... </p>
 
-<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00382">382</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00386">386</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
 </div>
 </div>
@@ -260,9 +264,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Clear assignCommands(), definedValues() and definedNames(). </p>
 <p>Does not delete any variables or commands. </p>
 
-<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00333">333</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00336">336</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ValueChangeParser_8cpp_source.html#l00342">reset()</a>.</p>
+<p>Referenced by <a class="el" href="ValueChangeParser_8cpp_source.html#l00346">reset()</a>.</p>
 
 </div>
 </div>
@@ -282,7 +286,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>the parser that parses definitions of constants. </p>
 <p>Do not forget to check <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a68f173c84f66d02c71eed3b31dceb1ae">assignCommand</a> after a constant definition is parsed.. </p>
 
-<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00362">362</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00366">366</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
 </div>
 </div>
@@ -303,7 +307,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Loads all defined names from a service. </p>
 <p>Just like <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a85d87cd2c0cdab994feda9fa8177e01c" title="Store allDefinedNames() in a service. ">store()</a>, but works the other way around and allows you to pre-defined some variables. This function removes all these variables from 'source' </p>
 
-<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00313">313</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00316">316</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
 </div>
 </div>
@@ -323,7 +327,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>The parser that parses state context parameter definitions. </p>
 <p>These do not get initialised where they are defined, so it is not necessary to check <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a68f173c84f66d02c71eed3b31dceb1ae" title="This base::ActionInterface holds the command assigning a value to a variable that should be included ...">assignCommand()</a> after this... </p>
 
-<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00377">377</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00381">381</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
 </div>
 </div>
@@ -344,7 +348,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>The individual sub-parsers are below. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00357">357</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00361">361</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +369,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Store allDefinedNames() in a service. </p>
 <p>This allows you to retrieve all parsed variable declarations. </p>
 
-<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00299">299</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00302">302</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
 </div>
 </div>
@@ -384,7 +388,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>the parser that parses variable definitions, don't forget to check <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a68f173c84f66d02c71eed3b31dceb1ae">assignCommand</a> after a variable definition is parsed. </p>
 
-<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00372">372</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00376">376</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
 </div>
 </div>
@@ -395,7 +399,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

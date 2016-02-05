@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -42,7 +42,8 @@
 <div class="header">
   <div class="summary">
 <a href="#groups">Modules</a> &#124;
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">Data Flow Ports<div class="ingroups"><a class="el" href="group__RTTComponentInterface.html">Task Context Interface</a></div></div>  </div>
 </div><!--header-->
@@ -74,14 +75,52 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OutputPort.html">RTT::OutputPort&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A component's data output port.  <a href="classRTT_1_1OutputPort.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gadc680c5e9ed12ee0889933483c89b7ea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">RTT::BufferPolicy</a> { <br/>
+&#160;&#160;<b>UnspecifiedBufferPolicy</b>, 
+<b>PerConnection</b>, 
+<b>PerInputPort</b>, 
+<b>PerOutputPort</b>, 
+<br/>
+&#160;&#160;<b>Shared</b>
+<br/>
+ }</td></tr>
+<tr class="memdesc:gadc680c5e9ed12ee0889933483c89b7ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The BufferPolicy controls how multiple connections to the same input or output port are handled in case of concurrent or subsequent read and write operations.  <a href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">More...</a><br/></td></tr>
+<tr class="separator:gadc680c5e9ed12ee0889933483c89b7ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Ports send or receive data from other components. </p>
 <p>The connection between ports may do buffering or impose other policies, as defined by the ConnPolicy class. </p>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="gadc680c5e9ed12ee0889933483c89b7ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">RTT::BufferPolicy</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The BufferPolicy controls how multiple connections to the same input or output port are handled in case of concurrent or subsequent read and write operations. </p>
+<p>Possible values:</p>
+<ul>
+<li>PerConnection: Buffers (or data objects) will be installed per connection (per pair of output and input port/stream). Input ports with multiple connections first try to read from the last read channel first, then poll all connections in the order they have been made (which in practice means there are no guarantees on the order if multiple writers write concurrently). This is the default buffer policy.</li>
+<li>PerInputPort: Every input port has a single input buffer (or data object) and all connected output ports/streams will write to the same buffer. This policy requires that pull == false for remote connections or input streams.</li>
+<li>PerOutputPort: Every output has a single output buffer (or data object) and all connected readers "consume" elements from this buffer. Exactly one connected input port or output stream will see every written sample as NewData. This policy requires that pull == true for remote connections or output streams.</li>
+<li>Shared: The buffer (or data object) is shared between all connected input and output ports. It can have an arbitrary number of writers and readers. Ports can be connected to an existing shared connection instance either by connecting it to a port that is already part of the shared connection group, or with a special createConnection() method. This was the default buffer policy in the days of <a class="el" href="namespaceRTT.html" title="Contains TaskContext, Activity, OperationCaller, Operation, Property, InputPort, OutputPort, Attribute. ">RTT</a> v1. </li>
+</ul>
+
+<p>Definition at line <a class="el" href="BufferPolicy_8hpp_source.html#l00074">74</a> of file <a class="el" href="BufferPolicy_8hpp_source.html">BufferPolicy.hpp</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

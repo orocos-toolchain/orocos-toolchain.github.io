@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -82,15 +82,15 @@ Public Types</h2></td></tr>
 <tr class="memitem:ad355a6ea889449538170f1c66c3c1e97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad355a6ea889449538170f1c66c3c1e97"></a>
 typedef sequence&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CProviderNames</b></td></tr>
 <tr class="separator:ad355a6ea889449538170f1c66c3c1e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8859cf9bfebbc17322a82d7c6b51a575"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8859cf9bfebbc17322a82d7c6b51a575"></a>
-typedef sequence&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>COperationList</b></td></tr>
-<tr class="separator:a8859cf9bfebbc17322a82d7c6b51a575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1f6c07abd6596a3836afc87d331dc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa1f6c07abd6596a3836afc87d331dc8"></a>
+typedef sequence&lt; COperation &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>COperationDescriptions</b></td></tr>
+<tr class="separator:afa1f6c07abd6596a3836afc87d331dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e6002cac68ec2a1ee931b462f7e52c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e6002cac68ec2a1ee931b462f7e52c1"></a>
 typedef sequence&lt; CProperty &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CPropertyNames</b></td></tr>
 <tr class="separator:a5e6002cac68ec2a1ee931b462f7e52c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cd6fda2bf6c06cd7b33e2d6cd5ede74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cd6fda2bf6c06cd7b33e2d6cd5ede74"></a>
-typedef sequence&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CAttributeNames</b></td></tr>
-<tr class="separator:a6cd6fda2bf6c06cd7b33e2d6cd5ede74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7d4b98a04d9af6b67400803648eadf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b7d4b98a04d9af6b67400803648eadf"></a>
+typedef sequence&lt; CAttribute &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CAttributeNames</b></td></tr>
+<tr class="separator:a2b7d4b98a04d9af6b67400803648eadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e3faf9f27b1e9a37d7b7b5f2277bcc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e3faf9f27b1e9a37d7b7b5f2277bcc3"></a>
 typedef sequence&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CPortNames</b></td></tr>
 <tr class="separator:a1e3faf9f27b1e9a37d7b7b5f2277bcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,6 +109,10 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="in
 string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CService.html#a6e112930347b7e5824f1ddc96da0f0c2">getServiceDescription</a> ()</td></tr>
 <tr class="memdesc:a6e112930347b7e5824f1ddc96da0f0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the description of this service. <br/></td></tr>
 <tr class="separator:a6e112930347b7e5824f1ddc96da0f0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad966ff63958878db3387fbee4b3d012b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad966ff63958878db3387fbee4b3d012b"></a>
+<a class="el" href="structRTT_1_1corba_1_1CServiceDescription.html">CServiceDescription</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CService.html#ad966ff63958878db3387fbee4b3d012b">getCServiceDescription</a> ()</td></tr>
+<tr class="memdesc:ad966ff63958878db3387fbee4b3d012b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the full description of this service that includes all <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> objects. <br/></td></tr>
+<tr class="separator:ad966ff63958878db3387fbee4b3d012b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac69f45b6d025476f721b1610d908433b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac69f45b6d025476f721b1610d908433b"></a>
 CProviderNames&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CService.html#ac69f45b6d025476f721b1610d908433b">getProviderNames</a> ()</td></tr>
 <tr class="memdesc:ac69f45b6d025476f721b1610d908433b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of all the child services this service offers. <br/></td></tr>
@@ -121,14 +125,14 @@ CProviderNames&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CService.html#aa729bde8b357409c064a3270966df4f8">hasService</a> (in string name)</td></tr>
 <tr class="memdesc:aa729bde8b357409c064a3270966df4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has this service a child service with given name ? <br/></td></tr>
 <tr class="separator:aa729bde8b357409c064a3270966df4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0453844331c87731e279e09a43794fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0453844331c87731e279e09a43794fb"></a>
-COperationList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#ae0453844331c87731e279e09a43794fb">getOperations</a> ()</td></tr>
-<tr class="memdesc:ae0453844331c87731e279e09a43794fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of all operations. <br/></td></tr>
-<tr class="separator:ae0453844331c87731e279e09a43794fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11e78fde96b7b134e7ada3d464cce516"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11e78fde96b7b134e7ada3d464cce516"></a>
-CDescriptions&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a11e78fde96b7b134e7ada3d464cce516">getArguments</a> (in string operation)  raises (CNoSuchNameException)</td></tr>
-<tr class="memdesc:a11e78fde96b7b134e7ada3d464cce516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of all arguments of a given operation. <br/></td></tr>
-<tr class="separator:a11e78fde96b7b134e7ada3d464cce516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e17d3571a8d5cca1a585019ea3651c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80e17d3571a8d5cca1a585019ea3651c"></a>
+COperationDescriptions&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a80e17d3571a8d5cca1a585019ea3651c">getOperations</a> ()</td></tr>
+<tr class="memdesc:a80e17d3571a8d5cca1a585019ea3651c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of all operations. <br/></td></tr>
+<tr class="separator:a80e17d3571a8d5cca1a585019ea3651c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a782ee53b36f64df509f74a9cd471a4a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a782ee53b36f64df509f74a9cd471a4a3"></a>
+CArgumentDescriptions&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a782ee53b36f64df509f74a9cd471a4a3">getArguments</a> (in string operation)  raises (CNoSuchNameException)</td></tr>
+<tr class="memdesc:a782ee53b36f64df509f74a9cd471a4a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of all arguments of a given operation. <br/></td></tr>
+<tr class="separator:a782ee53b36f64df509f74a9cd471a4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3288c62830770dd442f51a35897fd408"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3288c62830770dd442f51a35897fd408"></a>
 unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a3288c62830770dd442f51a35897fd408">getArity</a> (in string operation)  raises (CNoSuchNameException)</td></tr>
 <tr class="memdesc:a3288c62830770dd442f51a35897fd408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of arguments required in <a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a2fd12a8daf64ffa746831f9cc473388e" title="Call an operation with a list of arguments. ">callOperation()</a> and <a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a5bc3fe6cc2d982fa1a29027329eb6a16" title="Send an operation with a list of arguments. ">sendOperation()</a> for a given operation. <br/></td></tr>
@@ -162,6 +166,9 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="in
 <tr class="memitem:a5bc3fe6cc2d982fa1a29027329eb6a16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CSendHandle.html">CSendHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a5bc3fe6cc2d982fa1a29027329eb6a16">sendOperation</a> (in string operation, in CAnyArguments args)  raises ( CNoSuchNameException,                                 CWrongNumbArgException,                                 CWrongTypeArgException,                                 CCallInterrupted)</td></tr>
 <tr class="memdesc:a5bc3fe6cc2d982fa1a29027329eb6a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an operation with a list of arguments.  <a href="#a5bc3fe6cc2d982fa1a29027329eb6a16">More...</a><br/></td></tr>
 <tr class="separator:a5bc3fe6cc2d982fa1a29027329eb6a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfc14d9152e52666f6a032b28bdd3c6"><td class="memItemLeft" align="right" valign="top">oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a0bfc14d9152e52666f6a032b28bdd3c6">sendOperationOneway</a> (in string operation, in CAnyArguments args)</td></tr>
+<tr class="memdesc:a0bfc14d9152e52666f6a032b28bdd3c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a void operation with a list of arguments as a oneway CORBA call.  <a href="#a0bfc14d9152e52666f6a032b28bdd3c6">More...</a><br/></td></tr>
+<tr class="separator:a0bfc14d9152e52666f6a032b28bdd3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a77486d91d677709de8dab1457add2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a77486d91d677709de8dab1457add2c"></a>
 CAttributeNames&#160;</td><td class="memItemRight" valign="bottom"><b>getAttributeList</b> ()</td></tr>
 <tr class="separator:a9a77486d91d677709de8dab1457add2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,15 +247,19 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 <tr class="memitem:a8df9ac81d9a3152ceb255a278522dbf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a8df9ac81d9a3152ceb255a278522dbf4">disconnectPort</a> (in string port_name)  raises (CNoSuchPortException)</td></tr>
 <tr class="memdesc:a8df9ac81d9a3152ceb255a278522dbf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects this port from all connections it is part of.  <a href="#a8df9ac81d9a3152ceb255a278522dbf4">More...</a><br/></td></tr>
 <tr class="separator:a8df9ac81d9a3152ceb255a278522dbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f7e2d1620661857056d3685b8f4d597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a4f7e2d1620661857056d3685b8f4d597">buildChannelOutput</a> (in string input_port, inout CConnPolicy policy)  raises (CNoCorbaTransport,CNoSuchPortException)</td></tr>
+<tr class="memitem:a4f7e2d1620661857056d3685b8f4d597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a4f7e2d1620661857056d3685b8f4d597">buildChannelOutput</a> (in string input_port, inout CConnPolicy policy)  raises (CNoCorbaTransport,CNoSuchPortException,CInvalidArgument)</td></tr>
 <tr class="memdesc:a4f7e2d1620661857056d3685b8f4d597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this to write to an input port with the given policy.  <a href="#a4f7e2d1620661857056d3685b8f4d597">More...</a><br/></td></tr>
 <tr class="separator:a4f7e2d1620661857056d3685b8f4d597"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb473c5bc44e2f4c411567b4b00e6f4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#aeb473c5bc44e2f4c411567b4b00e6f4f">buildChannelInput</a> (in string output_port, inout CConnPolicy policy)  raises (CNoCorbaTransport,CNoSuchPortException)</td></tr>
+<tr class="memitem:aeb473c5bc44e2f4c411567b4b00e6f4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#aeb473c5bc44e2f4c411567b4b00e6f4f">buildChannelInput</a> (in string output_port, inout CConnPolicy policy)  raises (CNoCorbaTransport,CNoSuchPortException,CInvalidArgument)</td></tr>
 <tr class="memdesc:aeb473c5bc44e2f4c411567b4b00e6f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this to read from an output port with the given policy.  <a href="#aeb473c5bc44e2f4c411567b4b00e6f4f">More...</a><br/></td></tr>
 <tr class="separator:aeb473c5bc44e2f4c411567b4b00e6f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e8bada97c10edbc3463b8588a287995"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a2e8bada97c10edbc3463b8588a287995">createConnection</a> (in string local_port, in <a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a> remote_ports, in string remote_port, inout CConnPolicy policy)  raises (CNoSuchPortException)</td></tr>
 <tr class="memdesc:a2e8bada97c10edbc3463b8588a287995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect the given named port to the given remote port.  <a href="#a2e8bada97c10edbc3463b8588a287995">More...</a><br/></td></tr>
 <tr class="separator:a2e8bada97c10edbc3463b8588a287995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa44a4d216287623f33e46c5611e470bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa44a4d216287623f33e46c5611e470bd"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#aa44a4d216287623f33e46c5611e470bd">createSharedConnection</a> (in string input_port, inout CConnPolicy policy)  raises (CNoSuchPortException,CInvalidArgument)</td></tr>
+<tr class="memdesc:aa44a4d216287623f33e46c5611e470bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this to connect a port to an existing connection that can be looked up by the given policy. <br/></td></tr>
+<tr class="separator:aa44a4d216287623f33e46c5611e470bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb1dc296a365df020d6a5c8763f59894"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb1dc296a365df020d6a5c8763f59894"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#abb1dc296a365df020d6a5c8763f59894">removeConnection</a> (in string local_port, in <a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a> remote_ports, in string remote_port)  raises (CNoSuchPortException)</td></tr>
 <tr class="memdesc:abb1dc296a365df020d6a5c8763f59894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the specified connection created with createConnection. <br/></td></tr>
@@ -259,14 +270,11 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 <tr class="memitem:a37f20178003c2b751edf5131036ff245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a37f20178003c2b751edf5131036ff245">removeStream</a> (in string local_port, in string stream_name)  raises (CNoSuchPortException)</td></tr>
 <tr class="memdesc:a37f20178003c2b751edf5131036ff245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a stream added with createStream.  <a href="#a37f20178003c2b751edf5131036ff245">More...</a><br/></td></tr>
 <tr class="separator:a37f20178003c2b751edf5131036ff245"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a4f2bc9f8539d772b931de89e508012"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a0a4f2bc9f8539d772b931de89e508012">channelReady</a> (in string input_port, in <a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a> channel, in CConnPolicy cp)  raises (CNoSuchPortException)</td></tr>
-<tr class="memdesc:a0a4f2bc9f8539d772b931de89e508012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the connection channel elements are ready for a given input port.  <a href="#a0a4f2bc9f8539d772b931de89e508012">More...</a><br/></td></tr>
-<tr class="separator:a0a4f2bc9f8539d772b931de89e508012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> which hosts operations, attributes and properties. </p>
 
-<p>Definition at line <a class="el" href="Service_8idl_source.html#l00022">22</a> of file <a class="el" href="Service_8idl_source.html">Service.idl</a>.</p>
+<p>Definition at line <a class="el" href="Service_8idl_source.html#l00043">43</a> of file <a class="el" href="Service_8idl_source.html">Service.idl</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aa0b6edaee10873e3d6c4d610c264de9d"></a>
 <div class="memitem">
@@ -333,7 +341,10 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
           <td align="right">raises </td><td>(</td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a>,</td>
         </tr>
         <tr>
-          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a></td>
+          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>,</td>
+        </tr>
+        <tr>
+          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a></td>
         </tr>
         <tr>
           <td align="right"></td><td>)</td><td></td><td></td>
@@ -379,7 +390,10 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
           <td align="right">raises </td><td>(</td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a>,</td>
         </tr>
         <tr>
-          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a></td>
+          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>,</td>
+        </tr>
+        <tr>
+          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a></td>
         </tr>
         <tr>
           <td align="right"></td><td>)</td><td></td><td></td>
@@ -394,7 +408,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 
 <p>Use this to write to an input port with the given policy. </p>
 <p>Some protocols may adjust the policy, or pass additional information into the policy, such as the name of the newly created connection.</p>
-<p>The returned channel element will not be functional until <a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a0a4f2bc9f8539d772b931de89e508012" title="Checks if the connection channel elements are ready for a given input port. ">channelReady()</a> has been called for it </p>
+<p>The returned channel element will not be functional until channelReady() has been called for it </p>
 
 </div>
 </div>
@@ -450,62 +464,6 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 
 <p>Call an operation with a list of arguments. </p>
 <p>This method will block until the operation completes and returns its result. </p>
-
-</div>
-</div>
-<a class="anchor" id="a0a4f2bc9f8539d772b931de89e508012"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">boolean RTT::corba::CDataFlowInterface::channelReady </td>
-          <td>(</td>
-          <td class="paramtype">in string&#160;</td>
-          <td class="paramname"><em>input_port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in <a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a>&#160;</td>
-          <td class="paramname"><em>channel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in CConnPolicy&#160;</td>
-          <td class="paramname"><em>cp</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-        <tr>
-          <td align="right">raises </td><td>(</td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a></td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Checks if the connection channel elements are ready for a given input port. </p>
-<p>This is typically called by the createConnection setup logic to see if the input side agrees with the connection and can use it. For example, the input port can use this opportunity to check the</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html" title="Emitted when information is requested on a port that does not exist. ">CNoSuchPortException</a></td><td>if input_port is not an input port or not present in this interface. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>false if the connection could not be used. </dd></dl>
 
 </div>
 </div>
@@ -827,6 +785,43 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 
 </div>
 </div>
+<a class="anchor" id="a0bfc14d9152e52666f6a032b28bdd3c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneway void RTT::corba::COperationInterface::sendOperationOneway </td>
+          <td>(</td>
+          <td class="paramtype">in string&#160;</td>
+          <td class="paramname"><em>operation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in CAnyArguments&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send a void operation with a list of arguments as a oneway CORBA call. </p>
+<p>This method will return immediately. </p>
+
+</div>
+</div>
 <a class="anchor" id="adc24602ba72c627a60c58376048b7bff"></a>
 <div class="memitem">
 <div class="memproto">
@@ -870,7 +865,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

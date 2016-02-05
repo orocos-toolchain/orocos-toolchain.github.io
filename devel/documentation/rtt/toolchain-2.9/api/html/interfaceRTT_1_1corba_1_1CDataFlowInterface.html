@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -110,15 +110,19 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 <tr class="memitem:a8df9ac81d9a3152ceb255a278522dbf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a8df9ac81d9a3152ceb255a278522dbf4">disconnectPort</a> (in string port_name)  raises (CNoSuchPortException)</td></tr>
 <tr class="memdesc:a8df9ac81d9a3152ceb255a278522dbf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects this port from all connections it is part of.  <a href="#a8df9ac81d9a3152ceb255a278522dbf4">More...</a><br/></td></tr>
 <tr class="separator:a8df9ac81d9a3152ceb255a278522dbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f7e2d1620661857056d3685b8f4d597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a4f7e2d1620661857056d3685b8f4d597">buildChannelOutput</a> (in string input_port, inout CConnPolicy policy)  raises (CNoCorbaTransport,CNoSuchPortException)</td></tr>
+<tr class="memitem:a4f7e2d1620661857056d3685b8f4d597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a4f7e2d1620661857056d3685b8f4d597">buildChannelOutput</a> (in string input_port, inout CConnPolicy policy)  raises (CNoCorbaTransport,CNoSuchPortException,CInvalidArgument)</td></tr>
 <tr class="memdesc:a4f7e2d1620661857056d3685b8f4d597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this to write to an input port with the given policy.  <a href="#a4f7e2d1620661857056d3685b8f4d597">More...</a><br/></td></tr>
 <tr class="separator:a4f7e2d1620661857056d3685b8f4d597"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb473c5bc44e2f4c411567b4b00e6f4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#aeb473c5bc44e2f4c411567b4b00e6f4f">buildChannelInput</a> (in string output_port, inout CConnPolicy policy)  raises (CNoCorbaTransport,CNoSuchPortException)</td></tr>
+<tr class="memitem:aeb473c5bc44e2f4c411567b4b00e6f4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#aeb473c5bc44e2f4c411567b4b00e6f4f">buildChannelInput</a> (in string output_port, inout CConnPolicy policy)  raises (CNoCorbaTransport,CNoSuchPortException,CInvalidArgument)</td></tr>
 <tr class="memdesc:aeb473c5bc44e2f4c411567b4b00e6f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this to read from an output port with the given policy.  <a href="#aeb473c5bc44e2f4c411567b4b00e6f4f">More...</a><br/></td></tr>
 <tr class="separator:aeb473c5bc44e2f4c411567b4b00e6f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e8bada97c10edbc3463b8588a287995"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a2e8bada97c10edbc3463b8588a287995">createConnection</a> (in string local_port, in <a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a> remote_ports, in string remote_port, inout CConnPolicy policy)  raises (CNoSuchPortException)</td></tr>
 <tr class="memdesc:a2e8bada97c10edbc3463b8588a287995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect the given named port to the given remote port.  <a href="#a2e8bada97c10edbc3463b8588a287995">More...</a><br/></td></tr>
 <tr class="separator:a2e8bada97c10edbc3463b8588a287995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa44a4d216287623f33e46c5611e470bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa44a4d216287623f33e46c5611e470bd"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#aa44a4d216287623f33e46c5611e470bd">createSharedConnection</a> (in string input_port, inout CConnPolicy policy)  raises (CNoSuchPortException,CInvalidArgument)</td></tr>
+<tr class="memdesc:aa44a4d216287623f33e46c5611e470bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this to connect a port to an existing connection that can be looked up by the given policy. <br/></td></tr>
+<tr class="separator:aa44a4d216287623f33e46c5611e470bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb1dc296a365df020d6a5c8763f59894"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb1dc296a365df020d6a5c8763f59894"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#abb1dc296a365df020d6a5c8763f59894">removeConnection</a> (in string local_port, in <a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a> remote_ports, in string remote_port)  raises (CNoSuchPortException)</td></tr>
 <tr class="memdesc:abb1dc296a365df020d6a5c8763f59894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the specified connection created with createConnection. <br/></td></tr>
@@ -129,15 +133,12 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 <tr class="memitem:a37f20178003c2b751edf5131036ff245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a37f20178003c2b751edf5131036ff245">removeStream</a> (in string local_port, in string stream_name)  raises (CNoSuchPortException)</td></tr>
 <tr class="memdesc:a37f20178003c2b751edf5131036ff245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a stream added with createStream.  <a href="#a37f20178003c2b751edf5131036ff245">More...</a><br/></td></tr>
 <tr class="separator:a37f20178003c2b751edf5131036ff245"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a4f2bc9f8539d772b931de89e508012"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a0a4f2bc9f8539d772b931de89e508012">channelReady</a> (in string input_port, in <a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a> channel, in CConnPolicy cp)  raises (CNoSuchPortException)</td></tr>
-<tr class="memdesc:a0a4f2bc9f8539d772b931de89e508012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the connection channel elements are ready for a given input port.  <a href="#a0a4f2bc9f8539d772b931de89e508012">More...</a><br/></td></tr>
-<tr class="separator:a0a4f2bc9f8539d772b931de89e508012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An interface to access the dataflow of a CControlTask object. </p>
 <p>Data ports are exported as assignable expressions (Set/Get). Buffer ports are exported as buffer channels. </p>
 
-<p>Definition at line <a class="el" href="DataFlow_8idl_source.html#l00119">119</a> of file <a class="el" href="DataFlow_8idl_source.html">DataFlow.idl</a>.</p>
+<p>Definition at line <a class="el" href="DataFlow_8idl_source.html#l00143">143</a> of file <a class="el" href="DataFlow_8idl_source.html">DataFlow.idl</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aeb473c5bc44e2f4c411567b4b00e6f4f"></a>
 <div class="memitem">
@@ -164,7 +165,10 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
           <td align="right">raises </td><td>(</td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a>,</td>
         </tr>
         <tr>
-          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a></td>
+          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>,</td>
+        </tr>
+        <tr>
+          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a></td>
         </tr>
         <tr>
           <td align="right"></td><td>)</td><td></td><td></td>
@@ -202,7 +206,10 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
           <td align="right">raises </td><td>(</td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a>,</td>
         </tr>
         <tr>
-          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a></td>
+          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>,</td>
+        </tr>
+        <tr>
+          <td align="right"></td><td></td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a></td>
         </tr>
         <tr>
           <td align="right"></td><td>)</td><td></td><td></td>
@@ -212,55 +219,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 
 <p>Use this to write to an input port with the given policy. </p>
 <p>Some protocols may adjust the policy, or pass additional information into the policy, such as the name of the newly created connection.</p>
-<p>The returned channel element will not be functional until <a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#a0a4f2bc9f8539d772b931de89e508012" title="Checks if the connection channel elements are ready for a given input port. ">channelReady()</a> has been called for it </p>
-
-</div>
-</div>
-<a class="anchor" id="a0a4f2bc9f8539d772b931de89e508012"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">boolean RTT::corba::CDataFlowInterface::channelReady </td>
-          <td>(</td>
-          <td class="paramtype">in string&#160;</td>
-          <td class="paramname"><em>input_port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in <a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a>&#160;</td>
-          <td class="paramname"><em>channel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in CConnPolicy&#160;</td>
-          <td class="paramname"><em>cp</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-        <tr>
-          <td align="right">raises </td><td>(</td><td colspan="2"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a></td>
-        </tr>
-        <tr>
-          <td align="right"></td><td>)</td><td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Checks if the connection channel elements are ready for a given input port. </p>
-<p>This is typically called by the createConnection setup logic to see if the input side agrees with the connection and can use it. For example, the input port can use this opportunity to check the</p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html" title="Emitted when information is requested on a port that does not exist. ">CNoSuchPortException</a></td><td>if input_port is not an input port or not present in this interface. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>false if the connection could not be used. </dd></dl>
+<p>The returned channel element will not be functional until channelReady() has been called for it </p>
 
 </div>
 </div>
@@ -422,7 +381,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -115,6 +115,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">exception &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted during connections, when there is no CORBA transport defined for the data type of the given ports.  <a href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">exception &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted during connections, when it is not possible to build new connections with the given arguments.  <a href="exceptionRTT_1_1corba_1_1CInvalidArgument.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface to access the dataflow of a CControlTask object.  <a href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,11 +181,20 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html">AnyConversion&lt; ConnPolicy &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This specialisation uses the toRTT() and toCORBA functions for converting between <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">RTT::ConnPolicy</a> and RTT::corba::CConPolicy.  <a href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1CServiceDescription.html">CServiceDescription</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete description of a <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a>.  <a href="structRTT_1_1corba_1_1CServiceDescription.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CService.html">CService</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> which hosts operations, attributes and properties.  <a href="interfaceRTT_1_1corba_1_1CService.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1CServiceRequesterDescription.html">CServiceRequesterDescription</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete description of a <a class="el" href="classRTT_1_1ServiceRequester.html" title="An object that expresses you wish to use a service. ">ServiceRequester</a>.  <a href="structRTT_1_1corba_1_1CServiceRequesterDescription.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CServiceRequester.html">CServiceRequester</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> Required <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a>.  <a href="interfaceRTT_1_1corba_1_1CServiceRequester.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1CTaskContextDescription.html">CTaskContextDescription</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete description of a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> including the IORs of all objects within.  <a href="structRTT_1_1corba_1_1CTaskContextDescription.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html" title="A CTaskContext is the main entry point of a distributed component and maps to a RTT::TaskContext. ">CTaskContext</a> is the main entry point of a distributed component and maps to a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">RTT::TaskContext</a>.  <a href="interfaceRTT_1_1corba_1_1CTaskContext.html#details">More...</a><br/></td></tr>
@@ -211,22 +223,33 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aaf532bf842d24fb61efd86561be9f74f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf532bf842d24fb61efd86561be9f74f"></a>
 typedef sequence&lt; any &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CAnyArguments</b></td></tr>
 <tr class="separator:aaf532bf842d24fb61efd86561be9f74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedd8f893d8925424ad083e4e7af4a428"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedd8f893d8925424ad083e4e7af4a428"></a>
+<tr class="memitem:adf9b6f94bbf70c5f202a7275b426effa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf9b6f94bbf70c5f202a7275b426effa"></a>
 typedef sequence<br class="typebreak"/>
-&lt; <a class="el" href="structRTT_1_1corba_1_1CArgumentDescription.html">CArgumentDescription</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CDescriptions</b></td></tr>
-<tr class="separator:aedd8f893d8925424ad083e4e7af4a428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&lt; <a class="el" href="structRTT_1_1corba_1_1CArgumentDescription.html">CArgumentDescription</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CArgumentDescriptions</b></td></tr>
+<tr class="separator:adf9b6f94bbf70c5f202a7275b426effa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bfb1386190a87d5ce58250a29bf8635"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bfb1386190a87d5ce58250a29bf8635"></a>
+typedef sequence&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CTypeList</b></td></tr>
+<tr class="separator:a2bfb1386190a87d5ce58250a29bf8635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affc3fd7eb329e3309ae457e0198cdd80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affc3fd7eb329e3309ae457e0198cdd80"></a>
 typedef sequence&lt; any &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CAnySequence</b></td></tr>
 <tr class="separator:affc3fd7eb329e3309ae457e0198cdd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47a5849ef0637b984742119482758641"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47a5849ef0637b984742119482758641"></a>
 typedef sequence&lt; Pair &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PairSeq</b></td></tr>
 <tr class="separator:a47a5849ef0637b984742119482758641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5b9fb203b4b9c11e437c006ee1a98d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca5b9fb203b4b9c11e437c006ee1a98d"></a>
+typedef sequence<br class="typebreak"/>
+&lt; <a class="el" href="structRTT_1_1corba_1_1CServiceDescription.html">CServiceDescription</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CServiceDescriptions</b></td></tr>
+<tr class="separator:aca5b9fb203b4b9c11e437c006ee1a98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cfb81e7c6649968dfda3303881eecb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cfb81e7c6649968dfda3303881eecb3"></a>
 typedef sequence&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CRequestNames</b></td></tr>
 <tr class="separator:a1cfb81e7c6649968dfda3303881eecb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a329e82438df9e84e11c308d47edda46f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a329e82438df9e84e11c308d47edda46f"></a>
 typedef sequence&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>COperationCallerNames</b></td></tr>
 <tr class="separator:a329e82438df9e84e11c308d47edda46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89d8302291d5e34dc8dd97262510984"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab89d8302291d5e34dc8dd97262510984"></a>
+typedef sequence<br class="typebreak"/>
+&lt; <a class="el" href="structRTT_1_1corba_1_1CServiceRequesterDescription.html">CServiceRequesterDescription</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CServiceRequesterDescriptions</b></td></tr>
+<tr class="separator:ab89d8302291d5e34dc8dd97262510984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -235,8 +258,14 @@ Enumerations</h2></td></tr>
 <b>CNewData</b>
  }</td></tr>
 <tr class="separator:a56408c4be7abecf22e91d9c13a1daf5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f439ad39165c30e9b66f703a37ce4a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>CWriteStatus</b> { <b>CWriteSuccess</b>, 
+<b>CWriteFailure</b>, 
+<b>CNotConnected</b>
+ }</td></tr>
+<tr class="separator:ad3f439ad39165c30e9b66f703a37ce4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c1ff1e3884244e19c0adedacc26f0dc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>CConnectionModel</b> { <b>CData</b>, 
-<b>CBuffer</b>
+<b>CBuffer</b>, 
+<b>CCircularBuffer</b>
  }</td></tr>
 <tr class="separator:a1c1ff1e3884244e19c0adedacc26f0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb55949632f9ebec960b3400f98a0369"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>CLockPolicy</b> { <b>CUnsync</b>, 
@@ -244,6 +273,16 @@ Enumerations</h2></td></tr>
 <b>CLockFree</b>
  }</td></tr>
 <tr class="separator:aeb55949632f9ebec960b3400f98a0369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1686bd2ddb0ce864807b0ccdd22ff314"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>CBufferPolicy</b> { <br/>
+&#160;&#160;<b>CBufferPolicyUnspecified</b>, 
+<b>CPerConnection</b>, 
+<b>CPerInputPort</b>, 
+<b>CPerOutputPort</b>, 
+<br/>
+&#160;&#160;<b>CShared</b>
+<br/>
+ }</td></tr>
+<tr class="separator:a1686bd2ddb0ce864807b0ccdd22ff314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9760f7f8cecae150c8cd2354da70652"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>CPortType</b> { <b>CInput</b>, 
 <b>COutput</b>
  }</td></tr>
@@ -273,7 +312,7 @@ Enumerations</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

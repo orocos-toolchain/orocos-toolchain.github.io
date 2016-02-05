@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -104,9 +104,10 @@
 </li>
 <li>active
 : <a class="el" href="classRTT_1_1extras_1_1PeriodicActivity.html#aee89c4e6ae7f8aaeaba90698a7affc03">RTT::extras::PeriodicActivity</a>
+, <a class="el" href="classRTT_1_1os_1_1Thread.html#adae4e5b4743923f0797b26e939ffe5b7">RTT::os::Thread</a>
 </li>
 <li>Activity()
-: <a class="el" href="classRTT_1_1Activity.html#ab9d434b7df9bbb710edb27769f26e783">RTT::Activity</a>
+: <a class="el" href="classRTT_1_1Activity.html#a801fbe0120b426011cb21862e6f7295a">RTT::Activity</a>
 </li>
 <li>add()
 : <a class="el" href="classRTT_1_1OperationInterface.html#a7530f8d747ccb09e5d4c68d1177bd060">RTT::OperationInterface</a>
@@ -123,9 +124,6 @@
 : <a class="el" href="classRTT_1_1ConfigurationInterface.html#ad43de01de0fa000849289e9e60f50b36">RTT::ConfigurationInterface</a>
 , <a class="el" href="classRTT_1_1TaskContext.html#a228ea19b9974d1ff329a2b4fe6ea3ae8">RTT::TaskContext</a>
 </li>
-<li>addChild()
-: <a class="el" href="classRTT_1_1ExecutionEngine.html#a45f75f30232e7a789a62e9391ac34889">RTT::ExecutionEngine</a>
-</li>
 <li>addCommand()
 : <a class="el" href="classRTT_1_1scripting_1_1FunctionGraphBuilder.html#a86aa1c643fb8b2d099ecd0eeb2b45206">RTT::scripting::FunctionGraphBuilder</a>
 </li>
@@ -133,11 +131,11 @@
 : <a class="el" href="classRTT_1_1scripting_1_1FunctionGraphBuilder.html#ac8e8dbff663c7eb7b05a4f690b334aa1">RTT::scripting::FunctionGraphBuilder</a>
 </li>
 <li>addConnection()
-: <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#ad259037c6eed8983e67ca07015dd0658">RTT::base::InputPortInterface</a>
+: <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#af20f60ec3122fa54fd1b823c76b5627a">RTT::base::InputPortInterface</a>
 , <a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html#aaba7cd2c1376d1d3cc1d7ad59e509dd1">RTT::base::OutputPortInterface</a>
-, <a class="el" href="classRTT_1_1base_1_1PortInterface.html#a1162e96f9cc27d5bcc37c2536e2a3907">RTT::base::PortInterface</a>
-, <a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#aad23d8e5f563f3b4d23d960f67d1f060">RTT::corba::RemoteInputPort</a>
-, <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a6378c49ba349a067d4af3d75687f8f05">RTT::internal::ConnectionManager</a>
+, <a class="el" href="classRTT_1_1base_1_1PortInterface.html#afd0a2f0f27d5575c27b9515c88af0c85">RTT::base::PortInterface</a>
+, <a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#ae28b009417586ab394aa31d3b7a8e9f6">RTT::corba::RemoteInputPort</a>
+, <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#af289a05edbb954e96200cb3a526a6107">RTT::internal::ConnectionManager</a>
 </li>
 <li>addConstant()
 : <a class="el" href="classRTT_1_1ConfigurationInterface.html#a670818300e4efb32da6532fa815d1baa">RTT::ConfigurationInterface</a>
@@ -149,6 +147,10 @@
 <li>addEventPort()
 : <a class="el" href="classRTT_1_1DataFlowInterface.html#a089897b16e398886de8a3b0fb86b1045">RTT::DataFlowInterface</a>
 , <a class="el" href="classRTT_1_1TaskContext.html#af5d3991d677caee96a58bee04304afe6">RTT::TaskContext</a>
+</li>
+<li>addInput()
+: <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a194d84e56b2a7876ec319b01daa81ddf">RTT::base::ChannelElementBase</a>
+, <a class="el" href="classRTT_1_1base_1_1MultipleInputsChannelElementBase.html#a7d3feee807fa6c2639ac375be5f7ad6b">RTT::base::MultipleInputsChannelElementBase</a>
 </li>
 <li>addLocalEventPort()
 : <a class="el" href="classRTT_1_1DataFlowInterface.html#ae90b18e5b4d26af2062cff0feaf9cb57">RTT::DataFlowInterface</a>
@@ -169,6 +171,10 @@
 <li>addOperationDS()
 : <a class="el" href="classRTT_1_1Service.html#a16c55fbf8e8b5fbc74ff3fe5aaddf4bb">RTT::Service</a>
 </li>
+<li>addOutput()
+: <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a24f85762914ae94498ce2ad7397d3f32">RTT::base::ChannelElementBase</a>
+, <a class="el" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html#a7d8b962f5a5fe1fa58d68ce5189e9e8d">RTT::base::MultipleOutputsChannelElementBase</a>
+</li>
 <li>addPeer()
 : <a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html#a5ebe42cbef8d95cccbac32b45e1208cc">RTT::corba::CTaskContext</a>
 , <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a10ffef8be36a2ba8a74222f277b990bd">RTT::corba::TaskContextProxy</a>
@@ -179,7 +185,7 @@
 , <a class="el" href="classRTT_1_1TaskContext.html#a729bd1810e58ac3057a41e10951fbba3">RTT::TaskContext</a>
 </li>
 <li>addProperty()
-: <a class="el" href="classRTT_1_1ConfigurationInterface.html#aef82495c4e0b04ad555914c7216f76c1">RTT::ConfigurationInterface</a>
+: <a class="el" href="classRTT_1_1ConfigurationInterface.html#a1f56e23ad7dbb378acc61367c281adf0">RTT::ConfigurationInterface</a>
 , <a class="el" href="classRTT_1_1PropertyBag.html#a30809906cc055e715db698a6efbd3155">RTT::PropertyBag</a>
 , <a class="el" href="classRTT_1_1TaskContext.html#af87c90fd9f75a3fe2e19408b1fc8df2b">RTT::TaskContext</a>
 </li>
@@ -214,7 +220,7 @@
 : <a class="el" href="classRTT_1_1Logger.html#af34355989b7f7616d74b0abe467c2356">RTT::Logger</a>
 </li>
 <li>AnalogInInterface()
-: <a class="el" href="classRTT_1_1dev_1_1AnalogInInterface.html#a643e68c258ad050b0f91c2a33bc272e6">RTT::dev::AnalogInInterface</a>
+: <a class="el" href="classRTT_1_1dev_1_1AnalogInInterface.html#a2ce88331de390a5a368061bbfca56e1c">RTT::dev::AnalogInInterface</a>
 </li>
 <li>AnalogInput()
 : <a class="el" href="classRTT_1_1dev_1_1AnalogInput.html#ad415dabdb6a62a5b7a18b76744e7d958">RTT::dev::AnalogInput</a>
@@ -255,7 +261,7 @@
 , <a class="el" href="classRTT_1_1dev_1_1AnalogOutInterface.html#ac386ff25bbeeb0f3a99fc7ea23182ad8">RTT::dev::AnalogOutInterface</a>
 </li>
 <li>arg()
-: <a class="el" href="classRTT_1_1internal_1_1OperationCallerC.html#aad495f2fd08fad6a420403d61077a87b">RTT::internal::OperationCallerC</a>
+: <a class="el" href="classRTT_1_1internal_1_1OperationCallerC.html#ab77f55f0bb9ce910ac9c885a54a53051">RTT::internal::OperationCallerC</a>
 , <a class="el" href="classRTT_1_1internal_1_1SendHandleC.html#a29047fe6b5f4c86055fbbfcd0f920454">RTT::internal::SendHandleC</a>
 , <a class="el" href="classRTT_1_1Operation.html#a316ba759adbe50711568a64f8b1f0eae">RTT::Operation&lt; T &gt;</a>
 </li>
@@ -284,7 +290,7 @@
 : <a class="el" href="classRTT_1_1os_1_1Timer.html#a4ae9fe0cce076bfbf7c6ae4345d9327b">RTT::os::Timer</a>
 </li>
 <li>ArrayDataSource()
-: <a class="el" href="classRTT_1_1internal_1_1ArrayDataSource.html#a9fd06bc49a6e7a19e3a55a481e81d7fa">RTT::internal::ArrayDataSource&lt; T &gt;</a>
+: <a class="el" href="classRTT_1_1internal_1_1ArrayDataSource.html#a64071327194dc92258cc59e92dbcb4e6">RTT::internal::ArrayDataSource&lt; T &gt;</a>
 </li>
 <li>ArrayPartDataSource()
 : <a class="el" href="classRTT_1_1internal_1_1ArrayPartDataSource.html#a05a54bb7aecb008a80db4c4bf70f9f2f">RTT::internal::ArrayPartDataSource&lt; T &gt;</a>
@@ -295,15 +301,15 @@
 <li>assignCommand()
 : <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a68f173c84f66d02c71eed3b31dceb1ae">RTT::scripting::ValueChangeParser</a>
 </li>
+<li>AtomicMWMRQueue()
+: <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a62cb04eb651f9b92ed3cd8aa5dd36df3">RTT::internal::AtomicMWMRQueue&lt; T &gt;</a>
+</li>
 <li>AtomicMWSRQueue()
 : <a class="el" href="classRTT_1_1internal_1_1AtomicMWSRQueue.html#a96866c4e69e3185e72721f213f16ecbe">RTT::internal::AtomicMWSRQueue&lt; T &gt;</a>
 </li>
-<li>AtomicQueue()
-: <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#aa79cbdb6ab966df9915af172890e6a78">RTT::internal::AtomicQueue&lt; T &gt;</a>
-</li>
 <li>Attribute()
 : <a class="el" href="classRTT_1_1Attribute.html#a523dcdf4e96a242248aea753c008c2e5">RTT::Attribute&lt; T &gt;</a>
-, <a class="el" href="classRTT_1_1marsh_1_1TiXmlElement.html#ad05453cf20275f6780631ee9a95c2e88">RTT::marsh::TiXmlElement</a>
+, <a class="el" href="classRTT_1_1marsh_1_1TiXmlElement.html#adcc956356c57c100a27fb4c95889b583">RTT::marsh::TiXmlElement</a>
 </li>
 <li>AttributeBase()
 : <a class="el" href="classRTT_1_1base_1_1AttributeBase.html#a0fc0b3d03f3d2d97de6c8efd4bfe44dd">RTT::base::AttributeBase</a>
@@ -330,7 +336,7 @@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

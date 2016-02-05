@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -96,6 +96,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>unlock</b> ()
 <tr class="memitem:a36a384b9712981cef800cdbbe8614838"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MutexRecursive.html#a36a384b9712981cef800cdbbe8614838">timedlock</a> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> s)</td></tr>
 <tr class="memdesc:a36a384b9712981cef800cdbbe8614838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock this mutex, but don't wait longer for the lock than the specified timeout.  <a href="#a36a384b9712981cef800cdbbe8614838">More...</a><br/></td></tr>
 <tr class="separator:a36a384b9712981cef800cdbbe8614838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af686b384db3180727a60e93d4fbd13f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af686b384db3180727a60e93d4fbd13f0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>lock_shared</b> ()</td></tr>
+<tr class="separator:af686b384db3180727a60e93d4fbd13f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d2aa6f2f45f25470adaa4da0ba925c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2d2aa6f2f45f25470adaa4da0ba925c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>unlock_shared</b> ()</td></tr>
+<tr class="separator:af2d2aa6f2f45f25470adaa4da0ba925c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5936ef391f1f1d88403aec630b9320"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea5936ef391f1f1d88403aec630b9320"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>trylock_shared</b> ()</td></tr>
+<tr class="separator:aea5936ef391f1f1d88403aec630b9320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7eb9e083408b56d4963e1ebd88ae931"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7eb9e083408b56d4963e1ebd88ae931"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>timedlock_shared</b> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> s)</td></tr>
+<tr class="separator:ab7eb9e083408b56d4963e1ebd88ae931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -108,7 +120,7 @@ rt_rec_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>recm</b></t
 <p>A mutex can only be unlock()'ed, by the thread which lock()'ed it. A trylock is a non blocking lock action which fails or succeeds.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1os_1_1MutexLock.html" title="MutexLock is a scope based Monitor, protecting critical sections with a Mutex object through locking ...">MutexLock</a>, <a class="el" href="classRTT_1_1os_1_1MutexTryLock.html" title="A MutexTryLock tries to lock an Mutex object on construction and if successful, unlocks it on destruc...">MutexTryLock</a>, <a class="el" href="classRTT_1_1os_1_1Mutex.html" title="An object oriented wrapper around a non recursive mutex. ">Mutex</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00208">208</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00213">213</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aca1169b344c686e429b2ca748d0f8410"></a>
 <div class="memitem">
@@ -134,7 +146,7 @@ rt_rec_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>recm</b></t
 <p>Destroy a <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html" title="An object oriented wrapper around a recursive mutex. ">MutexRecursive</a>. </p>
 <p>If the <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html" title="An object oriented wrapper around a recursive mutex. ">MutexRecursive</a> is still locked, the RTOS will not be asked to clean up its resources. </p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00227">227</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00232">232</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 </div>
 </div>
@@ -172,7 +184,7 @@ rt_rec_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>recm</b></t
 
 <p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html">RTT::os::MutexInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00264">264</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00269">269</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 <p>References <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>.</p>
 
@@ -204,7 +216,7 @@ rt_rec_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>recm</b></t
 
 <p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html">RTT::os::MutexInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00250">250</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00255">255</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 </div>
 </div>
@@ -214,7 +226,7 @@ rt_rec_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>recm</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

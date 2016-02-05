@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -68,77 +68,90 @@
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="group__CompIDL.html#ga099e6ccd5476aa8ec1020e27b5e39558">   26</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="group__CompIDL.html#ga099e6ccd5476aa8ec1020e27b5e39558">CTaskState</a> { CInit, CPreOperational, CFatalError, CException, CStopped, CRunning, CRunTimeError };</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="interfaceRTT_1_1corba_1_1CTaskContext.html">   33</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">typedef</span> sequence&lt;string&gt; CPeerNames;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">string</span> getName();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">string</span> getDescription();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="group__CompIDL.html#ga099e6ccd5476aa8ec1020e27b5e39558">CTaskState</a> getTaskState();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">boolean</span> configure();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">boolean</span> start();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">boolean</span> activate();</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structRTT_1_1corba_1_1CTaskContextDescription.html">   32</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structRTT_1_1corba_1_1CTaskContextDescription.html">CTaskContextDescription</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CServiceRequester.html">CServiceRequester</a> mainrequester;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="structRTT_1_1corba_1_1CServiceRequesterDescription.html">CServiceRequesterDescription</a> mainrequester_description;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CService.html">CService</a> mainprovider;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="structRTT_1_1corba_1_1CServiceDescription.html">CServiceDescription</a> mainprovider_description;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="interfaceRTT_1_1corba_1_1CTaskContext.html">   45</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">typedef</span> sequence&lt;string&gt; CPeerNames;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">string</span> getName();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">string</span> getDescription();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="structRTT_1_1corba_1_1CTaskContextDescription.html">CTaskContextDescription</a> getCTaskContextDescription();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="group__CompIDL.html#ga099e6ccd5476aa8ec1020e27b5e39558">CTaskState</a> getTaskState();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">boolean</span> stop();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">boolean</span> configure();</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">boolean</span> resetException();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">boolean</span> cleanup();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">boolean</span> isActive();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">boolean</span> isRunning();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">boolean</span> start();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">boolean</span> activate();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">boolean</span> stop();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">boolean</span> resetException();</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">boolean</span> isConfigured();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">boolean</span> cleanup();</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">boolean</span> inFatalError();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">boolean</span> isActive();</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">boolean</span> inRunTimeError();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">boolean</span> isRunning();</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a> ports();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CService.html">CService</a> getProvider( in <span class="keywordtype">string</span> service_name );</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CServiceRequester.html">CServiceRequester</a> getRequester( in <span class="keywordtype">string</span> service_name );</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        CPeerNames getPeerList( );</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a> getPeer( in <span class="keywordtype">string</span> name );</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">boolean</span> hasPeer( in <span class="keywordtype">string</span> name );</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordtype">boolean</span> addPeer( in <a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a> p, in <span class="keywordtype">string</span> peer_alias );</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordtype">boolean</span> isConfigured();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordtype">boolean</span> inFatalError();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordtype">boolean</span> inRunTimeError();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a> ports();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CService.html">CService</a> getProvider( in <span class="keywordtype">string</span> service_name );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CServiceRequester.html">CServiceRequester</a> getRequester( in <span class="keywordtype">string</span> service_name );</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        CPeerNames getPeerList( );</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordtype">boolean</span> removePeer( in <span class="keywordtype">string</span> name );</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a> getPeer( in <span class="keywordtype">string</span> name );</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="namespaceRTT.html#a2b9026aff119e194cb035c54e181acbe">connectPeers</a>( in <a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a> p );</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordtype">boolean</span> disconnectPeers( in <span class="keywordtype">string</span> name );</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="namespaceRTT.html#a71d16d6e8f24865ef70e5be703a6306b">connectPorts</a>( in <a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a> p );</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordtype">boolean</span> connectServices( in <a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a> p );</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    };</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    };</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;};</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="interfaceRTT_1_1corba_1_1CDataFlowInterface_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">RTT::corba::CDataFlowInterface</a></div><div class="ttdoc">An interface to access the dataflow of a CControlTask object. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00119">DataFlow.idl:119</a></div></div>
-<div class="ttc" id="interfaceRTT_1_1corba_1_1CServiceRequester_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CServiceRequester.html">RTT::corba::CServiceRequester</a></div><div class="ttdoc">An Orocos Required Service. </div><div class="ttdef"><b>Definition:</b> <a href="ServiceRequester_8idl_source.html#l00023">ServiceRequester.idl:23</a></div></div>
-<div class="ttc" id="interfaceRTT_1_1corba_1_1CService_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CService.html">RTT::corba::CService</a></div><div class="ttdoc">An Orocos Service which hosts operations, attributes and properties. </div><div class="ttdef"><b>Definition:</b> <a href="Service_8idl_source.html#l00022">Service.idl:22</a></div></div>
-<div class="ttc" id="namespaceRTT_html_a71d16d6e8f24865ef70e5be703a6306b"><div class="ttname"><a href="namespaceRTT.html#a71d16d6e8f24865ef70e5be703a6306b">RTT::connectPorts</a></div><div class="ttdeci">bool connectPorts(TaskContext *A, TaskContext *B)</div><div class="ttdoc">Connect the Data Flow Ports of A and B in both directions, by matching port names. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8cpp_source.html#l00395">TaskContext.cpp:395</a></div></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordtype">boolean</span> hasPeer( in <span class="keywordtype">string</span> name );</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordtype">boolean</span> addPeer( in <a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a> p, in <span class="keywordtype">string</span> peer_alias );</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordtype">boolean</span> removePeer( in <span class="keywordtype">string</span> name );</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="namespaceRTT.html#a2b9026aff119e194cb035c54e181acbe">connectPeers</a>( in <a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a> p );</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordtype">boolean</span> disconnectPeers( in <span class="keywordtype">string</span> name );</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordtype">boolean</span> <a class="code" href="namespaceRTT.html#a71d16d6e8f24865ef70e5be703a6306b">connectPorts</a>( in <a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a> p );</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordtype">boolean</span> connectServices( in <a class="code" href="interfaceRTT_1_1corba_1_1CTaskContext.html">CTaskContext</a> p );</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    };</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    };</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;};</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structRTT_1_1corba_1_1CServiceDescription_html"><div class="ttname"><a href="structRTT_1_1corba_1_1CServiceDescription.html">RTT::corba::CServiceDescription</a></div><div class="ttdoc">Complete description of a Service. </div><div class="ttdef"><b>Definition:</b> <a href="Service_8idl_source.html#l00026">Service.idl:26</a></div></div>
+<div class="ttc" id="interfaceRTT_1_1corba_1_1CDataFlowInterface_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">RTT::corba::CDataFlowInterface</a></div><div class="ttdoc">An interface to access the dataflow of a CControlTask object. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00143">DataFlow.idl:143</a></div></div>
+<div class="ttc" id="interfaceRTT_1_1corba_1_1CServiceRequester_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CServiceRequester.html">RTT::corba::CServiceRequester</a></div><div class="ttdoc">An Orocos Required Service. </div><div class="ttdef"><b>Definition:</b> <a href="ServiceRequester_8idl_source.html#l00040">ServiceRequester.idl:40</a></div></div>
+<div class="ttc" id="interfaceRTT_1_1corba_1_1CService_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CService.html">RTT::corba::CService</a></div><div class="ttdoc">An Orocos Service which hosts operations, attributes and properties. </div><div class="ttdef"><b>Definition:</b> <a href="Service_8idl_source.html#l00043">Service.idl:43</a></div></div>
+<div class="ttc" id="structRTT_1_1corba_1_1CTaskContextDescription_html"><div class="ttname"><a href="structRTT_1_1corba_1_1CTaskContextDescription.html">RTT::corba::CTaskContextDescription</a></div><div class="ttdoc">Complete description of a TaskContext including the IORs of all objects within. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8idl_source.html#l00032">TaskContext.idl:32</a></div></div>
+<div class="ttc" id="structRTT_1_1corba_1_1CServiceRequesterDescription_html"><div class="ttname"><a href="structRTT_1_1corba_1_1CServiceRequesterDescription.html">RTT::corba::CServiceRequesterDescription</a></div><div class="ttdoc">Complete description of a ServiceRequester. </div><div class="ttdef"><b>Definition:</b> <a href="ServiceRequester_8idl_source.html#l00026">ServiceRequester.idl:26</a></div></div>
+<div class="ttc" id="namespaceRTT_html_a71d16d6e8f24865ef70e5be703a6306b"><div class="ttname"><a href="namespaceRTT.html#a71d16d6e8f24865ef70e5be703a6306b">RTT::connectPorts</a></div><div class="ttdeci">bool connectPorts(TaskContext *A, TaskContext *B)</div><div class="ttdoc">Connect the Data Flow Ports of A and B in both directions, by matching port names. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8cpp_source.html#l00389">TaskContext.cpp:389</a></div></div>
 <div class="ttc" id="group__CompIDL_html_ga099e6ccd5476aa8ec1020e27b5e39558"><div class="ttname"><a href="group__CompIDL.html#ga099e6ccd5476aa8ec1020e27b5e39558">RTT::corba::CTaskState</a></div><div class="ttdeci">CTaskState</div><div class="ttdoc">Maps 1-to-1 to RTT::base::TaskCore::TaskState. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8idl_source.html#l00026">TaskContext.idl:26</a></div></div>
-<div class="ttc" id="namespaceRTT_html_a2b9026aff119e194cb035c54e181acbe"><div class="ttname"><a href="namespaceRTT.html#a2b9026aff119e194cb035c54e181acbe">RTT::connectPeers</a></div><div class="ttdeci">bool connectPeers(TaskContext *A, TaskContext *B)</div><div class="ttdoc">Set up the Execution Flow (who knows who) between A and B in both directions. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8cpp_source.html#l00399">TaskContext.cpp:399</a></div></div>
-<div class="ttc" id="interfaceRTT_1_1corba_1_1CTaskContext_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CTaskContext.html">RTT::corba::CTaskContext</a></div><div class="ttdoc">A CTaskContext is the main entry point of a distributed component and maps to a RTT::TaskContext. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8idl_source.html#l00033">TaskContext.idl:33</a></div></div>
+<div class="ttc" id="namespaceRTT_html_a2b9026aff119e194cb035c54e181acbe"><div class="ttname"><a href="namespaceRTT.html#a2b9026aff119e194cb035c54e181acbe">RTT::connectPeers</a></div><div class="ttdeci">bool connectPeers(TaskContext *A, TaskContext *B)</div><div class="ttdoc">Set up the Execution Flow (who knows who) between A and B in both directions. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8cpp_source.html#l00393">TaskContext.cpp:393</a></div></div>
+<div class="ttc" id="interfaceRTT_1_1corba_1_1CTaskContext_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CTaskContext.html">RTT::corba::CTaskContext</a></div><div class="ttdoc">A CTaskContext is the main entry point of a distributed component and maps to a RTT::TaskContext. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8idl_source.html#l00045">TaskContext.idl:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

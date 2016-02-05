@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -100,76 +100,227 @@
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;boost/intrusive_ptr.hpp&gt;</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;boost/call_traits.hpp&gt;</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;rtt/os/Mutex.hpp&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;../rtt-fwd.hpp&quot;</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &quot;rtt-base-fwd.hpp&quot;</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &quot;../internal/rtt-internal-fwd.hpp&quot;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">namespace </span>RTT { <span class="keyword">namespace </span>base {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;../BufferPolicy.hpp&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;../os/Mutex.hpp&quot;</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classRTT_1_1base_1_1ChannelElementBase.html">   60</a></span>&#160;    <span class="keyword">class </span>RTT_API <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">typedef</span> boost::intrusive_ptr&lt;ChannelElementBase&gt; shared_ptr;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="structoro__atomic__t.html">oro_atomic_t</a> refcount;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">void</span> RTT_API intrusive_ptr_add_ref( <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>* e );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">void</span> RTT_API intrusive_ptr_release( <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>* e );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">namespace </span>RTT { <span class="keyword">namespace </span>base {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classRTT_1_1base_1_1ChannelElementBase.html">   65</a></span>&#160;    <span class="keyword">class </span>RTT_API <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">typedef</span> boost::intrusive_ptr&lt;ChannelElementBase&gt; shared_ptr;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        shared_ptr input;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        shared_ptr output;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="classRTT_1_1os_1_1Mutex.html">RTT::os::Mutex</a> inout_lock;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="structoro__atomic__t.html">oro_atomic_t</a> refcount;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">void</span> RTT_API intrusive_ptr_add_ref( <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>* e );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">void</span> RTT_API intrusive_ptr_release( <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>* e );</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> ref();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> deref();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        shared_ptr input;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        shared_ptr output;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> buffer_policy;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">mutable</span> <a class="code" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a> input_lock;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">mutable</span> <a class="code" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a> output_lock;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">mutable</span> <a class="code" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a> buffer_policy_lock;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> ref();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">void</span> deref();</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">void</span> removeInput();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        ChannelElementBase::shared_ptr getInput();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        ChannelElementBase::shared_ptr getInputEndPoint();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        ChannelElementBase::shared_ptr getOutput();</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        ChannelElementBase::shared_ptr getOutputEndPoint();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">void</span> setOutput(shared_ptr output);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> signal();</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> inputReady();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classRTT_1_1base_1_1ChannelElementBase.html#a15fc2c411c0de48b58c30f858d44e318">  103</a></span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">static</span> <a class="code" href="classRTT_1_1base_1_1ChannelElement.html">ChannelElement&lt;T&gt;</a> *<a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html#a15fc2c411c0de48b58c30f858d44e318">narrow</a>(<a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a> *e)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classRTT_1_1base_1_1ChannelElement.html">ChannelElement&lt;T&gt;</a> *<span class="keyword">&gt;</span>(e);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classRTT_1_1base_1_1ChannelElementBase.html#a3e42c919f744c8e6a4ed952ad1e1c340">  111</a></span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <a class="code" href="classRTT_1_1base_1_1ChannelElement.html">ChannelElement&lt;T&gt;</a> *<a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html#a3e42c919f744c8e6a4ed952ad1e1c340">narrow</a>()</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classRTT_1_1base_1_1ChannelElement.html">ChannelElement&lt;T&gt;</a> *<span class="keyword">&gt;</span>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        shared_ptr getInput();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">virtual</span> shared_ptr getInputEndPoint();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        shared_ptr getOutput();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keyword">virtual</span> shared_ptr getOutputEndPoint();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> connectTo(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; output, <span class="keywordtype">bool</span> mandatory = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> connectFrom(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; input);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> disconnect(<span class="keywordtype">bool</span> forward);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1base_1_1PortInterface.html">PortInterface</a>* getPort() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a>* getConnID() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    };</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">void</span> RTT_API intrusive_ptr_add_ref( <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>* e );</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">void</span> RTT_API intrusive_ptr_release( <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>* e );</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}}</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> connected();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> signal();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="classRTT_1_1base_1_1ChannelElementBase.html#a3bde254d97586f315db880a8574bc0d5">  175</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html#a3bde254d97586f315db880a8574bc0d5">signalFrom</a>(<a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a> *caller) { <span class="keywordflow">return</span> signal(); }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> channelReady(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; caller, <a class="code" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> <span class="keyword">const</span>&amp; policy, <a class="code" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *conn_id = 0);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> inputReady(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; caller);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> disconnect(<span class="keywordtype">bool</span> forward);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> disconnect(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; channel, <span class="keywordtype">bool</span> forward);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1base_1_1PortInterface.html">PortInterface</a>* getPort() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a>* getConnPolicy() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> setBufferPolicy(<a class="code" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> policy, <span class="keywordtype">bool</span> force = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> getBufferPolicy() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        RTT_DEPRECATED <span class="keywordtype">void</span> setOutput(<span class="keyword">const</span> ChannelElementBase::shared_ptr &amp;output)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;ChannelElementBase::setOutput() is deprecated! You should use ChannelElementBase::connectTo() instead.&quot;</span>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            (void) connectTo(output);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        RTT_DEPRECATED <span class="keywordtype">void</span> setInput(<span class="keyword">const</span> ChannelElementBase::shared_ptr &amp;input)</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            assert(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;ChannelElementBase::setInput() is deprecated! You should use ChannelElementBase::addInput() instead.&quot;</span>);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            (void) addInput(input);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span>MultipleInputsChannelElementBase;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span>MultipleOutputsChannelElementBase;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> addOutput(shared_ptr <span class="keyword">const</span>&amp; output, <span class="keywordtype">bool</span> mandatory = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> removeOutput(shared_ptr <span class="keyword">const</span>&amp; output);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> addInput(shared_ptr <span class="keyword">const</span>&amp; input);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> removeInput(shared_ptr <span class="keyword">const</span>&amp; input);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> inputReady();</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    };</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="classRTT_1_1base_1_1MultipleInputsChannelElementBase.html">  311</a></span>&#160;    <span class="keyword">class </span>RTT_API <a class="code" href="classRTT_1_1base_1_1MultipleInputsChannelElementBase.html">MultipleInputsChannelElementBase</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keyword">typedef</span> boost::intrusive_ptr&lt;MultipleInputsChannelElementBase&gt; shared_ptr;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keyword">typedef</span> std::list&lt;ChannelElementBase::shared_ptr&gt; Inputs;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        Inputs inputs;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keyword">mutable</span> <a class="code" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a> inputs_lock;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a> *last_signalled;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <a class="code" href="classRTT_1_1base_1_1MultipleInputsChannelElementBase.html">MultipleInputsChannelElementBase</a>();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> connected();</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> inputReady(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; caller);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keyword">using</span> <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html#a9f604a6d6f285c35b0c82dad343af72c">ChannelElementBase::disconnect</a>;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> disconnect(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; channel, <span class="keywordtype">bool</span> forward = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordtype">bool</span> signalFrom(<a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a> *caller);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> addInput(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; input);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> removeInput(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; input);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    };</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno"><a class="line" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html">  373</a></span>&#160;    <span class="keyword">class </span>RTT_API <a class="code" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html">MultipleOutputsChannelElementBase</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    {</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keyword">typedef</span> boost::intrusive_ptr&lt;MultipleOutputsChannelElementBase&gt; shared_ptr;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keyword">struct </span>Output {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            Output(ChannelElementBase::shared_ptr <span class="keyword">const</span> &amp;channel, <span class="keywordtype">bool</span> mandatory = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="keywordtype">bool</span> operator==(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; channel) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            ChannelElementBase::shared_ptr channel;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            <span class="keywordtype">bool</span> mandatory;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            <span class="keywordtype">bool</span> disconnected;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        };</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keyword">typedef</span> std::list&lt;Output&gt; Outputs;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        Outputs outputs;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keyword">mutable</span> <a class="code" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a> outputs_lock;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <a class="code" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html">MultipleOutputsChannelElementBase</a>();</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> connected();</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> signal();</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> channelReady(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; caller, <a class="code" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> <span class="keyword">const</span>&amp; policy, <a class="code" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *conn_id = 0);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keyword">using</span> <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html#a9f604a6d6f285c35b0c82dad343af72c">ChannelElementBase::disconnect</a>;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> disconnect(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; channel, <span class="keywordtype">bool</span> forward = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> addOutput(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; output, <span class="keywordtype">bool</span> mandatory = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> removeOutput(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; output);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        <span class="keywordtype">void</span> removeDisconnectedOutputs();</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    };</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
+<div class="line"><a name="l00443"></a><span class="lineno"><a class="line" href="classRTT_1_1base_1_1MultipleInputsMultipleOutputsChannelElementBase.html">  443</a></span>&#160;    <span class="keyword">class </span>RTT_API <a class="code" href="classRTT_1_1base_1_1MultipleInputsMultipleOutputsChannelElementBase.html">MultipleInputsMultipleOutputsChannelElementBase</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classRTT_1_1base_1_1MultipleInputsChannelElementBase.html">MultipleInputsChannelElementBase</a>, <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html">MultipleOutputsChannelElementBase</a></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    {</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        <span class="keyword">typedef</span> boost::intrusive_ptr&lt;MultipleInputsMultipleOutputsChannelElementBase&gt; shared_ptr;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> connected();</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        <span class="keyword">using</span> <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html#a9f604a6d6f285c35b0c82dad343af72c">ChannelElementBase::disconnect</a>;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> disconnect(ChannelElementBase::shared_ptr <span class="keyword">const</span>&amp; channel, <span class="keywordtype">bool</span> forward);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    };</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordtype">void</span> RTT_API intrusive_ptr_add_ref( <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>* e );</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordtype">void</span> RTT_API intrusive_ptr_release( <a class="code" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>* e );</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;}}</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="preprocessor"></span></div>
+<div class="ttc" id="classRTT_1_1base_1_1MultipleOutputsChannelElementBase_html"><div class="ttname"><a href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html">RTT::base::MultipleOutputsChannelElementBase</a></div><div class="ttdoc">ChannelElementBase variant with multiple output channels. </div><div class="ttdef"><b>Definition:</b> <a href="ChannelElementBase_8hpp_source.html#l00373">ChannelElementBase.hpp:373</a></div></div>
+<div class="ttc" id="classRTT_1_1ConnPolicy_html"><div class="ttname"><a href="classRTT_1_1ConnPolicy.html">RTT::ConnPolicy</a></div><div class="ttdoc">A connection policy object describes how a given connection should behave. </div><div class="ttdef"><b>Definition:</b> <a href="ConnPolicy_8hpp_source.html#l00107">ConnPolicy.hpp:107</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1ChannelElementBase_html_a15fc2c411c0de48b58c30f858d44e318"><div class="ttname"><a href="classRTT_1_1base_1_1ChannelElementBase.html#a15fc2c411c0de48b58c30f858d44e318">RTT::base::ChannelElementBase::narrow</a></div><div class="ttdeci">static ChannelElement&lt; T &gt; * narrow(ChannelElementBase *e)</div><div class="ttdoc">Return a pointer to the typed instance of a ChannelElementBase. </div><div class="ttdef"><b>Definition:</b> <a href="ChannelElementBase_8hpp_source.html#l00103">ChannelElementBase.hpp:103</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1ChannelElementBase_html_a9f604a6d6f285c35b0c82dad343af72c"><div class="ttname"><a href="classRTT_1_1base_1_1ChannelElementBase.html#a9f604a6d6f285c35b0c82dad343af72c">RTT::base::ChannelElementBase::disconnect</a></div><div class="ttdeci">virtual void disconnect(bool forward)</div><div class="ttdoc">Performs a disconnection of this channel&#39;s endpoints. </div><div class="ttdef"><b>Definition:</b> <a href="ChannelInterface_8cpp_source.html#l00131">ChannelInterface.cpp:131</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1ChannelElement_html"><div class="ttname"><a href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a></div><div class="ttdoc">A typed version of ChannelElementBase. </div><div class="ttdef"><b>Definition:</b> <a href="ChannelElement_8hpp_source.html#l00061">ChannelElement.hpp:61</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1ChannelElementBase_html_a3bde254d97586f315db880a8574bc0d5"><div class="ttname"><a href="classRTT_1_1base_1_1ChannelElementBase.html#a3bde254d97586f315db880a8574bc0d5">RTT::base::ChannelElementBase::signalFrom</a></div><div class="ttdeci">virtual bool signalFrom(ChannelElementBase *caller)</div><div class="ttdoc">Signals that there is new data available on this channel Forwards to signal() unless overwritten in a...</div><div class="ttdef"><b>Definition:</b> <a href="ChannelElementBase_8hpp_source.html#l00175">ChannelElementBase.hpp:175</a></div></div>
+<div class="ttc" id="classRTT_1_1os_1_1SharedMutex_html"><div class="ttname"><a href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a></div><div class="ttdoc">An object oriented wrapper around a shared mutex (multiple readers allowed). </div><div class="ttdef"><b>Definition:</b> <a href="Mutex_8hpp_source.html#l00337">Mutex.hpp:337</a></div></div>
+<div class="ttc" id="group__Ports_html_gadc680c5e9ed12ee0889933483c89b7ea"><div class="ttname"><a href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">RTT::BufferPolicy</a></div><div class="ttdeci">BufferPolicy</div><div class="ttdoc">The BufferPolicy controls how multiple connections to the same input or output port are handled in ca...</div><div class="ttdef"><b>Definition:</b> <a href="BufferPolicy_8hpp_source.html#l00074">BufferPolicy.hpp:74</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1ChannelElementBase_html_a3e42c919f744c8e6a4ed952ad1e1c340"><div class="ttname"><a href="classRTT_1_1base_1_1ChannelElementBase.html#a3e42c919f744c8e6a4ed952ad1e1c340">RTT::base::ChannelElementBase::narrow</a></div><div class="ttdeci">ChannelElement&lt; T &gt; * narrow()</div><div class="ttdoc">Return a pointer to the typed variant of this ChannelElementBase. </div><div class="ttdef"><b>Definition:</b> <a href="ChannelElementBase_8hpp_source.html#l00111">ChannelElementBase.hpp:111</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1MultipleInputsChannelElementBase_html"><div class="ttname"><a href="classRTT_1_1base_1_1MultipleInputsChannelElementBase.html">RTT::base::MultipleInputsChannelElementBase</a></div><div class="ttdoc">ChannelElementBase variant with multiple input channels. </div><div class="ttdef"><b>Definition:</b> <a href="ChannelElementBase_8hpp_source.html#l00311">ChannelElementBase.hpp:311</a></div></div>
 <div class="ttc" id="classRTT_1_1internal_1_1ConnID_html"><div class="ttname"><a href="classRTT_1_1internal_1_1ConnID.html">RTT::internal::ConnID</a></div><div class="ttdoc">This class is used in places where a permanent representation of a reference to a connection is neede...</div><div class="ttdef"><b>Definition:</b> <a href="ConnID_8hpp_source.html#l00058">ConnID.hpp:58</a></div></div>
-<div class="ttc" id="classRTT_1_1os_1_1Mutex_html"><div class="ttname"><a href="classRTT_1_1os_1_1Mutex.html">RTT::os::Mutex</a></div><div class="ttdoc">An object oriented wrapper around a non recursive mutex. </div><div class="ttdef"><b>Definition:</b> <a href="Mutex_8hpp_source.html#l00082">Mutex.hpp:82</a></div></div>
-<div class="ttc" id="classRTT_1_1base_1_1ChannelElementBase_html"><div class="ttname"><a href="classRTT_1_1base_1_1ChannelElementBase.html">RTT::base::ChannelElementBase</a></div><div class="ttdoc">In the data flow implementation, a channel is created by chaining ChannelElementBase objects...</div><div class="ttdef"><b>Definition:</b> <a href="ChannelElementBase_8hpp_source.html#l00060">ChannelElementBase.hpp:60</a></div></div>
-<div class="ttc" id="classRTT_1_1base_1_1PortInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1PortInterface.html">RTT::base::PortInterface</a></div><div class="ttdoc">The base class of every data flow port. </div><div class="ttdef"><b>Definition:</b> <a href="PortInterface_8hpp_source.html#l00057">PortInterface.hpp:57</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1MultipleInputsMultipleOutputsChannelElementBase_html"><div class="ttname"><a href="classRTT_1_1base_1_1MultipleInputsMultipleOutputsChannelElementBase.html">RTT::base::MultipleInputsMultipleOutputsChannelElementBase</a></div><div class="ttdoc">ChannelElementBase variant with multiple input and multiple output channels. </div><div class="ttdef"><b>Definition:</b> <a href="ChannelElementBase_8hpp_source.html#l00443">ChannelElementBase.hpp:443</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1ChannelElementBase_html"><div class="ttname"><a href="classRTT_1_1base_1_1ChannelElementBase.html">RTT::base::ChannelElementBase</a></div><div class="ttdoc">In the data flow implementation, a channel is created by chaining ChannelElementBase objects...</div><div class="ttdef"><b>Definition:</b> <a href="ChannelElementBase_8hpp_source.html#l00065">ChannelElementBase.hpp:65</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1PortInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1PortInterface.html">RTT::base::PortInterface</a></div><div class="ttdoc">The base class of every data flow port. </div><div class="ttdef"><b>Definition:</b> <a href="PortInterface_8hpp_source.html#l00058">PortInterface.hpp:58</a></div></div>
 <div class="ttc" id="structoro__atomic__t_html"><div class="ttname"><a href="structoro__atomic__t.html">oro_atomic_t</a></div><div class="ttdoc">Structure that contains an int for atomic operations. </div><div class="ttdef"><b>Definition:</b> <a href="oro__gcc_2oro__arch_8h_source.html#l00010">oro_arch.h:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:37 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:02 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

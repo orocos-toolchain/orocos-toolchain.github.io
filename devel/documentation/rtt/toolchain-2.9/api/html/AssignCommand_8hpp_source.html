@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -108,58 +108,60 @@
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classRTT_1_1internal_1_1AssignableDataSource.html#a747cbd424611b1fdc336359b0cf91b3d">AssignableDataSource&lt;T&gt;::shared_ptr</a> LHSSource;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classRTT_1_1internal_1_1DataSource.html">DataSource&lt;S&gt;::const_ptr</a> RHSSource;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classRTT_1_1internal_1_1DataSource.html">DataSource&lt;S&gt;::shared_ptr</a> RHSSource;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            LHSSource lhs;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            RHSSource rhs;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordtype">bool</span> news;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">   74</a></span>&#160;            <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">AssignCommand</a>( LHSSource l, RHSSource r )</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                : lhs( l ), rhs( r ), news(false)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#a908fd5cd76974818ff38cbd668fccbe9">   79</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a908fd5cd76974818ff38cbd668fccbe9">readArguments</a>() {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                news = rhs-&gt;evaluate();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#a5f3f82a731c4fb4c43ab4d758f24d178">   83</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a5f3f82a731c4fb4c43ab4d758f24d178">execute</a>()</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">if</span> (news) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    lhs-&gt;set( rhs-&gt;rvalue() );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    news=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#a627d3fc3cf5b7c0491e8d502b04e13ee">   93</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a>* <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a627d3fc3cf5b7c0491e8d502b04e13ee">clone</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">AssignCommand</a>( lhs.get(), rhs.get() );</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#a16b5af42d8571b62c0d2f96765c05e7e">   98</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a>* <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a16b5af42d8571b62c0d2f96765c05e7e">copy</a>( std::map&lt;const base::DataSourceBase*, base::DataSourceBase*&gt;&amp; alreadyCloned )<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">AssignCommand</a>( lhs-&gt;copy( alreadyCloned ), rhs-&gt;copy( alreadyCloned ) );</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        };</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">   73</a></span>&#160;            <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">AssignCommand</a>( LHSSource l, RHSSource r )</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                : lhs( l ), rhs( r )</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#a908fd5cd76974818ff38cbd668fccbe9">   78</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a908fd5cd76974818ff38cbd668fccbe9">readArguments</a>() {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#a5f3f82a731c4fb4c43ab4d758f24d178">   81</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a5f3f82a731c4fb4c43ab4d758f24d178">execute</a>()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="comment">// we ignore evaluate, which return value is legacy</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="comment">// we always assign the current state of rhs</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                rhs-&gt;evaluate();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                lhs-&gt;set( rhs-&gt;rvalue() );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#aab08581c8a8f92d0911b32ae8986f411">   90</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#aab08581c8a8f92d0911b32ae8986f411">reset</a>() {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                rhs-&gt;reset();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#a627d3fc3cf5b7c0491e8d502b04e13ee">   94</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a>* <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a627d3fc3cf5b7c0491e8d502b04e13ee">clone</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">AssignCommand</a>( lhs.get(), rhs.get() );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1AssignCommand.html#a16b5af42d8571b62c0d2f96765c05e7e">   99</a></span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a>* <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a16b5af42d8571b62c0d2f96765c05e7e">copy</a>( std::map&lt;const base::DataSourceBase*, base::DataSourceBase*&gt;&amp; alreadyCloned )<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">AssignCommand</a>( lhs-&gt;copy( alreadyCloned ), rhs-&gt;copy( alreadyCloned ) );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        };</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor"></span></div>
 <div class="ttc" id="classRTT_1_1internal_1_1DataSource_html"><div class="ttname"><a href="classRTT_1_1internal_1_1DataSource.html">RTT::internal::DataSource</a></div><div class="ttdoc">DataSource is a base class representing a generic way to read data of type T. </div><div class="ttdef"><b>Definition:</b> <a href="DataSource_8hpp_source.html#l00094">DataSource.hpp:94</a></div></div>
-<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_a4848785d656a3302442d1ee21e8ba3c3"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">RTT::internal::AssignCommand::AssignCommand</a></div><div class="ttdeci">AssignCommand(LHSSource l, RHSSource r)</div><div class="ttdoc">Assign r (rvalue) to l (lvalue);. </div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00074">AssignCommand.hpp:74</a></div></div>
-<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_a627d3fc3cf5b7c0491e8d502b04e13ee"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#a627d3fc3cf5b7c0491e8d502b04e13ee">RTT::internal::AssignCommand::clone</a></div><div class="ttdeci">virtual base::ActionInterface * clone() const </div><div class="ttdoc">The Clone Software Pattern. </div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00093">AssignCommand.hpp:93</a></div></div>
+<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_aab08581c8a8f92d0911b32ae8986f411"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#aab08581c8a8f92d0911b32ae8986f411">RTT::internal::AssignCommand::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reset this action. </div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00090">AssignCommand.hpp:90</a></div></div>
+<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_a4848785d656a3302442d1ee21e8ba3c3"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">RTT::internal::AssignCommand::AssignCommand</a></div><div class="ttdeci">AssignCommand(LHSSource l, RHSSource r)</div><div class="ttdoc">Assign r (rvalue) to l (lvalue);. </div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00073">AssignCommand.hpp:73</a></div></div>
+<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_a627d3fc3cf5b7c0491e8d502b04e13ee"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#a627d3fc3cf5b7c0491e8d502b04e13ee">RTT::internal::AssignCommand::clone</a></div><div class="ttdeci">virtual base::ActionInterface * clone() const </div><div class="ttdoc">The Clone Software Pattern. </div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00094">AssignCommand.hpp:94</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1ActionInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1ActionInterface.html">RTT::base::ActionInterface</a></div><div class="ttdoc">Based on the software pattern &#39;command&#39;, this interface allows execution of action objects...</div><div class="ttdef"><b>Definition:</b> <a href="ActionInterface_8hpp_source.html#l00071">ActionInterface.hpp:71</a></div></div>
 <div class="ttc" id="classRTT_1_1internal_1_1AssignableDataSource_html_a747cbd424611b1fdc336359b0cf91b3d"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignableDataSource.html#a747cbd424611b1fdc336359b0cf91b3d">RTT::internal::AssignableDataSource::shared_ptr</a></div><div class="ttdeci">boost::intrusive_ptr&lt; AssignableDataSource&lt; T &gt; &gt; shared_ptr</div><div class="ttdoc">Use this type to store a pointer to an AssignableDataSource. </div><div class="ttdef"><b>Definition:</b> <a href="DataSource_8hpp_source.html#l00198">DataSource.hpp:198</a></div></div>
-<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_a5f3f82a731c4fb4c43ab4d758f24d178"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#a5f3f82a731c4fb4c43ab4d758f24d178">RTT::internal::AssignCommand::execute</a></div><div class="ttdeci">bool execute()</div><div class="ttdoc">Execute the functionality of this action. </div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00083">AssignCommand.hpp:83</a></div></div>
+<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_a5f3f82a731c4fb4c43ab4d758f24d178"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#a5f3f82a731c4fb4c43ab4d758f24d178">RTT::internal::AssignCommand::execute</a></div><div class="ttdeci">bool execute()</div><div class="ttdoc">Execute the functionality of this action. </div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00081">AssignCommand.hpp:81</a></div></div>
 <div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html">RTT::internal::AssignCommand</a></div><div class="ttdoc">This is a command that will assign the value of an expression to another at runtime. </div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00060">AssignCommand.hpp:60</a></div></div>
-<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_a16b5af42d8571b62c0d2f96765c05e7e"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#a16b5af42d8571b62c0d2f96765c05e7e">RTT::internal::AssignCommand::copy</a></div><div class="ttdeci">virtual base::ActionInterface * copy(std::map&lt; const base::DataSourceBase *, base::DataSourceBase * &gt; &amp;alreadyCloned) const </div><div class="ttdoc">When copying an Orocos program, we want identical internal::DataSource&#39;s to be mapped to identical Da...</div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00098">AssignCommand.hpp:98</a></div></div>
-<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_a908fd5cd76974818ff38cbd668fccbe9"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#a908fd5cd76974818ff38cbd668fccbe9">RTT::internal::AssignCommand::readArguments</a></div><div class="ttdeci">void readArguments()</div><div class="ttdoc">This is invoked some time before execute() at a time when the action may read its function arguments...</div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00079">AssignCommand.hpp:79</a></div></div>
+<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_a16b5af42d8571b62c0d2f96765c05e7e"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#a16b5af42d8571b62c0d2f96765c05e7e">RTT::internal::AssignCommand::copy</a></div><div class="ttdeci">virtual base::ActionInterface * copy(std::map&lt; const base::DataSourceBase *, base::DataSourceBase * &gt; &amp;alreadyCloned) const </div><div class="ttdoc">When copying an Orocos program, we want identical internal::DataSource&#39;s to be mapped to identical Da...</div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00099">AssignCommand.hpp:99</a></div></div>
+<div class="ttc" id="classRTT_1_1internal_1_1AssignCommand_html_a908fd5cd76974818ff38cbd668fccbe9"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignCommand.html#a908fd5cd76974818ff38cbd668fccbe9">RTT::internal::AssignCommand::readArguments</a></div><div class="ttdeci">void readArguments()</div><div class="ttdoc">This is invoked some time before execute() at a time when the action may read its function arguments...</div><div class="ttdef"><b>Definition:</b> <a href="AssignCommand_8hpp_source.html#l00078">AssignCommand.hpp:78</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:38 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:02 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

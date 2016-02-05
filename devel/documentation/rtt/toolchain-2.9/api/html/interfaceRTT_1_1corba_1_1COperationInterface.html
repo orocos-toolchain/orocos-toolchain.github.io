@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -77,20 +77,20 @@ Inheritance diagram for RTT::corba::COperationInterface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8859cf9bfebbc17322a82d7c6b51a575"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8859cf9bfebbc17322a82d7c6b51a575"></a>
-typedef sequence&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>COperationList</b></td></tr>
-<tr class="separator:a8859cf9bfebbc17322a82d7c6b51a575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1f6c07abd6596a3836afc87d331dc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa1f6c07abd6596a3836afc87d331dc8"></a>
+typedef sequence&lt; COperation &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>COperationDescriptions</b></td></tr>
+<tr class="separator:afa1f6c07abd6596a3836afc87d331dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae0453844331c87731e279e09a43794fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0453844331c87731e279e09a43794fb"></a>
-COperationList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#ae0453844331c87731e279e09a43794fb">getOperations</a> ()</td></tr>
-<tr class="memdesc:ae0453844331c87731e279e09a43794fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of all operations. <br/></td></tr>
-<tr class="separator:ae0453844331c87731e279e09a43794fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11e78fde96b7b134e7ada3d464cce516"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11e78fde96b7b134e7ada3d464cce516"></a>
-CDescriptions&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a11e78fde96b7b134e7ada3d464cce516">getArguments</a> (in string operation)  raises (CNoSuchNameException)</td></tr>
-<tr class="memdesc:a11e78fde96b7b134e7ada3d464cce516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of all arguments of a given operation. <br/></td></tr>
-<tr class="separator:a11e78fde96b7b134e7ada3d464cce516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e17d3571a8d5cca1a585019ea3651c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80e17d3571a8d5cca1a585019ea3651c"></a>
+COperationDescriptions&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a80e17d3571a8d5cca1a585019ea3651c">getOperations</a> ()</td></tr>
+<tr class="memdesc:a80e17d3571a8d5cca1a585019ea3651c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of all operations. <br/></td></tr>
+<tr class="separator:a80e17d3571a8d5cca1a585019ea3651c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a782ee53b36f64df509f74a9cd471a4a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a782ee53b36f64df509f74a9cd471a4a3"></a>
+CArgumentDescriptions&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a782ee53b36f64df509f74a9cd471a4a3">getArguments</a> (in string operation)  raises (CNoSuchNameException)</td></tr>
+<tr class="memdesc:a782ee53b36f64df509f74a9cd471a4a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of all arguments of a given operation. <br/></td></tr>
+<tr class="separator:a782ee53b36f64df509f74a9cd471a4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3288c62830770dd442f51a35897fd408"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3288c62830770dd442f51a35897fd408"></a>
 unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a3288c62830770dd442f51a35897fd408">getArity</a> (in string operation)  raises (CNoSuchNameException)</td></tr>
 <tr class="memdesc:a3288c62830770dd442f51a35897fd408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of arguments required in <a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a2fd12a8daf64ffa746831f9cc473388e" title="Call an operation with a list of arguments. ">callOperation()</a> and <a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a5bc3fe6cc2d982fa1a29027329eb6a16" title="Send an operation with a list of arguments. ">sendOperation()</a> for a given operation. <br/></td></tr>
@@ -124,11 +124,14 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="in
 <tr class="memitem:a5bc3fe6cc2d982fa1a29027329eb6a16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CSendHandle.html">CSendHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a5bc3fe6cc2d982fa1a29027329eb6a16">sendOperation</a> (in string operation, in CAnyArguments args)  raises ( CNoSuchNameException,                                 CWrongNumbArgException,                                 CWrongTypeArgException,                                 CCallInterrupted)</td></tr>
 <tr class="memdesc:a5bc3fe6cc2d982fa1a29027329eb6a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an operation with a list of arguments.  <a href="#a5bc3fe6cc2d982fa1a29027329eb6a16">More...</a><br/></td></tr>
 <tr class="separator:a5bc3fe6cc2d982fa1a29027329eb6a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfc14d9152e52666f6a032b28bdd3c6"><td class="memItemLeft" align="right" valign="top">oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1COperationInterface.html#a0bfc14d9152e52666f6a032b28bdd3c6">sendOperationOneway</a> (in string operation, in CAnyArguments args)</td></tr>
+<tr class="memdesc:a0bfc14d9152e52666f6a032b28bdd3c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a void operation with a list of arguments as a oneway CORBA call.  <a href="#a0bfc14d9152e52666f6a032b28bdd3c6">More...</a><br/></td></tr>
+<tr class="separator:a0bfc14d9152e52666f6a032b28bdd3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exposes the operations this service offers. </p>
 
-<p>Definition at line <a class="el" href="OperationInterface_8idl_source.html#l00126">126</a> of file <a class="el" href="OperationInterface_8idl_source.html">OperationInterface.idl</a>.</p>
+<p>Definition at line <a class="el" href="OperationInterface_8idl_source.html#l00138">138</a> of file <a class="el" href="OperationInterface_8idl_source.html">OperationInterface.idl</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a2fd12a8daf64ffa746831f9cc473388e"></a>
 <div class="memitem">
@@ -262,13 +265,42 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="in
 
 </div>
 </div>
+<a class="anchor" id="a0bfc14d9152e52666f6a032b28bdd3c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneway void RTT::corba::COperationInterface::sendOperationOneway </td>
+          <td>(</td>
+          <td class="paramtype">in string&#160;</td>
+          <td class="paramname"><em>operation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in CAnyArguments&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a void operation with a list of arguments as a oneway CORBA call. </p>
+<p>This method will return immediately. </p>
+
+</div>
+</div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
 <li>rtt/transports/corba/<a class="el" href="OperationInterface_8idl_source.html">OperationInterface.idl</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

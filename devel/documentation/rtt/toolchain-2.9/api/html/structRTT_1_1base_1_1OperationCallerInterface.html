@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -118,10 +118,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ae120e7c481fee4153bc5f4b7459f78c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#ae120e7c481fee4153bc5f4b7459f78c7">reportError</a> ()</td></tr>
 <tr class="memdesc:ae120e7c481fee4153bc5f4b7459f78c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executed when the operation execution resulted in a C++ exception.  <a href="#ae120e7c481fee4153bc5f4b7459f78c7">More...</a><br/></td></tr>
 <tr class="separator:ae120e7c481fee4153bc5f4b7459f78c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55d9c21f679c735ac63b2482d3b19145"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55d9c21f679c735ac63b2482d3b19145"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a55d9c21f679c735ac63b2482d3b19145">isSend</a> ()</td></tr>
-<tr class="memdesc:a55d9c21f679c735ac63b2482d3b19145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpful function to tell us if this operations is to be sent or not. <br/></td></tr>
-<tr class="separator:a55d9c21f679c735ac63b2482d3b19145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec3e3f1b780d11824c07461bf4cfeee7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#aec3e3f1b780d11824c07461bf4cfeee7">isSend</a> ()</td></tr>
+<tr class="memdesc:aec3e3f1b780d11824c07461bf4cfeee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpful function to tell us if this operations is to be sent or not.  <a href="#aec3e3f1b780d11824c07461bf4cfeee7">More...</a><br/></td></tr>
+<tr class="separator:aec3e3f1b780d11824c07461bf4cfeee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab339d44f1262d749cf91c00c26d7c893"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab339d44f1262d749cf91c00c26d7c893"></a>
 <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getMessageProcessor</b> () const </td></tr>
 <tr class="separator:ab339d44f1262d749cf91c00c26d7c893"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,6 +177,30 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aec3e3f1b780d11824c07461bf4cfeee7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OperationCallerInterface::isSend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helpful function to tell us if this operations is to be sent or not. </p>
+<p>Sending is only required if the operation is OwnThread <em>and</em> in a different thread than the caller. </p>
+
+<p>Definition at line <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">34</a> of file <a class="el" href="OperationCallerInterface_8cpp_source.html">OperationCallerInterface.cpp</a>.</p>
+
+<p>References <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a190329785c1c7e4a542db833402a7811">RTT::base::ActivityInterface::thread()</a>.</p>
+
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00352">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::call_impl()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ae120e7c481fee4153bc5f4b7459f78c7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -194,11 +217,11 @@ Protected Attributes</h2></td></tr>
 <p>Executed when the operation execution resulted in a C++ exception. </p>
 <p>Must report the error to the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of the owner of this operation. </p>
 
-<p>Definition at line <a class="el" href="OperationCallerInterface_8cpp_source.html#l00044">44</a> of file <a class="el" href="OperationCallerInterface_8cpp_source.html">OperationCallerInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="OperationCallerInterface_8cpp_source.html#l00052">52</a> of file <a class="el" href="OperationCallerInterface_8cpp_source.html">OperationCallerInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00448">RTT::ExecutionEngine::setExceptionTask()</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00462">RTT::ExecutionEngine::setExceptionTask()</a>.</p>
 
-<p>Referenced by <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00291">RTT::internal::FusedMCallDataSource&lt; Signature &gt;::evaluate()</a>, and <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>.</p>
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>.</p>
 
 </div>
 </div>
@@ -306,7 +329,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

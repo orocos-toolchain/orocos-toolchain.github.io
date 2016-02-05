@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -85,9 +85,9 @@ typedef boost::shared_ptr<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3a81ef749442f2cfbe75ed82dacb96b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a3a81ef749442f2cfbe75ed82dacb96b8">CallFunction</a> (<a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> *init_com, boost::shared_ptr&lt; <a class="el" href="classRTT_1_1scripting_1_1ProgramInterface.html">ProgramInterface</a> &gt; foo, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *p, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *caller, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html">internal::AssignableDataSource</a>&lt; <a class="el" href="classRTT_1_1scripting_1_1ProgramInterface.html">ProgramInterface</a> * &gt; *v=0, <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html">internal::AssignableDataSource</a>&lt; bool &gt; *a=0)</td></tr>
-<tr class="memdesc:a3a81ef749442f2cfbe75ed82dacb96b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Command to send a function to a <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>.  <a href="#a3a81ef749442f2cfbe75ed82dacb96b8">More...</a><br/></td></tr>
-<tr class="separator:a3a81ef749442f2cfbe75ed82dacb96b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefee2b3190ba825596ca1847340b5f0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#aefee2b3190ba825596ca1847340b5f0d">CallFunction</a> (<a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> *init_com, boost::shared_ptr&lt; <a class="el" href="classRTT_1_1scripting_1_1ProgramInterface.html">ProgramInterface</a> &gt; foo, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *p, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *caller)</td></tr>
+<tr class="memdesc:aefee2b3190ba825596ca1847340b5f0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Command to send a function to a <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>.  <a href="#aefee2b3190ba825596ca1847340b5f0d">More...</a><br/></td></tr>
+<tr class="separator:aefee2b3190ba825596ca1847340b5f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb07fbc8d362bcef372364d241c39b84"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84">execute</a> ()</td></tr>
 <tr class="memdesc:afb07fbc8d362bcef372364d241c39b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the functionality of this action.  <a href="#afb07fbc8d362bcef372364d241c39b84">More...</a><br/></td></tr>
 <tr class="separator:afb07fbc8d362bcef372364d241c39b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,12 +111,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An action which calls a FunctionFraph for execution in a <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>. </p>
-<p>Script functions are always executed in the thread of the component.</p>
-<p>It is an DataSource such that it can be executed by program scripts. </p>
+<p>Script functions are always executed in the thread of the component. </p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00062">62</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00060">60</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3a81ef749442f2cfbe75ed82dacb96b8"></a>
+<a class="anchor" id="aefee2b3190ba825596ca1847340b5f0d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -145,19 +144,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td>
-          <td class="paramname"><em>caller</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html">internal::AssignableDataSource</a>&lt; <a class="el" href="classRTT_1_1scripting_1_1ProgramInterface.html">ProgramInterface</a> * &gt; *&#160;</td>
-          <td class="paramname"><em>v</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html">internal::AssignableDataSource</a>&lt; bool &gt; *&#160;</td>
-          <td class="paramname"><em>a</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>caller</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -178,12 +165,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
     <tr><td class="paramname">init_com</td><td>The command to execute before sending the function into the processor, in order to initialise it. </td></tr>
     <tr><td class="paramname">foo</td><td>The function to run in the processor. </td></tr>
     <tr><td class="paramname">p</td><td>The target processor which will run the function. </td></tr>
-    <tr><td class="paramname">v</td><td>Implementation specific parameter to support copy/clone semantics. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00092">92</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00081">81</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -217,9 +203,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a4d0a9b981d260d2f4e363b7c428a125f">RTT::base::ActionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00151">151</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
-
-<p>References <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a740d9322d6bb73965e2bb6d5103771bf">RTT::internal::AssignableDataSource&lt; T &gt;::copy()</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00137">137</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -249,7 +233,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a85f558f65b156911f3c004fd2aeb5094">RTT::base::ActionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00108">108</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00095">95</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -279,7 +263,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#aba0b4f6d3f57f0b4b8faad85686c9080">RTT::base::ActionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00130">130</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00117">117</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +293,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a4e8772130b441a447e32e7774cc01c28">RTT::base::ActionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00136">136</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00123">123</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -319,7 +303,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

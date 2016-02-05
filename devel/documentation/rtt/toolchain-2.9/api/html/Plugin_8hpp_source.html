@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -94,20 +94,24 @@
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma warning (disable:4190)</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &quot;../rtt-config.h&quot;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">namespace </span>RTT {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">class </span>TaskContext;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    RTT_EXPORT <span class="keywordtype">bool</span> <a class="code" href="Plugin_8hpp.html#a9550ba5d838666c5d16de652e3c207ac">loadRTTPlugin</a>( <a class="code" href="classRTT_1_1TaskContext.html">RTT::TaskContext</a>* t );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    RTT_EXPORT std::string <a class="code" href="Plugin_8hpp.html#ab6dfef32d6409e1bb9b9d77b2a172578">getRTTPluginName</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    RTT_EXPORT std::string <a class="code" href="Plugin_8hpp.html#a7c200e39cd09316c331697fab41fbf93">getRTTTargetName</a>();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#ifdef __clang__</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma clang diagnostic ignored &quot;-Wreturn-type-c-linkage&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;../rtt-config.h&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">namespace </span>RTT {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">class </span>TaskContext;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    RTT_EXPORT <span class="keywordtype">bool</span> <a class="code" href="Plugin_8hpp.html#a9550ba5d838666c5d16de652e3c207ac">loadRTTPlugin</a>( <a class="code" href="classRTT_1_1TaskContext.html">RTT::TaskContext</a>* t );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    RTT_EXPORT std::string <a class="code" href="Plugin_8hpp.html#ab6dfef32d6409e1bb9b9d77b2a172578">getRTTPluginName</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    RTT_EXPORT std::string <a class="code" href="Plugin_8hpp.html#a7c200e39cd09316c331697fab41fbf93">getRTTTargetName</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="Plugin_8hpp_html_ab6dfef32d6409e1bb9b9d77b2a172578"><div class="ttname"><a href="Plugin_8hpp.html#ab6dfef32d6409e1bb9b9d77b2a172578">getRTTPluginName</a></div><div class="ttdeci">RTT_EXPORT std::string getRTTPluginName()</div><div class="ttdoc">Return the unique name of this plugin. </div></div>
 <div class="ttc" id="Plugin_8hpp_html_a9550ba5d838666c5d16de652e3c207ac"><div class="ttname"><a href="Plugin_8hpp.html#a9550ba5d838666c5d16de652e3c207ac">loadRTTPlugin</a></div><div class="ttdeci">RTT_EXPORT bool loadRTTPlugin(RTT::TaskContext *t)</div><div class="ttdoc">Instructs this plugin to load itself into the process or a component. </div></div>
 <div class="ttc" id="classRTT_1_1TaskContext_html"><div class="ttname"><a href="classRTT_1_1TaskContext.html">RTT::TaskContext</a></div><div class="ttdoc">The TaskContext is the C++ representation of an Orocos component. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8hpp_source.html#l00093">TaskContext.hpp:93</a></div></div>
@@ -115,7 +119,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:38 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:03 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

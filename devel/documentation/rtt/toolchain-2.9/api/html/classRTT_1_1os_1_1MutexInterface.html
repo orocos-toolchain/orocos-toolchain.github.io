@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -72,6 +72,7 @@ Inheritance diagram for RTT::os::MutexInterface:</div>
   <map id="RTT::os::MutexInterface_map" name="RTT::os::MutexInterface_map">
 <area href="classRTT_1_1os_1_1Mutex.html" title="An object oriented wrapper around a non recursive mutex. " alt="RTT::os::Mutex" shape="rect" coords="0,56,150,80"/>
 <area href="classRTT_1_1os_1_1MutexRecursive.html" title="An object oriented wrapper around a recursive mutex. " alt="RTT::os::MutexRecursive" shape="rect" coords="160,56,310,80"/>
+<area href="classRTT_1_1os_1_1SharedMutex.html" title="An object oriented wrapper around a shared mutex (multiple readers allowed). " alt="RTT::os::SharedMutex" shape="rect" coords="320,56,470,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -89,19 +90,31 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>trylock</b> (
 <tr class="memitem:a3324c0787a8a33f65809a9b3f6fcc2af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3324c0787a8a33f65809a9b3f6fcc2af"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>timedlock</b> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> s)=0</td></tr>
 <tr class="separator:a3324c0787a8a33f65809a9b3f6fcc2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af686b384db3180727a60e93d4fbd13f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af686b384db3180727a60e93d4fbd13f0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>lock_shared</b> ()</td></tr>
+<tr class="separator:af686b384db3180727a60e93d4fbd13f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d2aa6f2f45f25470adaa4da0ba925c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2d2aa6f2f45f25470adaa4da0ba925c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>unlock_shared</b> ()</td></tr>
+<tr class="separator:af2d2aa6f2f45f25470adaa4da0ba925c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5936ef391f1f1d88403aec630b9320"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea5936ef391f1f1d88403aec630b9320"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>trylock_shared</b> ()</td></tr>
+<tr class="separator:aea5936ef391f1f1d88403aec630b9320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7eb9e083408b56d4963e1ebd88ae931"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7eb9e083408b56d4963e1ebd88ae931"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>timedlock_shared</b> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> s)</td></tr>
+<tr class="separator:ab7eb9e083408b56d4963e1ebd88ae931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An interface to a <a class="el" href="classRTT_1_1os_1_1Mutex.html" title="An object oriented wrapper around a non recursive mutex. ">Mutex</a>. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1os_1_1MutexLock.html" title="MutexLock is a scope based Monitor, protecting critical sections with a Mutex object through locking ...">MutexLock</a>, <a class="el" href="classRTT_1_1os_1_1MutexTryLock.html" title="A MutexTryLock tries to lock an Mutex object on construction and if successful, unlocks it on destruc...">MutexTryLock</a>, <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html" title="An object oriented wrapper around a recursive mutex. ">MutexRecursive</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1os_1_1MutexLock.html" title="MutexLock is a scope based Monitor, protecting critical sections with a Mutex object through locking ...">MutexLock</a>, <a class="el" href="classRTT_1_1os_1_1MutexTryLock.html" title="A MutexTryLock tries to lock an Mutex object on construction and if successful, unlocks it on destruc...">MutexTryLock</a>, <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html" title="An object oriented wrapper around a recursive mutex. ">MutexRecursive</a>, <a class="el" href="classRTT_1_1os_1_1SharedMutexLock.html" title="SharedMutexLock is a scope based Monitor, protecting critical sections with a SharedMutex object thro...">SharedMutexLock</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00061">61</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00062">62</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>rtt/os/<a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

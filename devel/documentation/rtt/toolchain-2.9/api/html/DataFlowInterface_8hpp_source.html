@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -127,88 +127,88 @@
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>&amp; addPort(<a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>&amp; port);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classRTT_1_1DataFlowInterface.html#a089897b16e398886de8a3b0fb86b1045">  114</a></span>&#160;        <a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; <a class="code" href="classRTT_1_1DataFlowInterface.html#a089897b16e398886de8a3b0fb86b1045">addEventPort</a>(<span class="keyword">const</span> std::string&amp; name, <a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; port, SlotFunction callback = SlotFunction() ) {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">if</span> ( !chkPtr(<span class="stringliteral">&quot;addEventPort&quot;</span>, name, &amp;port) ) <span class="keywordflow">return</span> port;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            port.<a class="code" href="classRTT_1_1base_1_1PortInterface.html#a2bc00aa5b85d1d8aa9b5f2b105809b89">setName</a>(name);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> addEventPort(port,callback);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; addEventPort(<a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; port, SlotFunction callback = SlotFunction() );</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">void</span> removePort(<span class="keyword">const</span> std::string&amp; name);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        Ports getPorts() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        PortNames getPortNames() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>* getPort(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        std::string getPortDescription(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordtype">bool</span> setPortDescription(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string description);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="classRTT_1_1TaskContext.html">TaskContext</a>* getOwner() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classRTT_1_1DataFlowInterface.html#a089897b16e398886de8a3b0fb86b1045">  117</a></span>&#160;        <a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; <a class="code" href="classRTT_1_1DataFlowInterface.html#a089897b16e398886de8a3b0fb86b1045">addEventPort</a>(<span class="keyword">const</span> std::string&amp; name, <a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; port, SlotFunction callback = SlotFunction() ) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">if</span> ( !chkPtr(<span class="stringliteral">&quot;addEventPort&quot;</span>, name, &amp;port) ) <span class="keywordflow">return</span> port;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            port.<a class="code" href="classRTT_1_1base_1_1PortInterface.html#a2bc00aa5b85d1d8aa9b5f2b105809b89">setName</a>(name);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">return</span> addEventPort(port,callback);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; addEventPort(<a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; port, SlotFunction callback = SlotFunction() );</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">void</span> removePort(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        Ports getPorts() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        PortNames getPortNames() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>* getPort(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        std::string getPortDescription(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordtype">bool</span> setPortDescription(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string description);</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classRTT_1_1DataFlowInterface.html#aedae8dc1fc49511be315d4abe1682605">  198</a></span>&#160;        <a class="code" href="classRTT_1_1Service.html">Service</a>* <a class="code" href="classRTT_1_1DataFlowInterface.html#aedae8dc1fc49511be315d4abe1682605">getService</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mservice; }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>&amp; addLocalPort(<a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>&amp; port);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; addLocalEventPort(<a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; port,</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                SlotFunction callback = SlotFunction() );</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordtype">void</span> removeLocalPort(<span class="keyword">const</span> std::string&amp; name);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keyword">template</span>&lt; <span class="keyword">class</span> Type&gt;</div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="classRTT_1_1DataFlowInterface.html#a8366db58aee0b4db7cce0cf1601e7d7d">  239</a></span>&#160;        Type* <a class="code" href="classRTT_1_1DataFlowInterface.html#a8366db58aee0b4db7cce0cf1601e7d7d">getPortType</a>(<span class="keyword">const</span> std::string&amp; name) {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>Type*<span class="keyword">&gt;</span>( this-&gt;getPort(name) );</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        }</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordtype">void</span> clear();</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">#ifdef ORO_SIGNALLING_PORTS</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordtype">void</span> setupHandles();</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordtype">void</span> cleanupHandles();</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordtype">void</span> dataOnPort(<a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>* port);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor"></span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <a class="code" href="classRTT_1_1Service.html">Service</a>* createPortObject(<span class="keyword">const</span> std::string&amp; name);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordtype">bool</span> chkPtr(<span class="keyword">const</span> std::string &amp;where, <span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <span class="keywordtype">void</span>* ptr);</div>
-<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="classRTT_1_1DataFlowInterface.html#a40f3e00a2bb63d6a221ac0b78bb52f4e">  275</a></span>&#160;        <a class="code" href="classRTT_1_1DataFlowInterface.html#a8aa0a7f72a75baf5d4993816de8d0b5b">Ports</a> <a class="code" href="classRTT_1_1DataFlowInterface.html#a40f3e00a2bb63d6a221ac0b78bb52f4e">mports</a>;</div>
-<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classRTT_1_1DataFlowInterface.html#a786bd9c13ab8ac9af980daaa4d0f8784">  279</a></span>&#160;        <a class="code" href="classRTT_1_1Service.html">Service</a>* <a class="code" href="classRTT_1_1DataFlowInterface.html#a786bd9c13ab8ac9af980daaa4d0f8784">mservice</a>;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">#ifdef ORO_SIGNALLING_PORTS</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keyword">typedef</span> std::vector&lt; Handle &gt; Handles;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        Handles handles;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    };</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <a class="code" href="classRTT_1_1TaskContext.html">TaskContext</a>* getOwner() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classRTT_1_1DataFlowInterface.html#aedae8dc1fc49511be315d4abe1682605">  203</a></span>&#160;        <a class="code" href="classRTT_1_1Service.html">Service</a>* <a class="code" href="classRTT_1_1DataFlowInterface.html#aedae8dc1fc49511be315d4abe1682605">getService</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mservice; }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>&amp; addLocalPort(<a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>&amp; port);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; addLocalEventPort(<a class="code" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a>&amp; port,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                SlotFunction callback = SlotFunction() );</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordtype">void</span> removeLocalPort(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keyword">template</span>&lt; <span class="keyword">class</span> Type&gt;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="classRTT_1_1DataFlowInterface.html#a8366db58aee0b4db7cce0cf1601e7d7d">  244</a></span>&#160;        Type* <a class="code" href="classRTT_1_1DataFlowInterface.html#a8366db58aee0b4db7cce0cf1601e7d7d">getPortType</a>(<span class="keyword">const</span> std::string&amp; name) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>Type*<span class="keyword">&gt;</span>( this-&gt;getPort(name) );</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#ifdef ORO_SIGNALLING_PORTS</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordtype">void</span> setupHandles();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordtype">void</span> cleanupHandles();</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordtype">void</span> dataOnPort(<a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>* port);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor"></span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <a class="code" href="classRTT_1_1Service.html">Service</a>* createPortObject(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordtype">bool</span> chkPtr(<span class="keyword">const</span> std::string &amp;where, <span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <span class="keywordtype">void</span>* ptr);</div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="classRTT_1_1DataFlowInterface.html#a40f3e00a2bb63d6a221ac0b78bb52f4e">  280</a></span>&#160;        <a class="code" href="classRTT_1_1DataFlowInterface.html#a8aa0a7f72a75baf5d4993816de8d0b5b">Ports</a> <a class="code" href="classRTT_1_1DataFlowInterface.html#a40f3e00a2bb63d6a221ac0b78bb52f4e">mports</a>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="classRTT_1_1DataFlowInterface.html#a786bd9c13ab8ac9af980daaa4d0f8784">  284</a></span>&#160;        <a class="code" href="classRTT_1_1Service.html">Service</a>* <a class="code" href="classRTT_1_1DataFlowInterface.html#a786bd9c13ab8ac9af980daaa4d0f8784">mservice</a>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#ifdef ORO_SIGNALLING_PORTS</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keyword">typedef</span> std::vector&lt; Handle &gt; Handles;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        Handles handles;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    };</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classRTT_1_1base_1_1InputPortInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1InputPortInterface.html">RTT::base::InputPortInterface</a></div><div class="ttdoc">The base class of the InputPort. </div><div class="ttdef"><b>Definition:</b> <a href="InputPortInterface_8hpp_source.html#l00060">InputPortInterface.hpp:60</a></div></div>
 <div class="ttc" id="classRTT_1_1DataFlowInterface_html_ae4cc8251add66d43626fb5a36630a86d"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#ae4cc8251add66d43626fb5a36630a86d">RTT::DataFlowInterface::addPort</a></div><div class="ttdeci">base::PortInterface &amp; addPort(const std::string &amp;name, base::PortInterface &amp;port)</div><div class="ttdoc">Name and add a Port to the interface of this task and add a Service with the same name of the port...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00089">DataFlowInterface.hpp:89</a></div></div>
 <div class="ttc" id="classRTT_1_1DataFlowInterface_html"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html">RTT::DataFlowInterface</a></div><div class="ttdoc">The Interface of a TaskContext which exposes its data-flow ports. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00059">DataFlowInterface.hpp:59</a></div></div>
-<div class="ttc" id="classRTT_1_1DataFlowInterface_html_a8366db58aee0b4db7cce0cf1601e7d7d"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#a8366db58aee0b4db7cce0cf1601e7d7d">RTT::DataFlowInterface::getPortType</a></div><div class="ttdeci">Type * getPortType(const std::string &amp;name)</div><div class="ttdoc">Get a port of a specific type. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00239">DataFlowInterface.hpp:239</a></div></div>
-<div class="ttc" id="classRTT_1_1DataFlowInterface_html_a089897b16e398886de8a3b0fb86b1045"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#a089897b16e398886de8a3b0fb86b1045">RTT::DataFlowInterface::addEventPort</a></div><div class="ttdeci">base::InputPortInterface &amp; addEventPort(const std::string &amp;name, base::InputPortInterface &amp;port, SlotFunction callback=SlotFunction())</div><div class="ttdoc">Name and add an Event triggering Port to the interface of this task and add a Service with the same n...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00114">DataFlowInterface.hpp:114</a></div></div>
-<div class="ttc" id="classRTT_1_1DataFlowInterface_html_a40f3e00a2bb63d6a221ac0b78bb52f4e"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#a40f3e00a2bb63d6a221ac0b78bb52f4e">RTT::DataFlowInterface::mports</a></div><div class="ttdeci">Ports mports</div><div class="ttdoc">All our ports. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00275">DataFlowInterface.hpp:275</a></div></div>
+<div class="ttc" id="classRTT_1_1DataFlowInterface_html_a8366db58aee0b4db7cce0cf1601e7d7d"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#a8366db58aee0b4db7cce0cf1601e7d7d">RTT::DataFlowInterface::getPortType</a></div><div class="ttdeci">Type * getPortType(const std::string &amp;name)</div><div class="ttdoc">Get a port of a specific type. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00244">DataFlowInterface.hpp:244</a></div></div>
+<div class="ttc" id="classRTT_1_1DataFlowInterface_html_a089897b16e398886de8a3b0fb86b1045"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#a089897b16e398886de8a3b0fb86b1045">RTT::DataFlowInterface::addEventPort</a></div><div class="ttdeci">base::InputPortInterface &amp; addEventPort(const std::string &amp;name, base::InputPortInterface &amp;port, SlotFunction callback=SlotFunction())</div><div class="ttdoc">Name and add an Event triggering Port to the interface of this task and add a Service with the same n...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00117">DataFlowInterface.hpp:117</a></div></div>
+<div class="ttc" id="classRTT_1_1DataFlowInterface_html_a40f3e00a2bb63d6a221ac0b78bb52f4e"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#a40f3e00a2bb63d6a221ac0b78bb52f4e">RTT::DataFlowInterface::mports</a></div><div class="ttdeci">Ports mports</div><div class="ttdoc">All our ports. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00280">DataFlowInterface.hpp:280</a></div></div>
 <div class="ttc" id="classRTT_1_1Service_html"><div class="ttname"><a href="classRTT_1_1Service.html">RTT::Service</a></div><div class="ttdoc">This class allows storage and retrieval of operations, ports, attributes and properties provided by a...</div><div class="ttdef"><b>Definition:</b> <a href="Service_8hpp_source.html#l00096">Service.hpp:96</a></div></div>
-<div class="ttc" id="classRTT_1_1DataFlowInterface_html_aedae8dc1fc49511be315d4abe1682605"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#aedae8dc1fc49511be315d4abe1682605">RTT::DataFlowInterface::getService</a></div><div class="ttdeci">Service * getService() const </div><div class="ttdoc">Returns the service this interface belongs to. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00198">DataFlowInterface.hpp:198</a></div></div>
+<div class="ttc" id="classRTT_1_1DataFlowInterface_html_aedae8dc1fc49511be315d4abe1682605"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#aedae8dc1fc49511be315d4abe1682605">RTT::DataFlowInterface::getService</a></div><div class="ttdeci">Service * getService() const </div><div class="ttdoc">Returns the service this interface belongs to. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00203">DataFlowInterface.hpp:203</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1PortInterface_html_a2bc00aa5b85d1d8aa9b5f2b105809b89"><div class="ttname"><a href="classRTT_1_1base_1_1PortInterface.html#a2bc00aa5b85d1d8aa9b5f2b105809b89">RTT::base::PortInterface::setName</a></div><div class="ttdeci">bool setName(const std::string &amp;name)</div><div class="ttdoc">Change the name of this unconnected Port. </div><div class="ttdef"><b>Definition:</b> <a href="PortInterface_8cpp_source.html#l00051">PortInterface.cpp:51</a></div></div>
 <div class="ttc" id="classRTT_1_1DataFlowInterface_html_a8aa0a7f72a75baf5d4993816de8d0b5b"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#a8aa0a7f72a75baf5d4993816de8d0b5b">RTT::DataFlowInterface::Ports</a></div><div class="ttdeci">std::vector&lt; base::PortInterface * &gt; Ports</div><div class="ttdoc">A sequence of pointers to ports. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00065">DataFlowInterface.hpp:65</a></div></div>
 <div class="ttc" id="classRTT_1_1DataFlowInterface_html_ad7e28572572757c85aefab22f103dff3"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#ad7e28572572757c85aefab22f103dff3">RTT::DataFlowInterface::PortNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; PortNames</div><div class="ttdoc">A sequence of names of ports. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00070">DataFlowInterface.hpp:70</a></div></div>
 <div class="ttc" id="classRTT_1_1TaskContext_html"><div class="ttname"><a href="classRTT_1_1TaskContext.html">RTT::TaskContext</a></div><div class="ttdoc">The TaskContext is the C++ representation of an Orocos component. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8hpp_source.html#l00093">TaskContext.hpp:93</a></div></div>
-<div class="ttc" id="classRTT_1_1DataFlowInterface_html_a786bd9c13ab8ac9af980daaa4d0f8784"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#a786bd9c13ab8ac9af980daaa4d0f8784">RTT::DataFlowInterface::mservice</a></div><div class="ttdeci">Service * mservice</div><div class="ttdoc">The parent Service. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00279">DataFlowInterface.hpp:279</a></div></div>
-<div class="ttc" id="classRTT_1_1base_1_1PortInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1PortInterface.html">RTT::base::PortInterface</a></div><div class="ttdoc">The base class of every data flow port. </div><div class="ttdef"><b>Definition:</b> <a href="PortInterface_8hpp_source.html#l00057">PortInterface.hpp:57</a></div></div>
+<div class="ttc" id="classRTT_1_1DataFlowInterface_html_a786bd9c13ab8ac9af980daaa4d0f8784"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html#a786bd9c13ab8ac9af980daaa4d0f8784">RTT::DataFlowInterface::mservice</a></div><div class="ttdeci">Service * mservice</div><div class="ttdoc">The parent Service. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00284">DataFlowInterface.hpp:284</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1PortInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1PortInterface.html">RTT::base::PortInterface</a></div><div class="ttdoc">The base class of every data flow port. </div><div class="ttdef"><b>Definition:</b> <a href="PortInterface_8hpp_source.html#l00058">PortInterface.hpp:58</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:37 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:02 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

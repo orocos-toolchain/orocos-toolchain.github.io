@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -73,7 +73,7 @@ Inheritance diagram for RTT::os::ThreadInterface:</div>
   <map id="RTT::os::ThreadInterface_map" name="RTT::os::ThreadInterface_map">
 <area href="classRTT_1_1os_1_1MainThread.html" title="A class which represents the main() thread. " alt="RTT::os::MainThread" shape="rect" coords="0,56,202,80"/>
 <area href="classRTT_1_1os_1_1Thread.html" title="A Thread object executes user code in its own thread. " alt="RTT::os::Thread" shape="rect" coords="742,56,944,80"/>
-<area href="classRTT_1_1Activity.html" title="An Activity is an object that represents a thread. " alt="RTT::Activity" shape="rect" coords="424,112,626,136"/>
+<area href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. " alt="RTT::Activity" shape="rect" coords="424,112,626,136"/>
 <area href="classRTT_1_1extras_1_1TimerThread.html" title="This Periodic Thread is meant for executing a PeriodicActivity object periodically. " alt="RTT::extras::TimerThread" shape="rect" coords="1060,112,1262,136"/>
 <area href="classRTT_1_1corba_1_1CorbaDispatcher.html" title="This object sends over data flow messages from local buffers to a remote channel element. " alt="RTT::corba::CorbaDispatcher" shape="rect" coords="0,168,202,192"/>
 <area href="classRTT_1_1corba_1_1OrbRunner.html" title="Class which runs an orb in an Orocos thread. " alt="RTT::corba::OrbRunner" shape="rect" coords="212,168,414,192"/>
@@ -527,12 +527,12 @@ Protected Attributes</h2></td></tr>
 <p>Set the wait policy of a periodic thread. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">The</td><td>wait policy between ORO_WAIT_ABS (absolute wait) and ORO_WAIT_REL (relative wait) </td></tr>
+    <tr><td class="paramname">The</td><td>wait policy can be ORO_WAIT_ABS (absolute wait) and ORO_WAIT_REL (relative wait, with respect to current time) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1os_1_1Thread.html#a404bc82a8a3b36d7a2a95a457fd2a739">RTT::os::Thread</a>, and <a class="el" href="classRTT_1_1os_1_1MainThread.html#a066ec5f59c01e754ae1bddbd45739295">RTT::os::MainThread</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1os_1_1Thread.html#a404bc82a8a3b36d7a2a95a457fd2a739">RTT::os::Thread</a>, <a class="el" href="classRTT_1_1Activity.html#a88f76de00cef3bb28fd77dcb1b2b19c4">RTT::Activity</a>, and <a class="el" href="classRTT_1_1os_1_1MainThread.html#a066ec5f59c01e754ae1bddbd45739295">RTT::os::MainThread</a>.</p>
 
 </div>
 </div>
@@ -620,7 +620,7 @@ finalize() is called when the <a class="el" href="classRTT_1_1os_1_1Thread.html"
 <p>Threads are given an unique number, which follows thread creation order. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceRTT_1_1os.html#ae6e8bb6fecf005ff4ecf3b57db4b26c8" title="The number of threads in addition to the main() thread. ">os::threads</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="ThreadInterface_8hpp_source.html#l00223">223</a> of file <a class="el" href="ThreadInterface_8hpp_source.html">ThreadInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ThreadInterface_8hpp_source.html#l00224">224</a> of file <a class="el" href="ThreadInterface_8hpp_source.html">ThreadInterface.hpp</a>.</p>
 
 </div>
 </div>
@@ -631,7 +631,7 @@ finalize() is called when the <a class="el" href="classRTT_1_1os_1_1Thread.html"
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

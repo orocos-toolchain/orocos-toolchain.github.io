@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -129,6 +129,9 @@ Public Attributes</h2></td></tr>
 boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mact</b></td></tr>
 <tr class="separator:a3cf636097c17eef2c766f3cf0d1b7534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f0ca24318864a7697b2ed4c4759838"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60f0ca24318864a7697b2ed4c4759838"></a>
+SequenceFactory::data_store_type&#160;</td><td class="memItemRight" valign="bottom"><b>arg_cache</b></td></tr>
+<tr class="separator:a60f0ca24318864a7697b2ed4c4759838"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9478465eea7db031bf9ed49ede8573ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9478465eea7db031bf9ed49ede8573ed"></a>
 DataSourceSequence&#160;</td><td class="memItemRight" valign="bottom"><b>args</b></td></tr>
 <tr class="separator:a9478465eea7db031bf9ed49ede8573ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,8 +148,9 @@ DataSourceSequence&#160;</td><td class="memItemRight" valign="bottom"><b>args</b
 struct RTT::internal::FusedMSignal&lt; Signature &gt;</h3>
 
 <p>A Function object that reacts to a <a class="el" href="classRTT_1_1internal_1_1Signal.html" title="Very lightweight wrapper around the signalN classes that allows signals to be created where the numbe...">Signal</a> by writing the arguments in data sources and calling an action object. </p>
+<p>Implementation note: this class does not require copy/clone semantics because it is re-created for each SM instantiation, so it already gets the copy/cloned Data Sources in its constructor. </p>
 
-<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00468">468</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00498">498</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a08e23687af20494dd4ac441794dd54f3"></a>
 <div class="memitem">
@@ -198,7 +202,7 @@ template&lt;typename Signature&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00495">495</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00528">528</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
 
 </div>
 </div>
@@ -231,9 +235,7 @@ template&lt;typename Signature&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#aa219e67cd5ba6c860ef90e316cc7306d">RTT::base::DisposableInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00531">531</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
-
-<p>References <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00540">RTT::internal::FusedMSignal&lt; Signature &gt;::dispose()</a>.</p>
+<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00563">563</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +255,7 @@ template&lt;typename Signature&gt; </div>
 <p>Used to refcount self as long as <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ade71a27fafd17d9d068f8ead9004b987" title="As long as dispose (or executeAndDispose() ) is not called, this object will not be destroyed...">dispose()</a> is not called. </p>
 <p>This refcount is real-time since both shared_ptr and object were allocated with the rt_allocator class. </p>
 
-<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00484">484</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00517">517</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +265,7 @@ template&lt;typename Signature&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

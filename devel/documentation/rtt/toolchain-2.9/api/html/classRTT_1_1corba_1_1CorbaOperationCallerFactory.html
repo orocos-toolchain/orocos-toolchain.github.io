@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -84,16 +84,19 @@ typedef std::vector<br class="typebreak"/>
 <tr class="memitem:a916c887bbe47f1b007eea2a8cbaff7b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a916c887bbe47f1b007eea2a8cbaff7b0"></a>
 typedef std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Members</b></td></tr>
 <tr class="separator:a916c887bbe47f1b007eea2a8cbaff7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e0d31e9ffe3211e13d77b6af587bf26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e0d31e9ffe3211e13d77b6af587bf26"></a>
+<tr class="memitem:a31d9476078fe989e0fe75e92690da4ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31d9476078fe989e0fe75e92690da4ac"></a>
 typedef std::vector<br class="typebreak"/>
-&lt; <a class="el" href="structRTT_1_1ArgumentDescription.html">ArgumentDescription</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CDescriptions</b></td></tr>
-<tr class="separator:a6e0d31e9ffe3211e13d77b6af587bf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&lt; <a class="el" href="structRTT_1_1ArgumentDescription.html">ArgumentDescription</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CArgumentDescriptions</b></td></tr>
+<tr class="separator:a31d9476078fe989e0fe75e92690da4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae7ec943ed53f27912e74ec2b31fcc344"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7ec943ed53f27912e74ec2b31fcc344"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CorbaOperationCallerFactory</b> (const std::string &amp;method_name, corba::CService_ptr fact, PortableServer::POA_ptr the_poa)</td></tr>
 <tr class="separator:ae7ec943ed53f27912e74ec2b31fcc344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e362401b5c82f45b126c9cdef848d6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e362401b5c82f45b126c9cdef848d6d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CorbaOperationCallerFactory</b> (const COperation &amp;operation, corba::CService_ptr fact, PortableServer::POA_ptr the_poa)</td></tr>
+<tr class="separator:a5e362401b5c82f45b126c9cdef848d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e3b58214105e5cab01be85f1c57412b"><td class="memItemLeft" align="right" valign="top">corba::CService_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a4e3b58214105e5cab01be85f1c57412b">getService</a> ()</td></tr>
 <tr class="memdesc:a4e3b58214105e5cab01be85f1c57412b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the remote service that hosts this part.  <a href="#a4e3b58214105e5cab01be85f1c57412b">More...</a><br/></td></tr>
 <tr class="separator:a4e3b58214105e5cab01be85f1c57412b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,7 +181,7 @@ boost::shared_ptr<br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1OperationInterfacePart.html#adec3aefe99248918dfa083c6f94dfff9">RTT::OperationInterfacePart</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00062">62</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00070">70</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +212,7 @@ boost::shared_ptr<br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1OperationInterfacePart.html#aa41c101b800f84634c3bafba0534f310">RTT::OperationInterfacePart</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00066">66</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00077">77</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
 
 </div>
 </div>
@@ -239,9 +242,9 @@ boost::shared_ptr<br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1OperationInterfacePart.html#aee4f0cbbeaaa6b2de3d6442c42ab4ddd">RTT::OperationInterfacePart</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00113">113</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00154">154</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00123">getArgumentList()</a>.</p>
+<p>Referenced by <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00167">getArgumentList()</a>.</p>
 
 </div>
 </div>
@@ -281,11 +284,11 @@ boost::shared_ptr<br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1OperationInterfacePart.html#a946a835e85fc4df63ee9d09f6e811bc7">RTT::OperationInterfacePart</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00070">70</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00084">84</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
 
 <p>References <a class="el" href="Types_8cpp_source.html#l00048">RTT::types::Types()</a>.</p>
 
-<p>Referenced by <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00224">produce()</a>.</p>
+<p>Referenced by <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00276">produce()</a>.</p>
 
 </div>
 </div>
@@ -326,7 +329,7 @@ boost::shared_ptr<br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1OperationInterfacePart.html#a48013c81d22bfcd90f5fc003e156630e">RTT::OperationInterfacePart</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00089">89</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00118">118</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
 
 <p>References <a class="el" href="Types_8cpp_source.html#l00048">RTT::types::Types()</a>.</p>
 
@@ -390,7 +393,7 @@ boost::shared_ptr<br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1OperationInterfacePart.html#abcd1c698b958ae35a70eeae0d64c99b6">RTT::OperationInterfacePart</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00109">109</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00150">150</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
 
 </div>
 </div>
@@ -418,7 +421,7 @@ boost::shared_ptr<br class="typebreak"/>
 <p>Returns the remote service that hosts this part. </p>
 <dl class="section return"><dt>Returns</dt><dd>The pointer to a <a class="el" href="interfaceRTT_1_1corba_1_1CService.html" title="An Orocos Service which hosts operations, attributes and properties. ">CService</a> object. You need to duplicate it if you want to keep using it. </dd></dl>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8hpp_source.html#l00082">82</a> of file <a class="el" href="CorbaOperationCallerFactory_8hpp_source.html">CorbaOperationCallerFactory.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8hpp_source.html#l00085">85</a> of file <a class="el" href="CorbaOperationCallerFactory_8hpp_source.html">CorbaOperationCallerFactory.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="OperationCallerProxy_8hpp_source.html#l00035">RTT::corba::OperationCallerProxy::setImplementationPart()</a>.</p>
 
@@ -476,9 +479,9 @@ boost::shared_ptr<br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1OperationInterfacePart.html#acb8bfc58feeb11cbbebf219d1bd294fd">RTT::OperationInterfacePart</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00224">224</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00276">276</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
 
-<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00247">RTT::types::TypeInfo::buildActionAlias()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00229">RTT::types::TypeInfo::buildValue()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00070">getArgumentType()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00149">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00082">RTT::types::TypeInfo::getTypeName()</a>, <a class="el" href="Types_8cpp_source.html#l00048">RTT::types::Types()</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">RTT::corba::CorbaTypeTransporter::updateAny()</a>.</p>
+<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00248">RTT::types::TypeInfo::buildActionAlias()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00230">RTT::types::TypeInfo::buildValue()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00084">getArgumentType()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00149">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00083">RTT::types::TypeInfo::getTypeName()</a>, <a class="el" href="Types_8cpp_source.html#l00048">RTT::types::Types()</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">RTT::corba::CorbaTypeTransporter::updateAny()</a>.</p>
 
 </div>
 </div>
@@ -535,9 +538,9 @@ boost::shared_ptr<br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1OperationInterfacePart.html#ae742505198d014dd3086570fa746427a">RTT::OperationInterfacePart</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00378">378</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00444">444</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
 
-<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00229">RTT::types::TypeInfo::buildValue()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00149">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="DataSource_8inl_source.html#l00066">RTT::internal::DataSource&lt; T &gt;::narrow()</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">RTT::corba::CorbaTypeTransporter::updateAny()</a>.</p>
+<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00230">RTT::types::TypeInfo::buildValue()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00149">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="DataSource_8inl_source.html#l00066">RTT::internal::DataSource&lt; T &gt;::narrow()</a>, <a class="el" href="SendStatus_8hpp_source.html#l00057">RTT::SendSuccess</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">RTT::corba::CorbaTypeTransporter::updateAny()</a>.</p>
 
 </div>
 </div>
@@ -576,7 +579,7 @@ boost::shared_ptr<br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1OperationInterfacePart.html#affb35c4fa2b0c3363184562a7a674e12">RTT::OperationInterfacePart</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00298">298</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00364">364</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
 
 </div>
 </div>
@@ -634,9 +637,9 @@ boost::shared_ptr<br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1OperationInterfacePart.html#a5bb20c59d3e2b24b44d071727d4b3406">RTT::OperationInterfacePart</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00271">271</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00328">328</a> of file <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html">CorbaOperationCallerFactory.cpp</a>.</p>
 
-<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00229">RTT::types::TypeInfo::buildValue()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00149">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00082">RTT::types::TypeInfo::getTypeName()</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">RTT::corba::CorbaTypeTransporter::updateAny()</a>.</p>
+<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00230">RTT::types::TypeInfo::buildValue()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00149">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00083">RTT::types::TypeInfo::getTypeName()</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">RTT::corba::CorbaTypeTransporter::updateAny()</a>.</p>
 
 </div>
 </div>
@@ -647,7 +650,7 @@ boost::shared_ptr<br class="typebreak"/>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

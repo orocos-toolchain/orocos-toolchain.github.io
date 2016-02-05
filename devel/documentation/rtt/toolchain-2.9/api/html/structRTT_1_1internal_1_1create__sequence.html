@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -80,6 +80,10 @@ typedef <a class="el" href="structRTT_1_1internal_1_1create__sequence.html">crea
 typedef mpl::front&lt; <a class="el" href="classRTT_1_1internal_1_1List.html">List</a> &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>arg_type</b></td></tr>
 <tr class="memdesc:a61a521a4d995bb2c859a0667f2c1abe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The argument type. <br/></td></tr>
 <tr class="separator:a61a521a4d995bb2c859a0667f2c1abe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62abac184d165442e0645e24ce7cb1c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62abac184d165442e0645e24ce7cb1c7"></a>
+typedef <a class="el" href="structRTT_1_1internal_1_1DataStore.html">DataStore</a>&lt; arg_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>arg_store_type</b></td></tr>
+<tr class="memdesc:a62abac184d165442e0645e24ce7cb1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The argument storage type. <br/></td></tr>
+<tr class="separator:a62abac184d165442e0645e24ce7cb1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a564453d5d0b32dbcafe448cfe57f9b97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a564453d5d0b32dbcafe448cfe57f9b97"></a>
 typedef remove_cr&lt; arg_type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>ds_arg_type</b></td></tr>
 <tr class="memdesc:a564453d5d0b32dbcafe448cfe57f9b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data source value type of an assignable data source is non-const, non-reference. <br/></td></tr>
@@ -117,11 +121,20 @@ atail_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>atype</b><
 <tr class="memitem:a9f92fd0a2ec46e44c429442c3ae3eef6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f92fd0a2ec46e44c429442c3ae3eef6"></a>
 typedef tail::data_type&#160;</td><td class="memItemRight" valign="bottom"><b>arg_tail_type</b></td></tr>
 <tr class="separator:a9f92fd0a2ec46e44c429442c3ae3eef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c9ab6a5d328efc4bf84159ff2d8a92f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c9ab6a5d328efc4bf84159ff2d8a92f"></a>
+typedef tail::data_store_type&#160;</td><td class="memItemRight" valign="bottom"><b>arg_store_tail_type</b></td></tr>
+<tr class="separator:a6c9ab6a5d328efc4bf84159ff2d8a92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a669ed92ee34686048ad05b6ecd579876"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a669ed92ee34686048ad05b6ecd579876"></a>
 typedef bf::cons&lt; arg_type, <br class="typebreak"/>
 arg_tail_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data_type</b></td></tr>
 <tr class="memdesc:a669ed92ee34686048ad05b6ecd579876"><td class="mdescLeft">&#160;</td><td class="mdescRight">The joint T data type of head and tail. <br/></td></tr>
 <tr class="separator:a669ed92ee34686048ad05b6ecd579876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7159f847d493b255d331c2c7903eb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc7159f847d493b255d331c2c7903eb1"></a>
+typedef bf::cons<br class="typebreak"/>
+&lt; <a class="el" href="structRTT_1_1internal_1_1DataStore.html">arg_store_type</a>, <br class="typebreak"/>
+arg_store_tail_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data_store_type</b></td></tr>
+<tr class="memdesc:adc7159f847d493b255d331c2c7903eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The joint T data storage type of head and tail. <br/></td></tr>
+<tr class="separator:adc7159f847d493b255d331c2c7903eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -137,6 +150,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e1b36fc7762516beafcb8202c6aec45"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (const data_type &amp;in, const atype &amp;seq)</td></tr>
 <tr class="memdesc:a6e1b36fc7762516beafcb8202c6aec45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the values of a sequence of AssignableDataSource&lt;T&gt; data sources ot the values contained in <em>in</em> using set().  <a href="#a6e1b36fc7762516beafcb8202c6aec45">More...</a><br/></td></tr>
 <tr class="separator:a6e1b36fc7762516beafcb8202c6aec45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84736a28af5a8ada08cc953dc4995f04"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (const data_store_type &amp;in, const atype &amp;seq)</td></tr>
+<tr class="memdesc:a84736a28af5a8ada08cc953dc4995f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the values of a sequence of AssignableDataSource&lt;T&gt; data sources ot the values contained in <em>in</em> using set().  <a href="#a84736a28af5a8ada08cc953dc4995f04">More...</a><br/></td></tr>
+<tr class="separator:a84736a28af5a8ada08cc953dc4995f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67062c9c9d0eec7ac7c97c0fece1dc5"><td class="memItemLeft" align="right" valign="top">static data_store_type&#160;</td><td class="memItemRight" valign="bottom"><b>store</b> (const data_type &amp;in)</td></tr>
+<tr class="memdesc:af67062c9c9d0eec7ac7c97c0fece1dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the values of a sequence of data_type into a data_store_type sequence for later retrieval during load.  <a href="#af67062c9c9d0eec7ac7c97c0fece1dc5">More...</a><br/></td></tr>
+<tr class="separator:af67062c9c9d0eec7ac7c97c0fece1dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b49a521a9e34455028264a475afc48e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (const type &amp;seq)</td></tr>
 <tr class="memdesc:a5b49a521a9e34455028264a475afc48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#ab25b3bf055137d7d08c648ac833b3074" title="In case the internal::DataSource returns a &#39;reference&#39; type, call this method to notify it that the d...">DataSourceBase::updated()</a> function for each element in sequence <em>seq</em>, in case the element is a non-const reference type.  <a href="#a5b49a521a9e34455028264a475afc48e">More...</a><br/></td></tr>
 <tr class="separator:a5b49a521a9e34455028264a475afc48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,7 +180,7 @@ struct RTT::internal::create_sequence&lt; List &gt;</h3>
 <p>copy() creates a fusion sequence of DataSource&lt;T&gt;::shared_ptr from an mpl sequence and a sequence returned by operator() to do the scripting copy/clone semantics on each element of the sequence.</p>
 <p>This is a typical head-tail recursive implementation where operator() calls itself, but in another type specialisation. </p>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00179">179</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00210">210</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a08e0a9fbf847675c01a84b463a803298"></a>
 <div class="memitem">
@@ -186,7 +205,7 @@ template&lt;class List, int size&gt; </div>
 <p>The type of the tail (<a class="el" href="classRTT_1_1internal_1_1List.html" title="This object represents the default queue implementation used by Orocos objects. ">List</a> - head) of our sequence. </p>
 <p>It is recursively formulated in terms of <a class="el" href="structRTT_1_1internal_1_1create__sequence.html" title="This class can create three kinds of Boost Fusion Sequences. ">create_sequence</a>. </p>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00215">215</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00251">251</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -236,7 +255,7 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a Fusion Sequence of DataSource&lt;T&gt;::shared_ptr objects </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00256">256</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00298">298</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +303,7 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Fusion Sequence of DataSource&lt;T&gt;::shared_ptr containing the copies. </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00302">302</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00369">369</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -321,7 +340,7 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A sequence of type T holding the values of the DataSource&lt;T&gt;. </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00270">270</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00312">312</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -358,7 +377,7 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An full qualified type name. </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00332">332</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00399">399</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -395,7 +414,54 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> registered type info object. </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00315">315</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00382">382</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a84736a28af5a8ada08cc953dc4995f04"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class List, int size&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void RTT::internal::create_sequence_impl&lt; <a class="el" href="classRTT_1_1internal_1_1List.html">List</a>, size &gt;::load </td>
+          <td>(</td>
+          <td class="paramtype">const data_store_type &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const atype &amp;&#160;</td>
+          <td class="paramname"><em>seq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the values of a sequence of AssignableDataSource&lt;T&gt; data sources ot the values contained in <em>in</em> using set(). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>The values to write. </td></tr>
+    <tr><td class="paramname">seq</td><td>The receiving assignable data sources. Because the datasources are shared pointers, it's ok to work on the temporary copies of seq. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00335">335</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -442,7 +508,7 @@ template&lt;class List, int size&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00280">280</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00322">322</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -491,7 +557,45 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a Fusion Sequence of DataSource&lt;T&gt;::shared_ptr objects </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00240">240</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00282">282</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af67062c9c9d0eec7ac7c97c0fece1dc5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class List, int size&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static data_store_type RTT::internal::create_sequence_impl&lt; <a class="el" href="classRTT_1_1internal_1_1List.html">List</a>, size &gt;::store </td>
+          <td>(</td>
+          <td class="paramtype">const data_type &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stores the values of a sequence of data_type into a data_store_type sequence for later retrieval during load. </p>
+<p>We must return the resulting sequence by value, since boost fusion returns temporaries, which we can't take a reference to. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>The values to store </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The receiving <a class="el" href="structRTT_1_1internal_1_1DataStore.html" title="Store a bound argument which may be a reference, const reference or any other type. ">DataStore</a> sequence. </dd></dl>
+
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00348">348</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -527,7 +631,7 @@ template&lt;class List, int size&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00290">290</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00357">357</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -537,7 +641,7 @@ template&lt;class List, int size&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

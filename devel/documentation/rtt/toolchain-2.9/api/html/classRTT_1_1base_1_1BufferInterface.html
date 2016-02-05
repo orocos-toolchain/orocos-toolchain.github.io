@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -102,9 +102,9 @@ typedef boost::call_traits&lt; T &gt;<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae2af23bcbd142dc2d09b75e30dddf391"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ae2af23bcbd142dc2d09b75e30dddf391">Pop</a> (reference_t item)=0</td></tr>
-<tr class="memdesc:ae2af23bcbd142dc2d09b75e30dddf391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the oldest value from the buffer.  <a href="#ae2af23bcbd142dc2d09b75e30dddf391">More...</a><br/></td></tr>
-<tr class="separator:ae2af23bcbd142dc2d09b75e30dddf391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade01d7c098ebc1062ea374cb18e340ba"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ade01d7c098ebc1062ea374cb18e340ba">Pop</a> (reference_t item)=0</td></tr>
+<tr class="memdesc:ade01d7c098ebc1062ea374cb18e340ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the oldest value from the buffer.  <a href="#ade01d7c098ebc1062ea374cb18e340ba">More...</a><br/></td></tr>
+<tr class="separator:ade01d7c098ebc1062ea374cb18e340ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fb40ec315410ca6650bb722b23230dd"><td class="memItemLeft" align="right" valign="top">virtual size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a1fb40ec315410ca6650bb722b23230dd">Pop</a> (std::vector&lt; value_t &gt; &amp;items)=0</td></tr>
 <tr class="memdesc:a1fb40ec315410ca6650bb722b23230dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the whole buffer.  <a href="#a1fb40ec315410ca6650bb722b23230dd">More...</a><br/></td></tr>
 <tr class="separator:a1fb40ec315410ca6650bb722b23230dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,9 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6cabb6e94e7d78d4d916f3ddab6e1824"><td class="memItemLeft" align="right" valign="top">virtual size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a6cabb6e94e7d78d4d916f3ddab6e1824">Push</a> (const std::vector&lt; value_t &gt; &amp;items)=0</td></tr>
 <tr class="memdesc:a6cabb6e94e7d78d4d916f3ddab6e1824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a sequence of values to the buffer.  <a href="#a6cabb6e94e7d78d4d916f3ddab6e1824">More...</a><br/></td></tr>
 <tr class="separator:a6cabb6e94e7d78d4d916f3ddab6e1824"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a500e68c93d1286799d4bc4d101be3068"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a500e68c93d1286799d4bc4d101be3068">data_sample</a> (const T &amp;sample)=0</td></tr>
-<tr class="memdesc:a500e68c93d1286799d4bc4d101be3068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this buffer with a data sample, such that for dynamical allocated types T, the buffer can reserve place to hold these elements.  <a href="#a500e68c93d1286799d4bc4d101be3068">More...</a><br/></td></tr>
-<tr class="separator:a500e68c93d1286799d4bc4d101be3068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823e9a30c4d87afa6859af3d799e58eb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a823e9a30c4d87afa6859af3d799e58eb">data_sample</a> (const T &amp;sample, bool reset=true)=0</td></tr>
+<tr class="memdesc:a823e9a30c4d87afa6859af3d799e58eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this buffer with a data sample, such that for dynamical allocated types T, the buffer can reserve place to hold these elements.  <a href="#a823e9a30c4d87afa6859af3d799e58eb">More...</a><br/></td></tr>
+<tr class="separator:a823e9a30c4d87afa6859af3d799e58eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a180f169f0caf281e408dd2c62b9b85bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a180f169f0caf281e408dd2c62b9b85bf"></a>
 virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a180f169f0caf281e408dd2c62b9b85bf">data_sample</a> () const =0</td></tr>
 <tr class="memdesc:a180f169f0caf281e408dd2c62b9b85bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads back a data sample. <br/></td></tr>
@@ -155,7 +155,7 @@ class RTT::base::BufferInterface&lt; T &gt;</h3>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="BufferInterface_8hpp_source.html#l00055">55</a> of file <a class="el" href="BufferInterface_8hpp_source.html">BufferInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferInterface_8hpp_source.html#l00056">56</a> of file <a class="el" href="BufferInterface_8hpp_source.html">BufferInterface.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a721f2d8ea29ab506dbe0a4c8b4a26739"></a>
 <div class="memitem">
@@ -210,11 +210,11 @@ class RTT::base::BufferInterface&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#ac462fc20b959fad08ca187b1ce5f8ec7">RTT::base::BufferLocked&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a4aed664f7fe4e75c6081fbd0c615d617">RTT::base::BufferUnSync&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a3102c9253f531e8df423f5482cf91c03">RTT::base::BufferLockFree&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00106">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00116">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a500e68c93d1286799d4bc4d101be3068"></a>
+<a class="anchor" id="a823e9a30c4d87afa6859af3d799e58eb"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -224,11 +224,21 @@ template&lt;class T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface</a>&lt; T &gt;::data_sample </td>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface</a>&lt; T &gt;::data_sample </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td class="paramname"><em>sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reset</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -239,11 +249,19 @@ template&lt;class T&gt; </div>
 </div><div class="memdoc">
 
 <p>Initializes this buffer with a data sample, such that for dynamical allocated types T, the buffer can reserve place to hold these elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sample</td><td>the data sample </td></tr>
+    <tr><td class="paramname">reset</td><td>enforce reinitialization even if this operation clears all data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the buffer was successfully (re)initialized. </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Calling this function causes all data in the buffer to be lost and the size being reset to zero.   </dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a9d9fbf417f40fdb4daac425204a1f6de">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#a18abf8891fc5e738ef735cfbf28d7232">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a8a834e79974647f6eb9afa1d1b8d1c07">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#ad60525f313d2a8d828668e299a1fc599">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#a67124dcaf2cb0b1a8bf2ee1ca329bf4c">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a09b214cc99e3731756b06832edc16e3b">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00115">RTT::internal::ChannelBufferElement&lt; T &gt;::data_sample()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00125">RTT::internal::ChannelBufferElement&lt; T &gt;::data_sample()</a>.</p>
 
 </div>
 </div>
@@ -303,7 +321,7 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ae2af23bcbd142dc2d09b75e30dddf391"></a>
+<a class="anchor" id="ade01d7c098ebc1062ea374cb18e340ba"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -313,7 +331,7 @@ template&lt;class T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool <a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface</a>&lt; T &gt;::Pop </td>
+          <td class="memname">virtual <a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a> <a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface</a>&lt; T &gt;::Pop </td>
           <td>(</td>
           <td class="paramtype">reference_t&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
@@ -336,7 +354,7 @@ template&lt;class T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if something was read.   </dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#ad9c98ca231c111dfbc5e507b4e62f7bc">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#a023e8c8dae41633865c4f8efd9230df8">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a35b627a820025e880f82fd4d9baaad7a">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a2defb590a3b6d562409013a5593a1255">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#ae8823ea9b4773e8dbc755785f10131c6">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a8f3f14c3cdc50f8212c49d392c5e6d1e">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -407,7 +425,7 @@ template&lt;class T&gt; </div>
 
 <p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a5dacf9d5b735dfac6f4dfa4f696269f1">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#a9d5c7746021b536811d97c73cec7608f">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a42b4c5b14f1df3cf2deb43964604dc07">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00083">RTT::internal::ChannelBufferElement&lt; T &gt;::read()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00085">RTT::internal::ChannelBufferElement&lt; T &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -446,7 +464,7 @@ template&lt;class T&gt; </div>
 
 <p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a12edb0da59fa45b2cd7bda7cb1aac797">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#a2983e51d6c3b7527cde54432bf6b8c53">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a9129e1a9d2a9cc29f738746f6bcdb957">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00072">RTT::internal::ChannelBufferElement&lt; T &gt;::write()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00075">RTT::internal::ChannelBufferElement&lt; T &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -521,7 +539,7 @@ template&lt;class T&gt; </div>
 
 <p>Implemented in <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a7a0bb28801aa18093fddcfbe38ce8823">RTT::base::BufferLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1BufferLocked.html#ab29941aa65d94aaf8169f14d1efd0730">RTT::base::BufferLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a9d39ebc891decb54616680f4d28439dc">RTT::base::BufferUnSync&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00106">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>, and <a class="el" href="ChannelBufferElement_8hpp_source.html#l00083">RTT::internal::ChannelBufferElement&lt; T &gt;::read()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelBufferElement_8hpp_source.html#l00116">RTT::internal::ChannelBufferElement&lt; T &gt;::clear()</a>, and <a class="el" href="ChannelBufferElement_8hpp_source.html#l00085">RTT::internal::ChannelBufferElement&lt; T &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -559,7 +577,7 @@ template&lt;class T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

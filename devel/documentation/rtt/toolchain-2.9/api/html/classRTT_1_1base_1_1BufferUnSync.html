@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -100,13 +100,17 @@ typedef boost::shared_ptr<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2d9b9b60cb512241433a87eab9d7816c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d9b9b60cb512241433a87eab9d7816c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a2d9b9b60cb512241433a87eab9d7816c">BufferUnSync</a> (size_type <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#ad75bd7cee2c3be148996a2b2f5dd6b9e">size</a>, const T &amp;initial_value=T(), bool circular=false)</td></tr>
-<tr class="memdesc:a2d9b9b60cb512241433a87eab9d7816c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a buffer of size <em>size</em>. <br/></td></tr>
-<tr class="separator:a2d9b9b60cb512241433a87eab9d7816c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a834e79974647f6eb9afa1d1b8d1c07"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a8a834e79974647f6eb9afa1d1b8d1c07">data_sample</a> (const T &amp;sample)</td></tr>
-<tr class="memdesc:a8a834e79974647f6eb9afa1d1b8d1c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this buffer with a data sample, such that for dynamical allocated types T, the buffer can reserve place to hold these elements.  <a href="#a8a834e79974647f6eb9afa1d1b8d1c07">More...</a><br/></td></tr>
-<tr class="separator:a8a834e79974647f6eb9afa1d1b8d1c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ded0f0cb34643ab4b778189263a9206"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ded0f0cb34643ab4b778189263a9206"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a9ded0f0cb34643ab4b778189263a9206">BufferUnSync</a> (size_type <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#ad75bd7cee2c3be148996a2b2f5dd6b9e">size</a>, const Options &amp;options=Options())</td></tr>
+<tr class="memdesc:a9ded0f0cb34643ab4b778189263a9206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an uninitialized buffer of size <em>size</em>. <br/></td></tr>
+<tr class="separator:a9ded0f0cb34643ab4b778189263a9206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971eda5f890f11389542e1de89679aff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a971eda5f890f11389542e1de89679aff"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a971eda5f890f11389542e1de89679aff">BufferUnSync</a> (size_type <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#ad75bd7cee2c3be148996a2b2f5dd6b9e">size</a>, const T &amp;initial_value, const Options &amp;options=Options())</td></tr>
+<tr class="memdesc:a971eda5f890f11389542e1de89679aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a buffer of size <em>size</em>. <br/></td></tr>
+<tr class="separator:a971eda5f890f11389542e1de89679aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b214cc99e3731756b06832edc16e3b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a09b214cc99e3731756b06832edc16e3b">data_sample</a> (const T &amp;sample, bool reset=true)</td></tr>
+<tr class="memdesc:a09b214cc99e3731756b06832edc16e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this buffer with a data sample, such that for dynamical allocated types T, the buffer can reserve place to hold these elements.  <a href="#a09b214cc99e3731756b06832edc16e3b">More...</a><br/></td></tr>
+<tr class="separator:a09b214cc99e3731756b06832edc16e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7776ee81826c5538ca16f052e8d9dffd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7776ee81826c5538ca16f052e8d9dffd"></a>
 virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a7776ee81826c5538ca16f052e8d9dffd">data_sample</a> () const </td></tr>
 <tr class="memdesc:a7776ee81826c5538ca16f052e8d9dffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads back a data sample. <br/></td></tr>
@@ -121,9 +125,9 @@ virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <tr class="memitem:aeb832b1a9ceb930337b7fcd5227f73d9"><td class="memItemLeft" align="right" valign="top">size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#aeb832b1a9ceb930337b7fcd5227f73d9">Push</a> (const std::vector&lt; T &gt; &amp;items)</td></tr>
 <tr class="memdesc:aeb832b1a9ceb930337b7fcd5227f73d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a sequence of values to the buffer.  <a href="#aeb832b1a9ceb930337b7fcd5227f73d9">More...</a><br/></td></tr>
 <tr class="separator:aeb832b1a9ceb930337b7fcd5227f73d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35b627a820025e880f82fd4d9baaad7a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a35b627a820025e880f82fd4d9baaad7a">Pop</a> (reference_t item)</td></tr>
-<tr class="memdesc:a35b627a820025e880f82fd4d9baaad7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the oldest value from the buffer.  <a href="#a35b627a820025e880f82fd4d9baaad7a">More...</a><br/></td></tr>
-<tr class="separator:a35b627a820025e880f82fd4d9baaad7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3f14c3cdc50f8212c49d392c5e6d1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#a8f3f14c3cdc50f8212c49d392c5e6d1e">Pop</a> (reference_t item)</td></tr>
+<tr class="memdesc:a8f3f14c3cdc50f8212c49d392c5e6d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the oldest value from the buffer.  <a href="#a8f3f14c3cdc50f8212c49d392c5e6d1e">More...</a><br/></td></tr>
+<tr class="separator:a8f3f14c3cdc50f8212c49d392c5e6d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0f04192663158c2aa71ce2d64ffb875"><td class="memItemLeft" align="right" valign="top">size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferUnSync.html#ab0f04192663158c2aa71ce2d64ffb875">Pop</a> (std::vector&lt; T &gt; &amp;items)</td></tr>
 <tr class="memdesc:ab0f04192663158c2aa71ce2d64ffb875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the whole buffer.  <a href="#ab0f04192663158c2aa71ce2d64ffb875">More...</a><br/></td></tr>
 <tr class="separator:ab0f04192663158c2aa71ce2d64ffb875"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,7 +191,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#a721f2d8ea29ab506dbe0a4c8b4a26739">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00169">169</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00181">181</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
@@ -218,11 +222,11 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#af28ce2d9f7370819cb9bcd3222cc67e3">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00177">177</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00189">189</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8a834e79974647f6eb9afa1d1b8d1c07"></a>
+<a class="anchor" id="a09b214cc99e3731756b06832edc16e3b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -232,11 +236,21 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html">RTT::base::BufferUnSync</a>&lt; T &gt;::data_sample </td>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html">RTT::base::BufferUnSync</a>&lt; T &gt;::data_sample </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td class="paramname"><em>sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reset</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -247,11 +261,19 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Initializes this buffer with a data sample, such that for dynamical allocated types T, the buffer can reserve place to hold these elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sample</td><td>the data sample </td></tr>
+    <tr><td class="paramname">reset</td><td>enforce reinitialization even if this operation clears all data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the buffer was successfully (re)initialized. </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Calling this function causes all data in the buffer to be lost and the size being reset to zero.   </dd></dl>
 
-<p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a500e68c93d1286799d4bc4d101be3068">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a823e9a30c4d87afa6859af3d799e58eb">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00076">76</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00085">85</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
@@ -283,7 +305,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#a403a7c9c68c2c4870079f062b8eab36b">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00181">181</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00193">193</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
@@ -315,11 +337,11 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#aabaaf0c817a58a4b130d492b58e86b1a">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00185">185</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00197">197</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a35b627a820025e880f82fd4d9baaad7a"></a>
+<a class="anchor" id="a8f3f14c3cdc50f8212c49d392c5e6d1e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -329,7 +351,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html">RTT::base::BufferUnSync</a>&lt; T &gt;::Pop </td>
+          <td class="memname"><a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a> <a class="el" href="classRTT_1_1base_1_1BufferUnSync.html">RTT::base::BufferUnSync</a>&lt; T &gt;::Pop </td>
           <td>(</td>
           <td class="paramtype">reference_t&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
@@ -352,9 +374,9 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if something was read.   </dd></dl>
 
-<p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ae2af23bcbd142dc2d09b75e30dddf391">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ade01d7c098ebc1062ea374cb18e340ba">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00125">125</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00139">139</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
@@ -393,7 +415,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a1fb40ec315410ca6650bb722b23230dd">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00135">135</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00149">149</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
@@ -427,7 +449,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ad877aa5119fb6ea6ee3a4fc8f6800cfb">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00147">147</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00161">161</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +488,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#afc6ad58cdae63ea7a2fc7d130686e92d">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00092">92</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00106">106</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
@@ -505,7 +527,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a6cabb6e94e7d78d4d916f3ddab6e1824">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00104">104</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00118">118</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
@@ -543,7 +565,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#adc9383d94d498971244c09907004de3f">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00162">162</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00174">174</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
@@ -575,7 +597,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#ae43534aa3872e564c88fd18d5cf5f772">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00173">173</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferUnSync_8hpp_source.html#l00185">185</a> of file <a class="el" href="BufferUnSync_8hpp_source.html">BufferUnSync.hpp</a>.</p>
 
 </div>
 </div>
@@ -585,7 +607,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -71,10 +71,11 @@ Inheritance diagram for RTT::base::DataObjectInterface&lt; T &gt;:</div>
  <div class="center">
   <img src="classRTT_1_1base_1_1DataObjectInterface.png" usemap="#RTT::base::DataObjectInterface&lt; T &gt;_map" alt=""/>
   <map id="RTT::base::DataObjectInterface&lt; T &gt;_map" name="RTT::base::DataObjectInterface&lt; T &gt;_map">
-<area href="classRTT_1_1base_1_1DataObjectLocked.html" title="A class which provides locked/protected access to one typed element of data. " alt="RTT::base::DataObjectLocked&lt; T &gt;" shape="rect" coords="0,56,221,80"/>
-<area href="classRTT_1_1base_1_1DataObjectLockFree.html" title="This DataObject is a Lock-Free implementation, such that reads and writes can happen concurrently wit..." alt="RTT::base::DataObjectLockFree&lt; T &gt;" shape="rect" coords="231,56,452,80"/>
-<area href="classRTT_1_1base_1_1DataObjectUnSync.html" title="A class which provides unprotected (not thread-safe) access to one typed element of data..." alt="RTT::base::DataObjectUnSync&lt; T &gt;" shape="rect" coords="462,56,683,80"/>
-<area href="classRTT_1_1base_1_1DataObject.html" title="This object represents the default thread-safe data object implementation used by Orocos objects..." alt="RTT::base::DataObject&lt; T &gt;" shape="rect" coords="231,112,452,136"/>
+<area href="classRTT_1_1base_1_1DataObjectBase.html" title="Base class for all data object classes. " alt="RTT::base::DataObjectBase" shape="rect" coords="231,0,452,24"/>
+<area href="classRTT_1_1base_1_1DataObjectLocked.html" title="A class which provides locked/protected access to one typed element of data. " alt="RTT::base::DataObjectLocked&lt; T &gt;" shape="rect" coords="0,112,221,136"/>
+<area href="classRTT_1_1base_1_1DataObjectLockFree.html" title="This DataObject is a Lock-Free implementation, such that reads and writes can happen concurrently wit..." alt="RTT::base::DataObjectLockFree&lt; T &gt;" shape="rect" coords="231,112,452,136"/>
+<area href="classRTT_1_1base_1_1DataObjectUnSync.html" title="A class which provides unprotected (not thread-safe) access to one typed element of data..." alt="RTT::base::DataObjectUnSync&lt; T &gt;" shape="rect" coords="462,112,683,136"/>
+<area href="classRTT_1_1base_1_1DataObject.html" title="This object represents the default thread-safe data object implementation used by Orocos objects..." alt="RTT::base::DataObject&lt; T &gt;" shape="rect" coords="231,168,452,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -100,18 +101,22 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a5f6995d4e2c6ed77ae1a5a2e5c45c8d3">~DataObjectInterface</a> ()</td></tr>
 <tr class="memdesc:a5f6995d4e2c6ed77ae1a5a2e5c45c8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
 <tr class="separator:a5f6995d4e2c6ed77ae1a5a2e5c45c8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a571b38909495e3d88cc6e935360229"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a4a571b38909495e3d88cc6e935360229">Get</a> (<a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;pull) const =0</td></tr>
-<tr class="memdesc:a4a571b38909495e3d88cc6e935360229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a copy of the Data of this data object.  <a href="#a4a571b38909495e3d88cc6e935360229">More...</a><br/></td></tr>
-<tr class="separator:a4a571b38909495e3d88cc6e935360229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4679a280f366ee7a41f1fa9703b22dd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#ab4679a280f366ee7a41f1fa9703b22dd">Get</a> (<a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;pull, bool copy_old_data=true) const =0</td></tr>
+<tr class="memdesc:ab4679a280f366ee7a41f1fa9703b22dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a copy of the Data of this data object.  <a href="#ab4679a280f366ee7a41f1fa9703b22dd">More...</a><br/></td></tr>
+<tr class="separator:ab4679a280f366ee7a41f1fa9703b22dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79f1da468f1fb526d9d5f87fc65e566e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a79f1da468f1fb526d9d5f87fc65e566e">Get</a> () const =0</td></tr>
 <tr class="memdesc:a79f1da468f1fb526d9d5f87fc65e566e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a copy of the data of this data object.  <a href="#a79f1da468f1fb526d9d5f87fc65e566e">More...</a><br/></td></tr>
 <tr class="separator:a79f1da468f1fb526d9d5f87fc65e566e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7512c12a0189fca337a55db262b3209a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a7512c12a0189fca337a55db262b3209a">Set</a> (const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;push)=0</td></tr>
-<tr class="memdesc:a7512c12a0189fca337a55db262b3209a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the data to a certain value.  <a href="#a7512c12a0189fca337a55db262b3209a">More...</a><br/></td></tr>
-<tr class="separator:a7512c12a0189fca337a55db262b3209a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4851566b61e94041d410174b68719745"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a4851566b61e94041d410174b68719745">data_sample</a> (const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;sample)=0</td></tr>
-<tr class="memdesc:a4851566b61e94041d410174b68719745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a data sample to initialize this data object.  <a href="#a4851566b61e94041d410174b68719745">More...</a><br/></td></tr>
-<tr class="separator:a4851566b61e94041d410174b68719745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0929e8179c66bf0c980da2bf4185482"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#aa0929e8179c66bf0c980da2bf4185482">Set</a> (const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;push)=0</td></tr>
+<tr class="memdesc:aa0929e8179c66bf0c980da2bf4185482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the data to a certain value.  <a href="#aa0929e8179c66bf0c980da2bf4185482">More...</a><br/></td></tr>
+<tr class="separator:aa0929e8179c66bf0c980da2bf4185482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1b6a2f4c6b7e9f6f6c1d58c6c73dcc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a2a1b6a2f4c6b7e9f6f6c1d58c6c73dcc">data_sample</a> (const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;sample, bool reset=true)=0</td></tr>
+<tr class="memdesc:a2a1b6a2f4c6b7e9f6f6c1d58c6c73dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a data sample to initialize this data object.  <a href="#a2a1b6a2f4c6b7e9f6f6c1d58c6c73dcc">More...</a><br/></td></tr>
+<tr class="separator:a2a1b6a2f4c6b7e9f6f6c1d58c6c73dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae189016bad68da9df639b8d2666aa0de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae189016bad68da9df639b8d2666aa0de"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#ae189016bad68da9df639b8d2666aa0de">clear</a> ()=0</td></tr>
+<tr class="memdesc:ae189016bad68da9df639b8d2666aa0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears any data stored by this data object, so that any subsequent <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#ab4679a280f366ee7a41f1fa9703b22dd" title="Get a copy of the Data of this data object. ">Get()</a> without a new <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#aa0929e8179c66bf0c980da2bf4185482" title="Set the data to a certain value. ">Set()</a> will return NoData. <br/></td></tr>
+<tr class="separator:ae189016bad68da9df639b8d2666aa0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
@@ -121,14 +126,14 @@ class RTT::base::DataObjectInterface&lt; T &gt;</h3>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1DataObject.html" title="This object represents the default thread-safe data object implementation used by Orocos objects...">DataObject</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">T</td><td>The <em>DataType</em> which can be <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a4a571b38909495e3d88cc6e935360229" title="Get a copy of the Data of this data object. ">Get()</a> or <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a7512c12a0189fca337a55db262b3209a" title="Set the data to a certain value. ">Set()</a> with this <a class="el" href="classRTT_1_1base_1_1DataObject.html" title="This object represents the default thread-safe data object implementation used by Orocos objects...">DataObject</a>. </td></tr>
+    <tr><td class="paramname">T</td><td>The <em>DataType</em> which can be <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#ab4679a280f366ee7a41f1fa9703b22dd" title="Get a copy of the Data of this data object. ">Get()</a> or <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#aa0929e8179c66bf0c980da2bf4185482" title="Set the data to a certain value. ">Set()</a> with this <a class="el" href="classRTT_1_1base_1_1DataObject.html" title="This object represents the default thread-safe data object implementation used by Orocos objects...">DataObject</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="DataObjectInterface_8hpp_source.html#l00056">56</a> of file <a class="el" href="DataObjectInterface_8hpp_source.html">DataObjectInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="DataObjectInterface_8hpp_source.html#l00057">57</a> of file <a class="el" href="DataObjectInterface_8hpp_source.html">DataObjectInterface.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4851566b61e94041d410174b68719745"></a>
+<a class="anchor" id="a2a1b6a2f4c6b7e9f6f6c1d58c6c73dcc"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -138,11 +143,21 @@ template&lt;class T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html">RTT::base::DataObjectInterface</a>&lt; T &gt;::data_sample </td>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html">RTT::base::DataObjectInterface</a>&lt; T &gt;::data_sample </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;&#160;</td>
-          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td class="paramname"><em>sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reset</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -156,16 +171,18 @@ template&lt;class T&gt; </div>
 <p>As such enough storage space can be allocated before the actual writing begins.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sample</td><td></td></tr>
+    <tr><td class="paramname">sample</td><td>the data sample </td></tr>
+    <tr><td class="paramname">reset</td><td>enforce reinitialization even if this operation clears the stored data. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the data object was successfully (re)initialized. </dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1base_1_1DataObjectLockFree.html#a3a3aa22e1c276c88daa0c8908d3e93eb">RTT::base::DataObjectLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#abeb95752cd4837b744ec37a69aa066a2">RTT::base::DataObjectLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1DataObjectUnSync.html#a2895d29ffaea0475e3c1738d7c9b9bf3">RTT::base::DataObjectUnSync&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1base_1_1DataObjectLockFree.html#ad3231e948b2cf659f2e52a7263b46367">RTT::base::DataObjectLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a701f8d9cce781284aa748720baba5eec">RTT::base::DataObjectLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1DataObjectUnSync.html#a2471cbc2d19d924511de99d610a6f485">RTT::base::DataObjectUnSync&lt; T &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4a571b38909495e3d88cc6e935360229"></a>
+<a class="anchor" id="ab4679a280f366ee7a41f1fa9703b22dd"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -175,11 +192,21 @@ template&lt;class T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html">RTT::base::DataObjectInterface</a>&lt; T &gt;::Get </td>
+          <td class="memname">virtual <a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a> <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html">RTT::base::DataObjectInterface</a>&lt; T &gt;::Get </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;&#160;</td>
-          <td class="paramname"><em>pull</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>pull</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>copy_old_data</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -197,7 +224,7 @@ template&lt;class T&gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1base_1_1DataObjectLockFree.html#a4f1bb1a05d46f334a1166568d76a286a">RTT::base::DataObjectLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a480bfa1b93c0f744ae47f75d67afde48">RTT::base::DataObjectLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1DataObjectUnSync.html#a4a1d5c1529c656b23f721d7967d03d22">RTT::base::DataObjectUnSync&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1base_1_1DataObjectLockFree.html#a7377b221a12f8d3e622bc83922a63d6e">RTT::base::DataObjectLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a05c87a3ef3532ae06036f875310a894c">RTT::base::DataObjectLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1DataObjectUnSync.html#a6691389def232ba3c36e6e8f237b37e9">RTT::base::DataObjectUnSync&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -231,7 +258,7 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7512c12a0189fca337a55db262b3209a"></a>
+<a class="anchor" id="aa0929e8179c66bf0c980da2bf4185482"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -241,7 +268,7 @@ template&lt;class T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html">RTT::base::DataObjectInterface</a>&lt; T &gt;::Set </td>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html">RTT::base::DataObjectInterface</a>&lt; T &gt;::Set </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;&#160;</td>
           <td class="paramname"><em>push</em></td><td>)</td>
@@ -263,7 +290,7 @@ template&lt;class T&gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1base_1_1DataObjectLockFree.html#aac560adb67b3be47619acec7dfe5452d">RTT::base::DataObjectLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a4aa4462d5d8086e0d7834ee189eab240">RTT::base::DataObjectLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1DataObjectUnSync.html#aa6690b79a71e6fabcd932f28afa4fa3c">RTT::base::DataObjectUnSync&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1base_1_1DataObjectLockFree.html#abbbb7b7d0e825efc1aead07a234db706">RTT::base::DataObjectLockFree&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a449e7b1849402a3332de436a875a2822">RTT::base::DataObjectLocked&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1base_1_1DataObjectUnSync.html#a39c77fbf6de6ce6a7631d64c3721b944">RTT::base::DataObjectUnSync&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -273,7 +300,7 @@ template&lt;class T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

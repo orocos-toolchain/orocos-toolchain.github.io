@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -129,8 +129,9 @@
 : <a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad2522496caacc3e88065b5cb09dc2b7a">RTT::base::TaskCore</a>
 </li>
 <li>enqueue()
-: <a class="el" href="classRTT_1_1internal_1_1AtomicMWSRQueue.html#a013b887da567a4ad6c7dc568eee4bcb2">RTT::internal::AtomicMWSRQueue&lt; T &gt;</a>
-, <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a533041d5973a04f26720f19deaa68cb2">RTT::internal::AtomicQueue&lt; T &gt;</a>
+: <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a06663a0984594743b64d37a4c381107d">RTT::internal::AtomicMWMRQueue&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1AtomicMWSRQueue.html#a013b887da567a4ad6c7dc568eee4bcb2">RTT::internal::AtomicMWSRQueue&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a5fe35af4a9091a40af204dd983387358">RTT::internal::AtomicQueue&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1LockedQueue.html#a663e1b59ca0816b8e3c3bc9f4b991cbd">RTT::internal::LockedQueue&lt; T &gt;</a>
 </li>
 <li>eol_skip_functor()
@@ -147,7 +148,7 @@
 : <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a0791134080e84bccfce42e390110dd25">RTT::internal::ListLockFree&lt; T &gt;</a>
 </li>
 <li>eraseConnection()
-: <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#aadb5ee99baecb825c35db6a591e95fe2">RTT::internal::ConnectionManager</a>
+: <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a07744e56b7dc5fd4628649e6c8a47c98">RTT::internal::ConnectionManager</a>
 </li>
 <li>error()
 : <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a3c3b01dff9aa92578d1657bdc3c0fb47">RTT::base::TaskCore</a>
@@ -186,6 +187,8 @@
 , <a class="el" href="structRTT_1_1internal_1_1FusedFunctorDataSource.html#a73bf776b157b781cc44c3852561e9e7a">RTT::internal::FusedFunctorDataSource&lt; Signature, Enable &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1FusedMCallDataSource.html#a134bf6b83805fa361e3fab9afbb395fa">RTT::internal::FusedMCallDataSource&lt; Signature &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1InputPortSource.html#aca069c020f2c97a4373d9252a1a8a413">RTT::internal::InputPortSource&lt; T &gt;</a>
+, <a class="el" href="structRTT_1_1scripting_1_1CmdCollectCondition.html#ac461a239b6b1c284aa593f5c1c6e7e4d">RTT::scripting::CmdCollectCondition</a>
+, <a class="el" href="classRTT_1_1scripting_1_1CmdFunction.html#a45809891e010dc9973d1bc7c22f6ae79">RTT::scripting::CmdFunction</a>
 , <a class="el" href="classRTT_1_1scripting_1_1ConditionBinaryCompositeAND.html#a30022ea3f1a2e6481f55f1a2cd3f46d3">RTT::scripting::ConditionBinaryCompositeAND</a>
 , <a class="el" href="classRTT_1_1scripting_1_1ConditionBoolDataSource.html#a1d2c31c91cb4aa15936cf835f2ab1abe">RTT::scripting::ConditionBoolDataSource</a>
 , <a class="el" href="classRTT_1_1scripting_1_1ConditionBoolProperty.html#afda7e2fbdb8f1713c863f772e4bb4e34">RTT::scripting::ConditionBoolProperty</a>
@@ -207,11 +210,11 @@
 <li>eventMap
 : <a class="el" href="classRTT_1_1scripting_1_1StateMachine.html#adf7e1b6bfc2e9a0d6984b5cc5e9a0ac9">RTT::scripting::StateMachine</a>
 </li>
-<li>Exception
-: <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296aaf7a566a0f56822986b292ae5e90a286">RTT::base::TaskCore</a>
-</li>
 <li>exception()
 : <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a243f1797bcfef248146ee02166a1eeb8">RTT::base::TaskCore</a>
+</li>
+<li>Exception
+: <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296aaf7a566a0f56822986b292ae5e90a286">RTT::base::TaskCore</a>
 </li>
 <li>exceptionHook()
 : <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a576b146a57bd81b1f5fe3a8e51f0bd16">RTT::base::TaskCore</a>
@@ -264,7 +267,7 @@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

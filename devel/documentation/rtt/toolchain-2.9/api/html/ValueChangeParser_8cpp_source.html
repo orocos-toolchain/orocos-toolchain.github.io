@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -337,128 +337,132 @@
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">if</span> ( expressionparser.hasResult() ) {</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <a class="code" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">DataSourceBase::shared_ptr</a> expr = expressionparser.getResult();</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            expressionparser.dropResult();</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="comment">//assert( !expressionparser.hasResult() );</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                ActionInterface* ac = var-&gt;getDataSource()-&gt;updateAction( expr.get() );</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                assert(ac);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                assigncommands.push_back( ac );</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">catch</span>( <span class="keyword">const</span> bad_assignment&amp; ) {</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                this-&gt;cleanup();</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="keywordflow">throw</span> parse_exception_semantic_error</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    ( <span class="stringliteral">&quot;Attempt to initialize a var &quot;</span>+var-&gt;getDataSource()-&gt;getTypeName()+<span class="stringliteral">&quot; with a &quot;</span>+ expr-&gt;getTypeName() + <span class="stringliteral">&quot;.&quot;</span> );</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            }</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a85d87cd2c0cdab994feda9fa8177e01c">  299</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a85d87cd2c0cdab994feda9fa8177e01c">ValueChangeParser::store</a>(Service::shared_ptr o)</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">if</span> (!o)</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">for</span>(std::vector&lt;std::string&gt;::iterator it = alldefinednames.begin();</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            it != alldefinednames.end(); ++it) {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="comment">// only add new values (which didn&#39;t come from &#39;load&#39;)</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordflow">if</span> ( o-&gt;getValue( *it ) == 0 ) {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                o-&gt;setValue( mstore-&gt;getValue(*it)-&gt;clone() );</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                <span class="comment">//cout &lt;&lt; &quot;Storing var &quot;+*it+&quot; from &quot; &lt;&lt; mstore-&gt;getName() &lt;&lt; &quot; into &quot; &lt;&lt; o-&gt;getName() &lt;&lt;endl;</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        }</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5e4ee2b367649b91009b34c8eeb707e8">  313</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5e4ee2b367649b91009b34c8eeb707e8">ValueChangeParser::load</a>(Service::shared_ptr s)</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">if</span> (!s)</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        vector&lt;string&gt; predefinednames = s-&gt;getAttributeNames();</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">for</span>(std::vector&lt;std::string&gt;::iterator it = predefinednames.begin();</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            it != predefinednames.end(); ++it) {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">if</span> (mstore-&gt;getValue(*it) == 0) {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                <span class="comment">//cout &lt;&lt; &quot;Loading new var &quot;+*it+&quot; from &quot; &lt;&lt; s-&gt;getName() &lt;&lt; &quot; into &quot; &lt;&lt; mstore-&gt;getName() &lt;&lt;endl;</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                mstore-&gt;setValue( s-&gt;getValue(*it)-&gt;clone() );</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                alldefinednames.push_back( *it ); <span class="comment">// such that it is also again removed from mstore !</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            }</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordtype">void</span> ValueChangeParser::cleanup()</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        for_each(assigncommands.begin(), assigncommands.end(), boost::lambda::bind(boost::lambda::delete_ptr(), boost::lambda::_1));</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
-<div class="line"><a name="l00333"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5429f65ba1abe7bf65c713b494a44677">  333</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5429f65ba1abe7bf65c713b494a44677">ValueChangeParser::clear</a>()</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    {</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        assigncommands.clear();</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        definedvalues.clear();</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        definednames.clear();</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    }</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00342"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a6314a53177667878351b26a5da58cd7d">  342</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a6314a53177667878351b26a5da58cd7d">ValueChangeParser::reset</a>()</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    {</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="comment">// erase/delete added values from the context:</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordflow">for</span>(std::vector&lt;std::string&gt;::iterator it = alldefinednames.begin();</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            it != alldefinednames.end(); ++it) {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            mstore-&gt;removeValue( *it );</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        }</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        alldefinednames.clear();</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        this-&gt;cleanup();</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        this-&gt;<a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5429f65ba1abe7bf65c713b494a44677">clear</a>();</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        valuename = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        type = 0;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        sizehint = -1;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
-<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#af9a9d8f145f508dee2cea6391341ef56">  357</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#af9a9d8f145f508dee2cea6391341ef56">ValueChangeParser::parser</a>()</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    {</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">return</span> valuechange_parsers;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    }</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
-<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a4c857db51ee501c11d5996d7b19070da">  362</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a4c857db51ee501c11d5996d7b19070da">ValueChangeParser::constantDefinitionParser</a>()</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    {</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">return</span> constantdefinition;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a63853ffe6f823415bd82cf3f2c92fcd4">  367</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a63853ffe6f823415bd82cf3f2c92fcd4">ValueChangeParser::aliasDefinitionParser</a>()</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    {</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keywordflow">return</span> aliasdefinition;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a2322230cd02ed1aba998d548a1f0e721">  372</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a2322230cd02ed1aba998d548a1f0e721">ValueChangeParser::variableDefinitionParser</a>()</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    {</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">return</span> variabledefinition;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    }</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
-<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a766d6394b0c57984e1de8388975aa032">  377</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a766d6394b0c57984e1de8388975aa032">ValueChangeParser::paramDefinitionParser</a>()</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    {</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keywordflow">return</span> paramdefinition;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    }</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
-<div class="line"><a name="l00382"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a212e98d58c9335351148dd2f895216f8">  382</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a212e98d58c9335351148dd2f895216f8">ValueChangeParser::bareDefinitionParser</a>()</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    {</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keywordflow">return</span> baredefinition;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    }</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;}</div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_af9a9d8f145f508dee2cea6391341ef56"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#af9a9d8f145f508dee2cea6391341ef56">RTT::scripting::ValueChangeParser::parser</a></div><div class="ttdeci">rule_t &amp; parser()</div><div class="ttdoc">Returns the full parser, as it is used most. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00357">ValueChangeParser.cpp:357</a></div></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            ConditionInterface* cond = expressionparser.getCmdResult();</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            expressionparser.dropResult();</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="comment">//assert( !expressionparser.hasResult() );</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                ActionInterface* ac = var-&gt;getDataSource()-&gt;updateAction( expr.get() );</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                assert(ac);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                assigncommands.push_back( ac );</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                <span class="keywordflow">if</span> (cond)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                    conditions.push_back(cond);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            }</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">catch</span>( <span class="keyword">const</span> bad_assignment&amp; ) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                this-&gt;cleanup();</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <span class="keywordflow">throw</span> parse_exception_semantic_error</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                    ( <span class="stringliteral">&quot;Attempt to initialize a var &quot;</span>+var-&gt;getDataSource()-&gt;getTypeName()+<span class="stringliteral">&quot; with a &quot;</span>+ expr-&gt;getTypeName() + <span class="stringliteral">&quot;.&quot;</span> );</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a85d87cd2c0cdab994feda9fa8177e01c">  302</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a85d87cd2c0cdab994feda9fa8177e01c">ValueChangeParser::store</a>(Service::shared_ptr o)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">if</span> (!o)</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">for</span>(std::vector&lt;std::string&gt;::iterator it = alldefinednames.begin();</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            it != alldefinednames.end(); ++it) {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="comment">// only add new values (which didn&#39;t come from &#39;load&#39;)</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">if</span> ( o-&gt;getValue( *it ) == 0 ) {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                o-&gt;setValue( mstore-&gt;getValue(*it)-&gt;clone() );</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                <span class="comment">//cout &lt;&lt; &quot;Storing var &quot;+*it+&quot; from &quot; &lt;&lt; mstore-&gt;getName() &lt;&lt; &quot; into &quot; &lt;&lt; o-&gt;getName() &lt;&lt;endl;</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        }</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5e4ee2b367649b91009b34c8eeb707e8">  316</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5e4ee2b367649b91009b34c8eeb707e8">ValueChangeParser::load</a>(Service::shared_ptr s)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">if</span> (!s)</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        vector&lt;string&gt; predefinednames = s-&gt;getAttributeNames();</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">for</span>(std::vector&lt;std::string&gt;::iterator it = predefinednames.begin();</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            it != predefinednames.end(); ++it) {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordflow">if</span> (mstore-&gt;getValue(*it) == 0) {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="comment">//cout &lt;&lt; &quot;Loading new var &quot;+*it+&quot; from &quot; &lt;&lt; s-&gt;getName() &lt;&lt; &quot; into &quot; &lt;&lt; mstore-&gt;getName() &lt;&lt;endl;</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                mstore-&gt;setValue( s-&gt;getValue(*it)-&gt;clone() );</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                alldefinednames.push_back( *it ); <span class="comment">// such that it is also again removed from mstore !</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordtype">void</span> ValueChangeParser::cleanup()</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        for_each(assigncommands.begin(), assigncommands.end(), boost::lambda::bind(boost::lambda::delete_ptr(), boost::lambda::_1));</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5429f65ba1abe7bf65c713b494a44677">  336</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5429f65ba1abe7bf65c713b494a44677">ValueChangeParser::clear</a>()</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        assigncommands.clear();</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        conditions.clear();</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        definedvalues.clear();</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        definednames.clear();</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a6314a53177667878351b26a5da58cd7d">  346</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a6314a53177667878351b26a5da58cd7d">ValueChangeParser::reset</a>()</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="comment">// erase/delete added values from the context:</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">for</span>(std::vector&lt;std::string&gt;::iterator it = alldefinednames.begin();</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            it != alldefinednames.end(); ++it) {</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            mstore-&gt;removeValue( *it );</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        alldefinednames.clear();</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        this-&gt;cleanup();</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        this-&gt;<a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5429f65ba1abe7bf65c713b494a44677">clear</a>();</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        valuename = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        type = 0;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        sizehint = -1;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#af9a9d8f145f508dee2cea6391341ef56">  361</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#af9a9d8f145f508dee2cea6391341ef56">ValueChangeParser::parser</a>()</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordflow">return</span> valuechange_parsers;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a4c857db51ee501c11d5996d7b19070da">  366</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a4c857db51ee501c11d5996d7b19070da">ValueChangeParser::constantDefinitionParser</a>()</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordflow">return</span> constantdefinition;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
+<div class="line"><a name="l00371"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a63853ffe6f823415bd82cf3f2c92fcd4">  371</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a63853ffe6f823415bd82cf3f2c92fcd4">ValueChangeParser::aliasDefinitionParser</a>()</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="keywordflow">return</span> aliasdefinition;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;</div>
+<div class="line"><a name="l00376"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a2322230cd02ed1aba998d548a1f0e721">  376</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a2322230cd02ed1aba998d548a1f0e721">ValueChangeParser::variableDefinitionParser</a>()</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">return</span> variabledefinition;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    }</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
+<div class="line"><a name="l00381"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a766d6394b0c57984e1de8388975aa032">  381</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a766d6394b0c57984e1de8388975aa032">ValueChangeParser::paramDefinitionParser</a>()</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">return</span> paramdefinition;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
+<div class="line"><a name="l00386"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a212e98d58c9335351148dd2f895216f8">  386</a></span>&#160;    rule_t&amp; <a class="code" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a212e98d58c9335351148dd2f895216f8">ValueChangeParser::bareDefinitionParser</a>()</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keywordflow">return</span> baredefinition;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;}</div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_af9a9d8f145f508dee2cea6391341ef56"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#af9a9d8f145f508dee2cea6391341ef56">RTT::scripting::ValueChangeParser::parser</a></div><div class="ttdeci">rule_t &amp; parser()</div><div class="ttdoc">Returns the full parser, as it is used most. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00361">ValueChangeParser.cpp:361</a></div></div>
 <div class="ttc" id="classRTT_1_1internal_1_1DataSource_html"><div class="ttname"><a href="classRTT_1_1internal_1_1DataSource.html">RTT::internal::DataSource</a></div><div class="ttdoc">DataSource is a base class representing a generic way to read data of type T. </div><div class="ttdef"><b>Definition:</b> <a href="DataSource_8hpp_source.html#l00094">DataSource.hpp:94</a></div></div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a5e4ee2b367649b91009b34c8eeb707e8"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5e4ee2b367649b91009b34c8eeb707e8">RTT::scripting::ValueChangeParser::load</a></div><div class="ttdeci">void load(Service::shared_ptr source)</div><div class="ttdoc">Loads all defined names from a service. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00313">ValueChangeParser.cpp:313</a></div></div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a63853ffe6f823415bd82cf3f2c92fcd4"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a63853ffe6f823415bd82cf3f2c92fcd4">RTT::scripting::ValueChangeParser::aliasDefinitionParser</a></div><div class="ttdeci">rule_t &amp; aliasDefinitionParser()</div><div class="ttdoc">The parser that parses alias definitions. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00367">ValueChangeParser.cpp:367</a></div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html_ad8144e74a603241ebf29ba51bf252525"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html#ad8144e74a603241ebf29ba51bf252525">RTT::types::TypeInfo::getTypeName</a></div><div class="ttdeci">const std::string &amp; getTypeName() const </div><div class="ttdoc">Return the type name which was first registered. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8hpp_source.html#l00082">TypeInfo.hpp:82</a></div></div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a212e98d58c9335351148dd2f895216f8"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a212e98d58c9335351148dd2f895216f8">RTT::scripting::ValueChangeParser::bareDefinitionParser</a></div><div class="ttdeci">rule_t &amp; bareDefinitionParser()</div><div class="ttdoc">The parser that parses a bare variable definition. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00382">ValueChangeParser.cpp:382</a></div></div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a5e4ee2b367649b91009b34c8eeb707e8"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5e4ee2b367649b91009b34c8eeb707e8">RTT::scripting::ValueChangeParser::load</a></div><div class="ttdeci">void load(Service::shared_ptr source)</div><div class="ttdoc">Loads all defined names from a service. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00316">ValueChangeParser.cpp:316</a></div></div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a63853ffe6f823415bd82cf3f2c92fcd4"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a63853ffe6f823415bd82cf3f2c92fcd4">RTT::scripting::ValueChangeParser::aliasDefinitionParser</a></div><div class="ttdeci">rule_t &amp; aliasDefinitionParser()</div><div class="ttdoc">The parser that parses alias definitions. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00371">ValueChangeParser.cpp:371</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html_ad8144e74a603241ebf29ba51bf252525"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html#ad8144e74a603241ebf29ba51bf252525">RTT::types::TypeInfo::getTypeName</a></div><div class="ttdeci">const std::string &amp; getTypeName() const </div><div class="ttdoc">Return the type name which was first registered. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8hpp_source.html#l00083">TypeInfo.hpp:83</a></div></div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a212e98d58c9335351148dd2f895216f8"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a212e98d58c9335351148dd2f895216f8">RTT::scripting::ValueChangeParser::bareDefinitionParser</a></div><div class="ttdeci">rule_t &amp; bareDefinitionParser()</div><div class="ttdoc">The parser that parses a bare variable definition. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00386">ValueChangeParser.cpp:386</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html">RTT::types::TypeInfoRepository</a></div><div class="ttdoc">This class contains all known types to Orocos. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8hpp_source.html#l00055">TypeInfoRepository.hpp:55</a></div></div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a6314a53177667878351b26a5da58cd7d"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a6314a53177667878351b26a5da58cd7d">RTT::scripting::ValueChangeParser::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Completely clear all data and erase all parsed definitions from the taskcontext given in the construc...</div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00342">ValueChangeParser.cpp:342</a></div></div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a6314a53177667878351b26a5da58cd7d"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a6314a53177667878351b26a5da58cd7d">RTT::scripting::ValueChangeParser::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Completely clear all data and erase all parsed definitions from the taskcontext given in the construc...</div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00346">ValueChangeParser.cpp:346</a></div></div>
 <div class="ttc" id="classRTT_1_1scripting_1_1parse__exception__semantic__error_html"><div class="ttname"><a href="classRTT_1_1scripting_1_1parse__exception__semantic__error.html">RTT::scripting::parse_exception_semantic_error</a></div><div class="ttdoc">parse_exception class that is used for various semantic errors for which it was not worth defining a ...</div><div class="ttdef"><b>Definition:</b> <a href="parse__exception_8hpp_source.html#l00186">parse_exception.hpp:186</a></div></div>
 <div class="ttc" id="classRTT_1_1scripting_1_1CommonParser_html"><div class="ttname"><a href="classRTT_1_1scripting_1_1CommonParser.html">RTT::scripting::CommonParser</a></div><div class="ttdoc">This class contains some very common parser definitions. </div><div class="ttdef"><b>Definition:</b> <a href="CommonParser_8hpp_source.html#l00052">CommonParser.hpp:52</a></div></div>
-<div class="ttc" id="classRTT_1_1ExecutionEngine_html"><div class="ttname"><a href="classRTT_1_1ExecutionEngine.html">RTT::ExecutionEngine</a></div><div class="ttdoc">An execution engine serialises (executes one after the other) the execution of all commands...</div><div class="ttdef"><b>Definition:</b> <a href="ExecutionEngine_8hpp_source.html#l00077">ExecutionEngine.hpp:77</a></div></div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a85d87cd2c0cdab994feda9fa8177e01c"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a85d87cd2c0cdab994feda9fa8177e01c">RTT::scripting::ValueChangeParser::store</a></div><div class="ttdeci">void store(Service::shared_ptr other)</div><div class="ttdoc">Store allDefinedNames() in a service. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00299">ValueChangeParser.cpp:299</a></div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html_a899229b00dc8f8f73d9cf5b3a8dac219"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html#a899229b00dc8f8f73d9cf5b3a8dac219">RTT::types::TypeInfo::buildConstant</a></div><div class="ttdeci">base::AttributeBase * buildConstant(std::string name, base::DataSourceBase::shared_ptr source, int sizehint) const </div><div class="ttdoc">Build a non modifyable instance of this type. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8hpp_source.html#l00172">TypeInfo.hpp:172</a></div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html_a6284c245b8011498c307ff09e40a09c1"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html#a6284c245b8011498c307ff09e40a09c1">RTT::types::TypeInfo::buildAlias</a></div><div class="ttdeci">base::AttributeBase * buildAlias(std::string name, base::DataSourceBase::shared_ptr b) const </div><div class="ttdoc">build an alias with b as the value. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8hpp_source.html#l00205">TypeInfo.hpp:205</a></div></div>
+<div class="ttc" id="classRTT_1_1ExecutionEngine_html"><div class="ttname"><a href="classRTT_1_1ExecutionEngine.html">RTT::ExecutionEngine</a></div><div class="ttdoc">An execution engine serialises (executes one after the other) the execution of all commands...</div><div class="ttdef"><b>Definition:</b> <a href="ExecutionEngine_8hpp_source.html#l00069">ExecutionEngine.hpp:69</a></div></div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a85d87cd2c0cdab994feda9fa8177e01c"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a85d87cd2c0cdab994feda9fa8177e01c">RTT::scripting::ValueChangeParser::store</a></div><div class="ttdeci">void store(Service::shared_ptr other)</div><div class="ttdoc">Store allDefinedNames() in a service. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00302">ValueChangeParser.cpp:302</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html_a899229b00dc8f8f73d9cf5b3a8dac219"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html#a899229b00dc8f8f73d9cf5b3a8dac219">RTT::types::TypeInfo::buildConstant</a></div><div class="ttdeci">base::AttributeBase * buildConstant(std::string name, base::DataSourceBase::shared_ptr source, int sizehint) const </div><div class="ttdoc">Build a non modifyable instance of this type. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8hpp_source.html#l00173">TypeInfo.hpp:173</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html_a6284c245b8011498c307ff09e40a09c1"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html#a6284c245b8011498c307ff09e40a09c1">RTT::types::TypeInfo::buildAlias</a></div><div class="ttdeci">base::AttributeBase * buildAlias(std::string name, base::DataSourceBase::shared_ptr b) const </div><div class="ttdoc">build an alias with b as the value. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8hpp_source.html#l00206">TypeInfo.hpp:206</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html_aeea302573a995a54dc722c09ebb1dd55"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html#aeea302573a995a54dc722c09ebb1dd55">RTT::types::TypeInfo::buildVariable</a></div><div class="ttdeci">base::AttributeBase * buildVariable(std::string name, int sizehint) const </div><div class="ttdoc">Build a modifyable instance of this type. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8cpp_source.html#l00082">TypeInfo.cpp:82</a></div></div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a5429f65ba1abe7bf65c713b494a44677"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5429f65ba1abe7bf65c713b494a44677">RTT::scripting::ValueChangeParser::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clear assignCommands(), definedValues() and definedNames(). </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00333">ValueChangeParser.cpp:333</a></div></div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a766d6394b0c57984e1de8388975aa032"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a766d6394b0c57984e1de8388975aa032">RTT::scripting::ValueChangeParser::paramDefinitionParser</a></div><div class="ttdeci">rule_t &amp; paramDefinitionParser()</div><div class="ttdoc">The parser that parses state context parameter definitions. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00377">ValueChangeParser.cpp:377</a></div></div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a4c857db51ee501c11d5996d7b19070da"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a4c857db51ee501c11d5996d7b19070da">RTT::scripting::ValueChangeParser::constantDefinitionParser</a></div><div class="ttdeci">rule_t &amp; constantDefinitionParser()</div><div class="ttdoc">the parser that parses definitions of constants. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00362">ValueChangeParser.cpp:362</a></div></div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a2322230cd02ed1aba998d548a1f0e721"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a2322230cd02ed1aba998d548a1f0e721">RTT::scripting::ValueChangeParser::variableDefinitionParser</a></div><div class="ttdeci">rule_t &amp; variableDefinitionParser()</div><div class="ttdoc">the parser that parses variable definitions, don&#39;t forget to check assignCommand after a variable def...</div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00372">ValueChangeParser.cpp:372</a></div></div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a5429f65ba1abe7bf65c713b494a44677"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5429f65ba1abe7bf65c713b494a44677">RTT::scripting::ValueChangeParser::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clear assignCommands(), definedValues() and definedNames(). </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00336">ValueChangeParser.cpp:336</a></div></div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a766d6394b0c57984e1de8388975aa032"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a766d6394b0c57984e1de8388975aa032">RTT::scripting::ValueChangeParser::paramDefinitionParser</a></div><div class="ttdeci">rule_t &amp; paramDefinitionParser()</div><div class="ttdoc">The parser that parses state context parameter definitions. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00381">ValueChangeParser.cpp:381</a></div></div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a4c857db51ee501c11d5996d7b19070da"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a4c857db51ee501c11d5996d7b19070da">RTT::scripting::ValueChangeParser::constantDefinitionParser</a></div><div class="ttdeci">rule_t &amp; constantDefinitionParser()</div><div class="ttdoc">the parser that parses definitions of constants. </div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00366">ValueChangeParser.cpp:366</a></div></div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueChangeParser_html_a2322230cd02ed1aba998d548a1f0e721"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueChangeParser.html#a2322230cd02ed1aba998d548a1f0e721">RTT::scripting::ValueChangeParser::variableDefinitionParser</a></div><div class="ttdeci">rule_t &amp; variableDefinitionParser()</div><div class="ttdoc">the parser that parses variable definitions, don&#39;t forget to check assignCommand after a variable def...</div><div class="ttdef"><b>Definition:</b> <a href="ValueChangeParser_8cpp_source.html#l00376">ValueChangeParser.cpp:376</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_aaede943bd6496ce6fb5cb9b848deff6b"><div class="ttname"><a href="classRTT_1_1Logger.html#aaede943bd6496ce6fb5cb9b848deff6b">RTT::Logger::log</a></div><div class="ttdeci">static Logger &amp; log()</div><div class="ttdoc">As Instance(), but more userfriendly. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00117">Logger.cpp:117</a></div></div>
 <div class="ttc" id="classRTT_1_1TaskContext_html"><div class="ttname"><a href="classRTT_1_1TaskContext.html">RTT::TaskContext</a></div><div class="ttdoc">The TaskContext is the C++ representation of an Orocos component. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8hpp_source.html#l00093">TaskContext.hpp:93</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1DataSourceBase_html_af764490461a162f4a62c63770535fb7b"><div class="ttname"><a href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">RTT::base::DataSourceBase::shared_ptr</a></div><div class="ttdeci">boost::intrusive_ptr&lt; DataSourceBase &gt; shared_ptr</div><div class="ttdoc">Use this type to store a pointer to a DataSourceBase. </div><div class="ttdef"><b>Definition:</b> <a href="DataSourceBase_8hpp_source.html#l00099">DataSourceBase.hpp:99</a></div></div>
@@ -467,7 +471,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:03 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

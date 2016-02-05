@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -61,12 +61,12 @@
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferBase.html#a721f2d8ea29ab506dbe0a4c8b4a26739">capacity</a>() const =0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferBase.html">RTT::base::BufferBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferBase.html#af28ce2d9f7370819cb9bcd3222cc67e3">clear</a>()=0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferBase.html">RTT::base::BufferBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a500e68c93d1286799d4bc4d101be3068">data_sample</a>(const T &amp;sample)=0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a823e9a30c4d87afa6859af3d799e58eb">data_sample</a>(const T &amp;sample, bool reset=true)=0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a180f169f0caf281e408dd2c62b9b85bf">data_sample</a>() const =0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferBase.html#a403a7c9c68c2c4870079f062b8eab36b">empty</a>() const =0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferBase.html">RTT::base::BufferBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferBase.html#aabaaf0c817a58a4b130d492b58e86b1a">full</a>() const =0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferBase.html">RTT::base::BufferBase</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>param_t</b> typedef (defined in <a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ae2af23bcbd142dc2d09b75e30dddf391">Pop</a>(reference_t item)=0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ade01d7c098ebc1062ea374cb18e340ba">Pop</a>(reference_t item)=0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a1fb40ec315410ca6650bb722b23230dd">Pop</a>(std::vector&lt; value_t &gt; &amp;items)=0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ad877aa5119fb6ea6ee3a4fc8f6800cfb">PopWithoutRelease</a>()=0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html#afc6ad58cdae63ea7a2fc7d130686e92d">Push</a>(param_t item)=0</td><td class="entry"><a class="el" href="classRTT_1_1base_1_1BufferInterface.html">RTT::base::BufferInterface&lt; T &gt;</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
@@ -82,7 +82,7 @@
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

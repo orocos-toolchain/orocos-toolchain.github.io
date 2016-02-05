@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -83,9 +83,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a97dfe641b08b92c1d93f94b9e6518acf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97dfe641b08b92c1d93f94b9e6518acf"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>RemoteInputPort</b> (<a class="el" href="classRTT_1_1types_1_1TypeInfo.html">types::TypeInfo</a> const *type_info, CDataFlowInterface_ptr dataflow, std::string const &amp;name, PortableServer::POA_ptr poa)</td></tr>
 <tr class="separator:a97dfe641b08b92c1d93f94b9e6518acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcec06b6329b0791b12b7a3eae2d74d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#afcec06b6329b0791b12b7a3eae2d74d4">clear</a> ()</td></tr>
+<tr class="memdesc:afcec06b6329b0791b12b7a3eae2d74d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the connection.  <a href="#afcec06b6329b0791b12b7a3eae2d74d4">More...</a><br/></td></tr>
+<tr class="separator:afcec06b6329b0791b12b7a3eae2d74d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95ca04580a87413e3751b16cd145d078"><td class="memItemLeft" align="right" valign="top">base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#a95ca04580a87413e3751b16cd145d078">buildRemoteChannelOutput</a> (<a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html">base::OutputPortInterface</a> &amp;output_port, <a class="el" href="classRTT_1_1types_1_1TypeInfo.html">types::TypeInfo</a> const *type, <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a> &amp;reader_, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy)</td></tr>
 <tr class="memdesc:a95ca04580a87413e3751b16cd145d078"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will do more than just building the output half, it will create the two crucial ChannelElements on both sides of the CORBA connection to marshal/demarshal the channel data.  <a href="#a95ca04580a87413e3751b16cd145d078">More...</a><br/></td></tr>
 <tr class="separator:a95ca04580a87413e3751b16cd145d078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add598b9b2a0c22548a3b5925f6e1316f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add598b9b2a0c22548a3b5925f6e1316f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#add598b9b2a0c22548a3b5925f6e1316f">createConnection</a> (internal::SharedConnectionBase::shared_ptr shared_connection, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy=<a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a>())</td></tr>
+<tr class="memdesc:add598b9b2a0c22548a3b5925f6e1316f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overridden version of <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#affc36dbc50b0ea3d3639369633640631">InputPortInterface::createConnection(internal::SharedConnectionBase::shared_ptr, ConnPolicy const&amp;)</a>, which forwards the call to the remote data flow interface. <br/></td></tr>
+<tr class="separator:add598b9b2a0c22548a3b5925f6e1316f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af56eca37c52dba26972df25212c75938"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#af56eca37c52dba26972df25212c75938">clone</a> () const </td></tr>
 <tr class="memdesc:af56eca37c52dba26972df25212c75938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a local clone of this port with the same name.  <a href="#af56eca37c52dba26972df25212c75938">More...</a><br/></td></tr>
 <tr class="separator:af56eca37c52dba26972df25212c75938"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -95,9 +102,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a473505ea56489efad45c6557b64a06d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#a473505ea56489efad45c6557b64a06d5">getDataSource</a> ()</td></tr>
 <tr class="memdesc:a473505ea56489efad45c6557b64a06d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a DataSourceBase interface to read this port.  <a href="#a473505ea56489efad45c6557b64a06d5">More...</a><br/></td></tr>
 <tr class="separator:a473505ea56489efad45c6557b64a06d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accde83c735b5940cd29c6cfbd827b7fe"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#accde83c735b5940cd29c6cfbd827b7fe">channelReady</a> (base::ChannelElementBase::shared_ptr channel, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy)</td></tr>
-<tr class="memdesc:accde83c735b5940cd29c6cfbd827b7fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">For remote input port objects, this is forwarded to the other end over the Data Flow Interface.  <a href="#accde83c735b5940cd29c6cfbd827b7fe">More...</a><br/></td></tr>
-<tr class="separator:accde83c735b5940cd29c6cfbd827b7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80dc9065b6680fb5b87028873d52606d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80dc9065b6680fb5b87028873d52606d"></a>
 PortableServer::POA_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>_default_POA</b> ()</td></tr>
 <tr class="separator:a80dc9065b6680fb5b87028873d52606d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,15 +129,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b> ()</td
 <tr class="memitem:a65a7b1a96d0d69052990a3537584dc16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65a7b1a96d0d69052990a3537584dc16"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *p)</td></tr>
 <tr class="separator:a65a7b1a96d0d69052990a3537584dc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dc8c85b8e3d63a8e77ebfe9fef595aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a4dc8c85b8e3d63a8e77ebfe9fef595aa">clear</a> ()</td></tr>
-<tr class="memdesc:a4dc8c85b8e3d63a8e77ebfe9fef595aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the connection.  <a href="#a4dc8c85b8e3d63a8e77ebfe9fef595aa">More...</a><br/></td></tr>
-<tr class="separator:a4dc8c85b8e3d63a8e77ebfe9fef595aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad940bd99b8b8e5f3c19e77b1d77d5a17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad940bd99b8b8e5f3c19e77b1d77d5a17"></a>
+<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">base::ChannelElementBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEndpoint</b> () const</td></tr>
+<tr class="separator:ad940bd99b8b8e5f3c19e77b1d77d5a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f7c3ffe5568763ab09310f0ba1acbc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f7c3ffe5568763ab09310f0ba1acbc1"></a>
 <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getDefaultPolicy</b> () const </td></tr>
 <tr class="separator:a5f7c3ffe5568763ab09310f0ba1acbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae786e63b56be500d822b8cac0a0093de"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#ae786e63b56be500d822b8cac0a0093de">removeConnection</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *cid)</td></tr>
-<tr class="memdesc:ae786e63b56be500d822b8cac0a0093de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the input channel.  <a href="#ae786e63b56be500d822b8cac0a0093de">More...</a><br/></td></tr>
-<tr class="separator:ae786e63b56be500d822b8cac0a0093de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41ffcb4d860f510b7e3c0b4f187a3ed0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a41ffcb4d860f510b7e3c0b4f187a3ed0">read</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">DataSourceBase::shared_ptr</a> source, bool copy_old_data=true)</td></tr>
 <tr class="memdesc:a41ffcb4d860f510b7e3c0b4f187a3ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the port and updates the value hold by the given data source.  <a href="#a41ffcb4d860f510b7e3c0b4f187a3ed0">More...</a><br/></td></tr>
 <tr class="separator:a41ffcb4d860f510b7e3c0b4f187a3ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,10 +148,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a42d23ccfc567f217127b83ea822b9910"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a42d23ccfc567f217127b83ea822b9910">connectTo</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">PortInterface</a> *other)</td></tr>
 <tr class="memdesc:a42d23ccfc567f217127b83ea822b9910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects this port with <em>other</em>, using the default policy of the input.  <a href="#a42d23ccfc567f217127b83ea822b9910">More...</a><br/></td></tr>
 <tr class="separator:a42d23ccfc567f217127b83ea822b9910"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7eb4fbf0ce656faa66559028d28f6e7"><td class="memItemLeft" align="right" valign="top">virtual const <br class="typebreak"/>
-<a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html">internal::ConnectionManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#ac7eb4fbf0ce656faa66559028d28f6e7">getManager</a> () const </td></tr>
-<tr class="memdesc:ac7eb4fbf0ce656faa66559028d28f6e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the connection manager of this port (if any).  <a href="#ac7eb4fbf0ce656faa66559028d28f6e7">More...</a><br/></td></tr>
-<tr class="separator:ac7eb4fbf0ce656faa66559028d28f6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2bc3d97cfcb408a4452334323df7ffd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2bc3d97cfcb408a4452334323df7ffd"></a>
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#ad2bc3d97cfcb408a4452334323df7ffd">getName</a> () const </td></tr>
 <tr class="memdesc:ad2bc3d97cfcb408a4452334323df7ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of this Port. <br/></td></tr>
@@ -164,6 +161,10 @@ const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memitem:a4bed453e1d7211b72d81707efe1bd192"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">PortInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#a4bed453e1d7211b72d81707efe1bd192">doc</a> (const std::string &amp;desc)</td></tr>
 <tr class="memdesc:a4bed453e1d7211b72d81707efe1bd192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the documentation of this port.  <a href="#a4bed453e1d7211b72d81707efe1bd192">More...</a><br/></td></tr>
 <tr class="separator:a4bed453e1d7211b72d81707efe1bd192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac700cd806a5dfc2e8923177c376544e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac700cd806a5dfc2e8923177c376544e0"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#ac700cd806a5dfc2e8923177c376544e0">connectedTo</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">PortInterface</a> *port)</td></tr>
+<tr class="memdesc:ac700cd806a5dfc2e8923177c376544e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this port is connected to the given port. <br/></td></tr>
+<tr class="separator:ac700cd806a5dfc2e8923177c376544e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae32595f49031daead1d5c98d28b91c32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae32595f49031daead1d5c98d28b91c32"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#ae32595f49031daead1d5c98d28b91c32">isLocal</a> () const </td></tr>
 <tr class="memdesc:ae32595f49031daead1d5c98d28b91c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this port is located on this process, and false otherwise. <br/></td></tr>
@@ -172,6 +173,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual <a class="el" href="classRTT_1_1Service.html">Service</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#a16ac437dc1d1042db879adc30f812c8d">createPortObject</a> ()</td></tr>
 <tr class="memdesc:a16ac437dc1d1042db879adc30f812c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create accessor Object for this Port, for addition to a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> Object interface. <br/></td></tr>
 <tr class="separator:a16ac437dc1d1042db879adc30f812c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20940635dea5904477c5170b7ca71fd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#ae20940635dea5904477c5170b7ca71fd">removeConnection</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *cid)</td></tr>
+<tr class="memdesc:ae20940635dea5904477c5170b7ca71fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a user created connection from this port.  <a href="#ae20940635dea5904477c5170b7ca71fd">More...</a><br/></td></tr>
+<tr class="separator:ae20940635dea5904477c5170b7ca71fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a963599af7a0eb16cca2d4cdda9ba9fe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#a963599af7a0eb16cca2d4cdda9ba9fe4">setInterface</a> (<a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *iface)</td></tr>
 <tr class="memdesc:a963599af7a0eb16cca2d4cdda9ba9fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Once a port is added to a <a class="el" href="classRTT_1_1DataFlowInterface.html" title="The Interface of a TaskContext which exposes its data-flow ports. ">DataFlowInterface</a>, it gets a pointer to that interface.  <a href="#a963599af7a0eb16cca2d4cdda9ba9fe4">More...</a><br/></td></tr>
 <tr class="separator:a963599af7a0eb16cca2d4cdda9ba9fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,12 +183,21 @@ virtual <a class="el" href="classRTT_1_1Service.html">Service</a> *&#160;</td><t
 <a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#ae53d9ec4f148fd83cc6cd1819e0d451b">getInterface</a> () const </td></tr>
 <tr class="memdesc:ae53d9ec4f148fd83cc6cd1819e0d451b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classRTT_1_1DataFlowInterface.html" title="The Interface of a TaskContext which exposes its data-flow ports. ">DataFlowInterface</a> this port belongs to or null if it was not added to such an interface. <br/></td></tr>
 <tr class="separator:ae53d9ec4f148fd83cc6cd1819e0d451b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dee8b31490b0ed69d6403622a4a1103"><td class="memItemLeft" align="right" valign="top">virtual <br class="typebreak"/>
+<a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html">internal::ConnectionManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#a5dee8b31490b0ed69d6403622a4a1103">getManager</a> ()</td></tr>
+<tr class="memdesc:a5dee8b31490b0ed69d6403622a4a1103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the connection manager of this port (if any).  <a href="#a5dee8b31490b0ed69d6403622a4a1103">More...</a><br/></td></tr>
+<tr class="separator:a5dee8b31490b0ed69d6403622a4a1103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9affe57d417800aae5ee2ec5baeca578"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9affe57d417800aae5ee2ec5baeca578"></a>
+virtual <br class="typebreak"/>
+internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PortInterface.html#a9affe57d417800aae5ee2ec5baeca578">getSharedConnection</a> () const </td></tr>
+<tr class="memdesc:a9affe57d417800aae5ee2ec5baeca578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the shared connection element this port may be connected to. <br/></td></tr>
+<tr class="separator:a9affe57d417800aae5ee2ec5baeca578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aad23d8e5f563f3b4d23d960f67d1f060"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#aad23d8e5f563f3b4d23d960f67d1f060">addConnection</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *port_id, base::ChannelElementBase::shared_ptr channel_input, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy)</td></tr>
-<tr class="memdesc:aad23d8e5f563f3b4d23d960f67d1f060"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ConnectionFactory calls this.  <a href="#aad23d8e5f563f3b4d23d960f67d1f060">More...</a><br/></td></tr>
-<tr class="separator:aad23d8e5f563f3b4d23d960f67d1f060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae28b009417586ab394aa31d3b7a8e9f6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#ae28b009417586ab394aa31d3b7a8e9f6">addConnection</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *, base::ChannelElementBase::shared_ptr, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;)</td></tr>
+<tr class="memdesc:ae28b009417586ab394aa31d3b7a8e9f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ConnectionFactory calls this.  <a href="#ae28b009417586ab394aa31d3b7a8e9f6">More...</a><br/></td></tr>
+<tr class="separator:ae28b009417586ab394aa31d3b7a8e9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1466a724f8333f149ac8d6e9804fb53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1466a724f8333f149ac8d6e9804fb53"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>connectionAdded</b> (base::ChannelElementBase::shared_ptr channel, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy)</td></tr>
 <tr class="separator:ac1466a724f8333f149ac8d6e9804fb53"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,9 +217,6 @@ CDataFlowInterface_var&#160;</td><td class="memItemRight" valign="bottom"><b>dat
 <tr class="memitem:a7e626090a38a0fe4560cba44ed5f068e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e626090a38a0fe4560cba44ed5f068e"></a>
 PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><b>mpoa</b></td></tr>
 <tr class="separator:a7e626090a38a0fe4560cba44ed5f068e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad475fc0ae5d6d75895967d4afcc85625"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad475fc0ae5d6d75895967d4afcc85625"></a>
-<a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html">internal::ConnectionManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cmanager</b></td></tr>
-<tr class="separator:ad475fc0ae5d6d75895967d4afcc85625"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae349f154f173ce329803f46f82c6ec9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae349f154f173ce329803f46f82c6ec9a"></a>
 <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>default_policy</b></td></tr>
 <tr class="separator:ae349f154f173ce329803f46f82c6ec9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,14 +226,17 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 <tr class="memitem:a443f4f4190553cb557fc793506d77a4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a443f4f4190553cb557fc793506d77a4a"></a>
 <a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>iface</b></td></tr>
 <tr class="separator:a443f4f4190553cb557fc793506d77a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37ae51a012ccb9aeed756e55333eec6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac37ae51a012ccb9aeed756e55333eec6"></a>
+<a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html">internal::ConnectionManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cmanager</b></td></tr>
+<tr class="separator:ac37ae51a012ccb9aeed756e55333eec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Proxy for a remote input port. </p>
 <p>Since it inherits from ConnFactory, it also allows for building an output endpoint. You can not access its datasource. </p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00123">123</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00124">124</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aad23d8e5f563f3b4d23d960f67d1f060"></a>
+<a class="anchor" id="ae28b009417586ab394aa31d3b7a8e9f6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -234,19 +247,19 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
           <td class="memname">virtual bool RTT::corba::RemoteInputPort::addConnection </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *&#160;</td>
-          <td class="paramname"><em>port_id</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">base::ChannelElementBase::shared_ptr&#160;</td>
-          <td class="paramname"><em>channel_input</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;&#160;</td>
-          <td class="paramname"><em>policy</em>&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -275,7 +288,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1corba_1_1RemotePort.html">RTT::corba::RemotePort&lt; base::InputPortInterface &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00136">136</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00135">135</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,9 +318,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PortInterface.html#a972517e80b0f06b3d6303ad3275c1f94">RTT::base::PortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00200">200</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00239">239</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
 
-<p>References <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>, and <a class="el" href="TypeInfo_8cpp_source.html#l00201">RTT::types::TypeInfo::outputPort()</a>.</p>
+<p>References <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, and <a class="el" href="TypeInfo_8cpp_source.html#l00201">RTT::types::TypeInfo::outputPort()</a>.</p>
 
 </div>
 </div>
@@ -370,13 +383,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#af91b3e2733b8928f41eb96b5b8794fe8">RTT::base::InputPortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00120">120</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00128">128</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
 
-<p>References <a class="el" href="TypeInfo_8cpp_source.html#l00206">RTT::types::TypeInfo::buildDataStorage()</a>, <a class="el" href="classRTT_1_1types_1_1TypeTransporter.html#a26b001061c666f942058d1e84db7bbc6">RTT::types::TypeTransporter::createStream()</a>, <a class="el" href="PortInterface_8cpp_source.html#l00095">RTT::base::PortInterface::getInterface()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00149">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00082">RTT::types::TypeInfo::getTypeName()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00182">RTT::ConnPolicy::name_id</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00157">RTT::ConnPolicy::pull</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00164">RTT::ConnPolicy::transport</a>.</p>
+<p>References <a class="el" href="TypeInfo_8cpp_source.html#l00206">RTT::types::TypeInfo::buildDataStorage()</a>, <a class="el" href="classRTT_1_1types_1_1TypeTransporter.html#a26b001061c666f942058d1e84db7bbc6">RTT::types::TypeTransporter::createStream()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00248">RTT::ConnPolicy::data_size</a>, <a class="el" href="PortInterface_8cpp_source.html#l00104">RTT::base::PortInterface::getInterface()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00149">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00083">RTT::types::TypeInfo::getTypeName()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00232">RTT::ConnPolicy::mandatory</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00256">RTT::ConnPolicy::name_id</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00209">RTT::ConnPolicy::pull</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00238">RTT::ConnPolicy::transport</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="accde83c735b5940cd29c6cfbd827b7fe"></a>
+<a class="anchor" id="afcec06b6329b0791b12b7a3eae2d74d4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -384,21 +397,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool RemoteInputPort::channelReady </td>
+          <td class="memname">void RemoteInputPort::clear </td>
           <td>(</td>
-          <td class="paramtype">base::ChannelElementBase::shared_ptr&#160;</td>
-          <td class="paramname"><em>channel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classRTT_1_1ConnPolicy.html">RTT::ConnPolicy</a> const &amp;&#160;</td>
-          <td class="paramname"><em>policy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -408,47 +410,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 </table>
 </div><div class="memdoc">
 
-<p>For remote input port objects, this is forwarded to the other end over the Data Flow Interface. </p>
-<p>The given channel must be the output endpoint of a connection, which was built using buildRemoteChannelOutput. So channel-&gt;getOutputEndpoint() == channel </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-<p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a05f20ca7d23ee685fb154e4759fc6b60">RTT::base::InputPortInterface</a>.</p>
-
-<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00204">204</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
-
-<p>References <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4dc8c85b8e3d63a8e77ebfe9fef595aa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InputPortInterface::clear </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
 <p>Clears the connection. </p>
-<p>After call to <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a41ffcb4d860f510b7e3c0b4f187a3ed0" title="Reads the port and updates the value hold by the given data source. ">read()</a> will return false after <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a4dc8c85b8e3d63a8e77ebfe9fef595aa" title="Clears the connection. ">clear()</a> has been called </p>
+<p>After call to <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a41ffcb4d860f510b7e3c0b4f187a3ed0" title="Reads the port and updates the value hold by the given data source. ">read()</a> will return false after <a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#afcec06b6329b0791b12b7a3eae2d74d4" title="Clears the connection. ">clear()</a> has been called </p>
 
-<p>Definition at line <a class="el" href="InputPortInterface_8cpp_source.html#l00155">155</a> of file <a class="el" href="InputPortInterface_8cpp_source.html">InputPortInterface.cpp</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a4440042b409ac2ed8b76697ae90652a0">RTT::base::InputPortInterface</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8cpp_source.html#l00079">RTT::internal::ConnectionManager::clear()</a>.</p>
-
-<p>Referenced by <a class="el" href="InputPort_8hpp_source.html#l00232">RTT::InputPort&lt; T &gt;::createPortObject()</a>, and <a class="el" href="InputPortSource_8hpp_source.html#l00080">RTT::internal::InputPortSource&lt; T &gt;::reset()</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00122">122</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
 
 </div>
 </div>
@@ -478,9 +445,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PortInterface.html#ae58b50ea0a18e3f5b7b25825fbee8f02">RTT::base::PortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00197">197</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00236">236</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
 
-<p>References <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>, and <a class="el" href="TypeInfo_8cpp_source.html#l00196">RTT::types::TypeInfo::inputPort()</a>.</p>
+<p>References <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, and <a class="el" href="TypeInfo_8cpp_source.html#l00196">RTT::types::TypeInfo::inputPort()</a>.</p>
 
 </div>
 </div>
@@ -524,7 +491,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Definition at line <a class="el" href="InputPortInterface_8cpp_source.html#l00085">85</a> of file <a class="el" href="InputPortInterface_8cpp_source.html">InputPortInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html#a5c8858d877b53d2b89156e254a8b8834">RTT::base::OutputPortInterface::createConnection()</a>, and <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html#a5c8858d877b53d2b89156e254a8b8834">RTT::base::OutputPortInterface::createConnection()</a>, and <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>.</p>
 
 <p>Referenced by <a class="el" href="InputPortInterface_8cpp_source.html#l00095">RTT::base::InputPortInterface::connectTo()</a>.</p>
 
@@ -597,9 +564,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Definition at line <a class="el" href="PortInterface_8cpp_source.html#l00060">60</a> of file <a class="el" href="PortInterface_8cpp_source.html">PortInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="DataFlowInterface_8cpp_source.html#l00227">RTT::DataFlowInterface::setPortDescription()</a>.</p>
+<p>References <a class="el" href="DataFlowInterface_8cpp_source.html#l00229">RTT::DataFlowInterface::setPortDescription()</a>.</p>
 
-<p>Referenced by <a class="el" href="InputPort_8hpp_source.html#l00232">RTT::InputPort&lt; T &gt;::createPortObject()</a>.</p>
+<p>Referenced by <a class="el" href="InputPort_8hpp_source.html#l00215">RTT::InputPort&lt; T &gt;::createPortObject()</a>.</p>
 
 </div>
 </div>
@@ -629,7 +596,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#afd46e9b26cb9db8b9b117f6ab5e268f7">RTT::base::InputPortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00117">117</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00125">125</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
 
 </div>
 </div>
@@ -657,11 +624,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 <p>Get the documentation of this port. </p>
 <dl class="section return"><dt>Returns</dt><dd>A description. </dd></dl>
 
-<p>Definition at line <a class="el" href="PortInterface_8hpp_source.html#l00091">91</a> of file <a class="el" href="PortInterface_8hpp_source.html">PortInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="PortInterface_8hpp_source.html#l00093">93</a> of file <a class="el" href="PortInterface_8hpp_source.html">PortInterface.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac7eb4fbf0ce656faa66559028d28f6e7"></a>
+<a class="anchor" id="a5dee8b31490b0ed69d6403622a4a1103"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -669,10 +636,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html">internal::ConnectionManager</a>* RTT::base::InputPortInterface::getManager </td>
+          <td class="memname">virtual <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html">internal::ConnectionManager</a>* RTT::base::PortInterface::getManager </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -685,11 +652,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 <p>Returns the connection manager of this port (if any). </p>
 <p>This method provides access to the internals of this port in order to allow connection introspection. </p>
 <dl class="section return"><dt>Returns</dt><dd>null if no such manager is available, or the manager otherwise. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a15aad87be4be1c50beee607e9d9e6cb0" title="Returns a list of all channels managed by this object. ">ConnectionManager::getChannels()</a> for a list of all connections of this port. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd>ConnectionManager::getChannels() for a list of all connections of this port. </dd></dl>
 
-<p>Implements <a class="el" href="classRTT_1_1base_1_1PortInterface.html#af52d7cf050d26b41a57e0d758051f607">RTT::base::PortInterface</a>.</p>
+<p>Definition at line <a class="el" href="PortInterface_8hpp_source.html#l00222">222</a> of file <a class="el" href="PortInterface_8hpp_source.html">PortInterface.hpp</a>.</p>
 
-<p>Definition at line <a class="el" href="InputPortInterface_8hpp_source.html#l00159">159</a> of file <a class="el" href="InputPortInterface_8hpp_source.html">InputPortInterface.hpp</a>.</p>
+<p>Referenced by <a class="el" href="ConnInputEndPoint_8hpp_source.html#l00072">RTT::internal::ConnInputEndpoint&lt; T &gt;::disconnect()</a>, and <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00129">RTT::internal::ConnOutputEndpoint&lt; T &gt;::disconnect()</a>.</p>
 
 </div>
 </div>
@@ -731,11 +698,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1InputPort.html#a270efcef40b55f9c5192665d34d04fcf">RTT::InputPort&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="InputPortInterface_8cpp_source.html#l00149">149</a> of file <a class="el" href="InputPortInterface_8cpp_source.html">InputPortInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="InputPortInterface_8cpp_source.html#l00117">117</a> of file <a class="el" href="InputPortInterface_8cpp_source.html">InputPortInterface.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae786e63b56be500d822b8cac0a0093de"></a>
+<a class="anchor" id="ae20940635dea5904477c5170b7ca71fd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -743,7 +710,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool InputPortInterface::removeConnection </td>
+          <td class="memname">bool PortInterface::removeConnection </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *&#160;</td>
           <td class="paramname"><em>cid</em></td><td>)</td>
@@ -757,15 +724,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 </table>
 </div><div class="memdoc">
 
-<p>Removes the input channel. </p>
-<p>Returns true if the provided channel was actually a channel of this port, and false otherwise.</p>
-<p>You should usually not use this directly. Use <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a70be1ab5a8f69c102bea50b47dad4c6c" title="Removes any connection that either go to or come from this port and removes all callbacks and cleans ...">disconnect()</a> instead. </p>
+<p>Removes a user created connection from this port. </p>
+<p>This is an advanced method, prefer to use <a class="el" href="classRTT_1_1base_1_1PortInterface.html#aa9f3cecab5a948799111fc2671f5057c" title="Removes any connection that either go to or come from this port. ">disconnect()</a> or a method from a subclass of <a class="el" href="classRTT_1_1base_1_1PortInterface.html" title="The base class of every data flow port. ">PortInterface</a>. </p>
 
-<p>Implements <a class="el" href="classRTT_1_1base_1_1PortInterface.html#afb53bec2e9551b2b1b3c7ebd413c4a9c">RTT::base::PortInterface</a>.</p>
-
-<p>Definition at line <a class="el" href="InputPortInterface_8cpp_source.html#l00133">133</a> of file <a class="el" href="InputPortInterface_8cpp_source.html">InputPortInterface.cpp</a>.</p>
-
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00345">RTT::internal::ConnFactory::createStream()</a>, and <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00100">RTT::internal::ConnOutputEndpoint&lt; T &gt;::disconnect()</a>.</p>
+<p>Definition at line <a class="el" href="PortInterface_8cpp_source.html#l00095">95</a> of file <a class="el" href="PortInterface_8cpp_source.html">PortInterface.cpp</a>.</p>
 
 </div>
 </div>
@@ -794,7 +756,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 <p>Once a port is added to a <a class="el" href="classRTT_1_1DataFlowInterface.html" title="The Interface of a TaskContext which exposes its data-flow ports. ">DataFlowInterface</a>, it gets a pointer to that interface. </p>
 <p>This allows advanced ports to track back to which component they belong. </p>
 
-<p>Definition at line <a class="el" href="PortInterface_8cpp_source.html#l00091">91</a> of file <a class="el" href="PortInterface_8cpp_source.html">PortInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="PortInterface_8cpp_source.html#l00100">100</a> of file <a class="el" href="PortInterface_8cpp_source.html">PortInterface.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00082">RTT::DataFlowInterface::addLocalPort()</a>.</p>
 
@@ -836,7 +798,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>References <a class="el" href="classRTT_1_1base_1_1PortInterface.html#a6751d5bbe9196013651b34294f72452c">RTT::base::PortInterface::connected()</a>.</p>
 
-<p>Referenced by <a class="el" href="DataFlowInterface_8hpp_source.html#l00114">RTT::DataFlowInterface::addEventPort()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00547">RTT::TaskContext::addEventPort()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00089">RTT::DataFlowInterface::addPort()</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00523">RTT::TaskContext::addPort()</a>.</p>
+<p>Referenced by <a class="el" href="DataFlowInterface_8hpp_source.html#l00117">RTT::DataFlowInterface::addEventPort()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00536">RTT::TaskContext::addEventPort()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00089">RTT::DataFlowInterface::addPort()</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00512">RTT::TaskContext::addPort()</a>.</p>
 
 </div>
 </div>
@@ -847,7 +809,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

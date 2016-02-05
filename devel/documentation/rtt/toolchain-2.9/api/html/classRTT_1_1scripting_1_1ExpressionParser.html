@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -76,6 +76,9 @@ rule_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>parser</b> ()
 <tr class="memitem:ae85009618537cc7a99bcec30fc1d64bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae85009618537cc7a99bcec30fc1d64bb"></a>
 <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getResult</b> ()</td></tr>
 <tr class="separator:ae85009618537cc7a99bcec30fc1d64bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9708c052a6fac149fbee6702cb1282e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9708c052a6fac149fbee6702cb1282e"></a>
+<a class="el" href="classRTT_1_1scripting_1_1ConditionInterface.html">ConditionInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getCmdResult</b> ()</td></tr>
+<tr class="separator:ad9708c052a6fac149fbee6702cb1282e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4399601d970ac8c6043e4c6bd1d663c9"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ExpressionParser.html#a4399601d970ac8c6043e4c6bd1d663c9">getHandle</a> ()</td></tr>
 <tr class="memdesc:a4399601d970ac8c6043e4c6bd1d663c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">In case the parsed result returns a <a class="el" href="classRTT_1_1SendHandle.html" title="The SendHandle is used to collect the result values of an asynchronous invocation. ">SendHandle</a>, ask the parser to also create a handle for it.  <a href="#a4399601d970ac8c6043e4c6bd1d663c9">More...</a><br/></td></tr>
@@ -91,7 +94,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasResult</b> ()</td>
 <div class="textblock"><p>How we parse: this parser works like a stack-based RPN calculator. </p>
 <p>An atomic expression pushes one <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a> up the stack, a binary expression pops two DataSources, and pushes a new one, a unary pops one, and pushes one etc. This allows for the reentrancy we need.. </p>
 
-<p>Definition at line <a class="el" href="ExpressionParser_8hpp_source.html#l00140">140</a> of file <a class="el" href="ExpressionParser_8hpp_source.html">ExpressionParser.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExpressionParser_8hpp_source.html#l00146">146</a> of file <a class="el" href="ExpressionParser_8hpp_source.html">ExpressionParser.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a4399601d970ac8c6043e4c6bd1d663c9"></a>
 <div class="memitem">
@@ -109,7 +112,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasResult</b> ()</td>
 <p>In case the parsed result returns a <a class="el" href="classRTT_1_1SendHandle.html" title="The SendHandle is used to collect the result values of an asynchronous invocation. ">SendHandle</a>, ask the parser to also create a handle for it. </p>
 <dl class="section return"><dt>Returns</dt><dd>null pointer if no handle could be made. </dd></dl>
 
-<p>Definition at line <a class="el" href="ExpressionParser_8cpp_source.html#l00588">588</a> of file <a class="el" href="ExpressionParser_8cpp_source.html">ExpressionParser.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExpressionParser_8cpp_source.html#l00621">621</a> of file <a class="el" href="ExpressionParser_8cpp_source.html">ExpressionParser.cpp</a>.</p>
 
 </div>
 </div>
@@ -120,7 +123,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasResult</b> ()</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

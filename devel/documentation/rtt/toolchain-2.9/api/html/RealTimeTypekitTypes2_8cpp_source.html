@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -121,16 +121,18 @@
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;         <span class="comment">// load the Orocos specific types:</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;         <span class="keywordtype">void</span> loadOrocosTypes( TypeInfoRepository::shared_ptr ti ) {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;FlowStatus&gt;</a>(<span class="stringliteral">&quot;FlowStatus&quot;</span>));</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;SendStatus&gt;</a>(<span class="stringliteral">&quot;SendStatus&quot;</span>));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="classRTT_1_1types_1_1TemplateTypeInfo.html">TemplateTypeInfo&lt;PropertyBag, true&gt;</a>(<span class="stringliteral">&quot;PropertyBag&quot;</span>) );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="classRTT_1_1types_1_1StructTypeInfo.html">StructTypeInfo&lt;ConnPolicy,false&gt;</a>(<span class="stringliteral">&quot;ConnPolicy&quot;</span>) );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="classRTT_1_1types_1_1TemplateTypeInfo.html">TemplateTypeInfo&lt;EmptySendHandle&gt;</a>(<span class="stringliteral">&quot;SendHandle&quot;</span>) ); <span class="comment">//dummy, replaced by real stuff when seen by parser.</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="classRTT_1_1types_1_1TemplateTypeInfo.html">TemplateTypeInfo&lt;TaskContext*&gt;</a>(<span class="stringliteral">&quot;TaskContext&quot;</span>));</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;         }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;     }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;WriteStatus&gt;</a>(<span class="stringliteral">&quot;WriteStatus&quot;</span>));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;SendStatus&gt;</a>(<span class="stringliteral">&quot;SendStatus&quot;</span>));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="classRTT_1_1types_1_1TemplateTypeInfo.html">TemplateTypeInfo&lt;PropertyBag, true&gt;</a>(<span class="stringliteral">&quot;PropertyBag&quot;</span>) );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="classRTT_1_1types_1_1StructTypeInfo.html">StructTypeInfo&lt;ConnPolicy&gt;</a>(<span class="stringliteral">&quot;ConnPolicy&quot;</span>) );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;BufferPolicy&gt;</a>(<span class="stringliteral">&quot;BufferPolicy&quot;</span>) );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="classRTT_1_1types_1_1TemplateTypeInfo.html">TemplateTypeInfo&lt;EmptySendHandle&gt;</a>(<span class="stringliteral">&quot;SendHandle&quot;</span>) ); <span class="comment">//dummy, replaced by real stuff when seen by parser.</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;             ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="classRTT_1_1types_1_1TemplateTypeInfo.html">TemplateTypeInfo&lt;TaskContext*&gt;</a>(<span class="stringliteral">&quot;TaskContext&quot;</span>));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;         }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;     }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
 <div class="ttc" id="classRTT_1_1types_1_1TemplateTypeInfo_html"><div class="ttname"><a href="classRTT_1_1types_1_1TemplateTypeInfo.html">RTT::types::TemplateTypeInfo</a></div><div class="ttdoc">This template class allows user types to be used in all Orocos primitives. </div><div class="ttdef"><b>Definition:</b> <a href="rtt-types-fwd_8hpp_source.html#l00035">rtt-types-fwd.hpp:35</a></div></div>
 <div class="ttc" id="structRTT_1_1types_1_1EmptySendHandle_html"><div class="ttname"><a href="structRTT_1_1types_1_1EmptySendHandle.html">RTT::types::EmptySendHandle</a></div><div class="ttdoc">This is a placeholder for scripting purposes. </div><div class="ttdef"><b>Definition:</b> <a href="RealTimeTypekitTypes2_8cpp_source.html#l00066">RealTimeTypekitTypes2.cpp:66</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1StructTypeInfo_html"><div class="ttname"><a href="classRTT_1_1types_1_1StructTypeInfo.html">RTT::types::StructTypeInfo</a></div><div class="ttdoc">Type Information for data types that are structs, ie all user data types fall in this category...</div><div class="ttdef"><b>Definition:</b> <a href="rtt-types-fwd_8hpp_source.html#l00033">rtt-types-fwd.hpp:33</a></div></div>
@@ -138,7 +140,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

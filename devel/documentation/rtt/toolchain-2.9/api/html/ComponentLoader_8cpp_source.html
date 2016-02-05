@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -807,68 +807,71 @@
 <div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;    <span class="keywordflow">return</span> instance;</div>
 <div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;}</div>
 <div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;<span class="keywordtype">bool</span> ComponentLoader::unloadComponent( <a class="code" href="classRTT_1_1TaskContext.html">RTT::TaskContext</a>* tc ) {</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;<span class="keywordtype">bool</span> ComponentLoader::unloadComponent( <a class="code" href="classRTT_1_1TaskContext.html">RTT::TaskContext</a>* tc, <span class="keyword">const</span> std::string&amp; name ) {</div>
 <div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    <span class="keywordflow">if</span> (!tc)</div>
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    CompList::iterator it;</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    it = comps.find( tc-&gt;<a class="code" href="classRTT_1_1TaskContext.html#a7aa7e91bf90f0793142432f74bb830a1">getName</a>() );</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    <span class="keywordflow">if</span> ( it != comps.end() ) {</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;        <span class="keyword">delete</span> tc;</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;        comps.erase(it);</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    }</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    log(Error) &lt;&lt;<span class="stringliteral">&quot;Refusing to unload a component I didn&#39;t load myself.&quot;</span>&lt;&lt;endlog();</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;}</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;std::vector&lt;std::string&gt; ComponentLoader::listComponents()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    vector&lt;string&gt; names( comps.size() );</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    <span class="keywordflow">for</span>(map&lt;string,ComponentData&gt;::const_iterator it = comps.begin(); it != comps.end(); ++it)</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        names.push_back( it-&gt;first );</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    <span class="keywordflow">return</span> names;</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;}</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;<span class="keywordtype">bool</span> ComponentLoader::isCompatibleComponent(std::string <span class="keyword">const</span>&amp; filepath)</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;{</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    path p(filepath);</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;<span class="preprocessor">#if BOOST_VERSION &gt;= 104600</span></div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;<span class="preprocessor"></span>    <span class="keywordtype">string</span> libname = p.filename().string();</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;<span class="preprocessor"></span>    <span class="keywordtype">string</span> libname = p.filename();</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;    <span class="comment">//log(Debug) &lt;&lt; &quot;Validating compatility of component file &#39;&quot; + libname + &quot;&#39;&quot; &lt;&lt;endlog();</span></div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;<span class="preprocessor"></span>    <span class="comment">// On WIN32 target:</span></div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    <span class="comment">// - look if the library name ends with &quot;win32.dll&quot; on release mode</span></div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    <span class="comment">// - look if the library name ends with &quot;win32d.dll&quot; on debug mode</span></div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    <span class="keywordflow">if</span>(!hasEnding(libname, FULL_COMPONENT_SUFFIX))</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    {</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;        <span class="comment">//log(Debug) &lt;&lt; &quot;Component file &#39;&quot; + libname + &quot;&#39; is incompatible because it doesn&#39;t have the suffix &quot; &lt;&lt; FULL_COMPONENT_SUFFIX &lt;&lt; endlog();</span></div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    }</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;<span class="preprocessor">#endif // _WIN32</span></div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;    <span class="comment">// There&#39;s no validation on other targets</span></div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    <span class="comment">//log(Debug) &lt;&lt; &quot;Component file &#39;&quot; + libname + &quot;&#39; is valid.&quot; &lt;&lt;endlog();</span></div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;}</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    <span class="keywordflow">if</span> (name.empty())</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        it = comps.find( tc-&gt;<a class="code" href="classRTT_1_1TaskContext.html#a7aa7e91bf90f0793142432f74bb830a1">getName</a>() );</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;        it = comps.find( name );</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    <span class="keywordflow">if</span> ( it != comps.end() ) {</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;        <span class="keyword">delete</span> tc;</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;        comps.erase(it);</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    }</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    log(Error) &lt;&lt;<span class="stringliteral">&quot;Refusing to unload a component I didn&#39;t load myself.&quot;</span>&lt;&lt;endlog();</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;}</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;std::vector&lt;std::string&gt; ComponentLoader::listComponents()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    vector&lt;string&gt; names( comps.size() );</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    <span class="keywordflow">for</span>(map&lt;string,ComponentData&gt;::const_iterator it = comps.begin(); it != comps.end(); ++it)</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        names.push_back( it-&gt;first );</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    <span class="keywordflow">return</span> names;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;}</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;<span class="keywordtype">bool</span> ComponentLoader::isCompatibleComponent(std::string <span class="keyword">const</span>&amp; filepath)</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;{</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;    path p(filepath);</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;<span class="preprocessor">#if BOOST_VERSION &gt;= 104600</span></div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="preprocessor"></span>    <span class="keywordtype">string</span> libname = p.filename().string();</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;<span class="preprocessor"></span>    <span class="keywordtype">string</span> libname = p.filename();</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    <span class="comment">//log(Debug) &lt;&lt; &quot;Validating compatility of component file &#39;&quot; + libname + &quot;&#39;&quot; &lt;&lt;endlog();</span></div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;<span class="preprocessor"></span>    <span class="comment">// On WIN32 target:</span></div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    <span class="comment">// - look if the library name ends with &quot;win32.dll&quot; on release mode</span></div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;    <span class="comment">// - look if the library name ends with &quot;win32d.dll&quot; on debug mode</span></div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;    <span class="keywordflow">if</span>(!hasEnding(libname, FULL_COMPONENT_SUFFIX))</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    {</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        <span class="comment">//log(Debug) &lt;&lt; &quot;Component file &#39;&quot; + libname + &quot;&#39; is incompatible because it doesn&#39;t have the suffix &quot; &lt;&lt; FULL_COMPONENT_SUFFIX &lt;&lt; endlog();</span></div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;    }</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;<span class="preprocessor">#endif // _WIN32</span></div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    <span class="comment">// There&#39;s no validation on other targets</span></div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    <span class="comment">//log(Debug) &lt;&lt; &quot;Component file &#39;&quot; + libname + &quot;&#39; is valid.&quot; &lt;&lt;endlog();</span></div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;<span class="keyword">const</span> FactoryMap&amp; ComponentLoader::getFactories()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;  <span class="keywordflow">return</span> ComponentFactories::Instance();</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;}</div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;<span class="keywordtype">void</span> ComponentLoader::addFactory(std::string <span class="keyword">const</span>&amp; name, <a class="code" href="namespaceRTT.html#a3ae509ae0e8187d05670f4e57b6a8d0e">ComponentLoaderSignature</a> factory)</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;{</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;  ComponentFactories::Instance()[name] = factory;</div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;}</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;}</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;<span class="keyword">const</span> FactoryMap&amp; ComponentLoader::getFactories()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;  <span class="keywordflow">return</span> ComponentFactories::Instance();</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;}</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;<span class="keywordtype">void</span> ComponentLoader::addFactory(std::string <span class="keyword">const</span>&amp; name, <a class="code" href="namespaceRTT.html#a3ae509ae0e8187d05670f4e57b6a8d0e">ComponentLoaderSignature</a> factory)</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;{</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;  ComponentFactories::Instance()[name] = factory;</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;}</div>
 <div class="ttc" id="classRTT_1_1types_1_1TypekitRepository_html_aa7e01f7165ac81aed4d9f9df2a060436"><div class="ttname"><a href="classRTT_1_1types_1_1TypekitRepository.html#aa7e01f7165ac81aed4d9f9df2a060436">RTT::types::TypekitRepository::hasTypekit</a></div><div class="ttdeci">static bool hasTypekit(const std::string &amp;typekitname)</div><div class="ttdoc">Check if a typekit with given name was already imported. </div><div class="ttdef"><b>Definition:</b> <a href="TypekitRepository_8cpp_source.html#l00116">TypekitRepository.cpp:116</a></div></div>
 <div class="ttc" id="structRTT_1_1os_1_1CleanupFunction_html"><div class="ttname"><a href="structRTT_1_1os_1_1CleanupFunction.html">RTT::os::CleanupFunction</a></div><div class="ttdoc">Use this to register a global cleanup function to the StartStopManager. </div><div class="ttdef"><b>Definition:</b> <a href="StartStopManager_8hpp_source.html#l00136">StartStopManager.hpp:136</a></div></div>
 <div class="ttc" id="structRTT_1_1os_1_1InitFunction_html"><div class="ttname"><a href="structRTT_1_1os_1_1InitFunction.html">RTT::os::InitFunction</a></div><div class="ttdoc">Use this to register a global init function to the StartStopManager. </div><div class="ttdef"><b>Definition:</b> <a href="StartStopManager_8hpp_source.html#l00124">StartStopManager.hpp:124</a></div></div>
@@ -876,11 +879,11 @@
 <div class="ttc" id="classRTT_1_1TaskContext_html"><div class="ttname"><a href="classRTT_1_1TaskContext.html">RTT::TaskContext</a></div><div class="ttdoc">The TaskContext is the C++ representation of an Orocos component. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8hpp_source.html#l00093">TaskContext.hpp:93</a></div></div>
 <div class="ttc" id="classRTT_1_1plugin_1_1PluginLoader_html_a0dd68434e280e0112ef3d8646b12e941"><div class="ttname"><a href="classRTT_1_1plugin_1_1PluginLoader.html#a0dd68434e280e0112ef3d8646b12e941">RTT::plugin::PluginLoader::Instance</a></div><div class="ttdeci">static boost::shared_ptr&lt; PluginLoader &gt; Instance()</div><div class="ttdoc">Create the instance of the PluginLoader. </div><div class="ttdef"><b>Definition:</b> <a href="PluginLoader_8cpp_source.html#l00325">PluginLoader.cpp:325</a></div></div>
 <div class="ttc" id="namespaceRTT_html_a3ae509ae0e8187d05670f4e57b6a8d0e"><div class="ttname"><a href="namespaceRTT.html#a3ae509ae0e8187d05670f4e57b6a8d0e">RTT::ComponentLoaderSignature</a></div><div class="ttdeci">TaskContext *(* ComponentLoaderSignature)(std::string instance_name)</div><div class="ttdoc">This signature defines how a component can be instantiated. </div><div class="ttdef"><b>Definition:</b> <a href="Component_8hpp_source.html#l00050">Component.hpp:50</a></div></div>
-<div class="ttc" id="classRTT_1_1TaskContext_html_a7aa7e91bf90f0793142432f74bb830a1"><div class="ttname"><a href="classRTT_1_1TaskContext.html#a7aa7e91bf90f0793142432f74bb830a1">RTT::TaskContext::getName</a></div><div class="ttdeci">virtual const std::string &amp; getName() const </div><div class="ttdoc">Returns the name of this TaskContext. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8hpp_source.html#l00128">TaskContext.hpp:128</a></div></div>
+<div class="ttc" id="classRTT_1_1TaskContext_html_a7aa7e91bf90f0793142432f74bb830a1"><div class="ttname"><a href="classRTT_1_1TaskContext.html#a7aa7e91bf90f0793142432f74bb830a1">RTT::TaskContext::getName</a></div><div class="ttdeci">virtual const std::string &amp; getName() const </div><div class="ttdoc">Returns the name of this TaskContext. </div><div class="ttdef"><b>Definition:</b> <a href="TaskContext_8hpp_source.html#l00117">TaskContext.hpp:117</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:37 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:02 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

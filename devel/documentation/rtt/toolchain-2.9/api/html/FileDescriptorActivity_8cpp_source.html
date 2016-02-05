@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -322,189 +322,214 @@
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keyword">struct </span>fd_watch {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordtype">int</span>&amp; fd;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    fd_watch(<span class="keywordtype">int</span>&amp; fd) : fd(fd) {}</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    ~fd_watch()</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    {</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">if</span> (fd != -1) </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            close(fd);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        fd = -1;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;};</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6c8e8b54ca6f7dbf6ef902a26f039231">  297</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6c8e8b54ca6f7dbf6ef902a26f039231">FileDescriptorActivity::loop</a>()</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;{</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">int</span> pipe = m_interrupt_pipe[0];</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    fd_watch watch_pipe_0(m_interrupt_pipe[0]);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    fd_watch watch_pipe_1(m_interrupt_pipe[1]);</div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a55607d1457744df8dc8b1644dd04dd89">  286</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a55607d1457744df8dc8b1644dd04dd89">FileDescriptorActivity::timeout</a>()</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keyword">struct </span>fd_watch {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">int</span>&amp; fd;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    fd_watch(<span class="keywordtype">int</span>&amp; fd) : fd(fd) {}</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    ~fd_watch()</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordflow">if</span> (fd != -1) </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            close(fd);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        fd = -1;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;};</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordtype">int</span> max_fd;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        { <a class="code" href="classRTT_1_1os_1_1MutexLock.html">RTT::os::MutexLock</a> lock(m_lock);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordflow">if</span> (m_watched_fds.empty())</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                max_fd = pipe;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                max_fd = std::max(pipe, *m_watched_fds.rbegin());</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            m_fd_work = m_fd_set;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        FD_SET(pipe, &amp;m_fd_work);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordtype">int</span> ret;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        m_running = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">if</span> (m_timeout_us == 0)</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            ret = select(max_fd + 1, &amp;m_fd_work, NULL, NULL, NULL);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        }</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> USECS_PER_SEC = 1000000;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            timeval timeout = { m_timeout_us / USECS_PER_SEC,</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                                m_timeout_us % USECS_PER_SEC};</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            ret = select(max_fd + 1, &amp;m_fd_work, NULL, NULL, &amp;timeout);</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        m_has_error   = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        m_has_timeout = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">if</span> (ret == -1)</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;FileDescriptorActivity: error in select(), errno = &quot;</span> &lt;&lt; errno &lt;&lt; endlog();</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            m_has_error = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        }</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ret == 0)</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        {</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;FileDescriptorActivity: timeout in select()&quot;</span> &lt;&lt; endlog();</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            m_has_timeout = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        }</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="comment">// Empty all commands queued in the pipe</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordflow">if</span> (ret &gt; 0 &amp;&amp; FD_ISSET(pipe, &amp;m_fd_work)) <span class="comment">// breakLoop or trigger requests</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            <span class="comment">// These variables are used in order to loop with select(). See the</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="comment">// while() condition below.</span></div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            fd_set watch_pipe;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            timeval timeout;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <span class="keywordtype">char</span> dummy;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            {</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                <span class="keywordtype">int</span> unused; (void)unused;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                unused = read(pipe, &amp;dummy, 1);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                <span class="comment">// Initialize the values for the next select() call</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                FD_ZERO(&amp;watch_pipe);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                FD_SET(pipe, &amp;watch_pipe);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                timeout.tv_sec  = 0;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                timeout.tv_usec = 0;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            }</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">while</span>(select(pipe + 1, &amp;watch_pipe, NULL, NULL, &amp;timeout) &gt; 0);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        }</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="comment">// We check the flags after the command queue was emptied as we could miss commands otherwise:</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordtype">bool</span> do_trigger = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        { <a class="code" href="classRTT_1_1os_1_1MutexLock.html">RTT::os::MutexLock</a> lock(m_command_mutex);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            <span class="comment">// This section should be really fast to not block threads calling trigger(), breakLoop() or watch().</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            <span class="keywordflow">if</span> (m_trigger) {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                do_trigger = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                m_trigger = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            }</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            <span class="keywordflow">if</span> (m_update_sets) {</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                m_update_sets = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                do_trigger = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            }</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            <span class="keywordflow">if</span> (m_break_loop) {</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                m_break_loop = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6c8e8b54ca6f7dbf6ef902a26f039231">  303</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6c8e8b54ca6f7dbf6ef902a26f039231">FileDescriptorActivity::loop</a>()</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;{</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">int</span> pipe = m_interrupt_pipe[0];</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    fd_watch watch_pipe_0(m_interrupt_pipe[0]);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    fd_watch watch_pipe_1(m_interrupt_pipe[1]);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordtype">int</span> max_fd;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        { <a class="code" href="classRTT_1_1os_1_1MutexLock.html">RTT::os::MutexLock</a> lock(m_lock);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="keywordflow">if</span> (m_watched_fds.empty())</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                max_fd = pipe;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                max_fd = std::max(pipe, *m_watched_fds.rbegin());</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            m_fd_work = m_fd_set;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        FD_SET(pipe, &amp;m_fd_work);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordtype">int</span> ret;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        m_running = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">if</span> (m_timeout_us == 0)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            ret = select(max_fd + 1, &amp;m_fd_work, NULL, NULL, NULL);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> USECS_PER_SEC = 1000000;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            timeval <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a55607d1457744df8dc8b1644dd04dd89">timeout</a> = { m_timeout_us / USECS_PER_SEC,</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                                m_timeout_us % USECS_PER_SEC};</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            ret = select(max_fd + 1, &amp;m_fd_work, NULL, NULL, &amp;timeout);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        m_has_error   = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        m_has_timeout = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">if</span> (ret == -1)</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;FileDescriptorActivity: error in select(), errno = &quot;</span> &lt;&lt; errno &lt;&lt; endlog();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            m_has_error = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        }</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ret == 0)</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">//            log(Error) &lt;&lt; &quot;FileDescriptorActivity: timeout in select()&quot; &lt;&lt; endlog();</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            m_has_timeout = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="comment">// Empty all commands queued in the pipe</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keywordflow">if</span> (ret &gt; 0 &amp;&amp; FD_ISSET(pipe, &amp;m_fd_work)) <span class="comment">// breakLoop or trigger requests</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="comment">// These variables are used in order to loop with select(). See the</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <span class="comment">// while() condition below.</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            fd_set watch_pipe;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            timeval <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a55607d1457744df8dc8b1644dd04dd89">timeout</a>;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keywordtype">char</span> dummy;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                <span class="keywordtype">int</span> unused; (void)unused;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                unused = read(pipe, &amp;dummy, 1);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                <span class="comment">// Initialize the values for the next select() call</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                FD_ZERO(&amp;watch_pipe);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                FD_SET(pipe, &amp;watch_pipe);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                timeout.tv_sec  = 0;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                timeout.tv_usec = 0;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            <span class="keywordflow">while</span>(select(pipe + 1, &amp;watch_pipe, NULL, NULL, &amp;timeout) &gt; 0);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="comment">// We check the flags after the command queue was emptied as we could miss commands otherwise:</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keywordtype">bool</span> do_trigger = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <span class="keywordtype">bool</span> user_trigger = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        { <a class="code" href="classRTT_1_1os_1_1MutexLock.html">RTT::os::MutexLock</a> lock(m_command_mutex);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            <span class="comment">// This section should be really fast to not block threads calling trigger(), breakLoop() or watch().</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            <span class="keywordflow">if</span> (m_trigger) {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                do_trigger = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                user_trigger = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                m_trigger = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            }</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        }</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">if</span> (do_trigger)</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        {</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            {</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                m_running = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113">step</a>();</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                m_running = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            }</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            <span class="keywordflow">catch</span>(...)</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            {</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                m_running = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                <span class="keywordflow">throw</span>;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            }</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        }</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    }</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
-<div class="line"><a name="l00400"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ad8b977911405631693b5a0fcba5883b4">  400</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ad8b977911405631693b5a0fcba5883b4">FileDescriptorActivity::breakLoop</a>()</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;{</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    { <a class="code" href="classRTT_1_1os_1_1MutexLock.html">RTT::os::MutexLock</a> lock(m_command_mutex);</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        m_break_loop = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    }</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordtype">int</span> unused; (void)unused;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    unused = write(m_interrupt_pipe[1], &amp;CMD_ANY_COMMAND, 1);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;}</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
-<div class="line"><a name="l00410"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113">  410</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113">FileDescriptorActivity::step</a>()</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;{</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    m_running = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">if</span> (runner != 0)</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">step</a>();</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    m_running = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;}</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
-<div class="line"><a name="l00418"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a311c8656b08744fa5dd3a7b28184a57b">  418</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a311c8656b08744fa5dd3a7b28184a57b">FileDescriptorActivity::stop</a>()</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;{</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="comment">// If fatal() is called from the updateHook(), stop() will be called from</span></div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="comment">// within the context and loop() will still run after this command has quit.</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="comment">// This is bad and will have to be fixed in RTT 2.0 by having delayed stops</span></div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="comment">// (i.e. setting the task context&#39;s state to FATAL only when loop() has</span></div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="comment">// quit)</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="classRTT_1_1Activity.html#a12c408623bd8daae95f80ee6cbbe9292">Activity::stop</a>() == <span class="keyword">true</span> )</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    {</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        fd_watch watch_pipe_0(m_interrupt_pipe[0]);</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        fd_watch watch_pipe_1(m_interrupt_pipe[1]);</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    }</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;}</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;</div>
-<div class="ttc" id="classRTT_1_1Activity_html_a12c408623bd8daae95f80ee6cbbe9292"><div class="ttname"><a href="classRTT_1_1Activity.html#a12c408623bd8daae95f80ee6cbbe9292">RTT::Activity::stop</a></div><div class="ttdeci">virtual bool stop()</div><div class="ttdoc">Stop the activity This will stop the activity by removing it from the &#39;run-queue&#39; of a thread or call...</div><div class="ttdef"><b>Definition:</b> <a href="Activity_8cpp_source.html#l00128">Activity.cpp:128</a></div></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            <span class="keywordflow">if</span> (m_update_sets) {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                m_update_sets = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                do_trigger = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            }</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <span class="keywordflow">if</span> (m_break_loop) {</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                m_break_loop = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            }</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">if</span> (do_trigger)</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                m_running = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113">step</a>();</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                <span class="keywordflow">if</span> (m_has_timeout)</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                    <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a343e98d60b9b52b390c889e3fde3a149">work</a>(RunnableInterface::TimeOut);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( user_trigger )</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                    <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a343e98d60b9b52b390c889e3fde3a149">work</a>(RunnableInterface::Trigger);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                    <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a343e98d60b9b52b390c889e3fde3a149">work</a>(RunnableInterface::IOReady);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                m_running = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            }</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            <span class="keywordflow">catch</span>(...)</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                m_running = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                <span class="keywordflow">throw</span>;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            }</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        }</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;}</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
+<div class="line"><a name="l00414"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ad8b977911405631693b5a0fcba5883b4">  414</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ad8b977911405631693b5a0fcba5883b4">FileDescriptorActivity::breakLoop</a>()</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;{</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    { <a class="code" href="classRTT_1_1os_1_1MutexLock.html">RTT::os::MutexLock</a> lock(m_command_mutex);</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        m_break_loop = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordtype">int</span> unused; (void)unused;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    unused = write(m_interrupt_pipe[1], &amp;CMD_ANY_COMMAND, 1);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;}</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
+<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113">  424</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113">FileDescriptorActivity::step</a>()</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;{</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    m_running = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordflow">if</span> (runner != 0)</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">step</a>();</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    m_running = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;}</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
+<div class="line"><a name="l00432"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a343e98d60b9b52b390c889e3fde3a149">  432</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a343e98d60b9b52b390c889e3fde3a149">FileDescriptorActivity::work</a>(base::RunnableInterface::WorkReason reason) {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    m_running = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordflow">if</span> (runner != 0)</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803">work</a>(reason);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    m_running = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
+<div class="line"><a name="l00440"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a311c8656b08744fa5dd3a7b28184a57b">  440</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a311c8656b08744fa5dd3a7b28184a57b">FileDescriptorActivity::stop</a>()</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;{</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="comment">// If fatal() is called from the updateHook(), stop() will be called from</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="comment">// within the context and loop() will still run after this command has quit.</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="comment">// This is bad and will have to be fixed in RTT 2.0 by having delayed stops</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <span class="comment">// (i.e. setting the task context&#39;s state to FATAL only when loop() has</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="comment">// quit)</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordflow">if</span> ( <a class="code" href="classRTT_1_1Activity.html#a12c408623bd8daae95f80ee6cbbe9292">Activity::stop</a>() == <span class="keyword">true</span> )</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    {</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        fd_watch watch_pipe_0(m_interrupt_pipe[0]);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        fd_watch watch_pipe_1(m_interrupt_pipe[1]);</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    }</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;}</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
+<div class="ttc" id="classRTT_1_1Activity_html_a12c408623bd8daae95f80ee6cbbe9292"><div class="ttname"><a href="classRTT_1_1Activity.html#a12c408623bd8daae95f80ee6cbbe9292">RTT::Activity::stop</a></div><div class="ttdeci">virtual bool stop()</div><div class="ttdoc">Stop the activity This will stop the activity by removing it from the &#39;run-queue&#39; of a thread or call...</div><div class="ttdef"><b>Definition:</b> <a href="Activity_8cpp_source.html#l00274">Activity.cpp:274</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a343e98d60b9b52b390c889e3fde3a149"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a343e98d60b9b52b390c889e3fde3a149">RTT::extras::FileDescriptorActivity::work</a></div><div class="ttdeci">virtual void work(base::RunnableInterface::WorkReason reason)</div><div class="ttdoc">Called by loop() when data is available on the file descriptor. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00432">FileDescriptorActivity.cpp:432</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a3361185c2083bf10c2f149336343e71d"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a3361185c2083bf10c2f149336343e71d">RTT::extras::FileDescriptorActivity::isWatched</a></div><div class="ttdeci">bool isWatched(int fd) const </div><div class="ttdoc">True if this specific FD is being watched by the activity. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00226">FileDescriptorActivity.cpp:226</a></div></div>
 <div class="ttc" id="namespaceRTT_html_ab93965f88bfbe72fbc2ece16c047c902"><div class="ttname"><a href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">RTT::Seconds</a></div><div class="ttdeci">double Seconds</div><div class="ttdoc">Seconds are stored as a double precision float. </div><div class="ttdef"><b>Definition:</b> <a href="os_2Time_8hpp_source.html#l00053">Time.hpp:53</a></div></div>
-<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_ac9e8bef0993c0fd1219567c61673d113"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113">RTT::extras::FileDescriptorActivity::step</a></div><div class="ttdeci">virtual void step()</div><div class="ttdoc">Called by loop() when data is available on the file descriptor. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00410">FileDescriptorActivity.cpp:410</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_ac9e8bef0993c0fd1219567c61673d113"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113">RTT::extras::FileDescriptorActivity::step</a></div><div class="ttdeci">virtual void step()</div><div class="ttdoc">Called by loop() when data is available on the file descriptor. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00424">FileDescriptorActivity.cpp:424</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a5fe2656a5a138823daa33fdbe91180fd"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a5fe2656a5a138823daa33fdbe91180fd">RTT::extras::FileDescriptorActivity::getTimeout_us</a></div><div class="ttdeci">int getTimeout_us() const </div><div class="ttdoc">Get the timeout, in microseconds, for waiting on the IO. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00171">FileDescriptorActivity.cpp:171</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1RunnableInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1RunnableInterface.html">RTT::base::RunnableInterface</a></div><div class="ttdoc">A class for running a certain piece of code in a thread. </div><div class="ttdef"><b>Definition:</b> <a href="RunnableInterface_8hpp_source.html#l00069">RunnableInterface.hpp:69</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a55607d1457744df8dc8b1644dd04dd89"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a55607d1457744df8dc8b1644dd04dd89">RTT::extras::FileDescriptorActivity::timeout</a></div><div class="ttdeci">virtual bool timeout()</div><div class="ttdoc">Always returns false. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00286">FileDescriptorActivity.cpp:286</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a64ecda39f8c91afde14b64aa71b67f90"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a64ecda39f8c91afde14b64aa71b67f90">RTT::extras::FileDescriptorActivity::start</a></div><div class="ttdeci">virtual bool start()</div><div class="ttdoc">Start the activity. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00230">FileDescriptorActivity.cpp:230</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_afd5aa263867e5ebd5a187bbfe3b87262"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#afd5aa263867e5ebd5a187bbfe3b87262">RTT::extras::FileDescriptorActivity::FileDescriptorActivity</a></div><div class="ttdeci">FileDescriptorActivity(int priority, base::RunnableInterface *_r=0, const std::string &amp;name=&quot;FileDescriptorActivity&quot;)</div><div class="ttdoc">Create a FileDescriptorActivity with a given priority and base::RunnableInterface instance...</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00078">FileDescriptorActivity.cpp:78</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a41ea7eb806cb34dac532c0acc12513dc"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a41ea7eb806cb34dac532c0acc12513dc">RTT::extras::FileDescriptorActivity::isRunning</a></div><div class="ttdeci">bool isRunning() const </div><div class="ttdoc">Query if the activity is initialized and executing. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00167">FileDescriptorActivity.cpp:167</a></div></div>
-<div class="ttc" id="classRTT_1_1base_1_1RunnableInterface_html_abec8b9e213e32c21b57266211703dc45"><div class="ttname"><a href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">RTT::base::RunnableInterface::step</a></div><div class="ttdeci">virtual void step()=0</div><div class="ttdoc">The method that will be periodically executed when this class is run in a periodic thread...</div></div>
+<div class="ttc" id="classRTT_1_1base_1_1RunnableInterface_html_abec8b9e213e32c21b57266211703dc45"><div class="ttname"><a href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">RTT::base::RunnableInterface::step</a></div><div class="ttdeci">virtual void step()=0</div><div class="ttdoc">The method that will be (periodically) executed when this object is run in an Activity. </div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_af7a62d5013ac78a6cb5e0414eabd09d9"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#af7a62d5013ac78a6cb5e0414eabd09d9">RTT::extras::FileDescriptorActivity::trigger</a></div><div class="ttdeci">virtual bool trigger()</div><div class="ttdoc">Force calling step() even if no data is available on the file descriptor, and returns true if the sig...</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00273">FileDescriptorActivity.cpp:273</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a52447308cb87b1b6ff4aacbe700f5deb"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a52447308cb87b1b6ff4aacbe700f5deb">RTT::extras::FileDescriptorActivity::setTimeout_us</a></div><div class="ttdeci">void setTimeout_us(int timeout_us)</div><div class="ttdoc">Sets the timeout, in microseconds, for waiting on the IO. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00177">FileDescriptorActivity.cpp:177</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a02e98b358e83f845c5a43597406f464a"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a02e98b358e83f845c5a43597406f464a">RTT::extras::FileDescriptorActivity::clearAllWatches</a></div><div class="ttdeci">void clearAllWatches()</div><div class="ttdoc">Remove all FDs that are currently being watched. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00206">FileDescriptorActivity.cpp:206</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_ab945813a275686f6bbaf6e55c3e102a3"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ab945813a275686f6bbaf6e55c3e102a3">RTT::extras::FileDescriptorActivity::setPeriod</a></div><div class="ttdeci">virtual bool setPeriod(Seconds period)</div><div class="ttdoc">Set the intended period (not the actual running period) </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00159">FileDescriptorActivity.cpp:159</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a1a7ae66f0c1c77c17acf05eae57d3e11"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a1a7ae66f0c1c77c17acf05eae57d3e11">RTT::extras::FileDescriptorActivity::getPeriod</a></div><div class="ttdeci">virtual Seconds getPeriod() const </div><div class="ttdoc">Get the intended period (not the actual running period) </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00156">FileDescriptorActivity.cpp:156</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a9f5975a8dd88124fa9885cca379decaf"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a9f5975a8dd88124fa9885cca379decaf">RTT::extras::FileDescriptorActivity::hasTimeout</a></div><div class="ttdeci">bool hasTimeout() const </div><div class="ttdoc">True if the base::RunnableInterface has been triggered because of a timeout, instead of because of ne...</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00224">FileDescriptorActivity.cpp:224</a></div></div>
-<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a6c8e8b54ca6f7dbf6ef902a26f039231"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6c8e8b54ca6f7dbf6ef902a26f039231">RTT::extras::FileDescriptorActivity::loop</a></div><div class="ttdeci">virtual void loop()</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00297">FileDescriptorActivity.cpp:297</a></div></div>
-<div class="ttc" id="classRTT_1_1Activity_html_a8a501c994c04e6e267f4fb07d0f08253"><div class="ttname"><a href="classRTT_1_1Activity.html#a8a501c994c04e6e267f4fb07d0f08253">RTT::Activity::isRunning</a></div><div class="ttdeci">virtual bool isRunning() const </div><div class="ttdoc">Query if the activity is initialized and executing. </div><div class="ttdef"><b>Definition:</b> <a href="Activity_8cpp_source.html#l00140">Activity.cpp:140</a></div></div>
-<div class="ttc" id="classRTT_1_1Activity_html"><div class="ttname"><a href="classRTT_1_1Activity.html">RTT::Activity</a></div><div class="ttdoc">An Activity is an object that represents a thread. </div><div class="ttdef"><b>Definition:</b> <a href="Activity_8hpp_source.html#l00063">Activity.hpp:63</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a6c8e8b54ca6f7dbf6ef902a26f039231"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6c8e8b54ca6f7dbf6ef902a26f039231">RTT::extras::FileDescriptorActivity::loop</a></div><div class="ttdeci">virtual void loop()</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00303">FileDescriptorActivity.cpp:303</a></div></div>
+<div class="ttc" id="classRTT_1_1Activity_html_a8a501c994c04e6e267f4fb07d0f08253"><div class="ttname"><a href="classRTT_1_1Activity.html#a8a501c994c04e6e267f4fb07d0f08253">RTT::Activity::isRunning</a></div><div class="ttdeci">virtual bool isRunning() const </div><div class="ttdoc">Query if the activity is initialized and executing. </div><div class="ttdef"><b>Definition:</b> <a href="Activity_8cpp_source.html#l00322">Activity.cpp:322</a></div></div>
+<div class="ttc" id="classRTT_1_1Activity_html"><div class="ttname"><a href="classRTT_1_1Activity.html">RTT::Activity</a></div><div class="ttdoc">An Activity executes a RunnableInterface object in a (periodic) thread. </div><div class="ttdef"><b>Definition:</b> <a href="Activity_8hpp_source.html#l00070">Activity.hpp:70</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a6a222764f691233877315a218e0eb356"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6a222764f691233877315a218e0eb356">RTT::extras::FileDescriptorActivity::setTimeout</a></div><div class="ttdeci">void setTimeout(int timeout)</div><div class="ttdoc">Sets the timeout, in milliseconds, for waiting on the IO. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00173">FileDescriptorActivity.cpp:173</a></div></div>
-<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a311c8656b08744fa5dd3a7b28184a57b"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a311c8656b08744fa5dd3a7b28184a57b">RTT::extras::FileDescriptorActivity::stop</a></div><div class="ttdeci">virtual bool stop()</div><div class="ttdoc">Stop the activity This will stop the activity by removing it from the &#39;run-queue&#39; of a thread or call...</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00418">FileDescriptorActivity.cpp:418</a></div></div>
-<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_ad8b977911405631693b5a0fcba5883b4"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ad8b977911405631693b5a0fcba5883b4">RTT::extras::FileDescriptorActivity::breakLoop</a></div><div class="ttdeci">virtual bool breakLoop()</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00400">FileDescriptorActivity.cpp:400</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a311c8656b08744fa5dd3a7b28184a57b"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a311c8656b08744fa5dd3a7b28184a57b">RTT::extras::FileDescriptorActivity::stop</a></div><div class="ttdeci">virtual bool stop()</div><div class="ttdoc">Stop the activity This will stop the activity by removing it from the &#39;run-queue&#39; of a thread or call...</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00440">FileDescriptorActivity.cpp:440</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_ad8b977911405631693b5a0fcba5883b4"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ad8b977911405631693b5a0fcba5883b4">RTT::extras::FileDescriptorActivity::breakLoop</a></div><div class="ttdeci">virtual bool breakLoop()</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00414">FileDescriptorActivity.cpp:414</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_af757c6c6f5ec98bb4580b9e0944ff315"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#af757c6c6f5ec98bb4580b9e0944ff315">RTT::extras::FileDescriptorActivity::isUpdated</a></div><div class="ttdeci">bool isUpdated(int fd) const </div><div class="ttdoc">True if this specific FD has new data. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00220">FileDescriptorActivity.cpp:220</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a770952053f01743cc517d5cb2d479ea4"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a770952053f01743cc517d5cb2d479ea4">RTT::extras::FileDescriptorActivity::hasError</a></div><div class="ttdeci">bool hasError() const </div><div class="ttdoc">True if one of the file descriptors has a problem (for instance it has been closed) ...</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00222">FileDescriptorActivity.cpp:222</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a3afed22658793bf7dd978fdd20df8e18"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a3afed22658793bf7dd978fdd20df8e18">RTT::extras::FileDescriptorActivity::getTimeout</a></div><div class="ttdeci">int getTimeout() const </div><div class="ttdoc">Get the timeout, in milliseconds, for waiting on the IO. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00169">FileDescriptorActivity.cpp:169</a></div></div>
-<div class="ttc" id="classRTT_1_1Activity_html_a890880a5b0782720786d49d2a2cd327d"><div class="ttname"><a href="classRTT_1_1Activity.html#a890880a5b0782720786d49d2a2cd327d">RTT::Activity::start</a></div><div class="ttdeci">virtual bool start()</div><div class="ttdoc">Start the activity. </div><div class="ttdef"><b>Definition:</b> <a href="Activity_8cpp_source.html#l00124">Activity.cpp:124</a></div></div>
+<div class="ttc" id="classRTT_1_1Activity_html_a890880a5b0782720786d49d2a2cd327d"><div class="ttname"><a href="classRTT_1_1Activity.html#a890880a5b0782720786d49d2a2cd327d">RTT::Activity::start</a></div><div class="ttdeci">virtual bool start()</div><div class="ttdoc">Start the activity. </div><div class="ttdef"><b>Definition:</b> <a href="Activity_8cpp_source.html#l00269">Activity.cpp:269</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_a248b4473d666ecef8ad4644a51c7f83c"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a248b4473d666ecef8ad4644a51c7f83c">RTT::extras::FileDescriptorActivity::unwatch</a></div><div class="ttdeci">void unwatch(int fd)</div><div class="ttdoc">Removes a file descriptor from the set of watched FDs. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00200">FileDescriptorActivity.cpp:200</a></div></div>
+<div class="ttc" id="classRTT_1_1base_1_1RunnableInterface_html_a578a2025eaf9af809a72d9783fdaa803"><div class="ttname"><a href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803">RTT::base::RunnableInterface::work</a></div><div class="ttdeci">virtual void work(WorkReason reason)</div><div class="ttdoc">Identical to step() but gives a reason why the function was called. </div><div class="ttdef"><b>Definition:</b> <a href="CoreRunnableInterface_8cpp_source.html#l00071">CoreRunnableInterface.cpp:71</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1MutexLock_html"><div class="ttname"><a href="classRTT_1_1os_1_1MutexLock.html">RTT::os::MutexLock</a></div><div class="ttdoc">MutexLock is a scope based Monitor, protecting critical sections with a Mutex object through locking ...</div><div class="ttdef"><b>Definition:</b> <a href="MutexLock_8hpp_source.html#l00051">MutexLock.hpp:51</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivity_html_aaffa36dd8a3bece07ce48b773e48fafc"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivity.html#aaffa36dd8a3bece07ce48b773e48fafc">RTT::extras::FileDescriptorActivity::watch</a></div><div class="ttdeci">void watch(int fd)</div><div class="ttdoc">Sets the file descriptor the activity should be listening to. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivity_8cpp_source.html#l00188">FileDescriptorActivity.cpp:188</a></div></div>
-<div class="ttc" id="classRTT_1_1Activity_html_aefddbddb0c10214090f4b86756d129d8"><div class="ttname"><a href="classRTT_1_1Activity.html#aefddbddb0c10214090f4b86756d129d8">RTT::Activity::isActive</a></div><div class="ttdeci">virtual bool isActive() const </div><div class="ttdoc">Query if the activity is started. </div><div class="ttdef"><b>Definition:</b> <a href="Activity_8cpp_source.html#l00144">Activity.cpp:144</a></div></div>
+<div class="ttc" id="classRTT_1_1Activity_html_aefddbddb0c10214090f4b86756d129d8"><div class="ttname"><a href="classRTT_1_1Activity.html#aefddbddb0c10214090f4b86756d129d8">RTT::Activity::isActive</a></div><div class="ttdeci">virtual bool isActive() const </div><div class="ttdoc">Query if the activity is started. </div><div class="ttdef"><b>Definition:</b> <a href="Activity_8cpp_source.html#l00326">Activity.cpp:326</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:38 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:02 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

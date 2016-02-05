@@ -623,6 +623,7 @@
     <name>TaskContext.idl</name>
     <path>/home/jenkins/workspace/rtt-doc/rtt/transports/corba/</path>
     <filename>TaskContext_8idl</filename>
+    <class kind="struct">RTT::corba::CTaskContextDescription</class>
     <class kind="interface">RTT::corba::CTaskContext</class>
     <namespace>RTT</namespace>
     <namespace>RTT::corba</namespace>
@@ -684,6 +685,7 @@
     <class kind="class">RTT::base::BufferLockFree</class>
     <class kind="class">RTT::base::BufferUnSync</class>
     <class kind="class">RTT::base::DataObject</class>
+    <class kind="class">RTT::base::DataObjectBase</class>
     <class kind="class">RTT::base::DataObjectInterface</class>
     <class kind="class">RTT::base::DataObjectLocked</class>
     <class kind="class">RTT::base::DataObjectLockFree</class>
@@ -876,6 +878,13 @@
     <class kind="class">RTT::DataFlowInterface</class>
     <class kind="class">RTT::InputPort</class>
     <class kind="class">RTT::OutputPort</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>BufferPolicy</name>
+      <anchorfile>group__Ports.html</anchorfile>
+      <anchor>gadc680c5e9ed12ee0889933483c89b7ea</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>BagOperations</name>
@@ -919,8 +928,11 @@
     <class kind="interface">RTT::corba::CConfigurationInterface</class>
     <class kind="interface">RTT::corba::CDataFlowInterface</class>
     <class kind="interface">RTT::corba::COperationInterface</class>
+    <class kind="struct">RTT::corba::CServiceDescription</class>
     <class kind="interface">RTT::corba::CService</class>
+    <class kind="struct">RTT::corba::CServiceRequesterDescription</class>
     <class kind="interface">RTT::corba::CServiceRequester</class>
+    <class kind="struct">RTT::corba::CTaskContextDescription</class>
     <class kind="interface">RTT::corba::CTaskContext</class>
     <class kind="class">RTT::corba::TaskContextProxy</class>
     <class kind="class">RTT::corba::TaskContextServer</class>
@@ -1302,9 +1314,23 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>BufferPolicy</name>
+      <anchorfile>group__Ports.html</anchorfile>
+      <anchor>gadc680c5e9ed12ee0889933483c89b7ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>FlowStatus</name>
       <anchorfile>namespaceRTT.html</anchorfile>
       <anchor>aa92dce4aa147272a093143330ef11ab6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WriteStatus</name>
+      <anchorfile>namespaceRTT.html</anchorfile>
+      <anchor>a69b4aafe4f409edc68481d7429efe198</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -1560,6 +1586,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>timeout</name>
+      <anchorfile>classRTT_1_1Activity.html</anchorfile>
+      <anchor>a8be589ef0d784a9c93f195ae1a17e35c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>stop</name>
       <anchorfile>classRTT_1_1Activity.html</anchorfile>
       <anchor>a12c408623bd8daae95f80ee6cbbe9292</anchor>
@@ -1613,6 +1646,13 @@
       <anchorfile>classRTT_1_1Activity.html</anchorfile>
       <anchor>a13b7b7ae3bc11fa0579f619f23e9ef33</anchor>
       <arglist>(unsigned cpu)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setWaitPeriodPolicy</name>
+      <anchorfile>classRTT_1_1Activity.html</anchorfile>
+      <anchor>a88f76de00cef3bb28fd77dcb1b2b19c4</anchor>
+      <arglist>(int p)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual os::ThreadInterface *</type>
@@ -1775,13 +1815,6 @@
       <anchor>ab375c5a6f35fb2e7368bd16a5e13fa2e</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>setWaitPeriodPolicy</name>
-      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
-      <anchor>a404bc82a8a3b36d7a2a95a457fd2a739</anchor>
-      <arglist>(int p)</arglist>
-    </member>
     <member kind="function">
       <type>unsigned int</type>
       <name>threadNumber</name>
@@ -1825,10 +1858,115 @@
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>update_period</name>
+      <anchorfile>classRTT_1_1Activity.html</anchorfile>
+      <anchor>a3f728c55e42aef29228c92991619d427</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>mtimeout</name>
+      <anchorfile>classRTT_1_1Activity.html</anchorfile>
+      <anchor>ab64f826491a648a1067e96c898d880c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>msched_type</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>a94f375df5f026684f8724185b930c584</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>active</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>adae4e5b4743923f0797b26e939ffe5b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>prepareForExit</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>a4ad0eccac77f5c77cbd5690c7de784e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>inloop</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>ad7cd90b220ad93c165775e8348e9aed8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>running</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>a6dcdfd94eb560ea59f26498299ec90d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>RTOS_TASK</type>
+      <name>rtos_task</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>abf6258b13c0ed5c38eb045430b97fcd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>rt_sem_t</type>
+      <name>sem</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>a64bc10f4712bbd143cc447169b77e594</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>MutexRecursive</type>
+      <name>breaker</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>ab87576530375ca0b5570cc14e7b65ca5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>maxOverRun</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>aaf2c15d2b691b5401695e038296cca69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>NANO_TIME</type>
+      <name>period</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>a02acd637f8631315695dfd8a8cdd3de6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>stopTimeout</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>af5db64c49d83e14a634c0e8cf6422a53</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
       <type>int</type>
       <name>threadnb</name>
       <anchorfile>classRTT_1_1os_1_1ThreadInterface.html</anchorfile>
       <anchor>a25fb4baabceaf85e83ccb1f8e4d7d99c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static double</type>
+      <name>lock_timeout_no_period_in_s</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>a7374ef37bb1b188e6e3c79dd4f6e231e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static double</type>
+      <name>lock_timeout_period_factor</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>a891ddc39c519e3561aa6277978cc2b89</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2362,8 +2500,29 @@
       <type></type>
       <name>ConnPolicy</name>
       <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
-      <anchor>a5832b057a170897ff72e6aea4dbf7074</anchor>
-      <arglist>(int type=DATA, int lock_policy=LOCK_FREE)</arglist>
+      <anchor>a508c0b397027e4d238726876a8109c98</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ConnPolicy</name>
+      <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
+      <anchor>a7d530653f7af6434a806a74f4a091abc</anchor>
+      <arglist>(int type)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ConnPolicy</name>
+      <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
+      <anchor>a9d02deb43ce98ce52f5633c488e01f6f</anchor>
+      <arglist>(int type, int lock_policy)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ConnPolicy &amp;</type>
+      <name>Default</name>
+      <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
+      <anchor>aa08426926b4f150a6871de3a98672ab7</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static ConnPolicy</type>
@@ -2394,10 +2553,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>bool</type>
-      <name>init</name>
+      <type>int</type>
+      <name>size</name>
       <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
-      <anchor>a5da839ba68d6ff35ddc44171562ed356</anchor>
+      <anchor>a86aca1d2334c9d0cdd59dbb25a2d8d8c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -2409,16 +2568,37 @@
     </member>
     <member kind="variable">
       <type>bool</type>
+      <name>init</name>
+      <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
+      <anchor>a5da839ba68d6ff35ddc44171562ed356</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
       <name>pull</name>
       <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
       <anchor>adbb615689773110a6c329c8b631fa1ee</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
-      <name>size</name>
+      <type>BufferPolicy</type>
+      <name>buffer_policy</name>
       <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
-      <anchor>a86aca1d2334c9d0cdd59dbb25a2d8d8c</anchor>
+      <anchor>a700a61ba2e9543496e638d93de38d004</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>max_threads</name>
+      <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
+      <anchor>ac70f15548f9b856b0a4dbd8e09bab102</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>mandatory</name>
+      <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
+      <anchor>a9a9cce505121d17b64ee2b9da3bd5580</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -2633,20 +2813,6 @@
       <anchor>a32a0b5dbeb1b46b264a938c6d3bfe69b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>addChild</name>
-      <anchorfile>classRTT_1_1ExecutionEngine.html</anchorfile>
-      <anchor>a45f75f30232e7a789a62e9391ac34889</anchor>
-      <arglist>(base::TaskCore *tc)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>removeChild</name>
-      <anchorfile>classRTT_1_1ExecutionEngine.html</anchorfile>
-      <anchor>af20f84c969d11c6450c0f9e244f7461f</anchor>
-      <arglist>(base::TaskCore *tc)</arglist>
-    </member>
     <member kind="function">
       <type>base::TaskCore *</type>
       <name>getTaskCore</name>
@@ -2660,6 +2826,13 @@
       <anchorfile>classRTT_1_1ExecutionEngine.html</anchorfile>
       <anchor>a9e0d36338cc3c7467325b8408f4f4648</anchor>
       <arglist>(base::DisposableInterface *c)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>process</name>
+      <anchorfile>classRTT_1_1ExecutionEngine.html</anchorfile>
+      <anchor>a21eb6095f72a50bf22821d57732e6f31</anchor>
+      <arglist>(base::PortInterface *port)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2781,6 +2954,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>work</name>
+      <anchorfile>classRTT_1_1ExecutionEngine.html</anchorfile>
+      <anchor>ae8cafe41e40c69803988744e07dfcb72</anchor>
+      <arglist>(RunnableInterface::WorkReason reason)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>breakLoop</name>
       <anchorfile>classRTT_1_1ExecutionEngine.html</anchorfile>
@@ -2813,6 +2993,13 @@
       <name>mqueue</name>
       <anchorfile>classRTT_1_1ExecutionEngine.html</anchorfile>
       <anchor>a49ec437ba2d6d809b9b08472c732c9d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>internal::MWSRQueue&lt; base::PortInterface * &gt; *</type>
+      <name>port_queue</name>
+      <anchorfile>classRTT_1_1ExecutionEngine.html</anchorfile>
+      <anchor>a6b3d929bd060348ccca63c5704bf0346</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -2951,6 +3138,13 @@
     <templarg>T</templarg>
     <base>RTT::base::InputPortInterface</base>
     <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1InputPort.html</anchorfile>
+      <anchor>af4d60c8f15d5f728e90d021e78ddcd05</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>FlowStatus</type>
       <name>read</name>
       <anchorfile>classRTT_1_1InputPort.html</anchorfile>
@@ -3041,26 +3235,19 @@
       <anchor>abd981129bffa516bca0e3cef0935aff4</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>clear</name>
-      <anchorfile>classRTT_1_1base_1_1InputPortInterface.html</anchorfile>
-      <anchor>a4dc8c85b8e3d63a8e77ebfe9fef595aa</anchor>
-      <arglist>()</arglist>
+    <member kind="function" virtualness="virtual">
+      <type>virtual internal::ConnOutputEndpoint&lt; T &gt; *</type>
+      <name>getEndpoint</name>
+      <anchorfile>classRTT_1_1InputPort.html</anchorfile>
+      <anchor>ab96f706f941d8cefa9576c25b1a221f2</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>addConnection</name>
       <anchorfile>classRTT_1_1base_1_1InputPortInterface.html</anchorfile>
-      <anchor>ad259037c6eed8983e67ca07015dd0658</anchor>
-      <arglist>(internal::ConnID *port_id, ChannelElementBase::shared_ptr channel_input, ConnPolicy const &amp;policy)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>removeConnection</name>
-      <anchorfile>classRTT_1_1base_1_1InputPortInterface.html</anchorfile>
-      <anchor>ae786e63b56be500d822b8cac0a0093de</anchor>
-      <arglist>(internal::ConnID *cid)</arglist>
+      <anchor>af20f60ec3122fa54fd1b823c76b5627a</anchor>
+      <arglist>(internal::ConnID *port_id, ChannelElementBase::shared_ptr channel, ConnPolicy const &amp;policy)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -3082,13 +3269,6 @@
       <anchorfile>classRTT_1_1base_1_1InputPortInterface.html</anchorfile>
       <anchor>a27d36f261f7f5464b112b4d164ac0374</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>channelReady</name>
-      <anchorfile>classRTT_1_1base_1_1InputPortInterface.html</anchorfile>
-      <anchor>a05f20ca7d23ee685fb154e4759fc6b60</anchor>
-      <arglist>(base::ChannelElementBase::shared_ptr channel, ConnPolicy const &amp;policy)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -3112,11 +3292,11 @@
       <arglist>(PortInterface *other)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const internal::ConnectionManager *</type>
-      <name>getManager</name>
+      <type>virtual bool</type>
+      <name>createConnection</name>
       <anchorfile>classRTT_1_1base_1_1InputPortInterface.html</anchorfile>
-      <anchor>ac7eb4fbf0ce656faa66559028d28f6e7</anchor>
-      <arglist>() const </arglist>
+      <anchor>affc36dbc50b0ea3d3639369633640631</anchor>
+      <arglist>(internal::SharedConnectionBase::shared_ptr shared_connection, ConnPolicy const &amp;policy=ConnPolicy())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual base::ChannelElementBase::shared_ptr</type>
@@ -3162,6 +3342,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>connectedTo</name>
+      <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
+      <anchor>ac700cd806a5dfc2e8923177c376544e0</anchor>
+      <arglist>(PortInterface *port)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>isLocal</name>
       <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
       <anchor>ae32595f49031daead1d5c98d28b91c32</anchor>
@@ -3173,6 +3360,13 @@
       <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
       <anchor>a9a0a475868cc8387eb05c116c572a192</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>removeConnection</name>
+      <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
+      <anchor>ae20940635dea5904477c5170b7ca71fd</anchor>
+      <arglist>(internal::ConnID *cid)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -3186,6 +3380,20 @@
       <name>getInterface</name>
       <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
       <anchor>ae53d9ec4f148fd83cc6cd1819e0d451b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual internal::ConnectionManager *</type>
+      <name>getManager</name>
+      <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
+      <anchor>a5dee8b31490b0ed69d6403622a4a1103</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual internal::SharedConnectionBase::shared_ptr</type>
+      <name>getSharedConnection</name>
+      <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
+      <anchor>a9affe57d417800aae5ee2ec5baeca578</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -3303,8 +3511,8 @@
       <type>Logger &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>classRTT_1_1Logger.html</anchorfile>
-      <anchor>a944f13e0dcf367b81a513db20c521c4c</anchor>
-      <arglist>(T t)</arglist>
+      <anchor>a7adf86dc4c810da0cf55d097f143812c</anchor>
+      <arglist>(const T &amp;t)</arglist>
     </member>
     <member kind="function">
       <type>Logger &amp;</type>
@@ -4007,16 +4215,23 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1OutputPort.html</anchorfile>
+      <anchor>a66e8797bf1f4f21bfdbaddfe27e3e16a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>WriteStatus</type>
       <name>write</name>
       <anchorfile>classRTT_1_1OutputPort.html</anchorfile>
-      <anchor>ad1b4a8113cc743f1b69745879c1205d6</anchor>
+      <anchor>a995f260638d6c89de42b550a6ee23b08</anchor>
       <arglist>(const T &amp;sample)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>WriteStatus</type>
       <name>write</name>
       <anchorfile>classRTT_1_1OutputPort.html</anchorfile>
-      <anchor>ab140a9c5e83abfaf9b73a737b2f25a67</anchor>
+      <anchor>ab63493e94400da47639150a827d4a186</anchor>
       <arglist>(base::DataSourceBase::shared_ptr source)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4060,6 +4275,13 @@
       <anchorfile>classRTT_1_1OutputPort.html</anchorfile>
       <anchor>a1cf40612f7336461fbe3b7af72f66690</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual internal::ConnInputEndpoint&lt; T &gt; *</type>
+      <name>getEndpoint</name>
+      <anchorfile>classRTT_1_1OutputPort.html</anchorfile>
+      <anchor>a9ae7bf04bea7938d3c45007958f05690</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -4112,10 +4334,10 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>removeConnection</name>
+      <name>createConnection</name>
       <anchorfile>classRTT_1_1base_1_1OutputPortInterface.html</anchorfile>
-      <anchor>a809970a3c7efec2fafd56cd86e4e7cd7</anchor>
-      <arglist>(internal::ConnID *cid)</arglist>
+      <anchor>af627d6fb56a4264de31129e60047cc7e</anchor>
+      <arglist>(internal::SharedConnectionBase::shared_ptr shared_connection, ConnPolicy const &amp;policy=ConnPolicy())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -4130,13 +4352,6 @@
       <anchorfile>classRTT_1_1base_1_1OutputPortInterface.html</anchorfile>
       <anchor>a826d2aed68435967e92e70a1f9111926</anchor>
       <arglist>(PortInterface *other)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const internal::ConnectionManager *</type>
-      <name>getManager</name>
-      <anchorfile>classRTT_1_1base_1_1OutputPortInterface.html</anchorfile>
-      <anchor>a714bbe977c0e5f127c5ea6751bdab2b9</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4742,8 +4957,8 @@
       <type>SendStatus</type>
       <name>collect</name>
       <anchorfile>classRTT_1_1SendHandle.html</anchorfile>
-      <anchor>a51c5c85783190867ee9becc0f589e64e</anchor>
-      <arglist>()</arglist>
+      <anchor>a235385c4edfb6cbc99ac75c2176b6ce5</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5103,13 +5318,6 @@
       <anchor>ab0d1864a7bb1bdac038a2dfb43fe72c4</anchor>
       <arglist>(const std::string &amp;name, TaskState initial_state=Stopped)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TaskContext</name>
-      <anchorfile>classRTT_1_1TaskContext.html</anchorfile>
-      <anchor>a8b1396bc3ad1ea241fb8247dfcdd4077</anchor>
-      <arglist>(const std::string &amp;name, ExecutionEngine *parent, TaskState initial_state=Stopped)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const std::string &amp;</type>
       <name>getName</name>
@@ -5181,13 +5389,6 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>setExecutionEngine</name>
-      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
-      <anchor>a2da9f3834b14d21614fd481eaed4ecec</anchor>
-      <arglist>(ExecutionEngine *engine)</arglist>
-    </member>
-    <member kind="function">
       <type>const ExecutionEngine *</type>
       <name>engine</name>
       <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
@@ -5200,6 +5401,34 @@
       <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
       <anchor>ac18ebf7b987f142c8dad4413be2bbd30</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>getCycleCounter</name>
+      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
+      <anchor>a7d6ce3034250e9673cc6c80e7d03cc92</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>getTriggerCounter</name>
+      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
+      <anchor>a3a17dbefbbbd3f7f6964ea23dd068a0e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>getIOCounter</name>
+      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
+      <anchor>ab3cfaa40033a59073b353bc752260dde</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>getTimeOutCounter</name>
+      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
+      <anchor>af1a81ca9d42e54566d5c4ac28315bcd6</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -5545,6 +5774,13 @@
       <arglist>(base::PortInterface *port)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>dataOnPortCallback</name>
+      <anchorfile>classRTT_1_1TaskContext.html</anchorfile>
+      <anchor>a990586cfe74123de656950365be45fea</anchor>
+      <arglist>(base::PortInterface *port)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>configureHook</name>
       <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
@@ -5619,6 +5855,41 @@
       <name>ee</name>
       <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
       <anchor>afdeffff3d523e09a22bfcb9f43f1cc5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>mTriggerOnStart</name>
+      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
+      <anchor>a4e439d71b36a1789f5d8738159c1c46e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>unsigned int</type>
+      <name>mCycleCounter</name>
+      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
+      <anchor>a41fd49b2f57fcc037366e49d6c18e6e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>unsigned int</type>
+      <name>mIOCounter</name>
+      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
+      <anchor>a2abc6bb0aa4150b20f29fb8a089fbb8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>unsigned int</type>
+      <name>mTimeOutCounter</name>
+      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
+      <anchor>a2b0fd2a8e4a110f5b0170dfb7498ad06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>unsigned int</type>
+      <name>mTriggerCounter</name>
+      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
+      <anchor>a053a2bf6b37d7a407532c85489251c31</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -5698,8 +5969,15 @@
     <class kind="class">RTT::base::BufferLockFree</class>
     <class kind="class">RTT::base::BufferUnSync</class>
     <class kind="class">RTT::base::ChannelElement</class>
+    <class kind="class">RTT::base::MultipleInputsChannelElement</class>
+    <class kind="class">RTT::base::MultipleOutputsChannelElement</class>
+    <class kind="class">RTT::base::MultipleInputsMultipleOutputsChannelElement</class>
     <class kind="class">RTT::base::ChannelElementBase</class>
+    <class kind="class">RTT::base::MultipleInputsChannelElementBase</class>
+    <class kind="class">RTT::base::MultipleOutputsChannelElementBase</class>
+    <class kind="class">RTT::base::MultipleInputsMultipleOutputsChannelElementBase</class>
     <class kind="class">RTT::base::DataObject</class>
+    <class kind="class">RTT::base::DataObjectBase</class>
     <class kind="class">RTT::base::DataObjectInterface</class>
     <class kind="class">RTT::base::DataObjectLocked</class>
     <class kind="class">RTT::base::DataObjectLockFree</class>
@@ -5869,6 +6147,13 @@
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>timeout</name>
+      <anchorfile>classRTT_1_1base_1_1ActivityInterface.html</anchorfile>
+      <anchor>a99f8cbfa2c5022c575e4b5e404cb02c8</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual os::ThreadInterface *</type>
       <name>thread</name>
       <anchorfile>classRTT_1_1base_1_1ActivityInterface.html</anchorfile>
@@ -5928,11 +6213,11 @@
       <arglist>(int qsize, const T &amp;initial_value=T())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1base_1_1BufferLockFree.html</anchorfile>
-      <anchor>a9d9fbf417f40fdb4daac425204a1f6de</anchor>
-      <arglist>(const T &amp;sample)</arglist>
+      <anchor>ad60525f313d2a8d828668e299a1fc599</anchor>
+      <arglist>(const T &amp;sample, bool reset=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual T</type>
@@ -5991,10 +6276,10 @@
       <arglist>(const std::vector&lt; T &gt; &amp;items)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>FlowStatus</type>
       <name>Pop</name>
       <anchorfile>classRTT_1_1base_1_1BufferLockFree.html</anchorfile>
-      <anchor>ad9c98ca231c111dfbc5e507b4e62f7bc</anchor>
+      <anchor>a2defb590a3b6d562409013a5593a1255</anchor>
       <arglist>(reference_t item)</arglist>
     </member>
     <member kind="function">
@@ -6017,6 +6302,13 @@
       <anchorfile>classRTT_1_1base_1_1BufferLockFree.html</anchorfile>
       <anchor>a7a0bb28801aa18093fddcfbe38ce8823</anchor>
       <arglist>(value_t *item)</arglist>
+    </member>
+    <member kind="variable">
+      <type>const unsigned int</type>
+      <name>MAX_THREADS</name>
+      <anchorfile>classRTT_1_1base_1_1BufferLockFree.html</anchorfile>
+      <anchor>a6cea6f3def4aee67b0cf4e308bd529f8</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6064,10 +6356,10 @@
     <templarg>T</templarg>
     <base>RTT::base::BufferBase</base>
     <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
+      <type>virtual FlowStatus</type>
       <name>Pop</name>
       <anchorfile>classRTT_1_1base_1_1BufferInterface.html</anchorfile>
-      <anchor>ae2af23bcbd142dc2d09b75e30dddf391</anchor>
+      <anchor>ade01d7c098ebc1062ea374cb18e340ba</anchor>
       <arglist>(reference_t item)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -6106,11 +6398,11 @@
       <arglist>(const std::vector&lt; value_t &gt; &amp;items)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1base_1_1BufferInterface.html</anchorfile>
-      <anchor>a500e68c93d1286799d4bc4d101be3068</anchor>
-      <arglist>(const T &amp;sample)=0</arglist>
+      <anchor>a823e9a30c4d87afa6859af3d799e58eb</anchor>
+      <arglist>(const T &amp;sample, bool reset=true)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual T</type>
@@ -6129,15 +6421,22 @@
       <type></type>
       <name>BufferLocked</name>
       <anchorfile>classRTT_1_1base_1_1BufferLocked.html</anchorfile>
-      <anchor>a94b857cd89e3d9ddd672f20f0037472d</anchor>
-      <arglist>(size_type size, const T &amp;initial_value=T(), bool circular=false)</arglist>
+      <anchor>a57b0ec3925345cce8d7e797dd0da457b</anchor>
+      <arglist>(size_type size, const Options &amp;options=Options())</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>BufferLocked</name>
+      <anchorfile>classRTT_1_1base_1_1BufferLocked.html</anchorfile>
+      <anchor>aa5234f956a19e69340668edc5cb5cc76</anchor>
+      <arglist>(size_type size, const T &amp;initial_value, const Options &amp;options=Options())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1base_1_1BufferLocked.html</anchorfile>
-      <anchor>a18abf8891fc5e738ef735cfbf28d7232</anchor>
-      <arglist>(const T &amp;sample)</arglist>
+      <anchor>a67124dcaf2cb0b1a8bf2ee1ca329bf4c</anchor>
+      <arglist>(const T &amp;sample, bool reset=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual T</type>
@@ -6168,10 +6467,10 @@
       <arglist>(const std::vector&lt; T &gt; &amp;items)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>FlowStatus</type>
       <name>Pop</name>
       <anchorfile>classRTT_1_1base_1_1BufferLocked.html</anchorfile>
-      <anchor>a023e8c8dae41633865c4f8efd9230df8</anchor>
+      <anchor>ae8823ea9b4773e8dbc755785f10131c6</anchor>
       <arglist>(reference_t item)</arglist>
     </member>
     <member kind="function">
@@ -6240,8 +6539,15 @@
       <type></type>
       <name>BufferLockFree</name>
       <anchorfile>classRTT_1_1base_1_1BufferLockFree.html</anchorfile>
-      <anchor>a79f8bd308ae76932ea8aa6f7d8f0ae51</anchor>
-      <arglist>(unsigned int bufsize, const T &amp;initial_value=T(), bool circular=false)</arglist>
+      <anchor>a6c6f647053becd147e81f939c39c2c16</anchor>
+      <arglist>(unsigned int bufsize, const Options &amp;options=Options())</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>BufferLockFree</name>
+      <anchorfile>classRTT_1_1base_1_1BufferLockFree.html</anchorfile>
+      <anchor>a73da297d5ef724541bf4d8ee193131d5</anchor>
+      <arglist>(unsigned int bufsize, const T &amp;initial_value, const Options &amp;options=Options())</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6253,15 +6559,22 @@
       <type></type>
       <name>BufferUnSync</name>
       <anchorfile>classRTT_1_1base_1_1BufferUnSync.html</anchorfile>
-      <anchor>a2d9b9b60cb512241433a87eab9d7816c</anchor>
-      <arglist>(size_type size, const T &amp;initial_value=T(), bool circular=false)</arglist>
+      <anchor>a9ded0f0cb34643ab4b778189263a9206</anchor>
+      <arglist>(size_type size, const Options &amp;options=Options())</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>BufferUnSync</name>
+      <anchorfile>classRTT_1_1base_1_1BufferUnSync.html</anchorfile>
+      <anchor>a971eda5f890f11389542e1de89679aff</anchor>
+      <arglist>(size_type size, const T &amp;initial_value, const Options &amp;options=Options())</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1base_1_1BufferUnSync.html</anchorfile>
-      <anchor>a8a834e79974647f6eb9afa1d1b8d1c07</anchor>
-      <arglist>(const T &amp;sample)</arglist>
+      <anchor>a09b214cc99e3731756b06832edc16e3b</anchor>
+      <arglist>(const T &amp;sample, bool reset=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual T</type>
@@ -6292,10 +6605,10 @@
       <arglist>(const std::vector&lt; T &gt; &amp;items)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>FlowStatus</type>
       <name>Pop</name>
       <anchorfile>classRTT_1_1base_1_1BufferUnSync.html</anchorfile>
-      <anchor>a35b627a820025e880f82fd4d9baaad7a</anchor>
+      <anchor>a8f3f14c3cdc50f8212c49d392c5e6d1e</anchor>
       <arglist>(reference_t item)</arglist>
     </member>
     <member kind="function">
@@ -6359,55 +6672,69 @@
     <name>RTT::base::ChannelElement</name>
     <filename>classRTT_1_1base_1_1ChannelElement.html</filename>
     <templarg>T</templarg>
-    <base>RTT::base::ChannelElementBase</base>
+    <base virtualness="virtual">RTT::base::ChannelElementBase</base>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual WriteStatus</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElement.html</anchorfile>
-      <anchor>a4985bbcda69d829c4eae69aad1d43766</anchor>
-      <arglist>(param_t sample)</arglist>
+      <anchor>a5b593435adb20eb2ce3b0d3a02d63519</anchor>
+      <arglist>(param_t sample, bool reset=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual WriteStatus</type>
       <name>write</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElement.html</anchorfile>
-      <anchor>af88c18652a5d860b88d788d4832eb488</anchor>
+      <anchor>a3cb94e4d3efe114af8a8360650b40635</anchor>
       <arglist>(param_t sample)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual FlowStatus</type>
       <name>read</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElement.html</anchorfile>
-      <anchor>a0521e0ade45ecc0dfee715e0717ea903</anchor>
-      <arglist>(reference_t sample, bool copy_old_data)</arglist>
+      <anchor>aea35c7c532583dc011f23513094ded03</anchor>
+      <arglist>(reference_t sample, bool copy_old_data=true)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>removeInput</name>
+      <type>ChannelElement&lt; T &gt; *</type>
+      <name>narrow</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
-      <anchor>ab361a083bee6da8e0e94f71aa09fa30b</anchor>
+      <anchor>a3e42c919f744c8e6a4ed952ad1e1c340</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>ChannelElementBase::shared_ptr</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual shared_ptr</type>
       <name>getInputEndPoint</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
       <anchor>a63e9f77c9197ba424d824ff44b38349f</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>ChannelElementBase::shared_ptr</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual shared_ptr</type>
       <name>getOutputEndPoint</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
       <anchor>aefc45d26de98f37392cf01936f9ae2f6</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setOutput</name>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>connectTo</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
-      <anchor>a0e3363d762549f205196265128395c89</anchor>
-      <arglist>(shared_ptr output)</arglist>
+      <anchor>af51bbede4b7cef19688822fea37ffdce</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;output, bool mandatory=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>connectFrom</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a15af6f161fbbe7f9357cd5423367242e</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;input)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>connected</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a4b5c817d18837ffdd59eda9f9d02c2df</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -6418,10 +6745,24 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>signalFrom</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a3bde254d97586f315db880a8574bc0d5</anchor>
+      <arglist>(ChannelElementBase *caller)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>channelReady</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>aec63f79d9ccff06c58c836697911b454</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;caller, ConnPolicy const &amp;policy, internal::ConnID *conn_id=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>inputReady</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
-      <anchor>a69e529e0b3dcc4316cb00f3ff957505b</anchor>
-      <arglist>()</arglist>
+      <anchor>a1d5804375c6925e005af865deb89869b</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;caller)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -6438,6 +6779,13 @@
       <arglist>(bool forward)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>disconnect</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a834646bd1af47979aa9d5f53142674de</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;channel, bool forward)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual PortInterface *</type>
       <name>getPort</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
@@ -6445,11 +6793,32 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual internal::ConnID *</type>
-      <name>getConnID</name>
+      <type>virtual const ConnPolicy *</type>
+      <name>getConnPolicy</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
-      <anchor>a4a66b7e5834d3d1fabb9181184759b85</anchor>
+      <anchor>a41b0d0d3b22eb597141eebae0401cf97</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setBufferPolicy</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>acfcaf61e56c91ad4aa63c604ac7f761d</anchor>
+      <arglist>(BufferPolicy policy, bool force=false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual BufferPolicy</type>
+      <name>getBufferPolicy</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a877444985ef48ee5d3e9f1297d6239a4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ChannelElement&lt; T &gt; *</type>
+      <name>narrow</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a15fc2c411c0de48b58c30f858d44e318</anchor>
+      <arglist>(ChannelElementBase *e)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -6465,6 +6834,217 @@
       <anchor>a7a7de132a871f70881c182cbe4bef67b</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addOutput</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a24f85762914ae94498ce2ad7397d3f32</anchor>
+      <arglist>(shared_ptr const &amp;output, bool mandatory=true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeOutput</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a7dcc89cab2e2ddb78eb00262691325c7</anchor>
+      <arglist>(shared_ptr const &amp;output)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addInput</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a194d84e56b2a7876ec319b01daa81ddf</anchor>
+      <arglist>(shared_ptr const &amp;input)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeInput</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a07f2b157dd0ff6a6f0159a782dc17771</anchor>
+      <arglist>(shared_ptr const &amp;input)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>RTT::base::MultipleInputsChannelElement</name>
+    <filename>classRTT_1_1base_1_1MultipleInputsChannelElement.html</filename>
+    <templarg></templarg>
+    <base virtualness="virtual">RTT::base::MultipleInputsChannelElementBase</base>
+    <base virtualness="virtual">RTT::base::ChannelElement</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual value_t</type>
+      <name>data_sample</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsChannelElement.html</anchorfile>
+      <anchor>aaa0f2e1e9f4feb351cf113f3625a2ae9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual FlowStatus</type>
+      <name>read</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsChannelElement.html</anchorfile>
+      <anchor>a619f4de76f479a1b410e645cc9507e11</anchor>
+      <arglist>(reference_t sample, bool copy_old_data=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>connected</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsChannelElementBase.html</anchorfile>
+      <anchor>a0b6e971a5d572fb37ab4fafea076ce13</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>inputReady</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsChannelElementBase.html</anchorfile>
+      <anchor>abd5acfb89e2d87238d3bcccfd2c09945</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;caller)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsChannelElementBase.html</anchorfile>
+      <anchor>a8454306ab8349b42cb1e5ed29c8becfc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>disconnect</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsChannelElementBase.html</anchorfile>
+      <anchor>a945bfe45dde582af7ac21406dbf97d94</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;channel, bool forward=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>signalFrom</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsChannelElementBase.html</anchorfile>
+      <anchor>a2e4ed184fb0179c8a7337abc92741559</anchor>
+      <arglist>(ChannelElementBase *caller)</arglist>
+    </member>
+    <member kind="function">
+      <type>shared_ptr</type>
+      <name>getInput</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a7abd277448530efc8817ca36cf0238f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>shared_ptr</type>
+      <name>getOutput</name>
+      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
+      <anchor>a17b16a344228234a2f6d51559c7522c8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeInput</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsChannelElement.html</anchorfile>
+      <anchor>a6a2c92c5af6549213121e7ad63ec4987</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;input)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addInput</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsChannelElementBase.html</anchorfile>
+      <anchor>a7d3feee807fa6c2639ac375be5f7ad6b</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;input)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>RTT::base::MultipleOutputsChannelElement</name>
+    <filename>classRTT_1_1base_1_1MultipleOutputsChannelElement.html</filename>
+    <templarg></templarg>
+    <base virtualness="virtual">RTT::base::MultipleOutputsChannelElementBase</base>
+    <base virtualness="virtual">RTT::base::ChannelElement</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual WriteStatus</type>
+      <name>data_sample</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleOutputsChannelElement.html</anchorfile>
+      <anchor>ab6768af7afc7f11d6ac93aaeaa2a3a9b</anchor>
+      <arglist>(param_t sample, bool reset=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual WriteStatus</type>
+      <name>write</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleOutputsChannelElement.html</anchorfile>
+      <anchor>a9aa73bd66a7d93dbc313bd0f279b1844</anchor>
+      <arglist>(param_t sample)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>connected</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html</anchorfile>
+      <anchor>af1356ff927a7473dad5d3e0684e3442b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>signal</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html</anchorfile>
+      <anchor>afb3c87bb1d1c48b608d24ab538559bb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>channelReady</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html</anchorfile>
+      <anchor>a99ba11be6c99d97ff16e75aaac2aa812</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;caller, ConnPolicy const &amp;policy, internal::ConnID *conn_id=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>disconnect</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html</anchorfile>
+      <anchor>a4beff83f9ce436c6cf735442af06ad94</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;channel, bool forward=false)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>addOutput</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html</anchorfile>
+      <anchor>a7d8b962f5a5fe1fa58d68ce5189e9e8d</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;output, bool mandatory=true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeOutput</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html</anchorfile>
+      <anchor>a449d523dbcd940e8645d2a3b7afa5f06</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;output)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>removeDisconnectedOutputs</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html</anchorfile>
+      <anchor>a37d790f6db1825949335dae3bf87ce51</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>RTT::base::MultipleInputsMultipleOutputsChannelElement</name>
+    <filename>classRTT_1_1base_1_1MultipleInputsMultipleOutputsChannelElement.html</filename>
+    <templarg></templarg>
+    <base>RTT::base::MultipleInputsMultipleOutputsChannelElementBase</base>
+    <base>RTT::base::MultipleInputsChannelElement</base>
+    <base>RTT::base::MultipleOutputsChannelElement</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>connected</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsMultipleOutputsChannelElementBase.html</anchorfile>
+      <anchor>a5f75582d35a0790135b24772c38880df</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>disconnect</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsMultipleOutputsChannelElementBase.html</anchorfile>
+      <anchor>ae4507e4e15a465fa998ff28211e4f024</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;channel, bool forward)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>removeInput</name>
+      <anchorfile>classRTT_1_1base_1_1MultipleInputsChannelElementBase.html</anchorfile>
+      <anchor>a804a858994f4106f83ca4d1a94fff6e1</anchor>
+      <arglist>(ChannelElementBase::shared_ptr const &amp;input)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>RTT::base::ChannelElementBase</name>
@@ -6476,20 +7056,22 @@
       <anchor>a9236dc500887481d696d905d1015350a</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>ChannelElementBase::shared_ptr</type>
-      <name>getInput</name>
-      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
-      <anchor>a7abd277448530efc8817ca36cf0238f8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>ChannelElementBase::shared_ptr</type>
-      <name>getOutput</name>
-      <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
-      <anchor>a17b16a344228234a2f6d51559c7522c8</anchor>
-      <arglist>()</arglist>
-    </member>
+  </compound>
+  <compound kind="class">
+    <name>RTT::base::MultipleInputsChannelElementBase</name>
+    <filename>classRTT_1_1base_1_1MultipleInputsChannelElementBase.html</filename>
+    <base virtualness="virtual">RTT::base::ChannelElementBase</base>
+  </compound>
+  <compound kind="class">
+    <name>RTT::base::MultipleOutputsChannelElementBase</name>
+    <filename>classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html</filename>
+    <base virtualness="virtual">RTT::base::ChannelElementBase</base>
+  </compound>
+  <compound kind="class">
+    <name>RTT::base::MultipleInputsMultipleOutputsChannelElementBase</name>
+    <filename>classRTT_1_1base_1_1MultipleInputsMultipleOutputsChannelElementBase.html</filename>
+    <base virtualness="virtual">RTT::base::MultipleInputsChannelElementBase</base>
+    <base virtualness="virtual">RTT::base::MultipleOutputsChannelElementBase</base>
   </compound>
   <compound kind="class">
     <name>RTT::base::DataObject</name>
@@ -6525,25 +7107,32 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual FlowStatus</type>
       <name>Get</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectLockFree.html</anchorfile>
-      <anchor>a4f1bb1a05d46f334a1166568d76a286a</anchor>
-      <arglist>(DataType &amp;pull) const </arglist>
+      <anchor>a7377b221a12f8d3e622bc83922a63d6e</anchor>
+      <arglist>(DataType &amp;pull, bool copy_old_data=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>Set</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectLockFree.html</anchorfile>
-      <anchor>aac560adb67b3be47619acec7dfe5452d</anchor>
+      <anchor>abbbb7b7d0e825efc1aead07a234db706</anchor>
       <arglist>(const DataType &amp;push)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectLockFree.html</anchorfile>
-      <anchor>a3a3aa22e1c276c88daa0c8908d3e93eb</anchor>
-      <arglist>(const DataType &amp;sample)</arglist>
+      <anchor>ad3231e948b2cf659f2e52a7263b46367</anchor>
+      <arglist>(const DataType &amp;sample, bool reset=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1base_1_1DataObjectLockFree.html</anchorfile>
+      <anchor>ae40fe9f0aa6bd604e90dba9b8bcb841a</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable">
       <type>const unsigned int</type>
@@ -6554,9 +7143,26 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>RTT::base::DataObjectBase</name>
+    <filename>classRTT_1_1base_1_1DataObjectBase.html</filename>
+    <class kind="class">RTT::base::DataObjectBase::Options</class>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1base_1_1DataObjectBase.html</anchorfile>
+      <anchor>a7ac17d0de67cb73b4d48dcfd2ac09333</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>RTT::base::DataObjectBase::Options</name>
+    <filename>classRTT_1_1base_1_1DataObjectBase_1_1Options.html</filename>
+  </compound>
+  <compound kind="class">
     <name>RTT::base::DataObjectInterface</name>
     <filename>classRTT_1_1base_1_1DataObjectInterface.html</filename>
     <templarg>T</templarg>
+    <base>RTT::base::DataObjectBase</base>
     <member kind="typedef">
       <type>T</type>
       <name>DataType</name>
@@ -6579,11 +7185,11 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual FlowStatus</type>
       <name>Get</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectInterface.html</anchorfile>
-      <anchor>a4a571b38909495e3d88cc6e935360229</anchor>
-      <arglist>(DataType &amp;pull) const =0</arglist>
+      <anchor>ab4679a280f366ee7a41f1fa9703b22dd</anchor>
+      <arglist>(DataType &amp;pull, bool copy_old_data=true) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual DataType</type>
@@ -6593,18 +7199,25 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>Set</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectInterface.html</anchorfile>
-      <anchor>a7512c12a0189fca337a55db262b3209a</anchor>
+      <anchor>aa0929e8179c66bf0c980da2bf4185482</anchor>
       <arglist>(const DataType &amp;push)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectInterface.html</anchorfile>
-      <anchor>a4851566b61e94041d410174b68719745</anchor>
-      <arglist>(const DataType &amp;sample)=0</arglist>
+      <anchor>a2a1b6a2f4c6b7e9f6f6c1d58c6c73dcc</anchor>
+      <arglist>(const DataType &amp;sample, bool reset=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1base_1_1DataObjectInterface.html</anchorfile>
+      <anchor>ae189016bad68da9df639b8d2666aa0de</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6623,15 +7236,22 @@
       <type></type>
       <name>DataObjectLocked</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectLocked.html</anchorfile>
-      <anchor>a275db2a8aae98218d6541a7e5c479ecc</anchor>
-      <arglist>(const T &amp;initial_value=T())</arglist>
+      <anchor>ac33b7c41bb681f1956834e2f0fb6377b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>DataObjectLocked</name>
+      <anchorfile>classRTT_1_1base_1_1DataObjectLocked.html</anchorfile>
+      <anchor>ae67d07ad108246170621338ce6c034ab</anchor>
+      <arglist>(const T &amp;initial_value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual FlowStatus</type>
       <name>Get</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectLocked.html</anchorfile>
-      <anchor>a480bfa1b93c0f744ae47f75d67afde48</anchor>
-      <arglist>(DataType &amp;pull) const </arglist>
+      <anchor>a05c87a3ef3532ae06036f875310a894c</anchor>
+      <arglist>(DataType &amp;pull, bool copy_old_data=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual DataType</type>
@@ -6641,18 +7261,25 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>Set</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectLocked.html</anchorfile>
-      <anchor>a4aa4462d5d8086e0d7834ee189eab240</anchor>
+      <anchor>a449e7b1849402a3332de436a875a2822</anchor>
       <arglist>(const DataType &amp;push)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectLocked.html</anchorfile>
-      <anchor>abeb95752cd4837b744ec37a69aa066a2</anchor>
-      <arglist>(const DataType &amp;sample)</arglist>
+      <anchor>a701f8d9cce781284aa748720baba5eec</anchor>
+      <arglist>(const DataType &amp;sample, bool reset)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1base_1_1DataObjectLocked.html</anchorfile>
+      <anchor>a7ccbe6c4289eee37ae1a57bdb9e0a60b</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6660,19 +7287,19 @@
     <filename>classRTT_1_1base_1_1DataObjectLockFree.html</filename>
     <templarg></templarg>
     <base>RTT::base::DataObjectInterface</base>
-    <member kind="typedef">
-      <type>T</type>
-      <name>DataType</name>
+    <member kind="function">
+      <type></type>
+      <name>DataObjectLockFree</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectLockFree.html</anchorfile>
-      <anchor>a09641e6375cf586675ff43c9217686bc</anchor>
-      <arglist></arglist>
+      <anchor>a7d4b4f8c9fb668d61b822e8ea27cf2a2</anchor>
+      <arglist>(const Options &amp;options=Options())</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>DataObjectLockFree</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectLockFree.html</anchorfile>
-      <anchor>a703961a35de9d115b26477d2154fae32</anchor>
-      <arglist>(const T &amp;initial_value=T(), unsigned int max_threads=2)</arglist>
+      <anchor>ab749340c777938f234e573da12806865</anchor>
+      <arglist>(const T &amp;initial_value, const Options &amp;options=Options())</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6691,15 +7318,22 @@
       <type></type>
       <name>DataObjectUnSync</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectUnSync.html</anchorfile>
-      <anchor>a97e01ee894258a600d0c8671602ecdb2</anchor>
-      <arglist>(const T &amp;initial_value=T())</arglist>
+      <anchor>a47e1b72d8faa61b49a41f1e4d1c96db8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>DataObjectUnSync</name>
+      <anchorfile>classRTT_1_1base_1_1DataObjectUnSync.html</anchorfile>
+      <anchor>ab8f197fbfffedc0f9dd0bc3720e95730</anchor>
+      <arglist>(const T &amp;initial_value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual FlowStatus</type>
       <name>Get</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectUnSync.html</anchorfile>
-      <anchor>a4a1d5c1529c656b23f721d7967d03d22</anchor>
-      <arglist>(DataType &amp;pull) const </arglist>
+      <anchor>a6691389def232ba3c36e6e8f237b37e9</anchor>
+      <arglist>(DataType &amp;pull, bool copy_old_data=true) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual DataType</type>
@@ -6709,18 +7343,25 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>Set</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectUnSync.html</anchorfile>
-      <anchor>aa6690b79a71e6fabcd932f28afa4fa3c</anchor>
+      <anchor>a39c77fbf6de6ce6a7631d64c3721b944</anchor>
       <arglist>(const DataType &amp;push)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1base_1_1DataObjectUnSync.html</anchorfile>
-      <anchor>a2895d29ffaea0475e3c1738d7c9b9bf3</anchor>
-      <arglist>(const DataType &amp;sample)</arglist>
+      <anchor>a2471cbc2d19d924511de99d610a6f485</anchor>
+      <arglist>(const DataType &amp;sample, bool reset)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1base_1_1DataObjectUnSync.html</anchorfile>
+      <anchor>a03cbb646cd0a8181af2a041f0acbb776</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6880,6 +7521,13 @@
     <filename>classRTT_1_1base_1_1InputPortInterface.html</filename>
     <base>RTT::base::PortInterface</base>
     <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1base_1_1InputPortInterface.html</anchorfile>
+      <anchor>a4440042b409ac2ed8b76697ae90652a0</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual DataSourceBase *</type>
       <name>getDataSource</name>
       <anchorfile>classRTT_1_1base_1_1InputPortInterface.html</anchorfile>
@@ -6927,6 +7575,13 @@
       <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
       <anchor>a1599147a15dbfbb62defbee0c51b65f6</anchor>
       <arglist>(ConnPolicy const &amp;policy)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual ChannelElementBase *</type>
+      <name>getEndpoint</name>
+      <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
+      <anchor>af8d42fb68c00a6be39f2da0e57a8f47c</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6992,7 +7647,7 @@
       <type>bool</type>
       <name>isSend</name>
       <anchorfile>structRTT_1_1base_1_1OperationCallerInterface.html</anchorfile>
-      <anchor>a55d9c21f679c735ac63b2482d3b19145</anchor>
+      <anchor>aec3e3f1b780d11824c07461bf4cfeee7</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -7087,10 +7742,10 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual WriteStatus</type>
       <name>write</name>
       <anchorfile>classRTT_1_1base_1_1OutputPortInterface.html</anchorfile>
-      <anchor>adf3dc493227e23310adef4877e4ca404</anchor>
+      <anchor>aa3b55f74804ac962afd274f1d57081a6</anchor>
       <arglist>(DataSourceBase::shared_ptr source)</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -7148,24 +7803,17 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>addConnection</name>
+      <name>createConnection</name>
       <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
-      <anchor>a1162e96f9cc27d5bcc37c2536e2a3907</anchor>
-      <arglist>(internal::ConnID *cid, ChannelElementBase::shared_ptr channel_input, ConnPolicy const &amp;policy=ConnPolicy())=0</arglist>
+      <anchor>a4017274e65c7fcd3dcd0b4b1a7ea0820</anchor>
+      <arglist>(internal::SharedConnectionBase::shared_ptr shared_connection, ConnPolicy const &amp;policy=ConnPolicy())=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
-      <name>removeConnection</name>
+      <name>addConnection</name>
       <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
-      <anchor>afb53bec2e9551b2b1b3c7ebd413c4a9c</anchor>
-      <arglist>(internal::ConnID *cid)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const internal::ConnectionManager *</type>
-      <name>getManager</name>
-      <anchorfile>classRTT_1_1base_1_1PortInterface.html</anchorfile>
-      <anchor>af52d7cf050d26b41a57e0d758051f607</anchor>
-      <arglist>() const =0</arglist>
+      <anchor>afd0a2f0f27d5575c27b9515c88af0c85</anchor>
+      <arglist>(internal::ConnID *cid, ChannelElementBase::shared_ptr channel, ConnPolicy const &amp;policy=ConnPolicy())=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7395,6 +8043,13 @@
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>work</name>
+      <anchorfile>classRTT_1_1base_1_1RunnableInterface.html</anchorfile>
+      <anchor>a578a2025eaf9af809a72d9783fdaa803</anchor>
+      <arglist>(WorkReason reason)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>breakLoop</name>
       <anchorfile>classRTT_1_1base_1_1RunnableInterface.html</anchorfile>
@@ -7433,13 +8088,6 @@
       <anchor>a90d97665c8b1422aaaaf76a6ddb4d320</anchor>
       <arglist>(TaskState initial_state=Stopped)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>TaskCore</name>
-      <anchorfile>classRTT_1_1base_1_1TaskCore.html</anchorfile>
-      <anchor>a94327269b75e784a4d186d055cf2a5b8</anchor>
-      <arglist>(ExecutionEngine *parent, TaskState initial_state=Stopped)</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>start</name>
@@ -7475,6 +8123,7 @@
     <class kind="interface">RTT::corba::CRemoteChannelElement</class>
     <class kind="exception">RTT::corba::CNoSuchPortException</class>
     <class kind="exception">RTT::corba::CNoCorbaTransport</class>
+    <class kind="exception">RTT::corba::CInvalidArgument</class>
     <class kind="interface">RTT::corba::CDataFlowInterface</class>
     <class kind="class">RTT::corba::CRemoteChannelElement_i</class>
     <class kind="class">RTT::corba::CDataFlowInterface_i</class>
@@ -7496,8 +8145,11 @@
     <class kind="class">RTT::corba::RemoteOutputPort</class>
     <class kind="class">RTT::corba::RemoteInputPort</class>
     <class kind="struct">RTT::corba::AnyConversion&lt; ConnPolicy &gt;</class>
+    <class kind="struct">RTT::corba::CServiceDescription</class>
     <class kind="interface">RTT::corba::CService</class>
+    <class kind="struct">RTT::corba::CServiceRequesterDescription</class>
     <class kind="interface">RTT::corba::CServiceRequester</class>
+    <class kind="struct">RTT::corba::CTaskContextDescription</class>
     <class kind="interface">RTT::corba::CTaskContext</class>
     <class kind="class">RTT::corba::TaskContextFactory</class>
     <class kind="struct">RTT::corba::IllegalServer</class>
@@ -7903,8 +8555,8 @@
       <type>virtual CRemoteChannelElement_i *</type>
       <name>createChannelElement_i</name>
       <anchorfile>classRTT_1_1corba_1_1CorbaFallBackProtocol.html</anchorfile>
-      <anchor>a208a0272786ff643fcbe7cfc9e588698</anchor>
-      <arglist>(DataFlowInterface *,::PortableServer::POA *poa, bool) const </arglist>
+      <anchor>a6c761c3882e42a2c691d683ccc8e41c2</anchor>
+      <arglist>(DataFlowInterface *,::PortableServer::POA *poa, bool, bool, bool) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual base::DataSourceBase::shared_ptr</type>
@@ -8068,8 +8720,8 @@
       <type>virtual CRemoteChannelElement_i *</type>
       <name>createChannelElement_i</name>
       <anchorfile>classRTT_1_1corba_1_1CorbaTypeTransporter.html</anchorfile>
-      <anchor>a9c629b397951df54e0455d9075b155e8</anchor>
-      <arglist>(DataFlowInterface *sender,::PortableServer::POA *poa, bool is_pull) const =0</arglist>
+      <anchor>a04368798df51c2b7e3ce8f65a8800d28</anchor>
+      <arglist>(DataFlowInterface *sender,::PortableServer::POA *poa, bool is_pull, bool is_mandatory, bool is_signalling) const =0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual base::ChannelElementBase::shared_ptr</type>
@@ -8123,6 +8775,20 @@
     <name>RTT::corba::CChannelElement</name>
     <filename>interfaceRTT_1_1corba_1_1CChannelElement.html</filename>
     <member kind="function">
+      <type>boolean</type>
+      <name>inputReady</name>
+      <anchorfile>interfaceRTT_1_1corba_1_1CChannelElement.html</anchorfile>
+      <anchor>a9fd6b00e2dcacb71653c523b1b8232be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
+      <name>channelReady</name>
+      <anchorfile>interfaceRTT_1_1corba_1_1CChannelElement.html</anchorfile>
+      <anchor>a3fc59de2c43ae702203f5cc8c7050320</anchor>
+      <arglist>(in CConnPolicy cp)</arglist>
+    </member>
+    <member kind="function">
       <type>CFlowStatus</type>
       <name>read</name>
       <anchorfile>interfaceRTT_1_1corba_1_1CChannelElement.html</anchorfile>
@@ -8130,10 +8796,10 @@
       <arglist>(out any sample, in boolean copy_old_data)</arglist>
     </member>
     <member kind="function">
-      <type>boolean</type>
+      <type>oneway void</type>
       <name>write</name>
       <anchorfile>interfaceRTT_1_1corba_1_1CChannelElement.html</anchorfile>
-      <anchor>a3a6efa42d19ac141216f115f5f9b0108</anchor>
+      <anchor>a082f187ea7906596f28566ac2f36cd03</anchor>
       <arglist>(in any sample)</arglist>
     </member>
     <member kind="function">
@@ -8156,18 +8822,18 @@
       <arglist>(in CRemoteChannelElement other)</arglist>
     </member>
     <member kind="function">
-      <type>boolean</type>
+      <type>oneway void</type>
       <name>remoteSignal</name>
       <anchorfile>interfaceRTT_1_1corba_1_1CRemoteChannelElement.html</anchorfile>
-      <anchor>a739739a6a807c5bb6ed99fb8805e865b</anchor>
+      <anchor>abae51a6ff7bd88e24e228973a65d0248</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>remoteDisconnect</name>
       <anchorfile>interfaceRTT_1_1corba_1_1CRemoteChannelElement.html</anchorfile>
-      <anchor>ad48bf59a0b3c79eb3cd748088eff9e85</anchor>
-      <arglist>(in boolean writer_to_reader)</arglist>
+      <anchor>ab175cc3f166214a59e60147ccabf6e20</anchor>
+      <arglist>(in boolean forward)</arglist>
     </member>
   </compound>
   <compound kind="exception">
@@ -8177,6 +8843,10 @@
   <compound kind="exception">
     <name>RTT::corba::CNoCorbaTransport</name>
     <filename>exceptionRTT_1_1corba_1_1CNoCorbaTransport.html</filename>
+  </compound>
+  <compound kind="exception">
+    <name>RTT::corba::CInvalidArgument</name>
+    <filename>exceptionRTT_1_1corba_1_1CInvalidArgument.html</filename>
   </compound>
   <compound kind="interface">
     <name>RTT::corba::CDataFlowInterface</name>
@@ -8246,6 +8916,13 @@
     </member>
     <member kind="function">
       <type>boolean</type>
+      <name>createSharedConnection</name>
+      <anchorfile>interfaceRTT_1_1corba_1_1CDataFlowInterface.html</anchorfile>
+      <anchor>aa44a4d216287623f33e46c5611e470bd</anchor>
+      <arglist>(in string input_port, inout CConnPolicy policy)</arglist>
+    </member>
+    <member kind="function">
+      <type>boolean</type>
       <name>removeConnection</name>
       <anchorfile>interfaceRTT_1_1corba_1_1CDataFlowInterface.html</anchorfile>
       <anchor>abb1dc296a365df020d6a5c8763f59894</anchor>
@@ -8264,13 +8941,6 @@
       <anchorfile>interfaceRTT_1_1corba_1_1CDataFlowInterface.html</anchorfile>
       <anchor>a37f20178003c2b751edf5131036ff245</anchor>
       <arglist>(in string local_port, in string stream_name)</arglist>
-    </member>
-    <member kind="function">
-      <type>boolean</type>
-      <name>channelReady</name>
-      <anchorfile>interfaceRTT_1_1corba_1_1CDataFlowInterface.html</anchorfile>
-      <anchor>a0a4f2bc9f8539d772b931de89e508012</anchor>
-      <arglist>(in string input_port, in CChannelElement channel, in CConnPolicy cp)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8663,17 +9333,17 @@
     <name>RTT::corba::COperationInterface</name>
     <filename>interfaceRTT_1_1corba_1_1COperationInterface.html</filename>
     <member kind="function">
-      <type>COperationList</type>
+      <type>COperationDescriptions</type>
       <name>getOperations</name>
       <anchorfile>interfaceRTT_1_1corba_1_1COperationInterface.html</anchorfile>
-      <anchor>ae0453844331c87731e279e09a43794fb</anchor>
+      <anchor>a80e17d3571a8d5cca1a585019ea3651c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>CDescriptions</type>
+      <type>CArgumentDescriptions</type>
       <name>getArguments</name>
       <anchorfile>interfaceRTT_1_1corba_1_1COperationInterface.html</anchorfile>
-      <anchor>a11e78fde96b7b134e7ada3d464cce516</anchor>
+      <anchor>a782ee53b36f64df509f74a9cd471a4a3</anchor>
       <arglist>(in string operation)</arglist>
     </member>
     <member kind="function">
@@ -8739,6 +9409,13 @@
       <anchor>a5bc3fe6cc2d982fa1a29027329eb6a16</anchor>
       <arglist>(in string operation, in CAnyArguments args)</arglist>
     </member>
+    <member kind="function">
+      <type>oneway void</type>
+      <name>sendOperationOneway</name>
+      <anchorfile>interfaceRTT_1_1corba_1_1COperationInterface.html</anchorfile>
+      <anchor>a0bfc14d9152e52666f6a032b28bdd3c6</anchor>
+      <arglist>(in string operation, in CAnyArguments args)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>RTT::corba::RemoteChannelElement</name>
@@ -8750,8 +9427,8 @@
       <type></type>
       <name>RemoteChannelElement</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
-      <anchor>a24814918cb731699e5f8054771a78b55</anchor>
-      <arglist>(CorbaTypeTransporter const &amp;transport, DataFlowInterface *sender, PortableServer::POA_ptr poa, bool is_pull)</arglist>
+      <anchor>acf98ec3096653412b4be5b1197b418bb</anchor>
+      <arglist>(CorbaTypeTransporter const &amp;transport, DataFlowInterface *sender, PortableServer::POA_ptr poa, bool is_pull, bool is_mandatory, bool is_signalling)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -8768,10 +9445,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>CORBA::Boolean</type>
+      <type>void</type>
       <name>remoteSignal</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
-      <anchor>aed05cf95b13766524da482e04f994ace</anchor>
+      <anchor>af93cdeca6c332ef221c7e8fd0d3b5efe</anchor>
       <arglist>() ACE_THROW_SPEC((CORBA</arglist>
     </member>
     <member kind="function">
@@ -8790,17 +9467,17 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>disconnect</name>
+      <name>remoteDisconnect</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
-      <anchor>aa8381e069ac6b880ab9b61bed9f9de06</anchor>
-      <arglist>() ACE_THROW_SPEC((CORBA</arglist>
+      <anchor>a0904ceb64e8766c12fdccf6ee2aad5ff</anchor>
+      <arglist>(bool forward) ACE_THROW_SPEC((CORBA</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>disconnect</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
-      <anchor>a985ad009356b51ac671f461f84fb4d3a</anchor>
-      <arglist>(bool writer_to_reader) ACE_THROW_SPEC((CORBA</arglist>
+      <anchor>a3e40d14ded7504e28762e69170cffdee</anchor>
+      <arglist>(const base::ChannelElementBase::shared_ptr &amp;channel, bool forward)</arglist>
     </member>
     <member kind="function">
       <type>CFlowStatus</type>
@@ -8810,18 +9487,25 @@
       <arglist>(::CORBA::Any_out sample, bool copy_old_data) ACE_THROW_SPEC((CORBA</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>WriteStatus</type>
       <name>write</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
-      <anchor>a501c0323fdfc414823d32f40bad84d35</anchor>
+      <anchor>aba7f39207dc6672d77e9b7a35b54acec</anchor>
       <arglist>(typename base::ChannelElement&lt; T &gt;::param_t sample)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>write</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
-      <anchor>aba3751df8e510c2e81bd3f01cd8e17d1</anchor>
+      <anchor>a265f98b0b3bc2bce5848e8a07e12733e</anchor>
       <arglist>(const ::CORBA::Any &amp;sample) ACE_THROW_SPEC((CORBA</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>inputReady</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
+      <anchor>ad00cd8f96e88a8b78d2a475d9971e5b2</anchor>
+      <arglist>(base::ChannelElementBase::shared_ptr const &amp;caller)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -8829,6 +9513,20 @@
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
       <anchor>aaaefd5fa013897851d813c3e9778252d</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>channelReady</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
+      <anchor>a9eb5dcafa4fac5aa84e5ec8d91b00e7e</anchor>
+      <arglist>(base::ChannelElementBase::shared_ptr const &amp;caller, ConnPolicy const &amp;policy, internal::ConnID *conn_id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>channelReady</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
+      <anchor>a5ee3194dbd3ead47978c70a9fdfadc62</anchor>
+      <arglist>(const CConnPolicy &amp;cp) ACE_THROW_SPEC((CORBA</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -8893,11 +9591,25 @@
     <filename>classRTT_1_1corba_1_1RemoteInputPort.html</filename>
     <base>RemotePort&lt; base::InputPortInterface &gt;</base>
     <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteInputPort.html</anchorfile>
+      <anchor>afcec06b6329b0791b12b7a3eae2d74d4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>base::ChannelElementBase::shared_ptr</type>
       <name>buildRemoteChannelOutput</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteInputPort.html</anchorfile>
       <anchor>a95ca04580a87413e3751b16cd145d078</anchor>
       <arglist>(base::OutputPortInterface &amp;output_port, types::TypeInfo const *type, base::InputPortInterface &amp;reader_, ConnPolicy const &amp;policy)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>createConnection</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteInputPort.html</anchorfile>
+      <anchor>add598b9b2a0c22548a3b5925f6e1316f</anchor>
+      <arglist>(internal::SharedConnectionBase::shared_ptr shared_connection, ConnPolicy const &amp;policy=ConnPolicy())</arglist>
     </member>
     <member kind="function">
       <type>base::PortInterface *</type>
@@ -8920,24 +9632,21 @@
       <anchor>a473505ea56489efad45c6557b64a06d5</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>channelReady</name>
-      <anchorfile>classRTT_1_1corba_1_1RemoteInputPort.html</anchorfile>
-      <anchor>accde83c735b5940cd29c6cfbd827b7fe</anchor>
-      <arglist>(base::ChannelElementBase::shared_ptr channel, ConnPolicy const &amp;policy)</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>addConnection</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteInputPort.html</anchorfile>
-      <anchor>aad23d8e5f563f3b4d23d960f67d1f060</anchor>
-      <arglist>(internal::ConnID *port_id, base::ChannelElementBase::shared_ptr channel_input, ConnPolicy const &amp;policy)</arglist>
+      <anchor>ae28b009417586ab394aa31d3b7a8e9f6</anchor>
+      <arglist>(internal::ConnID *, base::ChannelElementBase::shared_ptr, ConnPolicy const &amp;)</arglist>
     </member>
   </compound>
   <compound kind="struct">
     <name>RTT::corba::AnyConversion&lt; ConnPolicy &gt;</name>
     <filename>structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>RTT::corba::CServiceDescription</name>
+    <filename>structRTT_1_1corba_1_1CServiceDescription.html</filename>
   </compound>
   <compound kind="interface">
     <name>RTT::corba::CService</name>
@@ -8957,6 +9666,13 @@
       <name>getServiceDescription</name>
       <anchorfile>interfaceRTT_1_1corba_1_1CService.html</anchorfile>
       <anchor>a6e112930347b7e5824f1ddc96da0f0c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CServiceDescription</type>
+      <name>getCServiceDescription</name>
+      <anchorfile>interfaceRTT_1_1corba_1_1CService.html</anchorfile>
+      <anchor>ad966ff63958878db3387fbee4b3d012b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -8981,6 +9697,10 @@
       <arglist>(in string name)</arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>RTT::corba::CServiceRequesterDescription</name>
+    <filename>structRTT_1_1corba_1_1CServiceRequesterDescription.html</filename>
+  </compound>
   <compound kind="interface">
     <name>RTT::corba::CServiceRequester</name>
     <filename>interfaceRTT_1_1corba_1_1CServiceRequester.html</filename>
@@ -8989,6 +9709,13 @@
       <name>getRequestName</name>
       <anchorfile>interfaceRTT_1_1corba_1_1CServiceRequester.html</anchorfile>
       <anchor>a6a4db49c5d9e8d7590da3ed8cda42603</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CServiceRequesterDescription</type>
+      <name>getCServiceRequesterDescription</name>
+      <anchorfile>interfaceRTT_1_1corba_1_1CServiceRequester.html</anchorfile>
+      <anchor>a2c1b7f207162acafcb3c85dbd1e3f295</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -9062,6 +9789,10 @@
       <arglist>()</arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>RTT::corba::CTaskContextDescription</name>
+    <filename>structRTT_1_1corba_1_1CTaskContextDescription.html</filename>
+  </compound>
   <compound kind="interface">
     <name>RTT::corba::CTaskContext</name>
     <filename>interfaceRTT_1_1corba_1_1CTaskContext.html</filename>
@@ -9077,6 +9808,13 @@
       <name>getDescription</name>
       <anchorfile>interfaceRTT_1_1corba_1_1CTaskContext.html</anchorfile>
       <anchor>a055362c929e3feb1496ca0f48ffbd677</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CTaskContextDescription</type>
+      <name>getCTaskContextDescription</name>
+      <anchorfile>interfaceRTT_1_1corba_1_1CTaskContext.html</anchorfile>
+      <anchor>a1c6b74ab1e5d86038d855eeee0a6fad7</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -9569,7 +10307,7 @@
       <type>CTaskContext_ptr</type>
       <name>server</name>
       <anchorfile>classRTT_1_1corba_1_1TaskContextServer.html</anchorfile>
-      <anchor>ac7180249551001aeb5a522d713364691</anchor>
+      <anchor>a37dfaa3c14a53fa6c0267fd31f9715b8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" static="yes">
@@ -9622,11 +10360,25 @@
       <arglist>(TaskContext *tc, bool use_naming=true, bool require_name_service=false)</arglist>
     </member>
     <member kind="function" static="yes">
+      <type>static TaskContextServer *</type>
+      <name>Create</name>
+      <anchorfile>classRTT_1_1corba_1_1TaskContextServer.html</anchorfile>
+      <anchor>af5c390b4400d4670e086bb06e8d467df</anchor>
+      <arglist>(TaskContext *tc, const std::string &amp;alias, bool use_naming=true, bool require_name_service=false)</arglist>
+    </member>
+    <member kind="function" static="yes">
       <type>static CTaskContext_ptr</type>
       <name>CreateServer</name>
       <anchorfile>classRTT_1_1corba_1_1TaskContextServer.html</anchorfile>
       <anchor>a7b4b8c4d41cbcc825278525e30e3b7af</anchor>
       <arglist>(TaskContext *tc, bool use_naming=true, bool require_name_service=false)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static CTaskContext_ptr</type>
+      <name>CreateServer</name>
+      <anchorfile>classRTT_1_1corba_1_1TaskContextServer.html</anchorfile>
+      <anchor>ac4283c14ddf9df04889b445c99e434ba</anchor>
+      <arglist>(TaskContext *tc, const std::string &amp;alias, bool use_naming=true, bool require_name_service=false)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
@@ -9648,6 +10400,13 @@
       <anchorfile>classRTT_1_1corba_1_1TaskContextServer.html</anchorfile>
       <anchor>a86e2bab01500f8915cabde2f9f8e09a3</anchor>
       <arglist>(TaskContext *taskcontext, bool use_naming, bool require_name_service)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>TaskContextServer</name>
+      <anchorfile>classRTT_1_1corba_1_1TaskContextServer.html</anchorfile>
+      <anchor>a2b16194283b1b00085ffdf48533e25d0</anchor>
+      <arglist>(TaskContext *taskcontext, const std::string &amp;alias, bool use_naming, bool require_name_service)</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
       <type>static void</type>
@@ -11053,10 +11812,24 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>work</name>
+      <anchorfile>classRTT_1_1extras_1_1FileDescriptorActivity.html</anchorfile>
+      <anchor>a343e98d60b9b52b390c889e3fde3a149</anchor>
+      <arglist>(base::RunnableInterface::WorkReason reason)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>trigger</name>
       <anchorfile>classRTT_1_1extras_1_1FileDescriptorActivity.html</anchorfile>
       <anchor>af7a62d5013ac78a6cb5e0414eabd09d9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>timeout</name>
+      <anchorfile>classRTT_1_1extras_1_1FileDescriptorActivity.html</anchorfile>
+      <anchor>a55607d1457744df8dc8b1644dd04dd89</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -11308,17 +12081,38 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>timeout</name>
+      <anchorfile>classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html</anchorfile>
+      <anchor>a3742a7e0f6d4d85c9e73ee8cdedf537b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual os::ThreadInterface *</type>
       <name>thread</name>
       <anchorfile>classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html</anchorfile>
       <anchor>ac80f95b259ca29b70e32973a519da38d</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>work</name>
+      <anchorfile>classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html</anchorfile>
+      <anchor>a46ae1466af33f2cdb52713d334da1092</anchor>
+      <arglist>(base::RunnableInterface::WorkReason reason)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>Seconds</type>
       <name>period</name>
       <anchorfile>classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html</anchorfile>
       <anchor>a6397d9a3b76bb2aafd782589f444d5ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>base::RunnableInterface::WorkReason</type>
+      <name>lastReason</name>
+      <anchorfile>classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html</anchorfile>
+      <anchor>ab17ac7769284028a7728cadceb57d9d1</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -11589,6 +12383,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
+      <name>timeout</name>
+      <anchorfile>classRTT_1_1extras_1_1PeriodicActivity.html</anchorfile>
+      <anchor>a7caec1daa2e1b86868326bdc722fc4fc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>stop</name>
       <anchorfile>classRTT_1_1extras_1_1PeriodicActivity.html</anchorfile>
       <anchor>a08eea5381e3ec00421ab8a756a3f9c80</anchor>
@@ -11663,6 +12464,13 @@
       <anchorfile>classRTT_1_1extras_1_1PeriodicActivity.html</anchorfile>
       <anchor>aa163bd2ab91c1dca1f63c36f9007ac29</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>work</name>
+      <anchorfile>classRTT_1_1extras_1_1PeriodicActivity.html</anchorfile>
+      <anchor>ad0317591ca76d16e01c64d05877ec627</anchor>
+      <arglist>(base::RunnableInterface::WorkReason reason)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -11828,6 +12636,13 @@
       <anchor>a30d9844ad4e61e7460dfec2b863d7515</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>timeout</name>
+      <anchorfile>classRTT_1_1extras_1_1SequentialActivity.html</anchorfile>
+      <anchor>a9ede175403b8b2627736333c061b4cd6</anchor>
+      <arglist>()</arglist>
+    </member>
     <docanchor file="classRTT_1_1extras_1_1SlaveActivity" title="Reactions to execute():">ExecReact</docanchor>
     <docanchor file="classRTT_1_1extras_1_1SlaveActivity" title="Reactions to trigger():">TrigReact</docanchor>
   </compound>
@@ -11972,6 +12787,13 @@
       <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
       <anchor>af25c7c7fa2f741e8f7caaf4180efdcf9</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>setWaitPeriodPolicy</name>
+      <anchorfile>classRTT_1_1os_1_1Thread.html</anchorfile>
+      <anchor>a404bc82a8a3b36d7a2a95a457fd2a739</anchor>
+      <arglist>(int p)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static SimulationThreadPtr</type>
@@ -12188,6 +13010,13 @@
       <anchor>a2576f14538c68a2db82f97be75fe5c32</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>timeout</name>
+      <anchorfile>classRTT_1_1extras_1_1SlaveActivity.html</anchorfile>
+      <anchor>a26d888f3664f8ebf2a882141a05b817e</anchor>
+      <arglist>()</arglist>
+    </member>
     <docanchor file="classRTT_1_1extras_1_1SlaveActivity" title="Reactions to execute():">ExecReact</docanchor>
     <docanchor file="classRTT_1_1extras_1_1SlaveActivity" title="Reactions to trigger():">TrigReact</docanchor>
   </compound>
@@ -12257,6 +13086,7 @@
     <filename>namespaceRTT_1_1internal.html</filename>
     <class kind="class">RTT::internal::ArrayPartDataSource</class>
     <class kind="class">RTT::internal::AssignCommand</class>
+    <class kind="class">RTT::internal::AtomicMWMRQueue</class>
     <class kind="class">RTT::internal::AtomicMWSRQueue</class>
     <class kind="class">RTT::internal::AtomicQueue</class>
     <class kind="struct">RTT::internal::AStore</class>
@@ -12281,6 +13111,7 @@
     <class kind="class">RTT::internal::SimpleConnID</class>
     <class kind="class">RTT::internal::ConnInputEndpoint</class>
     <class kind="class">RTT::internal::ConnOutputEndpoint</class>
+    <class kind="struct">RTT::internal::DataStore</class>
     <class kind="struct">RTT::internal::GetArgument</class>
     <class kind="struct">RTT::internal::GetArgument&lt; Seq, Data, typename boost::enable_if&lt; is_pure_reference&lt; Data &gt; &gt;::type &gt;</class>
     <class kind="struct">RTT::internal::AssignHelper</class>
@@ -12366,15 +13197,11 @@
     <class kind="class">RTT::internal::UnPointer</class>
     <class kind="class">RTT::internal::TsPool</class>
     <class kind="class">RTT::internal::SendHandleC</class>
+    <class kind="struct">RTT::internal::SharedConnID</class>
+    <class kind="class">RTT::internal::SharedConnectionBase</class>
+    <class kind="class">RTT::internal::SharedConnectionRepository</class>
     <class kind="class">RTT::internal::ConnectionBase</class>
     <class kind="class">RTT::internal::SignalBase</class>
-    <member kind="function">
-      <type>void</type>
-      <name>clearChannel</name>
-      <anchorfile>namespaceRTT_1_1internal.html</anchorfile>
-      <anchor>aa11ee548bc4cd0406a3286bd97e8cebc</anchor>
-      <arglist>(ConnectionManager::ChannelDescriptor &amp;descriptor)</arglist>
-    </member>
     <member kind="function">
       <type>base::DataSourceBase *</type>
       <name>newFunctorDataSource</name>
@@ -12472,6 +13299,13 @@
       <anchor>a5f3f82a731c4fb4c43ab4d758f24d178</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reset</name>
+      <anchorfile>classRTT_1_1internal_1_1AssignCommand.html</anchorfile>
+      <anchor>aab08581c8a8f92d0911b32ae8986f411</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual base::ActionInterface *</type>
       <name>clone</name>
@@ -12488,9 +13322,79 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>RTT::internal::AtomicMWMRQueue</name>
+    <filename>classRTT_1_1internal_1_1AtomicMWMRQueue.html</filename>
+    <templarg></templarg>
+    <base>RTT::internal::AtomicQueue</base>
+    <member kind="function">
+      <type></type>
+      <name>AtomicMWMRQueue</name>
+      <anchorfile>classRTT_1_1internal_1_1AtomicMWMRQueue.html</anchorfile>
+      <anchor>a62cb04eb651f9b92ed3cd8aa5dd36df3</anchor>
+      <arglist>(unsigned int size)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isFull</name>
+      <anchorfile>classRTT_1_1internal_1_1AtomicMWMRQueue.html</anchorfile>
+      <anchor>a73005e4ebe9ad7eb9c43633ee074296b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isEmpty</name>
+      <anchorfile>classRTT_1_1internal_1_1AtomicMWMRQueue.html</anchorfile>
+      <anchor>aa6a2c459f755717fac10fc81d59df15d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>capacity</name>
+      <anchorfile>classRTT_1_1internal_1_1AtomicMWMRQueue.html</anchorfile>
+      <anchor>a9223f1573aa911145e0d1dc2dd433918</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>size_type</type>
+      <name>size</name>
+      <anchorfile>classRTT_1_1internal_1_1AtomicMWMRQueue.html</anchorfile>
+      <anchor>a8b61444eca624625e3b265beac177976</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>enqueue</name>
+      <anchorfile>classRTT_1_1internal_1_1AtomicMWMRQueue.html</anchorfile>
+      <anchor>a06663a0984594743b64d37a4c381107d</anchor>
+      <arglist>(const T &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>dequeue</name>
+      <anchorfile>classRTT_1_1internal_1_1AtomicMWMRQueue.html</anchorfile>
+      <anchor>adf029dfd7ecd983e47f98396bfa69383</anchor>
+      <arglist>(T &amp;result)</arglist>
+    </member>
+    <member kind="function">
+      <type>const T</type>
+      <name>front</name>
+      <anchorfile>classRTT_1_1internal_1_1AtomicMWMRQueue.html</anchorfile>
+      <anchor>ad017f111bab66e1695662f842c0be7e8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>classRTT_1_1internal_1_1AtomicMWMRQueue.html</anchorfile>
+      <anchor>a9e7c9c54bb5117c1898a12ea0aac3603</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>RTT::internal::AtomicMWSRQueue</name>
     <filename>classRTT_1_1internal_1_1AtomicMWSRQueue.html</filename>
-    <templarg>T</templarg>
+    <templarg></templarg>
+    <base>RTT::internal::AtomicQueue</base>
     <member kind="function">
       <type></type>
       <name>AtomicMWSRQueue</name>
@@ -12558,69 +13462,62 @@
   <compound kind="class">
     <name>RTT::internal::AtomicQueue</name>
     <filename>classRTT_1_1internal_1_1AtomicQueue.html</filename>
-    <templarg></templarg>
-    <member kind="function">
-      <type></type>
-      <name>AtomicQueue</name>
-      <anchorfile>classRTT_1_1internal_1_1AtomicQueue.html</anchorfile>
-      <anchor>aa79cbdb6ab966df9915af172890e6a78</anchor>
-      <arglist>(unsigned int size)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
+    <templarg>T</templarg>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
       <name>isFull</name>
       <anchorfile>classRTT_1_1internal_1_1AtomicQueue.html</anchorfile>
-      <anchor>a9bdf3c197df813915af1588ff3fac338</anchor>
-      <arglist>() const </arglist>
+      <anchor>af0d9d213effe63b6d5d50c2a0a92704c</anchor>
+      <arglist>() const =0</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
       <name>isEmpty</name>
       <anchorfile>classRTT_1_1internal_1_1AtomicQueue.html</anchorfile>
-      <anchor>a6955f2bcbdd68cac4d345631423be92c</anchor>
-      <arglist>() const </arglist>
+      <anchor>ad0a478087ac3ec7a80fd5e9d99d7c137</anchor>
+      <arglist>() const =0</arglist>
     </member>
-    <member kind="function">
-      <type>size_type</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual size_type</type>
       <name>capacity</name>
       <anchorfile>classRTT_1_1internal_1_1AtomicQueue.html</anchorfile>
-      <anchor>a6674055d217658c9cdee73c71b465966</anchor>
-      <arglist>() const </arglist>
+      <anchor>a8782badebec2e4e1751d8500acda45e6</anchor>
+      <arglist>() const =0</arglist>
     </member>
-    <member kind="function">
-      <type>size_type</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual size_type</type>
       <name>size</name>
       <anchorfile>classRTT_1_1internal_1_1AtomicQueue.html</anchorfile>
-      <anchor>af831bff5e1e5fa474b083fd300255b1d</anchor>
-      <arglist>() const </arglist>
+      <anchor>a901fee268df48765afd7f81edb709dae</anchor>
+      <arglist>() const =0</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
       <name>enqueue</name>
       <anchorfile>classRTT_1_1internal_1_1AtomicQueue.html</anchorfile>
-      <anchor>a533041d5973a04f26720f19deaa68cb2</anchor>
-      <arglist>(const T &amp;value)</arglist>
+      <anchor>a5fe35af4a9091a40af204dd983387358</anchor>
+      <arglist>(const T &amp;value)=0</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
       <name>dequeue</name>
       <anchorfile>classRTT_1_1internal_1_1AtomicQueue.html</anchorfile>
-      <anchor>ac85fbd261cd8fdea2e18d0261681282d</anchor>
-      <arglist>(T &amp;result)</arglist>
+      <anchor>a9367f9fbf0be2b9884d7a89c98b920f7</anchor>
+      <arglist>(T &amp;result)=0</arglist>
     </member>
-    <member kind="function">
-      <type>const T</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual const T</type>
       <name>front</name>
       <anchorfile>classRTT_1_1internal_1_1AtomicQueue.html</anchorfile>
-      <anchor>afbb53332fa5358b87b03829fc5756e96</anchor>
-      <arglist>() const </arglist>
+      <anchor>a991509d83233c0e4b161a1ea79485b03</anchor>
+      <arglist>() const =0</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
       <name>clear</name>
       <anchorfile>classRTT_1_1internal_1_1AtomicQueue.html</anchorfile>
-      <anchor>aa3530a18a46b50daf82d795b53791215</anchor>
-      <arglist>()</arglist>
+      <anchor>abc65ced7c440e09161a80fd27fc94a26</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -12668,13 +13565,13 @@
   <compound kind="class">
     <name>RTT::internal::ChannelBufferElement</name>
     <filename>classRTT_1_1internal_1_1ChannelBufferElement.html</filename>
-    <templarg></templarg>
+    <templarg>T</templarg>
     <base>RTT::base::ChannelElement</base>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual WriteStatus</type>
       <name>write</name>
       <anchorfile>classRTT_1_1internal_1_1ChannelBufferElement.html</anchorfile>
-      <anchor>a9c2816ce88ea0ab86668f87915ff791b</anchor>
+      <anchor>ae9483913f07d21ef2194b620b8553222</anchor>
       <arglist>(param_t sample)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -12692,11 +13589,18 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual WriteStatus</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1internal_1_1ChannelBufferElement.html</anchorfile>
-      <anchor>a23852c04325f2dd577debe9f3241536b</anchor>
-      <arglist>(param_t sample)</arglist>
+      <anchor>a02e7efcf7eedeb474e4980b4c4619c75</anchor>
+      <arglist>(param_t sample, bool reset=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ConnPolicy *</type>
+      <name>getConnPolicy</name>
+      <anchorfile>classRTT_1_1internal_1_1ChannelBufferElement.html</anchorfile>
+      <anchor>a25e5f0ace3c191c7a572535da9b558d5</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12705,10 +13609,10 @@
     <templarg>T</templarg>
     <base>RTT::base::ChannelElement</base>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual WriteStatus</type>
       <name>write</name>
       <anchorfile>classRTT_1_1internal_1_1ChannelDataElement.html</anchorfile>
-      <anchor>ab5a0b53d13bdc4f86fbfb358403c8b50</anchor>
+      <anchor>a47f370009b877a8eb57cd51b1d90fe05</anchor>
       <arglist>(param_t sample)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -12726,11 +13630,18 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+      <type>virtual WriteStatus</type>
       <name>data_sample</name>
       <anchorfile>classRTT_1_1internal_1_1ChannelDataElement.html</anchorfile>
-      <anchor>a040ccad120939a8731161be85ad1e9d6</anchor>
-      <arglist>(param_t sample)</arglist>
+      <anchor>afee95171766cf507c8bdcce6894be8c7</anchor>
+      <arglist>(param_t sample, bool reset=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ConnPolicy *</type>
+      <name>getConnPolicy</name>
+      <anchorfile>classRTT_1_1internal_1_1ChannelDataElement.html</anchorfile>
+      <anchor>a4b9da624116295f1fe5d4d8b100cecaa</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -12782,11 +13693,11 @@
       <arglist>(base::PortInterface *port)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>addConnection</name>
       <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
-      <anchor>a6378c49ba349a067d4af3d75687f8f05</anchor>
-      <arglist>(ConnID *port_id, base::ChannelElementBase::shared_ptr channel_input, ConnPolicy policy)</arglist>
+      <anchor>af289a05edbb954e96200cb3a526a6107</anchor>
+      <arglist>(ConnID *port_id, base::ChannelElementBase::shared_ptr channel, ConnPolicy policy)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -12804,17 +13715,17 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>connectedTo</name>
+      <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
+      <anchor>aa4ea48d83495b212fc88039c0c52e794</anchor>
+      <arglist>(base::PortInterface *port)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>disconnect</name>
       <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
       <anchor>abd1045b3445ff91659ef5b855fb608bc</anchor>
       <arglist>(base::PortInterface *port)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>select_reader_channel</name>
-      <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
-      <anchor>a47f758de5ca1be7c70a878a27b122dbf</anchor>
-      <arglist>(Pred pred, bool copy_old_data)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -12824,46 +13735,25 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>base::ChannelElementBase *</type>
-      <name>getCurrentChannel</name>
+      <type>Connections</type>
+      <name>getConnections</name>
       <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
-      <anchor>a64ce9a7a72c1f8c386fd6724fdeef607</anchor>
+      <anchor>a04688d0b35aebf074bc78319eb1e3e2d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::list&lt; ChannelDescriptor &gt;</type>
-      <name>getChannels</name>
+      <type>internal::SharedConnectionBase::shared_ptr</type>
+      <name>getSharedConnection</name>
       <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
-      <anchor>a15aad87be4be1c50beee607e9d9e6cb0</anchor>
+      <anchor>a0483f64f3116268f5f46d9b514f3fb93</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>clear</name>
-      <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
-      <anchor>a9c6df47283369b04b9bb850e9132aa47</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>findMatchingPort</name>
-      <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
-      <anchor>aed038ef943ce7c71c0ac5fbc955d216c</anchor>
-      <arglist>(ConnID const *conn_id, ChannelDescriptor const &amp;descriptor)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
+      <type>Connections::iterator</type>
       <name>eraseConnection</name>
       <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
-      <anchor>aadb5ee99baecb825c35db6a591e95fe2</anchor>
-      <arglist>(ChannelDescriptor &amp;descriptor)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>os::Mutex</type>
-      <name>connection_resize_mtx</name>
-      <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
-      <anchor>affd6f4c38c9522ceb9e2d4412084b53a</anchor>
-      <arglist></arglist>
+      <anchor>a07744e56b7dc5fd4628649e6c8a47c98</anchor>
+      <arglist>(const Connections::iterator &amp;descriptor, bool disconnect)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>base::PortInterface *</type>
@@ -12880,10 +13770,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>ChannelDescriptor</type>
-      <name>cur_channel</name>
+      <type>internal::SharedConnectionBase::shared_ptr</type>
+      <name>shared_connection</name>
       <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
-      <anchor>af02d8df235cf10e00288c9cec0ed3dd1</anchor>
+      <anchor>a98256cecaa95421a16f8c67299e466de</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -12932,50 +13822,57 @@
       <type>virtual base::ChannelElementBase::shared_ptr</type>
       <name>buildChannelOutput</name>
       <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
-      <anchor>a85fbc7cae2ff5a1af6509ea6a509a160</anchor>
-      <arglist>(base::InputPortInterface &amp;port) const =0</arglist>
+      <anchor>a201dd38c725e5e3de7c9a3465f8b8797</anchor>
+      <arglist>(base::InputPortInterface &amp;port, ConnPolicy const &amp;policy) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual base::ChannelElementBase::shared_ptr</type>
       <name>buildChannelInput</name>
       <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
-      <anchor>a22f7d3de12b4c052a0863f189e979c76</anchor>
-      <arglist>(base::OutputPortInterface &amp;port) const =0</arglist>
+      <anchor>ade4224c94c2fc87d16e5122a4f9737f5</anchor>
+      <arglist>(base::OutputPortInterface &amp;port, ConnPolicy const &amp;policy) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual internal::SharedConnectionBase::shared_ptr</type>
+      <name>buildSharedConnection</name>
+      <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
+      <anchor>a19b8ab00d0b5cd4bb58bee977ba65119</anchor>
+      <arglist>(base::OutputPortInterface *output_port, base::InputPortInterface *input_port, ConnPolicy const &amp;policy) const =0</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static base::ChannelElementBase *</type>
+      <type>static base::ChannelElement&lt; T &gt; *</type>
       <name>buildDataStorage</name>
       <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
-      <anchor>ab417d0a01d2a3529598fb262eb0d0402</anchor>
+      <anchor>a14b0f95b11aead16d69544e4d24aad48</anchor>
       <arglist>(ConnPolicy const &amp;policy, const T &amp;initial_value=T())</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static base::ChannelElementBase::shared_ptr</type>
       <name>buildChannelInput</name>
       <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
-      <anchor>ab4e0a33445d44b66dbffa4174623487e</anchor>
-      <arglist>(OutputPort&lt; T &gt; &amp;port, ConnID *conn_id, base::ChannelElementBase::shared_ptr output_channel)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static base::ChannelElementBase::shared_ptr</type>
-      <name>buildBufferedChannelInput</name>
-      <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
-      <anchor>a0c5832ea6524873c5b9afb3842dba3a8</anchor>
-      <arglist>(OutputPort&lt; T &gt; &amp;port, ConnID *conn_id, ConnPolicy const &amp;policy, base::ChannelElementBase::shared_ptr output_channel)</arglist>
+      <anchor>a689d143d185d8bd250bc93bb954f3348</anchor>
+      <arglist>(OutputPort&lt; T &gt; &amp;port, ConnPolicy const &amp;policy, bool force_unbuffered=false)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static base::ChannelElementBase::shared_ptr</type>
       <name>buildChannelOutput</name>
       <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
-      <anchor>affae1fa3714352fc525fbd4544abfd3d</anchor>
-      <arglist>(InputPort&lt; T &gt; &amp;port, ConnID *conn_id)</arglist>
+      <anchor>a1751024fb8eec133ccddfb7995944f19</anchor>
+      <arglist>(InputPort&lt; T &gt; &amp;port, ConnPolicy const &amp;policy, T const &amp;initial_value=T())</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static base::ChannelElementBase::shared_ptr</type>
-      <name>buildBufferedChannelOutput</name>
+      <type>static bool</type>
+      <name>findSharedConnection</name>
       <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
-      <anchor>ac5cfeb384be23a1219d750fe88ce0e41</anchor>
-      <arglist>(InputPort&lt; T &gt; &amp;port, ConnID *conn_id, ConnPolicy const &amp;policy, T const &amp;initial_value=T())</arglist>
+      <anchor>aea2b3e530474507e06a83d75bedd61ba</anchor>
+      <arglist>(base::OutputPortInterface *output_port, base::InputPortInterface *input_port, ConnPolicy const &amp;policy, SharedConnectionBase::shared_ptr &amp;shared_connection)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static SharedConnectionBase::shared_ptr</type>
+      <name>buildSharedConnection</name>
+      <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
+      <anchor>a957c385690217a6eb38622edfec53105</anchor>
+      <arglist>(OutputPort&lt; T &gt; *output_port, base::InputPortInterface *input_port, ConnPolicy const &amp;policy)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
@@ -12993,23 +13890,16 @@
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
-      <name>createAndCheckStream</name>
-      <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
-      <anchor>a72b88dd72ba2690b969f2a509ec5ceef</anchor>
-      <arglist>(base::OutputPortInterface &amp;output_port, ConnPolicy const &amp;policy, base::ChannelElementBase::shared_ptr chan, StreamConnID *conn_id)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static bool</type>
       <name>createStream</name>
       <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
       <anchor>aa21f07d3aea4446b0c602d7f20858e46</anchor>
       <arglist>(InputPort&lt; T &gt; &amp;input_port, ConnPolicy const &amp;policy)</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
-      <type>static base::ChannelElementBase::shared_ptr</type>
+      <type>static bool</type>
       <name>createOutOfBandConnection</name>
       <anchorfile>classRTT_1_1internal_1_1ConnFactory.html</anchorfile>
-      <anchor>a7c99ef10c0314ef1638dc662b050e99d</anchor>
+      <anchor>a760585ae988fd85116fcbd58db8a3b77</anchor>
       <arglist>(OutputPort&lt; T &gt; &amp;output_port, InputPort&lt; T &gt; &amp;input_port, ConnPolicy const &amp;policy)</arglist>
     </member>
   </compound>
@@ -13026,27 +13916,20 @@
     <name>RTT::internal::ConnInputEndpoint</name>
     <filename>classRTT_1_1internal_1_1ConnInputEndpoint.html</filename>
     <templarg>T</templarg>
-    <base>RTT::base::ChannelElement</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual FlowStatus</type>
-      <name>read</name>
-      <anchorfile>classRTT_1_1internal_1_1ConnInputEndpoint.html</anchorfile>
-      <anchor>aa86f2fdac7df3fd4724e971fb5f31185</anchor>
-      <arglist>(typename base::ChannelElement&lt; T &gt;::reference_t sample)</arglist>
-    </member>
+    <base>RTT::base::MultipleOutputsChannelElement</base>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>inputReady</name>
       <anchorfile>classRTT_1_1internal_1_1ConnInputEndpoint.html</anchorfile>
-      <anchor>a608f3db8f81b53ccb1870c66e633b017</anchor>
-      <arglist>()</arglist>
+      <anchor>a21acf7f21791ade77736ee3e488d7a64</anchor>
+      <arglist>(base::ChannelElementBase::shared_ptr const &amp;)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>disconnect</name>
       <anchorfile>classRTT_1_1internal_1_1ConnInputEndpoint.html</anchorfile>
-      <anchor>a61192cf73cf5adcf59cad96cba2e1493</anchor>
-      <arglist>(bool forward)</arglist>
+      <anchor>ad80ca37ac3b94360f5db0f62ec088aad</anchor>
+      <arglist>(const base::ChannelElementBase::shared_ptr &amp;channel, bool forward)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual base::PortInterface *</type>
@@ -13056,45 +13939,45 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual ConnID *</type>
-      <name>getConnID</name>
+      <type>virtual base::ChannelElementBase::shared_ptr</type>
+      <name>getInputEndPoint</name>
       <anchorfile>classRTT_1_1internal_1_1ConnInputEndpoint.html</anchorfile>
-      <anchor>aaf91c67a9b34563fd8ce7199bc651a19</anchor>
-      <arglist>() const </arglist>
+      <anchor>a779fa399a4cf186a86fffc43fa5fd838</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>RTT::internal::ConnOutputEndpoint</name>
     <filename>classRTT_1_1internal_1_1ConnOutputEndpoint.html</filename>
     <templarg>T</templarg>
-    <base>RTT::base::ChannelElement</base>
+    <base>RTT::base::MultipleInputsChannelElement</base>
     <member kind="function">
       <type></type>
       <name>ConnOutputEndpoint</name>
       <anchorfile>classRTT_1_1internal_1_1ConnOutputEndpoint.html</anchorfile>
-      <anchor>a39b6e1c88fa17cd792fa8e00ff87e631</anchor>
-      <arglist>(InputPort&lt; T &gt; *port, ConnID *output_id)</arglist>
+      <anchor>a1dea95c8fe56713d43609dc3c7f59f7c</anchor>
+      <arglist>(InputPort&lt; T &gt; *port)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>inputReady</name>
+      <name>channelReady</name>
       <anchorfile>classRTT_1_1internal_1_1ConnOutputEndpoint.html</anchorfile>
-      <anchor>a00280e7765cf99c11e19344dc8c8c498</anchor>
-      <arglist>()</arglist>
+      <anchor>a2b4f01dea288f6fb7dd6dc98739464fc</anchor>
+      <arglist>(base::ChannelElementBase::shared_ptr const &amp;channel, ConnPolicy const &amp;policy, ConnID *conn_id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual WriteStatus</type>
+      <name>write</name>
+      <anchorfile>classRTT_1_1internal_1_1ConnOutputEndpoint.html</anchorfile>
+      <anchor>a1697a322cf9b6a807066ac828bd18ec7</anchor>
+      <arglist>(typename Base::param_t sample)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>write</name>
-      <anchorfile>classRTT_1_1internal_1_1ConnOutputEndpoint.html</anchorfile>
-      <anchor>ae8f96606f55efbe704896cefab73920f</anchor>
-      <arglist>(typename base::ChannelElement&lt; T &gt;::param_t sample)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>disconnect</name>
       <anchorfile>classRTT_1_1internal_1_1ConnOutputEndpoint.html</anchorfile>
-      <anchor>a85f205b17ab2a603b834585ce32a1c6b</anchor>
-      <arglist>(bool forward)</arglist>
+      <anchor>a55fe3b37f6a64c92719cb9b0203283e3</anchor>
+      <arglist>(const base::ChannelElementBase::shared_ptr &amp;channel, bool forward=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -13111,12 +13994,17 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual ConnID *</type>
-      <name>getConnID</name>
+      <type>virtual base::ChannelElementBase::shared_ptr</type>
+      <name>getOutputEndPoint</name>
       <anchorfile>classRTT_1_1internal_1_1ConnOutputEndpoint.html</anchorfile>
-      <anchor>ad5ff532488d78a5e3f2a4aa13328cc3b</anchor>
-      <arglist>() const </arglist>
+      <anchor>ac58cc3e00affe83e1992ca8b27828d5e</anchor>
+      <arglist>()</arglist>
     </member>
+  </compound>
+  <compound kind="struct">
+    <name>RTT::internal::DataStore</name>
+    <filename>structRTT_1_1internal_1_1DataStore.html</filename>
+    <templarg></templarg>
   </compound>
   <compound kind="struct">
     <name>RTT::internal::GetArgument</name>
@@ -14552,6 +15440,13 @@
       <anchor>a73e94fc25fdba980264652fc97ac95d7</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reset</name>
+      <anchorfile>structRTT_1_1internal_1_1FusedMSendDataSource.html</anchorfile>
+      <anchor>a0d76e4ecb32e97fab1d6bc1a8655ccca</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual FusedMSendDataSource&lt; Signature &gt; *</type>
       <name>clone</name>
@@ -14662,6 +15557,13 @@
       <anchorfile>structRTT_1_1internal_1_1FusedMCollectDataSource.html</anchorfile>
       <anchor>adf22f3e0d0fd9278d6689e553472f047</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reset</name>
+      <anchorfile>structRTT_1_1internal_1_1FusedMCollectDataSource.html</anchorfile>
+      <anchor>a82bb294eb1159740c2dd361555d78cc9</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual FusedMCollectDataSource&lt; Signature &gt; *</type>
@@ -15126,8 +16028,8 @@
       <type>result_type</type>
       <name>ret_impl</name>
       <anchorfile>classRTT_1_1internal_1_1LocalOperationCallerImpl.html</anchorfile>
-      <anchor>ad25e2ebd87b3dbef174e88a7fea30996</anchor>
-      <arglist>(T1 a1)</arglist>
+      <anchor>a89507f81ebc962edcf185f7f3bac45da</anchor>
+      <arglist>(T1 a1) const </arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual OperationCallerBase&lt; FunctionT &gt; *</type>
@@ -16141,6 +17043,41 @@
       <anchor>a75d1f55f8bead55f473a4c6851ab68d9</anchor>
       <arglist>()</arglist>
     </member>
+  </compound>
+  <compound kind="struct">
+    <name>RTT::internal::SharedConnID</name>
+    <filename>structRTT_1_1internal_1_1SharedConnID.html</filename>
+    <base>RTT::internal::ConnID</base>
+  </compound>
+  <compound kind="class">
+    <name>RTT::internal::SharedConnectionBase</name>
+    <filename>classRTT_1_1internal_1_1SharedConnectionBase.html</filename>
+    <base virtualness="virtual">RTT::base::ChannelElementBase</base>
+    <member kind="function">
+      <type>SharedConnection&lt; T &gt; *</type>
+      <name>narrow</name>
+      <anchorfile>classRTT_1_1internal_1_1SharedConnectionBase.html</anchorfile>
+      <anchor>ac546d3440f691fd1831948b078254907</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ConnPolicy *</type>
+      <name>getConnPolicy</name>
+      <anchorfile>classRTT_1_1internal_1_1SharedConnectionBase.html</anchorfile>
+      <anchor>a7dddf93435491502aaabf8083d2115e7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static SharedConnection&lt; T &gt; *</type>
+      <name>narrow</name>
+      <anchorfile>classRTT_1_1internal_1_1SharedConnectionBase.html</anchorfile>
+      <anchor>a73179674f86e2a8d37fa84827c563b28</anchor>
+      <arglist>(ChannelElementBase *e)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>RTT::internal::SharedConnectionRepository</name>
+    <filename>classRTT_1_1internal_1_1SharedConnectionRepository.html</filename>
   </compound>
   <compound kind="class">
     <name>RTT::internal::ConnectionBase</name>
@@ -18034,8 +18971,8 @@
       <type>virtual bool</type>
       <name>inputReady</name>
       <anchorfile>classRTT_1_1mqueue_1_1MQChannelElement.html</anchorfile>
-      <anchor>a5be071ead3000be6c082385cf9d887d5</anchor>
-      <arglist>()</arglist>
+      <anchor>ae9ab319ed9ee5c9fa59ba4089ebe62c3</anchor>
+      <arglist>(base::ChannelElementBase::shared_ptr const &amp;caller)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -18052,10 +18989,10 @@
       <arglist>(typename base::ChannelElement&lt; T &gt;::reference_t sample, bool copy_old_data)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>WriteStatus</type>
       <name>write</name>
       <anchorfile>classRTT_1_1mqueue_1_1MQChannelElement.html</anchorfile>
-      <anchor>a55fe940009876e637d6c4164eadbdf91</anchor>
+      <anchor>a2d32d8cd63a269e021d4f0cde39879d9</anchor>
       <arglist>(typename base::ChannelElement&lt; T &gt;::param_t sample)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18328,9 +19265,11 @@
     <class kind="class">RTT::os::MutexInterface</class>
     <class kind="class">RTT::os::Mutex</class>
     <class kind="class">RTT::os::MutexRecursive</class>
+    <class kind="class">RTT::os::SharedMutex</class>
     <class kind="class">RTT::os::MutexLock</class>
     <class kind="class">RTT::os::MutexTryLock</class>
     <class kind="class">RTT::os::MutexTimedLock</class>
+    <class kind="class">RTT::os::SharedMutexLock</class>
     <class kind="class">RTT::os::local_allocator</class>
     <class kind="class">RTT::os::rt_allocator</class>
     <class kind="struct">RTT::os::rt_list</class>
@@ -18841,6 +19780,67 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>RTT::os::SharedMutex</name>
+    <filename>classRTT_1_1os_1_1SharedMutex.html</filename>
+    <base>RTT::os::MutexInterface</base>
+    <member kind="function">
+      <type></type>
+      <name>SharedMutex</name>
+      <anchorfile>classRTT_1_1os_1_1SharedMutex.html</anchorfile>
+      <anchor>a50ba97196d33ddd602ae3c30be1e5f24</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SharedMutex</name>
+      <anchorfile>classRTT_1_1os_1_1SharedMutex.html</anchorfile>
+      <anchor>abec6b33fba1e817da59fecf688c5dcb2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>trylock</name>
+      <anchorfile>classRTT_1_1os_1_1SharedMutex.html</anchorfile>
+      <anchor>a1379664d6af62164b5fa58c00541eaf0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>timedlock</name>
+      <anchorfile>classRTT_1_1os_1_1SharedMutex.html</anchorfile>
+      <anchor>a67876edb0aaa2704374d3dddfe1db5e1</anchor>
+      <arglist>(Seconds s)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>lock_shared</name>
+      <anchorfile>classRTT_1_1os_1_1SharedMutex.html</anchorfile>
+      <anchor>a9a089771c866086bea9595eb7f00c34e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>unlock_shared</name>
+      <anchorfile>classRTT_1_1os_1_1SharedMutex.html</anchorfile>
+      <anchor>a4d0dc62a0cece788d72941bd8b1feb4c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>trylock_shared</name>
+      <anchorfile>classRTT_1_1os_1_1SharedMutex.html</anchorfile>
+      <anchor>ab804bbc3c75d750041f5266125fd06d9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>timedlock_shared</name>
+      <anchorfile>classRTT_1_1os_1_1SharedMutex.html</anchorfile>
+      <anchor>a99c7657911989de1ac8ae3b6e559eb91</anchor>
+      <arglist>(Seconds s)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>RTT::os::MutexLock</name>
     <filename>classRTT_1_1os_1_1MutexLock.html</filename>
     <member kind="function">
@@ -18920,6 +19920,24 @@
       <anchorfile>classRTT_1_1os_1_1MutexTimedLock.html</anchorfile>
       <anchor>a0423dd40c5c0e8c581db80d7325caa58</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>RTT::os::SharedMutexLock</name>
+    <filename>classRTT_1_1os_1_1SharedMutexLock.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>SharedMutexLock</name>
+      <anchorfile>classRTT_1_1os_1_1SharedMutexLock.html</anchorfile>
+      <anchor>a73a1dd0c0f1ad112c240864e9ffe30f3</anchor>
+      <arglist>(MutexInterface &amp;mutex)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~SharedMutexLock</name>
+      <anchorfile>classRTT_1_1os_1_1SharedMutexLock.html</anchorfile>
+      <anchor>aa571fd423cf6b0b52c063585bdef260b</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19716,6 +20734,8 @@
     <filename>namespaceRTT_1_1scripting.html</filename>
     <class kind="class">RTT::scripting::ArgumentsParser</class>
     <class kind="class">RTT::scripting::CallFunction</class>
+    <class kind="class">RTT::scripting::CmdFunction</class>
+    <class kind="struct">RTT::scripting::CmdCollectCondition</class>
     <class kind="class">RTT::scripting::CommandComposite</class>
     <class kind="class">RTT::scripting::CommandCounter</class>
     <class kind="struct">RTT::scripting::CommandDataSource</class>
@@ -19817,8 +20837,8 @@
       <type></type>
       <name>CallFunction</name>
       <anchorfile>classRTT_1_1scripting_1_1CallFunction.html</anchorfile>
-      <anchor>a3a81ef749442f2cfbe75ed82dacb96b8</anchor>
-      <arglist>(base::ActionInterface *init_com, boost::shared_ptr&lt; ProgramInterface &gt; foo, ExecutionEngine *p, ExecutionEngine *caller, internal::AssignableDataSource&lt; ProgramInterface * &gt; *v=0, internal::AssignableDataSource&lt; bool &gt; *a=0)</arglist>
+      <anchor>aefee2b3190ba825596ca1847340b5f0d</anchor>
+      <arglist>(base::ActionInterface *init_com, boost::shared_ptr&lt; ProgramInterface &gt; foo, ExecutionEngine *p, ExecutionEngine *caller)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -19860,6 +20880,100 @@
       <name>copy</name>
       <anchorfile>classRTT_1_1scripting_1_1CallFunction.html</anchorfile>
       <anchor>ab829dc27aea494f70a529a4aa93f8beb</anchor>
+      <arglist>(std::map&lt; const base::DataSourceBase *, base::DataSourceBase * &gt; &amp;alreadyCloned) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>RTT::scripting::CmdFunction</name>
+    <filename>classRTT_1_1scripting_1_1CmdFunction.html</filename>
+    <base>DataSource&lt; SendStatus &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>CmdFunction</name>
+      <anchorfile>classRTT_1_1scripting_1_1CmdFunction.html</anchorfile>
+      <anchor>a2fbe2e37463516b065fd2c112e284584</anchor>
+      <arglist>(base::ActionInterface *init_com, boost::shared_ptr&lt; ProgramInterface &gt; foo, ExecutionEngine *p, ExecutionEngine *caller)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual SendStatus</type>
+      <name>get</name>
+      <anchorfile>classRTT_1_1scripting_1_1CmdFunction.html</anchorfile>
+      <anchor>aa7ac08b696af6db9f0602557eb170c08</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual SendStatus</type>
+      <name>value</name>
+      <anchorfile>classRTT_1_1scripting_1_1CmdFunction.html</anchorfile>
+      <anchor>a2bbdbf68e4296196c180f2929b0de74f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual SendStatus const &amp;</type>
+      <name>rvalue</name>
+      <anchorfile>classRTT_1_1scripting_1_1CmdFunction.html</anchorfile>
+      <anchor>aa1cf8b112db9a621de3cafc124860ef8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>evaluate</name>
+      <anchorfile>classRTT_1_1scripting_1_1CmdFunction.html</anchorfile>
+      <anchor>a45809891e010dc9973d1bc7c22f6ae79</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>reset</name>
+      <anchorfile>classRTT_1_1scripting_1_1CmdFunction.html</anchorfile>
+      <anchor>a73e98a514e3daee5ad35ee3f0c6f3ed0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CmdFunction *</type>
+      <name>clone</name>
+      <anchorfile>classRTT_1_1scripting_1_1CmdFunction.html</anchorfile>
+      <anchor>ad0d6d360e29169cbb4a44e8713ddb097</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CmdFunction *</type>
+      <name>copy</name>
+      <anchorfile>classRTT_1_1scripting_1_1CmdFunction.html</anchorfile>
+      <anchor>ad3f5b345eb06d272a6c599ef48f34170</anchor>
+      <arglist>(std::map&lt; const base::DataSourceBase *, base::DataSourceBase * &gt; &amp;alreadyCloned) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>RTT::scripting::CmdCollectCondition</name>
+    <filename>structRTT_1_1scripting_1_1CmdCollectCondition.html</filename>
+    <base>RTT::scripting::ConditionInterface</base>
+    <member kind="function">
+      <type>void</type>
+      <name>reset</name>
+      <anchorfile>structRTT_1_1scripting_1_1CmdCollectCondition.html</anchorfile>
+      <anchor>a930ce993b4d4a6218f300ce26b354c41</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>evaluate</name>
+      <anchorfile>structRTT_1_1scripting_1_1CmdCollectCondition.html</anchorfile>
+      <anchor>ac461a239b6b1c284aa593f5c1c6e7e4d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CmdCollectCondition *</type>
+      <name>clone</name>
+      <anchorfile>structRTT_1_1scripting_1_1CmdCollectCondition.html</anchorfile>
+      <anchor>a1d7ac931d7b0c16f4d7bcc63e8bffe6e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CmdCollectCondition *</type>
+      <name>copy</name>
+      <anchorfile>structRTT_1_1scripting_1_1CmdCollectCondition.html</anchorfile>
+      <anchor>af47a68705e662d5919c83e5c6c776998</anchor>
       <arglist>(std::map&lt; const base::DataSourceBase *, base::DataSourceBase * &gt; &amp;alreadyCloned) const </arglist>
     </member>
   </compound>
@@ -25230,6 +26344,8 @@
     <file>ChannelInterface.cpp</file>
     <file>CoreRunnableInterface.cpp</file>
     <file>DataObject.hpp</file>
+    <file>DataObjectBase.cpp</file>
+    <file>DataObjectBase.hpp</file>
     <file>DataObjectInterface.hpp</file>
     <file>DataObjectLocked.hpp</file>
     <file>DataObjectLockFree.hpp</file>
@@ -25426,6 +26542,7 @@
     <filename>dir_89f49d1238ce6a42e58a3b20e7ecf7c2.html</filename>
     <file>ArrayPartDataSource.hpp</file>
     <file>AssignCommand.hpp</file>
+    <file>AtomicMWMRQueue.hpp</file>
     <file>AtomicMWSRQueue.hpp</file>
     <file>AtomicQueue.hpp</file>
     <file>BindStorage.hpp</file>
@@ -25496,6 +26613,8 @@
     <file>rtt-internal-fwd.hpp</file>
     <file>SendHandleC.cpp</file>
     <file>SendHandleC.hpp</file>
+    <file>SharedConnection.cpp</file>
+    <file>SharedConnection.hpp</file>
     <file>Signal.hpp</file>
     <file>signal0.hpp</file>
     <file>signal1.hpp</file>
@@ -25748,6 +26867,8 @@
     <file>ArgumentDescription.hpp</file>
     <file>Attribute.cpp</file>
     <file>Attribute.hpp</file>
+    <file>BufferPolicy.cpp</file>
+    <file>BufferPolicy.hpp</file>
     <file>Component.hpp</file>
     <file>ConfigurationInterface.cpp</file>
     <file>ConfigurationInterface.hpp</file>
@@ -25814,6 +26935,7 @@
     <file>ArgumentsParser.cpp</file>
     <file>ArgumentsParser.hpp</file>
     <file>CallFunction.hpp</file>
+    <file>CmdFunction.hpp</file>
     <file>CommandBinary.hpp</file>
     <file>CommandComposite.hpp</file>
     <file>CommandCounter.cpp</file>

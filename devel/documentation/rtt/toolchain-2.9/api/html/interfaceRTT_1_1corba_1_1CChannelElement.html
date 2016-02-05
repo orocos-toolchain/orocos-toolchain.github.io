@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -76,13 +76,20 @@ Inheritance diagram for RTT::corba::CChannelElement:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9fd6b00e2dcacb71653c523b1b8232be"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#a9fd6b00e2dcacb71653c523b1b8232be">inputReady</a> ()</td></tr>
+<tr class="memdesc:a9fd6b00e2dcacb71653c523b1b8232be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used during connection setup to pass on an example of the data.  <a href="#a9fd6b00e2dcacb71653c523b1b8232be">More...</a><br/></td></tr>
+<tr class="separator:a9fd6b00e2dcacb71653c523b1b8232be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc59de2c43ae702203f5cc8c7050320"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#a3fc59de2c43ae702203f5cc8c7050320">channelReady</a> (in CConnPolicy cp)</td></tr>
+<tr class="memdesc:a3fc59de2c43ae702203f5cc8c7050320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the connection channel elements are ready for a given input port.  <a href="#a3fc59de2c43ae702203f5cc8c7050320">More...</a><br/></td></tr>
+<tr class="separator:a3fc59de2c43ae702203f5cc8c7050320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5d1d2e6501ebbe7361000de539b54b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5d1d2e6501ebbe7361000de539b54b5"></a>
 CFlowStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#ae5d1d2e6501ebbe7361000de539b54b5">read</a> (out any sample, in boolean copy_old_data)</td></tr>
 <tr class="memdesc:ae5d1d2e6501ebbe7361000de539b54b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads from this Channel Element. <br/></td></tr>
 <tr class="separator:ae5d1d2e6501ebbe7361000de539b54b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a6efa42d19ac141216f115f5f9b0108"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#a3a6efa42d19ac141216f115f5f9b0108">write</a> (in any sample)</td></tr>
-<tr class="memdesc:a3a6efa42d19ac141216f115f5f9b0108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes into this Channel Element.  <a href="#a3a6efa42d19ac141216f115f5f9b0108">More...</a><br/></td></tr>
-<tr class="separator:a3a6efa42d19ac141216f115f5f9b0108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a082f187ea7906596f28566ac2f36cd03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a082f187ea7906596f28566ac2f36cd03"></a>
+oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#a082f187ea7906596f28566ac2f36cd03">write</a> (in any sample)</td></tr>
+<tr class="memdesc:a082f187ea7906596f28566ac2f36cd03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes into this Channel Element. <br/></td></tr>
+<tr class="separator:a082f187ea7906596f28566ac2f36cd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3c7f61320f0c09c203fc9db64efc26d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#ae3c7f61320f0c09c203fc9db64efc26d">disconnect</a> ()</td></tr>
 <tr class="memdesc:ae3c7f61320f0c09c203fc9db64efc26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect and dispose this object.  <a href="#ae3c7f61320f0c09c203fc9db64efc26d">More...</a><br/></td></tr>
 <tr class="separator:ae3c7f61320f0c09c203fc9db64efc26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,8 +98,34 @@ CFlowStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <div class="textblock"><p>Represents the basic channel element interface for reading, writing and disconnecting a channel. </p>
 <p>Use this interface in case you want to communicate with an <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> component's port from a non-Orocos application. </p>
 
-<p>Definition at line <a class="el" href="DataFlow_8idl_source.html#l00034">34</a> of file <a class="el" href="DataFlow_8idl_source.html">DataFlow.idl</a>.</p>
+<p>Definition at line <a class="el" href="DataFlow_8idl_source.html#l00038">38</a> of file <a class="el" href="DataFlow_8idl_source.html">DataFlow.idl</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3fc59de2c43ae702203f5cc8c7050320"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean RTT::corba::CChannelElement::channelReady </td>
+          <td>(</td>
+          <td class="paramtype">in CConnPolicy&#160;</td>
+          <td class="paramname"><em>cp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the connection channel elements are ready for a given input port. </p>
+<p>This is typically called by the createConnection setup logic to see if the input side agrees with the connection and can use it. For example, the input port can use this opportunity to check the</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html" title="Emitted when information is requested on a port that does not exist. ">CNoSuchPortException</a></td><td>if input_port is not an input port or not present in this interface. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>false if the connection could not be used. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ae3c7f61320f0c09c203fc9db64efc26d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -111,22 +144,22 @@ CFlowStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a class="anchor" id="a3a6efa42d19ac141216f115f5f9b0108"></a>
+<a class="anchor" id="a9fd6b00e2dcacb71653c523b1b8232be"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boolean RTT::corba::CChannelElement::write </td>
+          <td class="memname">boolean RTT::corba::CChannelElement::inputReady </td>
           <td>(</td>
-          <td class="paramtype">in any&#160;</td>
-          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Writes into this Channel Element. </p>
-<dl class="section return"><dt>Returns</dt><dd>false if the channel became invalid </dd></dl>
+<p>Used during connection setup to pass on an example of the data. </p>
+<p>This is done behind the scenes by the connection logic. </p>
+<dl class="section note"><dt>Note</dt><dd>: not implemented yet. Called by the input port to indicate that it's ready to be used. This is done behind the scenes by the connection logic. </dd></dl>
 
 </div>
 </div>
@@ -136,7 +169,7 @@ CFlowStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

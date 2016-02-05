@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -166,26 +166,30 @@
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> setCpuAffinity(<span class="keywordtype">unsigned</span> cpu) ;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> execute();</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> trigger();</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1os_1_1ThreadInterface.html">os::ThreadInterface</a>* thread();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#a6397d9a3b76bb2aafd782589f444d5ca">  163</a></span>&#160;        <a class="code" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a>                                 <a class="code" href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#a6397d9a3b76bb2aafd782589f444d5ca">period</a>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordtype">bool</span>                                    running;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    };</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}}</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> timeout() ;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1os_1_1ThreadInterface.html">os::ThreadInterface</a>* thread();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> work(base::RunnableInterface::WorkReason reason);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#a6397d9a3b76bb2aafd782589f444d5ca">  167</a></span>&#160;        <a class="code" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a>                                 <a class="code" href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#a6397d9a3b76bb2aafd782589f444d5ca">period</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">bool</span>                                    running;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#ab17ac7769284028a7728cadceb57d9d1">  172</a></span>&#160;        base::RunnableInterface::WorkReason     <a class="code" href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#ab17ac7769284028a7728cadceb57d9d1">lastReason</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    };</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}}</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceRTT_html_ab93965f88bfbe72fbc2ece16c047c902"><div class="ttname"><a href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">RTT::Seconds</a></div><div class="ttdeci">double Seconds</div><div class="ttdoc">Seconds are stored as a double precision float. </div><div class="ttdef"><b>Definition:</b> <a href="os_2Time_8hpp_source.html#l00053">Time.hpp:53</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1RunnableInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1RunnableInterface.html">RTT::base::RunnableInterface</a></div><div class="ttdoc">A class for running a certain piece of code in a thread. </div><div class="ttdef"><b>Definition:</b> <a href="RunnableInterface_8hpp_source.html#l00069">RunnableInterface.hpp:69</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1ThreadInterface_html"><div class="ttname"><a href="classRTT_1_1os_1_1ThreadInterface.html">RTT::os::ThreadInterface</a></div><div class="ttdoc">A thread which is being run. </div><div class="ttdef"><b>Definition:</b> <a href="ThreadInterface_8hpp_source.html#l00056">ThreadInterface.hpp:56</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorSimulationActivity_html"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html">RTT::extras::FileDescriptorSimulationActivity</a></div><div class="ttdoc">Simulate a FileDescriptorActivity (FDA) Primarily this is designed for unit tests that are testing co...</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorSimulationActivity_8hpp_source.html#l00058">FileDescriptorSimulationActivity.hpp:58</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1ActivityInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1ActivityInterface.html">RTT::base::ActivityInterface</a></div><div class="ttdoc">Interface to start/stop and query a Activity. </div><div class="ttdef"><b>Definition:</b> <a href="ActivityInterface_8hpp_source.html#l00062">ActivityInterface.hpp:62</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorActivityInterface_html"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorActivityInterface.html">RTT::extras::FileDescriptorActivityInterface</a></div><div class="ttdoc">An activity which is triggered by the availability of data on a set of file descriptors. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorActivityInterface_8hpp_source.html#l00095">FileDescriptorActivityInterface.hpp:95</a></div></div>
-<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorSimulationActivity_html_a6397d9a3b76bb2aafd782589f444d5ca"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#a6397d9a3b76bb2aafd782589f444d5ca">RTT::extras::FileDescriptorSimulationActivity::period</a></div><div class="ttdeci">Seconds period</div><div class="ttdoc">Fake period - some classes require period!=0. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorSimulationActivity_8hpp_source.html#l00163">FileDescriptorSimulationActivity.hpp:163</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorSimulationActivity_html_a6397d9a3b76bb2aafd782589f444d5ca"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#a6397d9a3b76bb2aafd782589f444d5ca">RTT::extras::FileDescriptorSimulationActivity::period</a></div><div class="ttdeci">Seconds period</div><div class="ttdoc">Fake period - some classes require period!=0. </div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorSimulationActivity_8hpp_source.html#l00167">FileDescriptorSimulationActivity.hpp:167</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1FileDescriptorSimulationActivity_html_ab17ac7769284028a7728cadceb57d9d1"><div class="ttname"><a href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#ab17ac7769284028a7728cadceb57d9d1">RTT::extras::FileDescriptorSimulationActivity::lastReason</a></div><div class="ttdeci">base::RunnableInterface::WorkReason lastReason</div><div class="ttdoc">Value passed to last work() call Used to determine the return from isUpdated() and hasTimeout() ...</div><div class="ttdef"><b>Definition:</b> <a href="FileDescriptorSimulationActivity_8hpp_source.html#l00172">FileDescriptorSimulationActivity.hpp:172</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:38 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:02 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

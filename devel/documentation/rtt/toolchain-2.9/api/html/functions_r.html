@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -116,8 +116,9 @@
 : <a class="el" href="classRTT_1_1scripting_1_1StateMachine.html#ae04e0ab4a877f8df6c99ffd09549f5e1">RTT::scripting::StateMachine</a>
 </li>
 <li>read()
-: <a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a0521e0ade45ecc0dfee715e0717ea903">RTT::base::ChannelElement&lt; T &gt;</a>
+: <a class="el" href="classRTT_1_1base_1_1ChannelElement.html#aea35c7c532583dc011f23513094ded03">RTT::base::ChannelElement&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a41ffcb4d860f510b7e3c0b4f187a3ed0">RTT::base::InputPortInterface</a>
+, <a class="el" href="classRTT_1_1base_1_1MultipleInputsChannelElement.html#a619f4de76f479a1b410e645cc9507e11">RTT::base::MultipleInputsChannelElement&lt; T &gt;</a>
 , <a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#ae5d1d2e6501ebbe7361000de539b54b5">RTT::corba::CChannelElement</a>
 , <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a832d073ed3a5fe862a427f9eba5ff389">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1dev_1_1AnalogInInterface.html#aa10b8ac6f54843a46f9d39b77a8a3246">RTT::dev::AnalogInInterface</a>
@@ -125,7 +126,6 @@
 , <a class="el" href="classRTT_1_1InputPort.html#a8167df81370f58c85603820f97310251">RTT::InputPort&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1ChannelBufferElement.html#a25ab43756bedb550a5084804bae936e2">RTT::internal::ChannelBufferElement&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1ChannelDataElement.html#aafb8b2b04e13eff6b11ed23388b6a2d9">RTT::internal::ChannelDataElement&lt; T &gt;</a>
-, <a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html#aa86f2fdac7df3fd4724e971fb5f31185">RTT::internal::ConnInputEndpoint&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a6c2ffd366d9161f3e6087ad173adca60">RTT::mqueue::MQChannelElement&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1os_1_1AtomicInt.html#a68999a11810cf3e5d83120e6c7b756be">RTT::os::AtomicInt</a>
 , <a class="el" href="classRTT_1_1types_1_1TypeInfo.html#a3aa3ed920a8bca00db172c74baab35de">RTT::types::TypeInfo</a>
@@ -240,10 +240,11 @@
 : <a class="el" href="classRTT_1_1corba_1_1CorbaDispatcher.html#a818f406eb45de26937222b4a055c98ff">RTT::corba::CorbaDispatcher</a>
 </li>
 <li>RemoteChannelElement()
-: <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a24814918cb731699e5f8054771a78b55">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
+: <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#acf98ec3096653412b4be5b1197b418bb">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
 </li>
 <li>remoteDisconnect()
-: <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#ad48bf59a0b3c79eb3cd748088eff9e85">RTT::corba::CRemoteChannelElement</a>
+: <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#ab175cc3f166214a59e60147ccabf6e20">RTT::corba::CRemoteChannelElement</a>
+, <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a0904ceb64e8766c12fdccf6ee2aad5ff">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
 </li>
 <li>RemoteOperationCaller()
 : <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html#af4ef449c862b76034ba7fa59b9037550">RTT::internal::RemoteOperationCaller&lt; OperationCallerT &gt;</a>
@@ -252,8 +253,8 @@
 : <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#a7d5e519d733beb356e38bbe4567dcd37">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>
 </li>
 <li>remoteSignal()
-: <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#a739739a6a807c5bb6ed99fb8805e865b">RTT::corba::CRemoteChannelElement</a>
-, <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aed05cf95b13766524da482e04f994ace">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
+: <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#abae51a6ff7bd88e24e228973a65d0248">RTT::corba::CRemoteChannelElement</a>
+, <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#af93cdeca6c332ef221c7e8fd0d3b5efe">RTT::corba::RemoteChannelElement&lt; T &gt;</a>
 </li>
 <li>remove()
 : <a class="el" href="classRTT_1_1OperationInterface.html#a72938e680f9d2394b08c6ef45aee2e80">RTT::OperationInterface</a>
@@ -265,29 +266,33 @@
 <li>RemoveAttribute()
 : <a class="el" href="classRTT_1_1marsh_1_1TiXmlElement.html#a46a95a61dbbe696a3e6f9ffe2a9f220e">RTT::marsh::TiXmlElement</a>
 </li>
-<li>removeChild()
-: <a class="el" href="classRTT_1_1ExecutionEngine.html#af20f84c969d11c6450c0f9e244f7461f">RTT::ExecutionEngine</a>
-</li>
 <li>RemoveChild()
 : <a class="el" href="classRTT_1_1marsh_1_1TiXmlNode.html#a9c4937971ce4f1bc609d359ae6886ff5">RTT::marsh::TiXmlNode</a>
 </li>
 <li>removeConnection()
-: <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#ae786e63b56be500d822b8cac0a0093de">RTT::base::InputPortInterface</a>
-, <a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html#a809970a3c7efec2fafd56cd86e4e7cd7">RTT::base::OutputPortInterface</a>
-, <a class="el" href="classRTT_1_1base_1_1PortInterface.html#afb53bec2e9551b2b1b3c7ebd413c4a9c">RTT::base::PortInterface</a>
+: <a class="el" href="classRTT_1_1base_1_1PortInterface.html#ae20940635dea5904477c5170b7ca71fd">RTT::base::PortInterface</a>
 , <a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html#abb1dc296a365df020d6a5c8763f59894">RTT::corba::CDataFlowInterface</a>
+</li>
+<li>removeDisconnectedOutputs()
+: <a class="el" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html#a37d790f6db1825949335dae3bf87ce51">RTT::base::MultipleOutputsChannelElementBase</a>
 </li>
 <li>removeFunction()
 : <a class="el" href="classRTT_1_1ExecutionEngine.html#afdd4e66095262fd9f05e9f9d0f6ab32c">RTT::ExecutionEngine</a>
 </li>
 <li>removeInput()
-: <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#ab361a083bee6da8e0e94f71aa09fa30b">RTT::base::ChannelElementBase</a>
+: <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a07f2b157dd0ff6a6f0159a782dc17771">RTT::base::ChannelElementBase</a>
+, <a class="el" href="classRTT_1_1base_1_1MultipleInputsChannelElement.html#a6a2c92c5af6549213121e7ad63ec4987">RTT::base::MultipleInputsChannelElement&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1base_1_1MultipleInputsChannelElementBase.html#a804a858994f4106f83ca4d1a94fff6e1">RTT::base::MultipleInputsChannelElementBase</a>
 </li>
 <li>removeLocalPort()
 : <a class="el" href="classRTT_1_1DataFlowInterface.html#abdccc95629af8c46757fc5973ab10e10">RTT::DataFlowInterface</a>
 </li>
 <li>removeOperation()
 : <a class="el" href="classRTT_1_1Service.html#adffa32a19a1b58771146c56773ae5af2">RTT::Service</a>
+</li>
+<li>removeOutput()
+: <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a7dcc89cab2e2ddb78eb00262691325c7">RTT::base::ChannelElementBase</a>
+, <a class="el" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html#a449d523dbcd940e8645d2a3b7afa5f06">RTT::base::MultipleOutputsChannelElementBase</a>
 </li>
 <li>removePeer()
 : <a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html#ae5469855eeff1363041492a80a5a29f8">RTT::corba::CTaskContext</a>
@@ -361,14 +366,19 @@
 , <a class="el" href="classRTT_1_1internal_1_1ActionAliasAssignableDataSource.html#a3b7b69aa50fbc588dc791d0d88d54c5a">RTT::internal::ActionAliasAssignableDataSource&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1ActionAliasDataSource.html#a8388df7e5ed6483bde3a8b013bb21554">RTT::internal::ActionAliasDataSource&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1AliasDataSource.html#a5a74bf1905124c235d0d16a4dc148362">RTT::internal::AliasDataSource&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#aab08581c8a8f92d0911b32ae8986f411">RTT::internal::AssignCommand&lt; T, S &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1BinaryDataSource.html#a52acf4c07ca905a8ac4de6212d631ebf">RTT::internal::BinaryDataSource&lt; function &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1DataObjectDataSource.html#aa5401b01df9c858d95f610e36b31e256">RTT::internal::DataObjectDataSource&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1DataSourceCommand.html#a262d7ff8fc72a5d32b85debdd9b07113">RTT::internal::DataSourceCommand</a>
+, <a class="el" href="structRTT_1_1internal_1_1FusedMCollectDataSource.html#a82bb294eb1159740c2dd361555d78cc9">RTT::internal::FusedMCollectDataSource&lt; Signature &gt;</a>
+, <a class="el" href="structRTT_1_1internal_1_1FusedMSendDataSource.html#a0d76e4ecb32e97fab1d6bc1a8655ccca">RTT::internal::FusedMSendDataSource&lt; Signature &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1InputPortSource.html#a9a9a1b5d7f5bc87905b8c537f725d929">RTT::internal::InputPortSource&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1NArityDataSource.html#aa38a0f405dda8ae4e2452ec402ae8a25">RTT::internal::NArityDataSource&lt; function &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1UnaryDataSource.html#a3d14d6e28df7059be5bca5e392aedf3b">RTT::internal::UnaryDataSource&lt; function &gt;</a>
 , <a class="el" href="classRTT_1_1marsh_1_1PropertyBagIntrospector.html#a1072d9a2390bb33a109006bb33f7b878">RTT::marsh::PropertyBagIntrospector</a>
 , <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a2eae3d09c2b1a0aa5a781cc8c0ba5507">RTT::scripting::CallFunction</a>
+, <a class="el" href="structRTT_1_1scripting_1_1CmdCollectCondition.html#a930ce993b4d4a6218f300ce26b354c41">RTT::scripting::CmdCollectCondition</a>
+, <a class="el" href="classRTT_1_1scripting_1_1CmdFunction.html#a73e98a514e3daee5ad35ee3f0c6f3ed0">RTT::scripting::CmdFunction</a>
 , <a class="el" href="classRTT_1_1scripting_1_1CommandCounter.html#a8e03413941b0bef1a0b268ef96b7c4fb">RTT::scripting::CommandCounter</a>
 , <a class="el" href="structRTT_1_1scripting_1_1CommandDataSource.html#a5e599728ec3b24ca2f159a5d9da721b7">RTT::scripting::CommandDataSource</a>
 , <a class="el" href="structRTT_1_1scripting_1_1CommandDataSourceBool.html#aed2745ac53e40a6770161ae44ce38cf2">RTT::scripting::CommandDataSourceBool</a>
@@ -426,10 +436,10 @@
 </li>
 <li>ret()
 : <a class="el" href="interfaceRTT_1_1corba_1_1CSendHandle.html#a94a3597a81c554d090e66544b5c83a54">RTT::corba::CSendHandle</a>
-, <a class="el" href="classRTT_1_1internal_1_1OperationCallerC.html#a2d08e4f2f5811906b91941da5b56fa27">RTT::internal::OperationCallerC</a>
+, <a class="el" href="classRTT_1_1internal_1_1OperationCallerC.html#aaf99ba898219e2c99d2c72233e509a4f">RTT::internal::OperationCallerC</a>
 </li>
 <li>ret_impl()
-: <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#ad25e2ebd87b3dbef174e88a7fea30996">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>
+: <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#a89507f81ebc962edcf185f7f3bac45da">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#afb902f5f8d3e2fb61c41aa4ecdf0c93f">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>
 </li>
 <li>returnFunction()
@@ -450,6 +460,9 @@
 <li>rt_shrink()
 : <a class="el" href="structRTT_1_1os_1_1rt__list.html#ae45cf7e57d4e5b338e3546055073d441">RTT::os::rt_list&lt; T, Alloc &gt;</a>
 </li>
+<li>rtos_task
+: <a class="el" href="classRTT_1_1os_1_1Thread.html#abf6258b13c0ed5c38eb045430b97fcd9">RTT::os::Thread</a>
+</li>
 <li>run()
 : <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a82544a7ce478a5fa1dbc61888a04ca9c">RTT::base::ActivityInterface</a>
 , <a class="el" href="classRTT_1_1extras_1_1SimulationThread.html#ada7423aee20d37a94313027c36c0bb0e">RTT::extras::SimulationThread</a>
@@ -465,6 +478,7 @@
 </li>
 <li>running
 : <a class="el" href="classRTT_1_1extras_1_1PeriodicActivity.html#ab114e77dde9b078ad9a84f9f19e9f608">RTT::extras::PeriodicActivity</a>
+, <a class="el" href="classRTT_1_1os_1_1Thread.html#a6dcdfd94eb560ea59f26498299ec90d5">RTT::os::Thread</a>
 , <a class="el" href="structRTT_1_1scripting_1_1ProgramInterface_1_1Status.html#a5f5d22f30275dcccfbc31fa92fa9cbd5a9b651c82aa338609b5bc87d5d93e45b7">RTT::scripting::ProgramInterface::Status</a>
 </li>
 <li>RunOrb()
@@ -507,6 +521,7 @@
 , <a class="el" href="classRTT_1_1internal_1_1UnaryDataSource.html#af0bfabf29412b3f12a10951f4c3b4bcd">RTT::internal::UnaryDataSource&lt; function &gt;</a>
 , <a class="el" href="classRTT_1_1internal_1_1ValueDataSource.html#a1c811967bd69ebe014d04384aa072d9e">RTT::internal::ValueDataSource&lt; T &gt;</a>
 , <a class="el" href="classRTT_1_1Property.html#a9e7b00fa62d9bd49b7284eaf46e577fb">RTT::Property&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1scripting_1_1CmdFunction.html#aa1cf8b112db9a621de3cafc124860ef8">RTT::scripting::CmdFunction</a>
 , <a class="el" href="classRTT_1_1scripting_1_1DataSourceCondition.html#a323e8d4831fd68e21582c6d1417a5f6f">RTT::scripting::DataSourceCondition</a>
 , <a class="el" href="classRTT_1_1scripting_1_1DataSourceTime.html#af86e8a9b1f8cfde39389b42c985d13fa">RTT::scripting::DataSourceTime</a>
 </li>
@@ -514,7 +529,7 @@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

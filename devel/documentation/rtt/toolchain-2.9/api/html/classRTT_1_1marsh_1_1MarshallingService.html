@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -966,12 +966,12 @@ template&lt;class T &gt; </div>
   <table class="params">
     <tr><td class="paramname">name</td><td>The name to give to the port. </td></tr>
     <tr><td class="paramname">port</td><td>The port to add. </td></tr>
-    <tr><td class="paramname">callback</td><td>(Optional) provide a function which will be called asynchronously when new data arrives on this port. You can add more functions by using the port directly using base::PortInterface::getNewDataOnPort(). </td></tr>
+    <tr><td class="paramname">callback</td><td>(Optional) provide a function which will be called when new data arrives on this port. The callback function will be called <b>instead</b> of updateHook(). Use this-&gt;trigger() in your callback function in order to schedule an updateHook() nevertheless in the same cycle. If callback is not provided, updateHook() will be executed by default. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8hpp_source.html#l00114">114</a> of file <a class="el" href="DataFlowInterface_8hpp_source.html">DataFlowInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8hpp_source.html#l00117">117</a> of file <a class="el" href="DataFlowInterface_8hpp_source.html">DataFlowInterface.hpp</a>.</p>
 
 <p>References <a class="el" href="PortInterface_8cpp_source.html#l00051">RTT::base::PortInterface::setName()</a>.</p>
 
@@ -1010,11 +1010,11 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Add an Event triggering Port to the interface of this task and add a <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> with the same name of the port. </p>
-<p>When data arrives on this port your <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> will be woken up and updateHook will be executed. </p>
+<p>When data arrives on this port your <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> will be woken up and updateHook() will be executed by default. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">port</td><td>The port to add. </td></tr>
-    <tr><td class="paramname">callback</td><td>(Optional) provide a function which will be called when new data arrives on this port. The callback function will be called in sequence with updateHook(), so asynchronously with regard to the arrival of data on the port. </td></tr>
+    <tr><td class="paramname">callback</td><td>(Optional) provide a function which will be called when new data arrives on this port. The callback function will be called <b>instead</b> of updateHook(). Use this-&gt;trigger() in your callback function in order to schedule an updateHook() nevertheless in the same cycle. If callback is not provided, updateHook() will be executed by default. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1022,7 +1022,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">97</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="DataFlowInterface_8cpp_source.html#l00135">RTT::DataFlowInterface::addLocalEventPort()</a>, <a class="el" href="Service_8cpp_source.html#l00083">RTT::Service::addService()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00236">RTT::DataFlowInterface::createPortObject()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>, <a class="el" href="Service_8cpp_source.html#l00181">RTT::Service::hasService()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00279">RTT::DataFlowInterface::mservice</a>, <a class="el" href="Service_8cpp_source.html#l00114">RTT::Service::provides()</a>, and <a class="el" href="Service_8cpp_source.html#l00105">RTT::Service::removeService()</a>.</p>
+<p>References <a class="el" href="DataFlowInterface_8cpp_source.html#l00135">RTT::DataFlowInterface::addLocalEventPort()</a>, <a class="el" href="Service_8cpp_source.html#l00083">RTT::Service::addService()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00238">RTT::DataFlowInterface::createPortObject()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="Service_8cpp_source.html#l00181">RTT::Service::hasService()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00284">RTT::DataFlowInterface::mservice</a>, <a class="el" href="Service_8cpp_source.html#l00114">RTT::Service::provides()</a>, and <a class="el" href="Service_8cpp_source.html#l00105">RTT::Service::removeService()</a>.</p>
 
 </div>
 </div>
@@ -1071,7 +1071,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00135">135</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="DataFlowInterface_8cpp_source.html#l00082">RTT::DataFlowInterface::addLocalPort()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>, <a class="el" href="Service_8hpp_source.html#l00142">RTT::Service::getName()</a>, <a class="el" href="Service_8hpp_source.html#l00188">RTT::Service::getOwner()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00279">RTT::DataFlowInterface::mservice</a>, and <a class="el" href="InputPortInterface_8cpp_source.html#l00144">RTT::base::InputPortInterface::signalInterface()</a>.</p>
+<p>References <a class="el" href="DataFlowInterface_8cpp_source.html#l00082">RTT::DataFlowInterface::addLocalPort()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="Service_8hpp_source.html#l00142">RTT::Service::getName()</a>, <a class="el" href="Service_8hpp_source.html#l00188">RTT::Service::getOwner()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00284">RTT::DataFlowInterface::mservice</a>, <a class="el" href="InputPortInterface_8cpp_source.html#l00112">RTT::base::InputPortInterface::signalInterface()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>.</p>
 
 <p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>.</p>
 
@@ -1113,7 +1113,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="Service_8cpp_source.html#l00187">187</a> of file <a class="el" href="Service_8cpp_source.html">Service.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="classRTT_1_1base_1_1OperationBase.html#a710a6931a7b0e7dfc96620028ef85a5d">RTT::base::OperationBase::getImplementation()</a>, <a class="el" href="OperationBase_8hpp_source.html#l00084">RTT::base::OperationBase::getName()</a>, <a class="el" href="Service_8cpp_source.html#l00248">RTT::Service::removeOperation()</a>, and <a class="el" href="OperationBase_8hpp_source.html#l00116">RTT::base::OperationBase::setOwner()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="classRTT_1_1base_1_1OperationBase.html#a710a6931a7b0e7dfc96620028ef85a5d">RTT::base::OperationBase::getImplementation()</a>, <a class="el" href="OperationBase_8hpp_source.html#l00084">RTT::base::OperationBase::getName()</a>, <a class="el" href="Service_8cpp_source.html#l00248">RTT::Service::removeOperation()</a>, and <a class="el" href="OperationBase_8hpp_source.html#l00116">RTT::base::OperationBase::setOwner()</a>.</p>
 
 </div>
 </div>
@@ -1145,7 +1145,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00082">82</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00275">RTT::DataFlowInterface::mports</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00184">RTT::DataFlowInterface::removeLocalPort()</a>, and <a class="el" href="PortInterface_8cpp_source.html#l00091">RTT::base::PortInterface::setInterface()</a>.</p>
+<p>References <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00280">RTT::DataFlowInterface::mports</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00186">RTT::DataFlowInterface::removeLocalPort()</a>, and <a class="el" href="PortInterface_8cpp_source.html#l00100">RTT::base::PortInterface::setInterface()</a>.</p>
 
 <p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00135">RTT::DataFlowInterface::addLocalEventPort()</a>, and <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">RTT::DataFlowInterface::addPort()</a>.</p>
 
@@ -1491,7 +1491,7 @@ template&lt;class Signature , class ObjT &gt; </div>
 
 <p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">59</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="DataFlowInterface_8cpp_source.html#l00082">RTT::DataFlowInterface::addLocalPort()</a>, <a class="el" href="Service_8cpp_source.html#l00083">RTT::Service::addService()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00236">RTT::DataFlowInterface::createPortObject()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>, <a class="el" href="Service_8cpp_source.html#l00181">RTT::Service::hasService()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00279">RTT::DataFlowInterface::mservice</a>, <a class="el" href="Service_8cpp_source.html#l00114">RTT::Service::provides()</a>, and <a class="el" href="Service_8cpp_source.html#l00105">RTT::Service::removeService()</a>.</p>
+<p>References <a class="el" href="DataFlowInterface_8cpp_source.html#l00082">RTT::DataFlowInterface::addLocalPort()</a>, <a class="el" href="Service_8cpp_source.html#l00083">RTT::Service::addService()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00238">RTT::DataFlowInterface::createPortObject()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="Service_8cpp_source.html#l00181">RTT::Service::hasService()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00284">RTT::DataFlowInterface::mservice</a>, <a class="el" href="Service_8cpp_source.html#l00114">RTT::Service::provides()</a>, and <a class="el" href="Service_8cpp_source.html#l00105">RTT::Service::removeService()</a>.</p>
 
 </div>
 </div>
@@ -1707,7 +1707,7 @@ template&lt;class Signature &gt; </div>
 
 <p>References <a class="el" href="OperationBase_8hpp_source.html#l00084">RTT::base::OperationBase::getName()</a>.</p>
 
-<p>Referenced by <a class="el" href="PortInterface_8cpp_source.html#l00075">RTT::base::PortInterface::createPortObject()</a>.</p>
+<p>Referenced by <a class="el" href="PortInterface_8cpp_source.html#l00079">RTT::base::PortInterface::createPortObject()</a>.</p>
 
 </div>
 </div>
@@ -1900,7 +1900,7 @@ template&lt;class Func , class Class &gt; </div>
 
 <p>Definition at line <a class="el" href="Service_8cpp_source.html#l00052">52</a> of file <a class="el" href="Service_8cpp_source.html">Service.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8hpp_source.html#l00268">RTT::TaskContext::provides()</a>.</p>
+<p>References <a class="el" href="TaskContext_8hpp_source.html#l00257">RTT::TaskContext::provides()</a>.</p>
 
 </div>
 </div>
@@ -1982,9 +1982,9 @@ template&lt;class Func , class Class &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00236">236</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00238">238</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="PortInterface_8cpp_source.html#l00075">RTT::base::PortInterface::createPortObject()</a>, <a class="el" href="Service_8hpp_source.html#l00147">RTT::Service::doc()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00209">RTT::DataFlowInterface::getPort()</a>, and <a class="el" href="DataFlowInterface_8cpp_source.html#l00218">RTT::DataFlowInterface::getPortDescription()</a>.</p>
+<p>References <a class="el" href="PortInterface_8cpp_source.html#l00079">RTT::base::PortInterface::createPortObject()</a>, <a class="el" href="Service_8hpp_source.html#l00147">RTT::Service::doc()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00211">RTT::DataFlowInterface::getPort()</a>, and <a class="el" href="DataFlowInterface_8cpp_source.html#l00220">RTT::DataFlowInterface::getPortDescription()</a>.</p>
 
 <p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>, and <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">RTT::DataFlowInterface::addPort()</a>.</p>
 
@@ -2324,7 +2324,7 @@ template&lt;class Func , class Class &gt; </div>
 
 <p>Definition at line <a class="el" href="Service_8hpp_source.html#l00188">188</a> of file <a class="el" href="Service_8hpp_source.html">Service.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00135">RTT::DataFlowInterface::addLocalEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00128">RTT::DataFlowInterface::dataOnPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00055">RTT::DataFlowInterface::getOwner()</a>, <a class="el" href="Service_8cpp_source.html#l00077">RTT::Service::getOwnerExecutionEngine()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00360">RTT::scripting::ScriptingService::loadProgram()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00185">RTT::scripting::ScriptingService::loadStateMachine()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00163">RTT::DataFlowInterface::removePort()</a>, and <a class="el" href="Service_8cpp_source.html#l00169">RTT::Service::setOperationThread()</a>.</p>
+<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00135">RTT::DataFlowInterface::addLocalEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00128">RTT::DataFlowInterface::dataOnPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00055">RTT::DataFlowInterface::getOwner()</a>, <a class="el" href="Service_8cpp_source.html#l00077">RTT::Service::getOwnerExecutionEngine()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00360">RTT::scripting::ScriptingService::loadProgram()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00185">RTT::scripting::ScriptingService::loadStateMachine()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00165">RTT::DataFlowInterface::removePort()</a>, and <a class="el" href="Service_8cpp_source.html#l00169">RTT::Service::setOperationThread()</a>.</p>
 
 </div>
 </div>
@@ -2354,7 +2354,7 @@ template&lt;class Func , class Class &gt; </div>
 
 <p>Definition at line <a class="el" href="Service_8cpp_source.html#l00077">77</a> of file <a class="el" href="Service_8cpp_source.html">Service.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, and <a class="el" href="Service_8hpp_source.html#l00188">RTT::Service::getOwner()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, and <a class="el" href="Service_8hpp_source.html#l00188">RTT::Service::getOwner()</a>.</p>
 
 </div>
 </div>
@@ -2426,11 +2426,11 @@ template&lt;class Func , class Class &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to a port or null if it does not exist. </dd></dl>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00209">209</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00211">211</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="DataFlowInterface_8hpp_source.html#l00275">RTT::DataFlowInterface::mports</a>.</p>
+<p>References <a class="el" href="DataFlowInterface_8hpp_source.html#l00280">RTT::DataFlowInterface::mports</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00154">RTT::TaskContext::connectPorts()</a>, and <a class="el" href="DataFlowInterface_8cpp_source.html#l00236">RTT::DataFlowInterface::createPortObject()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00147">RTT::TaskContext::connectPorts()</a>, and <a class="el" href="DataFlowInterface_8cpp_source.html#l00238">RTT::DataFlowInterface::createPortObject()</a>.</p>
 
 </div>
 </div>
@@ -2465,11 +2465,11 @@ template&lt;class Func , class Class &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The description or "" if it does not exist. </dd></dl>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00218">218</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00220">220</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="DataFlowInterface_8hpp_source.html#l00275">RTT::DataFlowInterface::mports</a>.</p>
+<p>References <a class="el" href="DataFlowInterface_8hpp_source.html#l00280">RTT::DataFlowInterface::mports</a>.</p>
 
-<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00236">RTT::DataFlowInterface::createPortObject()</a>.</p>
+<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00238">RTT::DataFlowInterface::createPortObject()</a>.</p>
 
 </div>
 </div>
@@ -2496,11 +2496,11 @@ template&lt;class Func , class Class &gt; </div>
 
 <p>Get all port names of this interface. </p>
 <dl class="section return"><dt>Returns</dt><dd>A sequence of strings containing the port names. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>by getNames() </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>by getNames() </dd></dl>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00200">200</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00202">202</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="DataFlowInterface_8hpp_source.html#l00275">RTT::DataFlowInterface::mports</a>.</p>
+<p>References <a class="el" href="DataFlowInterface_8hpp_source.html#l00280">RTT::DataFlowInterface::mports</a>.</p>
 
 </div>
 </div>
@@ -2528,11 +2528,11 @@ template&lt;class Func , class Class &gt; </div>
 <p>Get all ports of this interface. </p>
 <dl class="section return"><dt>Returns</dt><dd>A sequence of pointers to ports. </dd></dl>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00196">196</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00198">198</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="DataFlowInterface_8hpp_source.html#l00275">RTT::DataFlowInterface::mports</a>.</p>
+<p>References <a class="el" href="DataFlowInterface_8hpp_source.html#l00280">RTT::DataFlowInterface::mports</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00154">RTT::TaskContext::connectPorts()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00292">RTT::TaskContext::disconnect()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00147">RTT::TaskContext::connectPorts()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00285">RTT::TaskContext::disconnect()</a>.</p>
 
 </div>
 </div>
@@ -2636,7 +2636,7 @@ template&lt;class Func , class Class &gt; </div>
 <p>Returns the service this interface belongs to. </p>
 <p>The returned service is a service living in the component returned by <a class="el" href="classRTT_1_1DataFlowInterface.html#a2a8228f2601888b717209ed65379f84f" title="Returns the component this interface belongs to. ">getOwner()</a> or in one of its sub-services. </p>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8hpp_source.html#l00198">198</a> of file <a class="el" href="DataFlowInterface_8hpp_source.html">DataFlowInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8hpp_source.html#l00203">203</a> of file <a class="el" href="DataFlowInterface_8hpp_source.html">DataFlowInterface.hpp</a>.</p>
 
 </div>
 </div>
@@ -2675,7 +2675,7 @@ template&lt;class Func , class Class &gt; </div>
 
 <p>References <a class="el" href="Service_8hpp_source.html#l00566">RTT::Service::services</a>.</p>
 
-<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00227">RTT::DataFlowInterface::setPortDescription()</a>.</p>
+<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00229">RTT::DataFlowInterface::setPortDescription()</a>.</p>
 
 </div>
 </div>
@@ -2744,7 +2744,7 @@ template&lt;class Func , class Class &gt; </div>
 
 <p>References <a class="el" href="Service_8hpp_source.html#l00566">RTT::Service::services</a>.</p>
 
-<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">RTT::DataFlowInterface::addPort()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00176">loadServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00198">readServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00239">readServiceProperty()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00163">RTT::DataFlowInterface::removePort()</a>, <a class="el" href="GlobalService_8cpp_source.html#l00041">RTT::internal::GlobalService::require()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00187">storeServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00228">updateServiceFile()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00208">updateServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00218">writeServiceProperties()</a>, and <a class="el" href="MarshallingService_8cpp_source.html#l00249">writeServiceProperty()</a>.</p>
+<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">RTT::DataFlowInterface::addPort()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00176">loadServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00198">readServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00239">readServiceProperty()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00165">RTT::DataFlowInterface::removePort()</a>, <a class="el" href="GlobalService_8cpp_source.html#l00041">RTT::internal::GlobalService::require()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00187">storeServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00228">updateServiceFile()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00208">updateServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00218">writeServiceProperties()</a>, and <a class="el" href="MarshallingService_8cpp_source.html#l00249">writeServiceProperty()</a>.</p>
 
 </div>
 </div>
@@ -3101,7 +3101,7 @@ template&lt;class Func , class Class &gt; </div>
 
 <p>Definition at line <a class="el" href="Service_8cpp_source.html#l00114">114</a> of file <a class="el" href="Service_8cpp_source.html">Service.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">RTT::DataFlowInterface::addPort()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00176">loadServiceProperties()</a>, <a class="el" href="Service_8cpp_source.html#l00124">RTT::Service::provides()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00198">readServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00239">readServiceProperty()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00163">RTT::DataFlowInterface::removePort()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00187">storeServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00228">updateServiceFile()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00208">updateServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00218">writeServiceProperties()</a>, and <a class="el" href="MarshallingService_8cpp_source.html#l00249">writeServiceProperty()</a>.</p>
+<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">RTT::DataFlowInterface::addPort()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00176">loadServiceProperties()</a>, <a class="el" href="Service_8cpp_source.html#l00124">RTT::Service::provides()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00198">readServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00239">readServiceProperty()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00165">RTT::DataFlowInterface::removePort()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00187">storeServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00228">updateServiceFile()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00208">updateServiceProperties()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00218">writeServiceProperties()</a>, and <a class="el" href="MarshallingService_8cpp_source.html#l00249">writeServiceProperty()</a>.</p>
 
 </div>
 </div>
@@ -3377,9 +3377,9 @@ template&lt;class Func , class Class &gt; </div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>this function will not check if a service with the same name as <em>name</em> exists, and will not remove it. So use <a class="el" href="classRTT_1_1DataFlowInterface.html#a176244c5979a8010ae7dcc0a3db3bb63" title="Remove a Port from this interface. ">removePort()</a> in case you want to get rid of the service as well. </dd></dl>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00184">184</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00186">186</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="DataFlowInterface_8hpp_source.html#l00275">RTT::DataFlowInterface::mports</a>.</p>
+<p>References <a class="el" href="DataFlowInterface_8hpp_source.html#l00280">RTT::DataFlowInterface::mports</a>.</p>
 
 <p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00082">RTT::DataFlowInterface::addLocalPort()</a>.</p>
 
@@ -3417,9 +3417,9 @@ template&lt;class Func , class Class &gt; </div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Since services are refcounted, removePort may effectively delete the <em>this</em> object in case no Service::shared_ptr exists to this <a class="el" href="classRTT_1_1DataFlowInterface.html" title="The Interface of a TaskContext which exposes its data-flow ports. ">DataFlowInterface</a>. In order to prevent such cleanup, create a Service::shared_ptr to this object before calling <a class="el" href="classRTT_1_1DataFlowInterface.html#a176244c5979a8010ae7dcc0a3db3bb63" title="Remove a Port from this interface. ">removePort()</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00163">163</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00165">165</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="Service_8hpp_source.html#l00188">RTT::Service::getOwner()</a>, <a class="el" href="Service_8cpp_source.html#l00181">RTT::Service::hasService()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00275">RTT::DataFlowInterface::mports</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00279">RTT::DataFlowInterface::mservice</a>, <a class="el" href="Service_8cpp_source.html#l00114">RTT::Service::provides()</a>, and <a class="el" href="Service_8cpp_source.html#l00105">RTT::Service::removeService()</a>.</p>
+<p>References <a class="el" href="Service_8hpp_source.html#l00188">RTT::Service::getOwner()</a>, <a class="el" href="Service_8cpp_source.html#l00181">RTT::Service::hasService()</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00280">RTT::DataFlowInterface::mports</a>, <a class="el" href="DataFlowInterface_8hpp_source.html#l00284">RTT::DataFlowInterface::mservice</a>, <a class="el" href="Service_8cpp_source.html#l00114">RTT::Service::provides()</a>, and <a class="el" href="Service_8cpp_source.html#l00105">RTT::Service::removeService()</a>.</p>
 
 </div>
 </div>
@@ -3489,7 +3489,7 @@ template&lt;class Func , class Class &gt; </div>
 
 <p>References <a class="el" href="Service_8hpp_source.html#l00566">RTT::Service::services</a>.</p>
 
-<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">RTT::DataFlowInterface::addPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00251">RTT::DataFlowInterface::clear()</a>, <a class="el" href="Service_8cpp_source.html#l00219">RTT::Service::clear()</a>, and <a class="el" href="DataFlowInterface_8cpp_source.html#l00163">RTT::DataFlowInterface::removePort()</a>.</p>
+<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">RTT::DataFlowInterface::addPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00253">RTT::DataFlowInterface::clear()</a>, <a class="el" href="Service_8cpp_source.html#l00219">RTT::Service::clear()</a>, and <a class="el" href="DataFlowInterface_8cpp_source.html#l00165">RTT::DataFlowInterface::removePort()</a>.</p>
 
 </div>
 </div>
@@ -3586,9 +3586,9 @@ template&lt;class Func , class Class &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the port was found and the description was set, false otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00227">227</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8cpp_source.html#l00229">229</a> of file <a class="el" href="DataFlowInterface_8cpp_source.html">DataFlowInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="Service_8cpp_source.html#l00144">RTT::Service::getService()</a>, and <a class="el" href="DataFlowInterface_8hpp_source.html#l00279">RTT::DataFlowInterface::mservice</a>.</p>
+<p>References <a class="el" href="Service_8cpp_source.html#l00144">RTT::Service::getService()</a>, and <a class="el" href="DataFlowInterface_8hpp_source.html#l00284">RTT::DataFlowInterface::mservice</a>.</p>
 
 <p>Referenced by <a class="el" href="PortInterface_8cpp_source.html#l00060">RTT::base::PortInterface::doc()</a>.</p>
 
@@ -4046,9 +4046,9 @@ template&lt;class Func , class Class &gt; </div>
 <p>The parent <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a>. </p>
 <p>May be null in exceptional cases. </p>
 
-<p>Definition at line <a class="el" href="DataFlowInterface_8hpp_source.html#l00279">279</a> of file <a class="el" href="DataFlowInterface_8hpp_source.html">DataFlowInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="DataFlowInterface_8hpp_source.html#l00284">284</a> of file <a class="el" href="DataFlowInterface_8hpp_source.html">DataFlowInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00135">RTT::DataFlowInterface::addLocalEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">RTT::DataFlowInterface::addPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00251">RTT::DataFlowInterface::clear()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00128">RTT::DataFlowInterface::dataOnPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00055">RTT::DataFlowInterface::getOwner()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00163">RTT::DataFlowInterface::removePort()</a>, <a class="el" href="Service_8cpp_source.html#l00059">RTT::Service::Service()</a>, and <a class="el" href="DataFlowInterface_8cpp_source.html#l00227">RTT::DataFlowInterface::setPortDescription()</a>.</p>
+<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00135">RTT::DataFlowInterface::addLocalEventPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00059">RTT::DataFlowInterface::addPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00253">RTT::DataFlowInterface::clear()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00128">RTT::DataFlowInterface::dataOnPort()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00055">RTT::DataFlowInterface::getOwner()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00165">RTT::DataFlowInterface::removePort()</a>, <a class="el" href="Service_8cpp_source.html#l00059">RTT::Service::Service()</a>, and <a class="el" href="DataFlowInterface_8cpp_source.html#l00229">RTT::DataFlowInterface::setPortDescription()</a>.</p>
 
 </div>
 </div>
@@ -4059,7 +4059,7 @@ template&lt;class Func , class Class &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -71,7 +71,8 @@ Inheritance diagram for RTT::base::DataObjectLocked&lt; T &gt;:</div>
  <div class="center">
   <img src="classRTT_1_1base_1_1DataObjectLocked.png" usemap="#RTT::base::DataObjectLocked&lt; T &gt;_map" alt=""/>
   <map id="RTT::base::DataObjectLocked&lt; T &gt;_map" name="RTT::base::DataObjectLocked&lt; T &gt;_map">
-<area href="classRTT_1_1base_1_1DataObjectInterface.html" title="A DataObjectInterface implements multi-threaded read/write solutions. " alt="RTT::base::DataObjectInterface&lt; T &gt;" shape="rect" coords="0,0,217,24"/>
+<area href="classRTT_1_1base_1_1DataObjectInterface.html" title="A DataObjectInterface implements multi-threaded read/write solutions. " alt="RTT::base::DataObjectInterface&lt; T &gt;" shape="rect" coords="0,56,217,80"/>
+<area href="classRTT_1_1base_1_1DataObjectBase.html" title="Base class for all data object classes. " alt="RTT::base::DataObjectBase" shape="rect" coords="0,0,217,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -89,21 +90,30 @@ typedef boost::shared_ptr<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a275db2a8aae98218d6541a7e5c479ecc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a275db2a8aae98218d6541a7e5c479ecc">DataObjectLocked</a> (const T &amp;initial_value=T())</td></tr>
-<tr class="memdesc:a275db2a8aae98218d6541a7e5c479ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html" title="A class which provides locked/protected access to one typed element of data. ">DataObjectLocked</a> by name.  <a href="#a275db2a8aae98218d6541a7e5c479ecc">More...</a><br/></td></tr>
-<tr class="separator:a275db2a8aae98218d6541a7e5c479ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a480bfa1b93c0f744ae47f75d67afde48"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a480bfa1b93c0f744ae47f75d67afde48">Get</a> (<a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;pull) const </td></tr>
-<tr class="memdesc:a480bfa1b93c0f744ae47f75d67afde48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a copy of the Data of this data object.  <a href="#a480bfa1b93c0f744ae47f75d67afde48">More...</a><br/></td></tr>
-<tr class="separator:a480bfa1b93c0f744ae47f75d67afde48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33b7c41bb681f1956834e2f0fb6377b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac33b7c41bb681f1956834e2f0fb6377b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#ac33b7c41bb681f1956834e2f0fb6377b">DataObjectLocked</a> ()</td></tr>
+<tr class="memdesc:ac33b7c41bb681f1956834e2f0fb6377b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an uninitialized <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html" title="A class which provides locked/protected access to one typed element of data. ">DataObjectLocked</a>. <br/></td></tr>
+<tr class="separator:ac33b7c41bb681f1956834e2f0fb6377b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67d07ad108246170621338ce6c034ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae67d07ad108246170621338ce6c034ab"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#ae67d07ad108246170621338ce6c034ab">DataObjectLocked</a> (const T &amp;initial_value)</td></tr>
+<tr class="memdesc:ae67d07ad108246170621338ce6c034ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html" title="A class which provides locked/protected access to one typed element of data. ">DataObjectLocked</a> with initial value. <br/></td></tr>
+<tr class="separator:ae67d07ad108246170621338ce6c034ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c87a3ef3532ae06036f875310a894c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a05c87a3ef3532ae06036f875310a894c">Get</a> (<a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;pull, bool copy_old_data=true) const </td></tr>
+<tr class="memdesc:a05c87a3ef3532ae06036f875310a894c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a copy of the Data of this data object.  <a href="#a05c87a3ef3532ae06036f875310a894c">More...</a><br/></td></tr>
+<tr class="separator:a05c87a3ef3532ae06036f875310a894c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0767ed9bdf983e8d42cc9f88e1d94480"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a0767ed9bdf983e8d42cc9f88e1d94480">Get</a> () const </td></tr>
 <tr class="memdesc:a0767ed9bdf983e8d42cc9f88e1d94480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a copy of the data of this data object.  <a href="#a0767ed9bdf983e8d42cc9f88e1d94480">More...</a><br/></td></tr>
 <tr class="separator:a0767ed9bdf983e8d42cc9f88e1d94480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aa4462d5d8086e0d7834ee189eab240"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a4aa4462d5d8086e0d7834ee189eab240">Set</a> (const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;push)</td></tr>
-<tr class="memdesc:a4aa4462d5d8086e0d7834ee189eab240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the data to a certain value.  <a href="#a4aa4462d5d8086e0d7834ee189eab240">More...</a><br/></td></tr>
-<tr class="separator:a4aa4462d5d8086e0d7834ee189eab240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeb95752cd4837b744ec37a69aa066a2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#abeb95752cd4837b744ec37a69aa066a2">data_sample</a> (const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;sample)</td></tr>
-<tr class="memdesc:abeb95752cd4837b744ec37a69aa066a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a data sample to initialize this data object.  <a href="#abeb95752cd4837b744ec37a69aa066a2">More...</a><br/></td></tr>
-<tr class="separator:abeb95752cd4837b744ec37a69aa066a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449e7b1849402a3332de436a875a2822"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a449e7b1849402a3332de436a875a2822">Set</a> (const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;push)</td></tr>
+<tr class="memdesc:a449e7b1849402a3332de436a875a2822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the data to a certain value.  <a href="#a449e7b1849402a3332de436a875a2822">More...</a><br/></td></tr>
+<tr class="separator:a449e7b1849402a3332de436a875a2822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a701f8d9cce781284aa748720baba5eec"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a701f8d9cce781284aa748720baba5eec">data_sample</a> (const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;sample, bool reset)</td></tr>
+<tr class="memdesc:a701f8d9cce781284aa748720baba5eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a data sample to initialize this data object.  <a href="#a701f8d9cce781284aa748720baba5eec">More...</a><br/></td></tr>
+<tr class="separator:a701f8d9cce781284aa748720baba5eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ccbe6c4289eee37ae1a57bdb9e0a60b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ccbe6c4289eee37ae1a57bdb9e0a60b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a7ccbe6c4289eee37ae1a57bdb9e0a60b">clear</a> ()</td></tr>
+<tr class="memdesc:a7ccbe6c4289eee37ae1a57bdb9e0a60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears any data stored by this data object, so that any subsequent <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a05c87a3ef3532ae06036f875310a894c" title="Get a copy of the Data of this data object. ">Get()</a> without a new <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#a449e7b1849402a3332de436a875a2822" title="Set the data to a certain value. ">Set()</a> will return NoData. <br/></td></tr>
+<tr class="separator:a7ccbe6c4289eee37ae1a57bdb9e0a60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
@@ -113,8 +123,8 @@ class RTT::base::DataObjectLocked&lt; T &gt;</h3>
 <p>It allows multiple read/write requests using a single lock. This is the in any case threadsafe implementation, and can be blocking in situations where you do not want that. </p>
 
 <p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00057">57</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a275db2a8aae98218d6541a7e5c479ecc"></a>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a701f8d9cce781284aa748720baba5eec"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -124,48 +134,21 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html">RTT::base::DataObjectLocked</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html">DataObjectLocked</a> </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>initial_value</em> = <code>T()</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Construct a <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html" title="A class which provides locked/protected access to one typed element of data. ">DataObjectLocked</a> by name. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">_name</td><td>The name of this <a class="el" href="classRTT_1_1base_1_1DataObject.html" title="This object represents the default thread-safe data object implementation used by Orocos objects...">DataObject</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00072">72</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="abeb95752cd4837b744ec37a69aa066a2"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html">RTT::base::DataObjectLocked</a>&lt; T &gt;::data_sample </td>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html">RTT::base::DataObjectLocked</a>&lt; T &gt;::data_sample </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;&#160;</td>
-          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td class="paramname"><em>sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -179,20 +162,20 @@ template&lt;class T &gt; </div>
 <p>As such enough storage space can be allocated before the actual writing begins.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sample</td><td></td></tr>
+    <tr><td class="paramname">sample</td><td>the data sample </td></tr>
+    <tr><td class="paramname">reset</td><td>enforce reinitialization even if this operation clears the stored data. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the data object was successfully (re)initialized. </dd></dl>
 
-<p>Implements <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a4851566b61e94041d410174b68719745">RTT::base::DataObjectInterface&lt; T &gt;</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a2a1b6a2f4c6b7e9f6f6c1d58c6c73dcc">RTT::base::DataObjectInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00086">86</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
-
-<p>References <a class="el" href="DataObjectLocked_8hpp_source.html#l00084">RTT::base::DataObjectLocked&lt; T &gt;::Set()</a>.</p>
+<p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00113">113</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a480bfa1b93c0f744ae47f75d67afde48"></a>
+<a class="anchor" id="a05c87a3ef3532ae06036f875310a894c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -202,11 +185,21 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html">RTT::base::DataObjectLocked</a>&lt; T &gt;::Get </td>
+          <td class="memname">virtual <a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a> <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html">RTT::base::DataObjectLocked</a>&lt; T &gt;::Get </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;&#160;</td>
-          <td class="paramname"><em>pull</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>pull</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>copy_old_data</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -224,9 +217,9 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a4a571b38909495e3d88cc6e935360229">RTT::base::DataObjectInterface&lt; T &gt;</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#ab4679a280f366ee7a41f1fa9703b22dd">RTT::base::DataObjectInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00080">80</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00088">88</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -258,15 +251,11 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a79f1da468f1fb526d9d5f87fc65e566e">RTT::base::DataObjectInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00082">82</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
-
-<p>References <a class="el" href="DataObjectLocked_8hpp_source.html#l00082">RTT::base::DataObjectLocked&lt; T &gt;::Get()</a>.</p>
-
-<p>Referenced by <a class="el" href="DataObjectLocked_8hpp_source.html#l00082">RTT::base::DataObjectLocked&lt; T &gt;::Get()</a>.</p>
+<p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00100">100</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4aa4462d5d8086e0d7834ee189eab240"></a>
+<a class="anchor" id="a449e7b1849402a3332de436a875a2822"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -276,7 +265,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html">RTT::base::DataObjectLocked</a>&lt; T &gt;::Set </td>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html">RTT::base::DataObjectLocked</a>&lt; T &gt;::Set </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> &amp;&#160;</td>
           <td class="paramname"><em>push</em></td><td>)</td>
@@ -298,11 +287,9 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a7512c12a0189fca337a55db262b3209a">RTT::base::DataObjectInterface&lt; T &gt;</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#aa0929e8179c66bf0c980da2bf4185482">RTT::base::DataObjectInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00084">84</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="DataObjectLocked_8hpp_source.html#l00086">RTT::base::DataObjectLocked&lt; T &gt;::data_sample()</a>.</p>
+<p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00106">106</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -312,7 +299,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

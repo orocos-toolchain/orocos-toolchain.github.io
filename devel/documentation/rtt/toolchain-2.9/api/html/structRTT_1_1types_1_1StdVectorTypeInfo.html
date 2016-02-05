@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -188,12 +188,15 @@ virtual <br class="typebreak"/>
 <tr class="memitem:a4204064b58ded9a7fe9e2a7768f309af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4204064b58ded9a7fe9e2a7768f309af"></a>
 base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildDataStorage</b> (<a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy) const </td></tr>
 <tr class="separator:a4204064b58ded9a7fe9e2a7768f309af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d4f821be607c07c0975759829330dbe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d4f821be607c07c0975759829330dbe"></a>
-base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildChannelOutput</b> (<a class="el" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a> &amp;port) const </td></tr>
-<tr class="separator:a3d4f821be607c07c0975759829330dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab745b088a598bf6720660e2540fc51af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab745b088a598bf6720660e2540fc51af"></a>
-base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildChannelInput</b> (<a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html">base::OutputPortInterface</a> &amp;port) const </td></tr>
-<tr class="separator:ab745b088a598bf6720660e2540fc51af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6dbb1c0a6cb0d15426520565442c298"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6dbb1c0a6cb0d15426520565442c298"></a>
+base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildChannelOutput</b> (<a class="el" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a> &amp;port, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy) const </td></tr>
+<tr class="separator:ab6dbb1c0a6cb0d15426520565442c298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2a601f5f75e53f4b56d8575bca299cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2a601f5f75e53f4b56d8575bca299cd"></a>
+base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildChannelInput</b> (<a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html">base::OutputPortInterface</a> &amp;port, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy) const </td></tr>
+<tr class="separator:ac2a601f5f75e53f4b56d8575bca299cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe314b24130b26a9d60cfb75a7a9a943"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe314b24130b26a9d60cfb75a7a9a943"></a>
+internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildSharedConnection</b> (<a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html">base::OutputPortInterface</a> *output_port, <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a> *input_port, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy) const </td></tr>
+<tr class="separator:afe314b24130b26a9d60cfb75a7a9a943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0a89b65a9d84f91022f9bcd4267cab0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0a89b65a9d84f91022f9bcd4267cab0"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>composeTypeImpl</b> (const <a class="el" href="classRTT_1_1PropertyBag.html">PropertyBag</a> &amp;source, typename <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html">internal::AssignableDataSource</a>&lt; T &gt;::reference_t result) const </td></tr>
 <tr class="memdesc:ad0a89b65a9d84f91022f9bcd4267cab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">User, implement this function in case you want to control reading the XML data format. <br/></td></tr>
@@ -367,7 +370,7 @@ boost::shared_ptr<br class="typebreak"/>
 <p>Specialize this function to return an alternate type which represents this one in a compatible way. </p>
 <p>For example, a short converts to an long or an enum to an int or a string. </p>
 <dl class="section return"><dt>Returns</dt><dd>null if this type is not convertible to anything else. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">Deprecated:</a></b></dt><dd>by decomposeType. We want to rename convertType to decomposeType. This function is left here for transitional purposes. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">Deprecated:</a></b></dt><dd>by decomposeType. We want to rename convertType to decomposeType. This function is left here for transitional purposes. </dd></dl>
 
 <p>Definition at line <a class="el" href="CompositionFactory_8cpp_source.html#l00006">6</a> of file <a class="el" href="CompositionFactory_8cpp_source.html">CompositionFactory.cpp</a>.</p>
 
@@ -573,7 +576,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

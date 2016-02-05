@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -84,6 +84,11 @@ Public Types</h2></td></tr>
 typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a></td></tr>
 <tr class="memdesc:af40115442f2f261296ab9e8f270317ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">A positive numeric ID representing a timer. <br/></td></tr>
 <tr class="separator:af40115442f2f261296ab9e8f270317ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93db616570e910bcbdf835eebd1d09a2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>WorkReason</b> { <b>TimeOut</b> = 0, 
+<b>Trigger</b>, 
+<b>IOReady</b>
+ }</td></tr>
+<tr class="separator:a93db616570e910bcbdf835eebd1d09a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -117,11 +122,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acf5c802d3faa9f3f6b8d700b8b3ddf43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#acf5c802d3faa9f3f6b8d700b8b3ddf43">waitForUntil</a> (<a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> id, <a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> abs_time)</td></tr>
 <tr class="memdesc:acf5c802d3faa9f3f6b8d700b8b3ddf43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a timer to expire with timeout.  <a href="#acf5c802d3faa9f3f6b8d700b8b3ddf43">More...</a><br/></td></tr>
 <tr class="separator:acf5c802d3faa9f3f6b8d700b8b3ddf43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578a2025eaf9af809a72d9783fdaa803"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803">work</a> (WorkReason reason)</td></tr>
+<tr class="memdesc:a578a2025eaf9af809a72d9783fdaa803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identical to <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a> but gives a reason why the function was called.  <a href="#a578a2025eaf9af809a72d9783fdaa803">More...</a><br/></td></tr>
+<tr class="separator:a578a2025eaf9af809a72d9783fdaa803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10c3cbd96505481cbd9c2f5081c2cd72"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html">os::ThreadInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a10c3cbd96505481cbd9c2f5081c2cd72">getThread</a> () const </td></tr>
 <tr class="memdesc:a10c3cbd96505481cbd9c2f5081c2cd72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread this object is run in.  <a href="#a10c3cbd96505481cbd9c2f5081c2cd72">More...</a><br/></td></tr>
 <tr class="separator:a10c3cbd96505481cbd9c2f5081c2cd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a742d04970b31c2999e8fd7cb402947cd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a742d04970b31c2999e8fd7cb402947cd">hasWork</a> ()</td></tr>
-<tr class="memdesc:a742d04970b31c2999e8fd7cb402947cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is for 'intelligent' activity implementations that wish to see if it is required to call <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be periodically executed when this class is run in a periodic thread...">step()</a> (again).  <a href="#a742d04970b31c2999e8fd7cb402947cd">More...</a><br/></td></tr>
+<tr class="memdesc:a742d04970b31c2999e8fd7cb402947cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is for 'intelligent' activity implementations that wish to see if it is required to call <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a> (again).  <a href="#a742d04970b31c2999e8fd7cb402947cd">More...</a><br/></td></tr>
 <tr class="separator:a742d04970b31c2999e8fd7cb402947cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70c18e6321d3e6929e0097940d68c1ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">ActivityInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a70c18e6321d3e6929e0097940d68c1ef">getActivity</a> () const </td></tr>
 <tr class="memdesc:a70c18e6321d3e6929e0097940d68c1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query for the task this interface is run in.  <a href="#a70c18e6321d3e6929e0097940d68c1ef">More...</a><br/></td></tr>
@@ -143,21 +151,21 @@ typedef <a class="el" href="classRTT_1_1os_1_1TimeService.html#accd937aad8cd6db7
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2606193d96db504b4b52df3dcb8d631b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2606193d96db504b4b52df3dcb8d631b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a2606193d96db504b4b52df3dcb8d631b">initialize</a> ()</td></tr>
-<tr class="memdesc:a2606193d96db504b4b52df3dcb8d631b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called before the first periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be periodically executed when this class is run in a periodic thread...">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic thread. ">loop()</a></em> ), when the thread is started. <br/></td></tr>
+<tr class="memdesc:a2606193d96db504b4b52df3dcb8d631b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called before the first periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the thread is started. <br/></td></tr>
 <tr class="separator:a2606193d96db504b4b52df3dcb8d631b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfc2e3a95a863e1105e05b983f23f50f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfc2e3a95a863e1105e05b983f23f50f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#abfc2e3a95a863e1105e05b983f23f50f">finalize</a> ()</td></tr>
-<tr class="memdesc:abfc2e3a95a863e1105e05b983f23f50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called after the last periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be periodically executed when this class is run in a periodic thread...">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic thread. ">loop()</a></em> ), when the RunnableInterface is stopped. <br/></td></tr>
+<tr class="memdesc:abfc2e3a95a863e1105e05b983f23f50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called after the last periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the RunnableInterface is stopped. <br/></td></tr>
 <tr class="separator:abfc2e3a95a863e1105e05b983f23f50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d7104ef70085ddf0880cf429a540f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5d7104ef70085ddf0880cf429a540f4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4">step</a> ()</td></tr>
-<tr class="memdesc:ab5d7104ef70085ddf0880cf429a540f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be periodically executed when this class is run in a periodic thread. <br/></td></tr>
+<tr class="memdesc:ab5d7104ef70085ddf0880cf429a540f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be (periodically) executed when this object is run in an <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a>. <br/></td></tr>
 <tr class="separator:ab5d7104ef70085ddf0880cf429a540f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfbcfa7d6da2bc548f6a4f5275caf0ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed">loop</a> ()</td></tr>
-<tr class="memdesc:adfbcfa7d6da2bc548f6a4f5275caf0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be executed once when this class is run in a non periodic thread.  <a href="#adfbcfa7d6da2bc548f6a4f5275caf0ed">More...</a><br/></td></tr>
+<tr class="memdesc:adfbcfa7d6da2bc548f6a4f5275caf0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be executed once when this class is run in a non periodic <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a>.  <a href="#adfbcfa7d6da2bc548f6a4f5275caf0ed">More...</a><br/></td></tr>
 <tr class="separator:adfbcfa7d6da2bc548f6a4f5275caf0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7278dc8d64e602d5981d8d268dbcde4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#ac7278dc8d64e602d5981d8d268dbcde4">breakLoop</a> ()</td></tr>
-<tr class="memdesc:ac7278dc8d64e602d5981d8d268dbcde4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called by the framework to break out of the <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic thread. ">loop()</a></em> method.  <a href="#ac7278dc8d64e602d5981d8d268dbcde4">More...</a><br/></td></tr>
+<tr class="memdesc:ac7278dc8d64e602d5981d8d268dbcde4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called by the framework to break out of the <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> method.  <a href="#ac7278dc8d64e602d5981d8d268dbcde4">More...</a><br/></td></tr>
 <tr class="separator:ac7278dc8d64e602d5981d8d268dbcde4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -252,7 +260,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00136">136</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00143">143</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 <p>References <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a6ccbd039e0df4bae31fe63a988b3c2f3">RTT::base::ActivityInterface::start()</a>.</p>
 
@@ -293,7 +301,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1os_1_1Timer.html#abe2fe753bebb97102d899a45d02e19ac" title="Disable an armed timer. ">killTimer</a> to disable it before it fires. </dd></dl>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00182">182</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00189">189</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 <p>References <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>, and <a class="el" href="Semaphore_8hpp_source.html#l00096">RTT::os::Semaphore::signal()</a>.</p>
 
@@ -320,13 +328,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </table>
 </div><div class="memdoc">
 
-<p>This method is called by the framework to break out of the <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic thread. ">loop()</a></em> method. </p>
-<p>Reimplement this method to signal <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic thread. ">loop()</a></em> to return and return true on success. When this method is not reimplemented by you, it will always return <em>false</em>, denoting that the loop can not be broken. If <a class="el" href="classRTT_1_1os_1_1Timer.html#ac7278dc8d64e602d5981d8d268dbcde4" title="This method is called by the framework to break out of the loop() method. ">breakLoop()</a> returns <em>true</em>, the caller will wait until <a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic thread. ">loop()</a> returns. </p>
+<p>This method is called by the framework to break out of the <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> method. </p>
+<p>Reimplement this method to signal <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> to return and return true on success. When this method is not reimplemented by you, it will always return <em>false</em>, denoting that the loop can not be broken. If <a class="el" href="classRTT_1_1os_1_1Timer.html#ac7278dc8d64e602d5981d8d268dbcde4" title="This method is called by the framework to break out of the loop() method. ">breakLoop()</a> returns <em>true</em>, the caller will wait until <a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a> returns. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the loop could be notified to return. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a1e8f7d948dce8a8eafd420f6a4baf574">RTT::base::RunnableInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00125">125</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00132">132</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 </div>
 </div>
@@ -353,11 +361,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 <p>Query for the task this interface is run in. </p>
 <p>Zero denotes that no task is present to run it, and hence no detailed information is available.</p>
-<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classRTT_1_1Activity.html" title="An Activity is an object that represents a thread. ">Activity</a> which runs this <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a> which runs this <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="RunnableInterface_8hpp_source.html#l00167">167</a> of file <a class="el" href="RunnableInterface_8hpp_source.html">RunnableInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="RunnableInterface_8hpp_source.html#l00175">175</a> of file <a class="el" href="RunnableInterface_8hpp_source.html">RunnableInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00239">RTT::base::TaskCore::activate()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00146">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00377">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00282">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00272">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00267">RTT::base::TaskCore::isActive()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00249">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00168">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00138">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00287">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00277">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00437">RTT::ExecutionEngine::stopTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00097">RTT::base::TaskCore::trigger()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00090">RTT::base::TaskCore::update()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00284">RTT::ExecutionEngine::waitForFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00269">RTT::ExecutionEngine::waitForMessages()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00371">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00271">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00261">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::isSend()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00253">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00152">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00124">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00276">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00266">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00451">RTT::ExecutionEngine::stopTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00083">RTT::base::TaskCore::update()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00305">RTT::ExecutionEngine::waitForFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00290">RTT::ExecutionEngine::waitForMessages()</a>.</p>
 
 </div>
 </div>
@@ -385,7 +393,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 <p>Get the thread this object is run in. </p>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the thread or 0 if not run by a thread. </dd></dl>
 
-<p>Definition at line <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00078">78</a> of file <a class="el" href="CoreRunnableInterface_8cpp_source.html">CoreRunnableInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00082">82</a> of file <a class="el" href="CoreRunnableInterface_8cpp_source.html">CoreRunnableInterface.cpp</a>.</p>
 
 <p>References <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a190329785c1c7e4a542db833402a7811">RTT::base::ActivityInterface::thread()</a>.</p>
 
@@ -412,14 +420,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </table>
 </div><div class="memdoc">
 
-<p>This method is for 'intelligent' activity implementations that wish to see if it is required to call <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be periodically executed when this class is run in a periodic thread...">step()</a> (again). </p>
+<p>This method is for 'intelligent' activity implementations that wish to see if it is required to call <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a> (again). </p>
 <p>By default, <em>false</em> is returned. You should only return <em>true</em> in case there is a temporary reason to (re-)run step. </p>
 <dl class="section return"><dt>Returns</dt><dd><em>true</em> if this object should be run. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html" title="The default, thread-less activity for any newly created TaskContext. ">extras::SequentialActivity</a> implementation to see how this can be of use. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1ExecutionEngine.html#a3e767baa0ee365ed77142e755bc51323">RTT::ExecutionEngine</a>.</p>
 
-<p>Definition at line <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00065">65</a> of file <a class="el" href="CoreRunnableInterface_8cpp_source.html">CoreRunnableInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00067">67</a> of file <a class="el" href="CoreRunnableInterface_8cpp_source.html">CoreRunnableInterface.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="SequentialActivity_8cpp_source.html#l00145">RTT::extras::SequentialActivity::trigger()</a>.</p>
 
@@ -447,7 +455,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00202">202</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00209">209</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 </div>
 </div>
@@ -473,7 +481,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00229">229</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00236">236</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 </div>
 </div>
@@ -498,14 +506,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </table>
 </div><div class="memdoc">
 
-<p>The method that will be executed once when this class is run in a non periodic thread. </p>
-<p>The default implementation calls <a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be periodically executed when this class is run in a periodic thread...">step()</a> once. </p>
+<p>The method that will be executed once when this class is run in a non periodic <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a>. </p>
+<p>The default implementation calls <a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a> once. </p>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2">RTT::base::RunnableInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00060">60</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00061">61</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
-<p>References <a class="el" href="TimeService_8hpp_source.html#l00213">RTT::os::TimeService::InfiniteNSecs</a>, and <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>.</p>
+<p>References <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>.</p>
 
 </div>
 </div>
@@ -542,11 +550,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1ExecutionEngine.html#ac8b290342974c0b41c97515b1a4e9fd6">RTT::ExecutionEngine</a>.</p>
 
-<p>Definition at line <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00069">69</a> of file <a class="el" href="CoreRunnableInterface_8cpp_source.html">CoreRunnableInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">73</a> of file <a class="el" href="CoreRunnableInterface_8cpp_source.html">CoreRunnableInterface.cpp</a>.</p>
 
 <p>References <a class="el" href="ActivityInterface_8hpp_source.html#l00073">RTT::base::ActivityInterface::disableRun()</a>.</p>
 
-<p>Referenced by <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00297">RTT::ExecutionEngine::setActivity()</a>.</p>
+<p>Referenced by <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00318">RTT::ExecutionEngine::setActivity()</a>.</p>
 
 </div>
 </div>
@@ -567,7 +575,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 <p>Change the maximum number of timers in this object. </p>
 <p>Any added timer with id &gt;= <em>max</em> will be removed. </p>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00157">157</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00164">164</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 </div>
 </div>
@@ -605,7 +613,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1os_1_1Timer.html#abe2fe753bebb97102d899a45d02e19ac" title="Disable an armed timer. ">killTimer</a> to disable it again. </dd></dl>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00163">163</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00170">170</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 <p>References <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>, and <a class="el" href="Semaphore_8hpp_source.html#l00096">RTT::os::Semaphore::signal()</a>.</p>
 
@@ -642,7 +650,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00152">152</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00159">159</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 </div>
 </div>
@@ -669,7 +677,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the remaining time in seconds. </dd></dl>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00213">213</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00220">220</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 <p>References <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>.</p>
 
@@ -698,7 +706,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if timer has expired or if it was killed and false if the timer is not armed </dd></dl>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00243">243</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00250">250</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 </div>
 </div>
@@ -736,7 +744,40 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if timer has expired or if it was killed before abs_time and false if the timer is not armed </dd></dl>
 
-<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00256">256</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00263">263</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a578a2025eaf9af809a72d9783fdaa803"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::RunnableInterface::work </td>
+          <td>(</td>
+          <td class="paramtype">WorkReason&#160;</td>
+          <td class="paramname"><em>reason</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Identical to <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a> but gives a reason why the function was called. </p>
+<p>Both <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a> and <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803" title="Identical to step() but gives a reason why the function was called. ">work()</a> will be called an equal amount of times, so you need to use only one, but work gives you the reason why. </p>
+
+<p>Reimplemented in <a class="el" href="classRTT_1_1ExecutionEngine.html#ae8cafe41e40c69803988744e07dfcb72">RTT::ExecutionEngine</a>.</p>
+
+<p>Definition at line <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00071">71</a> of file <a class="el" href="CoreRunnableInterface_8cpp_source.html">CoreRunnableInterface.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="SlaveActivity_8cpp_source.html#l00202">RTT::extras::SlaveActivity::execute()</a>, <a class="el" href="Activity_8cpp_source.html#l00172">RTT::Activity::loop()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00145">RTT::extras::SequentialActivity::trigger()</a>, <a class="el" href="FileDescriptorSimulationActivity_8cpp_source.html#l00245">RTT::extras::FileDescriptorSimulationActivity::work()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00207">RTT::extras::PeriodicActivity::work()</a>, and <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00432">RTT::extras::FileDescriptorActivity::work()</a>.</p>
 
 </div>
 </div>
@@ -747,7 +788,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

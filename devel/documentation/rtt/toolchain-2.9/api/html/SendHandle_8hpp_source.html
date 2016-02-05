@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -152,8 +152,8 @@
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">using</span> CBase::collect;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classRTT_1_1SendHandle.html#a51c5c85783190867ee9becc0f589e64e">  124</a></span>&#160;        <a class="code" href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8">SendStatus</a> <a class="code" href="classRTT_1_1SendHandle.html#a51c5c85783190867ee9becc0f589e64e">collect</a>()</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        {</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classRTT_1_1SendHandle.html#a235385c4edfb6cbc99ac75c2176b6ce5">  124</a></span>&#160;        <a class="code" href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8">SendStatus</a> <a class="code" href="classRTT_1_1SendHandle.html#a235385c4edfb6cbc99ac75c2176b6ce5">collect</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">if</span> (this-&gt;impl)</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordflow">return</span> this-&gt;impl-&gt;collect();</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8a42f07f26d5ce4ed50ab024545fb43b73">SendFailure</a>;</div>
@@ -166,18 +166,18 @@
 <div class="ttc" id="classRTT_1_1SendHandle_html_a6f4a3988062c36fa02c15fbcbc7ada42"><div class="ttname"><a href="classRTT_1_1SendHandle.html#a6f4a3988062c36fa02c15fbcbc7ada42">RTT::SendHandle::ready</a></div><div class="ttdeci">bool ready() const </div><div class="ttdoc">Inspect if this SendHandle is pointing to valid (existing) invocation. </div><div class="ttdef"><b>Definition:</b> <a href="SendHandle_8hpp_source.html#l00117">SendHandle.hpp:117</a></div></div>
 <div class="ttc" id="namespaceRTT_html_a55cf62997a93f05db722902f1cf269d8"><div class="ttname"><a href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8">RTT::SendStatus</a></div><div class="ttdeci">SendStatus</div><div class="ttdoc">Returns the status of a send() or collect() invocation. </div><div class="ttdef"><b>Definition:</b> <a href="SendStatus_8hpp_source.html#l00053">SendStatus.hpp:53</a></div></div>
 <div class="ttc" id="classRTT_1_1SendHandle_html"><div class="ttname"><a href="classRTT_1_1SendHandle.html">RTT::SendHandle</a></div><div class="ttdoc">The SendHandle is used to collect the result values of an asynchronous invocation. </div><div class="ttdef"><b>Definition:</b> <a href="rtt-fwd_8hpp_source.html#l00079">rtt-fwd.hpp:79</a></div></div>
-<div class="ttc" id="classRTT_1_1SendHandle_html_a51c5c85783190867ee9becc0f589e64e"><div class="ttname"><a href="classRTT_1_1SendHandle.html#a51c5c85783190867ee9becc0f589e64e">RTT::SendHandle::collect</a></div><div class="ttdeci">SendStatus collect()</div><div class="ttdoc">Collect this operator if the method has no arguments. </div><div class="ttdef"><b>Definition:</b> <a href="SendHandle_8hpp_source.html#l00124">SendHandle.hpp:124</a></div></div>
 <div class="ttc" id="namespaceRTT_html_a55cf62997a93f05db722902f1cf269d8a42f07f26d5ce4ed50ab024545fb43b73"><div class="ttname"><a href="namespaceRTT.html#a55cf62997a93f05db722902f1cf269d8a42f07f26d5ce4ed50ab024545fb43b73">RTT::SendFailure</a></div><div class="ttdoc">Returned when the result of the send() could not be collected. </div><div class="ttdef"><b>Definition:</b> <a href="SendStatus_8hpp_source.html#l00055">SendStatus.hpp:55</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1DisposableInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1DisposableInterface.html">RTT::base::DisposableInterface</a></div><div class="ttdoc">An object that is executable and is freed after execution. </div><div class="ttdef"><b>Definition:</b> <a href="DisposableInterface_8hpp_source.html#l00053">DisposableInterface.hpp:53</a></div></div>
 <div class="ttc" id="classRTT_1_1SendHandle_html_aaa42b020464932834e359e9384b82fcd"><div class="ttname"><a href="classRTT_1_1SendHandle.html#aaa42b020464932834e359e9384b82fcd">RTT::SendHandle::SendHandle</a></div><div class="ttdeci">SendHandle(const SendHandle &amp;hs)</div><div class="ttdoc">Create a copy-equivalent SendHandle. </div><div class="ttdef"><b>Definition:</b> <a href="SendHandle_8hpp_source.html#l00083">SendHandle.hpp:83</a></div></div>
 <div class="ttc" id="classRTT_1_1SendHandle_html_af5c33d453d07475d96abd45b2f51f9ca"><div class="ttname"><a href="classRTT_1_1SendHandle.html#af5c33d453d07475d96abd45b2f51f9ca">RTT::SendHandle::SendHandle</a></div><div class="ttdeci">SendHandle()</div><div class="ttdoc">Create an empty SendHandle. </div><div class="ttdef"><b>Definition:</b> <a href="SendHandle_8hpp_source.html#l00076">SendHandle.hpp:76</a></div></div>
+<div class="ttc" id="classRTT_1_1SendHandle_html_a235385c4edfb6cbc99ac75c2176b6ce5"><div class="ttname"><a href="classRTT_1_1SendHandle.html#a235385c4edfb6cbc99ac75c2176b6ce5">RTT::SendHandle::collect</a></div><div class="ttdeci">SendStatus collect() const </div><div class="ttdoc">Collect this operator if the method has no arguments. </div><div class="ttdef"><b>Definition:</b> <a href="SendHandle_8hpp_source.html#l00124">SendHandle.hpp:124</a></div></div>
 <div class="ttc" id="structRTT_1_1internal_1_1ReturnSignature_html"><div class="ttname"><a href="structRTT_1_1internal_1_1ReturnSignature.html">RTT::internal::ReturnSignature</a></div><div class="ttdoc">Defines ret(), given a Signature. </div><div class="ttdef"><b>Definition:</b> <a href="ReturnSignature_8hpp_source.html#l00057">ReturnSignature.hpp:57</a></div></div>
 <div class="ttc" id="structRTT_1_1internal_1_1CollectSignature_html"><div class="ttname"><a href="structRTT_1_1internal_1_1CollectSignature.html">RTT::internal::CollectSignature</a></div><div class="ttdoc">Used to implement collect(), given a Function Signature. </div><div class="ttdef"><b>Definition:</b> <a href="CollectSignature_8hpp_source.html#l00112">CollectSignature.hpp:112</a></div></div>
 <div class="ttc" id="classRTT_1_1SendHandle_html_a4134ed7bacd1d77a4eb1226787a1d2d9"><div class="ttname"><a href="classRTT_1_1SendHandle.html#a4134ed7bacd1d77a4eb1226787a1d2d9">RTT::SendHandle::~SendHandle</a></div><div class="ttdeci">~SendHandle()</div><div class="ttdoc">No-op destructor, does not change signal/slot state. </div><div class="ttdef"><b>Definition:</b> <a href="SendHandle_8hpp_source.html#l00088">SendHandle.hpp:88</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:03 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

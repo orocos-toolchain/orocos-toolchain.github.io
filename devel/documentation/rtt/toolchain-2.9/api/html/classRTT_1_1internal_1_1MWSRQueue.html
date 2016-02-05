@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -71,15 +71,16 @@ Inheritance diagram for RTT::internal::MWSRQueue&lt; T &gt;:</div>
  <div class="center">
   <img src="classRTT_1_1internal_1_1MWSRQueue.png" usemap="#RTT::internal::MWSRQueue&lt; T &gt;_map" alt=""/>
   <map id="RTT::internal::MWSRQueue&lt; T &gt;_map" name="RTT::internal::MWSRQueue&lt; T &gt;_map">
-<area href="classRTT_1_1internal_1_1AtomicMWSRQueue.html" title="Create an atomic, non-blocking Multi-Writer Single-Reader FIFO for storing a pointer T by value..." alt="RTT::internal::AtomicMWSRQueue&lt; T &gt;" shape="rect" coords="0,0,233,24"/>
+<area href="classRTT_1_1internal_1_1AtomicMWSRQueue.html" title="Create an atomic, non-blocking Multi-Writer Single-Reader FIFO for storing a pointer T by value..." alt="RTT::internal::AtomicMWSRQueue&lt; T &gt;" shape="rect" coords="0,56,233,80"/>
+<area href="classRTT_1_1internal_1_1AtomicQueue.html" title="An atomic, non-blocking single ended queue (FIFO) for storing a pointer to T. " alt="RTT::internal::AtomicQueue&lt; T &gt;" shape="rect" coords="0,0,233,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a6c47b08a6bf750a0cca0d8b67109bd79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c47b08a6bf750a0cca0d8b67109bd79"></a>
+<tr class="memitem:ad1d13d23d87229e9066e4f15d313de33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1d13d23d87229e9066e4f15d313de33"></a>
 typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b></td></tr>
-<tr class="separator:a6c47b08a6bf750a0cca0d8b67109bd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ad1d13d23d87229e9066e4f15d313de33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -128,7 +129,7 @@ class RTT::internal::MWSRQueue&lt; T &gt;</h3>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T&gt; </div>
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -143,7 +144,7 @@ template&lt;class T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -157,9 +158,9 @@ template&lt;class T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>false if queue is empty, true if result was written. </dd></dl>
 
-<p>Definition at line <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00247">247</a> of file <a class="el" href="AtomicMWSRQueue_8hpp_source.html">AtomicMWSRQueue.hpp</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a9367f9fbf0be2b9884d7a89c98b920f7">RTT::internal::AtomicQueue&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="BufferLockFree_8hpp_source.html#l00135">RTT::base::BufferLockFree&lt; T &gt;::clear()</a>, <a class="el" href="BufferLockFree_8hpp_source.html#l00194">RTT::base::BufferLockFree&lt; T &gt;::Pop()</a>, <a class="el" href="BufferLockFree_8hpp_source.html#l00217">RTT::base::BufferLockFree&lt; T &gt;::PopWithoutRelease()</a>, and <a class="el" href="BufferLockFree_8hpp_source.html#l00142">RTT::base::BufferLockFree&lt; T &gt;::Push()</a>.</p>
+<p>Definition at line <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00249">249</a> of file <a class="el" href="AtomicMWSRQueue_8hpp_source.html">AtomicMWSRQueue.hpp</a>.</p>
 
 </div>
 </div>
@@ -167,7 +168,7 @@ template&lt;class T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T&gt; </div>
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -182,7 +183,7 @@ template&lt;class T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -196,9 +197,9 @@ template&lt;class T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>false if queue is full, true if queued. </dd></dl>
 
-<p>Definition at line <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00229">229</a> of file <a class="el" href="AtomicMWSRQueue_8hpp_source.html">AtomicMWSRQueue.hpp</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a5fe35af4a9091a40af204dd983387358">RTT::internal::AtomicQueue&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="BufferLockFree_8hpp_source.html#l00142">RTT::base::BufferLockFree&lt; T &gt;::Push()</a>.</p>
+<p>Definition at line <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00231">231</a> of file <a class="el" href="AtomicMWSRQueue_8hpp_source.html">AtomicMWSRQueue.hpp</a>.</p>
 
 </div>
 </div>
@@ -206,7 +207,7 @@ template&lt;class T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T&gt; </div>
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -220,7 +221,7 @@ template&lt;class T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -228,9 +229,9 @@ template&lt;class T&gt; </div>
 <p>Inspect if the <a class="el" href="classRTT_1_1internal_1_1Queue.html" title="This object represents the default Multi-Writer/Multi-Reader queue implementation used by Orocos obje...">Queue</a> is empty. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if empty, false otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00197">197</a> of file <a class="el" href="AtomicMWSRQueue_8hpp_source.html">AtomicMWSRQueue.hpp</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#ad0a478087ac3ec7a80fd5e9d99d7c137">RTT::internal::AtomicQueue&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="BufferLockFree_8hpp_source.html#l00125">RTT::base::BufferLockFree&lt; T &gt;::empty()</a>.</p>
+<p>Definition at line <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00199">199</a> of file <a class="el" href="AtomicMWSRQueue_8hpp_source.html">AtomicMWSRQueue.hpp</a>.</p>
 
 </div>
 </div>
@@ -238,7 +239,7 @@ template&lt;class T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T&gt; </div>
+template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -252,7 +253,7 @@ template&lt;class T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -260,9 +261,9 @@ template&lt;class T&gt; </div>
 <p>Inspect if the <a class="el" href="classRTT_1_1internal_1_1Queue.html" title="This object represents the default Multi-Writer/Multi-Reader queue implementation used by Orocos obje...">Queue</a> is full. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if full, false otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00183">183</a> of file <a class="el" href="AtomicMWSRQueue_8hpp_source.html">AtomicMWSRQueue.hpp</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#af0d9d213effe63b6d5d50c2a0a92704c">RTT::internal::AtomicQueue&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="BufferLockFree_8hpp_source.html#l00130">RTT::base::BufferLockFree&lt; T &gt;::full()</a>.</p>
+<p>Definition at line <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00185">185</a> of file <a class="el" href="AtomicMWSRQueue_8hpp_source.html">AtomicMWSRQueue.hpp</a>.</p>
 
 </div>
 </div>
@@ -272,7 +273,7 @@ template&lt;class T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:06 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

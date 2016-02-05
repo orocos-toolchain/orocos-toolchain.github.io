@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -144,6 +144,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
 <tr class="memitem:a30d9844ad4e61e7460dfec2b863d7515"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a30d9844ad4e61e7460dfec2b863d7515">trigger</a> ()</td></tr>
 <tr class="memdesc:a30d9844ad4e61e7460dfec2b863d7515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger that work has to be done.  <a href="#a30d9844ad4e61e7460dfec2b863d7515">More...</a><br/></td></tr>
 <tr class="separator:a30d9844ad4e61e7460dfec2b863d7515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ede175403b8b2627736333c061b4cd6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a9ede175403b8b2627736333c061b4cd6">timeout</a> ()</td></tr>
+<tr class="memdesc:a9ede175403b8b2627736333c061b4cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests this <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a> to wakeup and call step() + work(Timeout).  <a href="#a9ede175403b8b2627736333c061b4cd6">More...</a><br/></td></tr>
+<tr class="separator:a9ede175403b8b2627736333c061b4cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82544a7ce478a5fa1dbc61888a04ca9c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a82544a7ce478a5fa1dbc61888a04ca9c">run</a> (<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *r)</td></tr>
 <tr class="memdesc:a82544a7ce478a5fa1dbc61888a04ca9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run exclusively this <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a>.  <a href="#a82544a7ce478a5fa1dbc61888a04ca9c">More...</a><br/></td></tr>
 <tr class="separator:a82544a7ce478a5fa1dbc61888a04ca9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,7 +235,7 @@ Reactions to trigger():</h1>
 
 <p>Definition at line <a class="el" href="ActivityInterface_8hpp_source.html#l00073">73</a> of file <a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00069">RTT::base::RunnableInterface::setActivity()</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00047">RTT::base::RunnableInterface::~RunnableInterface()</a>.</p>
+<p>Referenced by <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00047">RTT::base::RunnableInterface::~RunnableInterface()</a>.</p>
 
 </div>
 </div>
@@ -271,7 +274,7 @@ Reactions to trigger():</h1>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#ae490cda9ee1ef6ed7a42f8725d3af3dd">RTT::base::ActivityInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="SequentialActivity_8cpp_source.html#l00180">180</a> of file <a class="el" href="SequentialActivity_8cpp_source.html">SequentialActivity.cpp</a>.</p>
+<p>Definition at line <a class="el" href="SequentialActivity_8cpp_source.html#l00190">190</a> of file <a class="el" href="SequentialActivity_8cpp_source.html">SequentialActivity.cpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +391,7 @@ Reactions to trigger():</h1>
 </div><div class="memdoc">
 
 <p>Inspect if this activity is periodic. </p>
-<p>If so, it will call <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be periodically executed when this class is run in a periodic thread...">RunnableInterface::step()</a>. If the activity is not periodic, it will call <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic thread. ">RunnableInterface::loop()</a>.</p>
+<p>If so, it will call <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be (periodically) executed when this object is run in an Activity. ">RunnableInterface::step()</a>. If the activity is not periodic, it will call <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic Activity. ">RunnableInterface::loop()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>true if periodic. </dd></dl>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a9fe788cc8d6d10f3e1a4d16b111a8b18">RTT::base::ActivityInterface</a>.</p>
@@ -419,7 +422,7 @@ Reactions to trigger():</h1>
 </div><div class="memdoc">
 
 <p>Query if the activity is initialized and executing. </p>
-<p>This is more strict than <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a819a65c63a987b6a5a747551534b54a0" title="Query if the activity is started. ">isActive()</a>, it is only true after initialize() is executed and before finalize() is executed. More-over, an <a class="el" href="classRTT_1_1Activity.html" title="An Activity is an object that represents a thread. ">Activity</a> may decide to be temporarily not running (not executing code), <em>waiting</em> for a signal to proceed. If this-&gt;<a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a819a65c63a987b6a5a747551534b54a0" title="Query if the activity is started. ">isActive()</a> and !this-&gt;<a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a3f32a5a080af421974152b7126d8ae19" title="Query if the activity is initialized and executing. ">isRunning()</a> then the <a class="el" href="classRTT_1_1Activity.html" title="An Activity is an object that represents a thread. ">Activity</a> is in a <em>waiting</em> state.</p>
+<p>This is more strict than <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a819a65c63a987b6a5a747551534b54a0" title="Query if the activity is started. ">isActive()</a>, it is only true after initialize() is executed and before finalize() is executed. More-over, an <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a> may decide to be temporarily not running (not executing code), <em>waiting</em> for a signal to proceed. If this-&gt;<a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a819a65c63a987b6a5a747551534b54a0" title="Query if the activity is started. ">isActive()</a> and !this-&gt;<a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a3f32a5a080af421974152b7126d8ae19" title="Query if the activity is initialized and executing. ">isRunning()</a> then the <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a> is in a <em>waiting</em> state.</p>
 <dl class="section return"><dt>Returns</dt><dd>true if it is running, false otherwise </dd></dl>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#aa21330bc3d3b636589c124f3c71676e4">RTT::base::ActivityInterface</a>.</p>
@@ -462,9 +465,9 @@ Reactions to trigger():</h1>
 
 <p>Definition at line <a class="el" href="ActivityInterface_8cpp_source.html#l00057">57</a> of file <a class="el" href="ActivityInterface_8cpp_source.html">ActivityInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface::isActive()</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00069">RTT::base::RunnableInterface::setActivity()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface::isActive()</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00343">RTT::TaskContext::setActivity()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00336">RTT::TaskContext::setActivity()</a>.</p>
 
 </div>
 </div>
@@ -553,7 +556,7 @@ Reactions to trigger():</h1>
 </div><div class="memdoc">
 
 <p>Start the activity. </p>
-<p>This will call <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a1fc18ba15bd1fd69759e127a2e466e65" title="The method that will be called before the first periodical execution of step() ( or non periodical ex...">RunnableInterface::initialize()</a> and upon success, effectively start the activity, by running the <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be periodically executed when this class is run in a periodic thread...">RunnableInterface::step()</a> or <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic thread. ">RunnableInterface::loop()</a> in a thread. </p>
+<p>This will call <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a1fc18ba15bd1fd69759e127a2e466e65" title="The method that will be called before the first periodical execution of step() ( or non periodical ex...">RunnableInterface::initialize()</a> and upon success, effectively start the activity, by running the <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be (periodically) executed when this object is run in an Activity. ">RunnableInterface::step()</a> or <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic Activity. ">RunnableInterface::loop()</a> in a thread. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a0d4db5442d7d2dc10bf1dd1743655a57" title="Inspect if this activity is periodic. ">isPeriodic()</a></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the activity is started, false otherwise </dd></dl>
 
@@ -633,6 +636,38 @@ Reactions to trigger():</h1>
 
 </div>
 </div>
+<a class="anchor" id="a9ede175403b8b2627736333c061b4cd6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::SequentialActivity::timeout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Requests this <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a> to wakeup and call step() + work(Timeout). </p>
+<p>Will be ignored for periodic activities, since they use an internal timing mechanism, but can be used for non-periodic activities which want to emulate a timeout happening towards the <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">base::RunnableInterface</a>. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a99f8cbfa2c5022c575e4b5e404cb02c8">RTT::base::ActivityInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="SequentialActivity_8cpp_source.html#l00185">185</a> of file <a class="el" href="SequentialActivity_8cpp_source.html">SequentialActivity.cpp</a>.</p>
+
+<p>References <a class="el" href="SequentialActivity_8cpp_source.html#l00145">trigger()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a30d9844ad4e61e7460dfec2b863d7515"></a>
 <div class="memitem">
 <div class="memproto">
@@ -657,6 +692,7 @@ Reactions to trigger():</h1>
 <p>Trigger that work has to be done. </p>
 <p>When you invoke <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a30d9844ad4e61e7460dfec2b863d7515" title="Trigger that work has to be done. ">trigger()</a>, you intend to notify the mechanism that calls <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#ab4eff1cc78f9fe45f2ec5a25491aecfa" title="Execute this activity such that it executes a step or loop of the RunnableInterface. ">execute()</a>, that <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#ab4eff1cc78f9fe45f2ec5a25491aecfa" title="Execute this activity such that it executes a step or loop of the RunnableInterface. ">execute()</a> should be called. This allows a separation between actually executing code (<a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#ab4eff1cc78f9fe45f2ec5a25491aecfa" title="Execute this activity such that it executes a step or loop of the RunnableInterface. ">execute()</a>) and notifying that code must be executed (<a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a30d9844ad4e61e7460dfec2b863d7515" title="Trigger that work has to be done. ">trigger()</a>). A trigger may be ignored by the implementation, in which case trigger returns false.</p>
 <p>Semantics: If <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a30d9844ad4e61e7460dfec2b863d7515" title="Trigger that work has to be done. ">trigger()</a> returns true, the activity will be executed at least once from the moment <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a30d9844ad4e61e7460dfec2b863d7515" title="Trigger that work has to be done. ">trigger()</a> is called.</p>
+<p>Requests this <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a> to wakeup and call step() + work(Trigger). If the thread is periodic, it will continue sleeping for the remainder of the time after the work() has finished.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>When this-&gt;<a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a819a65c63a987b6a5a747551534b54a0" title="Query if the activity is started. ">isActive()</a> and the implementation allows external triggers. </td></tr>
@@ -669,7 +705,9 @@ Reactions to trigger():</h1>
 
 <p>Definition at line <a class="el" href="SequentialActivity_8cpp_source.html#l00145">145</a> of file <a class="el" href="SequentialActivity_8cpp_source.html">SequentialActivity.cpp</a>.</p>
 
-<p>References <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00065">RTT::base::RunnableInterface::hasWork()</a>, <a class="el" href="MutexLock_8hpp_source.html#l00107">RTT::os::MutexTryLock::isSuccessful()</a>, and <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">RTT::base::RunnableInterface::step()</a>.</p>
+<p>References <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00067">RTT::base::RunnableInterface::hasWork()</a>, <a class="el" href="MutexLock_8hpp_source.html#l00107">RTT::os::MutexTryLock::isSuccessful()</a>, <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">RTT::base::RunnableInterface::step()</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00071">RTT::base::RunnableInterface::work()</a>.</p>
+
+<p>Referenced by <a class="el" href="SequentialActivity_8cpp_source.html#l00185">timeout()</a>.</p>
 
 </div>
 </div>
@@ -680,7 +718,7 @@ Reactions to trigger():</h1>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

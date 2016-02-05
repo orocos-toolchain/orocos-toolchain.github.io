@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -55,6 +55,7 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classRTT_1_1base_1_1Buffer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">RTT::base::Buffer&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__PortBuffers.html">Data Storage and Buffering classes.</a></div></div>  </div>
@@ -105,9 +106,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1Buffer.html#a66ef5149fca4589acc8b44080146d8ab">Buffer</a> (int qsize, const T &amp;initial_value=T())</td></tr>
 <tr class="memdesc:a66ef5149fca4589acc8b44080146d8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a fifo queue of fixed size. <br/></td></tr>
 <tr class="separator:a66ef5149fca4589acc8b44080146d8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d9fbf417f40fdb4daac425204a1f6de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a9d9fbf417f40fdb4daac425204a1f6de">data_sample</a> (const T &amp;sample)</td></tr>
-<tr class="memdesc:a9d9fbf417f40fdb4daac425204a1f6de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this buffer with a data sample, such that for dynamical allocated types T, the buffer can reserve place to hold these elements.  <a href="#a9d9fbf417f40fdb4daac425204a1f6de">More...</a><br/></td></tr>
-<tr class="separator:a9d9fbf417f40fdb4daac425204a1f6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60525f313d2a8d828668e299a1fc599"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#ad60525f313d2a8d828668e299a1fc599">data_sample</a> (const T &amp;sample, bool reset=true)</td></tr>
+<tr class="memdesc:ad60525f313d2a8d828668e299a1fc599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this buffer with a data sample, such that for dynamical allocated types T, the buffer can reserve place to hold these elements.  <a href="#ad60525f313d2a8d828668e299a1fc599">More...</a><br/></td></tr>
+<tr class="separator:ad60525f313d2a8d828668e299a1fc599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34a6b145108edd41701059db92cf995c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34a6b145108edd41701059db92cf995c"></a>
 virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a34a6b145108edd41701059db92cf995c">data_sample</a> () const </td></tr>
 <tr class="memdesc:a34a6b145108edd41701059db92cf995c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads back a data sample. <br/></td></tr>
@@ -133,9 +134,9 @@ virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <tr class="memitem:ac7fd61f386cc1d9ff566c0d94d017a05"><td class="memItemLeft" align="right" valign="top">size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#ac7fd61f386cc1d9ff566c0d94d017a05">Push</a> (const std::vector&lt; T &gt; &amp;items)</td></tr>
 <tr class="memdesc:ac7fd61f386cc1d9ff566c0d94d017a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a sequence of values to the buffer.  <a href="#ac7fd61f386cc1d9ff566c0d94d017a05">More...</a><br/></td></tr>
 <tr class="separator:ac7fd61f386cc1d9ff566c0d94d017a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9c98ca231c111dfbc5e507b4e62f7bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#ad9c98ca231c111dfbc5e507b4e62f7bc">Pop</a> (reference_t item)</td></tr>
-<tr class="memdesc:ad9c98ca231c111dfbc5e507b4e62f7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the oldest value from the buffer.  <a href="#ad9c98ca231c111dfbc5e507b4e62f7bc">More...</a><br/></td></tr>
-<tr class="separator:ad9c98ca231c111dfbc5e507b4e62f7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2defb590a3b6d562409013a5593a1255"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a2defb590a3b6d562409013a5593a1255">Pop</a> (reference_t item)</td></tr>
+<tr class="memdesc:a2defb590a3b6d562409013a5593a1255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the oldest value from the buffer.  <a href="#a2defb590a3b6d562409013a5593a1255">More...</a><br/></td></tr>
+<tr class="separator:a2defb590a3b6d562409013a5593a1255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb2b826f6c462d4438bed6e39a868601"><td class="memItemLeft" align="right" valign="top">size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#adb2b826f6c462d4438bed6e39a868601">Pop</a> (std::vector&lt; T &gt; &amp;items)</td></tr>
 <tr class="memdesc:adb2b826f6c462d4438bed6e39a868601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the whole buffer.  <a href="#adb2b826f6c462d4438bed6e39a868601">More...</a><br/></td></tr>
 <tr class="separator:adb2b826f6c462d4438bed6e39a868601"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,6 +146,13 @@ virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <tr class="memitem:a7a0bb28801aa18093fddcfbe38ce8823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a7a0bb28801aa18093fddcfbe38ce8823">Release</a> (value_t *item)</td></tr>
 <tr class="memdesc:a7a0bb28801aa18093fddcfbe38ce8823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the pointer.  <a href="#a7a0bb28801aa18093fddcfbe38ce8823">More...</a><br/></td></tr>
 <tr class="separator:a7a0bb28801aa18093fddcfbe38ce8823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a6cea6f3def4aee67b0cf4e308bd529f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cea6f3def4aee67b0cf4e308bd529f8"></a>
+const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLockFree.html#a6cea6f3def4aee67b0cf4e308bd529f8">MAX_THREADS</a></td></tr>
+<tr class="memdesc:a6cea6f3def4aee67b0cf4e308bd529f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of threads. <br/></td></tr>
+<tr class="separator:a6cea6f3def4aee67b0cf4e308bd529f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
@@ -182,11 +190,11 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#a721f2d8ea29ab506dbe0a4c8b4a26739">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00115">115</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00154">154</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
-<p>References <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00208">RTT::internal::AtomicMWSRQueue&lt; T &gt;::capacity()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a8782badebec2e4e1751d8500acda45e6">RTT::internal::AtomicQueue&lt; T &gt;::capacity()</a>.</p>
 
-<p>Referenced by <a class="el" href="BufferLockFree_8hpp_source.html#l00142">RTT::base::BufferLockFree&lt; T &gt;::Push()</a>.</p>
+<p>Referenced by <a class="el" href="BufferLockFree_8hpp_source.html#l00181">RTT::base::BufferLockFree&lt; T &gt;::Push()</a>.</p>
 
 </div>
 </div>
@@ -217,13 +225,13 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#af28ce2d9f7370819cb9bcd3222cc67e3">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00135">135</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00174">174</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
-<p>References <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00247">RTT::internal::AtomicMWSRQueue&lt; T &gt;::dequeue()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a9367f9fbf0be2b9884d7a89c98b920f7">RTT::internal::AtomicQueue&lt; T &gt;::dequeue()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9d9fbf417f40fdb4daac425204a1f6de"></a>
+<a class="anchor" id="ad60525f313d2a8d828668e299a1fc599"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -233,11 +241,21 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html">RTT::base::BufferLockFree</a>&lt; T &gt;::data_sample </td>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html">RTT::base::BufferLockFree</a>&lt; T &gt;::data_sample </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td class="paramname"><em>sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reset</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -248,11 +266,19 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Initializes this buffer with a data sample, such that for dynamical allocated types T, the buffer can reserve place to hold these elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sample</td><td>the data sample </td></tr>
+    <tr><td class="paramname">reset</td><td>enforce reinitialization even if this operation clears all data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the buffer was successfully (re)initialized. </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>Calling this function causes all data in the buffer to be lost and the size being reset to zero.   </dd></dl>
 
-<p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a500e68c93d1286799d4bc4d101be3068">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a823e9a30c4d87afa6859af3d799e58eb">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00098">98</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00130">130</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
 <p>References <a class="el" href="TsPool_8hpp_source.html#l00153">RTT::internal::TsPool&lt; T &gt;::data_sample()</a>.</p>
 
@@ -286,9 +312,9 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#a403a7c9c68c2c4870079f062b8eab36b">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00125">125</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00164">164</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
-<p>References <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00197">RTT::internal::AtomicMWSRQueue&lt; T &gt;::isEmpty()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#ad0a478087ac3ec7a80fd5e9d99d7c137">RTT::internal::AtomicQueue&lt; T &gt;::isEmpty()</a>.</p>
 
 </div>
 </div>
@@ -320,13 +346,13 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#aabaaf0c817a58a4b130d492b58e86b1a">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00130">130</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00169">169</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
-<p>References <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00183">RTT::internal::AtomicMWSRQueue&lt; T &gt;::isFull()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#af0d9d213effe63b6d5d50c2a0a92704c">RTT::internal::AtomicQueue&lt; T &gt;::isFull()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad9c98ca231c111dfbc5e507b4e62f7bc"></a>
+<a class="anchor" id="a2defb590a3b6d562409013a5593a1255"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -336,7 +362,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html">RTT::base::BufferLockFree</a>&lt; T &gt;::Pop </td>
+          <td class="memname"><a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a> <a class="el" href="classRTT_1_1base_1_1BufferLockFree.html">RTT::base::BufferLockFree</a>&lt; T &gt;::Pop </td>
           <td>(</td>
           <td class="paramtype">reference_t&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
@@ -359,11 +385,11 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if something was read.   </dd></dl>
 
-<p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ae2af23bcbd142dc2d09b75e30dddf391">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ade01d7c098ebc1062ea374cb18e340ba">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00194">194</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00233">233</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
-<p>References <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00247">RTT::internal::AtomicMWSRQueue&lt; T &gt;::dequeue()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a9367f9fbf0be2b9884d7a89c98b920f7">RTT::internal::AtomicQueue&lt; T &gt;::dequeue()</a>.</p>
 
 </div>
 </div>
@@ -402,9 +428,9 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a1fb40ec315410ca6650bb722b23230dd">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00205">205</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00244">244</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
-<p>References <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00247">RTT::internal::AtomicMWSRQueue&lt; T &gt;::dequeue()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a9367f9fbf0be2b9884d7a89c98b920f7">RTT::internal::AtomicQueue&lt; T &gt;::dequeue()</a>.</p>
 
 </div>
 </div>
@@ -438,9 +464,9 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ad877aa5119fb6ea6ee3a4fc8f6800cfb">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00217">217</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00256">256</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
-<p>References <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00247">RTT::internal::AtomicMWSRQueue&lt; T &gt;::dequeue()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a9367f9fbf0be2b9884d7a89c98b920f7">RTT::internal::AtomicQueue&lt; T &gt;::dequeue()</a>.</p>
 
 </div>
 </div>
@@ -479,11 +505,11 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#afc6ad58cdae63ea7a2fc7d130686e92d">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00142">142</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00181">181</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
-<p>References <a class="el" href="BufferLockFree_8hpp_source.html#l00115">RTT::base::BufferLockFree&lt; T &gt;::capacity()</a>, <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00247">RTT::internal::AtomicMWSRQueue&lt; T &gt;::dequeue()</a>, <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00229">RTT::internal::AtomicMWSRQueue&lt; T &gt;::enqueue()</a>, and <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00216">RTT::internal::AtomicMWSRQueue&lt; T &gt;::size()</a>.</p>
+<p>References <a class="el" href="BufferLockFree_8hpp_source.html#l00154">RTT::base::BufferLockFree&lt; T &gt;::capacity()</a>, <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a9367f9fbf0be2b9884d7a89c98b920f7">RTT::internal::AtomicQueue&lt; T &gt;::dequeue()</a>, <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a5fe35af4a9091a40af204dd983387358">RTT::internal::AtomicQueue&lt; T &gt;::enqueue()</a>, and <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a901fee268df48765afd7f81edb709dae">RTT::internal::AtomicQueue&lt; T &gt;::size()</a>.</p>
 
-<p>Referenced by <a class="el" href="BufferLockFree_8hpp_source.html#l00181">RTT::base::BufferLockFree&lt; T &gt;::Push()</a>.</p>
+<p>Referenced by <a class="el" href="BufferLockFree_8hpp_source.html#l00220">RTT::base::BufferLockFree&lt; T &gt;::Push()</a>.</p>
 
 </div>
 </div>
@@ -522,9 +548,9 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a6cabb6e94e7d78d4d916f3ddab6e1824">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00181">181</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00220">220</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
-<p>References <a class="el" href="BufferLockFree_8hpp_source.html#l00142">RTT::base::BufferLockFree&lt; T &gt;::Push()</a>.</p>
+<p>References <a class="el" href="BufferLockFree_8hpp_source.html#l00181">RTT::base::BufferLockFree&lt; T &gt;::Push()</a>.</p>
 
 </div>
 </div>
@@ -562,7 +588,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#adc9383d94d498971244c09907004de3f">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00225">225</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00264">264</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
 </div>
 </div>
@@ -594,9 +620,9 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#ae43534aa3872e564c88fd18d5cf5f772">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00120">120</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLockFree_8hpp_source.html#l00159">159</a> of file <a class="el" href="BufferLockFree_8hpp_source.html">BufferLockFree.hpp</a>.</p>
 
-<p>References <a class="el" href="AtomicMWSRQueue_8hpp_source.html#l00216">RTT::internal::AtomicMWSRQueue&lt; T &gt;::size()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a901fee268df48765afd7f81edb709dae">RTT::internal::AtomicQueue&lt; T &gt;::size()</a>.</p>
 
 </div>
 </div>
@@ -606,7 +632,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

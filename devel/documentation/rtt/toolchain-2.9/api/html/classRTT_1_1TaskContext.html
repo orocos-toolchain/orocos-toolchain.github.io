@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -104,9 +104,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab0d1864a7bb1bdac038a2dfb43fe72c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#ab0d1864a7bb1bdac038a2dfb43fe72c4">TaskContext</a> (const std::string &amp;name, <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a> initial_state=<a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296a56134dbafdb46e41026cf4c7b1bbb6f8">Stopped</a>)</td></tr>
 <tr class="memdesc:ab0d1864a7bb1bdac038a2dfb43fe72c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#ab0d1864a7bb1bdac038a2dfb43fe72c4">More...</a><br/></td></tr>
 <tr class="separator:ab0d1864a7bb1bdac038a2dfb43fe72c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b1396bc3ad1ea241fb8247dfcdd4077"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a8b1396bc3ad1ea241fb8247dfcdd4077">TaskContext</a> (const std::string &amp;name, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *parent, <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a> initial_state=<a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296a56134dbafdb46e41026cf4c7b1bbb6f8">Stopped</a>)</td></tr>
-<tr class="memdesc:a8b1396bc3ad1ea241fb8247dfcdd4077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#a8b1396bc3ad1ea241fb8247dfcdd4077">More...</a><br/></td></tr>
-<tr class="separator:a8b1396bc3ad1ea241fb8247dfcdd4077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aa7e91bf90f0793142432f74bb830a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7aa7e91bf90f0793142432f74bb830a1"></a>
 virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a7aa7e91bf90f0793142432f74bb830a1">getName</a> () const </td></tr>
 <tr class="memdesc:a7aa7e91bf90f0793142432f74bb830a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>. <br/></td></tr>
@@ -139,9 +136,6 @@ virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="botto
 <tr class="memitem:a6c7eb9108377ea236a034970ce1882e5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a6c7eb9108377ea236a034970ce1882e5">getTargetState</a> () const </td></tr>
 <tr class="memdesc:a6c7eb9108377ea236a034970ce1882e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state this <a class="el" href="classRTT_1_1base_1_1TaskCore.html" title="The minimal Orocos task. ">TaskCore</a> is going to, or in case no transition is taking place, returns <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aeebedaf344a1eae84f34b51ba052f299" title="Returns the current state of the TaskCore. ">getTaskState()</a>.  <a href="#a6c7eb9108377ea236a034970ce1882e5">More...</a><br/></td></tr>
 <tr class="separator:a6c7eb9108377ea236a034970ce1882e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2da9f3834b14d21614fd481eaed4ecec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a2da9f3834b14d21614fd481eaed4ecec">setExecutionEngine</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *<a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad2522496caacc3e88065b5cb09dc2b7a">engine</a>)</td></tr>
-<tr class="memdesc:a2da9f3834b14d21614fd481eaed4ecec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this method to re-set the execution engine of this task core.  <a href="#a2da9f3834b14d21614fd481eaed4ecec">More...</a><br/></td></tr>
-<tr class="separator:a2da9f3834b14d21614fd481eaed4ecec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2522496caacc3e88065b5cb09dc2b7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2522496caacc3e88065b5cb09dc2b7a"></a>
 const <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad2522496caacc3e88065b5cb09dc2b7a">engine</a> () const </td></tr>
 <tr class="memdesc:ad2522496caacc3e88065b5cb09dc2b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const pointer to the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of this Task. <br/></td></tr>
@@ -150,6 +144,21 @@ const <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> 
 <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ac18ebf7b987f142c8dad4413be2bbd30">engine</a> ()</td></tr>
 <tr class="memdesc:ac18ebf7b987f142c8dad4413be2bbd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of this Task. <br/></td></tr>
 <tr class="separator:ac18ebf7b987f142c8dad4413be2bbd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6ce3034250e9673cc6c80e7d03cc92"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a7d6ce3034250e9673cc6c80e7d03cc92">getCycleCounter</a> () const </td></tr>
+<tr class="memdesc:a7d6ce3034250e9673cc6c80e7d03cc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each update cycle, this counter increments by one.  <a href="#a7d6ce3034250e9673cc6c80e7d03cc92">More...</a><br/></td></tr>
+<tr class="separator:a7d6ce3034250e9673cc6c80e7d03cc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a17dbefbbbd3f7f6964ea23dd068a0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a17dbefbbbd3f7f6964ea23dd068a0e"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a3a17dbefbbbd3f7f6964ea23dd068a0e">getTriggerCounter</a> () const </td></tr>
+<tr class="memdesc:a3a17dbefbbbd3f7f6964ea23dd068a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cycles that were caused by Trigger triggers. <br/></td></tr>
+<tr class="separator:a3a17dbefbbbd3f7f6964ea23dd068a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3cfaa40033a59073b353bc752260dde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3cfaa40033a59073b353bc752260dde"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ab3cfaa40033a59073b353bc752260dde">getIOCounter</a> () const </td></tr>
+<tr class="memdesc:ab3cfaa40033a59073b353bc752260dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cycles that were caused by IOReady triggers. <br/></td></tr>
+<tr class="separator:ab3cfaa40033a59073b353bc752260dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1a81ca9d42e54566d5c4ac28315bcd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1a81ca9d42e54566d5c4ac28315bcd6"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#af1a81ca9d42e54566d5c4ac28315bcd6">getTimeOutCounter</a> () const </td></tr>
+<tr class="memdesc:af1a81ca9d42e54566d5c4ac28315bcd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cycles that were caused by TimeOut triggers. <br/></td></tr>
+<tr class="separator:af1a81ca9d42e54566d5c4ac28315bcd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Peer-to-Peer functions</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These functions are used to setup and manage peer-to-peer networks of <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> objects. </p>
 </div></td></tr>
@@ -345,6 +354,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aaa4d739183c23583a00eb37b555238a4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#aaa4d739183c23583a00eb37b555238a4">dataOnPortHook</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port)</td></tr>
 <tr class="memdesc:aaa4d739183c23583a00eb37b555238a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reimplement this method to influence how writing to event ports is handled by the component.  <a href="#aaa4d739183c23583a00eb37b555238a4">More...</a><br/></td></tr>
 <tr class="separator:aaa4d739183c23583a00eb37b555238a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990586cfe74123de656950365be45fea"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a990586cfe74123de656950365be45fea">dataOnPortCallback</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port)</td></tr>
+<tr class="memdesc:a990586cfe74123de656950365be45fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method implements port callbacks.  <a href="#a990586cfe74123de656950365be45fea">More...</a><br/></td></tr>
+<tr class="separator:a990586cfe74123de656950365be45fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9badff843c97307d2b3084c4320606c6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a9badff843c97307d2b3084c4320606c6">configureHook</a> ()</td></tr>
 <tr class="memdesc:a9badff843c97307d2b3084c4320606c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method such that it contains the code which will be executed when <em><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a492aed947a9bb2cbc25140884bc34e1b" title="This method instructs the component to (re-)read configuration data and try to enter the Stopped stat...">configure()</a></em> is called.  <a href="#a9badff843c97307d2b3084c4320606c6">More...</a><br/></td></tr>
 <tr class="separator:a9badff843c97307d2b3084c4320606c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -385,9 +397,31 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a29ab91fa8b90e2c9ac95652d67730d36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29ab91fa8b90e2c9ac95652d67730d36"></a>
 <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mTaskState</b></td></tr>
 <tr class="separator:a29ab91fa8b90e2c9ac95652d67730d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e439d71b36a1789f5d8738159c1c46e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e439d71b36a1789f5d8738159c1c46e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a4e439d71b36a1789f5d8738159c1c46e">mTriggerOnStart</a></td></tr>
+<tr class="memdesc:a4e439d71b36a1789f5d8738159c1c46e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to false in order to not <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a9b2cda802da9670204fc3be88e9e4ccf" title="Invoke this method to trigger the thread of this TaskContext to execute its ExecutionEngine and the u...">trigger()</a> when calling <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a975fddfc6d0fd5dfa77303c20395d87c" title="This method starts the execution of the updateHook() with each trigger or period. ...">start()</a>. <br/></td></tr>
+<tr class="separator:a4e439d71b36a1789f5d8738159c1c46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41fd49b2f57fcc037366e49d6c18e6e6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a41fd49b2f57fcc037366e49d6c18e6e6">mCycleCounter</a></td></tr>
+<tr class="memdesc:a41fd49b2f57fcc037366e49d6c18e6e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each update cycle, this counter increments by one.  <a href="#a41fd49b2f57fcc037366e49d6c18e6e6">More...</a><br/></td></tr>
+<tr class="separator:a41fd49b2f57fcc037366e49d6c18e6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2abc6bb0aa4150b20f29fb8a089fbb8b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2abc6bb0aa4150b20f29fb8a089fbb8b"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a2abc6bb0aa4150b20f29fb8a089fbb8b">mIOCounter</a></td></tr>
+<tr class="memdesc:a2abc6bb0aa4150b20f29fb8a089fbb8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cycles that were caused by IOReady triggers. <br/></td></tr>
+<tr class="separator:a2abc6bb0aa4150b20f29fb8a089fbb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b0fd2a8e4a110f5b0170dfb7498ad06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b0fd2a8e4a110f5b0170dfb7498ad06"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a2b0fd2a8e4a110f5b0170dfb7498ad06">mTimeOutCounter</a></td></tr>
+<tr class="memdesc:a2b0fd2a8e4a110f5b0170dfb7498ad06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cycles that were caused by TimeOut triggers. <br/></td></tr>
+<tr class="separator:a2b0fd2a8e4a110f5b0170dfb7498ad06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053a2bf6b37d7a407532c85489251c31"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a053a2bf6b37d7a407532c85489251c31"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a053a2bf6b37d7a407532c85489251c31">mTriggerCounter</a></td></tr>
+<tr class="memdesc:a053a2bf6b37d7a407532c85489251c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cycles that were caused by Trigger triggers. <br/></td></tr>
+<tr class="separator:a053a2bf6b37d7a407532c85489251c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
+<tr class="memitem:a9b68196ad6ed6fa11eb4454434b39bb5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b68196ad6ed6fa11eb4454434b39bb5"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>ExecutionEngine</b></td></tr>
+<tr class="separator:a9b68196ad6ed6fa11eb4454434b39bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60afc7280803de6c0a3ef89bd63e417d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60afc7280803de6c0a3ef89bd63e417d"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>DataFlowInterface</b></td></tr>
 <tr class="separator:a60afc7280803de6c0a3ef89bd63e417d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -459,7 +493,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00537">537</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00526">526</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -559,50 +593,6 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a class="anchor" id="a8b1396bc3ad1ea241fb8247dfcdd4077"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">RTT::TaskContext::TaskContext </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td>
-          <td class="paramname"><em>parent</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a>&#160;</td>
-          <td class="paramname"><em>initial_state</em> = <code><a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296a56134dbafdb46e41026cf4c7b1bbb6f8">Stopped</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>. </p>
-<p>Its commands programs and state machines are processed by <em>parent</em>. Use this constructor to share execution engines among task contexts, such that the execution of their functionality is serialised (executed in the same thread). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>The name of this component. </td></tr>
-    <tr><td class="paramname">initial_state</td><td>Provide the <em>PreOperational</em> parameter flag here to force users in calling <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a492aed947a9bb2cbc25140884bc34e1b" title="This method instructs the component to (re-)read configuration data and try to enter the Stopped stat...">configure()</a>, before they call <a class="el" href="classRTT_1_1TaskContext.html#a6620b7f7ed8497c4f4e4729f0be119c5" title="This method starts the execution of the updateHook() with each trigger or period. ...">start()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00083">83</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="adb5e6bc5f0eee821b3f62f9d5482c743"></a>
 <div class="memitem">
@@ -631,9 +621,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a702052a95f039f56c9de1519e10c0b8c">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00239">239</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00228">228</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00267">RTT::base::TaskCore::isActive()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a6ccbd039e0df4bae31fe63a988b3c2f3">RTT::base::ActivityInterface::start()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a6ccbd039e0df4bae31fe63a988b3c2f3">RTT::base::ActivityInterface::start()</a>.</p>
 
 </div>
 </div>
@@ -681,7 +671,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00411">411</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00400">400</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -716,7 +706,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00437">437</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00426">426</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -764,7 +754,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00424">424</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00413">413</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -816,7 +806,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00547">547</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00536">536</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 <p>References <a class="el" href="PortInterface_8cpp_source.html#l00051">RTT::base::PortInterface::setName()</a>.</p>
 
@@ -863,7 +853,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00560">560</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00549">549</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -901,7 +891,7 @@ template&lt;class Signature &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if it could be added. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00347">347</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00336">336</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -954,7 +944,7 @@ template&lt;class Func , class Service &gt; </div>
 <p>Adds a C++ function as an operation. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1Service.html#abd4f94e4184b2f470053ad54c42e6dda" title="Add an operation object to the interface. ">Service::addOperation</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00358">358</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00347">347</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +991,7 @@ template&lt;class Signature &gt; </div>
 <p>Adds a C function as an operation. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1Service.html#abd4f94e4184b2f470053ad54c42e6dda" title="Add an operation object to the interface. ">Service::addOperation</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00369">369</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00358">358</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -1048,11 +1038,11 @@ template&lt;class Signature &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a10ffef8be36a2ba8a74222f277b990bd">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00252">252</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00245">245</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8hpp_source.html#l00128">getName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8hpp_source.html#l00117">getName()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00282">connectPeers()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00275">connectPeers()</a>.</p>
 
 </div>
 </div>
@@ -1097,7 +1087,7 @@ template&lt;class Signature &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00523">523</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00512">512</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 <p>References <a class="el" href="PortInterface_8cpp_source.html#l00051">RTT::base::PortInterface::setName()</a>.</p>
 
@@ -1133,7 +1123,7 @@ template&lt;class Signature &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00533">533</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00522">522</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -1182,7 +1172,7 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a> object by reference, which you can further query or document. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00479">479</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00468">468</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -1211,7 +1201,7 @@ template&lt;class T &gt; </div>
 <p>Add an <a class="el" href="classRTT_1_1base_1_1PropertyBase.html" title="Base class for all properties. ">base::PropertyBase</a> as a property. </p>
 <dl class="section return"><dt>Returns</dt><dd>false if a property with the same name already exists. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00487">487</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00476">476</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -1240,9 +1230,9 @@ template&lt;class T &gt; </div>
 <p>Insert in this hook the code to wake up that code or signal it otherwise that <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a4b16151ed99062bca250ddfe667a3604" title="Function where the user must insert his &#39;application&#39; code. ">updateHook()</a> is requested to return (for example by setting a flag). The method returns <em>false</em> by default. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if well received and <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a4b16151ed99062bca250ddfe667a3604" title="Function where the user must insert his &#39;application&#39; code. ">updateHook()</a> will soon return. False otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00311">311</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00297">297</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00427">RTT::ExecutionEngine::breakLoop()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00444">RTT::ExecutionEngine::breakLoop()</a>.</p>
 
 </div>
 </div>
@@ -1273,9 +1263,9 @@ template&lt;class T &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a93f4379b062e7286e37c225996c0b709">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00127">127</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00116">116</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8cpp_source.html#l00244">RTT::base::TaskCore::cleanupHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00101">RTT::base::TaskCore::PreOperational</a>, <a class="el" href="TaskCore_8hpp_source.html#l00104">RTT::base::TaskCore::Stopped</a>, and <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>.</p>
+<p>References <a class="el" href="TaskCore_8cpp_source.html#l00233">RTT::base::TaskCore::cleanupHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00101">RTT::base::TaskCore::PreOperational</a>, <a class="el" href="TaskCore_8hpp_source.html#l00104">RTT::base::TaskCore::Stopped</a>, and <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>.</p>
 
 </div>
 </div>
@@ -1303,9 +1293,9 @@ template&lt;class T &gt; </div>
 <p>Implement this method such that it contains the code which will be executed when <em><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a009c3d9b097d1904ca6eac98a5b48d0c" title="This method instructs a stopped component to enter the pre-operational state again. ">cleanup()</a></em> is called. </p>
 <p>The default implementation is an empty function. </p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00244">244</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00233">233</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00127">RTT::base::TaskCore::cleanup()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00116">RTT::base::TaskCore::cleanup()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>.</p>
 
 </div>
 </div>
@@ -1333,9 +1323,9 @@ template&lt;class T &gt; </div>
 <p>Clear the complete interface of this Component. </p>
 <p>This method removes all objects and all methods, commands, events, properties and ports from the interface of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>. </p>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00384">384</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00378">378</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00498">RTT::corba::TaskContextProxy::activate()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00599">RTT::corba::TaskContextProxy::addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00542">RTT::corba::TaskContextProxy::cleanup()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00530">RTT::corba::TaskContextProxy::configure()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00654">RTT::corba::TaskContextProxy::connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00723">RTT::corba::TaskContextProxy::connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00738">RTT::corba::TaskContextProxy::connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00669">RTT::corba::TaskContextProxy::disconnectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">RTT::corba::TaskContextProxy::initFromURIOrTaskname()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00753">RTT::corba::TaskContextProxy::ready()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00628">RTT::corba::TaskContextProxy::removePeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00474">RTT::corba::TaskContextProxy::start()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00486">RTT::corba::TaskContextProxy::stop()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">RTT::corba::TaskContextProxy::TaskContextProxy()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00629">RTT::corba::TaskContextProxy::activate()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00730">RTT::corba::TaskContextProxy::addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00673">RTT::corba::TaskContextProxy::cleanup()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00661">RTT::corba::TaskContextProxy::configure()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00785">RTT::corba::TaskContextProxy::connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00854">RTT::corba::TaskContextProxy::connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00869">RTT::corba::TaskContextProxy::connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00800">RTT::corba::TaskContextProxy::disconnectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">RTT::corba::TaskContextProxy::initFromURIOrTaskname()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00884">RTT::corba::TaskContextProxy::ready()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00759">RTT::corba::TaskContextProxy::removePeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00605">RTT::corba::TaskContextProxy::start()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00617">RTT::corba::TaskContextProxy::stop()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">RTT::corba::TaskContextProxy::TaskContextProxy()</a>.</p>
 
 </div>
 </div>
@@ -1365,9 +1355,9 @@ template&lt;class T &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a302f6a3d529d29c7c1ccc60afb840441">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00104">104</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00093">93</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8cpp_source.html#l00292">RTT::base::TaskCore::configureHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00101">RTT::base::TaskCore::PreOperational</a>, <a class="el" href="TaskCore_8hpp_source.html#l00104">RTT::base::TaskCore::Stopped</a>, and <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>.</p>
+<p>References <a class="el" href="TaskCore_8cpp_source.html#l00281">RTT::base::TaskCore::configureHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00101">RTT::base::TaskCore::PreOperational</a>, <a class="el" href="TaskCore_8hpp_source.html#l00104">RTT::base::TaskCore::Stopped</a>, and <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>.</p>
 
 </div>
 </div>
@@ -1402,9 +1392,39 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00292">292</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00281">281</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00104">RTT::base::TaskCore::configure()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00093">RTT::base::TaskCore::configure()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a990586cfe74123de656950365be45fea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::TaskContext::dataOnPortCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method implements port callbacks. </p>
+<p>It will be called once per sample received on the port and is executed in the component's thread.</p>
+<p>The default implementation invokes the user callback if one was given in the <a class="el" href="classRTT_1_1TaskContext.html#af5d3991d677caee96a58bee04304afe6" title="Name and add an Event triggering Port to the interface of this task and add a Service with the same n...">addEventPort()</a> call. It can be overwritten in a subclass to react on incoming data for all event ports. This is equivalent to adding this function as a user callback on each of the ports individually. </p>
+
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00431">431</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
 </div>
 </div>
@@ -1441,9 +1461,9 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00434">434</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00427">427</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8cpp_source.html#l00247">RTT::base::TaskCore::isRunning()</a>.</p>
+<p>References <a class="el" href="TaskCore_8cpp_source.html#l00236">RTT::base::TaskCore::isRunning()</a>.</p>
 
 </div>
 </div>
@@ -1471,9 +1491,9 @@ template&lt;class T &gt; </div>
 <p>Disconnect this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> from it's peers and ports. </p>
 <p>All its Data Flow Ports are disconnected as well. This method invokes <a class="el" href="classRTT_1_1TaskContext.html#a3c3c00069dfb5ad81a343d81e7bd30c4" title="Remove a one-way connection from this task to a peer task. ">removePeer()</a> as well on the peers listed in this-&gt;<a class="el" href="classRTT_1_1TaskContext.html#a9d294341f8464b87c4609b2f89b5ecb7" title="Return a standard container which contains all the Peer names of this TaskContext. ">getPeerList()</a>. </p>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00292">292</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00285">285</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8hpp_source.html#l00128">getName()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00196">RTT::DataFlowInterface::getPorts()</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00577">ports()</a>.</p>
+<p>References <a class="el" href="TaskContext_8hpp_source.html#l00117">getName()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00198">RTT::DataFlowInterface::getPorts()</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00566">ports()</a>.</p>
 
 </div>
 </div>
@@ -1501,7 +1521,7 @@ template&lt;class T &gt; </div>
 <p>Call this method in a Running state to indicate a run-time error condition. </p>
 <p><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a1d100268cdda1f60af1e2203d155168b" title="Implement this method to contain code that must be executed in the RunTimeError state, instead of updateHook(). ">errorHook()</a> will be called instead of <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a4b16151ed99062bca250ddfe667a3604" title="Function where the user must insert his &#39;application&#39; code. ">updateHook()</a>. If the error condition is solved, call <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a28420e3f52d819fddbe0962cdef98707" title="Call this method in a RunTimeError or Exception state to indicate that the run-time error conditions ...">recover()</a>. </p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00152">152</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00140">140</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, and <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>.</p>
 
@@ -1531,7 +1551,7 @@ template&lt;class T &gt; </div>
 <p>Implement this method to contain code that must be executed in the RunTimeError state, instead of <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a4b16151ed99062bca250ddfe667a3604" title="Function where the user must insert his &#39;application&#39; code. ">updateHook()</a>. </p>
 <p>This allows you to specify the behaviour in an erroneous component. <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a1d100268cdda1f60af1e2203d155168b" title="Implement this method to contain code that must be executed in the RunTimeError state, instead of updateHook(). ">errorHook()</a> is called as long as the component is not <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a28420e3f52d819fddbe0962cdef98707" title="Call this method in a RunTimeError or Exception state to indicate that the run-time error conditions ...">recover()</a>'ed. After <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a28420e3f52d819fddbe0962cdef98707" title="Call this method in a RunTimeError or Exception state to indicate that the run-time error conditions ...">recover()</a>'ed, the <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a4b16151ed99062bca250ddfe667a3604" title="Function where the user must insert his &#39;application&#39; code. ">updateHook()</a> is called again. </p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00301">301</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00290">290</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
 </div>
 </div>
@@ -1559,11 +1579,11 @@ template&lt;class T &gt; </div>
 <p>Call this method to indicate a run-time exception happend. </p>
 <p>First the TaskState is set to Exception. Next, if the taskstate was &gt;= Running, <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a8bfeb7f3c3d066080d5af36baacb6648" title="Implement this method such that it contains the code which will be executed when stop() is called...">stopHook()</a> is called. Next, if the taskstate was &gt;= Stopped, <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a7079becea7aa4945ba69cc202713592c" title="Implement this method such that it contains the code which will be executed when cleanup() is called...">cleanupHook()</a> is called. Finally, <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a576b146a57bd81b1f5fe3a8e51f0bd16" title="Implement this method to contain code that must be executed when transitioning to the Exception state...">exceptionHook()</a> is called. If any exception happens in <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a576b146a57bd81b1f5fe3a8e51f0bd16" title="Implement this method to contain code that must be executed when transitioning to the Exception state...">exceptionHook()</a>, <a class="el" href="classRTT_1_1base_1_1TaskCore.html#af208a7b9442ba87f42a3a52a28c5309f" title="Call this method from any place to indicate that this component encountered a fatal error...">fatal()</a> is called. </p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00159">159</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00147">147</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8cpp_source.html#l00244">RTT::base::TaskCore::cleanupHook()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, <a class="el" href="TaskCore_8cpp_source.html#l00316">RTT::base::TaskCore::exceptionHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00146">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00101">RTT::base::TaskCore::PreOperational</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, <a class="el" href="TaskCore_8cpp_source.html#l00319">RTT::base::TaskCore::stopHook()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00104">RTT::base::TaskCore::Stopped</a>, and <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>.</p>
+<p>References <a class="el" href="TaskCore_8cpp_source.html#l00233">RTT::base::TaskCore::cleanupHook()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, <a class="el" href="TaskCore_8cpp_source.html#l00302">RTT::base::TaskCore::exceptionHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00101">RTT::base::TaskCore::PreOperational</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, <a class="el" href="TaskCore_8cpp_source.html#l00305">RTT::base::TaskCore::stopHook()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00104">RTT::base::TaskCore::Stopped</a>, and <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00127">RTT::base::TaskCore::cleanup()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00104">RTT::base::TaskCore::configure()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00448">RTT::ExecutionEngine::setExceptionTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00116">RTT::base::TaskCore::cleanup()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00093">RTT::base::TaskCore::configure()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00462">RTT::ExecutionEngine::setExceptionTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00180">RTT::base::TaskCore::start()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00203">RTT::base::TaskCore::stop()</a>.</p>
 
 </div>
 </div>
@@ -1592,9 +1612,9 @@ template&lt;class T &gt; </div>
 <p>This allows you to specify the last actions in an erroneous component, after <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a8bfeb7f3c3d066080d5af36baacb6648" title="Implement this method such that it contains the code which will be executed when stop() is called...">stopHook()</a> and <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a7079becea7aa4945ba69cc202713592c" title="Implement this method such that it contains the code which will be executed when cleanup() is called...">cleanupHook()</a> were called. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a28420e3f52d819fddbe0962cdef98707" title="Call this method in a RunTimeError or Exception state to indicate that the run-time error conditions ...">recover()</a> to leave the <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296aaf7a566a0f56822986b292ae5e90a286" title="The state indicating the component encountered a C++ exception. ">Exception</a> state. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00316">316</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00302">302</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>.</p>
 
 </div>
 </div>
@@ -1622,11 +1642,11 @@ template&lt;class T &gt; </div>
 <p>Call this method from any place to indicate that this component encountered a fatal error. </p>
 <p>It calls no hooks, the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> is stopped and the component waits destruction. </p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00146">146</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00135">135</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a78717d9d9533a58bac8d1f0eadf564a1">RTT::base::ActivityInterface::stop()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a78717d9d9533a58bac8d1f0eadf564a1">RTT::base::ActivityInterface::stop()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>.</p>
 
 </div>
 </div>
@@ -1655,9 +1675,9 @@ template&lt;class T &gt; </div>
 <p>Forces the current activity to become <em>new_act</em>, even if this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> is still running. </p>
 <p>This can be used to bypass the <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a9168525a25ec73b7240042613688b6fa" title="Inspect if the component is in the Running or RunTimeError state. ">isRunning()</a> check regular <a class="el" href="classRTT_1_1TaskContext.html#a65fa89828cdf260496f27643e4ab9344" title="Sets the activity of this TaskContext. ">setActivity()</a> does. </p>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00364">364</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00358">358</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a78717d9d9533a58bac8d1f0eadf564a1">RTT::base::ActivityInterface::stop()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a78717d9d9533a58bac8d1f0eadf564a1">RTT::base::ActivityInterface::stop()</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">RTT::corba::TaskContextProxy::TaskContextProxy()</a>.</p>
 
@@ -1679,9 +1699,9 @@ template&lt;class T &gt; </div>
 <p>Get a pointer to the activity running this component. </p>
 <dl class="section return"><dt>Returns</dt><dd>Our activity. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00377">377</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00371">371</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, and <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, and <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>.</p>
 
 </div>
 </div>
@@ -1713,11 +1733,11 @@ template&lt;typename T &gt; </div>
 <p>Example usage in a <a class="el" href="classRTT_1_1base_1_1TaskCore.html#add908fc9e1fcb95dea895e6231edf075" title="Implement this method such that it contains the code which will be executed when start() is called...">startHook()</a>: <code> <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html" title="An activity which is triggered by the availability of data on a set of file descriptors. ">RTT::extras::FileDescriptorActivity</a>* fd_activity = <a class="el" href="classRTT_1_1TaskContext.html#a6bb066129eb925e0a245509bb2c2cca1" title="Get a pointer to the activity running this component. ">getActivity&lt;RTT::extras::FileDescriptorActivity&gt;()</a>; if (fd_activity) { // do specific setup for FDActivity } </code></p>
 <dl class="section return"><dt>Returns</dt><dd>Our activity if it is of type T, NULL otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00173">173</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00162">162</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8hpp_source.html#l00173">getActivity()</a>.</p>
+<p>References <a class="el" href="TaskContext_8hpp_source.html#l00162">getActivity()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContext_8hpp_source.html#l00173">getActivity()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContext_8hpp_source.html#l00162">getActivity()</a>.</p>
 
 </div>
 </div>
@@ -1753,7 +1773,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00450">450</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00439">439</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -1781,9 +1801,37 @@ template&lt;typename T &gt; </div>
 <p>Get the configured cpu affinity of this component. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#aeabaef68a4faab68d398fa2deaf9ad04" title="Get the cpu affinity of this activity. ">ActivityInterface::getCpuAffinity()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00282">282</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00271">271</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#aeabaef68a4faab68d398fa2deaf9ad04">RTT::base::ActivityInterface::getCpuAffinity()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#aeabaef68a4faab68d398fa2deaf9ad04">RTT::base::ActivityInterface::getCpuAffinity()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d6ce3034250e9673cc6c80e7d03cc92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int RTT::base::TaskCore::getCycleCounter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>For each update cycle, this counter increments by one. </p>
+<p>You can use this to check across (callback) functions if we're still in the same cycle or in a new one. </p>
+
+<p>Definition at line <a class="el" href="TaskCore_8hpp_source.html#l00324">324</a> of file <a class="el" href="TaskCore_8hpp_source.html">TaskCore.hpp</a>.</p>
 
 </div>
 </div>
@@ -1819,7 +1867,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if it could be found, false otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00383">383</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00372">372</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -1850,9 +1898,9 @@ template&lt;typename T &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#aa8422f6c124522214dd159f19b8067e7">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00336">336</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00329">329</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00331">hasPeer()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00324">hasPeer()</a>.</p>
 
 </div>
 </div>
@@ -1889,9 +1937,9 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>: add a bool <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a7d3ad5b4301ec54a2357d2f8bc60e2b8" title="Sets the period of this component. ">setPeriod(double)</a> function to allow changing the period at run-time. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00272">272</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00261">261</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a7c98bdeaa51f490d6f61e7aea7ada91a">RTT::base::ActivityInterface::getPeriod()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a7c98bdeaa51f490d6f61e7aea7ada91a">RTT::base::ActivityInterface::getPeriod()</a>.</p>
 
 </div>
 </div>
@@ -1926,7 +1974,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to a port or null if it does not exist. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00569">569</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00558">558</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -1961,7 +2009,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a> with this name, zero if it does not exist </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00498">498</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00487">487</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -2001,7 +2049,7 @@ template&lt;class ServiceType &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a shared <a class="el" href="classRTT_1_1ServiceRequester.html" title="An object that expresses you wish to use a service. ">ServiceRequester</a> object which allows to call the operations provided by service <em>name</em>. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00309">309</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00298">298</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -2031,7 +2079,7 @@ template&lt;class ServiceType &gt; </div>
 <p>If <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aeebedaf344a1eae84f34b51ba052f299" title="Returns the current state of the TaskCore. ">getTaskState()</a> != getTargetState, a transition is taking place.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1TaskCore.html#aeebedaf344a1eae84f34b51ba052f299" title="Returns the current state of the TaskCore. ">getTaskState()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00086">86</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00079">79</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
 </div>
 </div>
@@ -2062,7 +2110,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a03fd594949ef8654daa21998e313a7c9">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00082">82</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00075">75</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
 </div>
 </div>
@@ -2092,7 +2140,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#aa58e8059f29506a1c4df9bd60eb24542">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00255">255</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00244">244</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>.</p>
 
@@ -2124,11 +2172,11 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a00904940f4bfcd7e23261a6e8325b06f">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00267">267</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00256">256</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface::isActive()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface::isActive()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00239">RTT::base::TaskCore::activate()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>.</p>
 
 </div>
 </div>
@@ -2158,7 +2206,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a1da68cc7d2a8de66bcda32096b754735">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00251">251</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00240">240</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8hpp_source.html#l00104">RTT::base::TaskCore::Stopped</a>.</p>
 
@@ -2190,11 +2238,11 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a3e5ecacf2bf68d3eabee711747a12dd7">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00247">247</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00236">236</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00434">dataOnPortHook()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00343">setActivity()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00403">start()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00413">stop()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00427">dataOnPortHook()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00336">setActivity()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00397">start()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00407">stop()</a>.</p>
 
 </div>
 </div>
@@ -2221,9 +2269,9 @@ template&lt;class ServiceType &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the service was present already or could be loaded. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00233">233</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00226">226</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>References <a class="el" href="PluginLoader_8cpp_source.html#l00325">RTT::plugin::PluginLoader::Instance()</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00268">provides()</a>.</p>
+<p>References <a class="el" href="PluginLoader_8cpp_source.html#l00325">RTT::plugin::PluginLoader::Instance()</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00257">provides()</a>.</p>
 
 </div>
 </div>
@@ -2251,9 +2299,9 @@ template&lt;class ServiceType &gt; </div>
 <p>Returns this <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>a shared pointer from this. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00268">268</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00257">257</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00261">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00191">connectServices()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00056">RTT::marsh::MarshallingService::Create()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00065">RTT::scripting::ScriptingService::Create()</a>, <a class="el" href="Service_8cpp_source.html#l00052">RTT::Service::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">RTT::corba::TaskContextProxy::initFromURIOrTaskname()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00233">loadService()</a>, <a class="el" href="Parser_8cpp_source.html#l00197">RTT::scripting::Parser::parseValueStatement()</a>, <a class="el" href="PeerParser_8cpp_source.html#l00151">RTT::scripting::PeerParser::reset()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">RTT::corba::TaskContextProxy::TaskContextProxy()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00271">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00184">connectServices()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00056">RTT::marsh::MarshallingService::Create()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00065">RTT::scripting::ScriptingService::Create()</a>, <a class="el" href="Service_8cpp_source.html#l00052">RTT::Service::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">RTT::corba::TaskContextProxy::initFromURIOrTaskname()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00226">loadService()</a>, <a class="el" href="Parser_8cpp_source.html#l00197">RTT::scripting::Parser::parseValueStatement()</a>, <a class="el" href="PeerParser_8cpp_source.html#l00151">RTT::scripting::PeerParser::reset()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">RTT::corba::TaskContextProxy::TaskContextProxy()</a>.</p>
 
 </div>
 </div>
@@ -2287,7 +2335,7 @@ template&lt;class ServiceType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00275">275</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00264">264</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -2317,7 +2365,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ae9ca163585e0ea9480424cd59531a0aa">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00390">390</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00384">384</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
 </div>
 </div>
@@ -2346,7 +2394,7 @@ template&lt;class ServiceType &gt; </div>
 <p>Makes transition to Running or PreOperational, depending on the state it was in. </p>
 <dl class="section return"><dt>Returns</dt><dd>false if not applicable in the current state. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00180">180</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00168">168</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, and <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>.</p>
 
@@ -2377,9 +2425,9 @@ template&lt;class ServiceType &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>false if this-&gt;<a class="el" href="classRTT_1_1base_1_1TaskCore.html#a9168525a25ec73b7240042613688b6fa" title="Inspect if the component is in the Running or RunTimeError state. ">isRunning()</a>. You can not change the activity of a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> once it is running. In that case, new_act is not destroyed. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This function may not be called from the current <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> thread (OwnThread), another thread (ClientThread) must call this function. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00343">343</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00336">336</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00247">RTT::base::TaskCore::isRunning()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a78717d9d9533a58bac8d1f0eadf564a1">RTT::base::ActivityInterface::stop()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00236">RTT::base::TaskCore::isRunning()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a78717d9d9533a58bac8d1f0eadf564a1">RTT::base::ActivityInterface::stop()</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">RTT::corba::TaskContextProxy::initFromURIOrTaskname()</a>.</p>
 
@@ -2411,46 +2459,9 @@ template&lt;class ServiceType &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>false if not allowed by the component's activity. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a73f4d59d811f9ec4941f5c5bf84ce643" title="Set the cpu affinity of this activity. ">ActivityInterface::setCpuAffinity()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00287">287</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00276">276</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a73f4d59d811f9ec4941f5c5bf84ce643">RTT::base::ActivityInterface::setCpuAffinity()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2da9f3834b14d21614fd481eaed4ecec"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RTT::TaskCore::setExecutionEngine </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td>
-          <td class="paramname"><em>engine</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use this method to re-set the execution engine of this task core. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">engine</td><td>The new execution engine which will execute this <a class="el" href="classRTT_1_1base_1_1TaskCore.html" title="The minimal Orocos task. ">TaskCore</a> or null if a new execution engine must be created (the old is deleted in that case). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section post"><dt>Postcondition</dt><dd>The <a class="el" href="classRTT_1_1base_1_1TaskCore.html" title="The minimal Orocos task. ">TaskCore</a> is being run by <em>engine</em> or a new execution engine. </dd></dl>
-
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00323">323</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
-
-<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00109">RTT::ExecutionEngine::addChild()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::ee</a>, <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00105">RTT::ExecutionEngine::getParent()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00113">RTT::ExecutionEngine::removeChild()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a73f4d59d811f9ec4941f5c5bf84ce643">RTT::base::ActivityInterface::setCpuAffinity()</a>.</p>
 
 </div>
 </div>
@@ -2481,9 +2492,9 @@ template&lt;class ServiceType &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>false if not allowed by the component's activity. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a8f83999d9bc8cd48a7950be3c4cb7cf9" title="Set the periodicity of this activity in Seconds. ">ActivityInterface::setPeriod()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00277">277</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00266">266</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a8f83999d9bc8cd48a7950be3c4cb7cf9">RTT::base::ActivityInterface::setPeriod()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a8f83999d9bc8cd48a7950be3c4cb7cf9">RTT::base::ActivityInterface::setPeriod()</a>.</p>
 
 </div>
 </div>
@@ -2526,9 +2537,9 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#aa9bd244082ee0352d45f448e1b5e841a">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00403">403</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00397">397</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8cpp_source.html#l00247">RTT::base::TaskCore::isRunning()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00577">ports()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>.</p>
+<p>References <a class="el" href="TaskCore_8cpp_source.html#l00236">RTT::base::TaskCore::isRunning()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00566">ports()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00180">RTT::base::TaskCore::start()</a>.</p>
 
 </div>
 </div>
@@ -2563,9 +2574,9 @@ template&lt;class ServiceType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00296">296</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00285">285</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00180">RTT::base::TaskCore::start()</a>.</p>
 
 </div>
 </div>
@@ -2598,9 +2609,9 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a9ea56b9ed500fbf9bec7a769cd2ccae7">RTT::corba::TaskContextProxy</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00413">413</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00407">407</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8cpp_source.html#l00247">RTT::base::TaskCore::isRunning()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00577">ports()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>.</p>
+<p>References <a class="el" href="TaskCore_8cpp_source.html#l00236">RTT::base::TaskCore::isRunning()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00566">ports()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00203">RTT::base::TaskCore::stop()</a>.</p>
 
 </div>
 </div>
@@ -2628,9 +2639,9 @@ template&lt;class ServiceType &gt; </div>
 <p>Implement this method such that it contains the code which will be executed when <em><a class="el" href="classRTT_1_1base_1_1TaskCore.html#aa69a1db58d9b3695477ac75866e4e62c" title="This method stops the execution of updateHook() of this component. ">stop()</a></em> is called. </p>
 <p>The default implementation is an empty function. </p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00319">319</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00305">305</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00203">RTT::base::TaskCore::stop()</a>.</p>
 
 </div>
 </div>
@@ -2664,11 +2675,11 @@ template&lt;class ServiceType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00097">97</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00088">88</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">RTT::base::ActivityInterface::trigger()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a99f8cbfa2c5022c575e4b5e404cb02c8">RTT::base::ActivityInterface::timeout()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>.</p>
+<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00135">RTT::DataFlowInterface::addLocalEventPort()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00180">RTT::base::TaskCore::start()</a>.</p>
 
 </div>
 </div>
@@ -2702,9 +2713,9 @@ template&lt;class ServiceType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00090">90</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00083">83</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#ae490cda9ee1ef6ed7a42f8725d3af3dd">RTT::base::ActivityInterface::execute()</a>, and <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00306">RTT::base::TaskCore::engine()</a>, <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#ae490cda9ee1ef6ed7a42f8725d3af3dd">RTT::base::ActivityInterface::execute()</a>, and <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>.</p>
 
 </div>
 </div>
@@ -2730,9 +2741,37 @@ template&lt;class ServiceType &gt; </div>
 </div><div class="memdoc">
 
 <p>Function where the user must insert his 'application' code. </p>
-<p>When the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>'s <a class="el" href="classRTT_1_1Activity.html" title="An Activity is an object that represents a thread. ">Activity</a> is a periodic, this function is called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> in each periodic step after all messages are processed. When it is executed by a non periodic activity, this function is called after a message is received and executed. It should not loop forever, since no commands or events are processed when this function executes. The default implementation is an empty function. </p>
+<p>When the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>'s <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a> is a periodic, this function is called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> in each periodic step after all messages are processed. When it is executed by a non periodic activity, this function is called after a message is received and executed. It should not loop forever, since no commands or events are processed when this function executes. The default implementation is an empty function. </p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00307">307</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00293">293</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a41fd49b2f57fcc037366e49d6c18e6e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int RTT::base::TaskCore::mCycleCounter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>For each update cycle, this counter increments by one. </p>
+<p>You can use this to check across (callback) functions if we're still in the same cycle or in a new one. </p>
+
+<p>Definition at line <a class="el" href="TaskCore_8hpp_source.html#l00476">476</a> of file <a class="el" href="TaskCore_8hpp_source.html">TaskCore.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00382">RTT::ExecutionEngine::work()</a>.</p>
 
 </div>
 </div>
@@ -2743,7 +2782,7 @@ template&lt;class ServiceType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -121,12 +121,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a3c0e622e3e79002f38dafef18d8eb97c"><td class="memItemLeft" align="right" valign="top">base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1types_1_1TypeInfo.html#a3c0e622e3e79002f38dafef18d8eb97c">buildDataStorage</a> (<a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy) const </td></tr>
 <tr class="memdesc:a3c0e622e3e79002f38dafef18d8eb97c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates single data or buffered storage for this type.  <a href="#a3c0e622e3e79002f38dafef18d8eb97c">More...</a><br/></td></tr>
 <tr class="separator:a3c0e622e3e79002f38dafef18d8eb97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae87af4b51a9d4e54db6302839b6f2c4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae87af4b51a9d4e54db6302839b6f2c4e"></a>
-base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildChannelOutput</b> (<a class="el" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a> &amp;port) const </td></tr>
-<tr class="separator:ae87af4b51a9d4e54db6302839b6f2c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20faeff1c777418650e4e9fa273ce611"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20faeff1c777418650e4e9fa273ce611"></a>
-base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildChannelInput</b> (<a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html">base::OutputPortInterface</a> &amp;port) const </td></tr>
-<tr class="separator:a20faeff1c777418650e4e9fa273ce611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089d846f335e5aeed08a0d12e2a1cb07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a089d846f335e5aeed08a0d12e2a1cb07"></a>
+base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildChannelOutput</b> (<a class="el" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a> &amp;port, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy) const </td></tr>
+<tr class="separator:a089d846f335e5aeed08a0d12e2a1cb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a544c6470c7151035e3712af2a53af915"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a544c6470c7151035e3712af2a53af915"></a>
+base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildChannelInput</b> (<a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html">base::OutputPortInterface</a> &amp;port, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy) const </td></tr>
+<tr class="separator:a544c6470c7151035e3712af2a53af915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eb40d09f7d381dde8367cfe4b6695a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5eb40d09f7d381dde8367cfe4b6695a1"></a>
+internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>buildSharedConnection</b> (<a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html">base::OutputPortInterface</a> *output_port, <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a> *input_port, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy) const </td></tr>
+<tr class="separator:a5eb40d09f7d381dde8367cfe4b6695a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a578a0b10ca80ef0210eef20818eec3cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a578a0b10ca80ef0210eef20818eec3cb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setTypeId</b> (TypeId tid)</td></tr>
 <tr class="separator:a578a0b10ca80ef0210eef20818eec3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -315,7 +318,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <div class="textblock"><p>A class for representing a user type, and which can build instances of that type. </p>
 <p>Once you get hold of a <a class="el" href="classRTT_1_1types_1_1TypeInfo.html" title="A class for representing a user type, and which can build instances of that type. ...">TypeInfo</a> object pointer, this pointer will be valid during the whole lifetime of the process. </p>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00066">66</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00067">67</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a333c1ce14cb2e50e355327e95d3001d2"></a>
 <div class="memitem">
@@ -380,9 +383,9 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <p>Returns a DataSource that first executes an action and returns the result of another data source. </p>
 <p>If <em>source</em> is an AssignableDataSource, an AssignableDataSource is returned of the same type, otherwise, a plain DataSource is returned. </p>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00247">247</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00248">248</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00224">RTT::corba::CorbaOperationCallerFactory::produce()</a>.</p>
+<p>Referenced by <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00276">RTT::corba::CorbaOperationCallerFactory::produce()</a>.</p>
 
 </div>
 </div>
@@ -421,7 +424,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <p>build an alias with b as the value. </p>
 <p>If b is of the wrong type, 0 will be returned.. </p>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00205">205</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00206">206</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -471,7 +474,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00172">172</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00173">173</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -515,7 +518,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00177">177</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00178">178</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +547,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 
 <p>Definition at line <a class="el" href="TypeInfo_8cpp_source.html#l00206">206</a> of file <a class="el" href="TypeInfo_8cpp_source.html">TypeInfo.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00120">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, and <a class="el" href="MQTemplateProtocolBase_8hpp_source.html#l00069">RTT::mqueue::MQTemplateProtocolBase&lt; T &gt;::createStream()</a>.</p>
+<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, and <a class="el" href="MQTemplateProtocolBase_8hpp_source.html#l00069">RTT::mqueue::MQTemplateProtocolBase&lt; T &gt;::createStream()</a>.</p>
 
 </div>
 </div>
@@ -614,7 +617,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00187">187</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00188">188</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -665,7 +668,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <dd>
 <a class="el" href="classRTT_1_1types_1_1TypeInfo.html#a83cabdced96572bdb60e737e975ab1da" title="Specialize this function to return an alternate type which represents this one in a compatible way...">decomposeType</a> to do the inverse operation. </dd></dl>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00385">385</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00386">386</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="PropertyComposition_8cpp_source.html#l00010">RTT::types::composePropertyBag()</a>, and <a class="el" href="PropertyBag_8cpp_source.html#l00557">RTT::updateProperties()</a>.</p>
 
@@ -742,9 +745,9 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <p>Specialize this function to return an alternate type which represents this one in a compatible way. </p>
 <p>For example, a short converts to an long or an enum to an int or a string. </p>
 <dl class="section return"><dt>Returns</dt><dd>null if this type is not convertible to anything else. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000036">Deprecated:</a></b></dt><dd>by decomposeType. We want to rename convertType to decomposeType. This function is left here for transitional purposes. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000038">Deprecated:</a></b></dt><dd>by decomposeType. We want to rename convertType to decomposeType. This function is left here for transitional purposes. </dd></dl>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00413">413</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00414">414</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -774,7 +777,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <p>For example, a short converts to an long or an enum to an int or a string. If your return a datasource containing a property bag, then this function should do the inverse of composeType: the returned property bag contains all parts of the current type (<em>source</em>) which can be modified and merged back into this type with composeType. Mathematically: composeType( decomposeType( A ), B); assert( A == B ); </p>
 <dl class="section return"><dt>Returns</dt><dd>null in order to indicate that decomposition through <a class="el" href="classRTT_1_1types_1_1TypeInfo.html#aae55b906cd6079aa50c78bc30a019dd7" title="Returns a member of a given data source struct identified by its name. ">getMember()</a> may be tried. You may return <em>source</em> itself in order to prevent any further decomposition of your type (using <a class="el" href="classRTT_1_1types_1_1TypeInfo.html#aae55b906cd6079aa50c78bc30a019dd7" title="Returns a member of a given data source struct identified by its name. ">getMember()</a>, which is used as fall-back by the rest of the software. For example, to avoid that a string is decomposed into a sequence of chars, or to avoid that a primitive type like 'int' is further queried. </dd></dl>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00401">401</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00402">402</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="PropertyBagVisitor_8cpp_source.html#l00049">RTT::base::PropertyBagVisitor::introspectAndDecompose()</a>.</p>
 
@@ -822,7 +825,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>null if no such member exists, an assignable datasource referencing that member otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00335">335</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00336">336</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="DataSource_8cpp_source.html#l00124">RTT::base::DataSourceBase::getMember()</a>.</p>
 
@@ -878,7 +881,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>false if no such member exists, true if ref got filled in otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00349">349</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00350">350</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -924,7 +927,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>false if no such member exists, true if ref got filled in otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00361">361</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00362">362</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -952,7 +955,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <p>Returns the list of struct member names of this type. </p>
 <p>In case this type is not a struct, returns an empty list. </p>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00323">323</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00324">324</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="DataSource_8cpp_source.html#l00134">RTT::base::DataSourceBase::getMemberNames()</a>.</p>
 
@@ -977,7 +980,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 
 <p>Definition at line <a class="el" href="TypeInfo_8cpp_source.html#l00149">149</a> of file <a class="el" href="TypeInfo_8cpp_source.html">TypeInfo.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00120">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, <a class="el" href="ConnFactory_8cpp_source.html#l00122">RTT::internal::ConnFactory::createAndCheckStream()</a>, <a class="el" href="DataSourceProxy_8hpp_source.html#l00085">RTT::corba::DataSourceProxy&lt; T &gt;::DataSourceProxy()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00335">CorbaOperationCallerCollect::get()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00224">RTT::corba::CorbaOperationCallerFactory::produce()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00378">RTT::corba::CorbaOperationCallerFactory::produceCollect()</a>, and <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00271">RTT::corba::CorbaOperationCallerFactory::produceSend()</a>.</p>
+<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, <a class="el" href="DataSourceProxy_8hpp_source.html#l00085">RTT::corba::DataSourceProxy&lt; T &gt;::DataSourceProxy()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00401">CorbaOperationCallerCollect::get()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00276">RTT::corba::CorbaOperationCallerFactory::produce()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00444">RTT::corba::CorbaOperationCallerFactory::produceCollect()</a>, and <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00328">RTT::corba::CorbaOperationCallerFactory::produceSend()</a>.</p>
 
 </div>
 </div>
@@ -1005,9 +1008,9 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <p>Return the type name which was first registered. </p>
 <p>Do not rely on this function to return always the same string, as type loading order changes may return different names. Use <a class="el" href="classRTT_1_1types_1_1TypeInfo.html#ac1a33089a767894589092e05c3a8a35d" title="Returns all registered names and aliases of this type. ">getTypeNames()</a> to get all aliases as well or <a class="el" href="classRTT_1_1types_1_1TypeInfo.html#a018bf54c2acd493339cf82b700baa1bb" title="Returns the compiler generated type name (non portable accross compilers!). ">getTypeIdName()</a> to return the compiler generated C++ type name (non-portable accross compilers). </p>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00082">82</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00083">83</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TypeInfoRepository_8cpp_source.html#l00128">RTT::types::TypeInfoRepository::addType()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00120">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, <a class="el" href="ConnFactory_8cpp_source.html#l00122">RTT::internal::ConnFactory::createAndCheckStream()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00224">RTT::corba::CorbaOperationCallerFactory::produce()</a>, and <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00271">RTT::corba::CorbaOperationCallerFactory::produceSend()</a>.</p>
+<p>Referenced by <a class="el" href="TypeInfoRepository_8cpp_source.html#l00128">RTT::types::TypeInfoRepository::addType()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00128">RTT::corba::RemoteInputPort::buildRemoteChannelOutput()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00276">RTT::corba::CorbaOperationCallerFactory::produce()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00328">RTT::corba::CorbaOperationCallerFactory::produceSend()</a>, and <a class="el" href="DataObjectLockFree_8hpp_source.html#l00230">RTT::base::DataObjectLockFree&lt; T &gt;::Set()</a>.</p>
 
 </div>
 </div>
@@ -1073,7 +1076,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <p>Read a new value for this datasource from a human readable string. </p>
 <p>The default does nothing. </p>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00281">281</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00282">282</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -1112,7 +1115,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <p>Tries to resize a data source in case it's a resizable sequence. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the resizing could be done, false otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00196">196</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00197">197</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1154,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 <p>Output this datasource as a human readable string. </p>
 <p>The default just writes the type name in parentheses to <em>os</em>. </p>
 
-<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00264">264</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfo_8hpp_source.html#l00265">265</a> of file <a class="el" href="TypeInfo_8hpp_source.html">TypeInfo.hpp</a>.</p>
 
 </div>
 </div>
@@ -1162,7 +1165,7 @@ boost::shared_ptr&lt; StreamFactory &gt;&#160;</td><td class="memItemRight" vali
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

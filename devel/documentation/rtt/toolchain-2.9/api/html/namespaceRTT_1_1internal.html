@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -71,11 +71,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html">AssignCommand</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a command that will assign the value of an expression to another at runtime.  <a href="classRTT_1_1internal_1_1AssignCommand.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html">AtomicMWMRQueue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an atomic, non-blocking single ended queue (FIFO) for storing a <b>pointer</b> to <em>T</em>.  <a href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWSRQueue.html">AtomicMWSRQueue</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an atomic, non-blocking Multi-Writer Single-Reader FIFO for storing a pointer <em>T</em> by value.  <a href="classRTT_1_1internal_1_1AtomicMWSRQueue.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html">AtomicQueue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an atomic, non-blocking single ended queue (FIFO) for storing a <b>pointer</b> to <em>T</em>.  <a href="classRTT_1_1internal_1_1AtomicQueue.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An atomic, non-blocking single ended queue (FIFO) for storing a <b>pointer</b> to <em>T</em>.  <a href="classRTT_1_1internal_1_1AtomicQueue.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1AStore.html">AStore</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a bound argument which may be a reference, const reference or any other type.  <a href="structRTT_1_1internal_1_1AStore.html#details">More...</a><br/></td></tr>
@@ -142,6 +145,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html">ConnOutputEndpoint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a channel element that represents the output endpoint of a connection, i.e.  <a href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1DataStore.html">DataStore</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a bound argument which may be a reference, const reference or any other type.  <a href="structRTT_1_1internal_1_1DataStore.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1GetArgument.html">GetArgument</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class for extracting the bare pointer from a shared_ptr data source.  <a href="structRTT_1_1internal_1_1GetArgument.html#details">More...</a><br/></td></tr>
@@ -397,6 +403,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SendHandleC.html">SendHandleC</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A template-less <a class="el" href="classRTT_1_1SendHandle.html" title="The SendHandle is used to collect the result values of an asynchronous invocation. ">SendHandle</a> manager.  <a href="classRTT_1_1internal_1_1SendHandleC.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1SharedConnID.html">SharedConnID</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a shared connection created by the <a class="el" href="classRTT_1_1internal_1_1ConnFactory.html" title="This class provides the basic tools to create channels that represent connections between two ports...">ConnFactory</a>.  <a href="structRTT_1_1internal_1_1SharedConnID.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html">SharedConnectionBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for shared connection elements.  <a href="classRTT_1_1internal_1_1SharedConnectionBase.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html">SharedConnectionRepository</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A repository which stores pointers to all shared connections within the process.  <a href="classRTT_1_1internal_1_1SharedConnectionRepository.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionBase.html">ConnectionBase</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A connection 'memorises' the connection between an event and an event handler function.  <a href="classRTT_1_1internal_1_1ConnectionBase.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -429,12 +444,6 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a983e88dd436f624e90b48e75fbe9f164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a983e88dd436f624e90b48e75fbe9f164"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>catch_exception</b> ()</td></tr>
 <tr class="separator:a983e88dd436f624e90b48e75fbe9f164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa11ee548bc4cd0406a3286bd97e8cebc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1internal.html#aa11ee548bc4cd0406a3286bd97e8cebc">clearChannel</a> (<a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">ConnectionManager::ChannelDescriptor</a> &amp;descriptor)</td></tr>
-<tr class="memdesc:aa11ee548bc4cd0406a3286bd97e8cebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to clear a connection.  <a href="#aa11ee548bc4cd0406a3286bd97e8cebc">More...</a><br/></td></tr>
-<tr class="separator:aa11ee548bc4cd0406a3286bd97e8cebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3f8d035f7ac74b5254205b84198b80b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3f8d035f7ac74b5254205b84198b80b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_same_id</b> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *conn_id, <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">ConnectionManager::ChannelDescriptor</a> const &amp;channel)</td></tr>
-<tr class="separator:ab3f8d035f7ac74b5254205b84198b80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34a9e49d4f3c57bdd09353cc6d7bd076"><td class="memTemplParams" colspan="2">template&lt;class Function &gt; </td></tr>
 <tr class="memitem:a34a9e49d4f3c57bdd09353cc6d7bd076"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1internal.html#a34a9e49d4f3c57bdd09353cc6d7bd076">newFunctorDataSource</a> (Function f, const std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt; &amp;args)</td></tr>
 <tr class="memdesc:a34a9e49d4f3c57bdd09353cc6d7bd076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a data source that returns the result of a given function.  <a href="#a34a9e49d4f3c57bdd09353cc6d7bd076">More...</a><br/></td></tr>
@@ -485,34 +494,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>m_catch_exception</b> 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classes which contain all implementation code for the <a class="el" href="namespaceRTT.html" title="Contains TaskContext, Activity, OperationCaller, Operation, Property, InputPort, OutputPort, Attribute. ">RTT</a>. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aa11ee548bc4cd0406a3286bd97e8cebc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RTT::internal::clearChannel </td>
-          <td>(</td>
-          <td class="paramtype">ConnectionManager::ChannelDescriptor &amp;&#160;</td>
-          <td class="paramname"><em>descriptor</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Helper function to clear a connection. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">descriptor</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00075">75</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
-
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00079">RTT::internal::ConnectionManager::clear()</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a34a9e49d4f3c57bdd09353cc6d7bd076"></a>
 <div class="memitem">
 <div class="memproto">
@@ -557,14 +538,18 @@ template&lt;class Function &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00237">237</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00240">240</a> of file <a class="el" href="FusedFunctorDataSource_8hpp_source.html">FusedFunctorDataSource.hpp</a>.</p>
+
+<p>References <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00240">newFunctorDataSource()</a>.</p>
+
+<p>Referenced by <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00240">newFunctorDataSource()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

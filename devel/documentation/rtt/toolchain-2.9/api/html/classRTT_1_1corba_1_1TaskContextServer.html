@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Orocos Real-Time Toolkit
-   &#160;<span id="projectnumber">2.8.1</span>
+   &#160;<span id="projectnumber">2.9.0</span>
    </div>
   </td>
  </tr>
@@ -88,9 +88,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#ac4f5ceca9ccae15b2230dca2bfab3f26">~TaskContextServer</a> ()</td></tr>
 <tr class="memdesc:ac4f5ceca9ccae15b2230dca2bfab3f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">When a <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a> is destroyed, the object reference is removed from the Naming <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> and the servant is deleted. <br/></td></tr>
 <tr class="separator:ac4f5ceca9ccae15b2230dca2bfab3f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7180249551001aeb5a522d713364691"><td class="memItemLeft" align="right" valign="top">CTaskContext_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#ac7180249551001aeb5a522d713364691">server</a> () const </td></tr>
-<tr class="memdesc:ac7180249551001aeb5a522d713364691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Corba Object of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#ac7180249551001aeb5a522d713364691">More...</a><br/></td></tr>
-<tr class="separator:ac7180249551001aeb5a522d713364691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37dfaa3c14a53fa6c0267fd31f9715b8"><td class="memItemLeft" align="right" valign="top">CTaskContext_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#a37dfaa3c14a53fa6c0267fd31f9715b8">server</a> () const </td></tr>
+<tr class="memdesc:a37dfaa3c14a53fa6c0267fd31f9715b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Corba Object of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#a37dfaa3c14a53fa6c0267fd31f9715b8">More...</a><br/></td></tr>
+<tr class="separator:a37dfaa3c14a53fa6c0267fd31f9715b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -118,9 +118,15 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a0de310b389647719c911d1f84433c41b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html">TaskContextServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#a0de310b389647719c911d1f84433c41b">Create</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *tc, bool use_naming=true, bool require_name_service=false)</td></tr>
 <tr class="memdesc:a0de310b389647719c911d1f84433c41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: create a CORBA server for an existing <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#a0de310b389647719c911d1f84433c41b">More...</a><br/></td></tr>
 <tr class="separator:a0de310b389647719c911d1f84433c41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c390b4400d4670e086bb06e8d467df"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html">TaskContextServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#af5c390b4400d4670e086bb06e8d467df">Create</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *tc, const std::string &amp;alias, bool use_naming=true, bool require_name_service=false)</td></tr>
+<tr class="memdesc:af5c390b4400d4670e086bb06e8d467df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: create a CORBA server for an existing <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#af5c390b4400d4670e086bb06e8d467df">More...</a><br/></td></tr>
+<tr class="separator:af5c390b4400d4670e086bb06e8d467df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b4b8c4d41cbcc825278525e30e3b7af"><td class="memItemLeft" align="right" valign="top">static CTaskContext_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#a7b4b8c4d41cbcc825278525e30e3b7af">CreateServer</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *tc, bool use_naming=true, bool require_name_service=false)</td></tr>
 <tr class="memdesc:a7b4b8c4d41cbcc825278525e30e3b7af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: create a CORBA server for an existing <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#a7b4b8c4d41cbcc825278525e30e3b7af">More...</a><br/></td></tr>
 <tr class="separator:a7b4b8c4d41cbcc825278525e30e3b7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4283c14ddf9df04889b445c99e434ba"><td class="memItemLeft" align="right" valign="top">static CTaskContext_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#ac4283c14ddf9df04889b445c99e434ba">CreateServer</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *tc, const std::string &amp;alias, bool use_naming=true, bool require_name_service=false)</td></tr>
+<tr class="memdesc:ac4283c14ddf9df04889b445c99e434ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: create a CORBA server for an existing <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#ac4283c14ddf9df04889b445c99e434ba">More...</a><br/></td></tr>
+<tr class="separator:ac4283c14ddf9df04889b445c99e434ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d81798b37a802b2804c2531c1c21c9c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#a0d81798b37a802b2804c2531c1c21c9c">CleanupServer</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *tc)</td></tr>
 <tr class="memdesc:a0d81798b37a802b2804c2531c1c21c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> server for a given taskcontext.  <a href="#a0d81798b37a802b2804c2531c1c21c9c">More...</a><br/></td></tr>
 <tr class="separator:a0d81798b37a802b2804c2531c1c21c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +165,13 @@ Protected Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#a86e2bab01500f8915cabde2f9f8e09a3">TaskContextServer</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *taskcontext, bool use_naming, bool require_name_service)</td></tr>
 <tr class="memdesc:a86e2bab01500f8915cabde2f9f8e09a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor which creates a new servant. <br/></td></tr>
 <tr class="separator:a86e2bab01500f8915cabde2f9f8e09a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b16194283b1b00085ffdf48533e25d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b16194283b1b00085ffdf48533e25d0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#a2b16194283b1b00085ffdf48533e25d0">TaskContextServer</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *taskcontext, const std::string &amp;alias, bool use_naming, bool require_name_service)</td></tr>
+<tr class="memdesc:a2b16194283b1b00085ffdf48533e25d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor which creates a new servant using an alias. <br/></td></tr>
+<tr class="separator:a2b16194283b1b00085ffdf48533e25d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add07f1a232af423cdb34e6dfa18c332e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add07f1a232af423cdb34e6dfa18c332e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initTaskContextServer</b> (bool require_name_service)</td></tr>
+<tr class="separator:add07f1a232af423cdb34e6dfa18c332e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
@@ -184,6 +197,9 @@ corba::CTaskContext_var&#160;</td><td class="memItemRight" valign="bottom"><b>mt
 <tr class="memitem:a30cc0338656137645c046cebe00dab19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30cc0338656137645c046cebe00dab19"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>muse_naming</b></td></tr>
 <tr class="separator:a30cc0338656137645c046cebe00dab19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeefaea4a2ff8cd1dfdd08b5f31363824"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeefaea4a2ff8cd1dfdd08b5f31363824"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mregistered_name</b></td></tr>
+<tr class="separator:aeefaea4a2ff8cd1dfdd08b5f31363824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
@@ -240,9 +256,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TaskContextProxy</b>
 <p>Deletes a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> server for a given taskcontext. </p>
 <p>If no such server exists, this method silently does nothing. </p>
 
-<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00261">261</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00271">271</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8hpp_source.html#l00128">RTT::TaskContext::getName()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00268">RTT::TaskContext::provides()</a>.</p>
+<p>References <a class="el" href="TaskContext_8hpp_source.html#l00117">RTT::TaskContext::getName()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00257">RTT::TaskContext::provides()</a>.</p>
 
 </div>
 </div>
@@ -301,11 +317,79 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TaskContextProxy</b>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new or previously created CORBA server for <em>tc</em>. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00399">399</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00409">409</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
 
-<p>References <a class="el" href="rtstreams_8cpp_source.html#l00110">RTT::os::endl()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00128">RTT::TaskContext::getName()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00121">TaskContextServer()</a>.</p>
+<p>References <a class="el" href="TaskContext_8hpp_source.html#l00117">RTT::TaskContext::getName()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00599">RTT::corba::TaskContextProxy::addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00654">RTT::corba::TaskContextProxy::connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00723">RTT::corba::TaskContextProxy::connectPorts()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00738">RTT::corba::TaskContextProxy::connectServices()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00730">RTT::corba::TaskContextProxy::addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00785">RTT::corba::TaskContextProxy::connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00854">RTT::corba::TaskContextProxy::connectPorts()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00869">RTT::corba::TaskContextProxy::connectServices()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5c390b4400d4670e086bb06e8d467df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html">TaskContextServer</a> * RTT::corba::TaskContextServer::Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td>
+          <td class="paramname"><em>tc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>alias</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_naming</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_name_service</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Factory method: create a CORBA server for an existing <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tc</td><td>The <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> to serve. </td></tr>
+    <tr><td class="paramname">alias</td><td><a class="el" href="classRTT_1_1Alias.html" title="This class is the most basic Attribute implementation (only suitable for reading a internal::DataSour...">Alias</a> to use as name when registering the CORBA server. </td></tr>
+    <tr><td class="paramname">use_naming</td><td>Set to <em>false</em> in order not to use the Corba Naming <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a>. </td></tr>
+    <tr><td class="paramname">require_naming</td><td>Set to <em>true</em> to require that the Corba Naming <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> be found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>if the ORB is not initialised, or if require_name_service==true and the name service was not found </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new or previously created CORBA server for <em>tc</em>. </dd></dl>
+
+<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00413">413</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
+
+<p>References <a class="el" href="rtstreams_8cpp_source.html#l00110">RTT::os::endl()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00253">TaskContextServer()</a>.</p>
 
 </div>
 </div>
@@ -365,9 +449,78 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TaskContextProxy</b>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new or previously created CORBA server for <em>tc</em>. Since this is a factory function, you need to store the object in a _var and don't need to _duplicate it. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00420">420</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00434">434</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
 
-<p>References <a class="el" href="rtstreams_8cpp_source.html#l00110">RTT::os::endl()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00128">RTT::TaskContext::getName()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00448">server()</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00121">TaskContextServer()</a>.</p>
+<p>References <a class="el" href="TaskContext_8hpp_source.html#l00117">RTT::TaskContext::getName()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4283c14ddf9df04889b445c99e434ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTaskContext_ptr RTT::corba::TaskContextServer::CreateServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td>
+          <td class="paramname"><em>tc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>alias</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_naming</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_name_service</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Factory method: create a CORBA server for an existing <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>. </p>
+<p>Same as above, but immediately return the Corba object. Also checks if <em>tc</em> is <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html" title="This class manages the access of remote TaskContext Corba Servers and a Corba Object Request Broker (...">TaskContextProxy</a> and returns the server of the proxy if so. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tc</td><td>The <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> to serve. </td></tr>
+    <tr><td class="paramname">alias</td><td><a class="el" href="classRTT_1_1Alias.html" title="This class is the most basic Attribute implementation (only suitable for reading a internal::DataSour...">Alias</a> to use as name when registering the CORBA server. </td></tr>
+    <tr><td class="paramname">use_naming</td><td>Set to <em>false</em> in order not to use the Corba Naming <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a>. </td></tr>
+    <tr><td class="paramname">require_naming</td><td>Set to <em>true</em> to require that the Corba Naming <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> be found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>if the ORB is not initialised, or if require_name_service==true and the name service was not found </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new or previously created CORBA server for <em>tc</em>. Since this is a factory function, you need to store the object in a _var and don't need to _duplicate it. </dd></dl>
+
+<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00438">438</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
+
+<p>References <a class="el" href="rtstreams_8cpp_source.html#l00110">RTT::os::endl()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00466">server()</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00253">TaskContextServer()</a>.</p>
 
 </div>
 </div>
@@ -402,7 +555,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TaskContextProxy</b>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>IOR of the provided <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> or an empty string if the <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> is unknown </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00454">454</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00472">472</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
 
 </div>
 </div>
@@ -484,20 +637,20 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TaskContextProxy</b>
 <p>Invoke this method to run the orb and accept client requests. </p>
 <p>Use <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#a3bbbcfa14b3345f1e86dffaf6ac89ee5" title="Invoke this method once to shutdown the Orb which is running the task servers in RunOrb(). ">ShutdownOrb()</a> to break out of this method. </p>
 
-<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00307">307</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00317">317</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
 
 <p>References <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00334">RTT::corba::OrbRunner::loop()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00344">RTT::corba::OrbRunner::loop()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac7180249551001aeb5a522d713364691"></a>
+<a class="anchor" id="a37dfaa3c14a53fa6c0267fd31f9715b8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">corba::CTaskContext_ptr RTT::corba::TaskContextServer::server </td>
+          <td class="memname">CTaskContext_ptr RTT::corba::TaskContextServer::server </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -508,9 +661,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TaskContextProxy</b>
 <p>Get the Corba Object of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>. </p>
 <p>If you want to store this reference, you must <b>_duplicate</b> it. This object universally identifies the remote <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a> and can be used to tell other (remote) objects where to find it. </p>
 
-<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00448">448</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00466">466</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00599">RTT::corba::TaskContextProxy::addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00654">RTT::corba::TaskContextProxy::connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00723">RTT::corba::TaskContextProxy::connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00738">RTT::corba::TaskContextProxy::connectServices()</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00420">CreateServer()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00730">RTT::corba::TaskContextProxy::addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00785">RTT::corba::TaskContextProxy::connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00854">RTT::corba::TaskContextProxy::connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00869">RTT::corba::TaskContextProxy::connectServices()</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00438">CreateServer()</a>.</p>
 
 </div>
 </div>
@@ -539,9 +692,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TaskContextProxy</b>
 <p>Invoke this method once to shutdown the Orb which is running the task servers in <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#a3af4b20d329e7cfb5a64560ee1d6d3f1" title="Invoke this method to run the orb and accept client requests. ">RunOrb()</a>. </p>
 <p>When this function returns, no CORBA invocations are in progress, unless wait_for_completion is false. </p>
 
-<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00273">273</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00283">283</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContextServer_8cpp_source.html#l00279">DoShutdownOrb()</a>.</p>
+<p>References <a class="el" href="TaskContextServer_8cpp_source.html#l00289">DoShutdownOrb()</a>.</p>
 
 </div>
 </div>
@@ -586,7 +739,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TaskContextProxy</b>
 <p>Invoke this method to run the orb in a separate thread and accept client requests from that thread. </p>
 <p>Use <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html#a3bbbcfa14b3345f1e86dffaf6ac89ee5" title="Invoke this method once to shutdown the Orb which is running the task servers in RunOrb(). ">ShutdownOrb()</a> to break out of this method. </p>
 
-<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00353">353</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextServer_8cpp_source.html#l00363">363</a> of file <a class="el" href="TaskContextServer_8cpp_source.html">TaskContextServer.cpp</a>.</p>
 
 <p>References <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a6ccbd039e0df4bae31fe63a988b3c2f3">RTT::base::ActivityInterface::start()</a>.</p>
 
@@ -599,7 +752,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>TaskContextProxy</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 5 2016 15:20:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 5 2016 15:27:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
