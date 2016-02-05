@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The OROCOS Project</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document gives an application oriented overview of Orocos, the Open RObot COntrol Software project." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp52591072"></a>
+      The OROCOS Project 
+    </h2></div><div><h3 class="subtitle"><em><span class="emphasis"><em>Open RObot COntrol Software</em></span>
+    </em></h3></div><div><p class="copyright">Copyright © 2002-2007 Herman Bruyninckx, Peter Soetens</p></div><div><div class="legalnotice"><a id="idp51943792"></a><p>
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.1 or
+	any later version published by the Free Software Foundation, with no
+	Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+	Texts. A copy of this license can be found at
+	<a class="ulink" href="http://www.fsf.org/copyleft/fdl.html" target="_top">http://www.fsf.org/copyleft/fdl.html</a>.
+      </p></div></div><div><div class="revhistory"><table style="border-style:solid; width:100%;" summary="Revision History"><tr><th align="left" valign="top" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 0.01</td><td align="left">05 Dec 2002</td><td align="left">hb</td></tr><tr><td align="left" colspan="3">Initial version</td></tr><tr><td align="left">Revision 0.19.2</td><td align="left">11 March 2005</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Added Application Stack figure, removed confusing
+	  objects and components section, adapted vision :-)</td></tr><tr><td align="left">Revision 0.22.0</td><td align="left">7 March 2006</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Added section 'Building Orocos Applications'</td></tr><tr><td align="left">Revision 1.0.2</td><td align="left">4 Jan 2007</td><td align="left">ps</td></tr><tr><td align="left" colspan="3">Made this a less technical document</td></tr></table></div></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><p>
+	This document gives an application oriented overview of
+	<a class="ulink" href="http://www.orocos.org" target="_top"><acronym class="acronym">Orocos</acronym></a>,
+	the <span class="emphasis"><em>Open RObot COntrol Software</em></span> project. 
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#whatis">1. What is Orocos?</a></span></dt><dt><span class="section"><a href="#audience">2. Target audience</a></span></dt><dt><span class="section"><a href="#idp51820192">3. Building Orocos Applications</a></span></dt><dd><dl><dt><span class="section"><a href="#idp51826272">3.1. Application Templates</a></span></dt><dt><span class="section"><a href="#idp51829232">3.2. Control Components</a></span></dt></dl></dd><dt><span class="section"><a href="#idp56969120">4. Related 'Orocos' Projects</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="whatis"></a>1. What is Orocos?</h2></div></div></div><p>
+      “<acronym class="acronym">Orocos</acronym>” is the acronym of the
+      <span class="emphasis"><em><a class="ulink" href="http://www.orocos.org" target="_top">Open Robot Control
+	  Software</a></em></span> project. The project's aim is to develop
+      a general-purpose, free software, and modular <span class="emphasis"><em>framework</em></span>
+      for <span class="emphasis"><em>robot</em></span>and <span class="emphasis"><em>machine control</em></span>.
+      The <acronym class="acronym">Orocos</acronym> project supports 4 C++ libraries: the Real-Time Toolkit, the
+      Kinematics and Dynamics Library, the Bayesian Filtering Library and
+      the Orocos Component Library.
+    </p><div class="figure"><a id="idp55934288"></a><p class="title"><strong>Figure 1. Orocos Libraries</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/RTT_KDL_BFL_400.png" alt="Orocos Libraries" /></div></div></div><br class="figure-break" /><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  The <acronym class="acronym">Orocos</acronym> Real-Time Toolkit (RTT) is not an application
+	  in itself, but it provides the infrastructure and the
+	  functionalities to build robotics applications in C++. The
+	  emphasis is on <span class="emphasis"><em>real-time</em></span>,
+	  <span class="emphasis"><em>on-line interactive</em></span> and
+	  <span class="emphasis"><em>component based</em></span> applications.
+	</p></li><li class="listitem"><p>
+	  The <acronym class="acronym">Orocos</acronym> Components Library (OCL) provides some ready to
+	  use control components. Both Component management and
+	  Components for control and hardware access are available.
+	</p></li><li class="listitem"><p>
+	  The <acronym class="acronym">Orocos</acronym> Kinematics and Dynamics Library (KDL) is a C++
+	  library which allows to calculate kinematic chains in
+	  real-time.
+	</p></li><li class="listitem"><p>
+	  The <acronym class="acronym">Orocos</acronym> Bayesian Filtering Library (BFL) provides an
+	  application independent framework for inference in Dynamic
+	  Bayesian Networks, i.e., recursive information processing
+	  and estimation algorithms based on Bayes' rule, such as
+	  (Extended) Kalman Filters, Particle Filters (Sequential
+	  Monte methods), etc.
+	</p></li></ul></div><p>
+      <acronym class="acronym">Orocos</acronym> is a free software project, hence its code and documentation
+      are released under Free Software licenses.
+    </p><p>
+      Your feedback and suggestions are greatly appreciated. Please, use the
+      project's 
+      <a class="ulink" href="http://lists.mech.kuleuven.be/mailman/listinfo/orocos" target="_top">mailing list</a> for this purpose.
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="audience"></a>2. Target audience</h2></div></div></div><p>
+      Robotics or machine control in general is a very broad field,
+      and many roboticists are pursuing quite different goals, dealing
+      with different levels of complexity, real-time control
+      constraints, application areas, user interaction, etc.  So,
+      because the robotics community is not homogeneous, <acronym class="acronym">Orocos</acronym>
+      targets four different categories of “Users” (or, in
+      the first place, “Developers”):
+    </p><div class="mediaobject"><img src="images/FrameworkOverview.png" /></div><p>
+      </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+	    <span class="emphasis"><em>Framework Builders.</em></span>
+	  </p><p>
+	    These developers do not work on any specific application, but
+	    they provide the infrastructure code to support applications. This
+	    level of supporting code is most often neglected in robot software
+	    projects, because in the (rather limited) scope of each individual 
+	    project, putting a lot of effort in a generic support platform is
+	    often considered to be “overkill”, or even not taken into
+	    consideration at all. However, because of the large scope of the
+	    <acronym class="acronym">Orocos</acronym> project, the supporting code (the “Framework”)
+	    gets a lot of attention. The hope is, of course, that this work will
+	    pay of by facilitating the developments for the other
+	    “Builders”. The RTT, KDL and BFL are created by Framework
+	    builders
+	  </p></li><li class="listitem"><p>
+	    <span class="emphasis"><em>Component Builders.</em></span>
+	  </p><p>
+	    Components provide a “service” within an
+	    application.  Using the infrastructure of the framework, a
+	    Component Builder describes the interface of a service and
+	    provides one or more implementations. For example a 
+	    Kinematics Component may be designed as such that it can
+	    “serve” different kinematic architectures.
+	    Other examples are Components to hardware devices, Components
+	    for diagnostics, safety or simulation. The OCL is created by 
+	    Component Builders.
+	  </p></li><li class="listitem"><p>
+	    <span class="emphasis"><em>Application Builders.</em></span>
+	  </p><p>
+	    These developers use the <acronym class="acronym">Orocos</acronym>' Framework and
+	    Components, and integrate them into one particular
+	    application. That means that they create a specific,
+	    application-dependent <span class="emphasis"><em>architecture</em></span>:
+	    Components are connected and configured as such that they
+	    form an application.
+	  </p></li><li class="listitem"><p>
+	    <span class="emphasis"><em>End Users.</em></span>
+	  </p><p>
+	    These people use the products of the Application Builders to program
+	    and run their particular tasks.
+	  </p></li></ol></div><p>
+    </p><p>
+      End Users do not directly belong to the target audience of
+      the <acronym class="acronym">Orocos</acronym> project, because <acronym class="acronym">Orocos</acronym> concentrates on the common
+      <span class="emphasis"><em>framework</em></span>, independent of any application
+      architecture. Serving the needs of the End Users is left to
+      (commercial and non-commercial) Application Builders.
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp51820192"></a>3. Building Orocos Applications</h2></div></div></div><p>
+      Orocos applications are composed of software components, which form
+      an application specific network. When using Orocos, you can choose
+      to use predefined components, contributed by the community, or
+      build your own component, using the Orocos Real-Time Toolkit. 
+      This section introduces both ways of building applications.
+    </p><div class="figure"><a id="fig-orocos-toolkit"></a><p class="title"><strong>Figure 2. 
+	  Orocos Real-Time Toolkit
+	</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/RealTimeToolkit.png" alt="Orocos Real-Time Toolkit" /></div></div></div><br class="figure-break" /><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51826272"></a>3.1. Application Templates</h3></div></div></div><p>
+	  An "Application Template" is a set of components that work
+	  well together. For example, the application template for
+	  motion control contains components for path planning,
+	  position control, hardware access and data reporting. The
+	  components are chosen as such that their interfaces are
+	  compatible.
+	</p><p>
+	  An application template should be so simple that any Orocos
+	  user can pick one and modify it, hence it is the first thing
+	  a new user will encounter. An application template should be
+	  explainable on one page with one figure explaining the
+	  architecture.
+	</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>An application template has no relation to 'C++'
+	  templates.
+	  </p></td></tr></table></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp51829232"></a>3.2. Control Components</h3></div></div></div><p>
+	  Applications are constructed using the Orocos
+	  "Control Component". A distributable entity which has a
+	  control oriented interface.  
+	</p><div class="figure"><a id="fig-orocos-component-interface"></a><p class="title"><strong>Figure 3. 
+	    Orocos Control Component Interface
+	  </strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/ComponentInterface.png" alt="Orocos Control Component Interface" /></div></div></div><br class="figure-break" /><p>
+	  A single component may be well capable of controlling a
+	  whole machine, or is just a 'small' part in a whole network
+	  of components, for example an interpolator or kinematic
+	  component. The components are built with the "Real-Time
+	  Toolkit" and optionally make use of any other library (like
+	  a vision or kinematics toolkit). Most users will interface components
+	  through their (XML) properties or command/method interface
+	  in order to configure their applications.
+	</p><p>
+	  There are five distinct ways in which an Orocos
+	  component can be interfaced: through its properties,
+	  events, methods, commands and data flow ports
+	  (<a class="xref" href="#fig-orocos-component-interface" title="Figure 3.  Orocos Control Component Interface">Figure 3, “
+	    Orocos Control Component Interface
+	  ”</a>).
+	  These are all optional interfaces. The purpose and
+	  use of these interface 'types' is documented in the
+	  Orocos Component Builder's Manual. Each component
+	  documents its interface as well. To get a grip
+	  on what these interfaces mean, here are some
+	  fictitious component interfaces for a 'Robot' Component:
+	</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>Data-Flow Ports:</em></span> Are a thread-safe
+	    data transport mechanism to communicate buffered or
+	    un-buffered data between components.  For example:
+	    "JointSetpoints", "EndEffectorFrame",
+	    "FeedForward",...</p></li><li class="listitem"><p><span class="emphasis"><em>Properties:</em></span> Are run-time
+	    modifiable parameters, stored in XML files. For example:
+	    "Kinematic Algorithm", "Control Parameters", "Homing
+	    Position", "ToolType",...</p></li><li class="listitem"><p><span class="emphasis"><em>OperationCallers:</em></span> Are callable by other
+	    components to 'calculate' a result immediately, just like
+	    a 'C' function. For example: "getTrackingError()",
+	    "openGripper()", "writeData("filename")", "isMoving()",
+	    ...</p></li><li class="listitem"><p><span class="emphasis"><em>Commands:</em></span> Are 'sent' by other
+	    components to instruct the receiver to 'reach a goal' For
+	    example: "moveTo(pos, velocity)", "home()",... A command
+	    cannot, in general, be completely executed
+	    instantaneously, so the caller should not block and wait
+	    for its completion. But the Command object offers all
+	    functionalities to let the caller know about the progress
+	    in the execution of the command.
+	    </p></li><li class="listitem"><p><span class="emphasis"><em>Events:</em></span> Allows functions to be
+	    executed when a change in the system occurs. For example:
+	    "Position Reached", "Emergency Stop", "Object
+	    Grasped",...</p></li></ul></div><p>
+	</p><p>
+	  Besides defining the above component communication
+	  mechanisms, Orocos allows the Component or Application
+	  Builder to write hierarchical state machines which use these
+	  primitives. This is the Orocos way of defining your
+	  application specific logic. State machines can be (un-)loaded
+	  at run-time in any component.
+	</p><div class="figure"><a id="fig-orocos-component-implementation"></a><p class="title"><strong>Figure 4. 
+	    Orocos Control Component State Machines.
+	  </strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/ComponentImplementation.png" alt="Orocos Control Component State Machines." /></div></div></div><p><br class="figure-break" />
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp56969120"></a>4. Related 'Orocos' Projects</h2></div></div></div><p>
+      The Orocos project spawned a couple of largely independent
+      software projects. The documentation you are reading is about
+      the Real-Time Control Software located on the Orocos.org web page.
+      The other <span class="emphasis"><em>not real-time</em></span> projects are :
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>At KTH Stockholm, several releases have been made for
+	    component-based robotic systems, and the project has been
+	    renamed to <a class="ulink" href="http://orca-robotics.sourceforge.net/" target="_top">Orca</a>.</p></li><li class="listitem"><p>
+	    Although not a project funded partner, the FH Ulm
+	    maintains Free CORBA communication patterns for modular
+	    robotics : <a class="ulink" href="http://www.rz.fh-ulm.de/~cschlege/orocos/" target="_top">Orocos::SmartSoft</a>.
+	  </p></li></ul></div><p>
+      This documentation is targeted at industrial robotics and real-time control.
+    </p></div></div></body></html>
