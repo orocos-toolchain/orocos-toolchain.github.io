@@ -15418,7 +15418,14 @@
     <name>RTT::internal::FusedMSendDataSource</name>
     <filename>structRTT_1_1internal_1_1FusedMSendDataSource.html</filename>
     <templarg>Signature</templarg>
-    <base>DataSource&lt; SendHandle&lt; Signature &gt; &gt;</base>
+    <base>AssignableDataSource&lt; SendHandle&lt; Signature &gt; &gt;</base>
+    <member kind="function">
+      <type>reference_t</type>
+      <name>set</name>
+      <anchorfile>structRTT_1_1internal_1_1FusedMSendDataSource.html</anchorfile>
+      <anchor>af639e53f68a6afa66bb7ef97f98179aa</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function">
       <type>value_t</type>
       <name>value</name>
@@ -15461,74 +15468,46 @@
       <anchor>a3a708d1db2ab1f6e156ac3434b23010c</anchor>
       <arglist>(std::map&lt; const base::DataSourceBase *, base::DataSourceBase * &gt; &amp;alreadyCloned) const </arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>BOOST_STATIC_ASSERT</name>
-      <anchorfile>classRTT_1_1internal_1_1DataSource.html</anchorfile>
-      <anchor>a8d2a559b969c87e256a8f13386af7d91</anchor>
-      <arglist>(!details::HasConst&lt; SendHandle&lt; Signature &gt; &gt;::value)</arglist>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>set</name>
+      <anchorfile>classRTT_1_1internal_1_1AssignableDataSource.html</anchorfile>
+      <anchor>a8d8768e83fae929586428a6cd66ca75a</anchor>
+      <arglist>(param_t t)=0</arglist>
     </member>
     <member kind="function">
-      <type>void const *</type>
-      <name>getRawConstPointer</name>
-      <anchorfile>classRTT_1_1internal_1_1DataSource.html</anchorfile>
-      <anchor>a6f83ec1433a0eab4a86c162ec15ee314</anchor>
+      <type>void *</type>
+      <name>getRawPointer</name>
+      <anchorfile>classRTT_1_1internal_1_1AssignableDataSource.html</anchorfile>
+      <anchor>a5519827f47fdfdea189cf01666e81a29</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>evaluate</name>
-      <anchorfile>classRTT_1_1internal_1_1DataSource.html</anchorfile>
-      <anchor>a3d52c8b009bce254b70582f7e6946b24</anchor>
+      <name>isAssignable</name>
+      <anchorfile>classRTT_1_1internal_1_1AssignableDataSource.html</anchorfile>
+      <anchor>abf2dfcdb08b91febf963cd4a806ba43e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
-      <name>getType</name>
-      <anchorfile>classRTT_1_1internal_1_1DataSource.html</anchorfile>
-      <anchor>a8ab3133e4c44e685c20cb0b89545d414</anchor>
-      <arglist>() const</arglist>
+      <type>virtual bool</type>
+      <name>update</name>
+      <anchorfile>classRTT_1_1internal_1_1AssignableDataSource.html</anchorfile>
+      <anchor>a9b7a379cdbb70860714ab653673d0957</anchor>
+      <arglist>(base::DataSourceBase *other)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const types::TypeInfo *</type>
-      <name>getTypeInfo</name>
-      <anchorfile>classRTT_1_1internal_1_1DataSource.html</anchorfile>
-      <anchor>aef3a81aa4d70305b7ac4f9413db93b23</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual std::string</type>
-      <name>getTypeName</name>
-      <anchorfile>classRTT_1_1internal_1_1DataSource.html</anchorfile>
-      <anchor>aae5e9522e0119094179eebbf5db1cfd8</anchor>
-      <arglist>() const</arglist>
+      <type>virtual base::ActionInterface *</type>
+      <name>updateAction</name>
+      <anchorfile>classRTT_1_1internal_1_1AssignableDataSource.html</anchorfile>
+      <anchor>ad4a5d078288ce2e01e66122b79aebe69</anchor>
+      <arglist>(base::DataSourceBase *other)</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static std::string</type>
-      <name>GetType</name>
-      <anchorfile>classRTT_1_1internal_1_1DataSource.html</anchorfile>
-      <anchor>ab2d384c8b26e1e8767530f6f819c8d43</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static const types::TypeInfo *</type>
-      <name>GetTypeInfo</name>
-      <anchorfile>classRTT_1_1internal_1_1DataSource.html</anchorfile>
-      <anchor>a1a51a524a26a2ecc57c6601a053864a8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static std::string</type>
-      <name>GetTypeName</name>
-      <anchorfile>classRTT_1_1internal_1_1DataSource.html</anchorfile>
-      <anchor>aba21a204dda5f619f0a49db240edd3ff</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static DataSource&lt; SendHandle&lt; Signature &gt; &gt; *</type>
+      <type>static AssignableDataSource&lt; SendHandle&lt; Signature &gt; &gt; *</type>
       <name>narrow</name>
-      <anchorfile>classRTT_1_1internal_1_1DataSource.html</anchorfile>
-      <anchor>a210243bf3e7a61884b0ace99aea8d823</anchor>
+      <anchorfile>classRTT_1_1internal_1_1AssignableDataSource.html</anchorfile>
+      <anchor>ad1fa9e588f9641c35bad6b7c05eceab5</anchor>
       <arglist>(base::DataSourceBase *db)</arglist>
     </member>
   </compound>
@@ -15557,13 +15536,6 @@
       <anchorfile>structRTT_1_1internal_1_1FusedMCollectDataSource.html</anchorfile>
       <anchor>adf22f3e0d0fd9278d6689e553472f047</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>reset</name>
-      <anchorfile>structRTT_1_1internal_1_1FusedMCollectDataSource.html</anchorfile>
-      <anchor>a82bb294eb1159740c2dd361555d78cc9</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual FusedMCollectDataSource&lt; Signature &gt; *</type>
