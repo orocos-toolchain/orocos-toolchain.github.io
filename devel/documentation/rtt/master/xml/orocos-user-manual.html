@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The Orocos User's Manual</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document gives an introduction to the Orocos ( Open RObot COntrol Software ) project. It contains a high-level overview of what Orocos (aims to) offer and the installation manual." /></head><body><div class="book"><div class="titlepage"><div><div><h1 class="title"><a id="idp46679387952256"></a>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The Orocos User's Manual</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document gives an introduction to the Orocos ( Open RObot COntrol Software ) project. It contains a high-level overview of what Orocos (aims to) offer and the installation manual." /></head><body><div class="book"><div class="titlepage"><div><div><h1 class="title"><a id="idp47898769180096"></a>
       The Orocos User's Manual
     </h1></div><div><h2 class="subtitle"><span class="emphasis"><em>Open RObot COntrol Software</em></span>
-    </h2></div><div><h2 class="subtitle">2.8.1</h2></div><div><p class="copyright">Copyright © 2002,2003,2004,2005,2006 Herman Bruyninckx, Peter Soetens</p></div><div><div class="legalnotice"><a id="idp46679390674640"></a><p>
+    </h2></div><div><h2 class="subtitle">2.8.1</h2></div><div><p class="copyright">Copyright © 2002,2003,2004,2005,2006 Herman Bruyninckx, Peter Soetens</p></div><div><div class="legalnotice"><a id="idp47898772517904"></a><p>
 	Orocos Version 2.8.1.
       </p><p>
 	Permission is granted to copy, distribute and/or modify this document
@@ -17,13 +17,13 @@
 	<span class="emphasis"><em> ( Open RObot COntrol Software ) </em></span> project.
 	It contains a high-level overview of what Orocos
 	(aims to) offer and the installation manual.
-      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="chapter"><a href="#idp46679392117632">1. Orocos Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#whatis">1. What is Orocos?</a></span></dt><dt><span class="section"><a href="#audience">2. Target audience</a></span></dt><dt><span class="section"><a href="#idp46679395194400">3. Building Orocos Applications</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46679395200992">3.1. Application Templates</a></span></dt><dt><span class="section"><a href="#idp46679395204208">3.2. Control Components</a></span></dt></dl></dd><dt><span class="section"><a href="#idp46679395226368">4. Related 'Orocos' Projects</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp46679390490832">2. Installing Orocos</a></span></dt><dd><dl><dt><span class="section"><a href="#first-source-tree">1.  Setting up your <acronym class="acronym">Orocos</acronym> build environment </a></span></dt><dd><dl><dt><span class="section"><a href="#setup_intro">1.1. Introduction</a></span></dt><dt><span class="section"><a href="#basic-install-win32">1.2. Basic Real-Time Toolkit Installation on Windows-like systems</a></span></dt><dt><span class="section"><a href="#basic-install-unix">1.3. Basic Real-Time Toolkit Installation on Unix-like systems</a></span></dt></dl></dd><dt><span class="section"><a href="#getting-started">2. Getting Started with the Code</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46679399692608">2.1. Examples</a></span></dt><dt><span class="section"><a href="#idp46679399694832">2.2. Building components and applications</a></span></dt><dt><span class="section"><a href="#idp46679399714064">2.3. What about main() ?</a></span></dt></dl></dd><dt><span class="section"><a href="#install-configure">3. Detailed Configuration using 'CMake'</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46679399726752">3.1. Real-Time Toolkit Build Configuration</a></span></dt><dt><span class="section"><a href="#idp46679399735792">3.2. Configuring the target Operating System</a></span></dt><dt><span class="section"><a href="#install-flags">3.3. Setting Build Compiler Flags</a></span></dt><dt><span class="section"><a href="#general_setup_rtai">3.4. Building for RTAI / LXRT</a></span></dt><dt><span class="section"><a href="#general_setup_xeno">3.5. Building for Xenomai (version 2.2.0 or newer)</a></span></dt><dt><span class="section"><a href="#install-config-corba">3.6. Configuring for CORBA</a></span></dt></dl></dd><dt><span class="section"><a href="#cross-compile">4. Cross Compiling Orocos</a></span></dt></dl></dd></dl></div><div class="list-of-figures"><p><strong>List of Figures</strong></p><dl><dt>1.1. <a href="#idp46679395160304">Orocos Libraries</a></dt><dt>1.2. <a href="#fig-orocos-toolkit">
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="chapter"><a href="#idp47898769237488">1. Orocos Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#whatis">1. What is Orocos?</a></span></dt><dt><span class="section"><a href="#audience">2. Target audience</a></span></dt><dt><span class="section"><a href="#idp47898775078544">3. Building Orocos Applications</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47898775085136">3.1. Application Templates</a></span></dt><dt><span class="section"><a href="#idp47898777189312">3.2. Control Components</a></span></dt></dl></dd><dt><span class="section"><a href="#idp47898777209056">4. Related 'Orocos' Projects</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp47898769651392">2. Installing Orocos</a></span></dt><dd><dl><dt><span class="section"><a href="#first-source-tree">1.  Setting up your <acronym class="acronym">Orocos</acronym> build environment </a></span></dt><dd><dl><dt><span class="section"><a href="#setup_intro">1.1. Introduction</a></span></dt><dt><span class="section"><a href="#basic-install-win32">1.2. Basic Real-Time Toolkit Installation on Windows-like systems</a></span></dt><dt><span class="section"><a href="#basic-install-unix">1.3. Basic Real-Time Toolkit Installation on Unix-like systems</a></span></dt></dl></dd><dt><span class="section"><a href="#getting-started">2. Getting Started with the Code</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47898779536640">2.1. Examples</a></span></dt><dt><span class="section"><a href="#idp47898779538864">2.2. Building components and applications</a></span></dt><dt><span class="section"><a href="#idp47898779558096">2.3. What about main() ?</a></span></dt></dl></dd><dt><span class="section"><a href="#install-configure">3. Detailed Configuration using 'CMake'</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47898779570784">3.1. Real-Time Toolkit Build Configuration</a></span></dt><dt><span class="section"><a href="#idp47898779579824">3.2. Configuring the target Operating System</a></span></dt><dt><span class="section"><a href="#install-flags">3.3. Setting Build Compiler Flags</a></span></dt><dt><span class="section"><a href="#general_setup_rtai">3.4. Building for RTAI / LXRT</a></span></dt><dt><span class="section"><a href="#general_setup_xeno">3.5. Building for Xenomai (version 2.2.0 or newer)</a></span></dt><dt><span class="section"><a href="#install-config-corba">3.6. Configuring for CORBA</a></span></dt></dl></dd><dt><span class="section"><a href="#cross-compile">4. Cross Compiling Orocos</a></span></dt></dl></dd></dl></div><div class="list-of-figures"><p><strong>List of Figures</strong></p><dl><dt>1.1. <a href="#idp47898767410672">Orocos Libraries</a></dt><dt>1.2. <a href="#fig-orocos-toolkit">
 	  Orocos Real-Time Toolkit
 	</a></dt><dt>1.3. <a href="#fig-orocos-component-interface">
 	    Orocos Control Component Interface
 	  </a></dt><dt>1.4. <a href="#fig-orocos-component-implementation">
 	    Orocos Control Component State Machines.
-	  </a></dt></dl></div><div class="list-of-tables"><p><strong>List of Tables</strong></p><dl><dt>2.1. <a href="#idp46679402236432">Build Requirements</a></dt></dl></div><div class="list-of-examples"><p><strong>List of Examples</strong></p><dl><dt>2.1. <a href="#idp46679399696976">A CMakeLists.txt file for an Orocos Application or Component</a></dt><dt>2.2. <a href="#idp46679399702272">A Makefile for an Orocos Application or Component</a></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="idp46679392117632"></a>Chapter 1. Orocos Overview</h1></div></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#whatis">1. What is Orocos?</a></span></dt><dt><span class="section"><a href="#audience">2. Target audience</a></span></dt><dt><span class="section"><a href="#idp46679395194400">3. Building Orocos Applications</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46679395200992">3.1. Application Templates</a></span></dt><dt><span class="section"><a href="#idp46679395204208">3.2. Control Components</a></span></dt></dl></dd><dt><span class="section"><a href="#idp46679395226368">4. Related 'Orocos' Projects</a></span></dt></dl></div><div class="abstract"><p class="title"><strong>Abstract</strong></p><p>
+	  </a></dt></dl></div><div class="list-of-tables"><p><strong>List of Tables</strong></p><dl><dt>2.1. <a href="#idp47898782103536">Build Requirements</a></dt></dl></div><div class="list-of-examples"><p><strong>List of Examples</strong></p><dl><dt>2.1. <a href="#idp47898779541008">A CMakeLists.txt file for an Orocos Application or Component</a></dt><dt>2.2. <a href="#idp47898779546304">A Makefile for an Orocos Application or Component</a></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="idp47898769237488"></a>Chapter 1. Orocos Overview</h1></div></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#whatis">1. What is Orocos?</a></span></dt><dt><span class="section"><a href="#audience">2. Target audience</a></span></dt><dt><span class="section"><a href="#idp47898775078544">3. Building Orocos Applications</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47898775085136">3.1. Application Templates</a></span></dt><dt><span class="section"><a href="#idp47898777189312">3.2. Control Components</a></span></dt></dl></dd><dt><span class="section"><a href="#idp47898777209056">4. Related 'Orocos' Projects</a></span></dt></dl></div><div class="abstract"><p class="title"><strong>Abstract</strong></p><p>
 	This document gives an application oriented overview of
 	<a class="ulink" href="http://www.orocos.org" target="_top"><acronym class="acronym">Orocos</acronym></a>,
 	the <span class="emphasis"><em>Open RObot COntrol Software</em></span> project. 
@@ -36,7 +36,7 @@
       The <acronym class="acronym">Orocos</acronym> project supports 4 C++ libraries: the Real-Time Toolkit, the
       Kinematics and Dynamics Library, the Bayesian Filtering Library and
       the Orocos Component Library.
-    </p><div class="figure"><a id="idp46679395160304"></a><p class="title"><strong>Figure 1.1. Orocos Libraries</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/RTT_KDL_BFL_400.png" alt="Orocos Libraries" /></div></div></div><br class="figure-break" /><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+    </p><div class="figure"><a id="idp47898767410672"></a><p class="title"><strong>Figure 1.1. Orocos Libraries</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/RTT_KDL_BFL_400.png" alt="Orocos Libraries" /></div></div></div><br class="figure-break" /><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
 	  The <acronym class="acronym">Orocos</acronym> Real-Time Toolkit (RTT) is not an application
 	  in itself, but it provides the infrastructure and the
 	  functionalities to build robotics applications in C++. The
@@ -122,7 +122,7 @@
       <span class="emphasis"><em>framework</em></span>, independent of any application
       architecture. Serving the needs of the End Users is left to
       (commercial and non-commercial) Application Builders.
-    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp46679395194400"></a>3. Building Orocos Applications</h2></div></div></div><p>
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp47898775078544"></a>3. Building Orocos Applications</h2></div></div></div><p>
       Orocos applications are composed of software components, which form
       an application specific network. When using Orocos, you can choose
       to use predefined components, contributed by the community, or
@@ -130,7 +130,7 @@
       This section introduces both ways of building applications.
     </p><div class="figure"><a id="fig-orocos-toolkit"></a><p class="title"><strong>Figure 1.2. 
 	  Orocos Real-Time Toolkit
-	</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/RealTimeToolkit.png" alt="Orocos Real-Time Toolkit" /></div></div></div><br class="figure-break" /><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46679395200992"></a>3.1. Application Templates</h3></div></div></div><p>
+	</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/RealTimeToolkit.png" alt="Orocos Real-Time Toolkit" /></div></div></div><br class="figure-break" /><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47898775085136"></a>3.1. Application Templates</h3></div></div></div><p>
 	  An "Application Template" is a set of components that work
 	  well together. For example, the application template for
 	  motion control contains components for path planning,
@@ -145,7 +145,7 @@
 	  architecture.
 	</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>An application template has no relation to 'C++'
 	  templates.
-	  </p></td></tr></table></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46679395204208"></a>3.2. Control Components</h3></div></div></div><p>
+	  </p></td></tr></table></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47898777189312"></a>3.2. Control Components</h3></div></div></div><p>
 	  Applications are constructed using the Orocos
 	  "Control Component". A distributable entity which has a
 	  control oriented interface.  
@@ -206,7 +206,7 @@
 	</p><div class="figure"><a id="fig-orocos-component-implementation"></a><p class="title"><strong>Figure 1.4. 
 	    Orocos Control Component State Machines.
 	  </strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/ComponentImplementation.png" alt="Orocos Control Component State Machines." /></div></div></div><p><br class="figure-break" />
-	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp46679395226368"></a>4. Related 'Orocos' Projects</h2></div></div></div><p>
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp47898777209056"></a>4. Related 'Orocos' Projects</h2></div></div></div><p>
       The Orocos project spawned a couple of largely independent
       software projects. The documentation you are reading is about
       the Real-Time Control Software located on the Orocos.org web page.
@@ -219,7 +219,7 @@
 	    robotics : <a class="ulink" href="http://www.rz.fh-ulm.de/~cschlege/orocos/" target="_top">Orocos::SmartSoft</a>.
 	  </p></li></ul></div><p>
       This documentation is targeted at industrial robotics and real-time control.
-    </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="idp46679390490832"></a>Chapter 2. Installing Orocos</h1></div></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#first-source-tree">1.  Setting up your <acronym class="acronym">Orocos</acronym> build environment </a></span></dt><dd><dl><dt><span class="section"><a href="#setup_intro">1.1. Introduction</a></span></dt><dt><span class="section"><a href="#basic-install-win32">1.2. Basic Real-Time Toolkit Installation on Windows-like systems</a></span></dt><dt><span class="section"><a href="#basic-install-unix">1.3. Basic Real-Time Toolkit Installation on Unix-like systems</a></span></dt></dl></dd><dt><span class="section"><a href="#getting-started">2. Getting Started with the Code</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46679399692608">2.1. Examples</a></span></dt><dt><span class="section"><a href="#idp46679399694832">2.2. Building components and applications</a></span></dt><dt><span class="section"><a href="#idp46679399714064">2.3. What about main() ?</a></span></dt></dl></dd><dt><span class="section"><a href="#install-configure">3. Detailed Configuration using 'CMake'</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46679399726752">3.1. Real-Time Toolkit Build Configuration</a></span></dt><dt><span class="section"><a href="#idp46679399735792">3.2. Configuring the target Operating System</a></span></dt><dt><span class="section"><a href="#install-flags">3.3. Setting Build Compiler Flags</a></span></dt><dt><span class="section"><a href="#general_setup_rtai">3.4. Building for RTAI / LXRT</a></span></dt><dt><span class="section"><a href="#general_setup_xeno">3.5. Building for Xenomai (version 2.2.0 or newer)</a></span></dt><dt><span class="section"><a href="#install-config-corba">3.6. Configuring for CORBA</a></span></dt></dl></dd><dt><span class="section"><a href="#cross-compile">4. Cross Compiling Orocos</a></span></dt></dl></div><div class="abstract"><p class="title"><strong>Abstract</strong></p><p>
+    </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="idp47898769651392"></a>Chapter 2. Installing Orocos</h1></div></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#first-source-tree">1.  Setting up your <acronym class="acronym">Orocos</acronym> build environment </a></span></dt><dd><dl><dt><span class="section"><a href="#setup_intro">1.1. Introduction</a></span></dt><dt><span class="section"><a href="#basic-install-win32">1.2. Basic Real-Time Toolkit Installation on Windows-like systems</a></span></dt><dt><span class="section"><a href="#basic-install-unix">1.3. Basic Real-Time Toolkit Installation on Unix-like systems</a></span></dt></dl></dd><dt><span class="section"><a href="#getting-started">2. Getting Started with the Code</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47898779536640">2.1. Examples</a></span></dt><dt><span class="section"><a href="#idp47898779538864">2.2. Building components and applications</a></span></dt><dt><span class="section"><a href="#idp47898779558096">2.3. What about main() ?</a></span></dt></dl></dd><dt><span class="section"><a href="#install-configure">3. Detailed Configuration using 'CMake'</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47898779570784">3.1. Real-Time Toolkit Build Configuration</a></span></dt><dt><span class="section"><a href="#idp47898779579824">3.2. Configuring the target Operating System</a></span></dt><dt><span class="section"><a href="#install-flags">3.3. Setting Build Compiler Flags</a></span></dt><dt><span class="section"><a href="#general_setup_rtai">3.4. Building for RTAI / LXRT</a></span></dt><dt><span class="section"><a href="#general_setup_xeno">3.5. Building for Xenomai (version 2.2.0 or newer)</a></span></dt><dt><span class="section"><a href="#install-config-corba">3.6. Configuring for CORBA</a></span></dt></dl></dd><dt><span class="section"><a href="#cross-compile">4. Cross Compiling Orocos</a></span></dt></dl></div><div class="abstract"><p class="title"><strong>Abstract</strong></p><p>
 	This document explains how the
 	Real-Time Toolkit of <a class="ulink" href="http://www.orocos.org" target="_top"><acronym class="acronym">Orocos</acronym></a>,
 	the <span class="emphasis"><em>Open RObot COntrol Software</em></span> project
@@ -247,7 +247,7 @@
 	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>2.2.1 : Release 2, Feature update 2, bug-fix revision
 		1.</p></li></ul></div><p>
 	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="build-deps"></a>1.1.3. Dependencies on other Libraries</h4></div></div></div><p>Before you install Orocos, verify that you have the
-	following software installed on your platform : </p><div class="table"><a id="idp46679402236432"></a><p class="title"><strong>Table 2.1. Build Requirements</strong></p><div class="table-contents"><table summary="Build Requirements" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>Program / Library</th><th><span class="emphasis"><em>Minimum</em></span> Version</th><th>Description</th></tr></thead><tbody><tr><td>CMake</td><td>2.6.3  (all platforms)</td><td>See <a class="ulink" href="http://www.cmake.org/cmake/resources/software.html" target="_top">resources on cmake.org</a>
+	following software installed on your platform : </p><div class="table"><a id="idp47898782103536"></a><p class="title"><strong>Table 2.1. Build Requirements</strong></p><div class="table-contents"><table summary="Build Requirements" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>Program / Library</th><th><span class="emphasis"><em>Minimum</em></span> Version</th><th>Description</th></tr></thead><tbody><tr><td>CMake</td><td>2.6.3  (all platforms)</td><td>See <a class="ulink" href="http://www.cmake.org/cmake/resources/software.html" target="_top">resources on cmake.org</a>
 		for pre-compiled packages in case your distribution
 		does not support this version</td></tr><tr><td>Boost C++ Library</td><td>1.33.0 (1.40.0 recommended!)</td><td><a class="ulink" href="http://www.boost.org" target="_top">Boost.org</a> from version
 		1.33.0 on has a very efficient (time/space) lock-free
@@ -338,17 +338,17 @@
 	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="getting-started"></a>2. Getting Started with the Code</h2></div></div></div><p>
       This Section provides a short overview of how to proceed next using the
       <acronym class="acronym">Orocos</acronym> Real-Time Toolkit.
-    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46679399692608"></a>2.1. Examples</h3></div></div></div><p>
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47898779536640"></a>2.1. Examples</h3></div></div></div><p>
 	We're still porting the examples to the 2.x API. The most up to date
 	examples are the RTT 2.x exercises which you can find on the
 	<a class="ulink" href="http://www.orocos.org/wiki/orocos/toolchain/getting-started" target="_top">
 	  Getting Started</a> webpage.
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46679399694832"></a>2.2. Building components and applications</h3></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47898779538864"></a>2.2. Building components and applications</h3></div></div></div><p>
 	Below, we provide two ways of building Orocos components: using
 	CMake or a plain Makefile. Use this in combination with the code
 	found in the <a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.x/doc-xml/orocos-components-manual.html" target="_top">Orocos
 	Component Builder's Manual</a>.
-      </p><div class="example"><a id="idp46679399696976"></a><p class="title"><strong>Example 2.1. A CMakeLists.txt file for an Orocos Application or Component</strong></p><div class="example-contents"><p>
+      </p><div class="example"><a id="idp47898779541008"></a><p class="title"><strong>Example 2.1. A CMakeLists.txt file for an Orocos Application or Component</strong></p><div class="example-contents"><p>
 	    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>This file is automatically generated for you when you use the
 				<span class="command"><strong>&gt;orocreate-pkg</strong></span> program.
 	      </p></td></tr></table></div><p>
@@ -396,7 +396,7 @@ orocos_install_headers( hardware.hpp )
 # automatically link with it.
 orocos_generate_package()
 	    </pre><p>
-	  </p></div></div><br class="example-break" /><div class="example"><a id="idp46679399702272"></a><p class="title"><strong>Example 2.2. A Makefile for an Orocos Application or Component</strong></p><div class="example-contents"><p>
+	  </p></div></div><br class="example-break" /><div class="example"><a id="idp47898779546304"></a><p class="title"><strong>Example 2.2. A Makefile for an Orocos Application or Component</strong></p><div class="example-contents"><p>
 	    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>We strongly recommend using the cmake macros above.
 	      </p></td></tr></table></div><p>
 	    You can compile your program with a Makefile
@@ -441,7 +441,7 @@ orocos_generate_package()
 	      for your target if you application has compilation or link errors
 	      ( for example when using LXRT ).
 	      </p></td></tr></table></div><p>
-	  </p></div></div><br class="example-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46679399714064"></a>2.3. What about main() ?</h3></div></div></div><p>
+	  </p></div></div><br class="example-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47898779558096"></a>2.3. What about main() ?</h3></div></div></div><p>
 	In case you also want to write an executable that runs
 	components, your main() function needs to be named
 	ORO_main().
@@ -483,7 +483,7 @@ orocos_generate_package()
 	into the same directory. The advantage is that this file lives in the
 	rtt top source directory, such that it can be re-used across builds.
 	<span class="emphasis"><em>Using this file is recommended!</em></span>
-      </p></td></tr></table></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46679399726752"></a>3.1. Real-Time Toolkit Build Configuration</h3></div></div></div><p>
+      </p></td></tr></table></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47898779570784"></a>3.1. Real-Time Toolkit Build Configuration</h3></div></div></div><p>
 	  The RTT can be configured depending on your target. 
 	  For embedded targets, the large scripting infrastructure and
 	  use of exceptions can be left out. When CORBA is available,
@@ -501,7 +501,7 @@ orocos_generate_package()
 	  multiple times), 'g' to generate the makefiles. If an
 	  additional configuration check is required, the 'g' key can
 	  not be used and you must press again 'c' and examine the output.
-	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46679399731472"></a>3.1.1. RTT with CORBA plugin</h4></div></div></div><p>
+	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47898779575504"></a>3.1.1. RTT with CORBA plugin</h4></div></div></div><p>
 	    In order to enable CORBA, a valid installation of TAO or OMNIORB must be
 	    detected on your system and you must turn the <code class="option">ENABLE_CORBA</code>
 	    option on (using ccmake).
@@ -512,7 +512,7 @@ orocos_generate_package()
 	  </p><pre class="screen">  cmake .. -DENABLE_CORBA=ON</pre><p>
 	    See <a class="xref" href="#install-config-corba" title="3.6. Configuring for CORBA">Section 3.6, “Configuring for CORBA”</a> for full configuration details
 	    when using the CORBA transport.
-	  </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46679399735792"></a>3.2. Configuring the target Operating System</h3></div></div></div><p>
+	  </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47898779579824"></a>3.2. Configuring the target Operating System</h3></div></div></div><p>
 	Move to the <code class="option">OROCOS_TARGET</code>, press enter and type 
 	on of the following supported targets (all in lowercase):
 	</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>gnulinux</p></li><li class="listitem"><p>macosx</p></li><li class="listitem"><p>xenomai</p></li><li class="listitem"><p>lxrt</p></li><li class="listitem"><p>win32</p></li></ul></div><p>
@@ -538,7 +538,7 @@ orocos_generate_package()
 	Read The README.* files in the
 	<code class="filename">rtai</code> directory for detailed
 	build instructions, as these depend on the RTAI version.
-      </p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46679399752240"></a>3.4.1.  RTAI settings </h4></div></div></div><p>
+      </p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47898779596272"></a>3.4.1.  RTAI settings </h4></div></div></div><p>
 	  RTAI comes with documentation for configuration and
 	  installation.  During 'make menuconfig', make sure that
 	  you enable the following options (<span class="emphasis"><em>in addition to
@@ -556,7 +556,7 @@ orocos_generate_package()
 	  <code class="filename">/usr/realtime</code>. You'll have to specify
 	  this directory in the <code class="option">RTAI_INSTALL_DIR</code> option
 	  during 'ccmake'.
-	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46679399763456"></a>3.4.2. Loading RTAI with LXRT</h4></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47898779607488"></a>3.4.2. Loading RTAI with LXRT</h4></div></div></div><p>
 	  LXRT is a all-in-one scheduler that works for kernel and userspace.
 	  So if you use this, you can still run kernel programs but have the ability
 	  to run realtime programs in userspace. Orocos provides you the libraries
@@ -565,7 +565,7 @@ orocos_generate_package()
 	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>rtai_sem</p></li><li class="listitem"><p>rtai_lxrt</p></li><li class="listitem"><p>rtai_hal</p></li><li class="listitem"><p>adeos (depends on RTAI version)</p></li></ul></div><p>
 	  For example, by executing as root:
 	  <span class="command"><strong>modprobe rtai_lxrt; modprobe rtai_sem</strong></span>.
-	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46679399768576"></a>3.4.3. Compiling Applications with LXRT</h4></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47898779612608"></a>3.4.3. Compiling Applications with LXRT</h4></div></div></div><p>
 	  Application which use LXRT as a target need special flags when being
 	  compiled and linked. Especially :
 	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
@@ -605,7 +605,7 @@ orocos_generate_package()
       </p><p>
 	You'll have to specify the install directory in the
 	<code class="option">CMAKE_PATH_PREFIX</code> option during 'cmake'.
-      </p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46679399787344"></a>3.5.1. Loading Xenomai</h4></div></div></div><p>
+      </p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47898779631376"></a>3.5.1. Loading Xenomai</h4></div></div></div><p>
 	  The RTT uses the native Xenomai API to address the real-time
 	  scheduler. The Xenomai kernel modules can be found in
 	  <code class="filename">/usr/xenomai/modules</code>.  Only the
@@ -614,7 +614,7 @@ orocos_generate_package()
 	  in that order.  For example, by executing
 	  as root: <span class="command"><strong>insmod xeno_hal.ko; insmod
 	  xeno_nucleus.ko; insmod xeno_native.ko</strong></span>.
-	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46679399792560"></a>3.5.2. Compiling Applications with Xenomai</h4></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47898779636592"></a>3.5.2. Compiling Applications with Xenomai</h4></div></div></div><p>
 	  Application which use Xenomai as a target need special flags
 	  when being compiled and linked. Especially :
 	  </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
@@ -652,7 +652,7 @@ orocos_generate_package()
 	consult the
 	<a class="ulink" href="http://www.cs.wustl.edu/~schmidt/commercial-support.html" target="_top">
 	  commercial support website</a>.
-      </p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46679399807856"></a>3.6.1. TAO installation (Optional)</h4></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>Debian or Ubuntu users can skip this step and just
+      </p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47898779651888"></a>3.6.1. TAO installation (Optional)</h4></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>Debian or Ubuntu users can skip this step and just
 	  do <span class="command"><strong>sudo aptitude install libtao-orbsvcs-dev tao-idl gperf-ace tao-naming</strong></span> .
 	  Orocos software will automatically detect the installed TAO software.
 	  </p></td></tr></table></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
@@ -683,7 +683,7 @@ orocos_generate_package()
   cd orbsvcs
   make
 	  </strong></span> This finishes your TAO build.
-	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46679399816976"></a>3.6.2. Configuring the RTT for TAO or OMNIORB</h4></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47898779660912"></a>3.6.2. Configuring the RTT for TAO or OMNIORB</h4></div></div></div><p>
 	  Orocos RTT defaults to TAO. If you want to use the
 	  OMNIORB implementation, run from your <code class="filename">build</code> directory:
 	  </p><pre class="screen">  cmake .. -DENABLE_CORBA=ON -DCORBA_IMPLEMENTATION=OMNIORB </pre><p>
@@ -695,7 +695,7 @@ orocos_generate_package()
 	  are not set, using the standard include paths. If TAO or
 	  OMNIORB is found you can enable CORBA support
 	  (<code class="option">ENABLE_CORBA</code>) within CMake.
-	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46679399821760"></a>3.6.3. Application Development with TAO</h4></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47898779665696"></a>3.6.3. Application Development with TAO</h4></div></div></div><p>
 	  Once you compile and link your application with Orocos and with the
 	  CORBA functionality enabled, you must provide the correct include
 	  and link flags in your own Makefile if TAO and ACE are not
