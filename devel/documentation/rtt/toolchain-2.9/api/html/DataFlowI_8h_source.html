@@ -207,9 +207,9 @@
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                      CORBA::SystemException</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                    ));</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            RTT::corba::CPortType getPortType(<span class="keyword">const</span> <span class="keywordtype">char</span>* port_name) ACE_THROW_SPEC ((</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                  CORBA::SystemException</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                  ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                ));</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                      CORBA::SystemException</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                      ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    ));</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordtype">char</span>* getDataType(<span class="keyword">const</span> <span class="keywordtype">char</span>* port_name) ACE_THROW_SPEC ((</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                      CORBA::SystemException</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                      ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
@@ -241,9 +241,9 @@
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                                               CDataFlowInterface_ptr reader_interface,</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                                               <span class="keyword">const</span> <span class="keywordtype">char</span>* reader_port,</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                                               RTT::corba::CConnPolicy &amp; policy) ACE_THROW_SPEC ((</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                                                      CORBA::SystemException</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                                                      ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                                    ));</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                      CORBA::SystemException</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                      ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    ));</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            ::CORBA::Boolean createSharedConnection(<span class="keyword">const</span> <span class="keywordtype">char</span> *input_port, RTT::corba::CConnPolicy&amp; policy) ACE_THROW_SPEC ((</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                      CORBA::SystemException</div>
@@ -254,38 +254,39 @@
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordtype">bool</span> removeConnection( <span class="keyword">const</span> <span class="keywordtype">char</span>* writer_port,</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                                               CDataFlowInterface_ptr reader_interface,</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                                               <span class="keyword">const</span> <span class="keywordtype">char</span>* reader_port) ACE_THROW_SPEC ((</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                                                      CORBA::SystemException</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                                                      ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                                                    ));</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                      CORBA::SystemException</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                      ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    ));</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            ::CORBA::Boolean createStream( <span class="keyword">const</span> <span class="keywordtype">char</span>* port,</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                                           RTT::corba::CConnPolicy &amp; policy) ACE_THROW_SPEC ((</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                                  CORBA::SystemException</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                                                  ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                                                ));</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordtype">void</span> removeStream( <span class="keyword">const</span> <span class="keywordtype">char</span>* port, <span class="keyword">const</span> <span class="keywordtype">char</span>* stream_name) ACE_THROW_SPEC ((</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                  CORBA::SystemException</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                  ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                ));</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        };</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;};</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                      CORBA::SystemException</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                      ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    ));</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordtype">void</span> removeStream( <span class="keyword">const</span> <span class="keywordtype">char</span>* port, <span class="keyword">const</span> <span class="keywordtype">char</span>* stream_name) ACE_THROW_SPEC ((</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                      CORBA::SystemException</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                      ,::<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    ));</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        };</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;};</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATAFLOWI_H_  */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DATAFLOWI_H_  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor"></span></div>
 <div class="ttc" id="classRTT_1_1DataFlowInterface_html"><div class="ttname"><a href="classRTT_1_1DataFlowInterface.html">RTT::DataFlowInterface</a></div><div class="ttdoc">The Interface of a TaskContext which exposes its data-flow ports. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowInterface_8hpp_source.html#l00059">DataFlowInterface.hpp:59</a></div></div>
-<div class="ttc" id="exceptionRTT_1_1corba_1_1CNoSuchPortException_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div><div class="ttdoc">Emitted when information is requested on a port that does not exist. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00118">DataFlow.idl:118</a></div></div>
+<div class="ttc" id="exceptionRTT_1_1corba_1_1CNoSuchPortException_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div><div class="ttdoc">Emitted when information is requested on a port that does not exist. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00124">DataFlow.idl:124</a></div></div>
 <div class="ttc" id="classRTT_1_1corba_1_1CRemoteChannelElement__i_html"><div class="ttname"><a href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html">RTT::corba::CRemoteChannelElement_i</a></div><div class="ttdoc">Base class for CORBA channel servers. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowI_8h_source.html#l00069">DataFlowI.h:69</a></div></div>
-<div class="ttc" id="exceptionRTT_1_1corba_1_1CNoCorbaTransport_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">RTT::corba::CNoCorbaTransport</a></div><div class="ttdoc">Emitted during connections, when there is no CORBA transport defined for the data type of the given p...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00121">DataFlow.idl:121</a></div></div>
-<div class="ttc" id="exceptionRTT_1_1corba_1_1CInvalidArgument_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">RTT::corba::CInvalidArgument</a></div><div class="ttdoc">Emitted during connections, when it is not possible to build new connections with the given arguments...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00124">DataFlow.idl:124</a></div></div>
+<div class="ttc" id="exceptionRTT_1_1corba_1_1CNoCorbaTransport_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">RTT::corba::CNoCorbaTransport</a></div><div class="ttdoc">Emitted during connections, when there is no CORBA transport defined for the data type of the given p...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00127">DataFlow.idl:127</a></div></div>
+<div class="ttc" id="exceptionRTT_1_1corba_1_1CInvalidArgument_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">RTT::corba::CInvalidArgument</a></div><div class="ttdoc">Emitted during connections, when it is not possible to build new connections with the given arguments...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00130">DataFlow.idl:130</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1Mutex_html"><div class="ttname"><a href="classRTT_1_1os_1_1Mutex.html">RTT::os::Mutex</a></div><div class="ttdoc">An object oriented wrapper around a non recursive mutex. </div><div class="ttdef"><b>Definition:</b> <a href="Mutex_8hpp_source.html#l00087">Mutex.hpp:87</a></div></div>
 <div class="ttc" id="classRTT_1_1corba_1_1CDataFlowInterface__i_html"><div class="ttname"><a href="classRTT_1_1corba_1_1CDataFlowInterface__i.html">RTT::corba::CDataFlowInterface_i</a></div><div class="ttdoc">Represents a remote data flow interface. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlowI_8h_source.html#l00111">DataFlowI.h:111</a></div></div>
 <div class="ttc" id="classRTT_1_1corba_1_1CorbaTypeTransporter_html"><div class="ttname"><a href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a></div><div class="ttdoc">Extends the TypeTransporter in order to allow the creation of channel elements or output halves for a...</div><div class="ttdef"><b>Definition:</b> <a href="CorbaTypeTransporter_8hpp_source.html#l00056">CorbaTypeTransporter.hpp:56</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:51:00 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -116,7 +116,7 @@
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> updateFromAny(<span class="keyword">const</span> CORBA::Any* blob, <a class="code" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> target) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html">CRemoteChannelElement_i</a>* createChannelElement_i(<a class="code" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a>* sender, ::PortableServer::POA* poa, <span class="keywordtype">bool</span> is_pull, <span class="keywordtype">bool</span> is_mandatory, <span class="keywordtype">bool</span> is_signalling) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html">CRemoteChannelElement_i</a>* createChannelElement_i(<a class="code" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a>* sender, ::PortableServer::POA* poa, <span class="keyword">const</span> <a class="code" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;policy) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">virtual</span> base::ChannelElementBase::shared_ptr createStream( <a class="code" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>* <span class="comment">/*port*/</span>, <span class="keyword">const</span> <a class="code" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a>&amp; <span class="comment">/*policy*/</span>, <span class="keywordtype">bool</span> <span class="comment">/*is_sender*/</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
@@ -138,7 +138,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:51:00 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

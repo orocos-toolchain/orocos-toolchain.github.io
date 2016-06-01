@@ -73,51 +73,52 @@
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">interface </span>CService;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">struct </span>CServiceDescription;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">typedef</span> sequence&lt;CServiceDescription&gt; CServiceDescriptions;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structRTT_1_1corba_1_1CServiceDescription.html">   26</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structRTT_1_1corba_1_1CServiceDescription.html">CServiceDescription</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">string</span> name;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">string</span> description;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        COperationInterface::COperationDescriptions operations;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        CConfigurationInterface::CPropertyNames properties;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        CConfigurationInterface::CAttributeNames attributes;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        CDataFlowInterface::CPortDescriptions ports;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        sequence&lt;CService&gt; children;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        CServiceDescriptions children_descriptions;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="interfaceRTT_1_1corba_1_1CService.html">   43</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interfaceRTT_1_1corba_1_1CService.html">CService</a> : <a class="code" href="interfaceRTT_1_1corba_1_1COperationInterface.html">COperationInterface</a>, <a class="code" href="interfaceRTT_1_1corba_1_1CConfigurationInterface.html">CConfigurationInterface</a>, <a class="code" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">typedef</span> sequence&lt;string&gt; CProviderNames;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">string</span> getName();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">string</span> getServiceDescription();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="structRTT_1_1corba_1_1CServiceDescription.html">CServiceDescription</a> getCServiceDescription();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        CProviderNames getProviderNames( );</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CService.html">CService</a> getService( in <span class="keywordtype">string</span> name );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">boolean</span> hasService( in <span class="keywordtype">string</span> name );</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    };</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    };</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structRTT_1_1corba_1_1CServiceDescription_html"><div class="ttname"><a href="structRTT_1_1corba_1_1CServiceDescription.html">RTT::corba::CServiceDescription</a></div><div class="ttdoc">Complete description of a Service. </div><div class="ttdef"><b>Definition:</b> <a href="Service_8idl_source.html#l00026">Service.idl:26</a></div></div>
-<div class="ttc" id="interfaceRTT_1_1corba_1_1CDataFlowInterface_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">RTT::corba::CDataFlowInterface</a></div><div class="ttdoc">An interface to access the dataflow of a CControlTask object. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00143">DataFlow.idl:143</a></div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">typedef</span> sequence&lt;CService&gt; CServices;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">typedef</span> sequence&lt;CServiceDescription&gt; CServiceDescriptions;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structRTT_1_1corba_1_1CServiceDescription.html">   27</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structRTT_1_1corba_1_1CServiceDescription.html">CServiceDescription</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">string</span> name;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">string</span> description;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        COperationInterface::COperationDescriptions operations;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        CConfigurationInterface::CPropertyNames properties;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        CConfigurationInterface::CAttributeNames attributes;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        CDataFlowInterface::CPortDescriptions ports;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        CServices children;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        CServiceDescriptions children_descriptions;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="interfaceRTT_1_1corba_1_1CService.html">   44</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interfaceRTT_1_1corba_1_1CService.html">CService</a> : <a class="code" href="interfaceRTT_1_1corba_1_1COperationInterface.html">COperationInterface</a>, <a class="code" href="interfaceRTT_1_1corba_1_1CConfigurationInterface.html">CConfigurationInterface</a>, <a class="code" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">typedef</span> sequence&lt;string&gt; CProviderNames;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">string</span> getName();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">string</span> getServiceDescription();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="structRTT_1_1corba_1_1CServiceDescription.html">CServiceDescription</a> getCServiceDescription();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        CProviderNames getProviderNames( );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="interfaceRTT_1_1corba_1_1CService.html">CService</a> getService( in <span class="keywordtype">string</span> name );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">boolean</span> hasService( in <span class="keywordtype">string</span> name );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    };</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structRTT_1_1corba_1_1CServiceDescription_html"><div class="ttname"><a href="structRTT_1_1corba_1_1CServiceDescription.html">RTT::corba::CServiceDescription</a></div><div class="ttdoc">Complete description of a Service. </div><div class="ttdef"><b>Definition:</b> <a href="Service_8idl_source.html#l00027">Service.idl:27</a></div></div>
+<div class="ttc" id="interfaceRTT_1_1corba_1_1CDataFlowInterface_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">RTT::corba::CDataFlowInterface</a></div><div class="ttdoc">An interface to access the dataflow of a CControlTask object. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00149">DataFlow.idl:149</a></div></div>
 <div class="ttc" id="interfaceRTT_1_1corba_1_1CConfigurationInterface_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CConfigurationInterface.html">RTT::corba::CConfigurationInterface</a></div><div class="ttdoc">Exposes both attributes and properties of a service. </div><div class="ttdef"><b>Definition:</b> <a href="ConfigurationInterface_8idl_source.html#l00020">ConfigurationInterface.idl:20</a></div></div>
-<div class="ttc" id="interfaceRTT_1_1corba_1_1CService_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CService.html">RTT::corba::CService</a></div><div class="ttdoc">An Orocos Service which hosts operations, attributes and properties. </div><div class="ttdef"><b>Definition:</b> <a href="Service_8idl_source.html#l00043">Service.idl:43</a></div></div>
+<div class="ttc" id="interfaceRTT_1_1corba_1_1CService_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CService.html">RTT::corba::CService</a></div><div class="ttdoc">An Orocos Service which hosts operations, attributes and properties. </div><div class="ttdef"><b>Definition:</b> <a href="Service_8idl_source.html#l00044">Service.idl:44</a></div></div>
 <div class="ttc" id="interfaceRTT_1_1corba_1_1COperationInterface_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1COperationInterface.html">RTT::corba::COperationInterface</a></div><div class="ttdoc">Exposes the operations this service offers. </div><div class="ttdef"><b>Definition:</b> <a href="OperationInterface_8idl_source.html#l00138">OperationInterface.idl:138</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:51:00 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

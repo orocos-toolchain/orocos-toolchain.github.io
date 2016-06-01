@@ -276,7 +276,7 @@ class RTT::internal::ArrayDataSource&lt; T &gt;</h3>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="DataSources_8hpp_source.html#l00324">324</a> of file <a class="el" href="DataSources_8hpp_source.html">DataSources.hpp</a>.</p>
+<p>Definition at line <a class="el" href="DataSources_8hpp_source.html#l00312">312</a> of file <a class="el" href="DataSources_8hpp_source.html">DataSources.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a9fd06bc49a6e7a19e3a55a481e81d7fa"></a>
 <div class="memitem">
@@ -297,7 +297,7 @@ template&lt;typename T &gt; </div>
 <p>Create and allocate an Array of a fixed size. </p>
 <p>In case you create an empty/default <a class="el" href="classRTT_1_1internal_1_1ArrayDataSource.html" title="A DataSource that holds a fixed size array, using the types::carray class. ">ArrayDataSource</a>, you can assign it an array size later-on with newArray( size ) </p>
 
-<p>Definition at line <a class="el" href="DataSources_8inl_source.html#l00120">120</a> of file <a class="el" href="DataSources_8inl_source.html">DataSources.inl</a>.</p>
+<p>Definition at line <a class="el" href="DataSources_8inl_source.html#l00132">132</a> of file <a class="el" href="DataSources_8inl_source.html">DataSources.inl</a>.</p>
 
 </div>
 </div>
@@ -320,7 +320,7 @@ template&lt;typename T &gt; </div>
 <p>Creates an <a class="el" href="classRTT_1_1internal_1_1ArrayDataSource.html" title="A DataSource that holds a fixed size array, using the types::carray class. ">ArrayDataSource</a> and initializes the array with the contents of another carray. </p>
 <p>A deep copy is made from odata. </p>
 
-<p>Definition at line <a class="el" href="DataSources_8inl_source.html#l00126">126</a> of file <a class="el" href="DataSources_8inl_source.html">DataSources.inl</a>.</p>
+<p>Definition at line <a class="el" href="DataSources_8inl_source.html#l00138">138</a> of file <a class="el" href="DataSources_8inl_source.html">DataSources.inl</a>.</p>
 
 </div>
 </div>
@@ -353,7 +353,7 @@ template&lt;typename T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a7c67083a42f8d2bf93cf29221872646e">RTT::internal::AssignableDataSource&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="DataSources_8inl_source.html#l00149">149</a> of file <a class="el" href="DataSources_8inl_source.html">DataSources.inl</a>.</p>
+<p>Definition at line <a class="el" href="DataSources_8inl_source.html#l00161">161</a> of file <a class="el" href="DataSources_8inl_source.html">DataSources.inl</a>.</p>
 
 </div>
 </div>
@@ -386,7 +386,7 @@ template&lt;typename T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a740d9322d6bb73965e2bb6d5103771bf">RTT::internal::AssignableDataSource&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="DataSources_8inl_source.html#l00157">157</a> of file <a class="el" href="DataSources_8inl_source.html">DataSources.inl</a>.</p>
+<p>Definition at line <a class="el" href="DataSources_8inl_source.html#l00169">169</a> of file <a class="el" href="DataSources_8inl_source.html">DataSources.inl</a>.</p>
 
 </div>
 </div>
@@ -422,7 +422,7 @@ template&lt;typename T &gt; </div>
 
 <p>Definition at line <a class="el" href="DataSource_8inl_source.html#l00052">52</a> of file <a class="el" href="DataSource_8inl_source.html">DataSource.inl</a>.</p>
 
-<p>Referenced by <a class="el" href="CommandDataSource_8hpp_source.html#l00095">RTT::scripting::CommandDataSourceBool::execute()</a>, <a class="el" href="TryCommand_8cpp_source.html#l00141">RTT::scripting::EvalCommand::execute()</a>, <a class="el" href="Property_8hpp_source.html#l00127">RTT::Property&lt; bool &gt;::Property()</a>, <a class="el" href="DataSources_8hpp_source.html#l00229">RTT::internal::ReferenceDataSource&lt; ds_type &gt;::setReference()</a>, and <a class="el" href="DataSource_8inl_source.html#l00078">RTT::internal::AssignableDataSource&lt; T &gt;::update()</a>.</p>
+<p>Referenced by <a class="el" href="CommandDataSource_8hpp_source.html#l00095">RTT::scripting::CommandDataSourceBool::execute()</a>, <a class="el" href="TryCommand_8cpp_source.html#l00141">RTT::scripting::EvalCommand::execute()</a>, <a class="el" href="Property_8hpp_source.html#l00127">RTT::Property&lt; bool &gt;::Property()</a>, <a class="el" href="DataSources_8hpp_source.html#l00217">RTT::internal::ReferenceDataSource&lt; ds_type &gt;::setReference()</a>, and <a class="el" href="DataSource_8inl_source.html#l00078">RTT::internal::AssignableDataSource&lt; T &gt;::update()</a>.</p>
 
 </div>
 </div>
@@ -646,7 +646,7 @@ template&lt;typename T &gt; </div>
 <p>Clears the array of this data source and creates a new one. </p>
 <p>Note that all references to this array will become invalid (<a class="el" href="classRTT_1_1types_1_1carray.html" title="Wraps a C array such that we can return a C array from a DataSource. ">types::carray</a> may make shallow copies!) so only use this if you are sure no other object has a reference to the contained array. </p>
 
-<p>Definition at line <a class="el" href="DataSources_8inl_source.html#l00133">133</a> of file <a class="el" href="DataSources_8inl_source.html">DataSources.inl</a>.</p>
+<p>Definition at line <a class="el" href="DataSources_8inl_source.html#l00145">145</a> of file <a class="el" href="DataSources_8inl_source.html">DataSources.inl</a>.</p>
 
 <p>Referenced by <a class="el" href="CArrayTypeInfo_8hpp_source.html#l00087">RTT::types::CArrayTypeInfo&lt; T, has_ostream &gt;::buildVariable()</a>.</p>
 
@@ -681,7 +681,7 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1internal_1_1DataSource.html#a7c10d4f18a3e7de9bbd534eb232d850e">RTT::internal::DataSource&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="DataSources_8hpp_source.html#l00378">378</a> of file <a class="el" href="DataSources_8hpp_source.html">DataSources.hpp</a>.</p>
+<p>Definition at line <a class="el" href="DataSources_8hpp_source.html#l00366">366</a> of file <a class="el" href="DataSources_8hpp_source.html">DataSources.hpp</a>.</p>
 
 </div>
 </div>
@@ -713,7 +713,7 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html#a3fbb0b9564941923b5776b413bf75813">RTT::internal::AssignableDataSource&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="DataSources_8hpp_source.html#l00373">373</a> of file <a class="el" href="DataSources_8hpp_source.html">DataSources.hpp</a>.</p>
+<p>Definition at line <a class="el" href="DataSources_8hpp_source.html#l00361">361</a> of file <a class="el" href="DataSources_8hpp_source.html">DataSources.hpp</a>.</p>
 
 </div>
 </div>
@@ -908,7 +908,7 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1internal_1_1DataSource.html#a04b9910d4e1813478a32fec421870beb">RTT::internal::DataSource&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="DataSources_8hpp_source.html#l00366">366</a> of file <a class="el" href="DataSources_8hpp_source.html">DataSources.hpp</a>.</p>
+<p>Definition at line <a class="el" href="DataSources_8hpp_source.html#l00354">354</a> of file <a class="el" href="DataSources_8hpp_source.html">DataSources.hpp</a>.</p>
 
 </div>
 </div>
@@ -976,7 +976,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:51:02 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

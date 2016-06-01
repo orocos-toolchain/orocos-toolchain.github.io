@@ -305,7 +305,7 @@
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="comment">// set period</span></div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        mytask-&gt;period = nanosecs;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="comment">// set next wake-up time.</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        mytask-&gt;periodMark = ticks2timespec( <a class="code" href="fosi__interface_8h.html#ae12eda76d0ccfdc818ad52786346ec5c">nano2ticks</a>( <a class="code" href="fosi__interface_8h.html#a86faa704540130956d12e5df711c48aa">rtos_get_time_ns</a>() + nanosecs ) );</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        mytask-&gt;periodMark = ticks2timespec( <a class="code" href="fosi__interface_8h.html#ae12eda76d0ccfdc818ad52786346ec5c">nano2ticks</a>( rtos_get_time_monotonic_ns() + nanosecs ) );</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
 <div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="namespaceRTT_1_1os.html#aed049c50d4196acb7e8fd18173f17a5a">  255</a></span>&#160;    INTERNAL_QUAL <span class="keywordtype">void</span> <a class="code" href="namespaceRTT_1_1os.html#aed049c50d4196acb7e8fd18173f17a5a">rtos_task_set_period</a>( RTOS_TASK* mytask, NANO_TIME nanosecs )</div>
@@ -324,11 +324,11 @@
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="comment">// record this to detect overrun.</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        NANO_TIME now = <a class="code" href="fosi__interface_8h.html#a86faa704540130956d12e5df711c48aa">rtos_get_time_ns</a>();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        NANO_TIME now = rtos_get_time_monotonic_ns();</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        NANO_TIME wake= task-&gt;periodMark.tv_sec * 1000000000LL + task-&gt;periodMark.tv_nsec;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="comment">// inspired by nanosleep man page for this construct:</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">while</span> ( clock_nanosleep(CLOCK_REALTIME, TIMER_ABSTIME, &amp;(task-&gt;periodMark), NULL) != 0 &amp;&amp; errno == EINTR ) {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">while</span> ( clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &amp;(task-&gt;periodMark), NULL) != 0 &amp;&amp; errno == EINTR ) {</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            errno = 0;</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
@@ -352,7 +352,7 @@
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        {</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;          TIME_SPEC ts = ticks2timespec( <a class="code" href="fosi__interface_8h.html#ae12eda76d0ccfdc818ad52786346ec5c">nano2ticks</a>( task-&gt;period) );</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;          TIME_SPEC now = ticks2timespec( <a class="code" href="fosi__interface_8h.html#a86faa704540130956d12e5df711c48aa">rtos_get_time_ns</a>() );</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;          TIME_SPEC now = ticks2timespec( rtos_get_time_monotonic_ns() );</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;          NANO_TIME tn = (now.tv_nsec + ts.tv_nsec);</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;          task-&gt;periodMark.tv_nsec = tn % 1000000000LL;</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;          task-&gt;periodMark.tv_sec = ts.tv_sec + now.tv_sec + tn / 1000000000LL;</div>
@@ -534,7 +534,6 @@
 <div class="ttc" id="namespaceRTT_1_1os_html_a602ffa710e4c011f181051f7480e6a44"><div class="ttname"><a href="namespaceRTT_1_1os.html#a602ffa710e4c011f181051f7480e6a44">RTT::os::rtos_task_set_scheduler</a></div><div class="ttdeci">int rtos_task_set_scheduler(RTOS_TASK *t, int sched_type)</div><div class="ttdoc">Set the scheduler of a given task t to a the type sched_type. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00221">fosi_internal.cpp:221</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_a8cca55292cd209cd35936a92a0fc7ede"><div class="ttname"><a href="namespaceRTT_1_1os.html#a8cca55292cd209cd35936a92a0fc7ede">RTT::os::rtos_task_set_cpu_affinity</a></div><div class="ttdeci">int rtos_task_set_cpu_affinity(RTOS_TASK *task, unsigned cpu_affinity)</div><div class="ttdoc">Set the cpu affinity of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00433">fosi_internal.cpp:433</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_a1eafae3a1b7a4151fc63bcf64f939861"><div class="ttname"><a href="namespaceRTT_1_1os.html#a1eafae3a1b7a4151fc63bcf64f939861">RTT::os::rtos_task_get_cpu_affinity</a></div><div class="ttdeci">unsigned rtos_task_get_cpu_affinity(const RTOS_TASK *task)</div><div class="ttdoc">Return the cpu affinity of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00449">fosi_internal.cpp:449</a></div></div>
-<div class="ttc" id="fosi__interface_8h_html_a86faa704540130956d12e5df711c48aa"><div class="ttname"><a href="fosi__interface_8h.html#a86faa704540130956d12e5df711c48aa">rtos_get_time_ns</a></div><div class="ttdeci">NANO_TIME rtos_get_time_ns(void)</div><div class="ttdoc">Get &quot;system&quot; time in nanoseconds. </div><div class="ttdef"><b>Definition:</b> <a href="ecos_2fosi_8h_source.html#l00113">fosi.h:113</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_ac1ccb6a3b312871524744cba9872fe6e"><div class="ttname"><a href="namespaceRTT_1_1os.html#ac1ccb6a3b312871524744cba9872fe6e">RTT::os::rtos_task_set_wait_period_policy</a></div><div class="ttdeci">void rtos_task_set_wait_period_policy(RTOS_TASK *task, int policy)</div><div class="ttdoc">Set the wait policy of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00260">fosi_internal.cpp:260</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_ad70c7f423aab28b0d75cf4d124f4b2b3"><div class="ttname"><a href="namespaceRTT_1_1os.html#ad70c7f423aab28b0d75cf4d124f4b2b3">RTT::os::rtos_task_delete</a></div><div class="ttdeci">void rtos_task_delete(RTOS_TASK *mytask)</div><div class="ttdoc">This function must join the thread created with rtos_task_create and then clean up the RTOS_TASK stru...</div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00308">fosi_internal.cpp:308</a></div></div>
 <div class="ttc" id="namespaceRTT_1_1os_html_a9473decdf2a1119eeba68486701e61b7"><div class="ttname"><a href="namespaceRTT_1_1os.html#a9473decdf2a1119eeba68486701e61b7">RTT::os::rtos_task_set_priority</a></div><div class="ttdeci">int rtos_task_set_priority(RTOS_TASK *task, int priority)</div><div class="ttdoc">Set the priority of a thread. </div><div class="ttdef"><b>Definition:</b> <a href="gnulinux_2fosi__internal_8cpp_source.html#l00404">fosi_internal.cpp:404</a></div></div>
@@ -550,7 +549,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:50:59 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

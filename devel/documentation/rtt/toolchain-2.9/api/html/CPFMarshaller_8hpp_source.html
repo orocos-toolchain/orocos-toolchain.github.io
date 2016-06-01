@@ -143,27 +143,31 @@
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;unsigned short&gt;</a> &amp;v);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;float&gt;</a> &amp;v);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;long long&gt;</a> &amp;v);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;double&gt;</a> &amp;v);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;unsigned long long&gt;</a> &amp;v);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;std::string&gt;</a> &amp;v);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;float&gt;</a> &amp;v);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;PropertyBag&gt;</a> &amp;b);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;double&gt;</a> &amp;v);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        CPFMarshaller(std::ostream &amp;os);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        CPFMarshaller(<span class="keyword">const</span> std::string&amp; filename);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> serialize(<a class="code" href="classRTT_1_1base_1_1PropertyBase.html">base::PropertyBase</a>* v);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> serialize(<span class="keyword">const</span> <a class="code" href="classRTT_1_1PropertyBag.html">PropertyBag</a> &amp;v);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;std::string&gt;</a> &amp;v);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> introspect(<a class="code" href="classRTT_1_1Property.html">Property&lt;PropertyBag&gt;</a> &amp;b);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        CPFMarshaller(std::ostream &amp;os);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        CPFMarshaller(<span class="keyword">const</span> std::string&amp; filename);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> flush();</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    };</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}}</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> serialize(<a class="code" href="classRTT_1_1base_1_1PropertyBase.html">base::PropertyBase</a>* v);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> serialize(<span class="keyword">const</span> <a class="code" href="classRTT_1_1PropertyBag.html">PropertyBag</a> &amp;v);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> flush();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    };</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classRTT_1_1marsh_1_1MarshallInterface_html"><div class="ttname"><a href="classRTT_1_1marsh_1_1MarshallInterface.html">RTT::marsh::MarshallInterface</a></div><div class="ttdoc">A MarshallInterface converts Property objects to a (file/text) format. </div><div class="ttdef"><b>Definition:</b> <a href="MarshallInterface_8hpp_source.html#l00055">MarshallInterface.hpp:55</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1PropertyBase_html"><div class="ttname"><a href="classRTT_1_1base_1_1PropertyBase.html">RTT::base::PropertyBase</a></div><div class="ttdoc">Base class for all properties. </div><div class="ttdef"><b>Definition:</b> <a href="PropertyBase_8hpp_source.html#l00056">PropertyBase.hpp:56</a></div></div>
 <div class="ttc" id="classRTT_1_1PropertyBag_html"><div class="ttname"><a href="classRTT_1_1PropertyBag.html">RTT::PropertyBag</a></div><div class="ttdoc">A container for holding references to properties. </div><div class="ttdef"><b>Definition:</b> <a href="PropertyBag_8hpp_source.html#l00096">PropertyBag.hpp:96</a></div></div>
@@ -173,7 +177,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:50:59 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -119,33 +119,37 @@
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">return</span> ti-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#a8fcc643caae2065853ff970f43789b63">addProtocol</a>(ORO_MQUEUE_PROTOCOL_ID, <span class="keyword">new</span> <a class="code" href="classRTT_1_1mqueue_1_1MQTemplateProtocol.html">MQTemplateProtocol&lt;unsigned int&gt;</a>() );</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">if</span> ( name == <span class="stringliteral">&quot;char&quot;</span> )</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">return</span> ti-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#a8fcc643caae2065853ff970f43789b63">addProtocol</a>(ORO_MQUEUE_PROTOCOL_ID, <span class="keyword">new</span> <a class="code" href="classRTT_1_1mqueue_1_1MQTemplateProtocol.html">MQTemplateProtocol&lt;char&gt;</a>() );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">//if ( name == &quot;long&quot; )</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="comment">//    return ti-&gt;addProtocol(ORO_MQUEUE_PROTOCOL_ID, new MQTemplateProtocol&lt;long&gt;() );</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="comment">//if ( name == &quot;PropertyBag&quot; )</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="comment">//    return ti-&gt;addProtocol(ORO_MQUEUE_PROTOCOL_ID, new MQTemplateProtocol&lt;PropertyBag&gt;() );</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">if</span> ( name == <span class="stringliteral">&quot;bool&quot;</span> )</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">return</span> ti-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#a8fcc643caae2065853ff970f43789b63">addProtocol</a>(ORO_MQUEUE_PROTOCOL_ID, <span class="keyword">new</span> <a class="code" href="classRTT_1_1mqueue_1_1MQTemplateProtocol.html">MQTemplateProtocol&lt;bool&gt;</a>() );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> ( name == <span class="stringliteral">&quot;array&quot;</span> )</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">return</span> ti-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#a8fcc643caae2065853ff970f43789b63">addProtocol</a>(ORO_MQUEUE_PROTOCOL_ID, <span class="keyword">new</span> MQSerializationProtocol&lt; std::vector&lt;double&gt; &gt;() );</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="comment">//if ( name == &quot;void&quot; )</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment">//    return ti-&gt;addProtocol(ORO_MQUEUE_PROTOCOL_ID, new MQFallBackProtocol(false)); // warn=false</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structRTT_1_1mqueue_1_1MQLibPlugin.html#acb10c6697ea9ff2841065e8d5303385d">   79</a></span>&#160;        std::string MQLibPlugin::getTransportName()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;mqueue&quot;</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> ( name == <span class="stringliteral">&quot;llong&quot;</span> )</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">return</span> ti-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#a8fcc643caae2065853ff970f43789b63">addProtocol</a>(ORO_MQUEUE_PROTOCOL_ID, <span class="keyword">new</span> <a class="code" href="classRTT_1_1mqueue_1_1MQTemplateProtocol.html">MQTemplateProtocol&lt;long long&gt;</a>() );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> ( name == <span class="stringliteral">&quot;ullong&quot;</span> )</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">return</span> ti-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#a8fcc643caae2065853ff970f43789b63">addProtocol</a>(ORO_MQUEUE_PROTOCOL_ID, <span class="keyword">new</span> <a class="code" href="classRTT_1_1mqueue_1_1MQTemplateProtocol.html">MQTemplateProtocol&lt;unsigned long long&gt;</a>() );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="comment">//if ( name == &quot;long&quot; )</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="comment">//    return ti-&gt;addProtocol(ORO_MQUEUE_PROTOCOL_ID, new MQTemplateProtocol&lt;long&gt;() );</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="comment">//if ( name == &quot;PropertyBag&quot; )</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">//    return ti-&gt;addProtocol(ORO_MQUEUE_PROTOCOL_ID, new MQTemplateProtocol&lt;PropertyBag&gt;() );</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> ( name == <span class="stringliteral">&quot;bool&quot;</span> )</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">return</span> ti-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#a8fcc643caae2065853ff970f43789b63">addProtocol</a>(ORO_MQUEUE_PROTOCOL_ID, <span class="keyword">new</span> <a class="code" href="classRTT_1_1mqueue_1_1MQTemplateProtocol.html">MQTemplateProtocol&lt;bool&gt;</a>() );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">if</span> ( name == <span class="stringliteral">&quot;array&quot;</span> )</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">return</span> ti-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#a8fcc643caae2065853ff970f43789b63">addProtocol</a>(ORO_MQUEUE_PROTOCOL_ID, <span class="keyword">new</span> MQSerializationProtocol&lt; std::vector&lt;double&gt; &gt;() );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="comment">//if ( name == &quot;void&quot; )</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="comment">//    return ti-&gt;addProtocol(ORO_MQUEUE_PROTOCOL_ID, new MQFallBackProtocol(false)); // warn=false</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structRTT_1_1mqueue_1_1MQLibPlugin.html#ac0584c352384e14bdfebc4ac6739765c">   83</a></span>&#160;        std::string MQLibPlugin::getTypekitName()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;rtt-types&quot;</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structRTT_1_1mqueue_1_1MQLibPlugin.html#acb10c6697ea9ff2841065e8d5303385d">   83</a></span>&#160;        std::string MQLibPlugin::getTransportName()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;mqueue&quot;</span>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="structRTT_1_1mqueue_1_1MQLibPlugin.html#a52b3dd7394ef7422dbd37d9a7dba8d05">   86</a></span>&#160;        std::string MQLibPlugin::getName()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;rtt-mqueue-transport&quot;</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;ORO_TYPEKIT_PLUGIN( <a class="code" href="structRTT_1_1mqueue_1_1MQLibPlugin.html">RTT::mqueue::MQLibPlugin</a> )</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="structRTT_1_1mqueue_1_1MQLibPlugin.html#ac0584c352384e14bdfebc4ac6739765c">   87</a></span>&#160;        std::string MQLibPlugin::getTypekitName()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;rtt-types&quot;</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="structRTT_1_1mqueue_1_1MQLibPlugin.html#a52b3dd7394ef7422dbd37d9a7dba8d05">   90</a></span>&#160;        std::string MQLibPlugin::getName()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;rtt-mqueue-transport&quot;</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;ORO_TYPEKIT_PLUGIN( <a class="code" href="structRTT_1_1mqueue_1_1MQLibPlugin.html">RTT::mqueue::MQLibPlugin</a> )</div>
 <div class="ttc" id="classRTT_1_1mqueue_1_1MQTemplateProtocol_html"><div class="ttname"><a href="classRTT_1_1mqueue_1_1MQTemplateProtocol.html">RTT::mqueue::MQTemplateProtocol</a></div><div class="ttdoc">For each transportable type T, specify the conversion functions. </div><div class="ttdef"><b>Definition:</b> <a href="MQTemplateProtocol_8hpp_source.html#l00061">MQTemplateProtocol.hpp:61</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html">RTT::types::TypeInfo</a></div><div class="ttdoc">A class for representing a user type, and which can build instances of that type. ...</div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8hpp_source.html#l00067">TypeInfo.hpp:67</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html_a8fcc643caae2065853ff970f43789b63"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html#a8fcc643caae2065853ff970f43789b63">RTT::types::TypeInfo::addProtocol</a></div><div class="ttdeci">bool addProtocol(int protocol_id, TypeTransporter *tt)</div><div class="ttdoc">Register a protocol for data transport over a network. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8cpp_source.html#l00136">TypeInfo.cpp:136</a></div></div>
@@ -153,7 +157,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:51:00 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

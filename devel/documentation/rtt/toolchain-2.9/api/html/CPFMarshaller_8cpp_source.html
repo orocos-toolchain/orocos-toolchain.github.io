@@ -225,91 +225,101 @@
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        doWrite( v, <span class="stringliteral">&quot;ushort&quot;</span>);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">void</span> CPFMarshaller&lt;std::ostream&gt;::introspect(Property&lt;float&gt; &amp;v)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">void</span> CPFMarshaller&lt;std::ostream&gt;::introspect(Property&lt;long long&gt; &amp;v)</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        (this-&gt;s)-&gt;precision(15);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        doWrite( v, <span class="stringliteral">&quot;float&quot;</span>);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> CPFMarshaller&lt;std::ostream&gt;::introspect(Property&lt;double&gt; &amp;v)</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        (this-&gt;s)-&gt;precision(25);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        doWrite( v, <span class="stringliteral">&quot;double&quot;</span>);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">void</span> CPFMarshaller&lt;std::ostream&gt;::introspect(Property&lt;std::string&gt; &amp;v)</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        doWrite( v, <span class="stringliteral">&quot;string&quot;</span>);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">void</span> CPFMarshaller&lt;std::ostream&gt;::introspect(Property&lt;PropertyBag&gt; &amp;b)</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        PropertyBag v = b.get();</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        *(this-&gt;s) &lt;&lt;indent&lt;&lt;<span class="stringliteral">&quot;&lt;struct name=\&quot;&quot;</span>&lt;&lt;escape(b.getName())&lt;&lt;<span class="stringliteral">&quot;\&quot; type=\&quot;&quot;</span>&lt;&lt; escape(v.getType())&lt;&lt; <span class="stringliteral">&quot;\&quot;&gt;\n&quot;</span>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        indent +=<span class="stringliteral">&quot;   &quot;</span>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">if</span> ( !b.getDescription().empty() )</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            *(this-&gt;s) &lt;&lt;indent&lt;&lt;<span class="stringliteral">&quot;&lt;description&gt;&quot;</span>  &lt;&lt;escape(b.getDescription()) &lt;&lt; <span class="stringliteral">&quot;&lt;/description&gt;\n&quot;</span>;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        b.value().identify(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        doWrite( v, <span class="stringliteral">&quot;llong&quot;</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> CPFMarshaller&lt;std::ostream&gt;::introspect(Property&lt;unsigned long long&gt; &amp;v)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        doWrite( v, <span class="stringliteral">&quot;ullong&quot;</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">void</span> CPFMarshaller&lt;std::ostream&gt;::introspect(Property&lt;float&gt; &amp;v)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        (this-&gt;s)-&gt;precision(15);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        doWrite( v, <span class="stringliteral">&quot;float&quot;</span>);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">void</span> CPFMarshaller&lt;std::ostream&gt;::introspect(Property&lt;double&gt; &amp;v)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        (this-&gt;s)-&gt;precision(25);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        doWrite( v, <span class="stringliteral">&quot;double&quot;</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">void</span> CPFMarshaller&lt;std::ostream&gt;::introspect(Property&lt;std::string&gt; &amp;v)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        doWrite( v, <span class="stringliteral">&quot;string&quot;</span>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        indent = indent.substr(0, indent.length()-3);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        *(this-&gt;s) &lt;&lt;indent&lt;&lt;<span class="stringliteral">&quot;&lt;/struct&gt;\n&quot;</span>;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    CPFMarshaller&lt;std::ostream&gt;::CPFMarshaller(std::ostream &amp;os)</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        : StreamProcessor&lt;std::ostream&gt;(os), indent(<span class="stringliteral">&quot;  &quot;</span>)</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#adda1415ec4545b25f5e8d6365be13521">CPFMarshaller&lt;std::ostream&gt;::CPFMarshaller</a>(<span class="keyword">const</span> std::string&amp; filename)</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        : StreamProcessor&lt;std::ostream&gt;(mfile),</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;          mfile(filename.c_str(), std::fstream::out),</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;          indent(<span class="stringliteral">&quot;  &quot;</span>)</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">if</span> ( !mfile ) {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            s = 0;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;Could not open file for writing: &quot;</span>&lt;&lt;filename &lt;&lt;endlog();</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#a32fd7345a8ec827a7d91f95d45509f3c">CPFMarshaller&lt;std::ostream&gt;::serialize</a>(PropertyBase* v)</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span> (s)</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            v-&gt;identify( <span class="keyword">this</span> );</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#a32fd7345a8ec827a7d91f95d45509f3c">CPFMarshaller&lt;std::ostream&gt;::serialize</a>(<span class="keyword">const</span> PropertyBag &amp;v)</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">if</span> ( !s )</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        *(this-&gt;s) &lt;&lt;<span class="stringliteral">&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot;?&gt;\n&quot;</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                   &lt;&lt;<span class="stringliteral">&quot;&lt;!DOCTYPE properties SYSTEM \&quot;cpf.dtd\&quot;&gt;\n&quot;</span>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        *(this-&gt;s) &lt;&lt;<span class="stringliteral">&quot;&lt;properties&gt;\n&quot;</span>;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        v.identify(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">void</span> CPFMarshaller&lt;std::ostream&gt;::introspect(Property&lt;PropertyBag&gt; &amp;b)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        PropertyBag v = b.get();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        *(this-&gt;s) &lt;&lt;indent&lt;&lt;<span class="stringliteral">&quot;&lt;struct name=\&quot;&quot;</span>&lt;&lt;escape(b.getName())&lt;&lt;<span class="stringliteral">&quot;\&quot; type=\&quot;&quot;</span>&lt;&lt; escape(v.getType())&lt;&lt; <span class="stringliteral">&quot;\&quot;&gt;\n&quot;</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        indent +=<span class="stringliteral">&quot;   &quot;</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">if</span> ( !b.getDescription().empty() )</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            *(this-&gt;s) &lt;&lt;indent&lt;&lt;<span class="stringliteral">&quot;&lt;description&gt;&quot;</span>  &lt;&lt;escape(b.getDescription()) &lt;&lt; <span class="stringliteral">&quot;&lt;/description&gt;\n&quot;</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        b.value().identify(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        indent = indent.substr(0, indent.length()-3);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        *(this-&gt;s) &lt;&lt;indent&lt;&lt;<span class="stringliteral">&quot;&lt;/struct&gt;\n&quot;</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    CPFMarshaller&lt;std::ostream&gt;::CPFMarshaller(std::ostream &amp;os)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        : StreamProcessor&lt;std::ostream&gt;(os), indent(<span class="stringliteral">&quot;  &quot;</span>)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#adda1415ec4545b25f5e8d6365be13521">CPFMarshaller&lt;std::ostream&gt;::CPFMarshaller</a>(<span class="keyword">const</span> std::string&amp; filename)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        : StreamProcessor&lt;std::ostream&gt;(mfile),</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;          mfile(filename.c_str(), std::fstream::out),</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;          indent(<span class="stringliteral">&quot;  &quot;</span>)</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">if</span> ( !mfile ) {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            s = 0;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;Could not open file for writing: &quot;</span>&lt;&lt;filename &lt;&lt;endlog();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#a32fd7345a8ec827a7d91f95d45509f3c">CPFMarshaller&lt;std::ostream&gt;::serialize</a>(PropertyBase* v)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">if</span> (s)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            v-&gt;identify( <span class="keyword">this</span> );</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        *(this-&gt;s) &lt;&lt; <span class="stringliteral">&quot;&lt;/properties&gt;\n&quot;</span>;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#a43b206b8afade6ad9583f147bac06cae">CPFMarshaller&lt;std::ostream&gt;::flush</a>()</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">if</span> (s)</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            this-&gt;s-&gt;flush();</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#a32fd7345a8ec827a7d91f95d45509f3c">CPFMarshaller&lt;std::ostream&gt;::serialize</a>(<span class="keyword">const</span> PropertyBag &amp;v)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">if</span> ( !s )</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        *(this-&gt;s) &lt;&lt;<span class="stringliteral">&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot;?&gt;\n&quot;</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                   &lt;&lt;<span class="stringliteral">&quot;&lt;!DOCTYPE properties SYSTEM \&quot;cpf.dtd\&quot;&gt;\n&quot;</span>;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        *(this-&gt;s) &lt;&lt;<span class="stringliteral">&quot;&lt;properties&gt;\n&quot;</span>;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        v.identify(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        *(this-&gt;s) &lt;&lt; <span class="stringliteral">&quot;&lt;/properties&gt;\n&quot;</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#a43b206b8afade6ad9583f147bac06cae">CPFMarshaller&lt;std::ostream&gt;::flush</a>()</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">if</span> (s)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            this-&gt;s-&gt;flush();</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
 <div class="ttc" id="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4_html_a32fd7345a8ec827a7d91f95d45509f3c"><div class="ttname"><a href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#a32fd7345a8ec827a7d91f95d45509f3c">RTT::marsh::CPFMarshaller&lt; std::ostream &gt;::serialize</a></div><div class="ttdeci">virtual void serialize(base::PropertyBase *v)</div><div class="ttdoc">Serialize a property. </div></div>
 <div class="ttc" id="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4_html_adda1415ec4545b25f5e8d6365be13521"><div class="ttname"><a href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#adda1415ec4545b25f5e8d6365be13521">RTT::marsh::CPFMarshaller&lt; std::ostream &gt;::CPFMarshaller</a></div><div class="ttdeci">CPFMarshaller(std::ostream &amp;os)</div><div class="ttdoc">Construct a CPFMarshaller from a stream. </div></div>
 <div class="ttc" id="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4_html_a43b206b8afade6ad9583f147bac06cae"><div class="ttname"><a href="classRTT_1_1marsh_1_1CPFMarshaller_3_01std_1_1ostream_01_4.html#a43b206b8afade6ad9583f147bac06cae">RTT::marsh::CPFMarshaller&lt; std::ostream &gt;::flush</a></div><div class="ttdeci">virtual void flush()</div><div class="ttdoc">Flush all buffers, write footers. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:50:59 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

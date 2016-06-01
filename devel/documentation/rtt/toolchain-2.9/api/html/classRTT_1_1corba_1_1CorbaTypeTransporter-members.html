@@ -61,7 +61,7 @@
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a9c31a1b39dd027f38958fbc6e444959e">createAny</a>(base::DataSourceBase::shared_ptr source) const =0</td><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>createAttributeDataSource</b>(CService_ptr serv, const std::string &amp;vname, bool is_assignable)=0 (defined in <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a>)</td><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a04368798df51c2b7e3ce8f65a8800d28">createChannelElement_i</a>(DataFlowInterface *sender,::PortableServer::POA *poa, bool is_pull, bool is_mandatory, bool is_signalling) const =0</td><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a051f9e37a82d2d4311f76f8ff32c7304">createChannelElement_i</a>(DataFlowInterface *sender,::PortableServer::POA *poa, const ConnPolicy &amp;policy) const =0</td><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a66b348bb84e53427f8fddffbf4bbb8f8">createDataSource</a>(const CORBA::Any *any) const =0</td><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a3f954d5fadeaaf475ad91d340988fa02">createPropertyDataSource</a>(CService_ptr serv, const std::string &amp;vname)=0</td><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a823843b549845093c1ec30e8f4451522">createStream</a>(base::PortInterface *, const ConnPolicy &amp;, bool) const </td><td class="entry"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
@@ -71,7 +71,7 @@
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:51:01 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -97,24 +97,43 @@
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>RTT {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">namespace </span>internal { </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1internal_1_1ValueDataSource.html#aba95205e504145fba310814953121d9d">ValueDataSource&lt;std::string&gt;::set</a>( AssignableDataSource&lt;std::string&gt;::param_t t )</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        mdata = t.c_str();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ValueDataSource&lt;std::string&gt;::ValueDataSource( std::string t )</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        : mdata( t.c_str() )</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1ValueDataSource.html#a3fb5a821462fbd745292748c3991d69b">   48</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1internal_1_1ValueDataSource.html#aba95205e504145fba310814953121d9d">ValueDataSource&lt;std::string&gt;::set</a>( AssignableDataSource&lt;std::string&gt;::param_t t )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        mdata = t.c_str();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classRTT_1_1internal_1_1ValueDataSource.html">ValueDataSource&lt;std::string&gt;::ValueDataSource</a>( std::string t )</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        : mdata( t.c_str() )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> * Explicit template instantiation for core data source types</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classRTT_1_1internal_1_1DataSource.html">RTT::internal::DataSource&lt; bool &gt;</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classRTT_1_1internal_1_1AssignableDataSource.html">RTT::internal::AssignableDataSource&lt; bool &gt;</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classRTT_1_1internal_1_1ValueDataSource.html">RTT::internal::ValueDataSource&lt; bool &gt;</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classRTT_1_1internal_1_1ConstantDataSource.html">RTT::internal::ConstantDataSource&lt; bool &gt;</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classRTT_1_1internal_1_1ReferenceDataSource.html">RTT::internal::ReferenceDataSource&lt; bool &gt;</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classRTT_1_1internal_1_1DataSource.html">RTT::internal::DataSource&lt; std::string &gt;</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classRTT_1_1internal_1_1AssignableDataSource.html">RTT::internal::AssignableDataSource&lt; std::string &gt;</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classRTT_1_1internal_1_1ValueDataSource.html">RTT::internal::ValueDataSource&lt; std::string &gt;</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classRTT_1_1internal_1_1ConstantDataSource.html">RTT::internal::ConstantDataSource&lt; std::string &gt;</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="classRTT_1_1internal_1_1ReferenceDataSource.html">RTT::internal::ReferenceDataSource&lt; std::string &gt;</a>;</div>
+<div class="ttc" id="classRTT_1_1internal_1_1DataSource_html"><div class="ttname"><a href="classRTT_1_1internal_1_1DataSource.html">RTT::internal::DataSource&lt; bool &gt;</a></div></div>
+<div class="ttc" id="classRTT_1_1internal_1_1ReferenceDataSource_html"><div class="ttname"><a href="classRTT_1_1internal_1_1ReferenceDataSource.html">RTT::internal::ReferenceDataSource</a></div><div class="ttdoc">A DataSource which is used to manipulate a reference to an external value. </div><div class="ttdef"><b>Definition:</b> <a href="DataSources_8hpp_source.html#l00198">DataSources.hpp:198</a></div></div>
 <div class="ttc" id="classRTT_1_1internal_1_1ValueDataSource_html_aba95205e504145fba310814953121d9d"><div class="ttname"><a href="classRTT_1_1internal_1_1ValueDataSource.html#aba95205e504145fba310814953121d9d">RTT::internal::ValueDataSource::set</a></div><div class="ttdeci">AssignableDataSource&lt; T &gt;::reference_t set()</div><div class="ttdoc">Get a reference to the value of this DataSource. </div><div class="ttdef"><b>Definition:</b> <a href="DataSources_8hpp_source.html#l00090">DataSources.hpp:90</a></div></div>
+<div class="ttc" id="classRTT_1_1internal_1_1ConstantDataSource_html"><div class="ttname"><a href="classRTT_1_1internal_1_1ConstantDataSource.html">RTT::internal::ConstantDataSource</a></div><div class="ttdoc">A DataSource which holds a constant value and returns it in its get() method. </div><div class="ttdef"><b>Definition:</b> <a href="DataSources_8hpp_source.html#l00111">DataSources.hpp:111</a></div></div>
+<div class="ttc" id="classRTT_1_1internal_1_1AssignableDataSource_html"><div class="ttname"><a href="classRTT_1_1internal_1_1AssignableDataSource.html">RTT::internal::AssignableDataSource&lt; bool &gt;</a></div></div>
+<div class="ttc" id="classRTT_1_1internal_1_1ValueDataSource_html"><div class="ttname"><a href="classRTT_1_1internal_1_1ValueDataSource.html">RTT::internal::ValueDataSource</a></div><div class="ttdoc">A simple, yet very useful DataSource, which keeps a value, and returns it in its get() method...</div><div class="ttdef"><b>Definition:</b> <a href="DataSources_8hpp_source.html#l00060">DataSources.hpp:60</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:38 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:50:58 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

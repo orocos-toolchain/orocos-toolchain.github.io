@@ -94,9 +94,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a0f4b7e15449ea243afa15dc9bf26588e">updateFromAny</a> (const CORBA::Any *blob, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> target) const =0</td></tr>
 <tr class="memdesc:a0f4b7e15449ea243afa15dc9bf26588e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update an assignable datasource <em>target</em> with the contents of <em>blob</em>. <br/></td></tr>
 <tr class="separator:a0f4b7e15449ea243afa15dc9bf26588e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04368798df51c2b7e3ce8f65a8800d28"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html">CRemoteChannelElement_i</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a04368798df51c2b7e3ce8f65a8800d28">createChannelElement_i</a> (<a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *sender,::PortableServer::POA *poa, bool is_pull, bool is_mandatory, bool is_signalling) const =0</td></tr>
-<tr class="memdesc:a04368798df51c2b7e3ce8f65a8800d28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a channel element for remote transport in both directions.  <a href="#a04368798df51c2b7e3ce8f65a8800d28">More...</a><br/></td></tr>
-<tr class="separator:a04368798df51c2b7e3ce8f65a8800d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051f9e37a82d2d4311f76f8ff32c7304"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html">CRemoteChannelElement_i</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a051f9e37a82d2d4311f76f8ff32c7304">createChannelElement_i</a> (<a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *sender,::PortableServer::POA *poa, const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;policy) const =0</td></tr>
+<tr class="memdesc:a051f9e37a82d2d4311f76f8ff32c7304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a channel element for remote transport in both directions.  <a href="#a051f9e37a82d2d4311f76f8ff32c7304">More...</a><br/></td></tr>
+<tr class="separator:a051f9e37a82d2d4311f76f8ff32c7304"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a823843b549845093c1ec30e8f4451522"><td class="memItemLeft" align="right" valign="top">virtual <br class="typebreak"/>
 base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a823843b549845093c1ec30e8f4451522">createStream</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *, const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;, bool) const </td></tr>
 <tr class="memdesc:a823843b549845093c1ec30e8f4451522"><td class="mdescLeft">&#160;</td><td class="mdescRight">The CORBA transport does not support creating 'CORBA' streams.  <a href="#a823843b549845093c1ec30e8f4451522">More...</a><br/></td></tr>
@@ -115,7 +115,7 @@ virtual <br class="typebreak"/>
 
 <p>Definition at line <a class="el" href="CorbaTypeTransporter_8hpp_source.html#l00056">56</a> of file <a class="el" href="CorbaTypeTransporter_8hpp_source.html">CorbaTypeTransporter.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a04368798df51c2b7e3ce8f65a8800d28"></a>
+<a class="anchor" id="a051f9e37a82d2d4311f76f8ff32c7304"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -137,20 +137,8 @@ virtual <br class="typebreak"/>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>is_pull</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>is_mandatory</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>is_signalling</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;&#160;</td>
+          <td class="paramname"><em>policy</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -175,7 +163,7 @@ virtual <br class="typebreak"/>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the created CChannelElement_i. </dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1corba_1_1CorbaFallBackProtocol.html#a6c761c3882e42a2c691d683ccc8e41c2">RTT::corba::CorbaFallBackProtocol</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1corba_1_1CorbaFallBackProtocol.html#a383620a6ab2a011e5aa98f476afc6ffe">RTT::corba::CorbaFallBackProtocol</a>.</p>
 
 </div>
 </div>
@@ -303,7 +291,7 @@ virtual <br class="typebreak"/>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:51:01 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -120,19 +120,21 @@
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// The standard C types + std::string are defined here,</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;int&gt;</a>(<span class="stringliteral">&quot;int&quot;</span>) );</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;unsigned int&gt;</a>(<span class="stringliteral">&quot;uint&quot;</span>) );</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;double&gt;</a>(<span class="stringliteral">&quot;double&quot;</span>) );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;float&gt;</a>(<span class="stringliteral">&quot;float&quot;</span>) );</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;char&gt;</a>(<span class="stringliteral">&quot;char&quot;</span>) );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1BoolTypeInfo.html">BoolTypeInfo</a>() );</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1TypeInfoName.html">TypeInfoName&lt;void&gt;</a>(<span class="stringliteral">&quot;void&quot;</span>));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// load the Orocos specific types:</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        loadOrocosTypes( ti );</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        loadStdTypes( ti );</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;long long&gt;</a>(<span class="stringliteral">&quot;llong&quot;</span>) );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;unsigned long long&gt;</a>(<span class="stringliteral">&quot;ullong&quot;</span>) );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;double&gt;</a>(<span class="stringliteral">&quot;double&quot;</span>) );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;float&gt;</a>(<span class="stringliteral">&quot;float&quot;</span>) );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1StdTypeInfo.html">StdTypeInfo&lt;char&gt;</a>(<span class="stringliteral">&quot;char&quot;</span>) );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1BoolTypeInfo.html">BoolTypeInfo</a>() );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        ti-&gt;addType( <span class="keyword">new</span> <a class="code" href="structRTT_1_1types_1_1TypeInfoName.html">TypeInfoName&lt;void&gt;</a>(<span class="stringliteral">&quot;void&quot;</span>));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// load the Orocos specific types:</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        loadOrocosTypes( ti );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        loadStdTypes( ti );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="ttc" id="structRTT_1_1types_1_1BoolTypeInfo_html"><div class="ttname"><a href="structRTT_1_1types_1_1BoolTypeInfo.html">RTT::types::BoolTypeInfo</a></div><div class="ttdoc">Write boolean as &#39;true&#39; or &#39;false&#39;. </div><div class="ttdef"><b>Definition:</b> <a href="BoolTypeInfo_8hpp_source.html#l00052">BoolTypeInfo.hpp:52</a></div></div>
 <div class="ttc" id="structRTT_1_1types_1_1TypeInfoName_html"><div class="ttname"><a href="structRTT_1_1types_1_1TypeInfoName.html">RTT::types::TypeInfoName</a></div><div class="ttdoc">This helper class allows only type names to be added to Orocos. </div><div class="ttdef"><b>Definition:</b> <a href="rtt-types-fwd_8hpp_source.html#l00039">rtt-types-fwd.hpp:39</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1RealTimeTypekitPlugin_html_a37b8ca093cae8b64a4a90119bf601616"><div class="ttname"><a href="classRTT_1_1types_1_1RealTimeTypekitPlugin.html#a37b8ca093cae8b64a4a90119bf601616">RTT::types::RealTimeTypekitPlugin::loadTypes</a></div><div class="ttdeci">virtual bool loadTypes()</div><div class="ttdoc">Implement this method to add types to the Orocos type system. </div><div class="ttdef"><b>Definition:</b> <a href="RealTimeTypekitTypes_8cpp_source.html#l00060">RealTimeTypekitTypes.cpp:60</a></div></div>
@@ -140,7 +142,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:51:00 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -108,7 +108,7 @@
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">namespace </span>scripting {</div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classRTT_1_1scripting_1_1ValueParser.html">   58</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classRTT_1_1scripting_1_1ValueParser.html">ValueParser</a></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    rule_t constant, const_float, const_double, const_int, const_uint, const_bool, named_constant,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    rule_t constant, const_float, const_double, const_int, const_uint, const_llong, const_ullong, const_bool, named_constant,</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      const_string, const_char, const_hex;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classRTT_1_1scripting_1_1CommonParser.html">CommonParser</a>&amp; commonparser;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classRTT_1_1scripting_1_1PeerParser.html">PeerParser</a> peerparser;</div>
@@ -137,31 +137,33 @@
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> seenintconstant( <span class="keywordtype">int</span> c );</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> seenhexconstant( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> c );</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> seenuintconstant( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> c ); <span class="comment">// RobWork uint -&gt; unsigned int</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> seencharconstant( iter_t c );</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> seenfloatconstant( <span class="keywordtype">double</span> c );</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> seendoubleconstant( <span class="keywordtype">double</span> c );</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> push_str_char( <span class="keywordtype">char</span> c );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> seenstring();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> seennull();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> seenpeer();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <a class="code" href="classRTT_1_1scripting_1_1ValueParser.html">ValueParser</a>( <a class="code" href="classRTT_1_1TaskContext.html">TaskContext</a>* tc, <a class="code" href="classRTT_1_1scripting_1_1CommonParser.html">CommonParser</a>&amp; cp );</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    ~<a class="code" href="classRTT_1_1scripting_1_1ValueParser.html">ValueParser</a>();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1scripting_1_1ValueParser.html#a92020f6cd75efb5a2f68982b0768f2b9">clear</a>();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    rule_t&amp; parser();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> seenllongconstant( <span class="keywordtype">long</span> <span class="keywordtype">long</span> c );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> seenullongconstant( <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> c );</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> seencharconstant( iter_t c );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> seenfloatconstant( <span class="keywordtype">double</span> c );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> seendoubleconstant( <span class="keywordtype">double</span> c );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> push_str_char( <span class="keywordtype">char</span> c );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> seenstring();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> seennull();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> seenpeer();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <a class="code" href="classRTT_1_1scripting_1_1ValueParser.html">ValueParser</a>( <a class="code" href="classRTT_1_1TaskContext.html">TaskContext</a>* tc, <a class="code" href="classRTT_1_1scripting_1_1CommonParser.html">CommonParser</a>&amp; cp );</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    ~<a class="code" href="classRTT_1_1scripting_1_1ValueParser.html">ValueParser</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1scripting_1_1ValueParser.html#a92020f6cd75efb5a2f68982b0768f2b9">clear</a>();</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">const</span> <a class="code" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> lastParsed()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">      </span>{</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  };</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}}</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classRTT_1_1scripting_1_1ValueParser_html_a92020f6cd75efb5a2f68982b0768f2b9"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueParser.html#a92020f6cd75efb5a2f68982b0768f2b9">RTT::scripting::ValueParser::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clears this parser, not the repository where it stores its results. </div><div class="ttdef"><b>Definition:</b> <a href="ValueParser_8cpp_source.html#l00212">ValueParser.cpp:212</a></div></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    rule_t&amp; parser();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">const</span> <a class="code" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> lastParsed()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  };</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classRTT_1_1scripting_1_1ValueParser_html_a92020f6cd75efb5a2f68982b0768f2b9"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueParser.html#a92020f6cd75efb5a2f68982b0768f2b9">RTT::scripting::ValueParser::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clears this parser, not the repository where it stores its results. </div><div class="ttdef"><b>Definition:</b> <a href="ValueParser_8cpp_source.html#l00234">ValueParser.cpp:234</a></div></div>
 <div class="ttc" id="classRTT_1_1scripting_1_1CommonParser_html"><div class="ttname"><a href="classRTT_1_1scripting_1_1CommonParser.html">RTT::scripting::CommonParser</a></div><div class="ttdoc">This class contains some very common parser definitions. </div><div class="ttdef"><b>Definition:</b> <a href="CommonParser_8hpp_source.html#l00052">CommonParser.hpp:52</a></div></div>
 <div class="ttc" id="classRTT_1_1scripting_1_1ValueParser_html"><div class="ttname"><a href="classRTT_1_1scripting_1_1ValueParser.html">RTT::scripting::ValueParser</a></div><div class="ttdoc">A class for parsing const values. </div><div class="ttdef"><b>Definition:</b> <a href="ValueParser_8hpp_source.html#l00058">ValueParser.hpp:58</a></div></div>
 <div class="ttc" id="classRTT_1_1scripting_1_1PeerParser_html"><div class="ttname"><a href="classRTT_1_1scripting_1_1PeerParser.html">RTT::scripting::PeerParser</a></div><div class="ttdoc">Get the peer and object from an invocation path like a.b.c.d() . </div><div class="ttdef"><b>Definition:</b> <a href="PeerParser_8hpp_source.html#l00058">PeerParser.hpp:58</a></div></div>
@@ -171,7 +173,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:50:59 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

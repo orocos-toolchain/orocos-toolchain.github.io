@@ -101,9 +101,9 @@ ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom
 <tr class="memitem:a31ba86e9fc16f60083fa59a79a835b02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31ba86e9fc16f60083fa59a79a835b02"></a>
 virtual <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">base::ChannelElementBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>buildDataStorage</b> (<a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy) const </td></tr>
 <tr class="separator:a31ba86e9fc16f60083fa59a79a835b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c761c3882e42a2c691d683ccc8e41c2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html">CRemoteChannelElement_i</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaFallBackProtocol.html#a6c761c3882e42a2c691d683ccc8e41c2">createChannelElement_i</a> (<a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *,::PortableServer::POA *poa, bool, bool, bool) const </td></tr>
-<tr class="memdesc:a6c761c3882e42a2c691d683ccc8e41c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a channel element for remote transport in both directions.  <a href="#a6c761c3882e42a2c691d683ccc8e41c2">More...</a><br/></td></tr>
-<tr class="separator:a6c761c3882e42a2c691d683ccc8e41c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a383620a6ab2a011e5aa98f476afc6ffe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html">CRemoteChannelElement_i</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaFallBackProtocol.html#a383620a6ab2a011e5aa98f476afc6ffe">createChannelElement_i</a> (<a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *,::PortableServer::POA *poa, const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;) const </td></tr>
+<tr class="memdesc:a383620a6ab2a011e5aa98f476afc6ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a channel element for remote transport in both directions.  <a href="#a383620a6ab2a011e5aa98f476afc6ffe">More...</a><br/></td></tr>
+<tr class="separator:a383620a6ab2a011e5aa98f476afc6ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b760901150cf7ac99e324fa882dc5ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b760901150cf7ac99e324fa882dc5ff"></a>
 virtual <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">base::ChannelElementBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>buildChannelOutput</b> (<a class="el" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a> &amp;port, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy) const </td></tr>
 <tr class="separator:a5b760901150cf7ac99e324fa882dc5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,7 +125,7 @@ virtual <br class="typebreak"/>
 
 <p>Definition at line <a class="el" href="CorbaLib_8cpp_source.html#l00067">67</a> of file <a class="el" href="CorbaLib_8cpp_source.html">CorbaLib.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6c761c3882e42a2c691d683ccc8e41c2"></a>
+<a class="anchor" id="a383620a6ab2a011e5aa98f476afc6ffe"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -147,20 +147,8 @@ virtual <br class="typebreak"/>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>is_pull</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>is_mandatory</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>is_signalling</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;&#160;</td>
+          <td class="paramname"><em>policy</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -185,7 +173,7 @@ virtual <br class="typebreak"/>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the created CChannelElement_i. </dd></dl>
 
-<p>Implements <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a04368798df51c2b7e3ce8f65a8800d28">RTT::corba::CorbaTypeTransporter</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a051f9e37a82d2d4311f76f8ff32c7304">RTT::corba::CorbaTypeTransporter</a>.</p>
 
 <p>Definition at line <a class="el" href="CorbaLib_8cpp_source.html#l00118">118</a> of file <a class="el" href="CorbaLib_8cpp_source.html">CorbaLib.cpp</a>.</p>
 
@@ -259,7 +247,7 @@ virtual <br class="typebreak"/>
 
 <p>Implements <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a3f954d5fadeaaf475ad91d340988fa02">RTT::corba::CorbaTypeTransporter</a>.</p>
 
-<p>Definition at line <a class="el" href="CorbaLib_8cpp_source.html#l00138">138</a> of file <a class="el" href="CorbaLib_8cpp_source.html">CorbaLib.cpp</a>.</p>
+<p>Definition at line <a class="el" href="CorbaLib_8cpp_source.html#l00137">137</a> of file <a class="el" href="CorbaLib_8cpp_source.html">CorbaLib.cpp</a>.</p>
 
 </div>
 </div>
@@ -318,7 +306,7 @@ virtual <br class="typebreak"/>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:41 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:51:01 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -2581,10 +2581,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>BufferPolicy</type>
+      <type>int</type>
       <name>buffer_policy</name>
       <anchorfile>classRTT_1_1ConnPolicy.html</anchorfile>
-      <anchor>a700a61ba2e9543496e638d93de38d004</anchor>
+      <anchor>aa2c005b8ed967bd83ba1392e71e1234b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6803,8 +6803,8 @@
       <type>virtual bool</type>
       <name>setBufferPolicy</name>
       <anchorfile>classRTT_1_1base_1_1ChannelElementBase.html</anchorfile>
-      <anchor>acfcaf61e56c91ad4aa63c604ac7f761d</anchor>
-      <arglist>(BufferPolicy policy, bool force=false)</arglist>
+      <anchor>abf12aec54e7a4e436e6608f35bcbc1d4</anchor>
+      <arglist>(int policy, bool force=false)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual BufferPolicy</type>
@@ -7979,6 +7979,20 @@
       <type>virtual void</type>
       <name>introspect</name>
       <anchorfile>classRTT_1_1base_1_1PropertyIntrospection.html</anchorfile>
+      <anchor>a5474944783686b544cf5c8f1f24ffb66</anchor>
+      <arglist>(Property&lt; long long &gt; &amp;v)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>introspect</name>
+      <anchorfile>classRTT_1_1base_1_1PropertyIntrospection.html</anchorfile>
+      <anchor>aff88fbaa9b490a8592e7f3ae6cc8297d</anchor>
+      <arglist>(Property&lt; unsigned long long &gt; &amp;v)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>introspect</name>
+      <anchorfile>classRTT_1_1base_1_1PropertyIntrospection.html</anchorfile>
       <anchor>a7f412fe5235cef676665627dd57c508f</anchor>
       <arglist>(Property&lt; double &gt; &amp;v)=0</arglist>
     </member>
@@ -8555,8 +8569,8 @@
       <type>virtual CRemoteChannelElement_i *</type>
       <name>createChannelElement_i</name>
       <anchorfile>classRTT_1_1corba_1_1CorbaFallBackProtocol.html</anchorfile>
-      <anchor>a6c761c3882e42a2c691d683ccc8e41c2</anchor>
-      <arglist>(DataFlowInterface *,::PortableServer::POA *poa, bool, bool, bool) const </arglist>
+      <anchor>a383620a6ab2a011e5aa98f476afc6ffe</anchor>
+      <arglist>(DataFlowInterface *,::PortableServer::POA *poa, const ConnPolicy &amp;) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual base::DataSourceBase::shared_ptr</type>
@@ -8720,8 +8734,8 @@
       <type>virtual CRemoteChannelElement_i *</type>
       <name>createChannelElement_i</name>
       <anchorfile>classRTT_1_1corba_1_1CorbaTypeTransporter.html</anchorfile>
-      <anchor>a04368798df51c2b7e3ce8f65a8800d28</anchor>
-      <arglist>(DataFlowInterface *sender,::PortableServer::POA *poa, bool is_pull, bool is_mandatory, bool is_signalling) const =0</arglist>
+      <anchor>a051f9e37a82d2d4311f76f8ff32c7304</anchor>
+      <arglist>(DataFlowInterface *sender,::PortableServer::POA *poa, const ConnPolicy &amp;policy) const =0</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual base::ChannelElementBase::shared_ptr</type>
@@ -8796,10 +8810,17 @@
       <arglist>(out any sample, in boolean copy_old_data)</arglist>
     </member>
     <member kind="function">
-      <type>oneway void</type>
+      <type>CWriteStatus</type>
       <name>write</name>
       <anchorfile>interfaceRTT_1_1corba_1_1CChannelElement.html</anchorfile>
-      <anchor>a082f187ea7906596f28566ac2f36cd03</anchor>
+      <anchor>a7c7eaf814a80d0a8dbc67db9c6da13f6</anchor>
+      <arglist>(in any sample)</arglist>
+    </member>
+    <member kind="function">
+      <type>oneway void</type>
+      <name>writeOneway</name>
+      <anchorfile>interfaceRTT_1_1corba_1_1CChannelElement.html</anchorfile>
+      <anchor>ab40ae9b514210b8cd9291eac045972d1</anchor>
       <arglist>(in any sample)</arglist>
     </member>
     <member kind="function">
@@ -9427,8 +9448,8 @@
       <type></type>
       <name>RemoteChannelElement</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
-      <anchor>acf98ec3096653412b4be5b1197b418bb</anchor>
-      <arglist>(CorbaTypeTransporter const &amp;transport, DataFlowInterface *sender, PortableServer::POA_ptr poa, bool is_pull, bool is_mandatory, bool is_signalling)</arglist>
+      <anchor>af71cef536da873357d1d67637ceb1239</anchor>
+      <arglist>(CorbaTypeTransporter const &amp;transport, DataFlowInterface *sender, PortableServer::POA_ptr poa, const ConnPolicy &amp;policy)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -9487,17 +9508,17 @@
       <arglist>(::CORBA::Any_out sample, bool copy_old_data) ACE_THROW_SPEC((CORBA</arglist>
     </member>
     <member kind="function">
-      <type>WriteStatus</type>
+      <type>CWriteStatus</type>
       <name>write</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
-      <anchor>aba7f39207dc6672d77e9b7a35b54acec</anchor>
-      <arglist>(typename base::ChannelElement&lt; T &gt;::param_t sample)</arglist>
+      <anchor>a4406a78186f190d24aa962ee918cd319</anchor>
+      <arglist>(const ::CORBA::Any &amp;sample) ACE_THROW_SPEC((CORBA</arglist>
     </member>
     <member kind="function">
       <type>void</type>
-      <name>write</name>
+      <name>writeOneway</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
-      <anchor>a265f98b0b3bc2bce5848e8a07e12733e</anchor>
+      <anchor>ac7d8e0431e193b654e7ef18f204cf984</anchor>
       <arglist>(const ::CORBA::Any &amp;sample) ACE_THROW_SPEC((CORBA</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -14357,10 +14378,17 @@
       <arglist>(std::map&lt; const base::DataSourceBase *, base::DataSourceBase * &gt; &amp;replace) const </arglist>
     </member>
     <member kind="function">
-      <type>RTT_API void</type>
+      <type>void</type>
       <name>set</name>
       <anchorfile>classRTT_1_1internal_1_1ValueDataSource.html</anchorfile>
-      <anchor>ade47386514e67d52f40701dc9558c0f3</anchor>
+      <anchor>a3fb5a821462fbd745292748c3991d69b</anchor>
+      <arglist>(AssignableDataSource&lt; std::string &gt;::param_t t)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set</name>
+      <anchorfile>classRTT_1_1internal_1_1ValueDataSource.html</anchorfile>
+      <anchor>a3fb5a821462fbd745292748c3991d69b</anchor>
       <arglist>(AssignableDataSource&lt; std::string &gt;::param_t t)</arglist>
     </member>
   </compound>
@@ -26872,6 +26900,7 @@
     <file>Property.hpp</file>
     <file>PropertyBag.cpp</file>
     <file>PropertyBag.hpp</file>
+    <file>rt_string.cpp</file>
     <file>rt_string.hpp</file>
     <file>rtt-detail-fwd.hpp</file>
     <file>rtt-fwd.hpp</file>

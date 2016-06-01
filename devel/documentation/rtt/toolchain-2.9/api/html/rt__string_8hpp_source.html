@@ -96,32 +96,39 @@
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _RTT_RT_STRING_HPP 1</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;os/oro_allocator.hpp&quot;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">namespace </span>RTT</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespaceRTT.html#a02540e90c90320b427952f03a2f08eea">   49</a></span>&#160;    <span class="keyword">typedef</span> std::basic_string&lt;char, std::char_traits&lt;char&gt;, <a class="code" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator&lt;char&gt;</a> &gt; <a class="code" href="namespaceRTT.html#a02540e90c90320b427952f03a2f08eea">rt_string</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespaceRTT.html#a6faa5f78714b8e6964ff1f98a8beddbf">   52</a></span>&#160;    <span class="keyword">typedef</span> std::basic_ostringstream&lt;char, std::char_traits&lt;char&gt;, <a class="code" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator&lt;char&gt;</a> &gt; <a class="code" href="namespaceRTT.html#a6faa5f78714b8e6964ff1f98a8beddbf">rt_ostringstream</a>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="namespaceRTT.html#a0ef845312403a3d0526a75e072fde7e7">   55</a></span>&#160;    <span class="keyword">inline</span> std::string <a class="code" href="namespaceRTT.html#a0ef845312403a3d0526a75e072fde7e7">makeString</a>(<span class="keyword">const</span> <a class="code" href="namespaceRTT.html#a02540e90c90320b427952f03a2f08eea">RTT::rt_string</a>&amp; str)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> std::string(str.c_str());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor"></span></div>
-<div class="ttc" id="namespaceRTT_html_a6faa5f78714b8e6964ff1f98a8beddbf"><div class="ttname"><a href="namespaceRTT.html#a6faa5f78714b8e6964ff1f98a8beddbf">RTT::rt_ostringstream</a></div><div class="ttdeci">std::basic_ostringstream&lt; char, std::char_traits&lt; char &gt;, RTT::os::rt_allocator&lt; char &gt; &gt; rt_ostringstream</div><div class="ttdoc">Real-time allocatable, dynamically-size output string stream. </div><div class="ttdef"><b>Definition:</b> <a href="rt__string_8hpp_source.html#l00052">rt_string.hpp:52</a></div></div>
-<div class="ttc" id="namespaceRTT_html_a0ef845312403a3d0526a75e072fde7e7"><div class="ttname"><a href="namespaceRTT.html#a0ef845312403a3d0526a75e072fde7e7">RTT::makeString</a></div><div class="ttdeci">std::string makeString(const RTT::rt_string &amp;str)</div><div class="ttdoc">convert from real-time string to std::string </div><div class="ttdef"><b>Definition:</b> <a href="rt__string_8hpp_source.html#l00055">rt_string.hpp:55</a></div></div>
-<div class="ttc" id="namespaceRTT_html_a02540e90c90320b427952f03a2f08eea"><div class="ttname"><a href="namespaceRTT.html#a02540e90c90320b427952f03a2f08eea">RTT::rt_string</a></div><div class="ttdeci">std::basic_string&lt; char, std::char_traits&lt; char &gt;, RTT::os::rt_allocator&lt; char &gt; &gt; rt_string</div><div class="ttdoc">Real-time allocatable, dynamically-sized string. </div><div class="ttdef"><b>Definition:</b> <a href="rt__string_8hpp_source.html#l00049">rt_string.hpp:49</a></div></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;rtt-config.h&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">namespace </span>RTT</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespaceRTT.html#a02540e90c90320b427952f03a2f08eea">   50</a></span>&#160;    <span class="keyword">typedef</span> std::basic_string&lt;char, std::char_traits&lt;char&gt;, <a class="code" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator&lt;char&gt;</a> &gt; <a class="code" href="namespaceRTT.html#a02540e90c90320b427952f03a2f08eea">rt_string</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespaceRTT.html#a6faa5f78714b8e6964ff1f98a8beddbf">   53</a></span>&#160;    <span class="keyword">typedef</span> std::basic_ostringstream&lt;char, std::char_traits&lt;char&gt;, <a class="code" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator&lt;char&gt;</a> &gt; <a class="code" href="namespaceRTT.html#a6faa5f78714b8e6964ff1f98a8beddbf">rt_ostringstream</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespaceRTT.html#a0ef845312403a3d0526a75e072fde7e7">   56</a></span>&#160;    <span class="keyword">inline</span> std::string <a class="code" href="namespaceRTT.html#a0ef845312403a3d0526a75e072fde7e7">makeString</a>(<span class="keyword">const</span> <a class="code" href="namespaceRTT.html#a02540e90c90320b427952f03a2f08eea">RTT::rt_string</a>&amp; str)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> std::string(str.c_str());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">namespace </span>std</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    RTT_EXT_IMPL <span class="keyword">template</span> <span class="keyword">class </span>basic_string&lt;char, char_traits&lt;char&gt;, <a class="code" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator&lt;char&gt;</a> &gt;;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    RTT_EXT_IMPL <span class="keyword">template</span> <span class="keyword">class </span>basic_ostringstream&lt;char, char_traits&lt;char&gt;, <a class="code" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator&lt;char&gt;</a> &gt;;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor"></span></div>
+<div class="ttc" id="namespaceRTT_html_a6faa5f78714b8e6964ff1f98a8beddbf"><div class="ttname"><a href="namespaceRTT.html#a6faa5f78714b8e6964ff1f98a8beddbf">RTT::rt_ostringstream</a></div><div class="ttdeci">std::basic_ostringstream&lt; char, std::char_traits&lt; char &gt;, RTT::os::rt_allocator&lt; char &gt; &gt; rt_ostringstream</div><div class="ttdoc">Real-time allocatable, dynamically-size output string stream. </div><div class="ttdef"><b>Definition:</b> <a href="rt__string_8hpp_source.html#l00053">rt_string.hpp:53</a></div></div>
+<div class="ttc" id="namespaceRTT_html_a0ef845312403a3d0526a75e072fde7e7"><div class="ttname"><a href="namespaceRTT.html#a0ef845312403a3d0526a75e072fde7e7">RTT::makeString</a></div><div class="ttdeci">std::string makeString(const RTT::rt_string &amp;str)</div><div class="ttdoc">convert from real-time string to std::string </div><div class="ttdef"><b>Definition:</b> <a href="rt__string_8hpp_source.html#l00056">rt_string.hpp:56</a></div></div>
+<div class="ttc" id="namespaceRTT_html_a02540e90c90320b427952f03a2f08eea"><div class="ttname"><a href="namespaceRTT.html#a02540e90c90320b427952f03a2f08eea">RTT::rt_string</a></div><div class="ttdeci">std::basic_string&lt; char, std::char_traits&lt; char &gt;, RTT::os::rt_allocator&lt; char &gt; &gt; rt_string</div><div class="ttdoc">Real-time allocatable, dynamically-sized string. </div><div class="ttdef"><b>Definition:</b> <a href="rt__string_8hpp_source.html#l00050">rt_string.hpp:50</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1rt__allocator_html"><div class="ttname"><a href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a></div><div class="ttdoc">A real-time malloc allocator which allocates every block with oro_rt_malloc() and deallocates with or...</div><div class="ttdef"><b>Definition:</b> <a href="oro__allocator_8hpp_source.html#l00251">oro_allocator.hpp:251</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 24 2016 20:30:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 1 2016 17:50:59 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
