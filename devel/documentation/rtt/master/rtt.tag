@@ -8950,6 +8950,13 @@
       <anchor>a16f1271468e0c1c62b4d75125b0a293f</anchor>
       <arglist>(bool new_flag)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>disconnect</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteOutputPort.html</anchorfile>
+      <anchor>a1efbaa541874d7b1ed8e85da314b75fc</anchor>
+      <arglist>(PortInterface *port)</arglist>
+    </member>
     <member kind="function">
       <type>bool</type>
       <name>createConnection</name>
@@ -9003,6 +9010,13 @@
       <anchorfile>classRTT_1_1corba_1_1RemoteInputPort.html</anchorfile>
       <anchor>a06726a96fda60b4fbdd53f84ce93cc30</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>disconnect</name>
+      <anchorfile>classRTT_1_1corba_1_1RemoteInputPort.html</anchorfile>
+      <anchor>a05f6fa01d8c610b7b2d446013f9afd6c</anchor>
+      <arglist>(PortInterface *port)</arglist>
     </member>
     <member kind="function">
       <type>base::DataSourceBase *</type>

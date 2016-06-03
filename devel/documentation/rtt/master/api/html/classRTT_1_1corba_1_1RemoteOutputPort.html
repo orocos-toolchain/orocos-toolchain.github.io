@@ -90,6 +90,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a16f1271468e0c1c62b4d75125b0a293f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteOutputPort.html#a16f1271468e0c1c62b4d75125b0a293f">keepLastWrittenValue</a> (bool new_flag)</td></tr>
 <tr class="memdesc:a16f1271468e0c1c62b4d75125b0a293f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the setting for keeping the last written value.  <a href="#a16f1271468e0c1c62b4d75125b0a293f">More...</a><br/></td></tr>
 <tr class="separator:a16f1271468e0c1c62b4d75125b0a293f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1efbaa541874d7b1ed8e85da314b75fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1efbaa541874d7b1ed8e85da314b75fc"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteOutputPort.html#a1efbaa541874d7b1ed8e85da314b75fc">disconnect</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">PortInterface</a> *port)</td></tr>
+<tr class="memdesc:a1efbaa541874d7b1ed8e85da314b75fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the channel that connects this port to <code>port</code>. <br/></td></tr>
+<tr class="separator:a1efbaa541874d7b1ed8e85da314b75fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac66ce51d1b12fff81ed29009a7ab8878"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac66ce51d1b12fff81ed29009a7ab8878"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteOutputPort.html#ac66ce51d1b12fff81ed29009a7ab8878">createConnection</a> (<a class="el" href="classRTT_1_1base_1_1InputPortInterface.html">base::InputPortInterface</a> &amp;sink, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy)</td></tr>
 <tr class="memdesc:ac66ce51d1b12fff81ed29009a7ab8878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects this write port to the given read port, using the given connection policy. <br/></td></tr>
@@ -132,9 +136,6 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>addConnection
 <tr class="memitem:aea8565f0b70fa16e0767a72d69109295"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea8565f0b70fa16e0767a72d69109295"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b> ()</td></tr>
 <tr class="separator:aea8565f0b70fa16e0767a72d69109295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a7b1a96d0d69052990a3537584dc16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65a7b1a96d0d69052990a3537584dc16"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *p)</td></tr>
-<tr class="separator:a65a7b1a96d0d69052990a3537584dc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf3dc493227e23310adef4877e4ca404"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf3dc493227e23310adef4877e4ca404"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1OutputPortInterface.html#adf3dc493227e23310adef4877e4ca404">write</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">DataSourceBase::shared_ptr</a> source)</td></tr>
 <tr class="memdesc:adf3dc493227e23310adef4877e4ca404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write this port using the value stored in source. <br/></td></tr>
@@ -222,7 +223,7 @@ PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><b>mp
 <div class="textblock"><p>Proxy for a remote output port. </p>
 <p>Allows for creation of a connection from the remote port to a local input port. </p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00096">96</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00095">95</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a85322cdc115d695d807a6e0575c3992c"></a>
 <div class="memitem">
@@ -250,7 +251,7 @@ PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><b>mp
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PortInterface.html#a972517e80b0f06b3d6303ad3275c1f94">RTT::base::PortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00278">278</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00298">298</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
 
 <p>References <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>, and <a class="el" href="TypeInfo_8cpp_source.html#l00196">RTT::types::TypeInfo::inputPort()</a>.</p>
 
@@ -282,7 +283,7 @@ PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><b>mp
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PortInterface.html#ae58b50ea0a18e3f5b7b25825fbee8f02">RTT::base::PortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00275">275</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00295">295</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
 
 <p>References <a class="el" href="PortInterface_8hpp_source.html#l00077">RTT::base::PortInterface::getName()</a>, and <a class="el" href="TypeInfo_8cpp_source.html#l00201">RTT::types::TypeInfo::outputPort()</a>.</p>
 
@@ -575,7 +576,7 @@ PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><b>mp
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 5 2016 18:03:49 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 3 2016 07:11:21 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
