@@ -255,6 +255,9 @@ template&lt;typename function &gt; </td></tr>
 <tr class="memitem:ad0a86a2c5e924f1eb273d96e442e2e83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1types.html#ad0a86a2c5e924f1eb273d96e442e2e83">get_container_item</a> (std::vector&lt; bool &gt; &amp;cont, int index)</td></tr>
 <tr class="memdesc:ad0a86a2c5e924f1eb273d96e442e2e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialisation for vector&lt;bool&gt;, we don't return references to bits aka std::_Bit_reference.  <a href="#ad0a86a2c5e924f1eb273d96e442e2e83">More...</a><br/></td></tr>
 <tr class="separator:ad0a86a2c5e924f1eb273d96e442e2e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785b687824230dec80c3bbc384143bba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a785b687824230dec80c3bbc384143bba"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_container_item_copy</b> (const std::vector&lt; bool &gt; &amp;cont, int index)</td></tr>
+<tr class="separator:a785b687824230dec80c3bbc384143bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a764774ce659b7a55217088201a4e30ee"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a764774ce659b7a55217088201a4e30ee"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1types.html#a764774ce659b7a55217088201a4e30ee">get_capacity</a> (T const &amp;cont)</td></tr>
 <tr class="memdesc:a764774ce659b7a55217088201a4e30ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the capacity of an STL container which has the capacity() member function.  <a href="#a764774ce659b7a55217088201a4e30ee">More...</a><br/></td></tr>
@@ -271,9 +274,6 @@ template&lt;typename function &gt; </td></tr>
 <tr class="memitem:ad1beb76f0d339bcfde07be00ae09b8c5"><td class="memTemplItemLeft" align="right" valign="top">T::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1types.html#ad1beb76f0d339bcfde07be00ae09b8c5">get_container_item_copy</a> (const T &amp;cont, int index)</td></tr>
 <tr class="memdesc:ad1beb76f0d339bcfde07be00ae09b8c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy to one item in an STL container.  <a href="#ad1beb76f0d339bcfde07be00ae09b8c5">More...</a><br/></td></tr>
 <tr class="separator:ad1beb76f0d339bcfde07be00ae09b8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a785b687824230dec80c3bbc384143bba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a785b687824230dec80c3bbc384143bba"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_container_item_copy</b> (const std::vector&lt; bool &gt; &amp;cont, int index)</td></tr>
-<tr class="separator:a785b687824230dec80c3bbc384143bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c8a3cdeee25589b4283dc60a28a9b95"><td class="memTemplParams" colspan="2">template&lt;class Function &gt; </td></tr>
 <tr class="memitem:a2c8a3cdeee25589b4283dc60a28a9b95"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structRTT_1_1types_1_1TypeConstructor.html">TypeConstructor</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1types.html#a2c8a3cdeee25589b4283dc60a28a9b95">newConstructor</a> (Function *foo, bool automatic=false)</td></tr>
 <tr class="memdesc:a2c8a3cdeee25589b4283dc60a28a9b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Constructor.  <a href="#a2c8a3cdeee25589b4283dc60a28a9b95">More...</a><br/></td></tr>
@@ -783,7 +783,7 @@ template&lt;class Object &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 3 2016 07:11:23 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 25 2016 09:52:18 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

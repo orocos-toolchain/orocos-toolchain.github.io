@@ -104,13 +104,20 @@
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> cont[index];</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">bool</span> get_container_item_copy(<span class="keyword">const</span> std::vector&lt;bool&gt; &amp; cont, <span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> (index &gt;= (<span class="keywordtype">int</span>) (cont.size()) || index &lt; 0)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> cont[index];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 <div class="ttc" id="namespaceRTT_1_1types_html_ad0a86a2c5e924f1eb273d96e442e2e83"><div class="ttname"><a href="namespaceRTT_1_1types.html#ad0a86a2c5e924f1eb273d96e442e2e83">RTT::types::get_container_item</a></div><div class="ttdeci">bool get_container_item(std::vector&lt; bool &gt; &amp;cont, int index)</div><div class="ttdoc">Specialisation for vector&lt;bool&gt;, we don&#39;t return references to bits aka std::_Bit_reference. </div><div class="ttdef"><b>Definition:</b> <a href="SequenceTypeInfoBase_8cpp_source.html#l00045">SequenceTypeInfoBase.cpp:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 3 2016 07:11:21 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 25 2016 09:52:16 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
