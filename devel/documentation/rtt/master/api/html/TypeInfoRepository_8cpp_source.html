@@ -128,202 +128,222 @@
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> TypeInfoRepository::Release() {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        typerepos.reset();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a866326a0a0436c7aa688fa1c180b7015">   76</a></span>&#160;    <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>* <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a866326a0a0436c7aa688fa1c180b7015">TypeInfoRepository::type</a>( <span class="keyword">const</span> std::string&amp; name )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        map_t::const_iterator i = data.find( name );</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span> ( i == data.end() ) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="comment">// try alternate name replace / with dots:</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordtype">string</span> tkname = <span class="stringliteral">&quot;/&quot;</span> + boost::replace_all_copy(boost::replace_all_copy(name, <span class="keywordtype">string</span>(<span class="stringliteral">&quot;.&quot;</span>), <span class="stringliteral">&quot;/&quot;</span>), <span class="stringliteral">&quot;&lt;&quot;</span>,<span class="stringliteral">&quot;&lt;/&quot;</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            i = data.find( tkname );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span> ( i == data.end())</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">// found</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> i-&gt;second;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    TypeInfoRepository::~TypeInfoRepository()</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">// because of aliases, we only want unique pointers:</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        vector&lt;TypeInfo*&gt; todelete = values(data);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        sort(todelete.begin(), todelete.end());</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        vector&lt;TypeInfo*&gt;::iterator begin, last = unique( todelete.begin(), todelete.end() );</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        begin = todelete.begin();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">for</span>( ; begin != last; ++begin )</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keyword">delete</span> *begin;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">delete</span> <a class="code" href="structRTT_1_1internal_1_1DataSourceTypeInfo.html">DataSourceTypeInfo&lt;UnknownType&gt;::TypeInfoObject</a>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="structRTT_1_1internal_1_1DataSourceTypeInfo.html">DataSourceTypeInfo&lt;UnknownType&gt;::TypeInfoObject</a> = 0;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#aa9dd41450edf38e20bd988d2be6d0397">  104</a></span>&#160;    <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>* <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#aa9dd41450edf38e20bd988d2be6d0397">TypeInfoRepository::getTypeById</a>(TypeInfo::TypeId type_id)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordflow">if</span> (!type_id)</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;          <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="comment">// Ask each type for its type id name.</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      map_t::const_iterator i = data.begin();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keywordflow">for</span> (; i != data.end(); ++i){</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span> (i-&gt;second-&gt;getTypeId() &amp;&amp; *(i-&gt;second-&gt;getTypeId()) == *type_id)</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;          <span class="keywordflow">return</span> i-&gt;second;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a823c5806dcde8960caab7d6755fe859c">  117</a></span>&#160;    <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>* <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#aa9dd41450edf38e20bd988d2be6d0397">TypeInfoRepository::getTypeById</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * type_id_name)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="comment">// Ask each type for its type id name.</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      map_t::const_iterator i = data.begin();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordflow">for</span> (; i != data.end(); ++i){</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">if</span> (i-&gt;second-&gt;getTypeId() &amp;&amp; i-&gt;second-&gt;getTypeId()-&gt;name() == type_id_name)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;          <span class="keywordflow">return</span> i-&gt;second;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a8de60807ab40114355121a6b23b743c5">  128</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a8de60807ab40114355121a6b23b743c5">TypeInfoRepository::addType</a>(<a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>* t)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span> (!t)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span> (data.count(t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#ad8144e74a603241ebf29ba51bf252525">getTypeName</a>() ) ) {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;Can&#39;t register a new TypeInfo object for &#39;&quot;</span>&lt;&lt;t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#ad8144e74a603241ebf29ba51bf252525">getTypeName</a>() &lt;&lt; <span class="stringliteral">&quot;&#39;: one already exists.&quot;</span>&lt;&lt;endlog();</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        data[t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#ad8144e74a603241ebf29ba51bf252525">getTypeName</a>()] = t;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a22c45317dd48f765b50af84b3c2b21f6">  142</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a8de60807ab40114355121a6b23b743c5">TypeInfoRepository::addType</a>(<a class="code" href="classRTT_1_1types_1_1TypeInfoGenerator.html">TypeInfoGenerator</a>* t)</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordflow">if</span> (!t)</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        std::string tname = t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfoGenerator.html#ac7678e34c359cb1ab1dfda9500a7dc6c">getTypeName</a>();</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>* ti = t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfoGenerator.html#a2ac544c7d7a0993e7e1e8c639753095b">getTypeInfoObject</a>();</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">if</span> (ti &amp;&amp; data.count(tname) &amp;&amp; data[tname] != ti ) {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                log(Error) &lt;&lt; <span class="stringliteral">&quot;Refusing to add type information for &#39;&quot;</span> &lt;&lt; tname &lt;&lt; <span class="stringliteral">&quot;&#39;: the name is already in use by another type.&quot;</span>&lt;&lt;endlog();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="comment">// Check for first registration, or alias:</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">if</span> ( ti == 0 )</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            ti = <span class="keyword">new</span> <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>(tname);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            ti-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#a333c1ce14cb2e50e355327e95d3001d2">addAlias</a>(tname);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> TypeInfoRepository::setAutoLoader(<span class="keyword">const</span> boost::function&lt;<span class="keywordtype">bool</span> (<span class="keyword">const</span> std::string &amp;)&gt; &amp;loader)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        loadTypeKitForName = loader;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    TypeInfo* TypeInfoRepository::typeInternal( <span class="keyword">const</span> std::string&amp; name )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        MutexLock lock(type_lock);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        map_t::const_iterator i = data.find( name );</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span> ( i == data.end() ) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">// try alternate name replace / with dots:</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordtype">string</span> tkname = <span class="stringliteral">&quot;/&quot;</span> + boost::replace_all_copy(boost::replace_all_copy(name, <span class="keywordtype">string</span>(<span class="stringliteral">&quot;.&quot;</span>), <span class="stringliteral">&quot;/&quot;</span>), <span class="stringliteral">&quot;&lt;&quot;</span>,<span class="stringliteral">&quot;&lt;/&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            i = data.find( tkname );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">if</span> ( i == data.end())</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">// found</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> i-&gt;second;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a866326a0a0436c7aa688fa1c180b7015">   98</a></span>&#160;    <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>* <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a866326a0a0436c7aa688fa1c180b7015">TypeInfoRepository::type</a>( <span class="keyword">const</span> std::string&amp; name )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a> *ret = typeInternal(name);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span>(!ret &amp;&amp; loadTypeKitForName)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">if</span>(loadTypeKitForName(name))</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                ret = typeInternal(name);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    TypeInfoRepository::~TypeInfoRepository()</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="comment">// because of aliases, we only want unique pointers:</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        vector&lt;TypeInfo*&gt; todelete = values(data);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        sort(todelete.begin(), todelete.end());</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        vector&lt;TypeInfo*&gt;::iterator begin, last = unique( todelete.begin(), todelete.end() );</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        begin = todelete.begin();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">for</span>( ; begin != last; ++begin )</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keyword">delete</span> *begin;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keyword">delete</span> <a class="code" href="structRTT_1_1internal_1_1DataSourceTypeInfo.html">DataSourceTypeInfo&lt;UnknownType&gt;::TypeInfoObject</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="structRTT_1_1internal_1_1DataSourceTypeInfo.html">DataSourceTypeInfo&lt;UnknownType&gt;::TypeInfoObject</a> = 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#aa9dd41450edf38e20bd988d2be6d0397">  124</a></span>&#160;    <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>* <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#aa9dd41450edf38e20bd988d2be6d0397">TypeInfoRepository::getTypeById</a>(TypeInfo::TypeId type_id)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">if</span> (!type_id)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;          <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="comment">// Ask each type for its type id name.</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      map_t::const_iterator i = data.begin();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordflow">for</span> (; i != data.end(); ++i){</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span> (i-&gt;second-&gt;getTypeId() &amp;&amp; *(i-&gt;second-&gt;getTypeId()) == *type_id)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;          <span class="keywordflow">return</span> i-&gt;second;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a823c5806dcde8960caab7d6755fe859c">  137</a></span>&#160;    <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>* <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#aa9dd41450edf38e20bd988d2be6d0397">TypeInfoRepository::getTypeById</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * type_id_name)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="comment">// Ask each type for its type id name.</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      map_t::const_iterator i = data.begin();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <span class="keywordflow">for</span> (; i != data.end(); ++i){</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">if</span> (i-&gt;second-&gt;getTypeId() &amp;&amp; i-&gt;second-&gt;getTypeId()-&gt;name() == type_id_name)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;          <span class="keywordflow">return</span> i-&gt;second;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a8de60807ab40114355121a6b23b743c5">  148</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a8de60807ab40114355121a6b23b743c5">TypeInfoRepository::addType</a>(<a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>* t)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">if</span> (!t)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">if</span> (data.count(t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#ad8144e74a603241ebf29ba51bf252525">getTypeName</a>() ) ) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            log(Error) &lt;&lt; <span class="stringliteral">&quot;Can&#39;t register a new TypeInfo object for &#39;&quot;</span>&lt;&lt;t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#ad8144e74a603241ebf29ba51bf252525">getTypeName</a>() &lt;&lt; <span class="stringliteral">&quot;&#39;: one already exists.&quot;</span>&lt;&lt;endlog();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        data[t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#ad8144e74a603241ebf29ba51bf252525">getTypeName</a>()] = t;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span> ( t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfoGenerator.html#aa27628858411ce36f8f11eb6952844b0">installTypeInfoObject</a>( ti ) ) {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keyword">delete</span> t;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="comment">// keep track of this type:</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        data[ tname ] = ti;</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a22c45317dd48f765b50af84b3c2b21f6">  162</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a8de60807ab40114355121a6b23b743c5">TypeInfoRepository::addType</a>(<a class="code" href="classRTT_1_1types_1_1TypeInfoGenerator.html">TypeInfoGenerator</a>* t)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">if</span> (!t)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        std::string tname = t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfoGenerator.html#ac7678e34c359cb1ab1dfda9500a7dc6c">getTypeName</a>();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>* ti = t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfoGenerator.html#a2ac544c7d7a0993e7e1e8c639753095b">getTypeInfoObject</a>();</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        log(Debug) &lt;&lt; <span class="stringliteral">&quot;Registered Type &#39;&quot;</span>&lt;&lt;tname &lt;&lt;<span class="stringliteral">&quot;&#39; to the Orocos Type System.&quot;</span>&lt;&lt;Logger::endl;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">for</span>(Transports::iterator it = transports.begin(); it != transports.end(); ++it)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">if</span> ( (*it)-&gt;registerTransport( tname, ti) )</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                log(Info) &lt;&lt; <span class="stringliteral">&quot;Registered new &#39;&quot;</span>&lt;&lt; (*it)-&gt;getTransportName()&lt;&lt;<span class="stringliteral">&quot;&#39; transport for &quot;</span> &lt;&lt; tname &lt;&lt;endlog();</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a442ed6fac2bccbd444a55d24f72c63f3">  176</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a442ed6fac2bccbd444a55d24f72c63f3">TypeInfoRepository::getTypes</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">return</span> keys( data );</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">if</span> (ti &amp;&amp; data.count(tname) &amp;&amp; data[tname] != ti ) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                log(Error) &lt;&lt; <span class="stringliteral">&quot;Refusing to add type information for &#39;&quot;</span> &lt;&lt; tname &lt;&lt; <span class="stringliteral">&quot;&#39;: the name is already in use by another type.&quot;</span>&lt;&lt;endlog();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="comment">// Check for first registration, or alias:</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span> ( ti == 0 )</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            ti = <span class="keyword">new</span> <a class="code" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a>(tname);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            ti-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfo.html#a333c1ce14cb2e50e355327e95d3001d2">addAlias</a>(tname);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#ae9e91145e91a41a3c52112f9acb43174">  182</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#ae9e91145e91a41a3c52112f9acb43174">TypeInfoRepository::toDot</a>( <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; type )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">if</span> (type.empty())</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordflow">return</span> type;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">// try alternate name replace / with dots:</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordtype">string</span> dotname = boost::replace_all_copy(boost::replace_all_copy(type, <span class="keywordtype">string</span>(<span class="stringliteral">&quot;/&quot;</span>), <span class="stringliteral">&quot;.&quot;</span>), <span class="stringliteral">&quot;&lt;.&quot;</span>,<span class="stringliteral">&quot;&lt;&quot;</span>);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span> ( dotname[0] == <span class="charliteral">&#39;.&#39;</span>)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            dotname = dotname.substr(1);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> dotname;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a79112ffff0ec3bf3eb55f13597a62515">  193</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a79112ffff0ec3bf3eb55f13597a62515">TypeInfoRepository::getDottedTypes</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        vector&lt;string&gt; result = keys( data );</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">for</span>( vector&lt;string&gt;::iterator it = result.begin(); it != result.end(); ++it)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            *it = toDot(*it);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span> ( t-&gt;<a class="code" href="classRTT_1_1types_1_1TypeInfoGenerator.html#aa27628858411ce36f8f11eb6952844b0">installTypeInfoObject</a>( ti ) ) {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keyword">delete</span> t;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">// keep track of this type:</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        data[ tname ] = ti;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        log(Debug) &lt;&lt; <span class="stringliteral">&quot;Registered Type &#39;&quot;</span>&lt;&lt;tname &lt;&lt;<span class="stringliteral">&quot;&#39; to the Orocos Type System.&quot;</span>&lt;&lt;Logger::endl;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">for</span>(Transports::iterator it = transports.begin(); it != transports.end(); ++it)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">if</span> ( (*it)-&gt;registerTransport( tname, ti) )</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                log(Info) &lt;&lt; <span class="stringliteral">&quot;Registered new &#39;&quot;</span>&lt;&lt; (*it)-&gt;getTransportName()&lt;&lt;<span class="stringliteral">&quot;&#39; transport for &quot;</span> &lt;&lt; tname &lt;&lt;endlog();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a442ed6fac2bccbd444a55d24f72c63f3">  196</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a442ed6fac2bccbd444a55d24f72c63f3">TypeInfoRepository::getTypes</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> keys( data );</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a0f7d4de77245160acc6730e76e5bd760">  202</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a0f7d4de77245160acc6730e76e5bd760">TypeInfoRepository::registerTransport</a>( <a class="code" href="classRTT_1_1types_1_1TransportPlugin.html">TransportPlugin</a>* tr )</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        transports.reserve( transports.size() + 1 );</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        transports.push_back( tr );</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="comment">// inform transport of existing types.</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        map_t::const_iterator i = data.begin();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">for</span>( ; i != data.end(); ++i )</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">if</span> ( tr-&gt;<a class="code" href="classRTT_1_1types_1_1TransportPlugin.html#a3c91b6d936e3f45e5c89d0fb9c3de1b0">registerTransport</a>( i-&gt;first , i-&gt;second ) )</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                log(Info) &lt;&lt; <span class="stringliteral">&quot;Registered new &#39;&quot;</span>&lt;&lt; tr-&gt;<a class="code" href="classRTT_1_1types_1_1TransportPlugin.html#a150d670e63a42e1b4a5643de6d7eec33">getTransportName</a>()&lt;&lt;<span class="stringliteral">&quot;&#39; transport for &quot;</span> &lt;&lt; i-&gt;first &lt;&lt;endlog();</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="comment">// give chance to register fallback protocol:</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">if</span> ( tr-&gt;<a class="code" href="classRTT_1_1types_1_1TransportPlugin.html#a3c91b6d936e3f45e5c89d0fb9c3de1b0">registerTransport</a>(<span class="stringliteral">&quot;unknown_t&quot;</span>, <a class="code" href="structRTT_1_1internal_1_1DataSourceTypeInfo.html">DataSourceTypeInfo&lt;UnknownType&gt;::getTypeInfo</a>() ) == false )</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            log(Debug) &lt;&lt; <span class="stringliteral">&quot;Transport &quot;</span> &lt;&lt; tr-&gt;<a class="code" href="classRTT_1_1types_1_1TransportPlugin.html#a150d670e63a42e1b4a5643de6d7eec33">getTransportName</a>() &lt;&lt; <span class="stringliteral">&quot; did not install a fallback handler for &#39;unknown_t&#39;.&quot;</span> &lt;&lt;endlog();</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#ac9374a0dc215732bccf1e3050f8c295e">  217</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#ac9374a0dc215732bccf1e3050f8c295e">TypeInfoRepository::logTypeInfo</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="comment">// dump the names of all known types</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        log(Debug) &lt;&lt; <span class="stringliteral">&quot;Types known to the Orocos Type System.&quot;</span>&lt;&lt;Logger::endl;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">for</span>(map_t::const_iterator it = data.begin(); it != data.end(); ++it)</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            std::vector&lt;int&gt;    transports;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            transports = it-&gt;second-&gt;getTransportNames();</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            log(Debug) &lt;&lt; <span class="stringliteral">&quot;-- &quot;</span> &lt;&lt; it-&gt;first</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                          &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; (*it).second-&gt;getTypeName() &lt;&lt; <span class="stringliteral">&quot;) protocols [&quot;</span>;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">for</span> (std::vector&lt;int&gt;::const_iterator   iter=transports.begin();</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                 iter != transports.end();</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                 ++iter)</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                <a class="code" href="classRTT_1_1Logger.html#aaede943bd6496ce6fb5cb9b848deff6b">Logger::log</a>() &lt;&lt; *iter;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            }</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <a class="code" href="classRTT_1_1Logger.html#aaede943bd6496ce6fb5cb9b848deff6b">Logger::log</a>() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; Logger::endl;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="comment">// dump the names of all known transports</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        log(Debug) &lt;&lt; <span class="stringliteral">&quot;Transports known to the Orocos Type System.&quot;</span>&lt;&lt;Logger::endl;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">for</span>(Transports::const_iterator it = transports.begin(); it != transports.end(); ++it)</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            log(Debug) &lt;&lt; <span class="stringliteral">&quot;-- &quot;</span> &lt;&lt; (*it)-&gt;getTransportName() &lt;&lt; Logger::endl;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        }</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#ae9e91145e91a41a3c52112f9acb43174">  202</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#ae9e91145e91a41a3c52112f9acb43174">TypeInfoRepository::toDot</a>( <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; type )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">if</span> (type.empty())</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">return</span> type;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="comment">// try alternate name replace / with dots:</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordtype">string</span> dotname = boost::replace_all_copy(boost::replace_all_copy(type, <span class="keywordtype">string</span>(<span class="stringliteral">&quot;/&quot;</span>), <span class="stringliteral">&quot;.&quot;</span>), <span class="stringliteral">&quot;&lt;.&quot;</span>,<span class="stringliteral">&quot;&lt;&quot;</span>);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span> ( dotname[0] == <span class="charliteral">&#39;.&#39;</span>)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            dotname = dotname.substr(1);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">return</span> dotname;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a79112ffff0ec3bf3eb55f13597a62515">  213</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a79112ffff0ec3bf3eb55f13597a62515">TypeInfoRepository::getDottedTypes</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        vector&lt;string&gt; result = keys( data );</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">for</span>( vector&lt;string&gt;::iterator it = result.begin(); it != result.end(); ++it)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            *it = toDot(*it);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#a0f7d4de77245160acc6730e76e5bd760">  222</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#a0f7d4de77245160acc6730e76e5bd760">TypeInfoRepository::registerTransport</a>( <a class="code" href="classRTT_1_1types_1_1TransportPlugin.html">TransportPlugin</a>* tr )</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        transports.reserve( transports.size() + 1 );</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        transports.push_back( tr );</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="comment">// inform transport of existing types.</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        map_t::const_iterator i = data.begin();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">for</span>( ; i != data.end(); ++i )</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">if</span> ( tr-&gt;<a class="code" href="classRTT_1_1types_1_1TransportPlugin.html#a3c91b6d936e3f45e5c89d0fb9c3de1b0">registerTransport</a>( i-&gt;first , i-&gt;second ) )</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                log(Info) &lt;&lt; <span class="stringliteral">&quot;Registered new &#39;&quot;</span>&lt;&lt; tr-&gt;<a class="code" href="classRTT_1_1types_1_1TransportPlugin.html#a150d670e63a42e1b4a5643de6d7eec33">getTransportName</a>()&lt;&lt;<span class="stringliteral">&quot;&#39; transport for &quot;</span> &lt;&lt; i-&gt;first &lt;&lt;endlog();</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="comment">// give chance to register fallback protocol:</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">if</span> ( tr-&gt;<a class="code" href="classRTT_1_1types_1_1TransportPlugin.html#a3c91b6d936e3f45e5c89d0fb9c3de1b0">registerTransport</a>(<span class="stringliteral">&quot;unknown_t&quot;</span>, <a class="code" href="structRTT_1_1internal_1_1DataSourceTypeInfo.html">DataSourceTypeInfo&lt;UnknownType&gt;::getTypeInfo</a>() ) == false )</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            log(Debug) &lt;&lt; <span class="stringliteral">&quot;Transport &quot;</span> &lt;&lt; tr-&gt;<a class="code" href="classRTT_1_1types_1_1TransportPlugin.html#a150d670e63a42e1b4a5643de6d7eec33">getTransportName</a>() &lt;&lt; <span class="stringliteral">&quot; did not install a fallback handler for &#39;unknown_t&#39;.&quot;</span> &lt;&lt;endlog();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="classRTT_1_1types_1_1TypeInfoRepository.html#ac9374a0dc215732bccf1e3050f8c295e">  237</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1types_1_1TypeInfoRepository.html#ac9374a0dc215732bccf1e3050f8c295e">TypeInfoRepository::logTypeInfo</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="comment">// dump the names of all known types</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        log(Debug) &lt;&lt; <span class="stringliteral">&quot;Types known to the Orocos Type System.&quot;</span>&lt;&lt;Logger::endl;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">MutexLock</a> lock(type_lock);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">for</span>(map_t::const_iterator it = data.begin(); it != data.end(); ++it)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            std::vector&lt;int&gt;    transports;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            transports = it-&gt;second-&gt;getTransportNames();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            log(Debug) &lt;&lt; <span class="stringliteral">&quot;-- &quot;</span> &lt;&lt; it-&gt;first</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                          &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; (*it).second-&gt;getTypeName() &lt;&lt; <span class="stringliteral">&quot;) protocols [&quot;</span>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordflow">for</span> (std::vector&lt;int&gt;::const_iterator   iter=transports.begin();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                 iter != transports.end();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                 ++iter)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <a class="code" href="classRTT_1_1Logger.html#aaede943bd6496ce6fb5cb9b848deff6b">Logger::log</a>() &lt;&lt; *iter;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <a class="code" href="classRTT_1_1Logger.html#aaede943bd6496ce6fb5cb9b848deff6b">Logger::log</a>() &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; Logger::endl;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="comment">// dump the names of all known transports</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        log(Debug) &lt;&lt; <span class="stringliteral">&quot;Transports known to the Orocos Type System.&quot;</span>&lt;&lt;Logger::endl;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">for</span>(Transports::const_iterator it = transports.begin(); it != transports.end(); ++it)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            log(Debug) &lt;&lt; <span class="stringliteral">&quot;-- &quot;</span> &lt;&lt; (*it)-&gt;getTransportName() &lt;&lt; Logger::endl;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html_a333c1ce14cb2e50e355327e95d3001d2"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html#a333c1ce14cb2e50e355327e95d3001d2">RTT::types::TypeInfo::addAlias</a></div><div class="ttdeci">void addAlias(const std::string &amp;alias)</div><div class="ttdoc">Adds an alias to the this type. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8cpp_source.html#l00072">TypeInfo.cpp:72</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html_ad8144e74a603241ebf29ba51bf252525"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html#ad8144e74a603241ebf29ba51bf252525">RTT::types::TypeInfo::getTypeName</a></div><div class="ttdeci">const std::string &amp; getTypeName() const </div><div class="ttdoc">Return the type name which was first registered. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8hpp_source.html#l00082">TypeInfo.hpp:82</a></div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_a79112ffff0ec3bf3eb55f13597a62515"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#a79112ffff0ec3bf3eb55f13597a62515">RTT::types::TypeInfoRepository::getDottedTypes</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getDottedTypes() const </div><div class="ttdoc">List all registered types in the package.type notation. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00193">TypeInfoRepository.cpp:193</a></div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_a442ed6fac2bccbd444a55d24f72c63f3"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#a442ed6fac2bccbd444a55d24f72c63f3">RTT::types::TypeInfoRepository::getTypes</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getTypes() const </div><div class="ttdoc">List all types registered with their original type name. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00176">TypeInfoRepository.cpp:176</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_a79112ffff0ec3bf3eb55f13597a62515"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#a79112ffff0ec3bf3eb55f13597a62515">RTT::types::TypeInfoRepository::getDottedTypes</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getDottedTypes() const </div><div class="ttdoc">List all registered types in the package.type notation. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00213">TypeInfoRepository.cpp:213</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_a442ed6fac2bccbd444a55d24f72c63f3"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#a442ed6fac2bccbd444a55d24f72c63f3">RTT::types::TypeInfoRepository::getTypes</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getTypes() const </div><div class="ttdoc">List all types registered with their original type name. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00196">TypeInfoRepository.cpp:196</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfoGenerator_html_aa27628858411ce36f8f11eb6952844b0"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoGenerator.html#aa27628858411ce36f8f11eb6952844b0">RTT::types::TypeInfoGenerator::installTypeInfoObject</a></div><div class="ttdeci">virtual bool installTypeInfoObject(TypeInfo *ti)=0</div><div class="ttdoc">Installs the type info object in the global data source type info handler and adds any additional fea...</div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TransportPlugin_html"><div class="ttname"><a href="classRTT_1_1types_1_1TransportPlugin.html">RTT::types::TransportPlugin</a></div><div class="ttdoc">A class which registers TypeTransporter instances to types. </div><div class="ttdef"><b>Definition:</b> <a href="types_2TransportPlugin_8hpp_source.html#l00056">TransportPlugin.hpp:56</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TransportPlugin_html_a150d670e63a42e1b4a5643de6d7eec33"><div class="ttname"><a href="classRTT_1_1types_1_1TransportPlugin.html#a150d670e63a42e1b4a5643de6d7eec33">RTT::types::TransportPlugin::getTransportName</a></div><div class="ttdeci">virtual std::string getTransportName() const =0</div><div class="ttdoc">Returns the (protocol) name of this transport. </div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_ae9e91145e91a41a3c52112f9acb43174"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#ae9e91145e91a41a3c52112f9acb43174">RTT::types::TypeInfoRepository::toDot</a></div><div class="ttdeci">std::string toDot(const std::string &amp;type) const </div><div class="ttdoc">Convert any type name returned by getTypes() to the dotted type notation. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00182">TypeInfoRepository.cpp:182</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_ae9e91145e91a41a3c52112f9acb43174"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#ae9e91145e91a41a3c52112f9acb43174">RTT::types::TypeInfoRepository::toDot</a></div><div class="ttdeci">std::string toDot(const std::string &amp;type) const </div><div class="ttdoc">Convert any type name returned by getTypes() to the dotted type notation. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00202">TypeInfoRepository.cpp:202</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfoGenerator_html"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoGenerator.html">RTT::types::TypeInfoGenerator</a></div><div class="ttdoc">All generator classes inherit from this object in order to allow them to be added to the TypeInfoRepo...</div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoGenerator_8hpp_source.html#l00020">TypeInfoGenerator.hpp:20</a></div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_a0f7d4de77245160acc6730e76e5bd760"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#a0f7d4de77245160acc6730e76e5bd760">RTT::types::TypeInfoRepository::registerTransport</a></div><div class="ttdeci">void registerTransport(TransportPlugin *tr)</div><div class="ttdoc">Call this function to add a new (network) transport for Orocos types. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00202">TypeInfoRepository.cpp:202</a></div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_ac9374a0dc215732bccf1e3050f8c295e"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#ac9374a0dc215732bccf1e3050f8c295e">RTT::types::TypeInfoRepository::logTypeInfo</a></div><div class="ttdeci">void logTypeInfo() const </div><div class="ttdoc">Dump all known types, along with transports and their types, to the log. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00217">TypeInfoRepository.cpp:217</a></div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_a8de60807ab40114355121a6b23b743c5"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#a8de60807ab40114355121a6b23b743c5">RTT::types::TypeInfoRepository::addType</a></div><div class="ttdeci">bool addType(TypeInfo *ti)</div><div class="ttdoc">Add a type to the Orocos type repository. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00128">TypeInfoRepository.cpp:128</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_a0f7d4de77245160acc6730e76e5bd760"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#a0f7d4de77245160acc6730e76e5bd760">RTT::types::TypeInfoRepository::registerTransport</a></div><div class="ttdeci">void registerTransport(TransportPlugin *tr)</div><div class="ttdoc">Call this function to add a new (network) transport for Orocos types. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00222">TypeInfoRepository.cpp:222</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_ac9374a0dc215732bccf1e3050f8c295e"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#ac9374a0dc215732bccf1e3050f8c295e">RTT::types::TypeInfoRepository::logTypeInfo</a></div><div class="ttdeci">void logTypeInfo() const </div><div class="ttdoc">Dump all known types, along with transports and their types, to the log. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00237">TypeInfoRepository.cpp:237</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_a8de60807ab40114355121a6b23b743c5"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#a8de60807ab40114355121a6b23b743c5">RTT::types::TypeInfoRepository::addType</a></div><div class="ttdeci">bool addType(TypeInfo *ti)</div><div class="ttdoc">Add a type to the Orocos type repository. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00148">TypeInfoRepository.cpp:148</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfo_html"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfo.html">RTT::types::TypeInfo</a></div><div class="ttdoc">A class for representing a user type, and which can build instances of that type. ...</div><div class="ttdef"><b>Definition:</b> <a href="TypeInfo_8hpp_source.html#l00066">TypeInfo.hpp:66</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfoGenerator_html_a2ac544c7d7a0993e7e1e8c639753095b"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoGenerator.html#a2ac544c7d7a0993e7e1e8c639753095b">RTT::types::TypeInfoGenerator::getTypeInfoObject</a></div><div class="ttdeci">virtual TypeInfo * getTypeInfoObject() const =0</div><div class="ttdoc">Returns the TypeInfo object of this type, or null if none exists yet. </div></div>
 <div class="ttc" id="structRTT_1_1internal_1_1DataSourceTypeInfo_html"><div class="ttname"><a href="structRTT_1_1internal_1_1DataSourceTypeInfo.html">RTT::internal::DataSourceTypeInfo</a></div><div class="ttdoc">Every DataSource of type T has a type info class which it can ask type information. </div><div class="ttdef"><b>Definition:</b> <a href="DataSourceTypeInfo_8hpp_source.html#l00056">DataSourceTypeInfo.hpp:56</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_aaede943bd6496ce6fb5cb9b848deff6b"><div class="ttname"><a href="classRTT_1_1Logger.html#aaede943bd6496ce6fb5cb9b848deff6b">RTT::Logger::log</a></div><div class="ttdeci">static Logger &amp; log()</div><div class="ttdoc">As Instance(), but more userfriendly. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00117">Logger.cpp:117</a></div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_aa9dd41450edf38e20bd988d2be6d0397"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#aa9dd41450edf38e20bd988d2be6d0397">RTT::types::TypeInfoRepository::getTypeById</a></div><div class="ttdeci">TypeInfo * getTypeById(TypeInfo::TypeId type_id) const </div><div class="ttdoc">Return the type info structure of a given type by its type_id. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00104">TypeInfoRepository.cpp:104</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_aa9dd41450edf38e20bd988d2be6d0397"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#aa9dd41450edf38e20bd988d2be6d0397">RTT::types::TypeInfoRepository::getTypeById</a></div><div class="ttdeci">TypeInfo * getTypeById(TypeInfo::TypeId type_id) const </div><div class="ttdoc">Return the type info structure of a given type by its type_id. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00124">TypeInfoRepository.cpp:124</a></div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TypeInfoGenerator_html_ac7678e34c359cb1ab1dfda9500a7dc6c"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoGenerator.html#ac7678e34c359cb1ab1dfda9500a7dc6c">RTT::types::TypeInfoGenerator::getTypeName</a></div><div class="ttdeci">virtual const std::string &amp; getTypeName() const =0</div><div class="ttdoc">Return the type name for which this generator generates type info features. </div></div>
 <div class="ttc" id="classRTT_1_1types_1_1TransportPlugin_html_a3c91b6d936e3f45e5c89d0fb9c3de1b0"><div class="ttname"><a href="classRTT_1_1types_1_1TransportPlugin.html#a3c91b6d936e3f45e5c89d0fb9c3de1b0">RTT::types::TransportPlugin::registerTransport</a></div><div class="ttdeci">virtual bool registerTransport(std::string type_name, TypeInfo *ti)=0</div><div class="ttdoc">Add a transport for the given type to the types::TypeInfo instance. </div></div>
-<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_a866326a0a0436c7aa688fa1c180b7015"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#a866326a0a0436c7aa688fa1c180b7015">RTT::types::TypeInfoRepository::type</a></div><div class="ttdeci">TypeInfo * type(const std::string &amp;name) const </div><div class="ttdoc">Retrieve a type with a given name. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00076">TypeInfoRepository.cpp:76</a></div></div>
+<div class="ttc" id="classRTT_1_1types_1_1TypeInfoRepository_html_a866326a0a0436c7aa688fa1c180b7015"><div class="ttname"><a href="classRTT_1_1types_1_1TypeInfoRepository.html#a866326a0a0436c7aa688fa1c180b7015">RTT::types::TypeInfoRepository::type</a></div><div class="ttdeci">TypeInfo * type(const std::string &amp;name) const </div><div class="ttdoc">Retrieve a type with a given name. </div><div class="ttdef"><b>Definition:</b> <a href="TypeInfoRepository_8cpp_source.html#l00098">TypeInfoRepository.cpp:98</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1MutexLock_html"><div class="ttname"><a href="classRTT_1_1os_1_1MutexLock.html">RTT::os::MutexLock</a></div><div class="ttdoc">MutexLock is a scope based Monitor, protecting critical sections with a Mutex object through locking ...</div><div class="ttdef"><b>Definition:</b> <a href="MutexLock_8hpp_source.html#l00051">MutexLock.hpp:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 5 2016 19:57:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 10 2016 12:28:21 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
