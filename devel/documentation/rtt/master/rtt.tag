@@ -4348,6 +4348,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>setDataSource</name>
+      <anchorfile>classRTT_1_1Property.html</anchorfile>
+      <anchor>ac9d46dd481fd0a8601326510bdf41beb</anchor>
+      <arglist>(const base::DataSourceBase::shared_ptr &amp;dsb)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual std::string</type>
       <name>getType</name>
       <anchorfile>classRTT_1_1Property.html</anchorfile>
@@ -7281,6 +7288,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual PropertyBase &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classRTT_1_1base_1_1PropertyBase.html</anchorfile>
+      <anchor>aaa30f7886589acea5cbc502cabdf93be</anchor>
+      <arglist>(PropertyBase *source)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>identify</name>
       <anchorfile>classRTT_1_1base_1_1PropertyBase.html</anchorfile>
@@ -7342,6 +7356,13 @@
       <anchorfile>classRTT_1_1base_1_1PropertyBase.html</anchorfile>
       <anchor>aef1f9e802faddb20dc36ccb6a737869c</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>setDataSource</name>
+      <anchorfile>classRTT_1_1base_1_1PropertyBase.html</anchorfile>
+      <anchor>ac89156d3850525b9349fffeda7ae2e7c</anchor>
+      <arglist>(const DataSourceBase::shared_ptr &amp;dsb)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual std::string</type>
