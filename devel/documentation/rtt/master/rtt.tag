@@ -8240,10 +8240,10 @@
       <arglist>(in CRemoteChannelElement other)</arglist>
     </member>
     <member kind="function">
-      <type>boolean</type>
+      <type>oneway void</type>
       <name>remoteSignal</name>
       <anchorfile>interfaceRTT_1_1corba_1_1CRemoteChannelElement.html</anchorfile>
-      <anchor>a739739a6a807c5bb6ed99fb8805e865b</anchor>
+      <anchor>abae51a6ff7bd88e24e228973a65d0248</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -8852,10 +8852,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>CORBA::Boolean</type>
+      <type>void</type>
       <name>remoteSignal</name>
       <anchorfile>classRTT_1_1corba_1_1RemoteChannelElement.html</anchorfile>
-      <anchor>aed05cf95b13766524da482e04f994ace</anchor>
+      <anchor>af93cdeca6c332ef221c7e8fd0d3b5efe</anchor>
       <arglist>() ACE_THROW_SPEC((CORBA</arglist>
     </member>
     <member kind="function">
