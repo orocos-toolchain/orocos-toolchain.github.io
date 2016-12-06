@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extending the Real-Time Toolkit with your own Data Types</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document is an introduction to making user defined types (classes) visible within Orocos. You need to read this document when you want to see the value of an object you defined yourself, for example in the TaskBrowser component or in an Orocos script. Other uses are reading and writing objects to and from XML and generally, anything a built-in Orocos type can do, so can yours." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp47164204938496"></a>Extending the Real-Time Toolkit with your own Data Types</h2></div><div><p class="copyright">Copyright © 2006,2007,2009, 2010 Peter Soetens, FMTC, Peter Soetens, The SourceWorks</p></div><div><div class="legalnotice"><a id="idp47164207998128"></a><p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extending the Real-Time Toolkit with your own Data Types</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document is an introduction to making user defined types (classes) visible within Orocos. You need to read this document when you want to see the value of an object you defined yourself, for example in the TaskBrowser component or in an Orocos script. Other uses are reading and writing objects to and from XML and generally, anything a built-in Orocos type can do, so can yours." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp46725180949296"></a>Extending the Real-Time Toolkit with your own Data Types</h2></div><div><p class="copyright">Copyright © 2006,2007,2009, 2010 Peter Soetens, FMTC, Peter Soetens, The SourceWorks</p></div><div><div class="legalnotice"><a id="idp46725185222880"></a><p>
 	Permission is granted to copy, distribute and/or modify this document
 	under the terms of the GNU Free Documentation License, Version 1.1 or
 	any later version published by the Free Software Foundation, with no
@@ -14,13 +14,13 @@
 	in an Orocos script. Other uses are reading and writing
 	objects to and from XML and generally, anything a built-in
 	Orocos type can do, so can yours.
-      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idp47164207753264">1. The Orocos Type System : Typekits</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47164208306608">1.1. Loading Typekits</a></span></dt><dt><span class="section"><a href="#idp47164207991296">1.2. Generating Typekits</a></span></dt></dl></dd><dt><span class="section"><a href="#idp47164208805744">2. Creating a Typekit in C++</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47164209071072">2.1. Telling the RTT about a struct</a></span></dt><dt><span class="section"><a href="#idp47164207982112">2.2. Telling the RTT about a complex data type</a></span></dt><dt><span class="section"><a href="#idp47164209497424">2.3. Struct versus Sequence</a></span></dt><dt><span class="section"><a href="#idp47164207484272">2.4. Displaying and Reading</a></span></dt><dt><span class="section"><a href="#idp47164208465760">2.5. Reading/Writing data from/to XML</a></span></dt><dt><span class="section"><a href="#idp47164209258576">2.6. Network transfer using CORBA</a></span></dt></dl></dd><dt><span class="section"><a href="#idp47164206556000">3. Building your own Typekit</a></span></dt><dd><dl><dt><span class="section"><a href="#overloading-operators">3.1. Loading Operators</a></span></dt><dt><span class="section"><a href="#overloading-constructors">3.2. Loading Constructors</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp47164207753264"></a>1. The Orocos Type System : Typekits</h2></div></div></div><p>
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idp46725183385376">1. The Orocos Type System : Typekits</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46725185338976">1.1. Loading Typekits</a></span></dt><dt><span class="section"><a href="#idp46725183238032">1.2. Generating Typekits</a></span></dt></dl></dd><dt><span class="section"><a href="#idp46725180901056">2. Creating a Typekit in C++</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46725180903136">2.1. Telling the RTT about a struct</a></span></dt><dt><span class="section"><a href="#idp46725180919456">2.2. Telling the RTT about a complex data type</a></span></dt><dt><span class="section"><a href="#idp46725186179152">2.3. Struct versus Sequence</a></span></dt><dt><span class="section"><a href="#idp46725186191568">2.4. Displaying and Reading</a></span></dt><dt><span class="section"><a href="#idp46725186200224">2.5. Reading/Writing data from/to XML</a></span></dt><dt><span class="section"><a href="#idp46725186216672">2.6. Network transfer using CORBA</a></span></dt></dl></dd><dt><span class="section"><a href="#idp46725186221488">3. Building your own Typekit</a></span></dt><dd><dl><dt><span class="section"><a href="#overloading-operators">3.1. Loading Operators</a></span></dt><dt><span class="section"><a href="#overloading-constructors">3.2. Loading Constructors</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp46725183385376"></a>1. The Orocos Type System : Typekits</h2></div></div></div><p>
       Most applications define their own classes or structs to exchange
       data between components. It is easy to tell the RTT about these
       user defined types such that they can be displayed, stored to XML,
       used in the scripting engine and transfered between processes or over a network
       connection.
-    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47164208306608"></a>1.1. Loading Typekits</h3></div></div></div><p>
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46725185338976"></a>1.1. Loading Typekits</h3></div></div></div><p>
 	Orocos uses the 'Typekit' principle to make it aware of user
 	types. The RTT's typekit has built-in support for
 	the C++ types <code class="classname">int</code>,<code class="classname">unsigned
@@ -36,7 +36,7 @@
 	In case you want to load typekits manually, you can use
 	the <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1plugin_1_1PluginLoader.html">PluginLoader</a> class
 	which manages all loading and locating of RTT plugins.
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47164207991296"></a>1.2. Generating Typekits</h3></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46725183238032"></a>1.2. Generating Typekits</h3></div></div></div><p>
 	There are two tools available to generate Typekits for users.
 	The primary one is typegen, which generates typekits from existing C++
 	structs defined in headers. The second is based on ROS, and generates typekits
@@ -62,7 +62,7 @@
 	  beyond what typegen/rosgen offer. In practice, this means
 	  writing a typekit for a complex data type or adding
 	  specialized constructors or operators for scripting.
-	</p></td></tr></table></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47164209985424"></a>1.2.1. Using <span class="command"><strong>typegen</strong></span></h4></div></div></div><p>
+	</p></td></tr></table></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46725180889024"></a>1.2.1. Using <span class="command"><strong>typegen</strong></span></h4></div></div></div><p>
 	  Typegen requires that you have built the Orocos Toolchain with <span class="command"><strong>autoproj</strong></span>
 	  and that you have 'sourced' the <code class="filename">env.sh</code> file in your shell. You
 	  can use typegen as such:
@@ -84,15 +84,15 @@
 	  After make install finishes, you will see that your data types show up in the 
 	  deployer and taskbrowser applications, provided that the RTT_COMPONENT_PATH
 	  variable contains the '/opt/orocos/lib/orocos' directory (= CMAKE_PREFIX_PATH + lib/orocos ).
-	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47164209447504"></a>1.2.2. Using <span class="command"><strong>rosgen</strong></span></h4></div></div></div><p>Under development. Consult the mailinglist or the wiki pages for this tool.
-	<a class="ulink" href="http://www.ros.org/news/2010/09/first-development-release-of-orocos-toolchain-ros-v010.html" target="_top">Announcement</a>.</p></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp47164208805744"></a>2. Creating a Typekit in C++</h2></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46725180898288"></a>1.2.2. Using <span class="command"><strong>rosgen</strong></span></h4></div></div></div><p>Under development. Consult the mailinglist or the wiki pages for this tool.
+	<a class="ulink" href="http://www.ros.org/news/2010/09/first-development-release-of-orocos-toolchain-ros-v010.html" target="_top">Announcement</a>.</p></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp46725180901056"></a>2. Creating a Typekit in C++</h2></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
 	  Only continue here if you are sure you can not use typegen/rosgen !
 	</p></td></tr></table></div><p>
       In case you don't use any of the typekit generators, you need to
       write a typekit yourself. This has been simplified in RTT
       2.x, but the hardest part remains providing network transport
       for data types.
-    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47164209071072"></a>2.1. Telling the RTT about a struct</h3></div></div></div><p>
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46725180903136"></a>2.1. Telling the RTT about a struct</h3></div></div></div><p>
 	Say that you have an application which transfers data
 	in a struct <code class="classname">ControlData</code> :
 	</p><pre class="programlisting">  /** Note: you may also use 'class' instead of 'struct': */
@@ -172,7 +172,7 @@
 				serialize() function and register the type with the StructTypeInfo
 				class. In case one of the fields is an array or sequence type, 
 				another approach is taken, as explained below.
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47164207982112"></a>2.2. Telling the RTT about a complex data type</h3></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46725180919456"></a>2.2. Telling the RTT about a complex data type</h3></div></div></div><p>
 				It is not recommended to use complex data types for communicating
 				between components. Especially if your data contains pointers to
 				other data, it is possible that it can't be sent between components.
@@ -217,7 +217,7 @@
 
   // Tell the RTT the name and type of this class:
   RTT::types::Types()-&gt;addType( new ControlClassTypeInfo() );</pre><p>
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47164209497424"></a>2.3. Struct versus Sequence</h3></div></div></div><p> The ControlData struct is clearly a 'struct' in the C/C++
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46725186179152"></a>2.3. Struct versus Sequence</h3></div></div></div><p> The ControlData struct is clearly a 'struct' in the C/C++
 			sense. But sometimes, you have datatypes that behave more like
 			sequences. For example, a std::vector&lt;ControlData&gt; or a
 			ControlData[100] field in another struct. In that case, we register
@@ -299,7 +299,7 @@
   // Tell the RTT the name and type of a struct:
   RTT::types::Types()-&gt;addType( new <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1StructTypeInfo.html">StructTypeInfo</a>&lt;ControlDataSet&gt;("ControlDataSet") );
 	</pre><p>
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47164207484272"></a>2.4. Displaying and Reading</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46725186191568"></a>2.4. Displaying and Reading</h3></div></div></div><p>
 				There is no default implementation for reading or writing
 				your data to a stream. You need to implement this yourself.
 				This is optional for most types, since most code will use
@@ -345,7 +345,7 @@
 	  to exchange data in a text-based form. However, in order to
 	  'construct' your type in a script or at the TaskBrowser prompt,
 	  you need to add a constructor as shown in <a class="xref" href="#overloading-constructors" title="3.2. Loading Constructors">Section 3.2, “Loading Constructors”</a>. 
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47164208465760"></a>2.5. Reading/Writing data from/to XML</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46725186200224"></a>2.5. Reading/Writing data from/to XML</h3></div></div></div><p>
 	  Every data type that has been defined using the StructTypeInfo
 	  and a proper serialization function, can be written to XML.
 	  The ControlStruct data type will be encoded like this:
@@ -370,7 +370,7 @@
 				<code class="function">decomposeType()</code> functions of 
 				the <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a> class, which is explained
 				in the next two sections.
-			</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47164208465504"></a>2.5.1. Changing how your data is written to XML</h4></div></div></div><p>
+			</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46725186205104"></a>2.5.1. Changing how your data is written to XML</h4></div></div></div><p>
 					In case the default XML format is not good for you, or you inherited from
 					TemplateTypeInfo, you need to inform Orocos of the structure of your data type.
 					It must be given a 'decompose' function: Of which primitive types
@@ -419,7 +419,7 @@
        &lt;value&gt;3123&lt;/value&gt;
     &lt;/simple&gt;
   &lt;/struct&gt;
-	</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp47164207650624"></a>2.5.2. Changing how data is read from XML</h4></div></div></div><p>
+	</pre></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idp46725186211040"></a>2.5.2. Changing how data is read from XML</h4></div></div></div><p>
 					When you modified the default writing to XML, you probably need
 					to modify the default reading as well.
 					This step is called 'composition', and means: put all the 
@@ -457,7 +457,7 @@
 					First the type is checked and then the properties are located in the bag, it should look
 					just like we stored them. If not, return false, otherwise, read the values and store them
 					in the out variable.
-				</p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47164209258576"></a>2.6. Network transfer using CORBA</h3></div></div></div><p>
+				</p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46725186216672"></a>2.6. Network transfer using CORBA</h3></div></div></div><p>
 	  In order to transfer your data between components using the
 	  CORBA network transport, the RTT requires that you provide the conversion
 	  from your type to a CORBA::Any type and back. This procedure is
@@ -473,7 +473,7 @@
 	  enabled in your build configuration.
 	</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
 	    This procedure is discussed in detail <a class="ulink" href="http://www.orocos.org/wiki/rtt/simple-examples/developing-plugins-and-toolkits/part-3-transport-plugin" target="_top">on the Orocos wiki</a>.
-	  </p></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp47164206556000"></a>3. Building your own Typekit</h2></div></div></div><p>
+	  </p></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp46725186221488"></a>3. Building your own Typekit</h2></div></div></div><p>
 	The number of types may grow in your application to such
 	a number or diversity that it may be convenient to 
 	build your own typekit and make it a plugin.
