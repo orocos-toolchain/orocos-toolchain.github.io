@@ -136,7 +136,7 @@
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// even if we&#39;re not written, test the connection with a default sample.</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">return</span> ( channel_el_input-&gt;<a class="code" href="classRTT_1_1base_1_1ChannelElement.html#a5b593435adb20eb2ce3b0d3a02d63519">data_sample</a>( T() ) != NotConnected );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">return</span> ( channel_el_input-&gt;<a class="code" href="classRTT_1_1base_1_1ChannelElement.html#a5b593435adb20eb2ce3b0d3a02d63519">data_sample</a>( T(), <span class="comment">/* reset = */</span> <span class="keyword">false</span> ) != NotConnected );</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">bool</span> has_last_written_value;</div>
@@ -373,7 +373,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 11 2016 13:37:49 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 16 2016 19:25:28 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

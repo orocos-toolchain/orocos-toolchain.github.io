@@ -234,81 +234,78 @@
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
 <div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1SlaveActivity.html#aeba655229e066f09e2dd9bb32652ebc5">  179</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1SlaveActivity.html#aeba655229e066f09e2dd9bb32652ebc5">SlaveActivity::isPeriodic</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span> (mmaster)</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">return</span> mmaster-&gt;<a class="code" href="classRTT_1_1base_1_1ActivityInterface.html#a9fe788cc8d6d10f3e1a4d16b111a8b18">isPeriodic</a>();</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">return</span> mperiod != 0.0;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
-<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1SlaveActivity.html#a7b2a4d011bc38ad3043c9146a2a53a70">  185</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1SlaveActivity.html#a7b2a4d011bc38ad3043c9146a2a53a70">SlaveActivity::isActive</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">return</span> active;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1SlaveActivity.html#a2576f14538c68a2db82f97be75fe5c32">  190</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1SlaveActivity.html#a2576f14538c68a2db82f97be75fe5c32">SlaveActivity::trigger</a>()</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">if</span> (mmaster)</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">return</span> mmaster-&gt;<a class="code" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">trigger</a>();</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1SlaveActivity.html#a26d888f3664f8ebf2a882141a05b817e">  197</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1SlaveActivity.html#a26d888f3664f8ebf2a882141a05b817e">SlaveActivity::timeout</a>()</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">if</span> (mmaster)</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">return</span> mmaster-&gt;<a class="code" href="classRTT_1_1base_1_1ActivityInterface.html#a99f8cbfa2c5022c575e4b5e404cb02c8">timeout</a>();</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1SlaveActivity.html#ac2d6c1c9a666582c206eea80811881fe">  204</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1SlaveActivity.html#ac2d6c1c9a666582c206eea80811881fe">SlaveActivity::execute</a>()</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="comment">// non periodic case.</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span> ( !<a class="code" href="classRTT_1_1extras_1_1SlaveActivity.html#aeba655229e066f09e2dd9bb32652ebc5">isPeriodic</a>() ) {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">if</span> ( !active || running )</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            running = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="comment">// Since we&#39;re in execute(), this is semantically forcing a TimeOut towards the runner.</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordflow">if</span> (runner) {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2">loop</a>();</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803">work</a>(RunnableInterface::TimeOut);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                this-&gt;loop();</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                this-&gt;work(RunnableInterface::TimeOut);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            running = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="comment">// executing a slave is semantical identical to a timeout happening:</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">if</span> ( running ) {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">if</span> (runner) {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">step</a>();</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803">work</a>(RunnableInterface::TimeOut);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                this-&gt;step();</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                this-&gt;work(RunnableInterface::TimeOut);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">return</span> running;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">return</span> mperiod != 0.0;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1SlaveActivity.html#a7b2a4d011bc38ad3043c9146a2a53a70">  183</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1SlaveActivity.html#a7b2a4d011bc38ad3043c9146a2a53a70">SlaveActivity::isActive</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">return</span> active;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1SlaveActivity.html#a2576f14538c68a2db82f97be75fe5c32">  188</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1SlaveActivity.html#a2576f14538c68a2db82f97be75fe5c32">SlaveActivity::trigger</a>()</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">if</span> (mmaster)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">return</span> mmaster-&gt;<a class="code" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">trigger</a>();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1SlaveActivity.html#a26d888f3664f8ebf2a882141a05b817e">  195</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1SlaveActivity.html#a26d888f3664f8ebf2a882141a05b817e">SlaveActivity::timeout</a>()</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">if</span> (mmaster)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">return</span> mmaster-&gt;<a class="code" href="classRTT_1_1base_1_1ActivityInterface.html#a99f8cbfa2c5022c575e4b5e404cb02c8">timeout</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classRTT_1_1extras_1_1SlaveActivity.html#ac2d6c1c9a666582c206eea80811881fe">  202</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1extras_1_1SlaveActivity.html#ac2d6c1c9a666582c206eea80811881fe">SlaveActivity::execute</a>()</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="comment">// non periodic case.</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">if</span> ( mperiod == 0.0 ) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordflow">if</span> ( !active || running )</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            running = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="comment">// Since we&#39;re in execute(), this is semantically forcing a TimeOut towards the runner.</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">if</span> (runner) {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2">loop</a>();</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803">work</a>(RunnableInterface::TimeOut);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                this-&gt;loop();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                this-&gt;work(RunnableInterface::TimeOut);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            running = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="comment">// executing a slave is semantical identical to a timeout happening:</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">if</span> ( running ) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordflow">if</span> (runner) {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">step</a>();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                runner-&gt;<a class="code" href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803">work</a>(RunnableInterface::TimeOut);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                this-&gt;step();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                this-&gt;work(RunnableInterface::TimeOut);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">return</span> running;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
 <div class="ttc" id="namespaceRTT_html_ab93965f88bfbe72fbc2ece16c047c902"><div class="ttname"><a href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">RTT::Seconds</a></div><div class="ttdeci">double Seconds</div><div class="ttdoc">Seconds are stored as a double precision float. </div><div class="ttdef"><b>Definition:</b> <a href="os_2Time_8hpp_source.html#l00053">Time.hpp:53</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1ActivityInterface_html_acc594ecea241aee2390664e2e4a70a32"><div class="ttname"><a href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">RTT::base::ActivityInterface::trigger</a></div><div class="ttdeci">virtual bool trigger()=0</div><div class="ttdoc">Trigger that work has to be done. </div></div>
-<div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_a26d888f3664f8ebf2a882141a05b817e"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#a26d888f3664f8ebf2a882141a05b817e">RTT::extras::SlaveActivity::timeout</a></div><div class="ttdeci">bool timeout()</div><div class="ttdoc">Requests this Activity to wakeup and call step() + work(Timeout). </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00197">SlaveActivity.cpp:197</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_a26d888f3664f8ebf2a882141a05b817e"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#a26d888f3664f8ebf2a882141a05b817e">RTT::extras::SlaveActivity::timeout</a></div><div class="ttdeci">bool timeout()</div><div class="ttdoc">Requests this Activity to wakeup and call step() + work(Timeout). </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00195">SlaveActivity.cpp:195</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1MainThread_html_aea2ffbfc1774c1704a4b467037eec45f"><div class="ttname"><a href="classRTT_1_1os_1_1MainThread.html#aea2ffbfc1774c1704a4b467037eec45f">RTT::os::MainThread::Instance</a></div><div class="ttdeci">static ThreadInterface * Instance()</div><div class="ttdoc">Return an object which represents the main thread. </div><div class="ttdef"><b>Definition:</b> <a href="MainThread_8cpp_source.html#l00058">MainThread.cpp:58</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1RunnableInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1RunnableInterface.html">RTT::base::RunnableInterface</a></div><div class="ttdoc">A class for running a certain piece of code in a thread. </div><div class="ttdef"><b>Definition:</b> <a href="RunnableInterface_8hpp_source.html#l00069">RunnableInterface.hpp:69</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1ActivityInterface_html_a99f8cbfa2c5022c575e4b5e404cb02c8"><div class="ttname"><a href="classRTT_1_1base_1_1ActivityInterface.html#a99f8cbfa2c5022c575e4b5e404cb02c8">RTT::base::ActivityInterface::timeout</a></div><div class="ttdeci">virtual bool timeout()=0</div><div class="ttdoc">Requests this Activity to wakeup and call step() + work(Timeout). </div></div>
 <div class="ttc" id="classRTT_1_1base_1_1ActivityInterface_html_a5b728aaf49da0fefabdf099f2c42ff7a"><div class="ttname"><a href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface::isActive</a></div><div class="ttdeci">virtual bool isActive() const =0</div><div class="ttdoc">Query if the activity is started. </div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_a7154a1421f3f06add5c95966c1d7cfde"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#a7154a1421f3f06add5c95966c1d7cfde">RTT::extras::SlaveActivity::~SlaveActivity</a></div><div class="ttdeci">~SlaveActivity()</div><div class="ttdoc">Cleanup and notify the base::RunnableInterface that we are gone. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00061">SlaveActivity.cpp:61</a></div></div>
-<div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_ac2d6c1c9a666582c206eea80811881fe"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#ac2d6c1c9a666582c206eea80811881fe">RTT::extras::SlaveActivity::execute</a></div><div class="ttdeci">bool execute()</div><div class="ttdoc">Execute this activity such that it executes a step or loop of the RunnableInterface. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00204">SlaveActivity.cpp:204</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_ac2d6c1c9a666582c206eea80811881fe"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#ac2d6c1c9a666582c206eea80811881fe">RTT::extras::SlaveActivity::execute</a></div><div class="ttdeci">bool execute()</div><div class="ttdoc">Execute this activity such that it executes a step or loop of the RunnableInterface. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00202">SlaveActivity.cpp:202</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1RunnableInterface_html_abec8b9e213e32c21b57266211703dc45"><div class="ttname"><a href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">RTT::base::RunnableInterface::step</a></div><div class="ttdeci">virtual void step()=0</div><div class="ttdoc">The method that will be (periodically) executed when this object is run in an Activity. </div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_afbd99244fcb03b565583d0b6a7e4ba71"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#afbd99244fcb03b565583d0b6a7e4ba71">RTT::extras::SlaveActivity::isRunning</a></div><div class="ttdeci">bool isRunning() const </div><div class="ttdoc">Query if the activity is initialized and executing. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00174">SlaveActivity.cpp:174</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1ActivityInterface_html_aeabaef68a4faab68d398fa2deaf9ad04"><div class="ttname"><a href="classRTT_1_1base_1_1ActivityInterface.html#aeabaef68a4faab68d398fa2deaf9ad04">RTT::base::ActivityInterface::getCpuAffinity</a></div><div class="ttdeci">virtual unsigned getCpuAffinity() const =0</div><div class="ttdoc">Get the cpu affinity of this activity. </div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_aeba655229e066f09e2dd9bb32652ebc5"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#aeba655229e066f09e2dd9bb32652ebc5">RTT::extras::SlaveActivity::isPeriodic</a></div><div class="ttdeci">bool isPeriodic() const </div><div class="ttdoc">Inspect if this activity is periodic. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00179">SlaveActivity.cpp:179</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1ThreadInterface_html"><div class="ttname"><a href="classRTT_1_1os_1_1ThreadInterface.html">RTT::os::ThreadInterface</a></div><div class="ttdoc">A thread which is being run. </div><div class="ttdef"><b>Definition:</b> <a href="ThreadInterface_8hpp_source.html#l00056">ThreadInterface.hpp:56</a></div></div>
-<div class="ttc" id="classRTT_1_1base_1_1ActivityInterface_html_a9fe788cc8d6d10f3e1a4d16b111a8b18"><div class="ttname"><a href="classRTT_1_1base_1_1ActivityInterface.html#a9fe788cc8d6d10f3e1a4d16b111a8b18">RTT::base::ActivityInterface::isPeriodic</a></div><div class="ttdeci">virtual bool isPeriodic() const =0</div><div class="ttdoc">Inspect if this activity is periodic. </div></div>
-<div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_a2576f14538c68a2db82f97be75fe5c32"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#a2576f14538c68a2db82f97be75fe5c32">RTT::extras::SlaveActivity::trigger</a></div><div class="ttdeci">bool trigger()</div><div class="ttdoc">Trigger that work has to be done. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00190">SlaveActivity.cpp:190</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_a2576f14538c68a2db82f97be75fe5c32"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#a2576f14538c68a2db82f97be75fe5c32">RTT::extras::SlaveActivity::trigger</a></div><div class="ttdeci">bool trigger()</div><div class="ttdoc">Trigger that work has to be done. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00188">SlaveActivity.cpp:188</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1ActivityInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1ActivityInterface.html">RTT::base::ActivityInterface</a></div><div class="ttdoc">Interface to start/stop and query a Activity. </div><div class="ttdef"><b>Definition:</b> <a href="ActivityInterface_8hpp_source.html#l00062">ActivityInterface.hpp:62</a></div></div>
-<div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_a7b2a4d011bc38ad3043c9146a2a53a70"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#a7b2a4d011bc38ad3043c9146a2a53a70">RTT::extras::SlaveActivity::isActive</a></div><div class="ttdeci">bool isActive() const </div><div class="ttdoc">Query if the activity is started. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00185">SlaveActivity.cpp:185</a></div></div>
+<div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_a7b2a4d011bc38ad3043c9146a2a53a70"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#a7b2a4d011bc38ad3043c9146a2a53a70">RTT::extras::SlaveActivity::isActive</a></div><div class="ttdeci">bool isActive() const </div><div class="ttdoc">Query if the activity is started. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00183">SlaveActivity.cpp:183</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_ab883c67a72e9b487a4f5e73d7a8cc4a3"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#ab883c67a72e9b487a4f5e73d7a8cc4a3">RTT::extras::SlaveActivity::start</a></div><div class="ttdeci">bool start()</div><div class="ttdoc">Start this slave. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00130">SlaveActivity.cpp:130</a></div></div>
 <div class="ttc" id="classRTT_1_1extras_1_1SlaveActivity_html_ad496a440891a9d5978223bee6ac104cb"><div class="ttname"><a href="classRTT_1_1extras_1_1SlaveActivity.html#ad496a440891a9d5978223bee6ac104cb">RTT::extras::SlaveActivity::getPeriod</a></div><div class="ttdeci">Seconds getPeriod() const </div><div class="ttdoc">Get the periodicity of this activity in Seconds. </div><div class="ttdef"><b>Definition:</b> <a href="SlaveActivity_8cpp_source.html#l00066">SlaveActivity.cpp:66</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1ActivityInterface_html_a7c98bdeaa51f490d6f61e7aea7ada91a"><div class="ttname"><a href="classRTT_1_1base_1_1ActivityInterface.html#a7c98bdeaa51f490d6f61e7aea7ada91a">RTT::base::ActivityInterface::getPeriod</a></div><div class="ttdeci">virtual Seconds getPeriod() const =0</div><div class="ttdoc">Get the periodicity of this activity in Seconds. </div></div>
@@ -328,7 +325,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 11 2016 13:37:48 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 16 2016 19:25:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

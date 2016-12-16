@@ -134,7 +134,7 @@
 <div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classRTT_1_1internal_1_1ChannelDataElement.html#afee95171766cf507c8bdcce6894be8c7">   89</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="namespaceRTT.html#a69b4aafe4f409edc68481d7429efe198">WriteStatus</a> <a class="code" href="classRTT_1_1internal_1_1ChannelDataElement.html#afee95171766cf507c8bdcce6894be8c7">data_sample</a>(param_t sample, <span class="keywordtype">bool</span> reset = <span class="keyword">true</span>)</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">if</span> (!data-&gt;data_sample(sample, reset)) <span class="keywordflow">return</span> WriteFailure;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement&lt;T&gt;::data_sample</a>(sample);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement&lt;T&gt;::data_sample</a>(sample, reset);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">virtual</span> T data_sample()</div>
@@ -167,7 +167,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 11 2016 13:37:48 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 16 2016 19:25:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
