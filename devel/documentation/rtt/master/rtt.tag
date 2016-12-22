@@ -5321,13 +5321,6 @@
       <arglist>(const std::string &amp;service_name)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
-      <name>loadPlugin</name>
-      <anchorfile>classRTT_1_1TaskContext.html</anchorfile>
-      <anchor>ae775d497a2c66831079c104a9414d5bf</anchor>
-      <arglist>(const std::string &amp;pluginPath)</arglist>
-    </member>
-    <member kind="function">
       <type>Operation&lt; Signature &gt; &amp;</type>
       <name>addOperation</name>
       <anchorfile>classRTT_1_1TaskContext.html</anchorfile>
