@@ -125,7 +125,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aae25cf76bb2427bf974033fd316cff1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the property's value.  <a href="#aae25cf76bb2427bf974033fd316cff1b">More...</a><br/></td></tr>
 <tr class="separator:aae25cf76bb2427bf974033fd316cff1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7701e80218e8e2f7be2ea2c2cc77a788"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Property.html">Property</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Property.html#a7701e80218e8e2f7be2ea2c2cc77a788">operator=</a> (<a class="el" href="classRTT_1_1base_1_1PropertyBase.html">base::PropertyBase</a> *source)</td></tr>
-<tr class="memdesc:a7701e80218e8e2f7be2ea2c2cc77a788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a> which mirrors a PropertyBase.  <a href="#a7701e80218e8e2f7be2ea2c2cc77a788">More...</a><br/></td></tr>
+<tr class="memdesc:a7701e80218e8e2f7be2ea2c2cc77a788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirror another PropertyBase (name, description and value).  <a href="#a7701e80218e8e2f7be2ea2c2cc77a788">More...</a><br/></td></tr>
 <tr class="separator:a7701e80218e8e2f7be2ea2c2cc77a788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2360909a3d556c4a1fc56a952b94930"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2360909a3d556c4a1fc56a952b94930"></a>
 <a class="el" href="classRTT_1_1Property.html">Property</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Property.html#ac2360909a3d556c4a1fc56a952b94930">operator&lt;&lt;=</a> (<a class="el" href="classRTT_1_1Property.html">Property</a>&lt; T &gt; &amp;p)</td></tr>
@@ -192,12 +192,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a5f93c1620a25210fdcff5174f66ea2ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f93c1620a25210fdcff5174f66ea2ed"></a>
 virtual <br class="typebreak"/>
 <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Property.html#a5f93c1620a25210fdcff5174f66ea2ed">getDataSource</a> () const </td></tr>
-<tr class="memdesc:a5f93c1620a25210fdcff5174f66ea2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a> through which this PropertyBase can be manipulated. <br/></td></tr>
+<tr class="memdesc:a5f93c1620a25210fdcff5174f66ea2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an assignable base::DataSource through which this PropertyBase can be manipulated. <br/></td></tr>
 <tr class="separator:a5f93c1620a25210fdcff5174f66ea2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a156d08724042bdfa4b0c2a1d682c22a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a156d08724042bdfa4b0c2a1d682c22a3"></a>
 <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html">internal::AssignableDataSource</a><br class="typebreak"/>
 &lt; DataSourceType &gt;::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getAssignableDataSource</b> () const </td></tr>
 <tr class="separator:a156d08724042bdfa4b0c2a1d682c22a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d46dd481fd0a8601326510bdf41beb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Property.html#ac9d46dd481fd0a8601326510bdf41beb">setDataSource</a> (const <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &amp;dsb)</td></tr>
+<tr class="memdesc:ac9d46dd481fd0a8601326510bdf41beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign an external assignable base::DataSource to this property.  <a href="#ac9d46dd481fd0a8601326510bdf41beb">More...</a><br/></td></tr>
+<tr class="separator:ac9d46dd481fd0a8601326510bdf41beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af25c6bd6155317133d462299bbb61469"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Property.html#af25c6bd6155317133d462299bbb61469">getType</a> () const </td></tr>
 <tr class="memdesc:af25c6bd6155317133d462299bbb61469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of this PropertyBase.  <a href="#af25c6bd6155317133d462299bbb61469">More...</a><br/></td></tr>
 <tr class="separator:af25c6bd6155317133d462299bbb61469"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -549,7 +552,7 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section post"><dt>Postcondition</dt><dd><a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a500eb2a6a1a08b08f89656b2d5d23a78" title="Inspect if this Property is correctly initialised and ready for usage. ">ready()</a> will be true if datasource is a valid pointer. </dd></dl>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00164">164</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00167">167</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 </div>
 </div>
@@ -582,7 +585,7 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a8f3cb6b6602386fc302763b4c0048aeb">RTT::base::PropertyBase</a>.</p>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00368">368</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00371">371</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 </div>
 </div>
@@ -648,7 +651,7 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a097b07f527ba96b1f7750047863f1709">RTT::base::PropertyBase</a>.</p>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00320">320</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00323">323</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 </div>
 </div>
@@ -680,9 +683,9 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a604d03c39e744f000bdd13ed6b788bd6">RTT::base::PropertyBase</a>.</p>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00373">373</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00376">376</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00320">RTT::Property&lt; bool &gt;::copy()</a>.</p>
+<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00323">RTT::Property&lt; bool &gt;::copy()</a>.</p>
 
 </div>
 </div>
@@ -714,7 +717,7 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a054e3f8426b960d71341edc119c4905c">RTT::base::PropertyBase</a>.</p>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00378">378</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00381">381</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 </div>
 </div>
@@ -751,7 +754,7 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A reference to this object. </dd></dl>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00225">225</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00228">228</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 </div>
 </div>
@@ -781,7 +784,7 @@ template&lt;typename T&gt; </div>
 <p>Get a copy of the value of the property. </p>
 <dl class="section return"><dt>Returns</dt><dd>The value of the property. </dd></dl>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00243">243</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00246">246</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="MultiVectorComposition_8hpp_source.html#l00107">RTT::extras::composeProperty()</a>, <a class="el" href="MultiVectorComposition_8hpp_source.html#l00056">RTT::extras::decomposeProperty()</a>, <a class="el" href="ConditionBoolProperty_8cpp_source.html#l00041">RTT::scripting::ConditionBoolProperty::evaluate()</a>, and <a class="el" href="PropertyBagIntrospector_8cpp_source.html#l00083">RTT::marsh::PropertyBagIntrospector::introspect()</a>.</p>
 
@@ -811,9 +814,9 @@ template&lt;typename T&gt; </div>
 <p>Get a description of the property. </p>
 <dl class="section return"><dt>Returns</dt><dd>description of the property. </dd></dl>
 
-<p>Definition at line <a class="el" href="PropertyBase_8hpp_source.html#l00094">94</a> of file <a class="el" href="PropertyBase_8hpp_source.html">PropertyBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="PropertyBase_8hpp_source.html#l00100">100</a> of file <a class="el" href="PropertyBase_8hpp_source.html">PropertyBase.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="PropertyComposition_8cpp_source.html#l00010">RTT::types::composePropertyBag()</a>, <a class="el" href="Property_8hpp_source.html#l00332">RTT::Property&lt; bool &gt;::copy()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00060">RTT::types::decomposePropertyBag()</a>, <a class="el" href="PropertyBagIntrospector_8cpp_source.html#l00083">RTT::marsh::PropertyBagIntrospector::introspect()</a>, <a class="el" href="PropertyBagVisitor_8cpp_source.html#l00049">RTT::base::PropertyBagVisitor::introspectAndDecompose()</a>, <a class="el" href="Property_8hpp_source.html#l00188">RTT::Property&lt; bool &gt;::operator=()</a>, <a class="el" href="Property_8hpp_source.html#l00346">RTT::Property&lt; bool &gt;::update()</a>, and <a class="el" href="PropertyBag_8cpp_source.html#l00557">RTT::updateProperties()</a>.</p>
+<p>Referenced by <a class="el" href="PropertyComposition_8cpp_source.html#l00010">RTT::types::composePropertyBag()</a>, <a class="el" href="Property_8hpp_source.html#l00335">RTT::Property&lt; bool &gt;::copy()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00060">RTT::types::decomposePropertyBag()</a>, <a class="el" href="PropertyBagIntrospector_8cpp_source.html#l00083">RTT::marsh::PropertyBagIntrospector::introspect()</a>, <a class="el" href="PropertyBagVisitor_8cpp_source.html#l00049">RTT::base::PropertyBagVisitor::introspectAndDecompose()</a>, <a class="el" href="Property_8hpp_source.html#l00191">RTT::Property&lt; bool &gt;::operator=()</a>, <a class="el" href="Property_8hpp_source.html#l00349">RTT::Property&lt; bool &gt;::update()</a>, and <a class="el" href="PropertyBag_8cpp_source.html#l00557">RTT::updateProperties()</a>.</p>
 
 </div>
 </div>
@@ -841,9 +844,9 @@ template&lt;typename T&gt; </div>
 <p>Get the name of the property. </p>
 <dl class="section return"><dt>Returns</dt><dd>name of the property. </dd></dl>
 
-<p>Definition at line <a class="el" href="PropertyBase_8hpp_source.html#l00082">82</a> of file <a class="el" href="PropertyBase_8hpp_source.html">PropertyBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="PropertyBase_8hpp_source.html#l00088">88</a> of file <a class="el" href="PropertyBase_8hpp_source.html">PropertyBase.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConfigurationInterface_8cpp_source.html#l00090">RTT::ConfigurationInterface::addProperty()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00010">RTT::types::composePropertyBag()</a>, <a class="el" href="Property_8hpp_source.html#l00332">RTT::Property&lt; bool &gt;::copy()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00060">RTT::types::decomposePropertyBag()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00770">RTT::flattenPropertyBag()</a>, <a class="el" href="PropertyBagIntrospector_8cpp_source.html#l00083">RTT::marsh::PropertyBagIntrospector::introspect()</a>, <a class="el" href="PropertyBagVisitor_8cpp_source.html#l00049">RTT::base::PropertyBagVisitor::introspectAndDecompose()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00291">RTT::operator&lt;&lt;()</a>, <a class="el" href="Property_8hpp_source.html#l00188">RTT::Property&lt; bool &gt;::operator=()</a>, <a class="el" href="Property_8hpp_source.html#l00142">RTT::Property&lt; bool &gt;::Property()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00490">RTT::refreshProperties()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00527">RTT::refreshProperty()</a>, <a class="el" href="ConfigurationInterface_8cpp_source.html#l00129">RTT::ConfigurationInterface::removeProperty()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00557">RTT::updateProperties()</a>, and <a class="el" href="PropertyBag_8cpp_source.html#l00626">RTT::updateProperty()</a>.</p>
+<p>Referenced by <a class="el" href="ConfigurationInterface_8cpp_source.html#l00090">RTT::ConfigurationInterface::addProperty()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00010">RTT::types::composePropertyBag()</a>, <a class="el" href="Property_8hpp_source.html#l00335">RTT::Property&lt; bool &gt;::copy()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00060">RTT::types::decomposePropertyBag()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00770">RTT::flattenPropertyBag()</a>, <a class="el" href="PropertyBagIntrospector_8cpp_source.html#l00083">RTT::marsh::PropertyBagIntrospector::introspect()</a>, <a class="el" href="PropertyBagVisitor_8cpp_source.html#l00049">RTT::base::PropertyBagVisitor::introspectAndDecompose()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00291">RTT::operator&lt;&lt;()</a>, <a class="el" href="Property_8hpp_source.html#l00191">RTT::Property&lt; bool &gt;::operator=()</a>, <a class="el" href="Property_8hpp_source.html#l00142">RTT::Property&lt; bool &gt;::Property()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00490">RTT::refreshProperties()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00527">RTT::refreshProperty()</a>, <a class="el" href="ConfigurationInterface_8cpp_source.html#l00129">RTT::ConfigurationInterface::removeProperty()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00557">RTT::updateProperties()</a>, and <a class="el" href="PropertyBag_8cpp_source.html#l00626">RTT::updateProperty()</a>.</p>
 
 </div>
 </div>
@@ -875,7 +878,7 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a1c8554af80cc98c0d4f5ca4c9a2cefeb">RTT::base::PropertyBase</a>.</p>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00391">391</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00410">410</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="Property_8hpp_source.html#l00142">RTT::Property&lt; bool &gt;::Property()</a>.</p>
 
@@ -945,7 +948,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a336398b607ff315d4040277dc9cf880a">RTT::base::PropertyBase</a>.</p>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00436">436</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00455">455</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 <p>References <a class="el" href="Property_8cpp_source.html#l00058">RTT::base::PropertyIntrospection::introspect()</a>.</p>
 
@@ -980,7 +983,7 @@ template&lt;class T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a04bb4dd823c0cd1a8a274b0c3ffa37f9">RTT::base::PropertyBase</a>.</p>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00442">442</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00461">461</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 <p>References <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a336398b607ff315d4040277dc9cf880a">RTT::base::PropertyBase::identify()</a>.</p>
 
@@ -1052,7 +1055,7 @@ template&lt;class T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Null if prop is not convertible to type Property&lt;T&gt;, a <b>new</b> Property&lt;T&gt; instance otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00425">425</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00444">444</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 </div>
 </div>
@@ -1082,7 +1085,7 @@ template&lt;typename T&gt; </div>
 <p>Get a copy of the value of the property. </p>
 <dl class="section return"><dt>Returns</dt><dd>A copy of the value of the property. </dd></dl>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00234">234</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00237">237</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 </div>
 </div>
@@ -1119,7 +1122,7 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A reference to newly set property value. </dd></dl>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00178">178</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00181">181</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 </div>
 </div>
@@ -1142,12 +1145,12 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a> which mirrors a PropertyBase. </p>
+<p>Mirror another PropertyBase (name, description and value). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">source</td><td>A pointer to the property to mirror. </td></tr>
@@ -1155,7 +1158,9 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00188">188</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#aaa30f7886589acea5cbc502cabdf93be">RTT::base::PropertyBase</a>.</p>
+
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00191">191</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 </div>
 </div>
@@ -1183,9 +1188,9 @@ template&lt;typename T&gt; </div>
 <p>Inspect if this <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a> is correctly initialised and ready for usage. </p>
 <p>A <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a> may only be used when <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a500eb2a6a1a08b08f89656b2d5d23a78" title="Inspect if this Property is correctly initialised and ready for usage. ">ready()</a> returns true, otherwise, an exception is thrown. </p>
 
-<p>Definition at line <a class="el" href="PropertyBase_8hpp_source.html#l00108">108</a> of file <a class="el" href="PropertyBase_8hpp_source.html">PropertyBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="PropertyBase_8hpp_source.html#l00114">114</a> of file <a class="el" href="PropertyBase_8hpp_source.html">PropertyBase.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="PropertyBag_8cpp_source.html#l00105">RTT::PropertyBag::addProperty()</a>, <a class="el" href="ConfigurationInterface_8hpp_source.html#l00184">RTT::ConfigurationInterface::addProperty()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00010">RTT::types::composePropertyBag()</a>, <a class="el" href="Property_8hpp_source.html#l00332">RTT::Property&lt; bool &gt;::copy()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00060">RTT::types::decomposePropertyBag()</a>, <a class="el" href="PropertyBag_8hpp_source.html#l00295">RTT::PropertyBag::findValue()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00083">RTT::PropertyBag::ownProperty()</a>, <a class="el" href="Property_8hpp_source.html#l00360">RTT::Property&lt; bool &gt;::refresh()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00416">RTT::removeProperty()</a>, and <a class="el" href="Property_8hpp_source.html#l00346">RTT::Property&lt; bool &gt;::update()</a>.</p>
+<p>Referenced by <a class="el" href="PropertyBag_8cpp_source.html#l00105">RTT::PropertyBag::addProperty()</a>, <a class="el" href="ConfigurationInterface_8hpp_source.html#l00184">RTT::ConfigurationInterface::addProperty()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00010">RTT::types::composePropertyBag()</a>, <a class="el" href="Property_8hpp_source.html#l00335">RTT::Property&lt; bool &gt;::copy()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00060">RTT::types::decomposePropertyBag()</a>, <a class="el" href="PropertyBag_8hpp_source.html#l00295">RTT::PropertyBag::findValue()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00083">RTT::PropertyBag::ownProperty()</a>, <a class="el" href="Property_8hpp_source.html#l00363">RTT::Property&lt; bool &gt;::refresh()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00416">RTT::removeProperty()</a>, and <a class="el" href="Property_8hpp_source.html#l00349">RTT::Property&lt; bool &gt;::update()</a>.</p>
 
 </div>
 </div>
@@ -1220,9 +1225,9 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a5600a71751d5fe19e47e53a47c242238">RTT::base::PropertyBase</a>.</p>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00311">311</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00314">314</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00311">RTT::Property&lt; bool &gt;::refresh()</a>.</p>
+<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00314">RTT::Property&lt; bool &gt;::refresh()</a>.</p>
 
 </div>
 </div>
@@ -1253,7 +1258,7 @@ template&lt;typename T&gt; </div>
 <p>Refresh only the value from a <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a>. </p>
 <p>This is a real-time operation. </p>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00360">360</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00363">363</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 </div>
 </div>
@@ -1284,9 +1289,50 @@ template&lt;typename T&gt; </div>
 <p>Identical to <a class="el" href="classRTT_1_1Property.html#addaf2111f1a33e904b22d562dcbacd63" title="Access to the value of the Property. ">value()</a>. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This function is not suitable for remote (distributed) access of properties, use <a class="el" href="classRTT_1_1Property.html#aae25cf76bb2427bf974033fd316cff1b" title="Set the property&#39;s value. ">operator=()</a> or <a class="el" href="classRTT_1_1Property.html#a9f4b22db7e05bdbe3cb8883584b14fd9" title="Set the value of the Property. ">set( param_t v )</a> to assign a value. </dd></dl>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00254">254</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00257">257</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00274">RTT::Property&lt; bool &gt;::value()</a>.</p>
+<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00277">RTT::Property&lt; bool &gt;::value()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9d46dd481fd0a8601326510bdf41beb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1Property.html">RTT::Property</a>&lt; T &gt;::setDataSource </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>dsb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assign an external assignable base::DataSource to this property. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dsb</td><td>The other data source </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>false if the properties are of different type. </dd></dl>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#ac89156d3850525b9349fffeda7ae2e7c">RTT::base::PropertyBase</a>.</p>
+
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00399">399</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00191">RTT::Property&lt; bool &gt;::operator=()</a>, and <a class="el" href="Property_8hpp_source.html#l00142">RTT::Property&lt; bool &gt;::Property()</a>.</p>
 
 </div>
 </div>
@@ -1322,9 +1368,9 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="PropertyBase_8cpp_source.html#l00064">64</a> of file <a class="el" href="PropertyBase_8cpp_source.html">PropertyBase.cpp</a>.</p>
 
-<p>References <a class="el" href="PropertyBase_8hpp_source.html#l00215">RTT::base::PropertyBase::_description</a>.</p>
+<p>References <a class="el" href="PropertyBase_8hpp_source.html#l00228">RTT::base::PropertyBase::_description</a>.</p>
 
-<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00225">RTT::Property&lt; bool &gt;::doc()</a>, and <a class="el" href="Property_8hpp_source.html#l00188">RTT::Property&lt; bool &gt;::operator=()</a>.</p>
+<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00228">RTT::Property&lt; bool &gt;::doc()</a>, and <a class="el" href="Property_8hpp_source.html#l00191">RTT::Property&lt; bool &gt;::operator=()</a>.</p>
 
 </div>
 </div>
@@ -1360,9 +1406,9 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="PropertyBase_8cpp_source.html#l00059">59</a> of file <a class="el" href="PropertyBase_8cpp_source.html">PropertyBase.cpp</a>.</p>
 
-<p>References <a class="el" href="PropertyBase_8hpp_source.html#l00210">RTT::base::PropertyBase::_name</a>.</p>
+<p>References <a class="el" href="PropertyBase_8hpp_source.html#l00223">RTT::base::PropertyBase::_name</a>.</p>
 
-<p>Referenced by <a class="el" href="ConfigurationInterface_8hpp_source.html#l00184">RTT::ConfigurationInterface::addProperty()</a>, and <a class="el" href="Property_8hpp_source.html#l00188">RTT::Property&lt; bool &gt;::operator=()</a>.</p>
+<p>Referenced by <a class="el" href="ConfigurationInterface_8hpp_source.html#l00184">RTT::ConfigurationInterface::addProperty()</a>, and <a class="el" href="Property_8hpp_source.html#l00191">RTT::Property&lt; bool &gt;::operator=()</a>.</p>
 
 </div>
 </div>
@@ -1397,9 +1443,9 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a3641a4b8b1e6e2b48d994073fe83e3ae">RTT::base::PropertyBase</a>.</p>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00302">302</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00305">305</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00214">RTT::Property&lt; bool &gt;::operator&lt;&lt;=()</a>, and <a class="el" href="Property_8hpp_source.html#l00302">RTT::Property&lt; bool &gt;::update()</a>.</p>
+<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00217">RTT::Property&lt; bool &gt;::operator&lt;&lt;=()</a>, and <a class="el" href="Property_8hpp_source.html#l00305">RTT::Property&lt; bool &gt;::update()</a>.</p>
 
 </div>
 </div>
@@ -1430,7 +1476,7 @@ template&lt;typename T&gt; </div>
 <p>Identical to <a class="el" href="classRTT_1_1Property.html#a1d50bd7460f8122ceadebb62eac76e09" title="Access to the value of the Property. ">set()</a>. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This function is not suitable for remote (distributed) access of properties, use <a class="el" href="classRTT_1_1Property.html#aae25cf76bb2427bf974033fd316cff1b" title="Set the property&#39;s value. ">operator=()</a> or <a class="el" href="classRTT_1_1Property.html#a9f4b22db7e05bdbe3cb8883584b14fd9" title="Set the value of the Property. ">set( param_t v )</a> to assign a value. </dd></dl>
 
-<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00274">274</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Property_8hpp_source.html#l00277">277</a> of file <a class="el" href="Property_8hpp_source.html">Property.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="PropertyComposition_8cpp_source.html#l00010">RTT::types::composePropertyBag()</a>, <a class="el" href="MultiVectorComposition_8hpp_source.html#l00056">RTT::extras::decomposeProperty()</a>, <a class="el" href="PropertyComposition_8cpp_source.html#l00060">RTT::types::decomposePropertyBag()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00752">RTT::deletePropertyBag()</a>, <a class="el" href="PropertyBag_8hpp_source.html#l00295">RTT::PropertyBag::findValue()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00770">RTT::flattenPropertyBag()</a>, <a class="el" href="PropertyBagIntrospector_8cpp_source.html#l00083">RTT::marsh::PropertyBagIntrospector::introspect()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00683">RTT::refreshProperty()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00416">RTT::removeProperty()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00384">RTT::storeProperty()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00557">RTT::updateProperties()</a>, and <a class="el" href="PropertyBag_8cpp_source.html#l00626">RTT::updateProperty()</a>.</p>
 
@@ -1442,7 +1488,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 21 2016 17:32:28 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 22 2016 10:42:44 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

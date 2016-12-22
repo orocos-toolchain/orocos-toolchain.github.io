@@ -99,6 +99,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a06726a96fda60b4fbdd53f84ce93cc30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#a06726a96fda60b4fbdd53f84ce93cc30">antiClone</a> () const </td></tr>
 <tr class="memdesc:a06726a96fda60b4fbdd53f84ce93cc30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a local clone of this port with the same name.  <a href="#a06726a96fda60b4fbdd53f84ce93cc30">More...</a><br/></td></tr>
 <tr class="separator:a06726a96fda60b4fbdd53f84ce93cc30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f6fa01d8c610b7b2d446013f9afd6c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#a05f6fa01d8c610b7b2d446013f9afd6c">disconnect</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">PortInterface</a> *port)</td></tr>
+<tr class="memdesc:a05f6fa01d8c610b7b2d446013f9afd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the channel that connects this port to <code>port</code>.  <a href="#a05f6fa01d8c610b7b2d446013f9afd6c">More...</a><br/></td></tr>
+<tr class="separator:a05f6fa01d8c610b7b2d446013f9afd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a473505ea56489efad45c6557b64a06d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#a473505ea56489efad45c6557b64a06d5">getDataSource</a> ()</td></tr>
 <tr class="memdesc:a473505ea56489efad45c6557b64a06d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a DataSourceBase interface to read this port.  <a href="#a473505ea56489efad45c6557b64a06d5">More...</a><br/></td></tr>
 <tr class="separator:a473505ea56489efad45c6557b64a06d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,9 +129,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>createStream</b> (con
 <tr class="memitem:aea8565f0b70fa16e0767a72d69109295"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea8565f0b70fa16e0767a72d69109295"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b> ()</td></tr>
 <tr class="separator:aea8565f0b70fa16e0767a72d69109295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a7b1a96d0d69052990a3537584dc16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65a7b1a96d0d69052990a3537584dc16"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *p)</td></tr>
-<tr class="separator:a65a7b1a96d0d69052990a3537584dc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad940bd99b8b8e5f3c19e77b1d77d5a17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad940bd99b8b8e5f3c19e77b1d77d5a17"></a>
 <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">base::ChannelElementBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEndpoint</b> () const</td></tr>
 <tr class="separator:ad940bd99b8b8e5f3c19e77b1d77d5a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -383,7 +383,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#af91b3e2733b8928f41eb96b5b8794fe8">RTT::base::InputPortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00128">128</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00122">122</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
 
 <p>References <a class="el" href="TypeInfo_8cpp_source.html#l00206">RTT::types::TypeInfo::buildDataStorage()</a>, <a class="el" href="classRTT_1_1types_1_1TypeTransporter.html#a26b001061c666f942058d1e84db7bbc6">RTT::types::TypeTransporter::createStream()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00248">RTT::ConnPolicy::data_size</a>, <a class="el" href="PortInterface_8cpp_source.html#l00104">RTT::base::PortInterface::getInterface()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00149">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00083">RTT::types::TypeInfo::getTypeName()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00232">RTT::ConnPolicy::mandatory</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00256">RTT::ConnPolicy::name_id</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00209">RTT::ConnPolicy::pull</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00238">RTT::ConnPolicy::transport</a>.</p>
 
@@ -415,7 +415,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#a4440042b409ac2ed8b76697ae90652a0">RTT::base::InputPortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00122">122</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00116">116</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
 
 </div>
 </div>
@@ -531,6 +531,39 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 </div>
 </div>
+<a class="anchor" id="a05f6fa01d8c610b7b2d446013f9afd6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RemoteInputPort::disconnect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">PortInterface</a> *&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes the channel that connects this port to <code>port</code>. </p>
+<p>All other ports or callbacks remain unaffected. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#af506a1db9628755fa8b31a6325637a13">RTT::base::InputPortInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00225">225</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>References <a class="el" href="classRTT_1_1base_1_1PortInterface.html#aa9f3cecab5a948799111fc2671f5057c">RTT::base::PortInterface::disconnect()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a4bed453e1d7211b72d81707efe1bd192"></a>
 <div class="memitem">
 <div class="memproto">
@@ -596,7 +629,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#afd46e9b26cb9db8b9b117f6ab5e268f7">RTT::base::InputPortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00125">125</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00119">119</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
 
 </div>
 </div>
@@ -809,7 +842,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>msignal_interface</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 21 2016 17:32:29 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 22 2016 10:42:45 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

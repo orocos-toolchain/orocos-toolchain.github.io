@@ -127,14 +127,14 @@
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">if</span> (status == NewData) {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                pull = data;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                status = OldData;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (copy_old_data) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((status == OldData) &amp;&amp; copy_old_data) {</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                pull = data;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classRTT_1_1base_1_1DataObjectLocked.html#a0767ed9bdf983e8d42cc9f88e1d94480">  100</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> <a class="code" href="classRTT_1_1base_1_1DataObjectLocked.html#a0767ed9bdf983e8d42cc9f88e1d94480">Get</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> cache;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a> cache = <a class="code" href="classRTT_1_1base_1_1DataObjectLocked.html#aa563aaefc14378ed0446d30b35648f5c">DataType</a>();</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <a class="code" href="classRTT_1_1base_1_1DataObjectLocked.html#a0767ed9bdf983e8d42cc9f88e1d94480">Get</a>(cache);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">return</span> cache;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
@@ -184,7 +184,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 21 2016 17:32:26 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 22 2016 10:42:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
