@@ -13251,7 +13251,6 @@
     <class kind="class">RTT::internal::SimpleConnID</class>
     <class kind="class">RTT::internal::ConnInputEndpoint</class>
     <class kind="class">RTT::internal::ConnOutputEndpoint</class>
-    <class kind="struct">RTT::internal::DataStore</class>
     <class kind="struct">RTT::internal::GetArgument</class>
     <class kind="struct">RTT::internal::GetArgument&lt; Seq, Data, typename boost::enable_if&lt; is_pure_reference&lt; Data &gt; &gt;::type &gt;</class>
     <class kind="struct">RTT::internal::AssignHelper</class>
@@ -14182,11 +14181,6 @@
       <anchor>a6d96d73ffae8886ab693a6574a3eeb80</anchor>
       <arglist>() const </arglist>
     </member>
-  </compound>
-  <compound kind="struct">
-    <name>RTT::internal::DataStore</name>
-    <filename>structRTT_1_1internal_1_1DataStore.html</filename>
-    <templarg></templarg>
   </compound>
   <compound kind="struct">
     <name>RTT::internal::GetArgument</name>
@@ -15757,8 +15751,8 @@
       <type>result_type</type>
       <name>invoke</name>
       <anchorfile>structRTT_1_1internal_1_1FusedMSignal.html</anchorfile>
-      <anchor>a9ff6569ea7cf9a4f9f7bf6000888bfa5</anchor>
-      <arglist>(typename SequenceFactory::data_type seq)</arglist>
+      <anchor>ac60f0a5eee3b765a16ee92adfdaa7a68</anchor>
+      <arglist>(const typename SequenceFactory::data_type &amp;seq) const </arglist>
     </member>
     <member kind="function">
       <type>void</type>

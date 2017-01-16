@@ -80,10 +80,10 @@ typedef <a class="el" href="structRTT_1_1internal_1_1create__sequence.html">crea
 typedef mpl::front&lt; <a class="el" href="classRTT_1_1internal_1_1List.html">List</a> &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>arg_type</b></td></tr>
 <tr class="memdesc:a61a521a4d995bb2c859a0667f2c1abe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The argument type. <br/></td></tr>
 <tr class="separator:a61a521a4d995bb2c859a0667f2c1abe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62abac184d165442e0645e24ce7cb1c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62abac184d165442e0645e24ce7cb1c7"></a>
-typedef <a class="el" href="structRTT_1_1internal_1_1DataStore.html">DataStore</a>&lt; arg_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>arg_store_type</b></td></tr>
-<tr class="memdesc:a62abac184d165442e0645e24ce7cb1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The argument storage type. <br/></td></tr>
-<tr class="separator:a62abac184d165442e0645e24ce7cb1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8487e551ef2677a1523ac00de93222b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8487e551ef2677a1523ac00de93222b"></a>
+typedef <a class="el" href="structRTT_1_1internal_1_1AStore.html">AStore</a>&lt; arg_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>arg_store_type</b></td></tr>
+<tr class="memdesc:ac8487e551ef2677a1523ac00de93222b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The argument storage type. <br/></td></tr>
+<tr class="separator:ac8487e551ef2677a1523ac00de93222b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a564453d5d0b32dbcafe448cfe57f9b97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a564453d5d0b32dbcafe448cfe57f9b97"></a>
 typedef remove_cr&lt; arg_type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>ds_arg_type</b></td></tr>
 <tr class="memdesc:a564453d5d0b32dbcafe448cfe57f9b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">The data source value type of an assignable data source is non-const, non-reference. <br/></td></tr>
@@ -131,7 +131,7 @@ arg_tail_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data_ty
 <tr class="separator:a669ed92ee34686048ad05b6ecd579876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc7159f847d493b255d331c2c7903eb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc7159f847d493b255d331c2c7903eb1"></a>
 typedef bf::cons<br class="typebreak"/>
-&lt; <a class="el" href="structRTT_1_1internal_1_1DataStore.html">arg_store_type</a>, <br class="typebreak"/>
+&lt; <a class="el" href="structRTT_1_1internal_1_1AStore.html">arg_store_type</a>, <br class="typebreak"/>
 arg_store_tail_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data_store_type</b></td></tr>
 <tr class="memdesc:adc7159f847d493b255d331c2c7903eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The joint T data storage type of head and tail. <br/></td></tr>
 <tr class="separator:adc7159f847d493b255d331c2c7903eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,7 +180,7 @@ struct RTT::internal::create_sequence&lt; List &gt;</h3>
 <p>copy() creates a fusion sequence of DataSource&lt;T&gt;::shared_ptr from an mpl sequence and a sequence returned by operator() to do the scripting copy/clone semantics on each element of the sequence.</p>
 <p>This is a typical head-tail recursive implementation where operator() calls itself, but in another type specialisation. </p>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00210">210</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00182">182</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a08e0a9fbf847675c01a84b463a803298"></a>
 <div class="memitem">
@@ -205,7 +205,7 @@ template&lt;class List, int size&gt; </div>
 <p>The type of the tail (<a class="el" href="classRTT_1_1internal_1_1List.html" title="This object represents the default queue implementation used by Orocos objects. ">List</a> - head) of our sequence. </p>
 <p>It is recursively formulated in terms of <a class="el" href="structRTT_1_1internal_1_1create__sequence.html" title="This class can create three kinds of Boost Fusion Sequences. ">create_sequence</a>. </p>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00251">251</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00223">223</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -255,7 +255,7 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a Fusion Sequence of DataSource&lt;T&gt;::shared_ptr objects </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00298">298</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00270">270</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -303,7 +303,7 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Fusion Sequence of DataSource&lt;T&gt;::shared_ptr containing the copies. </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00369">369</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00341">341</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -340,7 +340,7 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A sequence of type T holding the values of the DataSource&lt;T&gt;. </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00312">312</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00284">284</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -377,7 +377,7 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An full qualified type name. </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00399">399</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00371">371</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -414,7 +414,7 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> registered type info object. </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00382">382</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00354">354</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -461,7 +461,7 @@ template&lt;class List, int size&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00335">335</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00307">307</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -508,7 +508,7 @@ template&lt;class List, int size&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00322">322</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00294">294</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -557,7 +557,7 @@ template&lt;class List, int size&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a Fusion Sequence of DataSource&lt;T&gt;::shared_ptr objects </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00282">282</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00254">254</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -593,9 +593,9 @@ template&lt;class List, int size&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The receiving <a class="el" href="structRTT_1_1internal_1_1DataStore.html" title="Store a bound argument which may be a reference, const reference or any other type. ">DataStore</a> sequence. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The receiving <a class="el" href="structRTT_1_1internal_1_1AStore.html" title="Store a bound argument which may be a reference, const reference or any other type. ">AStore</a> sequence. </dd></dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00348">348</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00320">320</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -631,7 +631,7 @@ template&lt;class List, int size&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00357">357</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00329">329</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -641,7 +641,7 @@ template&lt;class List, int size&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 12 2017 13:38:26 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 16 2017 13:32:11 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
