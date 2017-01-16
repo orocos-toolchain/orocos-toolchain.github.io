@@ -8202,9 +8202,9 @@
     <class kind="interface">RTT::corba::CConfigurationInterface</class>
     <class kind="struct">RTT::corba::AnyConversion</class>
     <class kind="struct">RTT::corba::AnyConversionHelper</class>
-    <class kind="struct">RTT::corba::AnyConversion&lt; std::vector&lt; T &gt; &gt;</class>
+    <class kind="struct">RTT::corba::AnyConversion&lt; std::vector&lt; T, _Alloc &gt; &gt;</class>
     <class kind="struct">RTT::corba::AnyConversion&lt; std::pair&lt; T1, T2 &gt; &gt;</class>
-    <class kind="struct">RTT::corba::AnyConversion&lt; std::map&lt; T1, T2 &gt; &gt;</class>
+    <class kind="struct">RTT::corba::AnyConversion&lt; std::map&lt; T1, T2, _Compare, _Alloc &gt; &gt;</class>
     <class kind="class">RTT::corba::CorbaDispatcher</class>
     <class kind="class">RTT::corba::CorbaFallBackProtocol</class>
     <class kind="class">RTT::corba::CorbaOperationCallerFactory</class>
@@ -8526,14 +8526,15 @@
     <templarg>_CorbaType</templarg>
   </compound>
   <compound kind="struct">
-    <name>RTT::corba::AnyConversion&lt; std::vector&lt; T &gt; &gt;</name>
-    <filename>structRTT_1_1corba_1_1AnyConversion_3_01std_1_1vector_3_01T_01_4_01_4.html</filename>
+    <name>RTT::corba::AnyConversion&lt; std::vector&lt; T, _Alloc &gt; &gt;</name>
+    <filename>structRTT_1_1corba_1_1AnyConversion_3_01std_1_1vector_3_01T_00_01__Alloc_01_4_01_4.html</filename>
+    <templarg></templarg>
     <templarg></templarg>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>toStdType</name>
-      <anchorfile>structRTT_1_1corba_1_1AnyConversion_3_01std_1_1vector_3_01T_01_4_01_4.html</anchorfile>
-      <anchor>a44d76944463fdfc620e94a6de09fea21</anchor>
+      <anchorfile>structRTT_1_1corba_1_1AnyConversion_3_01std_1_1vector_3_01T_00_01__Alloc_01_4_01_4.html</anchorfile>
+      <anchor>a29a670879d3253b0fa8127851a2724df</anchor>
       <arglist>(StdType &amp;tp, const CORBA::Any &amp;any)</arglist>
     </member>
   </compound>
@@ -8544,15 +8545,17 @@
     <templarg></templarg>
   </compound>
   <compound kind="struct">
-    <name>RTT::corba::AnyConversion&lt; std::map&lt; T1, T2 &gt; &gt;</name>
-    <filename>structRTT_1_1corba_1_1AnyConversion_3_01std_1_1map_3_01T1_00_01T2_01_4_01_4.html</filename>
+    <name>RTT::corba::AnyConversion&lt; std::map&lt; T1, T2, _Compare, _Alloc &gt; &gt;</name>
+    <filename>structRTT_1_1corba_1_1AnyConversion_3_01std_1_1map_3_01T1_00_01T2_00_01__Compare_00_01__Alloc_01_4_01_4.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
     <templarg></templarg>
     <templarg></templarg>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>toStdType</name>
-      <anchorfile>structRTT_1_1corba_1_1AnyConversion_3_01std_1_1map_3_01T1_00_01T2_01_4_01_4.html</anchorfile>
-      <anchor>a9805ab8d4546483d8d07e724d5f449a1</anchor>
+      <anchorfile>structRTT_1_1corba_1_1AnyConversion_3_01std_1_1map_3_01T1_00_01T2_00_01__Compare_00_01__Alloc_01_4_01_4.html</anchorfile>
+      <anchor>a0316a2af207d95944cf165a3e93108e1</anchor>
       <arglist>(StdType &amp;tp, const CORBA::Any &amp;any)</arglist>
     </member>
   </compound>

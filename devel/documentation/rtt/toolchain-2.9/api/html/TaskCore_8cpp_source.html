@@ -226,7 +226,7 @@
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            mTargetState = mTaskState = mInitialState;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">if</span> (mTaskState == <a class="code" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296a176c10977c372f2762335620a6382bb4">RunTimeError</a> ) {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">if</span> (mTaskState == <a class="code" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296a176c10977c372f2762335620a6382bb4">RunTimeError</a> &amp;&amp; mTargetState &gt;= <a class="code" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296ae9b19cff8d2fde7929812f4108ce80f4">Running</a>) {</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            mTargetState = mTaskState = <a class="code" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296ae9b19cff8d2fde7929812f4108ce80f4">Running</a>;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        }</div>
@@ -423,7 +423,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 16 2017 13:38:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 16 2017 15:33:55 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

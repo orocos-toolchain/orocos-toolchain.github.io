@@ -483,7 +483,7 @@
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                )</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            }</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <span class="comment">// in case start() or updateHook() called error(), this will be called:</span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            <span class="keywordflow">if</span> (  <a class="code" href="classRTT_1_1ExecutionEngine.html#a6fc9359abc8c2d9c484763618b562f50">taskc</a>-&gt;mTaskState == <a class="code" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296a176c10977c372f2762335620a6382bb4">TaskCore::RunTimeError</a> ) {</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classRTT_1_1ExecutionEngine.html#a6fc9359abc8c2d9c484763618b562f50">taskc</a>-&gt;mTaskState == <a class="code" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296a176c10977c372f2762335620a6382bb4">TaskCore::RunTimeError</a> &amp;&amp; <a class="code" href="classRTT_1_1ExecutionEngine.html#a6fc9359abc8c2d9c484763618b562f50">taskc</a>-&gt;mTargetState &gt;= <a class="code" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296ae9b19cff8d2fde7929812f4108ce80f4">TaskCore::Running</a>) {</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                <a class="code" href="CatchConfig_8hpp.html#a04ea92c8095ad01ec4a78d74f72060db">TRY</a> (</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                    <a class="code" href="classRTT_1_1ExecutionEngine.html#a6fc9359abc8c2d9c484763618b562f50">taskc</a>-&gt;<a class="code" href="classRTT_1_1base_1_1TaskCore.html#a1d100268cdda1f60af1e2203d155168b">errorHook</a>();</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                ) CATCH(std::exception <span class="keyword">const</span>&amp; e,</div>
@@ -604,7 +604,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 16 2017 13:38:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 16 2017 15:33:55 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

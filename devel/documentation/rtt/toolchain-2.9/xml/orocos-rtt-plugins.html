@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extending the Real-Time Toolkit with Plugins</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document is an introduction to using and creating plugins for the RTT. A plugin extends the RTT with new data types or new functions, which components can then use. Example plugins are scripting engines, XML readers and writers or remote communication libraries. Typekits are plugins that are explained in the Typekit manual." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp46550712390976"></a>Extending the Real-Time Toolkit with Plugins</h2></div><div><p class="copyright">Copyright © 2010 Peter Soetens, The SourceWorks</p></div><div><div class="legalnotice"><a id="idp46550714549376"></a><p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Extending the Real-Time Toolkit with Plugins</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="description" content="This document is an introduction to using and creating plugins for the RTT. A plugin extends the RTT with new data types or new functions, which components can then use. Example plugins are scripting engines, XML readers and writers or remote communication libraries. Typekits are plugins that are explained in the Typekit manual." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp47213795728096"></a>Extending the Real-Time Toolkit with Plugins</h2></div><div><p class="copyright">Copyright © 2010 Peter Soetens, The SourceWorks</p></div><div><div class="legalnotice"><a id="idp47213798132336"></a><p>
 	Permission is granted to copy, distribute and/or modify this document
 	under the terms of the GNU Free Documentation License, Version 1.1 or
 	any later version published by the Free Software Foundation, with no
@@ -14,7 +14,7 @@
 	communication libraries.
       </p><p>
         Typekits are plugins that are explained in the Typekit manual.
-      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idp46550714551712">1. Loading Existing Plugins</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46550714552400">1.1. Paths and (not) default loading</a></span></dt><dt><span class="section"><a href="#idp46550712330176">1.2. Using plugins in the Deployer</a></span></dt></dl></dd><dt><span class="section"><a href="#idp46550712255168">2. Using Plugins in C++</a></span></dt><dt><span class="section"><a href="#idp46550712264544">3. Writing your own plugins</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46550712274768">3.1. Creating a Service Plugin</a></span></dt><dt><span class="section"><a href="#idp46550712279792">3.2. Creating a Typekit Plugin</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp46550714551712"></a>1. Loading Existing Plugins</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46550714552400"></a>1.1. Paths and (not) default loading</h3></div></div></div><p>
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idp47213798134720">1. Loading Existing Plugins</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47213798135408">1.1. Paths and (not) default loading</a></span></dt><dt><span class="section"><a href="#idp47213795906112">1.2. Using plugins in the Deployer</a></span></dt></dl></dd><dt><span class="section"><a href="#idp47213795832096">2. Using Plugins in C++</a></span></dt><dt><span class="section"><a href="#idp47213795841472">3. Writing your own plugins</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47213795851648">3.1. Creating a Service Plugin</a></span></dt><dt><span class="section"><a href="#idp47213795856720">3.2. Creating a Typekit Plugin</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp47213798134720"></a>1. Loading Existing Plugins</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47213798135408"></a>1.1. Paths and (not) default loading</h3></div></div></div><p>
 	Existing plugins are fairly easy to use. You only need to tell
 	where they are located.
       </p><p>
@@ -67,7 +67,7 @@
     </p><pre class="screen">
 Deployer [S]&gt; <span class="command"><strong>import("myrobot")</strong></span>
     </pre><p>Which will look in each directory of the RTT_COMPONENT_PATH for a subdirectory
-    "myrobot" in which it will locate and load components, plugins and typekits.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46550712330176"></a>1.2. Using plugins in the Deployer</h3></div></div></div><p>
+    "myrobot" in which it will locate and load components, plugins and typekits.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47213795906112"></a>1.2. Using plugins in the Deployer</h3></div></div></div><p>
        You can use the <code class="filename">deployer</code> application in order to list the found 
        services, types and typekits using the <span class="command"><strong>.services</strong></span>,
        <span class="command"><strong>.types</strong></span> and <span class="command"><strong>.typekits</strong></span> commands:
@@ -94,7 +94,7 @@ Deployer [S]&gt;
 	Normally, you will already indicate that you want to use this
 	service in your component when writing it in C++, as shown in the
 	next section.
-     </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp46550712255168"></a>2. Using Plugins in C++</h2></div></div></div><p>
+     </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp47213795832096"></a>2. Using Plugins in C++</h2></div></div></div><p>
 	In order to use the functions that a plugin offers to a 
 	component, you need to 1. load the service, 2. call the functions !
 	Both steps can actually be combined, since the RTT loads
@@ -134,7 +134,7 @@ Deployer [S]&gt;
 	was offered by this component, use: 
 	</p><pre class="programlisting">  bool result = this-&gt;provides()-&gt;hasService("scripting")</pre><p>
         in your component code.
-      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp46550712264544"></a>3. Writing your own plugins</h2></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp47213795841472"></a>3. Writing your own plugins</h2></div></div></div><p>
 	There are very little requirements to make a library an
 	Orocos plugin. The interface of an Orocos plugin is shown
 	in the file <code class="filename">rtt/plugin/Plugin.hpp</code>.
@@ -173,7 +173,7 @@ extern "C"
 	See the <code class="filename">rtt/plugin/ServicePlugin.hpp</code> file
 	and the <code class="filename">rtt/types/TypekitPlugin.hpp</code> file
 	for the respective macros.
-      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46550712274768"></a>3.1. Creating a Service Plugin</h3></div></div></div><p>
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47213795851648"></a>3.1. Creating a Service Plugin</h3></div></div></div><p>
 	  A Service Plugin can be created by writing a subclass
 	  of <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1Service.html">Service</a>:
 	</p><pre class="programlisting">  #include &lt;rtt/Service.hpp&gt;
@@ -206,7 +206,7 @@ extern "C"
 	  in the plugins directory of your RTT_COMPONENT_PATH, it will be
 	  found by the RTT and you'll have access to a new service,
 	  called "myservice" and which offers one operation: "HelloWorld".
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46550712279792"></a>3.2. Creating a Typekit Plugin</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47213795856720"></a>3.2. Creating a Typekit Plugin</h3></div></div></div><p>
 	  See the Typekit Plugin manual for adding your own
 	  data types to the RTT.
 	</p></div></div></div></body></html>
