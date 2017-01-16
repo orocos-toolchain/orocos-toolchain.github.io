@@ -14855,8 +14855,8 @@
       <type>result_type</type>
       <name>invoke</name>
       <anchorfile>structRTT_1_1internal_1_1FusedMSignal.html</anchorfile>
-      <anchor>a9ff6569ea7cf9a4f9f7bf6000888bfa5</anchor>
-      <arglist>(typename SequenceFactory::data_type seq)</arglist>
+      <anchor>ac60f0a5eee3b765a16ee92adfdaa7a68</anchor>
+      <arglist>(const typename SequenceFactory::data_type &amp;seq) const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
