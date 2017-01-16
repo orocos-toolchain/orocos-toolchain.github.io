@@ -13027,10 +13027,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>ChannelDescriptor</type>
+      <type>ChannelDescriptor *</type>
       <name>cur_channel</name>
       <anchorfile>classRTT_1_1internal_1_1ConnectionManager.html</anchorfile>
-      <anchor>af02d8df235cf10e00288c9cec0ed3dd1</anchor>
+      <anchor>a2aa071f17db28e04270d48c63f1edc41</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
