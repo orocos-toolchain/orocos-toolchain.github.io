@@ -59,6 +59,7 @@ Inheritance diagram for EEHook:</div>
  <div class="center">
   <img src="classEEHook.png" usemap="#EEHook_map" alt=""/>
   <map id="EEHook_map" name="EEHook_map">
+<area doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1ExecutableInterface.html" alt="ExecutableInterface" shape="rect" coords="0,0,124,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -70,6 +71,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae006844a02161d12182ab372ca5c257b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae006844a02161d12182ab372ca5c257b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> ()</td></tr>
 <tr class="separator:ae006844a02161d12182ab372ca5c257b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c879406f60b612a5cd254f684cc5219"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c879406f60b612a5cd254f684cc5219"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1ExecutableInterface.html#a1c879406f60b612a5cd254f684cc5219">loaded</a> (ExecutionEngine *ee)</td></tr>
+<tr class="separator:a1c879406f60b612a5cd254f684cc5219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca37926e68f7c7de74c043f8a2c267c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaca37926e68f7c7de74c043f8a2c267c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1ExecutableInterface.html#aaca37926e68f7c7de74c043f8a2c267c">unloaded</a> ()</td></tr>
+<tr class="separator:aaca37926e68f7c7de74c043f8a2c267c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95dfa05e8d4cee94f24dbe3fc6b60af6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95dfa05e8d4cee94f24dbe3fc6b60af6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1ExecutableInterface.html#a95dfa05e8d4cee94f24dbe3fc6b60af6">loading</a> ()</td></tr>
+<tr class="separator:a95dfa05e8d4cee94f24dbe3fc6b60af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5ee4ceb298d2917dbf891300c3223d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c5ee4ceb298d2917dbf891300c3223d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1ExecutableInterface.html#a6c5ee4ceb298d2917dbf891300c3223d">isLoaded</a> ()</td></tr>
+<tr class="separator:a6c5ee4ceb298d2917dbf891300c3223d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a189a24838c790bcd059f10bbd09258ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a189a24838c790bcd059f10bbd09258ab"></a>
+ExecutionEngine *&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1ExecutableInterface.html#a189a24838c790bcd059f10bbd09258ab">getEngine</a> ()</td></tr>
+<tr class="separator:a189a24838c790bcd059f10bbd09258ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8049b5ca5abdcd078644e261f08b6883"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8049b5ca5abdcd078644e261f08b6883"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1ExecutableInterface.html#a8049b5ca5abdcd078644e261f08b6883">unloading</a> ()</td></tr>
+<tr class="separator:a8049b5ca5abdcd078644e261f08b6883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -80,7 +99,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>func</b></td><
 lua_State *&#160;</td><td class="memItemRight" valign="bottom"><b>L</b></td></tr>
 <tr class="separator:a62f94dfc0036bec0c14106c2f15caf3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a148d2532e0f29575d80a91fdfd4a642e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a148d2532e0f29575d80a91fdfd4a642e"></a>
-TaskContext *&#160;</td><td class="memItemRight" valign="bottom"><b>tc</b></td></tr>
+<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>tc</b></td></tr>
 <tr class="separator:a148d2532e0f29575d80a91fdfd4a642e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <tagfile>
   <compound kind="file">
-    <name>Component.hpp</name>
-    <path>/opt/orocos/master/src/orocos_toolchain/ocl/ocl/</path>
-    <filename>Component_8hpp</filename>
-    <namespace>OCL</namespace>
-  </compound>
-  <compound kind="file">
     <name>HelloWorld.cpp</name>
     <path>/opt/orocos/master/src/orocos_toolchain/ocl/helloworld/</path>
     <filename>HelloWorld_8cpp</filename>
@@ -17,7 +11,6 @@
     <name>testcomp.cpp</name>
     <path>/opt/orocos/master/src/orocos_toolchain/ocl/lua/testing/</path>
     <filename>testcomp_8cpp</filename>
-    <includes id="Component_8hpp" name="Component.hpp" local="yes" imported="no">ocl/Component.hpp</includes>
     <class kind="class">OCL::Testcomp</class>
     <namespace>OCL</namespace>
   </compound>
@@ -57,6 +50,7 @@
   <compound kind="class">
     <name>OCL::logging::Appender</name>
     <filename>classOCL_1_1logging_1_1Appender.html</filename>
+    <base>RTT::TaskContext</base>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>configureLayout</name>
@@ -1101,6 +1095,7 @@
   <compound kind="class">
     <name>OCL::TCP::Datasender</name>
     <filename>classOCL_1_1TCP_1_1Datasender.html</filename>
+    <base>RTT::Activity</base>
     <member kind="function">
       <type>bool</type>
       <name>isValid</name>
@@ -1182,6 +1177,7 @@
   <compound kind="class">
     <name>OCL::DeploymentComponent</name>
     <filename>classOCL_1_1DeploymentComponent.html</filename>
+    <base>RTT::TaskContext</base>
     <class kind="struct">OCL::DeploymentComponent::ComponentData</class>
     <class kind="struct">OCL::DeploymentComponent::ConnectionData</class>
     <member kind="function">
@@ -1729,15 +1725,19 @@
   <compound kind="class">
     <name>EEHook</name>
     <filename>classEEHook.html</filename>
+    <base>RTT::base::ExecutableInterface</base>
   </compound>
   <compound kind="class">
     <name>RTT::EmptyHeaderMarshaller</name>
     <filename>classRTT_1_1EmptyHeaderMarshaller.html</filename>
     <templarg></templarg>
+    <base>RTT::marsh::MarshallInterface</base>
+    <base>StreamProcessor&lt; o_stream &gt;</base>
   </compound>
   <compound kind="class">
     <name>RTT::EmptyMarshaller</name>
     <filename>classRTT_1_1EmptyMarshaller.html</filename>
+    <base>RTT::marsh::MarshallInterface</base>
   </compound>
   <compound kind="class">
     <name>OCL::logging::FileAppender</name>
@@ -2223,6 +2223,7 @@
   <compound kind="class">
     <name>OCL::HelloWorld</name>
     <filename>classOCL_1_1HelloWorld.html</filename>
+    <base>RTT::TaskContext</base>
     <member kind="function">
       <type></type>
       <name>HelloWorld</name>
@@ -2332,6 +2333,7 @@
   <compound kind="class">
     <name>OCL::HMIConsoleOutput</name>
     <filename>classOCL_1_1HMIConsoleOutput.html</filename>
+    <base>RTT::TaskContext</base>
     <member kind="function">
       <type>void</type>
       <name>enableColor</name>
@@ -2410,10 +2412,12 @@
   <compound kind="class">
     <name>OCL::ListenThread</name>
     <filename>classOCL_1_1ListenThread.html</filename>
+    <base>RTT::Activity</base>
   </compound>
   <compound kind="class">
     <name>OCL::logging::Log4cxxAppender</name>
     <filename>classOCL_1_1logging_1_1Log4cxxAppender.html</filename>
+    <base>RTT::TaskContext</base>
     <member kind="variable" protection="protected">
       <type>RTT::InputPort&lt; OCL::logging::LoggingEvent &gt;</type>
       <name>log_port</name>
@@ -2471,6 +2475,7 @@
   <compound kind="class">
     <name>OCL::logging::LoggingService</name>
     <filename>classOCL_1_1logging_1_1LoggingService.html</filename>
+    <base>RTT::TaskContext</base>
     <member kind="variable" protection="protected">
       <type>RTT::Operation&lt; void(void)&gt;</type>
       <name>logCategories_mtd</name>
@@ -2490,10 +2495,12 @@
   <compound kind="class">
     <name>OCL::LuaComponent</name>
     <filename>classOCL_1_1LuaComponent.html</filename>
+    <base>RTT::TaskContext</base>
   </compound>
   <compound kind="class">
     <name>OCL::LuaService</name>
     <filename>classOCL_1_1LuaService.html</filename>
+    <base>RTT::Service</base>
   </compound>
   <compound kind="class">
     <name>OCL::LuaStateHandle</name>
@@ -2523,6 +2530,7 @@
   <compound kind="class">
     <name>RTT::NetcdfHeaderMarshaller</name>
     <filename>classRTT_1_1NetcdfHeaderMarshaller.html</filename>
+    <base>RTT::marsh::MarshallInterface</base>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>serialize</name>
@@ -2576,6 +2584,7 @@
   <compound kind="class">
     <name>RTT::NetcdfMarshaller</name>
     <filename>classRTT_1_1NetcdfMarshaller.html</filename>
+    <base>RTT::marsh::MarshallInterface</base>
     <member kind="function">
       <type></type>
       <name>NetcdfMarshaller</name>
@@ -2908,6 +2917,8 @@
     <name>RTT::NiceHeaderMarshaller</name>
     <filename>classRTT_1_1NiceHeaderMarshaller.html</filename>
     <templarg>o_stream</templarg>
+    <base>RTT::marsh::MarshallInterface</base>
+    <base>StreamProcessor&lt; o_stream &gt;</base>
     <member kind="function">
       <type>void</type>
       <name>store</name>
@@ -2927,6 +2938,7 @@
   <compound kind="class">
     <name>OCL::OSService</name>
     <filename>classOCL_1_1OSService.html</filename>
+    <base>RTT::Service</base>
   </compound>
   <compound kind="class">
     <name>OCL::logging::OstreamAppender</name>
@@ -3034,6 +3046,7 @@
   <compound kind="class">
     <name>OCL::PrintService</name>
     <filename>classOCL_1_1PrintService.html</filename>
+    <base>RTT::Service</base>
   </compound>
   <compound kind="class">
     <name>RTT::PropertyAdaptor</name>
@@ -3140,6 +3153,7 @@
   <compound kind="class">
     <name>OCL::ReportingComponent</name>
     <filename>classOCL_1_1ReportingComponent.html</filename>
+    <base>RTT::TaskContext</base>
     <member kind="function">
       <type></type>
       <name>ReportingComponent</name>
@@ -3549,11 +3563,14 @@
   <compound kind="class">
     <name>RTT::SocketMarshaller</name>
     <filename>classRTT_1_1SocketMarshaller.html</filename>
+    <base>RTT::marsh::MarshallInterface</base>
   </compound>
   <compound kind="class">
     <name>RTT::TableHeaderMarshaller</name>
     <filename>classRTT_1_1TableHeaderMarshaller.html</filename>
     <templarg></templarg>
+    <base>RTT::marsh::MarshallInterface</base>
+    <base>StreamProcessor&lt; o_stream &gt;</base>
     <member kind="function">
       <type>int</type>
       <name>store</name>
@@ -3573,6 +3590,8 @@
     <name>RTT::TableMarshaller</name>
     <filename>classRTT_1_1TableMarshaller.html</filename>
     <templarg>o_stream</templarg>
+    <base>RTT::marsh::MarshallInterface</base>
+    <base>StreamProcessor&lt; o_stream &gt;</base>
     <member kind="function">
       <type></type>
       <name>TableMarshaller</name>
@@ -3584,6 +3603,7 @@
   <compound kind="class">
     <name>OCL::TaskBrowser</name>
     <filename>classOCL_1_1TaskBrowser.html</filename>
+    <base>RTT::TaskContext</base>
     <member kind="enumeration">
       <type></type>
       <name>ColorTheme</name>
@@ -4052,7 +4072,6 @@
       <anchor>af93642f44484e51022d2414b93be9006</anchor>
       <arglist>()</arglist>
     </member>
-    <docanchor file="classOCL_1_1TcpReporting" title="Usage">usage</docanchor>
     <docanchor file="classOCL_1_1TcpReporting" title="Authentication of the client:">authent</docanchor>
     <docanchor file="classOCL_1_1TcpReporting" title="Getting Help:">help</docanchor>
     <docanchor file="classOCL_1_1TcpReporting" title="Getting a list of available data:">headers</docanchor>
@@ -4113,6 +4132,7 @@
   <compound kind="class">
     <name>OCL::Testcomp</name>
     <filename>classOCL_1_1Testcomp.html</filename>
+    <base>RTT::TaskContext</base>
     <member kind="function">
       <type></type>
       <name>Testcomp</name>
@@ -4124,10 +4144,12 @@
   <compound kind="struct">
     <name>OCL::TimerComponent::TimeoutCatcher</name>
     <filename>structOCL_1_1TimerComponent_1_1TimeoutCatcher.html</filename>
+    <base>RTT::os::Timer</base>
   </compound>
   <compound kind="class">
     <name>OCL::TimerComponent</name>
     <filename>classOCL_1_1TimerComponent.html</filename>
+    <base>RTT::TaskContext</base>
     <class kind="struct">OCL::TimerComponent::TimeoutCatcher</class>
     <member kind="function">
       <type></type>
@@ -4253,7 +4275,6 @@
     <name>index</name>
     <title>Orocos Component Library</title>
     <filename>index</filename>
-    <docanchor file="index" title="Introduction">intro</docanchor>
     <docanchor file="index" title="Dependencies">deps</docanchor>
     <docanchor file="index" title="Structure:">structure</docanchor>
     <docanchor file="index" title="Hello World:">hello</docanchor>
@@ -4261,5 +4282,11 @@
     <docanchor file="index" title="Taskbrowser:">taskbrowser</docanchor>
     <docanchor file="index" title="Component Deployment:">deployment</docanchor>
     <docanchor file="index" title="Logging Compnent:">logging</docanchor>
+    <docanchor file="index" title="Recommendation">recom</docanchor>
+    <docanchor file="index" title="Real-Time Toolkit classes (RTT)">corelib</docanchor>
+    <docanchor file="index" title="Plugins">plugins</docanchor>
+    <docanchor file="index" title="CORBA transport (network communication)">rttcorba</docanchor>
+    <docanchor file="index" title="Posix MQueue transport (local inter-process communication)">mqueue</docanchor>
+    <docanchor file="index" title="Hardware Access and Device Interface">devdrivers</docanchor>
   </compound>
 </tagfile>
