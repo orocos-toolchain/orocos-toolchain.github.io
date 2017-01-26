@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The TaskBrowser Component</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idm45859609342592"></a>The TaskBrowser Component</h2></div><div><p class="copyright">Copyright © 2006-2010 Peter Soetens</p></div><div><p class="copyright">Copyright © 2006,2007 FMTC</p></div><div><div class="legalnotice"><a id="idm45859609337088"></a><p>
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.1 or
+	any later version published by the Free Software Foundation, with no
+	Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+	Texts. A copy of this license can be found at
+	<a class="ulink" href="http://www.fsf.org/copyleft/fdl.html" target="_top">http://www.fsf.org/copyleft/fdl.html</a>.
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idm45859607135216">1. Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45859607133504">1.1. Principle</a></span></dt></dl></dd><dt><span class="section"><a href="#idm45859607125728">2. TaskBrowser Setup</a></span></dt><dt><span class="section"><a href="#idm45859607123648">3. TaskBrowser Commands</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45859607135216"></a>1. Introduction</h2></div></div></div><p>
+      This document describes the <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classOCL_1_1TaskBrowser.html">OCL::TaskBrowser</a> Orocos component for
+      user interaction with other components. It can visit any
+      component in a given network, query it, use its services,
+      run programs etc.
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45859607133504"></a>1.1. Principle</h3></div></div></div><p>
+      Each Orocos component has a standard interface of properties,
+      ports and operations. It is possible to query and use this interface
+      generically. The TaskBrowser is connected to one component only
+      at a time. It can however be used to 'browse' the network of
+      peer components and visit any component in an application.
+    </p><p>
+      The <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classOCL_1_1TaskBrowser.html">OCL::TaskBrowser</a> is a component
+      itself, and it offers a 'window' to another component. When it
+      is connected to another component, it dynamically creates 
+      data ports and connects these to the other component. In
+      this way, the TaskBrowser can send data to any component.  When
+      the component is left, the ports are disconnected and removed.
+    </p><div class="figure"><a id="idm45859607131008"></a><p class="title"><strong>Figure 1. Task Browsing</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/taskbrowsing.png" alt="Task Browsing" /><div class="caption"><p>The TaskBrowser is initially connected to a
+      component. It can 'enter' a component, which shows a perspective
+      from 'within' the component. it can 'leave' a component which
+      shows a perspective from outside the component. The 'cd' command
+      allows to visit other components.
+      </p></div></div></div></div><br class="figure-break" /><p>
+      There are two possible views on a component: from inside the component,
+      as a program inside the component sees the component interface, or
+      from outside the component, as a peer component sees the component 
+      interface. The Taskbrowser can offer the user both views, allowing
+      maximum interactivity. In both views, the component network can be
+      browsed.
+    </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45859607125728"></a>2. TaskBrowser Setup</h2></div></div></div><p>
+      Consult the <a class="ulink" href="http://www.orocos.org/toolchain" target="_top">Component
+      Builder's Manual</a> for instructions on how to setup and
+      use the TaskBrowser. Typically, you will start the 'deployer' application.
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45859607123648"></a>3. TaskBrowser Commands</h2></div></div></div><p>
+      In addition to giving commands to the components, the TaskBrowser
+      itself can also accept a number of commands. Hit TAB twice to get a list.
+      Most commands accept TAB-completed arguments as well.
+    </p><div class="table"><a id="idm45859607122352"></a><p class="title"><strong>Table 1. TaskBrowser Commands</strong></p><div class="table-contents"><table class="table" summary="TaskBrowser Commands" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>Command</th><th>[optional] Argument</th><th>Description &amp; Notes</th></tr></thead><tbody><tr><td><span class="emphasis"><em>help</em></span></td><td>-</td><td>Display and overview of all the available TaskBrowser commands.</td></tr><tr><td>ls</td><td>[peer]</td><td>Lists the interface and status of a Component. Without peer, 
+	    the current visited component is shown.</td></tr><tr><td>cd</td><td>peer</td><td>Change to a peer of the current component.</td></tr><tr><td>cd ..</td><td>-</td><td>Change to the previously visited peer.</td></tr><tr><td><span class="emphasis"><em>help &lt;servicename&gt;</em></span></td><td>-</td><td>Display the interface of a service  of the current component. Use <span class="emphasis"><em>this</em></span>
+	    to display the interface of the current component itself. To see only one operation, use
+			<span class="emphasis"><em>help &lt;servicename.operationname&gt;</em></span> or just
+			<span class="emphasis"><em>help &lt;operationname&gt;</em></span>.	</td></tr><tr><td>.types</td><td>-</td><td>Lists all types known to this process.</td></tr><tr><td>.services</td><td>-</td><td>Lists all services known to this process.</td></tr><tr><td>.plugins</td><td>-</td><td>Lists all plugins known to this process.</td></tr><tr><td>enter</td><td>-</td><td>Interprete commands in the context of the current component, as if
+	    the current component was issuing them.</td></tr><tr><td>leave</td><td>-</td><td>Interprete commands in the context of the
+	    TaskBrowser, as if an external component is
+	    communicating with the current component.</td></tr><tr><td>list</td><td>[script-name] [row]</td><td>List the source of a loaded program or state machine script.
+	    If the script-name is omitted, list the last listed script again.
+	    An optional row argument can be given, otherwise, the current point
+	    of execution is shown.</td></tr><tr><td>trace</td><td>[script-name]</td><td>Follow the point of execution of a loaded program or state machine.
+	    The taskbrowser will display the script source and point of execution when
+	    it changed and the user pressed [Enter] at the console prompt. When no
+	    arguments are given, all scripts are traced.</td></tr><tr><td>untrace</td><td>[script-name]</td><td>No longer trace a script.</td></tr><tr><td>.light</td><td>-</td><td>Inform the TaskBrowser that your console window has a light background.</td></tr><tr><td>.dark</td><td>-</td><td>Inform the TaskBrowser that your console window has a dark background.</td></tr><tr><td>.nocolors</td><td>-</td><td>Inform the TaskBrowser to disable all coloring.</td></tr><tr><td>.record</td><td>macro-name</td><td>Start a new macro which will be saved as 'macro-name.ops' which will
+	    contain an exported function with that name. You will receive a new prompt and
+	    are required to type in scripting syntax ('do', 'set', 'if',...)</td></tr><tr><td>.cancel</td><td>-</td><td>Cancel the recording of the current macro. This brings you back to the
+	    standard TaskBrowser prompt.</td></tr><tr><td>.end</td><td>-</td><td>Finish and store the current macro. See .loadProgram to load this macro
+	    into the current TaskContext. It will appear as a command which takes no arguments.</td></tr><tr><td>quit</td><td>-</td><td>Exit the TaskBrowser.</td></tr></tbody></table></div></div><br class="table-break" /></div></div></body></html>

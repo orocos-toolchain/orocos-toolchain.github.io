@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The Reporting Component</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idm46318151488128"></a>The Reporting Component</h2></div><div><p class="copyright">Copyright © 2006,2007,2008,2009 Peter Soetens, FMTC</p></div><div><p class="copyright">Copyright © 2010-2012 Peter Soetens</p></div><div><div class="legalnotice"><a id="idm46318151482592"></a><p>
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.1 or
+	any later version published by the Free Software Foundation, with no
+	Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+	Texts. A copy of this license can be found at
+	<a class="ulink" href="http://www.fsf.org/copyleft/fdl.html" target="_top">http://www.fsf.org/copyleft/fdl.html</a>.
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idm46318149280880">1. Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#idm46318149278368">1.1. Principle</a></span></dt></dl></dd><dt><span class="section"><a href="#idm46318146916592">2. Setup Procedure</a></span></dt><dd><dl><dt><span class="section"><a href="#idm46318147992048">2.1. Reporting Configuration File</a></span></dt><dt><span class="section"><a href="#idm46318149273600">2.2. ReportData section</a></span></dt><dt><span class="section"><a href="#idm46318149269632">2.3. Reading the configuration file</a></span></dt></dl></dd><dt><span class="section"><a href="#idm46318151752480">3. Scripting commands</a></span></dt><dt><span class="section"><a href="#idm46318151746768">4. Forcing data reporting (snapshot).</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46318149280880"></a>1. Introduction</h2></div></div></div><p>
+      This document describes the Orocos
+      <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classOCL_1_1ReportingComponent.html">OCL::ReportingComponent</a> for monitoring
+      and capturing data exchanged between Orocos components.
+    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>
+				Since version 2.6, the ReportingComponent has had a makeover to boost
+				efficiency and to rework non-periodic and snapshot modes. For periodic
+				reporting, the behavior remained the same.
+			</p></td></tr></table></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46318149278368"></a>1.1. Principle</h3></div></div></div><p>
+	Each Orocos component can have a number of data ports. One
+	can configure the reporting components such that one or more
+	ports are captured of one or more peer components. The reporting
+	components can work sample rate based, event based, or by requesting
+	a snapshot of the current state.
+	A number of file formats can be selected.
+      </p><p>
+				The Reporter can use buffers in order to log all data it receives
+				or just report the last values in case it is flooded with data.
+				By default, the Reporter will setup unbuffered connections and you
+				need to override this manually if you wish to deviate from that.
+      </p><p>
+	A common usage scenario of the
+	<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classOCL_1_1ReportingComponent.html">OCL::ReportingComponent</a> goes
+	as follows. An Orocos application is created which contains a
+	reporting component and various other components. The
+	reporting component is peer-connected to all components which
+	must be monitored. An XML file or script command defines which
+	data ports to log of each peer.  When the reporting component is started,
+	it reads the ports and writes the exchanged data to a file at
+	a given sample rate or when new data is written.
+      </p><div class="figure"><a id="fig-reporting-example"></a><p class="title"><strong>Figure 1. Component Reporting Example</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/reporting-example.png" alt="Component Reporting Example" /><div class="caption"><p>
+	</p></div></div></div></div><br class="figure-break" /><p>
+	One can not use the <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classOCL_1_1ReportingComponent.html">OCL::ReportingComponent</a> 
+	directly but must use a derived component which implements
+	the method of writing out the data. There exists a number variants:
+	<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classOCL_1_1FileReporting.html">OCL::FileReporting</a> for writing data to a
+	file and <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classOCL_1_1ConsoleReporting.html">OCL::ConsoleReporting</a> which prints
+	the data directly to the screen. The <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classOCL_1_1NetcdfReporting.html">OCL::NetcdfReporting</a> 
+	writes the NetCDF file format. In order to support other file formats,
+	you can write your own marshaller.
+      </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46318146916592"></a>2. Setup Procedure</h2></div></div></div><p>
+      The <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classOCL_1_1ReportingComponent.html">OCL::ReportingComponent</a> is configured using
+      a single XML file which sets the component's properties and describes
+      which components and ports to monitor.
+    </p><p>
+      In order to report data of other components, they must be added as a Peer
+      to the reporting component. 
+		</p><p>
+			The following deployment XML file creates a Reporting component as in the
+      example above (<a class="xref" href="#fig-reporting-example" title="Figure 1. Component Reporting Example">Figure 1, “Component Reporting Example”</a>):
+    </p><pre class="programlisting">   &lt;simple name="Import" type="string"&gt;&lt;value&gt;ocl&lt;/value&gt;&lt;/simple&gt;
+
+  &lt;struct name="Reporter" type="OCL::FileReporting"&gt;
+
+    &lt;!-- Note: Activity may also be non-periodic --&gt;
+    &lt;struct name="Activity" type="Activity"&gt;
+      &lt;simple name="Period" type="double"&gt;&lt;value&gt;0.01&lt;/value&gt;&lt;/simple&gt;
+      &lt;simple name="Priority" type="short"&gt;&lt;value&gt;0&lt;/value&gt;&lt;/simple&gt;
+      &lt;simple name="Scheduler" type="string"&gt;&lt;value&gt;ORO_SCHED_OTHER&lt;/value&gt;&lt;/simple&gt;
+    &lt;/struct&gt;
+    &lt;simple name="AutoConf" type="boolean"&gt;&lt;value&gt;1&lt;/value&gt;&lt;/simple&gt;
+    &lt;simple name="AutoStart" type="boolean"&gt;&lt;value&gt;0&lt;/value&gt;&lt;/simple&gt;
+    &lt;simple name="AutoSave" type="boolean"&gt;&lt;value&gt;1&lt;/value&gt;&lt;/simple&gt;
+    &lt;simple name="LoadProperties" type="string"&gt;&lt;value&gt;reporting.cpf&lt;/value&gt;&lt;/simple&gt;
+    &lt;!-- List all peers (uni-directional) --&gt;
+    &lt;struct name="Peers" type="PropertyBag"&gt;
+      &lt;simple type="string"&gt;&lt;value&gt;Controller&lt;/value&gt;&lt;/simple&gt;
+      &lt;simple type="string"&gt;&lt;value&gt;Camera&lt;/value&gt;&lt;/simple&gt;
+    &lt;/struct&gt;</pre><p>
+      Note that the AutoSave flag is turned on (this is optional) to
+      save the settings when the Reporter component is cleaned up by
+      the Deployer.
+    </p><p>
+      If the Reporter has a periodic activity, it will sample all its
+      input ports and write out the current values.
+    </p><p>
+      If the Reporter's activity is non-periodic (<code class="option">Period</code> omitted or
+      zero), it will only write out a new value when new data arrives
+      on one of the connected ports.  Ports that did not get a new
+      value will repeat the previous value.
+    </p><p>
+      Also the values of attributes or properties can be logged.
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46318147992048"></a>2.1. Reporting Configuration File</h3></div></div></div><p>
+				This is an example property file, to configure a Reporting component, once it was
+				created :
+      </p><pre class="programlisting">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE properties SYSTEM "cpf.dtd"&gt;
+&lt;properties&gt;
+  &lt;simple name="WriteHeader" type="boolean"&gt;
+    &lt;description&gt;Set to true to start each report with a header.&lt;/description&gt;&lt;value&gt;1&lt;/value&gt;
+  &lt;/simple&gt;
+  &lt;simple name="Synchronize" type="boolean"&gt;
+    &lt;description&gt;Set to true if the timestamp should be synchronized with the RTT::Logger&lt;/description&gt;&lt;value&gt;0&lt;/value&gt;
+  &lt;/simple&gt;
+  &lt;simple name="WriteHeader" type="boolean"&gt;
+    &lt;description&gt;Set to true to start each report with a header.&lt;/description&gt;&lt;value&gt;1&lt;/value&gt;
+  &lt;/simple&gt;
+  &lt;simple name="ReportFile" type="string"&gt;
+    &lt;description&gt;Location on disc to store the reports.&lt;/description&gt;&lt;value&gt;reports.dat&lt;/value&gt;
+  &lt;/simple&gt;
+
+  &lt;struct name="ReportData" type="PropertyBag"&gt;
+     &lt;description&gt;A PropertyBag which defines which ports or components to report.&lt;/description&gt;
+     &lt;simple name="Component" type="string"&gt;
+        &lt;description&gt;Report all output ports of this component.&lt;/description&gt;&lt;value&gt;MyPeer2&lt;/value&gt;
+     &lt;/simple&gt;
+     &lt;simple name="Port" type="string"&gt;
+        &lt;description&gt;Report this output port&lt;/description&gt;&lt;value&gt;MyPeer.D2Port&lt;/value&gt;
+     &lt;/simple&gt;
+     &lt;simple name="Data" type="string"&gt;
+        &lt;description&gt;Report this property/attribute&lt;/description&gt;&lt;value&gt;MyPeer.Hello&lt;/value&gt;
+     &lt;/simple&gt;
+  &lt;/struct&gt;
+&lt;/properties&gt;</pre><p>
+	 If <code class="option">WriteHeader</code> is set to true, a header will be written
+	 describing the file format layout.
+       </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46318149273600"></a>2.2. ReportData section</h3></div></div></div><p>
+	The <code class="option">ReportData</code> struct describes the ports to monitor.
+	As the example shows (see also <a class="xref" href="#fig-reporting-example" title="Figure 1. Component Reporting Example">Figure 1, “Component Reporting Example”</a>),
+	a complete component can be monitored (Camera) or specific ports of
+	a peer component can be monitored. The reporting component can monitor
+	any data type as long as it's typkit is loaded in the Orocos type system (use ROS' rtt_rosnode or
+	typegen to generate typekits).
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46318149269632"></a>2.3. Reading the configuration file</h3></div></div></div><p>
+	The property file of the reporting component <span class="emphasis"><em>must</em></span> be read
+	with the loadProperties script method:
+	</p><pre class="screen">  marshalling.loadProperties("reporting.cpf")</pre><p>
+	You can not use <code class="function">readProperties()</code> because only 
+	<code class="function">loadProperties</code> loads your <code class="option">ReportData</code> struct into the
+	ReportingComponent.
+      </p><p>
+	With </p><pre class="screen">  marshalling.writeProperties("reporting.cpf")</pre><p>,
+	the current configuration can be written to disk again.
+      </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46318151752480"></a>3. Scripting commands</h2></div></div></div><p>
+	The scripting commands of the reporting components can be listed 
+	using the <span class="command"><strong>this</strong></span> command on the TaskBrowser. Below is
+	a snippet of the output:
+      </p><pre class="screen">    RTT::Method     : bool reportComponent( string const&amp; Component )
+   Add a peer Component and report all its data ports
+   Component : Name of the Component
+  RTT::Method     : bool reportData( string const&amp; Component, string const&amp; Data )
+   Add a Component's Property or attribute for reporting.
+   Component : Name of the Component
+   Data : Name of the Data to report. A property's or attribute's name.
+  RTT::Method     : bool reportPort( string const&amp; Component, string const&amp; Port )
+   Add a Component's OutputPort for reporting.
+   Component : Name of the Component
+   Port : Name of the Port.
+  RTT::Method     : bool screenComponent( string const&amp; Component )
+   Display the variables and ports of a Component.
+   Component : Name of the Component
+  RTT::Method     : void snapshot( )
+   Take a new shapshot of all data and cause them to be written out.
+  RTT::Method     : bool unreportComponent( string const&amp; Component )
+   Remove all Component's data ports from reporting.
+   Component : Name of the Component
+  RTT::Method     : bool unreportData( string const&amp; Component, string const&amp; Data )
+   Remove a Data object from reporting.
+   Component : Name of the Component
+   Data : Name of the property or attribute.
+  RTT::Method     : bool unreportPort( string const&amp; Component, string const&amp; Port )
+   Remove a Port from reporting.
+   Component : Name of the Component
+   Port : Name of the Port.
+      </pre></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46318151746768"></a>4. Forcing data reporting (snapshot).</h2></div></div></div><p>
+      One can force that all current data ports are sampled and
+      written out using the snapshot() operation. 
+			This only works when the Reporter is non-periodic
+			and the Snapshot property is set to true.
+    </p></div></div></body></html>
