@@ -12,32 +12,32 @@ Contributions are welcome!
 
 ### Latest released version ({{ site.data.releases[0].version }})
 
-* [RTT API Reference](doc/rtt/{{ site.data.releases[0].doc_branch }}/api/html/index.html)
-* [OCL API Reference](doc/ocl/{{ site.data.releases[0].doc_branch }}/api/html/index.html)
+* [RTT API Reference](rtt/{{ site.data.releases[0].doc_branch }}/api/html/index.html)
+* [OCL API Reference](ocl/{{ site.data.releases[0].doc_branch }}/api/html/index.html)
 
 ### Latest development version (master)
 
-* [RTT API Reference](doc/rtt/master/api/html/index.html)
-* [OCL API Reference](doc/ocl/master/api/html/index.html)
+* [RTT API Reference](rtt/master/api/html/index.html)
+* [OCL API Reference](ocl/master/api/html/index.html)
 
 ## Cheat sheets
 
-* [OROCOS Cheat Sheet](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos_cheat_sheet.pdf)
-* [RTT Cheat Sheet](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/rtt_cheat_sheet.pdf)
+* [OROCOS Cheat Sheet](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos_cheat_sheet.pdf)
+* [RTT Cheat Sheet](rtt/{{ site.data.releases[0].doc_branch }}/xml/rtt_cheat_sheet.pdf)
 
 ## All manuals
 
-* [Installing the RTT](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-installation.html) ([pdf](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-installation.pdf))
-* [Component Builder's Manual](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-components-manual.html) ([pdf](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-components-manual.pdf))
+* [Installing the RTT](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-installation.html) ([pdf](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-installation.pdf))
+* [Component Builder's Manual](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-components-manual.html) ([pdf](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-components-manual.pdf))
 * [Building Components using oroGen](http://rock-robotics.org/documentation/orogen)
-* [Orocos plugins](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-rtt-plugins.html) ([pdf](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-rtt-plugins.pdf))
-* [Orocos typekits](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-typekit-plugin.html) ([pdf](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-typekit-plugin.pdf))
+* [Orocos plugins](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-rtt-plugins.html) ([pdf](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-rtt-plugins.pdf))
+* [Orocos typekits](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-typekit-plugin.html) ([pdf](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-typekit-plugin.pdf))
 * [Building Typekits using typegen](http://rock-robotics.org/documentation/orogen/type_definitions.html)
-* [Orocos TaskBrowser](doc/ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-taskbrowser.html) ([pdf](doc/ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-taskbrowser.pdf))
-* [Orocos Deployment](doc/ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-deployment.html) ([pdf](doc/ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-deployment.pdf))
-* [Orocos Reporting](doc/ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-reporting.html) ([pdf](doc/ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-reporting.pdf))
-* [Orocos CORBA Transport](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-transports-corba.html) ([pdf](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-transports-corba.pdf))
-* [Orocos Message Queue Transport](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-transports-mqueue.html) ([pdf](doc/rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-transports-mqueue.pdf))
+* [Orocos TaskBrowser](ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-taskbrowser.html) ([pdf](ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-taskbrowser.pdf))
+* [Orocos Deployment](ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-deployment.html) ([pdf](ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-deployment.pdf))
+* [Orocos Reporting](ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-reporting.html) ([pdf](ocl/{{ site.data.releases[0].doc_branch }}/xml/orocos-reporting.pdf))
+* [Orocos CORBA Transport](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-transports-corba.html) ([pdf](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-transports-corba.pdf))
+* [Orocos Message Queue Transport](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-transports-mqueue.html) ([pdf](rtt/{{ site.data.releases[0].doc_branch }}/xml/orocos-transports-mqueue.pdf))
 * [The RTT-Lua Cookbook](http://www.orocos.org/wiki/orocos/toolchain/LuaCookbook)
 
 ## What is the Orocos Toolchain?
