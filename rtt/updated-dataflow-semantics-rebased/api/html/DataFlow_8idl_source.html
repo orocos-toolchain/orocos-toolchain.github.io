@@ -79,109 +79,110 @@
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">boolean</span> init;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">boolean</span> pull;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        CBufferPolicy buffer_policy;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">boolean</span> mandatory;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">long</span> transport;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">long</span> data_size;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">string</span> name_id;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    };</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="interfaceRTT_1_1corba_1_1CChannelElement.html">   38</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">//boolean setDataSample(in any sample);</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">boolean</span> inputReady();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">boolean</span> channelReady(in CConnPolicy cp);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        CFlowStatus read(out any sample, in <span class="keywordtype">boolean</span> copy_old_data);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        CWriteStatus write(in any sample);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">void</span> disconnect();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    };</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">   91</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">CRemoteChannelElement</a> : <a class="code" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">void</span> setRemoteSide(in <a class="code" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">CRemoteChannelElement</a> other);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">boolean</span> remoteSignal();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordtype">void</span> remoteDisconnect(in <span class="keywordtype">boolean</span> forward);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    };</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">  119</a></span>&#160;    exception <a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a> {};</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">  122</a></span>&#160;    exception <a class="code" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a> {};</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">  125</a></span>&#160;    exception <a class="code" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a> {};</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">enum</span> CPortType { CInput, COutput };</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">struct </span>CPortDescription</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        CPortType type;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">string</span>   name;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">string</span>   type_name;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    };</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">  143</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <span class="keyword">typedef</span> sequence&lt;string&gt; CPortNames;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keyword">typedef</span> sequence&lt;CPortDescription&gt; CPortDescriptions;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      CPortNames getPorts();</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      CPortDescriptions getPortDescriptions();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      CPortType getPortType(in <span class="keywordtype">string</span> port_name)</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keywordtype">string</span> getDataType(in <span class="keywordtype">string</span> port_name)</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordtype">boolean</span> isConnected(in <span class="keywordtype">string</span> port_name)</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordtype">void</span> disconnectPort(in <span class="keywordtype">string</span> port_name)</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      <a class="code" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a> buildChannelOutput(in <span class="keywordtype">string</span> input_port, inout CConnPolicy policy)</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a>,<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>,<a class="code" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a>);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <a class="code" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a> buildChannelInput(in <span class="keywordtype">string</span> output_port, inout CConnPolicy policy)</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a>,<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>,<a class="code" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a>);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      <span class="keywordtype">boolean</span> createConnection(in <span class="keywordtype">string</span> local_port, in <a class="code" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a> remote_ports,</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            in <span class="keywordtype">string</span> remote_port, inout CConnPolicy policy)</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="keywordtype">boolean</span> createSharedConnection(in <span class="keywordtype">string</span> input_port, inout CConnPolicy policy)</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>,<a class="code" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a>);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <span class="keywordtype">boolean</span> removeConnection(in <span class="keywordtype">string</span> local_port,</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            in <a class="code" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a> remote_ports, in <span class="keywordtype">string</span> remote_port)</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keywordtype">boolean</span> createStream(in <span class="keywordtype">string</span> local_port, inout CConnPolicy policy)</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <span class="keywordtype">void</span> removeStream(in <span class="keywordtype">string</span> local_port, in <span class="keywordtype">string</span> stream_name)</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    };</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  };</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;};</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor"></span></div>
-<div class="ttc" id="interfaceRTT_1_1corba_1_1CRemoteChannelElement_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">RTT::corba::CRemoteChannelElement</a></div><div class="ttdoc">The advanced channel element interface, used by Orocos to relay over-CORBA data flow connections...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00091">DataFlow.idl:91</a></div></div>
-<div class="ttc" id="interfaceRTT_1_1corba_1_1CDataFlowInterface_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">RTT::corba::CDataFlowInterface</a></div><div class="ttdoc">An interface to access the dataflow of a CControlTask object. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00143">DataFlow.idl:143</a></div></div>
-<div class="ttc" id="exceptionRTT_1_1corba_1_1CNoSuchPortException_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div><div class="ttdoc">Emitted when information is requested on a port that does not exist. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00119">DataFlow.idl:119</a></div></div>
-<div class="ttc" id="interfaceRTT_1_1corba_1_1CChannelElement_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CChannelElement.html">RTT::corba::CChannelElement</a></div><div class="ttdoc">Represents the basic channel element interface for reading, writing and disconnecting a channel...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00038">DataFlow.idl:38</a></div></div>
-<div class="ttc" id="exceptionRTT_1_1corba_1_1CNoCorbaTransport_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">RTT::corba::CNoCorbaTransport</a></div><div class="ttdoc">Emitted during connections, when there is no CORBA transport defined for the data type of the given p...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00122">DataFlow.idl:122</a></div></div>
-<div class="ttc" id="exceptionRTT_1_1corba_1_1CInvalidArgument_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">RTT::corba::CInvalidArgument</a></div><div class="ttdoc">Emitted during connections, when it is not possible to build new connections with the given arguments...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00125">DataFlow.idl:125</a></div></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">long</span> max_threads;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">boolean</span> mandatory;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">long</span> transport;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">long</span> data_size;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">string</span> name_id;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="interfaceRTT_1_1corba_1_1CChannelElement.html">   39</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//boolean setDataSample(in any sample);</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">boolean</span> inputReady();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">boolean</span> channelReady(in CConnPolicy cp);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        CFlowStatus read(out any sample, in <span class="keywordtype">boolean</span> copy_old_data);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        CWriteStatus write(in any sample);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> disconnect();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    };</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">   92</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">CRemoteChannelElement</a> : <a class="code" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">void</span> setRemoteSide(in <a class="code" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">CRemoteChannelElement</a> other);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        oneway <span class="keywordtype">void</span> remoteSignal();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">void</span> remoteDisconnect(in <span class="keywordtype">boolean</span> forward);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    };</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">  120</a></span>&#160;    exception <a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a> {};</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">  123</a></span>&#160;    exception <a class="code" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a> {};</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">  126</a></span>&#160;    exception <a class="code" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a> {};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">enum</span> CPortType { CInput, COutput };</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">struct </span>CPortDescription</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        CPortType type;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordtype">string</span>   name;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">string</span>   type_name;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    };</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">  144</a></span>&#160;    <span class="keyword">interface </span><a class="code" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keyword">typedef</span> sequence&lt;string&gt; CPortNames;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keyword">typedef</span> sequence&lt;CPortDescription&gt; CPortDescriptions;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      CPortNames getPorts();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      CPortDescriptions getPortDescriptions();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      CPortType getPortType(in <span class="keywordtype">string</span> port_name)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="keywordtype">string</span> getDataType(in <span class="keywordtype">string</span> port_name)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="keywordtype">boolean</span> isConnected(in <span class="keywordtype">string</span> port_name)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keywordtype">void</span> disconnectPort(in <span class="keywordtype">string</span> port_name)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <a class="code" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a> buildChannelOutput(in <span class="keywordtype">string</span> input_port, inout CConnPolicy policy)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a>,<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>,<a class="code" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      <a class="code" href="interfaceRTT_1_1corba_1_1CChannelElement.html">CChannelElement</a> buildChannelInput(in <span class="keywordtype">string</span> output_port, inout CConnPolicy policy)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">CNoCorbaTransport</a>,<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>,<a class="code" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="keywordtype">boolean</span> createConnection(in <span class="keywordtype">string</span> local_port, in <a class="code" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a> remote_ports,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            in <span class="keywordtype">string</span> remote_port, inout CConnPolicy policy)</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keywordtype">boolean</span> createSharedConnection(in <span class="keywordtype">string</span> input_port, inout CConnPolicy policy)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>,<a class="code" href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">CInvalidArgument</a>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="keywordtype">boolean</span> removeConnection(in <span class="keywordtype">string</span> local_port,</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            in <a class="code" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">CDataFlowInterface</a> remote_ports, in <span class="keywordtype">string</span> remote_port)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keywordtype">boolean</span> createStream(in <span class="keywordtype">string</span> local_port, inout CConnPolicy policy)</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      <span class="keywordtype">void</span> removeStream(in <span class="keywordtype">string</span> local_port, in <span class="keywordtype">string</span> stream_name)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            raises(<a class="code" href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">CNoSuchPortException</a>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    };</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  };</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;};</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor"></span></div>
+<div class="ttc" id="interfaceRTT_1_1corba_1_1CRemoteChannelElement_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">RTT::corba::CRemoteChannelElement</a></div><div class="ttdoc">The advanced channel element interface, used by Orocos to relay over-CORBA data flow connections...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00092">DataFlow.idl:92</a></div></div>
+<div class="ttc" id="interfaceRTT_1_1corba_1_1CDataFlowInterface_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html">RTT::corba::CDataFlowInterface</a></div><div class="ttdoc">An interface to access the dataflow of a CControlTask object. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00144">DataFlow.idl:144</a></div></div>
+<div class="ttc" id="exceptionRTT_1_1corba_1_1CNoSuchPortException_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CNoSuchPortException.html">RTT::corba::CNoSuchPortException</a></div><div class="ttdoc">Emitted when information is requested on a port that does not exist. </div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00120">DataFlow.idl:120</a></div></div>
+<div class="ttc" id="interfaceRTT_1_1corba_1_1CChannelElement_html"><div class="ttname"><a href="interfaceRTT_1_1corba_1_1CChannelElement.html">RTT::corba::CChannelElement</a></div><div class="ttdoc">Represents the basic channel element interface for reading, writing and disconnecting a channel...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00039">DataFlow.idl:39</a></div></div>
+<div class="ttc" id="exceptionRTT_1_1corba_1_1CNoCorbaTransport_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CNoCorbaTransport.html">RTT::corba::CNoCorbaTransport</a></div><div class="ttdoc">Emitted during connections, when there is no CORBA transport defined for the data type of the given p...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00123">DataFlow.idl:123</a></div></div>
+<div class="ttc" id="exceptionRTT_1_1corba_1_1CInvalidArgument_html"><div class="ttname"><a href="exceptionRTT_1_1corba_1_1CInvalidArgument.html">RTT::corba::CInvalidArgument</a></div><div class="ttdoc">Emitted during connections, when it is not possible to build new connections with the given arguments...</div><div class="ttdef"><b>Definition:</b> <a href="DataFlow_8idl_source.html#l00126">DataFlow.idl:126</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 4 2016 20:13:42 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 26 2017 21:11:45 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

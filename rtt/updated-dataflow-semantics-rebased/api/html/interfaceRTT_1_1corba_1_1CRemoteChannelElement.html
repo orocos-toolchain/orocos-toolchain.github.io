@@ -80,9 +80,9 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#a6105a1478880c436e408bb9bb5747bd9">setRemoteSide</a> (in <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">CRemoteChannelElement</a> other)</td></tr>
 <tr class="memdesc:a6105a1478880c436e408bb9bb5747bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to inform this channel element which the other side is such that they can relay a signal or disconnect. <br/></td></tr>
 <tr class="separator:a6105a1478880c436e408bb9bb5747bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a739739a6a807c5bb6ed99fb8805e865b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#a739739a6a807c5bb6ed99fb8805e865b">remoteSignal</a> ()</td></tr>
-<tr class="memdesc:a739739a6a807c5bb6ed99fb8805e865b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by the 'remote' side to inform this channel element that new data is available for reading.  <a href="#a739739a6a807c5bb6ed99fb8805e865b">More...</a><br/></td></tr>
-<tr class="separator:a739739a6a807c5bb6ed99fb8805e865b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae51a6ff7bd88e24e228973a65d0248"><td class="memItemLeft" align="right" valign="top">oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#abae51a6ff7bd88e24e228973a65d0248">remoteSignal</a> ()</td></tr>
+<tr class="memdesc:abae51a6ff7bd88e24e228973a65d0248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by the 'remote' side to inform this channel element that new data is available for reading.  <a href="#abae51a6ff7bd88e24e228973a65d0248">More...</a><br/></td></tr>
+<tr class="separator:abae51a6ff7bd88e24e228973a65d0248"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab175cc3f166214a59e60147ccabf6e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#ab175cc3f166214a59e60147ccabf6e20">remoteDisconnect</a> (in boolean forward)</td></tr>
 <tr class="memdesc:ab175cc3f166214a59e60147ccabf6e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by the 'remote' side to inform this channel element that the connection is been cleaned up.  <a href="#ab175cc3f166214a59e60147ccabf6e20">More...</a><br/></td></tr>
 <tr class="separator:ab175cc3f166214a59e60147ccabf6e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,7 +106,7 @@ CFlowStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The advanced channel element interface, used by <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> to relay over-CORBA data flow connections. </p>
 
-<p>Definition at line <a class="el" href="DataFlow_8idl_source.html#l00091">91</a> of file <a class="el" href="DataFlow_8idl_source.html">DataFlow.idl</a>.</p>
+<p>Definition at line <a class="el" href="DataFlow_8idl_source.html#l00092">92</a> of file <a class="el" href="DataFlow_8idl_source.html">DataFlow.idl</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a3fc59de2c43ae702203f5cc8c7050320"></a>
 <div class="memitem">
@@ -219,12 +219,12 @@ CFlowStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a class="anchor" id="a739739a6a807c5bb6ed99fb8805e865b"></a>
+<a class="anchor" id="abae51a6ff7bd88e24e228973a65d0248"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boolean RTT::corba::CRemoteChannelElement::remoteSignal </td>
+          <td class="memname">oneway void RTT::corba::CRemoteChannelElement::remoteSignal </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -270,7 +270,7 @@ CFlowStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 4 2016 20:13:43 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 26 2017 21:11:47 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

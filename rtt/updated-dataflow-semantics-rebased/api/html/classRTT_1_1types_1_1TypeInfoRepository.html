@@ -76,6 +76,9 @@ typedef boost::shared_ptr<br class="typebreak"/>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a670d12650fdf882d92739c1f178d5812"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a670d12650fdf882d92739c1f178d5812"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAutoLoader</b> (const boost::function&lt; bool(const std::string &amp;)&gt; &amp;loader)</td></tr>
+<tr class="separator:a670d12650fdf882d92739c1f178d5812"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a866326a0a0436c7aa688fa1c180b7015"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1types_1_1TypeInfo.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1types_1_1TypeInfoRepository.html#a866326a0a0436c7aa688fa1c180b7015">type</a> (const std::string &amp;name) const </td></tr>
 <tr class="memdesc:a866326a0a0436c7aa688fa1c180b7015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a type with a given <em>name</em>.  <a href="#a866326a0a0436c7aa688fa1c180b7015">More...</a><br/></td></tr>
 <tr class="separator:a866326a0a0436c7aa688fa1c180b7015"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +134,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()
 <div class="textblock"><p>This class contains all known types to <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a>. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classRTT_1_1types_1_1TemplateTypeInfo.html" title="This template class allows user types to be used in all Orocos primitives. ">TemplateTypeInfo</a> to add your own classes to <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a>. </dd></dl>
 
-<p>Definition at line <a class="el" href="TypeInfoRepository_8hpp_source.html#l00055">55</a> of file <a class="el" href="TypeInfoRepository_8hpp_source.html">TypeInfoRepository.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfoRepository_8hpp_source.html#l00056">56</a> of file <a class="el" href="TypeInfoRepository_8hpp_source.html">TypeInfoRepository.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a8de60807ab40114355121a6b23b743c5"></a>
 <div class="memitem">
@@ -156,7 +159,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>false if <em>ti</em> was already added or if ti-&gt;getTypeName() already exists in this repository. </dd></dl>
 
-<p>Definition at line <a class="el" href="TypeInfoRepository_8cpp_source.html#l00128">128</a> of file <a class="el" href="TypeInfoRepository_8cpp_source.html">TypeInfoRepository.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfoRepository_8cpp_source.html#l00148">148</a> of file <a class="el" href="TypeInfoRepository_8cpp_source.html">TypeInfoRepository.cpp</a>.</p>
 
 <p>References <a class="el" href="TypeInfo_8hpp_source.html#l00083">RTT::types::TypeInfo::getTypeName()</a>.</p>
 
@@ -179,7 +182,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()
 <p>Add a type by using a type info generator. </p>
 <p>This class is responsible for installing the <a class="el" href="classRTT_1_1types_1_1TypeInfo.html" title="A class for representing a user type, and which can build instances of that type. ...">TypeInfo</a> object, registering the name and installing the necessary factories. </p>
 
-<p>Definition at line <a class="el" href="TypeInfoRepository_8cpp_source.html#l00142">142</a> of file <a class="el" href="TypeInfoRepository_8cpp_source.html">TypeInfoRepository.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfoRepository_8cpp_source.html#l00162">162</a> of file <a class="el" href="TypeInfoRepository_8cpp_source.html">TypeInfoRepository.cpp</a>.</p>
 
 <p>References <a class="el" href="TypeInfo_8cpp_source.html#l00072">RTT::types::TypeInfo::addAlias()</a>, <a class="el" href="classRTT_1_1types_1_1TypeInfoGenerator.html#a2ac544c7d7a0993e7e1e8c639753095b">RTT::types::TypeInfoGenerator::getTypeInfoObject()</a>, <a class="el" href="classRTT_1_1types_1_1TypeInfoGenerator.html#ac7678e34c359cb1ab1dfda9500a7dc6c">RTT::types::TypeInfoGenerator::getTypeName()</a>, and <a class="el" href="classRTT_1_1types_1_1TypeInfoGenerator.html#aa27628858411ce36f8f11eb6952844b0">RTT::types::TypeInfoGenerator::installTypeInfoObject()</a>.</p>
 
@@ -201,7 +204,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()
 <p>List all types registered with their original type name. </p>
 <p>See getDottedTypes for the typenames written in the 'package.type' notation. </p>
 
-<p>Definition at line <a class="el" href="TypeInfoRepository_8cpp_source.html#l00176">176</a> of file <a class="el" href="TypeInfoRepository_8cpp_source.html">TypeInfoRepository.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfoRepository_8cpp_source.html#l00196">196</a> of file <a class="el" href="TypeInfoRepository_8cpp_source.html">TypeInfoRepository.cpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +230,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="TypeInfoRepository_8cpp_source.html#l00076">76</a> of file <a class="el" href="TypeInfoRepository_8cpp_source.html">TypeInfoRepository.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TypeInfoRepository_8cpp_source.html#l00098">98</a> of file <a class="el" href="TypeInfoRepository_8cpp_source.html">TypeInfoRepository.cpp</a>.</p>
 
 </div>
 </div>
@@ -238,7 +241,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> ()
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 4 2016 20:13:45 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 26 2017 21:11:49 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

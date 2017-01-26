@@ -78,6 +78,9 @@ Inheritance diagram for RTT::base::BufferLocked&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
+<tr class="memitem:a1bd51b23822279f194ecb70431e3e243"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bd51b23822279f194ecb70431e3e243"></a>
+typedef BufferBase::Options&#160;</td><td class="memItemRight" valign="bottom"><b>Options</b></td></tr>
+<tr class="separator:a1bd51b23822279f194ecb70431e3e243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73b2cf886db0861f76393724dc831d9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73b2cf886db0861f76393724dc831d9f"></a>
 typedef <a class="el" href="classRTT_1_1base_1_1BufferInterface.html">BufferInterface</a>&lt; T &gt;<br class="typebreak"/>
 ::reference_t&#160;</td><td class="memItemRight" valign="bottom"><b>reference_t</b></td></tr>
@@ -150,6 +153,10 @@ virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <tr class="memitem:a7e51f8910a5f585412fcd9d838709e19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLocked.html#a7e51f8910a5f585412fcd9d838709e19">full</a> () const </td></tr>
 <tr class="memdesc:a7e51f8910a5f585412fcd9d838709e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this buffer is full.  <a href="#a7e51f8910a5f585412fcd9d838709e19">More...</a><br/></td></tr>
 <tr class="separator:a7e51f8910a5f585412fcd9d838709e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e40bb36a5d26fd3d4ef10022d77eee9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e40bb36a5d26fd3d4ef10022d77eee9"></a>
+size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1BufferLocked.html#a1e40bb36a5d26fd3d4ef10022d77eee9">dropped</a> () const </td></tr>
+<tr class="memdesc:a1e40bb36a5d26fd3d4ef10022d77eee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of dropped samples, because the buffer was full. <br/></td></tr>
+<tr class="separator:a1e40bb36a5d26fd3d4ef10022d77eee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
@@ -290,7 +297,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#a721f2d8ea29ab506dbe0a4c8b4a26739">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00198">198</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00212">212</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -321,7 +328,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#af28ce2d9f7370819cb9bcd3222cc67e3">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00208">208</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00222">222</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -404,7 +411,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#a403a7c9c68c2c4870079f062b8eab36b">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00213">213</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00227">227</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -436,7 +443,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#aabaaf0c817a58a4b130d492b58e86b1a">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00218">218</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00232">232</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -475,7 +482,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ade01d7c098ebc1062ea374cb18e340ba">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00153">153</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00167">167</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -514,7 +521,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a1fb40ec315410ca6650bb722b23230dd">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00164">164</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00178">178</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -548,7 +555,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#ad877aa5119fb6ea6ee3a4fc8f6800cfb">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00177">177</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00191">191</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -626,7 +633,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#a6cabb6e94e7d78d4d916f3ddab6e1824">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00128">128</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00132">132</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -664,7 +671,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferInterface.html#adc9383d94d498971244c09907004de3f">RTT::base::BufferInterface&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00191">191</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00205">205</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -696,7 +703,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1BufferBase.html#ae43534aa3872e564c88fd18d5cf5f772">RTT::base::BufferBase</a>.</p>
 
-<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00203">203</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BufferLocked_8hpp_source.html#l00217">217</a> of file <a class="el" href="BufferLocked_8hpp_source.html">BufferLocked.hpp</a>.</p>
 
 </div>
 </div>
@@ -706,7 +713,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 4 2016 20:13:43 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 26 2017 21:11:46 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
