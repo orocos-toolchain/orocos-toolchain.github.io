@@ -50,11 +50,8 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pro-types">Protected Types</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="structOCL_1_1TimerComponent_1_1TimeoutCatcher-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TimerComponent::TimeoutCatcher Struct Reference</div>  </div>
@@ -71,97 +68,26 @@ Inheritance diagram for TimerComponent::TimeoutCatcher:</div>
  <div class="center">
   <img src="structOCL_1_1TimerComponent_1_1TimeoutCatcher.png" usemap="#TimerComponent::TimeoutCatcher_map" alt=""/>
   <map id="TimerComponent::TimeoutCatcher_map" name="TimerComponent::TimeoutCatcher_map">
-<area doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html" alt="Timer" shape="rect" coords="0,56,115,80"/>
-<area doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1RunnableInterface.html" alt="RunnableInterface" shape="rect" coords="0,0,115,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:af40115442f2f261296ab9e8f270317ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af40115442f2f261296ab9e8f270317ea"></a>
-typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a></td></tr>
-<tr class="separator:af40115442f2f261296ab9e8f270317ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ca3ddc755ec5f46e8f3f098bdebf57d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ca3ddc755ec5f46e8f3f098bdebf57d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TimeoutCatcher</b> (std::vector&lt; <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1OutputPort.html">RTT::OutputPort</a>&lt; <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> &gt; * &gt; &amp;port_timers, <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1OutputPort.html">RTT::OutputPort</a>&lt; <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> &gt; &amp;op)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TimeoutCatcher</b> (std::vector&lt; RTT::OutputPort&lt; RTT::os::Timer::TimerId &gt; * &gt; &amp;port_timers, RTT::OutputPort&lt; RTT::os::Timer::TimerId &gt; &amp;op)</td></tr>
 <tr class="separator:a9ca3ddc755ec5f46e8f3f098bdebf57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c5af0063e5ca84e4c779e6e1a9c3d8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c5af0063e5ca84e4c779e6e1a9c3d8a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>timeout</b> (<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">os::Timer::TimerId</a> id)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>timeout</b> (os::Timer::TimerId id)</td></tr>
 <tr class="separator:a9c5af0063e5ca84e4c779e6e1a9c3d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93711c391b98e1a602ffc9a29e4119d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93711c391b98e1a602ffc9a29e4119d2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#a93711c391b98e1a602ffc9a29e4119d2">setMaxTimers</a> (<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> max)</td></tr>
-<tr class="separator:a93711c391b98e1a602ffc9a29e4119d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f79f2345416de593f91df8c908dac90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f79f2345416de593f91df8c908dac90"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#a8f79f2345416de593f91df8c908dac90">startTimer</a> (<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id, <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> period)</td></tr>
-<tr class="separator:a8f79f2345416de593f91df8c908dac90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ae9fe0cce076bfbf7c6ae4345d9327b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ae9fe0cce076bfbf7c6ae4345d9327b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#a4ae9fe0cce076bfbf7c6ae4345d9327b">arm</a> (<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id, <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> wait_time)</td></tr>
-<tr class="separator:a4ae9fe0cce076bfbf7c6ae4345d9327b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8130920f19dbb7ebf190a2834455134"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8130920f19dbb7ebf190a2834455134"></a>
-TimeService::Seconds&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#ab8130920f19dbb7ebf190a2834455134">timeRemaining</a> (<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id) const </td></tr>
-<tr class="separator:ab8130920f19dbb7ebf190a2834455134"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f4c6af23b66acdbaa96f1f54130f54d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f4c6af23b66acdbaa96f1f54130f54d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#a5f4c6af23b66acdbaa96f1f54130f54d">isArmed</a> (<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id) const </td></tr>
-<tr class="separator:a5f4c6af23b66acdbaa96f1f54130f54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe2fe753bebb97102d899a45d02e19ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe2fe753bebb97102d899a45d02e19ac"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#abe2fe753bebb97102d899a45d02e19ac">killTimer</a> (<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id)</td></tr>
-<tr class="separator:abe2fe753bebb97102d899a45d02e19ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9ee7f93fc4d75399db85aefb9998c60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9ee7f93fc4d75399db85aefb9998c60"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#ae9ee7f93fc4d75399db85aefb9998c60">waitFor</a> (<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> id)</td></tr>
-<tr class="separator:ae9ee7f93fc4d75399db85aefb9998c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf5c802d3faa9f3f6b8d700b8b3ddf43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf5c802d3faa9f3f6b8d700b8b3ddf43"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#acf5c802d3faa9f3f6b8d700b8b3ddf43">waitForUntil</a> (<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> id, <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> abs_time)</td></tr>
-<tr class="separator:acf5c802d3faa9f3f6b8d700b8b3ddf43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c3cbd96505481cbd9c2f5081c2cd72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10c3cbd96505481cbd9c2f5081c2cd72"></a>
-virtual <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1ThreadInterface.html">os::ThreadInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1RunnableInterface.html#a10c3cbd96505481cbd9c2f5081c2cd72">getThread</a> () const </td></tr>
-<tr class="separator:a10c3cbd96505481cbd9c2f5081c2cd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a742d04970b31c2999e8fd7cb402947cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a742d04970b31c2999e8fd7cb402947cd"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1RunnableInterface.html#a742d04970b31c2999e8fd7cb402947cd">hasWork</a> ()</td></tr>
-<tr class="separator:a742d04970b31c2999e8fd7cb402947cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70c18e6321d3e6929e0097940d68c1ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70c18e6321d3e6929e0097940d68c1ef"></a>
-ActivityInterface *&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1RunnableInterface.html#a70c18e6321d3e6929e0097940d68c1ef">getActivity</a> () const </td></tr>
-<tr class="separator:a70c18e6321d3e6929e0097940d68c1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a563528c3275ef0631f17928a80994371"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a563528c3275ef0631f17928a80994371"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1RunnableInterface.html#a563528c3275ef0631f17928a80994371">setActivity</a> (ActivityInterface *task)</td></tr>
-<tr class="separator:a563528c3275ef0631f17928a80994371"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a563528c3275ef0631f17928a80994371"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a563528c3275ef0631f17928a80994371"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1RunnableInterface.html#a563528c3275ef0631f17928a80994371">setActivity</a> (ActivityInterface *task)</td></tr>
-<tr class="separator:a563528c3275ef0631f17928a80994371"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a01cd8334c1907035cb23dc9d1da8c94a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01cd8334c1907035cb23dc9d1da8c94a"></a>
-<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1OutputPort.html">RTT::OutputPort</a>&lt; <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>me</b></td></tr>
+RTT::OutputPort&lt; RTT::os::Timer::TimerId &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>me</b></td></tr>
 <tr class="separator:a01cd8334c1907035cb23dc9d1da8c94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d4c690ce96d1e1c50d5da648ab774ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d4c690ce96d1e1c50d5da648ab774ab"></a>
-std::vector&lt; <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1OutputPort.html">RTT::OutputPort</a>&lt; <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> &gt; * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_port_timers</b></td></tr>
+std::vector&lt; RTT::OutputPort&lt; RTT::os::Timer::TimerId &gt; * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_port_timers</b></td></tr>
 <tr class="separator:a7d4c690ce96d1e1c50d5da648ab774ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
-Protected Types</h2></td></tr>
-<tr class="memitem:aaf02e89f4fb03702b2979dd699edde40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf02e89f4fb03702b2979dd699edde40"></a>
-typedef std::vector&lt; TimerInfo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">TimerIds</a></td></tr>
-<tr class="separator:aaf02e89f4fb03702b2979dd699edde40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a2606193d96db504b4b52df3dcb8d631b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2606193d96db504b4b52df3dcb8d631b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#a2606193d96db504b4b52df3dcb8d631b">initialize</a> ()</td></tr>
-<tr class="separator:a2606193d96db504b4b52df3dcb8d631b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfc2e3a95a863e1105e05b983f23f50f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfc2e3a95a863e1105e05b983f23f50f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#abfc2e3a95a863e1105e05b983f23f50f">finalize</a> ()</td></tr>
-<tr class="separator:abfc2e3a95a863e1105e05b983f23f50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5d7104ef70085ddf0880cf429a540f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5d7104ef70085ddf0880cf429a540f4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4">step</a> ()</td></tr>
-<tr class="separator:ab5d7104ef70085ddf0880cf429a540f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfbcfa7d6da2bc548f6a4f5275caf0ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfbcfa7d6da2bc548f6a4f5275caf0ed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed">loop</a> ()</td></tr>
-<tr class="separator:adfbcfa7d6da2bc548f6a4f5275caf0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7278dc8d64e602d5981d8d268dbcde4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7278dc8d64e602d5981d8d268dbcde4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1os_1_1Timer.html#ac7278dc8d64e602d5981d8d268dbcde4">breakLoop</a> ()</td></tr>
-<tr class="separator:ac7278dc8d64e602d5981d8d268dbcde4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Helper class for catching the virtual timeout function of Timer. </p>

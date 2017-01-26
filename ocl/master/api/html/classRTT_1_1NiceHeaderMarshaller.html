@@ -58,7 +58,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>A <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1marsh_1_1MarshallInterface.html">marsh::MarshallInterface</a> for generating headers usable for interpretation by plot programs.  
+<p>A marsh::MarshallInterface for generating headers usable for interpretation by plot programs.  
  <a href="classRTT_1_1NiceHeaderMarshaller.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="NiceHeaderMarshaller_8hpp_source.html">NiceHeaderMarshaller.hpp</a>&gt;</code></p>
@@ -68,8 +68,6 @@ Inheritance diagram for NiceHeaderMarshaller&lt; o_stream &gt;:</div>
  <div class="center">
   <img src="classRTT_1_1NiceHeaderMarshaller.png" usemap="#NiceHeaderMarshaller_3C_20o_5Fstream_20_3E_map" alt=""/>
   <map id="NiceHeaderMarshaller_3C_20o_5Fstream_20_3E_map" name="NiceHeaderMarshaller&lt; o_stream &gt;_map">
-<area doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1marsh_1_1MarshallInterface.html" alt="MarshallInterface" shape="rect" coords="0,0,216,24"/>
-<area doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1marsh_1_1StreamProcessor.html" alt="StreamProcessor&lt; o_stream &gt;" shape="rect" coords="226,0,442,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -88,31 +86,25 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>NiceHeaderMarshaller</b> (output_stream &amp;os)</td></tr>
 <tr class="separator:a3b234bd45167fcce968c5a8e2aa3d4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae34f1bd5a0b102ecd12d2609b134be56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae34f1bd5a0b102ecd12d2609b134be56"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>serialize</b> (<a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1PropertyBase.html">base::PropertyBase</a> *v)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>serialize</b> (base::PropertyBase *v)</td></tr>
 <tr class="separator:ae34f1bd5a0b102ecd12d2609b134be56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f40b5be70e12a3301782f273674e662"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f40b5be70e12a3301782f273674e662"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>serialize</b> (const <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1PropertyBag.html">PropertyBag</a> &amp;v)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>serialize</b> (const PropertyBag &amp;v)</td></tr>
 <tr class="separator:a7f40b5be70e12a3301782f273674e662"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d9afddce238f0ad497eea65d44d4ce4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1NiceHeaderMarshaller.html#a5d9afddce238f0ad497eea65d44d4ce4">store</a> (const std::string &amp;name)</td></tr>
 <tr class="separator:a5d9afddce238f0ad497eea65d44d4ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3ef1aa74fcb6c48c22c4a8ab787970c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3ef1aa74fcb6c48c22c4a8ab787970c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>serialize</b> (const <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1Property.html">Property</a>&lt; <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1PropertyBag.html">PropertyBag</a> &gt; &amp;v)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>serialize</b> (const Property&lt; PropertyBag &gt; &amp;v)</td></tr>
 <tr class="separator:ab3ef1aa74fcb6c48c22c4a8ab787970c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3aed50bc3b4459454ccb8c64f5ced5a"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
 <tr class="separator:ad3aed50bc3b4459454ccb8c64f5ced5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd7f552d3b53e72c5fce5a40a3639259"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd7f552d3b53e72c5fce5a40a3639259"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1marsh_1_1StreamProcessor.html#abd7f552d3b53e72c5fce5a40a3639259">setStream</a> (o_stream &amp;_s)</td></tr>
-<tr class="separator:abd7f552d3b53e72c5fce5a40a3639259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12ec254212a44e5220c31c868b8d5961"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12ec254212a44e5220c31c868b8d5961"></a>
-o_stream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1marsh_1_1StreamProcessor.html#a12ec254212a44e5220c31c868b8d5961">getStream</a> ()</td></tr>
-<tr class="separator:a12ec254212a44e5220c31c868b8d5961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename o_stream&gt;<br />
 class RTT::NiceHeaderMarshaller&lt; o_stream &gt;</h3>
 
-<p>A <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1marsh_1_1MarshallInterface.html">marsh::MarshallInterface</a> for generating headers usable for interpretation by plot programs. </p>
+<p>A marsh::MarshallInterface for generating headers usable for interpretation by plot programs. </p>
 <p>A header looks like: </p><pre class="fragment">* # Col_1_name Col_2_name Col_3_name ....
 * </pre> 
 <p>Definition at line <a class="el" href="NiceHeaderMarshaller_8hpp_source.html#l00055">55</a> of file <a class="el" href="NiceHeaderMarshaller_8hpp_source.html">NiceHeaderMarshaller.hpp</a>.</p>
@@ -141,8 +133,6 @@ class RTT::NiceHeaderMarshaller&lt; o_stream &gt;</h3>
 <dl class="section return"><dt>Returns</dt><dd>the number of characters on this line. </dd></dl>
 
 <p>Definition at line <a class="el" href="NiceHeaderMarshaller_8hpp_source.html#l00102">102</a> of file <a class="el" href="NiceHeaderMarshaller_8hpp_source.html">NiceHeaderMarshaller.hpp</a>.</p>
-
-<p>References <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1base_1_1PropertyBase.html#acffe9d7c5d37675fdaf3dfd40017178a">Property&lt; T &gt;::getName()</a>, and <a class="elRef" doxygen="/opt/orocos/master/install/share/doc/liborocos-rtt/rtt.tag:../../../../rtt/master/api/html/" href="../../../../rtt/master/api/html/classRTT_1_1Property.html#a9e7b00fa62d9bd49b7284eaf46e577fb">Property&lt; T &gt;::rvalue()</a>.</p>
 
 </div>
 </div>
