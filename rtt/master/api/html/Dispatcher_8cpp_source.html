@@ -102,16 +102,17 @@
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            p-&gt;refcount.inc();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> intrusive_ptr_release(<span class="keyword">const</span> <a class="code" href="classRTT_1_1mqueue_1_1Dispatcher.html">RTT::mqueue::Dispatcher</a>* p ) {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">if</span> ( p-&gt;refcount.dec_and_test() ) <span class="keyword">delete</span> p;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">if</span> ( p-&gt;refcount.<a class="code" href="classRTT_1_1os_1_1AtomicInt.html#abb38025bbb2c16ec6d1b0d66c0d1106a">dec_and_test</a>() ) <span class="keyword">delete</span> p;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="ttc" id="classRTT_1_1mqueue_1_1Dispatcher_html"><div class="ttname"><a href="classRTT_1_1mqueue_1_1Dispatcher.html">RTT::mqueue::Dispatcher</a></div><div class="ttdoc">This object waits on a set of open message queue file descriptors and signals the channel that has re...</div><div class="ttdef"><b>Definition:</b> <a href="Dispatcher_8hpp_source.html#l00062">Dispatcher.hpp:62</a></div></div>
+<div class="ttc" id="classRTT_1_1os_1_1AtomicInt_html_abb38025bbb2c16ec6d1b0d66c0d1106a"><div class="ttname"><a href="classRTT_1_1os_1_1AtomicInt.html#abb38025bbb2c16ec6d1b0d66c0d1106a">RTT::os::AtomicInt::dec_and_test</a></div><div class="ttdeci">bool dec_and_test()</div><div class="ttdoc">Decrement and test if the result is zero. </div><div class="ttdef"><b>Definition:</b> <a href="Atomic_8hpp_source.html#l00104">Atomic.hpp:104</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 16 2017 14:50:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 10 2017 08:00:26 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

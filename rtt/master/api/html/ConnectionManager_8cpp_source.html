@@ -197,27 +197,30 @@
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keywordflow">if</span> (conn_it == <a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#ac7d52fa61c6d3322112a82de4c0ea43d">connections</a>.end())</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                descriptor = *conn_it;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#ac7d52fa61c6d3322112a82de4c0ea43d">connections</a>.erase(conn_it);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                updateCurrentChannel( <a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#a2aa071f17db28e04270d48c63f1edc41">cur_channel</a> &amp;&amp; (<a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#a2aa071f17db28e04270d48c63f1edc41">cur_channel</a>-&gt;get&lt;1&gt;() == descriptor.get&lt;1&gt;()) );</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">// disconnect needs to know if we&#39;re from Out-&gt;In (forward) or from In-&gt;Out</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordtype">bool</span> is_forward = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">if</span> ( dynamic_cast&lt;InputPortInterface*&gt;(<a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#a2f8030b0a2960f5d6363873fc8d07659">mport</a>) )</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                is_forward = <span class="keyword">false</span>; <span class="comment">// disconnect on input port = backward.</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            descriptor.get&lt;1&gt;()-&gt;<a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca">disconnect</a>(is_forward);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">bool</span> is_same_id(ConnID* conn_id, <a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">ConnectionManager::ChannelDescriptor</a> <span class="keyword">const</span>&amp; channel)</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">return</span> conn_id-&gt;isSameID( *channel.get&lt;0&gt;() );</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <span class="comment">// Verify whether cur_channel is conn_it before we erase, as</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="comment">// cur_channel is a pointer to an element in connections</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordtype">bool</span> reset_current = <a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#a2aa071f17db28e04270d48c63f1edc41">cur_channel</a> &amp;&amp; (<a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#a2aa071f17db28e04270d48c63f1edc41">cur_channel</a>-&gt;get&lt;1&gt;() == descriptor.get&lt;1&gt;());</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#ac7d52fa61c6d3322112a82de4c0ea43d">connections</a>.erase(conn_it);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                updateCurrentChannel(reset_current);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="comment">// disconnect needs to know if we&#39;re from Out-&gt;In (forward) or from In-&gt;Out</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordtype">bool</span> is_forward = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">if</span> ( dynamic_cast&lt;InputPortInterface*&gt;(<a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#a2f8030b0a2960f5d6363873fc8d07659">mport</a>) )</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                is_forward = <span class="keyword">false</span>; <span class="comment">// disconnect on input port = backward.</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            descriptor.get&lt;1&gt;()-&gt;<a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca">disconnect</a>(is_forward);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">bool</span> is_same_id(ConnID* conn_id, <a class="code" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">ConnectionManager::ChannelDescriptor</a> <span class="keyword">const</span>&amp; channel)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">return</span> conn_id-&gt;isSameID( *channel.get&lt;0&gt;() );</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
 <div class="ttc" id="classRTT_1_1internal_1_1ConnectionManager_html_a6378c49ba349a067d4af3d75687f8f05"><div class="ttname"><a href="classRTT_1_1internal_1_1ConnectionManager.html#a6378c49ba349a067d4af3d75687f8f05">RTT::internal::ConnectionManager::addConnection</a></div><div class="ttdeci">void addConnection(ConnID *port_id, base::ChannelElementBase::shared_ptr channel_input, ConnPolicy policy)</div><div class="ttdoc">Helper method for port-to-port connection establishment. </div><div class="ttdef"><b>Definition:</b> <a href="ConnectionManager_8cpp_source.html#l00130">ConnectionManager.cpp:130</a></div></div>
 <div class="ttc" id="classRTT_1_1internal_1_1ConnectionManager_html_a1070d33dd99d0fe1030c8b6aae3096ca"><div class="ttname"><a href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca">RTT::internal::ConnectionManager::disconnect</a></div><div class="ttdeci">void disconnect()</div><div class="ttdoc">Disconnect all connections. </div><div class="ttdef"><b>Definition:</b> <a href="ConnectionManager_8cpp_source.html#l00115">ConnectionManager.cpp:115</a></div></div>
 <div class="ttc" id="classRTT_1_1internal_1_1ConnectionManager_html_a9c6df47283369b04b9bb850e9132aa47"><div class="ttname"><a href="classRTT_1_1internal_1_1ConnectionManager.html#a9c6df47283369b04b9bb850e9132aa47">RTT::internal::ConnectionManager::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clears (removes) all data in the manager&#39;s connections. </div><div class="ttdef"><b>Definition:</b> <a href="ConnectionManager_8cpp_source.html#l00080">ConnectionManager.cpp:80</a></div></div>
@@ -240,7 +243,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 16 2017 14:50:30 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 10 2017 08:00:24 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

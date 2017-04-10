@@ -132,23 +132,26 @@
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> sub(<span class="keywordtype">int</span> i) { <a class="code" href="oro__arch__interface_8h.html#aee89235265c9f15134f637688addc74e">oro_atomic_sub</a>( &amp;_val, i ); }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">bool</span> sub_and_test(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code" href="oro__arch__interface_8h.html#ad515ffa22f1bf59e0ce35ef6c15b4933">oro_atomic_sub_and_test</a>( &amp;_val, i) != 0; }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> inc() { <a class="code" href="oro__arch__interface_8h.html#af86230f87017f4dfd762ff6f27543bf0">oro_atomic_inc</a>( &amp;_val ); }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> dec() { <a class="code" href="oro__arch__interface_8h.html#af365849570cecc5d59e3164fabd45ed3">oro_atomic_dec</a>( &amp;_val ); }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">bool</span> dec_and_test() { <span class="keywordflow">return</span> <a class="code" href="oro__arch__interface_8h.html#a41838459c68a9dc60dc05f0a911b2971">oro_atomic_dec_and_test</a>( &amp;_val ) != 0; }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">bool</span> inc_and_test() { <span class="keywordflow">return</span> <a class="code" href="oro__arch__interface_8h.html#a8aa16f959b3d4ecb2e45ab0075350c0b">oro_atomic_inc_and_test</a>( &amp;_val ) != 0; }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    };</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classRTT_1_1os_1_1AtomicInt.html#a54c7709e6fa80cf188fac133edc78c51">   93</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1os_1_1AtomicInt.html#a54c7709e6fa80cf188fac133edc78c51">sub_and_test</a>(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code" href="oro__arch__interface_8h.html#ad515ffa22f1bf59e0ce35ef6c15b4933">oro_atomic_sub_and_test</a>( &amp;_val, i) != 0; }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">void</span> inc() { <a class="code" href="oro__arch__interface_8h.html#af86230f87017f4dfd762ff6f27543bf0">oro_atomic_inc</a>( &amp;_val ); }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">void</span> dec() { <a class="code" href="oro__arch__interface_8h.html#af365849570cecc5d59e3164fabd45ed3">oro_atomic_dec</a>( &amp;_val ); }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}}</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classRTT_1_1os_1_1AtomicInt.html#abb38025bbb2c16ec6d1b0d66c0d1106a">  104</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1os_1_1AtomicInt.html#abb38025bbb2c16ec6d1b0d66c0d1106a">dec_and_test</a>() { <span class="keywordflow">return</span> <a class="code" href="oro__arch__interface_8h.html#a41838459c68a9dc60dc05f0a911b2971">oro_atomic_dec_and_test</a>( &amp;_val ) != 0; }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classRTT_1_1os_1_1AtomicInt.html#a0023a91b4af574ae908cd1ed8bafd4c6">  111</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classRTT_1_1os_1_1AtomicInt.html#a0023a91b4af574ae908cd1ed8bafd4c6">inc_and_test</a>() { <span class="keywordflow">return</span> <a class="code" href="oro__arch__interface_8h.html#a8aa16f959b3d4ecb2e45ab0075350c0b">oro_atomic_inc_and_test</a>( &amp;_val ) != 0; }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    };</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classRTT_1_1os_1_1AtomicInt_html"><div class="ttname"><a href="classRTT_1_1os_1_1AtomicInt.html">RTT::os::AtomicInt</a></div><div class="ttdoc">C++ abstraction of atomic integer operations. </div><div class="ttdef"><b>Definition:</b> <a href="Atomic_8hpp_source.html#l00049">Atomic.hpp:49</a></div></div>
+<div class="ttc" id="classRTT_1_1os_1_1AtomicInt_html_a54c7709e6fa80cf188fac133edc78c51"><div class="ttname"><a href="classRTT_1_1os_1_1AtomicInt.html#a54c7709e6fa80cf188fac133edc78c51">RTT::os::AtomicInt::sub_and_test</a></div><div class="ttdeci">bool sub_and_test(int i)</div><div class="ttdoc">Subtract a value and test if the result is zero. </div><div class="ttdef"><b>Definition:</b> <a href="Atomic_8hpp_source.html#l00093">Atomic.hpp:93</a></div></div>
 <div class="ttc" id="oro__arch__interface_8h_html_a8aa16f959b3d4ecb2e45ab0075350c0b"><div class="ttname"><a href="oro__arch__interface_8h.html#a8aa16f959b3d4ecb2e45ab0075350c0b">oro_atomic_inc_and_test</a></div><div class="ttdeci">int oro_atomic_inc_and_test(oro_atomic_t *a)</div><div class="ttdoc">Increment a atomically and test for zero. </div></div>
 <div class="ttc" id="oro__arch__interface_8h_html_a7062627f054d754c78a42b6b29562068"><div class="ttname"><a href="oro__arch__interface_8h.html#a7062627f054d754c78a42b6b29562068">oro_atomic_read</a></div><div class="ttdeci">int oro_atomic_read(oro_atomic_t *a)</div><div class="ttdoc">Returns the current counter value of the atomic structure a. </div></div>
+<div class="ttc" id="classRTT_1_1os_1_1AtomicInt_html_a0023a91b4af574ae908cd1ed8bafd4c6"><div class="ttname"><a href="classRTT_1_1os_1_1AtomicInt.html#a0023a91b4af574ae908cd1ed8bafd4c6">RTT::os::AtomicInt::inc_and_test</a></div><div class="ttdeci">bool inc_and_test()</div><div class="ttdoc">Increment and test if the result is zero. </div><div class="ttdef"><b>Definition:</b> <a href="Atomic_8hpp_source.html#l00111">Atomic.hpp:111</a></div></div>
+<div class="ttc" id="classRTT_1_1os_1_1AtomicInt_html_abb38025bbb2c16ec6d1b0d66c0d1106a"><div class="ttname"><a href="classRTT_1_1os_1_1AtomicInt.html#abb38025bbb2c16ec6d1b0d66c0d1106a">RTT::os::AtomicInt::dec_and_test</a></div><div class="ttdeci">bool dec_and_test()</div><div class="ttdoc">Decrement and test if the result is zero. </div><div class="ttdef"><b>Definition:</b> <a href="Atomic_8hpp_source.html#l00104">Atomic.hpp:104</a></div></div>
 <div class="ttc" id="oro__arch__interface_8h_html_af86230f87017f4dfd762ff6f27543bf0"><div class="ttname"><a href="oro__arch__interface_8h.html#af86230f87017f4dfd762ff6f27543bf0">oro_atomic_inc</a></div><div class="ttdeci">void oro_atomic_inc(oro_atomic_t *a)</div><div class="ttdoc">Increment a atomically. </div></div>
 <div class="ttc" id="oro__arch__interface_8h_html_ac2119d582200fcce3b60ec2da4966741"><div class="ttname"><a href="oro__arch__interface_8h.html#ac2119d582200fcce3b60ec2da4966741">ORO_ATOMIC_SETUP</a></div><div class="ttdeci">void ORO_ATOMIC_SETUP(oro_atomic_t *a, int n)</div><div class="ttdoc">Initializes the uninitialized atomic structure a with a counter value of &#39;n&#39;. </div></div>
 <div class="ttc" id="oro__arch__interface_8h_html_af30f939c0501f01d1b1268cfb69e2f99"><div class="ttname"><a href="oro__arch__interface_8h.html#af30f939c0501f01d1b1268cfb69e2f99">ORO_ATOMIC_CLEANUP</a></div><div class="ttdeci">void ORO_ATOMIC_CLEANUP(oro_atomic_t *a)</div><div class="ttdoc">Cleans up all resources allocated durint the setup of atomic structure a. </div></div>
@@ -164,7 +167,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 16 2017 14:50:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 10 2017 08:00:25 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
