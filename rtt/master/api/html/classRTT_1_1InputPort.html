@@ -416,7 +416,7 @@ class RTT::InputPort&lt; T &gt;</h3>
 
 <p>References <a class="el" href="ConnectionManager_8cpp_source.html#l00080">RTT::internal::ConnectionManager::clear()</a>.</p>
 
-<p>Referenced by <a class="el" href="InputPort_8hpp_source.html#l00232">RTT::InputPort&lt; T &gt;::createPortObject()</a>, and <a class="el" href="InputPortSource_8hpp_source.html#l00080">RTT::internal::InputPortSource&lt; T &gt;::reset()</a>.</p>
+<p>Referenced by <a class="el" href="InputPort_8hpp_source.html#l00228">RTT::InputPort&lt; T &gt;::createPortObject()</a>, and <a class="el" href="InputPortSource_8hpp_source.html#l00080">RTT::internal::InputPortSource&lt; T &gt;::reset()</a>.</p>
 
 </div>
 </div>
@@ -535,7 +535,7 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1PortInterface.html#a1599147a15dbfbb62defbee0c51b65f6">RTT::base::PortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="InputPort_8hpp_source.html#l00222">222</a> of file <a class="el" href="InputPort_8hpp_source.html">InputPort.hpp</a>.</p>
+<p>Definition at line <a class="el" href="InputPort_8hpp_source.html#l00218">218</a> of file <a class="el" href="InputPort_8hpp_source.html">InputPort.hpp</a>.</p>
 
 <p>References <a class="el" href="ConnFactory_8hpp_source.html#l00327">RTT::internal::ConnFactory::createStream()</a>.</p>
 
@@ -611,7 +611,7 @@ template&lt;typename T&gt; </div>
 
 <p>References <a class="el" href="DataFlowInterface_8cpp_source.html#l00227">RTT::DataFlowInterface::setPortDescription()</a>.</p>
 
-<p>Referenced by <a class="el" href="InputPort_8hpp_source.html#l00232">RTT::InputPort&lt; T &gt;::createPortObject()</a>.</p>
+<p>Referenced by <a class="el" href="InputPort_8hpp_source.html#l00228">RTT::InputPort&lt; T &gt;::createPortObject()</a>.</p>
 
 </div>
 </div>
@@ -642,9 +642,9 @@ template&lt;typename T&gt; </div>
 <p>Get a sample of the data on this port, without actually reading the port's data. </p>
 <p>It's the complement of <a class="el" href="classRTT_1_1OutputPort.html#a9ba3e7b6c569e312923a075f79bb92b4" title="Provides this port a data sample that is representative for the samples being used in write()...">OutputPort::setDataSample()</a> and serves to retrieve the size of a variable sized data type T. Returns default T if !connected() or if the <a class="el" href="classRTT_1_1OutputPort.html" title="A component&#39;s data output port. ">OutputPort</a> did not use setDataSample(). Returns an example T otherwise. In case multiple inputs are connected to this port a sample from the currently read connection will be returned. </p>
 
-<p>Definition at line <a class="el" href="InputPort_8hpp_source.html#l00188">188</a> of file <a class="el" href="InputPort_8hpp_source.html">InputPort.hpp</a>.</p>
+<p>Definition at line <a class="el" href="InputPort_8hpp_source.html#l00184">184</a> of file <a class="el" href="InputPort_8hpp_source.html">InputPort.hpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00082">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00189">RTT::internal::ConnectionManager::getCurrentChannel()</a>.</p>
+<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00082">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00186">RTT::internal::ConnectionManager::getCurrentChannel()</a>.</p>
 
 </div>
 </div>
@@ -676,7 +676,7 @@ template&lt;typename T&gt; </div>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1InputPortInterface.html#afd46e9b26cb9db8b9b117f6ab5e268f7">RTT::base::InputPortInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="InputPort_8hpp_source.html#l00217">217</a> of file <a class="el" href="InputPort_8hpp_source.html">InputPort.hpp</a>.</p>
+<p>Definition at line <a class="el" href="InputPort_8hpp_source.html#l00213">213</a> of file <a class="el" href="InputPort_8hpp_source.html">InputPort.hpp</a>.</p>
 
 </div>
 </div>
@@ -767,7 +767,7 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="InputPort_8hpp_source.html#l00103">103</a> of file <a class="el" href="InputPort_8hpp_source.html">InputPort.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="InputPortSource_8hpp_source.html#l00081">RTT::internal::InputPortSource&lt; T &gt;::evaluate()</a>, <a class="el" href="InputPort_8hpp_source.html#l00106">RTT::InputPort&lt; T &gt;::read()</a>, and <a class="el" href="InputPort_8hpp_source.html#l00170">RTT::InputPort&lt; T &gt;::readNewest()</a>.</p>
+<p>Referenced by <a class="el" href="InputPortSource_8hpp_source.html#l00081">RTT::internal::InputPortSource&lt; T &gt;::evaluate()</a>, <a class="el" href="InputPort_8hpp_source.html#l00106">RTT::InputPort&lt; T &gt;::read()</a>, and <a class="el" href="InputPort_8hpp_source.html#l00166">RTT::InputPort&lt; T &gt;::readNewest()</a>.</p>
 
 </div>
 </div>
@@ -893,7 +893,7 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="InputPort_8hpp_source.html#l00151">151</a> of file <a class="el" href="InputPort_8hpp_source.html">InputPort.hpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00146">RTT::internal::ConnectionManager::select_reader_channel()</a>.</p>
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00143">RTT::internal::ConnectionManager::select_reader_channel()</a>.</p>
 
 </div>
 </div>
@@ -977,7 +977,7 @@ template&lt;typename T&gt; </div>
 <p>Read all new samples that are available on this port, and returns the last one. </p>
 <p>Returns RTT::NewData if at least one new sample was available, and either RTT::OldData or RTT::NoData otherwise. </p>
 
-<p>Definition at line <a class="el" href="InputPort_8hpp_source.html#l00170">170</a> of file <a class="el" href="InputPort_8hpp_source.html">InputPort.hpp</a>.</p>
+<p>Definition at line <a class="el" href="InputPort_8hpp_source.html#l00166">166</a> of file <a class="el" href="InputPort_8hpp_source.html">InputPort.hpp</a>.</p>
 
 <p>References <a class="el" href="InputPort_8hpp_source.html#l00103">RTT::InputPort&lt; T &gt;::read()</a>.</p>
 
@@ -1094,7 +1094,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 10 2017 08:00:26 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 28 2017 14:59:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

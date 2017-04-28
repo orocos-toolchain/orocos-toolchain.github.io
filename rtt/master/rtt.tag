@@ -4190,8 +4190,8 @@
       <type></type>
       <name>Property</name>
       <anchorfile>classRTT_1_1Property.html</anchorfile>
-      <anchor>aab9c79e84b980d1676abaec9ecfb1a43</anchor>
-      <arglist>(const std::string &amp;name, const std::string &amp;description, typename internal::AssignableDataSource&lt; DataSourceType &gt;::shared_ptr datasource)</arglist>
+      <anchor>a1d0d5bc413490445165f072514d30c40</anchor>
+      <arglist>(const std::string &amp;name, const std::string &amp;description, const typename internal::AssignableDataSource&lt; DataSourceType &gt;::shared_ptr &amp;datasource)</arglist>
     </member>
     <member kind="function">
       <type>Property&lt; T &gt; &amp;</type>
@@ -4328,17 +4328,17 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Property&lt; T &gt; *</type>
-      <name>copy</name>
+      <name>create</name>
       <anchorfile>classRTT_1_1Property.html</anchorfile>
-      <anchor>a88161ea97cb591047eaaeb457129c7e2</anchor>
+      <anchor>a760c37b4d3189c770bd9b0baa5f46dda</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Property&lt; T &gt; *</type>
       <name>create</name>
       <anchorfile>classRTT_1_1Property.html</anchorfile>
-      <anchor>a760c37b4d3189c770bd9b0baa5f46dda</anchor>
-      <arglist>() const </arglist>
+      <anchor>a93622f154283ca64f7fb6289a0c6c605</anchor>
+      <arglist>(const base::DataSourceBase::shared_ptr &amp;datasource) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual base::DataSourceBase::shared_ptr</type>
@@ -7331,17 +7331,17 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual PropertyBase *</type>
-      <name>copy</name>
+      <name>create</name>
       <anchorfile>classRTT_1_1base_1_1PropertyBase.html</anchorfile>
-      <anchor>a604d03c39e744f000bdd13ed6b788bd6</anchor>
+      <anchor>a054e3f8426b960d71341edc119c4905c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual PropertyBase *</type>
       <name>create</name>
       <anchorfile>classRTT_1_1base_1_1PropertyBase.html</anchorfile>
-      <anchor>a054e3f8426b960d71341edc119c4905c</anchor>
-      <arglist>() const =0</arglist>
+      <anchor>a120ca381a74297b6dbb09f4754980cd1</anchor>
+      <arglist>(const base::DataSourceBase::shared_ptr &amp;datasource) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual DataSourceBase::shared_ptr</type>
