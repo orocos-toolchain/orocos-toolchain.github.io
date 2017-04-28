@@ -128,12 +128,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a8f3cb6b6602386fc302763b4c0048aeb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1PropertyBase.html">PropertyBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a8f3cb6b6602386fc302763b4c0048aeb">clone</a> () const =0</td></tr>
 <tr class="memdesc:a8f3cb6b6602386fc302763b4c0048aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deliver an identical clone of this <a class="el" href="classRTT_1_1base_1_1PropertyBase.html" title="Base class for all properties. ">PropertyBase</a>.  <a href="#a8f3cb6b6602386fc302763b4c0048aeb">More...</a><br/></td></tr>
 <tr class="separator:a8f3cb6b6602386fc302763b4c0048aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a604d03c39e744f000bdd13ed6b788bd6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1PropertyBase.html">PropertyBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a604d03c39e744f000bdd13ed6b788bd6">copy</a> () const =0</td></tr>
-<tr class="memdesc:a604d03c39e744f000bdd13ed6b788bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deliver a shallow copy of this <a class="el" href="classRTT_1_1base_1_1PropertyBase.html" title="Base class for all properties. ">PropertyBase</a> with a shared DataSource.  <a href="#a604d03c39e744f000bdd13ed6b788bd6">More...</a><br/></td></tr>
-<tr class="separator:a604d03c39e744f000bdd13ed6b788bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a054e3f8426b960d71341edc119c4905c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1PropertyBase.html">PropertyBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a054e3f8426b960d71341edc119c4905c">create</a> () const =0</td></tr>
 <tr class="memdesc:a054e3f8426b960d71341edc119c4905c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new default instance of the <a class="el" href="classRTT_1_1base_1_1PropertyBase.html" title="Base class for all properties. ">PropertyBase</a>.  <a href="#a054e3f8426b960d71341edc119c4905c">More...</a><br/></td></tr>
 <tr class="separator:a054e3f8426b960d71341edc119c4905c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120ca381a74297b6dbb09f4754980cd1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1PropertyBase.html">PropertyBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a120ca381a74297b6dbb09f4754980cd1">create</a> (const <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &amp;datasource) const =0</td></tr>
+<tr class="memdesc:a120ca381a74297b6dbb09f4754980cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new instance of the <a class="el" href="classRTT_1_1base_1_1PropertyBase.html" title="Base class for all properties. ">PropertyBase</a> with a custom data source.  <a href="#a120ca381a74297b6dbb09f4754980cd1">More...</a><br/></td></tr>
+<tr class="separator:a120ca381a74297b6dbb09f4754980cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef1f9e802faddb20dc36ccb6a737869c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef1f9e802faddb20dc36ccb6a737869c"></a>
 virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1PropertyBase.html#aef1f9e802faddb20dc36ccb6a737869c">getDataSource</a> () const =0</td></tr>
 <tr class="memdesc:aef1f9e802faddb20dc36ccb6a737869c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an assignable base::DataSource through which this <a class="el" href="classRTT_1_1base_1_1PropertyBase.html" title="Base class for all properties. ">PropertyBase</a> can be manipulated. <br/></td></tr>
@@ -293,35 +293,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 <p>Implemented in <a class="el" href="classRTT_1_1Property.html#a45938c484069c2d2b68fdf6093325ae9">RTT::Property&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1Property.html#a45938c484069c2d2b68fdf6093325ae9">RTT::Property&lt; bool &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="PropertyBag_8cpp_source.html#l00538">RTT::copyProperties()</a>, and <a class="el" href="PropertyBag_8cpp_source.html#l00227">RTT::PropertyBag::operator=()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a604d03c39e744f000bdd13ed6b788bd6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="classRTT_1_1base_1_1PropertyBase.html">PropertyBase</a>* RTT::base::PropertyBase::copy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Deliver a shallow copy of this <a class="el" href="classRTT_1_1base_1_1PropertyBase.html" title="Base class for all properties. ">PropertyBase</a> with a shared DataSource. </p>
-<p>The original may be deleted and the clone can be transparantly used in its place or vice versa. </p>
-
-<p>Implemented in <a class="el" href="classRTT_1_1Property.html#a88161ea97cb591047eaaeb457129c7e2">RTT::Property&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1Property.html#a88161ea97cb591047eaaeb457129c7e2">RTT::Property&lt; bool &gt;</a>.</p>
+<p>Referenced by <a class="el" href="PropertyBag_8cpp_source.html#l00538">RTT::copyProperties()</a>.</p>
 
 </div>
 </div>
@@ -351,7 +323,36 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 <p>Implemented in <a class="el" href="classRTT_1_1Property.html#a760c37b4d3189c770bd9b0baa5f46dda">RTT::Property&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1Property.html#a760c37b4d3189c770bd9b0baa5f46dda">RTT::Property&lt; bool &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="PropertyBag_8cpp_source.html#l00538">RTT::copyProperties()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00557">RTT::updateProperties()</a>, and <a class="el" href="PropertyBag_8cpp_source.html#l00626">RTT::updateProperty()</a>.</p>
+<p>Referenced by <a class="el" href="PropertyBag_8cpp_source.html#l00538">RTT::copyProperties()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00227">RTT::PropertyBag::operator=()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00557">RTT::updateProperties()</a>, and <a class="el" href="PropertyBag_8cpp_source.html#l00626">RTT::updateProperty()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a120ca381a74297b6dbb09f4754980cd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classRTT_1_1base_1_1PropertyBase.html">PropertyBase</a>* RTT::base::PropertyBase::create </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>datasource</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a new instance of the <a class="el" href="classRTT_1_1base_1_1PropertyBase.html" title="Base class for all properties. ">PropertyBase</a> with a custom data source. </p>
+<p>This is a factory method to 'make something of the same type'. The new <a class="el" href="classRTT_1_1base_1_1PropertyBase.html" title="Base class for all properties. ">PropertyBase</a> has the same name and description as this. </p>
+
+<p>Implemented in <a class="el" href="classRTT_1_1Property.html#a93622f154283ca64f7fb6289a0c6c605">RTT::Property&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1Property.html#a93622f154283ca64f7fb6289a0c6c605">RTT::Property&lt; bool &gt;</a>.</p>
 
 </div>
 </div>
@@ -472,7 +473,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 <p>Implemented in <a class="el" href="classRTT_1_1Property.html#af0f50c4155f895785af0ea05f87933c5">RTT::Property&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1Property.html#af0f50c4155f895785af0ea05f87933c5">RTT::Property&lt; bool &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00461">RTT::Property&lt; T &gt;::identify()</a>.</p>
+<p>Referenced by <a class="el" href="Property_8hpp_source.html#l00468">RTT::Property&lt; T &gt;::identify()</a>.</p>
 
 </div>
 </div>
@@ -742,7 +743,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 28 2017 14:55:16 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 28 2017 15:32:34 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

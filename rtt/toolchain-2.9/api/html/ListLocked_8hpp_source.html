@@ -246,7 +246,7 @@
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            {</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">if</span>(pred(cur-&gt;data))</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                cur = mlist.erase_and_dispose(cur, boost::bind(&amp;ListLocked::give_back, <span class="keyword">this</span>, ::_1) );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                cur = mlist.erase_and_dispose(cur, boost::bind(&amp;ListLocked::give_back, <span class="keyword">this</span>, _1) );</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                deleted = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            }</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="keywordflow">else</span></div>
@@ -320,7 +320,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 28 2017 14:55:12 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 28 2017 15:32:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

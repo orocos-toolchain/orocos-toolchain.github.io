@@ -555,137 +555,141 @@
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;            <a class="code" href="classRTT_1_1os_1_1MutexLock.html">os::MutexLock</a> lock( d-&gt;inpguard );</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;            getline( d-&gt;remotestream, line );</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            <span class="keywordflow">if</span> ( !d-&gt;remotestream )</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                d-&gt;remotestream.clear();</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        }</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <span class="keywordflow">if</span> ( !line.empty() )</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;            --d-&gt;messagecnt;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        <span class="keywordflow">return</span> line;</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;#<span class="keywordflow">else</span></div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;#endif</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    }</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;</div>
-<div class="line"><a name="l00523"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a857179fde0f4813f54ad8feba48541c7">  523</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1Logger.html#a857179fde0f4813f54ad8feba48541c7">Logger::setStdStream</a>( std::ostream&amp; stdos ) {</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;<span class="preprocessor">#ifndef OROSEM_PRINTF_LOGGING</span></div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;<span class="preprocessor"></span>        d-&gt;stdoutput = &amp;stdos;</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;<span class="preprocessor"></span>    }</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
-<div class="line"><a name="l00529"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#ae175df4f8b58af593e64f13b0d3f6482">  529</a></span>&#160;    <a class="code" href="classRTT_1_1Logger.html">Logger</a>&amp; <a class="code" href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">Logger::operator&lt;&lt;</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* t ) {</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        <span class="keywordflow">if</span> ( !d-&gt;maylog() )</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            {</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                d-&gt;remotestream.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                d-&gt;remotestream.clear();</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                d-&gt;messagecnt = 0;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;            }</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        }</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keywordflow">if</span> ( !line.empty() )</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;            --d-&gt;messagecnt;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        <span class="keywordflow">return</span> line;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;#<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;#endif</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    }</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;</div>
+<div class="line"><a name="l00527"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a857179fde0f4813f54ad8feba48541c7">  527</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1Logger.html#a857179fde0f4813f54ad8feba48541c7">Logger::setStdStream</a>( std::ostream&amp; stdos ) {</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;<span class="preprocessor">#ifndef OROSEM_PRINTF_LOGGING</span></div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;<span class="preprocessor"></span>        d-&gt;stdoutput = &amp;stdos;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;<span class="preprocessor"></span>    }</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">os::MutexLock</a> lock( d-&gt;inpguard );</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="keywordflow">if</span> ( d-&gt;maylogStdOut() )</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;            d-&gt;logline &lt;&lt; t;</div>
+<div class="line"><a name="l00533"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#ae175df4f8b58af593e64f13b0d3f6482">  533</a></span>&#160;    <a class="code" href="classRTT_1_1Logger.html">Logger</a>&amp; <a class="code" href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">Logger::operator&lt;&lt;</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* t ) {</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="keywordflow">if</span> ( !d-&gt;maylog() )</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;#<span class="keywordflow">if</span> defined(OROSEM_FILE_LOGGING) || defined(OROSEM_REMOTE_LOGGING)</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="comment">// log Info or better to log file, even if not started.</span></div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        <span class="keywordflow">if</span> ( d-&gt;maylogFile() )</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;            d-&gt;fileline &lt;&lt; t;</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;#endif</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    }</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;</div>
-<div class="line"><a name="l00545"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#ac0937138324fb2f4d51805be7549c232">  545</a></span>&#160;    <a class="code" href="classRTT_1_1Logger.html">Logger</a>&amp; <a class="code" href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">Logger::operator&lt;&lt;</a>( <span class="keyword">const</span> std::string&amp; t ) {</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        <span class="keywordflow">return</span> this-&gt;<a class="code" href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">operator&lt;&lt;</a>( t.c_str() );</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        <a class="code" href="classRTT_1_1os_1_1MutexLock.html">os::MutexLock</a> lock( d-&gt;inpguard );</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keywordflow">if</span> ( d-&gt;maylogStdOut() )</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;            d-&gt;logline &lt;&lt; t;</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;#<span class="keywordflow">if</span> defined(OROSEM_FILE_LOGGING) || defined(OROSEM_REMOTE_LOGGING)</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        <span class="comment">// log Info or better to log file, even if not started.</span></div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        <span class="keywordflow">if</span> ( d-&gt;maylogFile() )</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;            d-&gt;fileline &lt;&lt; t;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;#endif</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    }</div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;</div>
-<div class="line"><a name="l00549"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#af6b8fa96979bf3f9d91ace1ad6ca25b9">  549</a></span>&#160;    <a class="code" href="classRTT_1_1Logger.html">Logger</a>&amp; <a class="code" href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">Logger::operator&lt;&lt;</a>(<a class="code" href="classRTT_1_1Logger.html#afeb14ef4145301474e0b1b5b62fd1d9c">LogLevel</a> ll) {</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        <span class="keywordflow">if</span> ( !d-&gt;maylog() )</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;        d-&gt;inloglevel = ll;</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    }</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;</div>
-<div class="line"><a name="l00556"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a3fc0e83b206bfa3996ffb2d2e8955936">  556</a></span>&#160;    <a class="code" href="classRTT_1_1Logger.html">Logger</a>&amp; <a class="code" href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">Logger::operator&lt;&lt;</a>(std::ostream&amp; (*pf)(std::ostream&amp;))</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    {</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;        <span class="keywordflow">if</span> ( !d-&gt;maylog() )</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <span class="keywordflow">if</span> ( pf == Logger::endl )</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;            this-&gt;<a class="code" href="classRTT_1_1Logger.html#a7ef192af2f69fdc887ef825e9134c4af">logendl</a>();</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( pf == <a class="code" href="classRTT_1_1Logger.html#ac6fabc2ad9f34905a576dff32952e173">Logger::nl</a> )</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;            this-&gt;<a class="code" href="classRTT_1_1Logger.html#a792d3d611746d64efe30a6c3f23bc6ac">lognl</a>();</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( pf == <a class="code" href="classRTT_1_1Logger.html#ad8b0f7409f32a85cb35f7ddb322f77be">Logger::flush</a> )</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;            this-&gt;<a class="code" href="classRTT_1_1Logger.html#a0f3cb5c12f408deef44f34e256d038b0">logflush</a>();</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;            <a class="code" href="classRTT_1_1os_1_1MutexLock.html">os::MutexLock</a> lock( d-&gt;inpguard );</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;            <span class="keywordflow">if</span> ( d-&gt;maylogStdOut() )</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;                d-&gt;logline &lt;&lt; pf; <span class="comment">// normal std operator in stream.</span></div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;#<span class="keywordflow">if</span> defined(OROSEM_FILE_LOGGING) || defined(OROSEM_REMOTE_LOGGING)</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;            <span class="keywordflow">if</span> ( d-&gt;maylogFile() )</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                d-&gt;fileline &lt;&lt; pf;</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;#endif</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        }</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    }</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;</div>
-<div class="line"><a name="l00578"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a0f3cb5c12f408deef44f34e256d038b0">  578</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1Logger.html#a0f3cb5c12f408deef44f34e256d038b0">Logger::logflush</a>() {</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        <span class="keywordflow">if</span> (!d-&gt;maylog())</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;        {</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;            <span class="comment">// just flush all buffers, do not produce a new logline</span></div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;            <a class="code" href="classRTT_1_1os_1_1MutexLock.html">os::MutexLock</a> lock( d-&gt;inpguard );</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;            <span class="keywordflow">if</span> ( d-&gt;maylogStdOut() ) {</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;<span class="preprocessor">#ifndef OROSEM_PRINTF_LOGGING</span></div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;<span class="preprocessor"></span>                d-&gt;stdoutput-&gt;flush();</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if defined(OROSEM_REMOTE_LOGGING)</span></div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;<span class="preprocessor"></span>                d-&gt;remotestream.flush();</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;<span class="preprocessor"></span>            }</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;<span class="preprocessor">#if defined(OROSEM_FILE_LOGGING)</span></div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;<span class="preprocessor"></span>            <span class="keywordflow">if</span> ( d-&gt;maylogFile() ) {</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;<span class="preprocessor">#ifndef OROSEM_PRINTF_LOGGING</span></div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;<span class="preprocessor"></span>                d-&gt;logfile.flush();</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;<span class="preprocessor"></span>            }</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;<span class="preprocessor"></span>        }</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;     }</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;</div>
-<div class="line"><a name="l00602"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a792d3d611746d64efe30a6c3f23bc6ac">  602</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1Logger.html#a792d3d611746d64efe30a6c3f23bc6ac">Logger::lognl</a>() {</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;        <span class="keywordflow">if</span> (!d-&gt;maylog())</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        d-&gt;<a class="code" href="structRTT_1_1Logger_1_1D.html#a065a218fc962c1e1a93846d3a50ebcec">logit</a>( <a class="code" href="classRTT_1_1Logger.html#ac6fabc2ad9f34905a576dff32952e173">Logger::nl</a> );</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;     }</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;</div>
-<div class="line"><a name="l00608"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a7ef192af2f69fdc887ef825e9134c4af">  608</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1Logger.html#a7ef192af2f69fdc887ef825e9134c4af">Logger::logendl</a>() {</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        <span class="keywordflow">if</span> (!d-&gt;maylog())</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        d-&gt;<a class="code" href="structRTT_1_1Logger_1_1D.html#a065a218fc962c1e1a93846d3a50ebcec">logit</a>( Logger::endl );</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;     }</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;</div>
-<div class="line"><a name="l00614"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#ae56db21b2ff0c2b7eddb62b1f054e16d">  614</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1Logger.html#ae56db21b2ff0c2b7eddb62b1f054e16d">Logger::setLogLevel</a>( <a class="code" href="classRTT_1_1Logger.html#afeb14ef4145301474e0b1b5b62fd1d9c">LogLevel</a> ll ) {</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;        d-&gt;outloglevel = ll;</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;<span class="preprocessor">#if defined(OROSEM_LOG4CPP_LOGGING)</span></div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;<span class="preprocessor"></span>        d-&gt;category.setPriority(level2Priority(ll));</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;<span class="preprocessor"></span>    }</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;</div>
-<div class="line"><a name="l00621"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a6cd3858f608c39ebb571d0940f1ca771">  621</a></span>&#160;    <a class="code" href="classRTT_1_1Logger.html#afeb14ef4145301474e0b1b5b62fd1d9c">Logger::LogLevel</a> <a class="code" href="classRTT_1_1Logger.html#a6cd3858f608c39ebb571d0940f1ca771">Logger::getLogLevel</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;        <span class="keywordflow">return</span> d-&gt;outloglevel ;</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    }</div>
+<div class="line"><a name="l00549"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#ac0937138324fb2f4d51805be7549c232">  549</a></span>&#160;    <a class="code" href="classRTT_1_1Logger.html">Logger</a>&amp; <a class="code" href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">Logger::operator&lt;&lt;</a>( <span class="keyword">const</span> std::string&amp; t ) {</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        <span class="keywordflow">return</span> this-&gt;<a class="code" href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">operator&lt;&lt;</a>( t.c_str() );</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    }</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;</div>
+<div class="line"><a name="l00553"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#af6b8fa96979bf3f9d91ace1ad6ca25b9">  553</a></span>&#160;    <a class="code" href="classRTT_1_1Logger.html">Logger</a>&amp; <a class="code" href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">Logger::operator&lt;&lt;</a>(<a class="code" href="classRTT_1_1Logger.html#afeb14ef4145301474e0b1b5b62fd1d9c">LogLevel</a> ll) {</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;        <span class="keywordflow">if</span> ( !d-&gt;maylog() )</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;        d-&gt;inloglevel = ll;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    }</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;</div>
+<div class="line"><a name="l00560"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a3fc0e83b206bfa3996ffb2d2e8955936">  560</a></span>&#160;    <a class="code" href="classRTT_1_1Logger.html">Logger</a>&amp; <a class="code" href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">Logger::operator&lt;&lt;</a>(std::ostream&amp; (*pf)(std::ostream&amp;))</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    {</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        <span class="keywordflow">if</span> ( !d-&gt;maylog() )</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        <span class="keywordflow">if</span> ( pf == Logger::endl )</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;            this-&gt;<a class="code" href="classRTT_1_1Logger.html#a7ef192af2f69fdc887ef825e9134c4af">logendl</a>();</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( pf == <a class="code" href="classRTT_1_1Logger.html#ac6fabc2ad9f34905a576dff32952e173">Logger::nl</a> )</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;            this-&gt;<a class="code" href="classRTT_1_1Logger.html#a792d3d611746d64efe30a6c3f23bc6ac">lognl</a>();</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( pf == <a class="code" href="classRTT_1_1Logger.html#ad8b0f7409f32a85cb35f7ddb322f77be">Logger::flush</a> )</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;            this-&gt;<a class="code" href="classRTT_1_1Logger.html#a0f3cb5c12f408deef44f34e256d038b0">logflush</a>();</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;            <a class="code" href="classRTT_1_1os_1_1MutexLock.html">os::MutexLock</a> lock( d-&gt;inpguard );</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;            <span class="keywordflow">if</span> ( d-&gt;maylogStdOut() )</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                d-&gt;logline &lt;&lt; pf; <span class="comment">// normal std operator in stream.</span></div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;#<span class="keywordflow">if</span> defined(OROSEM_FILE_LOGGING) || defined(OROSEM_REMOTE_LOGGING)</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            <span class="keywordflow">if</span> ( d-&gt;maylogFile() )</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                d-&gt;fileline &lt;&lt; pf;</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;#endif</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;        }</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    }</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;</div>
+<div class="line"><a name="l00582"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a0f3cb5c12f408deef44f34e256d038b0">  582</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1Logger.html#a0f3cb5c12f408deef44f34e256d038b0">Logger::logflush</a>() {</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;        <span class="keywordflow">if</span> (!d-&gt;maylog())</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        {</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;            <span class="comment">// just flush all buffers, do not produce a new logline</span></div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;            <a class="code" href="classRTT_1_1os_1_1MutexLock.html">os::MutexLock</a> lock( d-&gt;inpguard );</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;            <span class="keywordflow">if</span> ( d-&gt;maylogStdOut() ) {</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;<span class="preprocessor">#ifndef OROSEM_PRINTF_LOGGING</span></div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;<span class="preprocessor"></span>                d-&gt;stdoutput-&gt;flush();</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if defined(OROSEM_REMOTE_LOGGING)</span></div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;<span class="preprocessor"></span>                d-&gt;remotestream.flush();</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;<span class="preprocessor"></span>            }</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;<span class="preprocessor">#if defined(OROSEM_FILE_LOGGING)</span></div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;<span class="preprocessor"></span>            <span class="keywordflow">if</span> ( d-&gt;maylogFile() ) {</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;<span class="preprocessor">#ifndef OROSEM_PRINTF_LOGGING</span></div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;<span class="preprocessor"></span>                d-&gt;logfile.flush();</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;<span class="preprocessor"></span>            }</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;<span class="preprocessor"></span>        }</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;     }</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;</div>
+<div class="line"><a name="l00606"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a792d3d611746d64efe30a6c3f23bc6ac">  606</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1Logger.html#a792d3d611746d64efe30a6c3f23bc6ac">Logger::lognl</a>() {</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        <span class="keywordflow">if</span> (!d-&gt;maylog())</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        d-&gt;<a class="code" href="structRTT_1_1Logger_1_1D.html#a065a218fc962c1e1a93846d3a50ebcec">logit</a>( <a class="code" href="classRTT_1_1Logger.html#ac6fabc2ad9f34905a576dff32952e173">Logger::nl</a> );</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;     }</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;</div>
+<div class="line"><a name="l00612"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a7ef192af2f69fdc887ef825e9134c4af">  612</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1Logger.html#a7ef192af2f69fdc887ef825e9134c4af">Logger::logendl</a>() {</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        <span class="keywordflow">if</span> (!d-&gt;maylog())</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;        d-&gt;<a class="code" href="structRTT_1_1Logger_1_1D.html#a065a218fc962c1e1a93846d3a50ebcec">logit</a>( Logger::endl );</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;     }</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;</div>
+<div class="line"><a name="l00618"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#ae56db21b2ff0c2b7eddb62b1f054e16d">  618</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRTT_1_1Logger.html#ae56db21b2ff0c2b7eddb62b1f054e16d">Logger::setLogLevel</a>( <a class="code" href="classRTT_1_1Logger.html#afeb14ef4145301474e0b1b5b62fd1d9c">LogLevel</a> ll ) {</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        d-&gt;outloglevel = ll;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;<span class="preprocessor">#if defined(OROSEM_LOG4CPP_LOGGING)</span></div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;<span class="preprocessor"></span>        d-&gt;category.setPriority(level2Priority(ll));</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;<span class="preprocessor"></span>    }</div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="preprocessor">#else // OROBLD_DISABLE_LOGGING</span></div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    Logger::Logger(std::ostream&amp; )</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        : d(0)</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    {</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    }</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    Logger::~Logger()</div>
+<div class="line"><a name="l00625"></a><span class="lineno"><a class="line" href="classRTT_1_1Logger.html#a6cd3858f608c39ebb571d0940f1ca771">  625</a></span>&#160;    <a class="code" href="classRTT_1_1Logger.html#afeb14ef4145301474e0b1b5b62fd1d9c">Logger::LogLevel</a> <a class="code" href="classRTT_1_1Logger.html#a6cd3858f608c39ebb571d0940f1ca771">Logger::getLogLevel</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;        <span class="keywordflow">return</span> d-&gt;outloglevel ;</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    }</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;<span class="preprocessor">#else // OROBLD_DISABLE_LOGGING</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    Logger::Logger(std::ostream&amp; )</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        : d(0)</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    {</div>
 <div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    }</div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    Logger::~Logger()</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    {</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    }</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;<span class="preprocessor"></span>}</div>
 <div class="ttc" id="classRTT_1_1Logger_html_ae56d15ff0790870a90309229075d8405"><div class="ttname"><a href="classRTT_1_1Logger.html#ae56d15ff0790870a90309229075d8405">RTT::Logger::out</a></div><div class="ttdeci">Logger &amp; out(const std::string &amp;modname)</div><div class="ttdoc">The counterpart of in(). </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00429">Logger.cpp:429</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_a1dadac09467605ac946202688b3c38ad"><div class="ttname"><a href="classRTT_1_1Logger.html#a1dadac09467605ac946202688b3c38ad">RTT::Logger::getLogModule</a></div><div class="ttdeci">std::string getLogModule() const </div><div class="ttdoc">Get the name of the current Log generating Module. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00436">Logger.cpp:436</a></div></div>
 <div class="ttc" id="namespaceRTT_html_ab93965f88bfbe72fbc2ece16c047c902"><div class="ttname"><a href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">RTT::Seconds</a></div><div class="ttdeci">double Seconds</div><div class="ttdoc">Seconds are stored as a double precision float. </div><div class="ttdef"><b>Definition:</b> <a href="os_2Time_8hpp_source.html#l00053">Time.hpp:53</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1TimeService_html_a68c14598d153b60b9beb4a011bedcf2e"><div class="ttname"><a href="classRTT_1_1os_1_1TimeService.html#a68c14598d153b60b9beb4a011bedcf2e">RTT::os::TimeService::ticks2nsecs</a></div><div class="ttdeci">static nsecs ticks2nsecs(const ticks t)</div><div class="ttdoc">Convert an amount of ticks to nano seconds. </div><div class="ttdef"><b>Definition:</b> <a href="TimeService_8cpp_source.html#l00036">TimeService.cpp:36</a></div></div>
-<div class="ttc" id="classRTT_1_1Logger_html_a6cd3858f608c39ebb571d0940f1ca771"><div class="ttname"><a href="classRTT_1_1Logger.html#a6cd3858f608c39ebb571d0940f1ca771">RTT::Logger::getLogLevel</a></div><div class="ttdeci">LogLevel getLogLevel() const </div><div class="ttdoc">Return the current output loglevel. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00621">Logger.cpp:621</a></div></div>
+<div class="ttc" id="classRTT_1_1Logger_html_a6cd3858f608c39ebb571d0940f1ca771"><div class="ttname"><a href="classRTT_1_1Logger.html#a6cd3858f608c39ebb571d0940f1ca771">RTT::Logger::getLogLevel</a></div><div class="ttdeci">LogLevel getLogLevel() const </div><div class="ttdoc">Return the current output loglevel. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00625">Logger.cpp:625</a></div></div>
 <div class="ttc" id="structRTT_1_1Logger_1_1D_html_ae6d47a25804b9eb50e5b763e3272043c"><div class="ttname"><a href="structRTT_1_1Logger_1_1D.html#ae6d47a25804b9eb50e5b763e3272043c">RTT::Logger::D::showLevel</a></div><div class="ttdeci">std::string showLevel(LogLevel ll) const </div><div class="ttdoc">Convert a loglevel to a string representation. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00281">Logger.cpp:281</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1TimeService_html_a2e8960143216d66ea753fe4d8fa7e962"><div class="ttname"><a href="classRTT_1_1os_1_1TimeService.html#a2e8960143216d66ea753fe4d8fa7e962">RTT::os::TimeService::ticks</a></div><div class="ttdeci">long long ticks</div><div class="ttdoc">The type for the systems clock tick. </div><div class="ttdef"><b>Definition:</b> <a href="TimeService_8hpp_source.html#l00066">TimeService.hpp:66</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_a44f149cf8333bea87dfcefb48c1381c9"><div class="ttname"><a href="classRTT_1_1Logger.html#a44f149cf8333bea87dfcefb48c1381c9">RTT::Logger::Instance</a></div><div class="ttdeci">static Logger * Instance(std::ostream &amp;str=std::cerr)</div><div class="ttdoc">Get the singleton logger. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00075">Logger.cpp:75</a></div></div>
@@ -693,29 +697,29 @@
 <div class="ttc" id="classRTT_1_1Logger_html_ac6fabc2ad9f34905a576dff32952e173"><div class="ttname"><a href="classRTT_1_1Logger.html#ac6fabc2ad9f34905a576dff32952e173">RTT::Logger::nl</a></div><div class="ttdeci">static std::ostream &amp; nl(std::ostream &amp;__os)</div><div class="ttdoc">Insert a newline &#39; &#39; in the ostream. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00381">Logger.cpp:381</a></div></div>
 <div class="ttc" id="structRTT_1_1Logger_1_1D_html"><div class="ttname"><a href="structRTT_1_1Logger_1_1D.html">RTT::Logger::D</a></div><div class="ttdoc">This hidden struct stores all data structures required for logging. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00128">Logger.cpp:128</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_a7adf86dc4c810da0cf55d097f143812c"><div class="ttname"><a href="classRTT_1_1Logger.html#a7adf86dc4c810da0cf55d097f143812c">RTT::Logger::operator&lt;&lt;</a></div><div class="ttdeci">Logger &amp; operator&lt;&lt;(const T &amp;t)</div><div class="ttdoc">Send (user defined) data into this logger. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8inl_source.html#l00015">Logger.inl:15</a></div></div>
-<div class="ttc" id="classRTT_1_1Logger_html_a0f3cb5c12f408deef44f34e256d038b0"><div class="ttname"><a href="classRTT_1_1Logger.html#a0f3cb5c12f408deef44f34e256d038b0">RTT::Logger::logflush</a></div><div class="ttdeci">void logflush()</div><div class="ttdoc">Flush log buffers. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00578">Logger.cpp:578</a></div></div>
+<div class="ttc" id="classRTT_1_1Logger_html_a0f3cb5c12f408deef44f34e256d038b0"><div class="ttname"><a href="classRTT_1_1Logger.html#a0f3cb5c12f408deef44f34e256d038b0">RTT::Logger::logflush</a></div><div class="ttdeci">void logflush()</div><div class="ttdoc">Flush log buffers. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00582">Logger.cpp:582</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html"><div class="ttname"><a href="classRTT_1_1Logger.html">RTT::Logger</a></div><div class="ttdoc">A simple logging class to debug/ analyse what is going on in the Orocos system. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8hpp_source.html#l00095">Logger.hpp:95</a></div></div>
 <div class="ttc" id="structRTT_1_1Logger_1_1D_html_a065a218fc962c1e1a93846d3a50ebcec"><div class="ttname"><a href="structRTT_1_1Logger_1_1D.html#a065a218fc962c1e1a93846d3a50ebcec">RTT::Logger::D::logit</a></div><div class="ttdeci">void logit(std::ostream &amp;(*pf)(std::ostream &amp;))</div><div class="ttdoc">This function is called when a new message is ready to be written to screen, disk, or stream. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00180">Logger.cpp:180</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_aba84e0b2933403d0cd1545ccbd17c600"><div class="ttname"><a href="classRTT_1_1Logger.html#aba84e0b2933403d0cd1545ccbd17c600">RTT::Logger::startup</a></div><div class="ttdeci">void startup()</div><div class="ttdoc">Print a &#39;welcome&#39; string in Info and reset log timestamp. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00446">Logger.cpp:446</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_a1f4608855f0042fb70423e4845a431f1"><div class="ttname"><a href="classRTT_1_1Logger.html#a1f4608855f0042fb70423e4845a431f1">RTT::Logger::getLogLine</a></div><div class="ttdeci">std::string getLogLine()</div><div class="ttdoc">This method gets all messages upto level Info and can be freely read by the user, removing the line f...</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00504">Logger.cpp:504</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_a91181a87145660d8af192abd82532c3c"><div class="ttname"><a href="classRTT_1_1Logger.html#a91181a87145660d8af192abd82532c3c">RTT::Logger::disallowRealTime</a></div><div class="ttdeci">void disallowRealTime()</div><div class="ttdoc">Disallow messages of the LogLevel &#39;RealTime&#39; to appear on the console. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00370">Logger.cpp:370</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_ad8b0f7409f32a85cb35f7ddb322f77be"><div class="ttname"><a href="classRTT_1_1Logger.html#ad8b0f7409f32a85cb35f7ddb322f77be">RTT::Logger::flush</a></div><div class="ttdeci">static std::ostream &amp; flush(std::ostream &amp;__os)</div><div class="ttdoc">Flush the output stream. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00401">Logger.cpp:401</a></div></div>
-<div class="ttc" id="classRTT_1_1Logger_html_a792d3d611746d64efe30a6c3f23bc6ac"><div class="ttname"><a href="classRTT_1_1Logger.html#a792d3d611746d64efe30a6c3f23bc6ac">RTT::Logger::lognl</a></div><div class="ttdeci">void lognl()</div><div class="ttdoc">Add newline without flushing buffers. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00602">Logger.cpp:602</a></div></div>
+<div class="ttc" id="classRTT_1_1Logger_html_a792d3d611746d64efe30a6c3f23bc6ac"><div class="ttname"><a href="classRTT_1_1Logger.html#a792d3d611746d64efe30a6c3f23bc6ac">RTT::Logger::lognl</a></div><div class="ttdeci">void lognl()</div><div class="ttdoc">Add newline without flushing buffers. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00606">Logger.cpp:606</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_afeb14ef4145301474e0b1b5b62fd1d9c"><div class="ttname"><a href="classRTT_1_1Logger.html#afeb14ef4145301474e0b1b5b62fd1d9c">RTT::Logger::LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdoc">Enumerate all log-levels from absolute silence to everything. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8hpp_source.html#l00121">Logger.hpp:121</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_aaede943bd6496ce6fb5cb9b848deff6b"><div class="ttname"><a href="classRTT_1_1Logger.html#aaede943bd6496ce6fb5cb9b848deff6b">RTT::Logger::log</a></div><div class="ttdeci">static Logger &amp; log()</div><div class="ttdoc">As Instance(), but more userfriendly. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00117">Logger.cpp:117</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_af34355989b7f7616d74b0abe467c2356"><div class="ttname"><a href="classRTT_1_1Logger.html#af34355989b7f7616d74b0abe467c2356">RTT::Logger::allowRealTime</a></div><div class="ttdeci">void allowRealTime()</div><div class="ttdoc">Allow messages of the LogLevel &#39;RealTime&#39; to appear on the console. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00365">Logger.cpp:365</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_a9b0b07ca44c9c2d536c93bff8a01cf77"><div class="ttname"><a href="classRTT_1_1Logger.html#a9b0b07ca44c9c2d536c93bff8a01cf77">RTT::Logger::Release</a></div><div class="ttdeci">static void Release()</div><div class="ttdoc">Delete the singleton logger. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00082">Logger.cpp:82</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1Mutex_html"><div class="ttname"><a href="classRTT_1_1os_1_1Mutex.html">RTT::os::Mutex</a></div><div class="ttdoc">An object oriented wrapper around a non recursive mutex. </div><div class="ttdef"><b>Definition:</b> <a href="Mutex_8hpp_source.html#l00090">Mutex.hpp:90</a></div></div>
-<div class="ttc" id="classRTT_1_1Logger_html_a857179fde0f4813f54ad8feba48541c7"><div class="ttname"><a href="classRTT_1_1Logger.html#a857179fde0f4813f54ad8feba48541c7">RTT::Logger::setStdStream</a></div><div class="ttdeci">void setStdStream(std::ostream &amp;stdos)</div><div class="ttdoc">Set the standard output stream. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00523">Logger.cpp:523</a></div></div>
-<div class="ttc" id="classRTT_1_1Logger_html_a7ef192af2f69fdc887ef825e9134c4af"><div class="ttname"><a href="classRTT_1_1Logger.html#a7ef192af2f69fdc887ef825e9134c4af">RTT::Logger::logendl</a></div><div class="ttdeci">void logendl()</div><div class="ttdoc">Add endl and flush buffers. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00608">Logger.cpp:608</a></div></div>
+<div class="ttc" id="classRTT_1_1Logger_html_a857179fde0f4813f54ad8feba48541c7"><div class="ttname"><a href="classRTT_1_1Logger.html#a857179fde0f4813f54ad8feba48541c7">RTT::Logger::setStdStream</a></div><div class="ttdeci">void setStdStream(std::ostream &amp;stdos)</div><div class="ttdoc">Set the standard output stream. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00527">Logger.cpp:527</a></div></div>
+<div class="ttc" id="classRTT_1_1Logger_html_a7ef192af2f69fdc887ef825e9134c4af"><div class="ttname"><a href="classRTT_1_1Logger.html#a7ef192af2f69fdc887ef825e9134c4af">RTT::Logger::logendl</a></div><div class="ttdeci">void logendl()</div><div class="ttdoc">Add endl and flush buffers. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00612">Logger.cpp:612</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_a079e4697cf009c4e6d4607df0a02a4fc"><div class="ttname"><a href="classRTT_1_1Logger.html#a079e4697cf009c4e6d4607df0a02a4fc">RTT::Logger::in</a></div><div class="ttdeci">Logger &amp; in(const std::string &amp;modname)</div><div class="ttdoc">Inform the Logger of the entry of a module. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00422">Logger.cpp:422</a></div></div>
-<div class="ttc" id="classRTT_1_1Logger_html_ae56db21b2ff0c2b7eddb62b1f054e16d"><div class="ttname"><a href="classRTT_1_1Logger.html#ae56db21b2ff0c2b7eddb62b1f054e16d">RTT::Logger::setLogLevel</a></div><div class="ttdeci">void setLogLevel(LogLevel ll)</div><div class="ttdoc">Set the loglevel of the outgoing (streamed) messages. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00614">Logger.cpp:614</a></div></div>
+<div class="ttc" id="classRTT_1_1Logger_html_ae56db21b2ff0c2b7eddb62b1f054e16d"><div class="ttname"><a href="classRTT_1_1Logger.html#ae56db21b2ff0c2b7eddb62b1f054e16d">RTT::Logger::setLogLevel</a></div><div class="ttdeci">void setLogLevel(LogLevel ll)</div><div class="ttdoc">Set the loglevel of the outgoing (streamed) messages. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00618">Logger.cpp:618</a></div></div>
 <div class="ttc" id="classRTT_1_1Logger_html_a1be43e58ab3dd852acfd3370de785541"><div class="ttname"><a href="classRTT_1_1Logger.html#a1be43e58ab3dd852acfd3370de785541">RTT::Logger::getReferenceTime</a></div><div class="ttdeci">os::TimeService::ticks getReferenceTime() const </div><div class="ttdoc">Function to get the loggers starting timestamp. </div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00375">Logger.cpp:375</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1MutexLock_html"><div class="ttname"><a href="classRTT_1_1os_1_1MutexLock.html">RTT::os::MutexLock</a></div><div class="ttdoc">MutexLock is a scope based Monitor, protecting critical sections with a Mutex object through locking ...</div><div class="ttdef"><b>Definition:</b> <a href="MutexLock_8hpp_source.html#l00051">MutexLock.hpp:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 28 2017 14:55:13 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 28 2017 15:32:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
