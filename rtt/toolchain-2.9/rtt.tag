@@ -19703,6 +19703,27 @@
       <anchor>ac24d9d13aeabbbaa8807c475a247f099</anchor>
       <arglist>(int i)</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>sub_and_test</name>
+      <anchorfile>classRTT_1_1os_1_1AtomicInt.html</anchorfile>
+      <anchor>a54c7709e6fa80cf188fac133edc78c51</anchor>
+      <arglist>(int i)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>dec_and_test</name>
+      <anchorfile>classRTT_1_1os_1_1AtomicInt.html</anchorfile>
+      <anchor>abb38025bbb2c16ec6d1b0d66c0d1106a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>inc_and_test</name>
+      <anchorfile>classRTT_1_1os_1_1AtomicInt.html</anchorfile>
+      <anchor>a0023a91b4af574ae908cd1ed8bafd4c6</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>RTT::os::Condition</name>
