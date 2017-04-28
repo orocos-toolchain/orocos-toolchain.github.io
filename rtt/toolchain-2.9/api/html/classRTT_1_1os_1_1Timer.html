@@ -92,9 +92,9 @@ typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8538a80e574baa2c0d150ec97a92d9ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a8538a80e574baa2c0d150ec97a92d9ee">Timer</a> (<a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> max_timers, int scheduler=-1, int priority=0)</td></tr>
-<tr class="memdesc:a8538a80e574baa2c0d150ec97a92d9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a timer object which can hold <em>max_timers</em> timers.  <a href="#a8538a80e574baa2c0d150ec97a92d9ee">More...</a><br/></td></tr>
-<tr class="separator:a8538a80e574baa2c0d150ec97a92d9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b67f32343704651ab422c5b2897a97b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a1b67f32343704651ab422c5b2897a97b">Timer</a> (<a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> max_timers, int scheduler=-1, int priority=0, const std::string &amp;name=std::string(&quot;Timer&quot;))</td></tr>
+<tr class="memdesc:a1b67f32343704651ab422c5b2897a97b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a named timer object which can hold <em>max_timers</em> timers.  <a href="#a1b67f32343704651ab422c5b2897a97b">More...</a><br/></td></tr>
+<tr class="separator:a1b67f32343704651ab422c5b2897a97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e2f92009c78fa7f734a6e06ca6bf97e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a8e2f92009c78fa7f734a6e06ca6bf97e">timeout</a> (<a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id)</td></tr>
 <tr class="memdesc:a8e2f92009c78fa7f734a6e06ca6bf97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called each time an armed or periodic timer expires.  <a href="#a8e2f92009c78fa7f734a6e06ca6bf97e">More...</a><br/></td></tr>
 <tr class="separator:a8e2f92009c78fa7f734a6e06ca6bf97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,7 +191,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 <p>In Order to use this class, derive your class from <a class="el" href="classRTT_1_1os_1_1Timer.html" title="This class allows to define a timer object which can be armed in single shot and periodic mode...">Timer</a> and implement the <a class="el" href="classRTT_1_1os_1_1Timer.html#a8e2f92009c78fa7f734a6e06ca6bf97e" title="This function is called each time an armed or periodic timer expires. ">timeout()</a> method. The resolution of this class depends completely on the timer resolution of the underlying operating system.</p>
 <p>If you do not attach an activity, the <a class="el" href="classRTT_1_1os_1_1Timer.html" title="This class allows to define a timer object which can be armed in single shot and periodic mode...">Timer</a> will create a thread of its own and start it. That thread will be stopped and cleaned up when the <a class="el" href="classRTT_1_1os_1_1Timer.html" title="This class allows to define a timer object which can be armed in single shot and periodic mode...">Timer</a> is destroyed. </p>
 
-<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00067">67</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00068">68</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="aaf02e89f4fb03702b2979dd699edde40"></a>
 <div class="memitem">
@@ -214,12 +214,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 <p>Index in vector is the timer id. </p>
 <p>1st Time is the absolute time upon which the timer expires. 2nd Time is the optional period of the timer. </p>
 
-<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00096">96</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00097">97</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8538a80e574baa2c0d150ec97a92d9ee"></a>
+<a class="anchor" id="a1b67f32343704651ab422c5b2897a97b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -239,7 +239,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>priority</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>priority</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>std::string(&quot;Timer&quot;)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -249,13 +255,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
       </table>
 </div><div class="memdoc">
 
-<p>Create a timer object which can hold <em>max_timers</em> timers. </p>
+<p>Create a named timer object which can hold <em>max_timers</em> timers. </p>
 <p>A <a class="el" href="classRTT_1_1os_1_1Timer.html" title="This class allows to define a timer object which can be armed in single shot and periodic mode...">Timer</a> must be executed in a non periodic thread (or the main thread) or it will refuse to start. If <em>scheduler</em> is set to -1 (default) no thread is created and you need to attach a thread yourself to this <a class="el" href="classRTT_1_1os_1_1Timer.html" title="This class allows to define a timer object which can be armed in single shot and periodic mode...">Timer</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">max_timers</td><td>The initial amount of timers this <a class="el" href="classRTT_1_1os_1_1Timer.html" title="This class allows to define a timer object which can be armed in single shot and periodic mode...">Timer</a> can monitor. Keep as low as possible. See also <a class="el" href="classRTT_1_1os_1_1Timer.html#a93711c391b98e1a602ffc9a29e4119d2" title="Change the maximum number of timers in this object. ">setMaxTimers()</a>. </td></tr>
     <tr><td class="paramname">scheduler</td><td>The <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> scheduler type for this timer. ORO_SCHED_OTHER or ORO_SCHED_RT or -1 to attach your own thread. </td></tr>
     <tr><td class="paramname">priority</td><td>The priority within the <em>scheduler</em> of this timer. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the timer (ie the underlying Activity/Thread) </td></tr>
   </table>
   </dd>
 </dl>
@@ -788,7 +795,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 28 2017 13:43:24 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 28 2017 14:55:18 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

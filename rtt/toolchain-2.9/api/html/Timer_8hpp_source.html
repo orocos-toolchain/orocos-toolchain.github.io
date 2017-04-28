@@ -102,89 +102,90 @@
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &quot;Condition.hpp&quot;</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;ThreadInterface.hpp&quot;</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &quot;../base/RunnableInterface.hpp&quot;</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">namespace </span>RTT</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{ <span class="keyword">namespace </span>os {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classRTT_1_1os_1_1Timer.html">   67</a></span>&#160;    <span class="keyword">class </span>RTT_API <a class="code" href="classRTT_1_1os_1_1Timer.html">Timer</a></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        : <span class="keyword">public</span> <a class="code" href="classRTT_1_1base_1_1RunnableInterface.html">base::RunnableInterface</a></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">   74</a></span>&#160;        <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classRTT_1_1base_1_1ActivityInterface.html">base::ActivityInterface</a>* mThread;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classRTT_1_1os_1_1Semaphore.html">Semaphore</a> msem;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">mutable</span> <a class="code" href="classRTT_1_1os_1_1Mutex.html">Mutex</a> m;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classRTT_1_1os_1_1TimeService.html#accd937aad8cd6db7c1752dc1d70809cd">TimeService::nsecs</a> Time;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">struct </span>TimerInfo</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            TimerInfo() : expires(0), period(0) {}</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            TimerInfo(<span class="keyword">const</span> TimerInfo&amp; other) { *<span class="keyword">this</span> = other; }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            TimerInfo&amp; operator=(<span class="keyword">const</span> TimerInfo&amp; other) { this-&gt;expires = other.expires; this-&gt;period = other.period; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            Time expires; <span class="comment">// was .first</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            Time period;  <span class="comment">// was .second</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="classRTT_1_1os_1_1Condition.html">Condition</a> expired;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        };</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">   96</a></span>&#160;        <span class="keyword">typedef</span> std::vector&lt;TimerInfo&gt; <a class="code" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">TimerIds</a>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">TimerIds</a> mtimers;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">bool</span> mdo_quit;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">bool</span> initialize();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">void</span> finalize();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">void</span> step();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="comment">// The main &#39;event&#39; loop.</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> loop();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">bool</span> breakLoop();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="classRTT_1_1os_1_1Timer.html">Timer</a>(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> max_timers, <span class="keywordtype">int</span> scheduler = -1, <span class="keywordtype">int</span> priority = 0);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        ~<a class="code" href="classRTT_1_1os_1_1Timer.html">Timer</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">namespace </span>RTT</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{ <span class="keyword">namespace </span>os {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classRTT_1_1os_1_1Timer.html">   68</a></span>&#160;    <span class="keyword">class </span>RTT_API <a class="code" href="classRTT_1_1os_1_1Timer.html">Timer</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        : <span class="keyword">public</span> <a class="code" href="classRTT_1_1base_1_1RunnableInterface.html">base::RunnableInterface</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">   75</a></span>&#160;        <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classRTT_1_1base_1_1ActivityInterface.html">base::ActivityInterface</a>* mThread;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classRTT_1_1os_1_1Semaphore.html">Semaphore</a> msem;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">mutable</span> <a class="code" href="classRTT_1_1os_1_1Mutex.html">Mutex</a> m;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classRTT_1_1os_1_1TimeService.html#accd937aad8cd6db7c1752dc1d70809cd">TimeService::nsecs</a> Time;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">struct </span>TimerInfo</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            TimerInfo() : expires(0), period(0) {}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            TimerInfo(<span class="keyword">const</span> TimerInfo&amp; other) { *<span class="keyword">this</span> = other; }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            TimerInfo&amp; operator=(<span class="keyword">const</span> TimerInfo&amp; other) { this-&gt;expires = other.expires; this-&gt;period = other.period; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            Time expires; <span class="comment">// was .first</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            Time period;  <span class="comment">// was .second</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="classRTT_1_1os_1_1Condition.html">Condition</a> expired;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        };</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">   97</a></span>&#160;        <span class="keyword">typedef</span> std::vector&lt;TimerInfo&gt; <a class="code" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">TimerIds</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">TimerIds</a> mtimers;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">bool</span> mdo_quit;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">bool</span> initialize();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">void</span> finalize();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">void</span> step();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">// The main &#39;event&#39; loop.</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordtype">void</span> loop();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">bool</span> breakLoop();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="classRTT_1_1os_1_1Timer.html">Timer</a>(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> max_timers, <span class="keywordtype">int</span> scheduler = -1, <span class="keywordtype">int</span> priority = 0, <span class="keyword">const</span> std::string&amp; name = std::string(<span class="stringliteral">&quot;Timer&quot;</span>));</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> timeout(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">void</span> setMaxTimers(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> max);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">bool</span> startTimer(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id, <a class="code" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> period);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordtype">bool</span> arm(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id, <a class="code" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> wait_time);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="classRTT_1_1os_1_1TimeService.html#a6a81b0776c820895f3b0c4184f83eedc">TimeService::Seconds</a> timeRemaining(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">bool</span> isArmed(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">bool</span> killTimer(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordtype">bool</span> waitFor(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordtype">bool</span> waitForUntil(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> <span class="keywordtype">id</span>, <a class="code" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> abs_time);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    };</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}}</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        ~<a class="code" href="classRTT_1_1os_1_1Timer.html">Timer</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> timeout(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordtype">void</span> setMaxTimers(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> max);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordtype">bool</span> startTimer(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id, <a class="code" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> period);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">bool</span> arm(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id, <a class="code" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> wait_time);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="classRTT_1_1os_1_1TimeService.html#a6a81b0776c820895f3b0c4184f83eedc">TimeService::Seconds</a> timeRemaining(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">bool</span> isArmed(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">bool</span> killTimer(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordtype">bool</span> waitFor(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keywordtype">bool</span> waitForUntil(<a class="code" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> <span class="keywordtype">id</span>, <a class="code" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> abs_time);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    };</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}}</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceRTT_html_ab93965f88bfbe72fbc2ece16c047c902"><div class="ttname"><a href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">RTT::Seconds</a></div><div class="ttdeci">double Seconds</div><div class="ttdoc">Seconds are stored as a double precision float. </div><div class="ttdef"><b>Definition:</b> <a href="os_2Time_8hpp_source.html#l00053">Time.hpp:53</a></div></div>
-<div class="ttc" id="classRTT_1_1os_1_1Timer_html_aaf02e89f4fb03702b2979dd699edde40"><div class="ttname"><a href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">RTT::os::Timer::TimerIds</a></div><div class="ttdeci">std::vector&lt; TimerInfo &gt; TimerIds</div><div class="ttdoc">Index in vector is the timer id. </div><div class="ttdef"><b>Definition:</b> <a href="Timer_8hpp_source.html#l00096">Timer.hpp:96</a></div></div>
+<div class="ttc" id="classRTT_1_1os_1_1Timer_html_aaf02e89f4fb03702b2979dd699edde40"><div class="ttname"><a href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">RTT::os::Timer::TimerIds</a></div><div class="ttdeci">std::vector&lt; TimerInfo &gt; TimerIds</div><div class="ttdoc">Index in vector is the timer id. </div><div class="ttdef"><b>Definition:</b> <a href="Timer_8hpp_source.html#l00097">Timer.hpp:97</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1Semaphore_html"><div class="ttname"><a href="classRTT_1_1os_1_1Semaphore.html">RTT::os::Semaphore</a></div><div class="ttdoc">An object oriented wrapper around a counting semaphore. </div><div class="ttdef"><b>Definition:</b> <a href="Semaphore_8hpp_source.html#l00061">Semaphore.hpp:61</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1RunnableInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1RunnableInterface.html">RTT::base::RunnableInterface</a></div><div class="ttdoc">A class for running a certain piece of code in a thread. </div><div class="ttdef"><b>Definition:</b> <a href="RunnableInterface_8hpp_source.html#l00069">RunnableInterface.hpp:69</a></div></div>
-<div class="ttc" id="classRTT_1_1os_1_1Timer_html_af40115442f2f261296ab9e8f270317ea"><div class="ttname"><a href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a></div><div class="ttdeci">int TimerId</div><div class="ttdoc">A positive numeric ID representing a timer. </div><div class="ttdef"><b>Definition:</b> <a href="Timer_8hpp_source.html#l00074">Timer.hpp:74</a></div></div>
+<div class="ttc" id="classRTT_1_1os_1_1Timer_html_af40115442f2f261296ab9e8f270317ea"><div class="ttname"><a href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a></div><div class="ttdeci">int TimerId</div><div class="ttdoc">A positive numeric ID representing a timer. </div><div class="ttdef"><b>Definition:</b> <a href="Timer_8hpp_source.html#l00075">Timer.hpp:75</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1Condition_html"><div class="ttname"><a href="classRTT_1_1os_1_1Condition.html">RTT::os::Condition</a></div><div class="ttdoc">An object oriented wrapper around a condition variable. </div><div class="ttdef"><b>Definition:</b> <a href="Condition_8hpp_source.html#l00060">Condition.hpp:60</a></div></div>
 <div class="ttc" id="classRTT_1_1base_1_1ActivityInterface_html"><div class="ttname"><a href="classRTT_1_1base_1_1ActivityInterface.html">RTT::base::ActivityInterface</a></div><div class="ttdoc">Interface to start/stop and query a Activity. </div><div class="ttdef"><b>Definition:</b> <a href="ActivityInterface_8hpp_source.html#l00062">ActivityInterface.hpp:62</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1TimeService_html_a6a81b0776c820895f3b0c4184f83eedc"><div class="ttname"><a href="classRTT_1_1os_1_1TimeService.html#a6a81b0776c820895f3b0c4184f83eedc">RTT::os::TimeService::Seconds</a></div><div class="ttdeci">double Seconds</div><div class="ttdoc">The type used to store SI unit time keeping. </div><div class="ttdef"><b>Definition:</b> <a href="TimeService_8hpp_source.html#l00041">TimeService.hpp:41</a></div></div>
-<div class="ttc" id="classRTT_1_1os_1_1Timer_html"><div class="ttname"><a href="classRTT_1_1os_1_1Timer.html">RTT::os::Timer</a></div><div class="ttdoc">This class allows to define a timer object which can be armed in single shot and periodic mode...</div><div class="ttdef"><b>Definition:</b> <a href="Timer_8hpp_source.html#l00067">Timer.hpp:67</a></div></div>
+<div class="ttc" id="classRTT_1_1os_1_1Timer_html"><div class="ttname"><a href="classRTT_1_1os_1_1Timer.html">RTT::os::Timer</a></div><div class="ttdoc">This class allows to define a timer object which can be armed in single shot and periodic mode...</div><div class="ttdef"><b>Definition:</b> <a href="Timer_8hpp_source.html#l00068">Timer.hpp:68</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1Mutex_html"><div class="ttname"><a href="classRTT_1_1os_1_1Mutex.html">RTT::os::Mutex</a></div><div class="ttdoc">An object oriented wrapper around a non recursive mutex. </div><div class="ttdef"><b>Definition:</b> <a href="Mutex_8hpp_source.html#l00090">Mutex.hpp:90</a></div></div>
 <div class="ttc" id="namespaceRTT_html_af83330e8244855273c9246bd65c20682"><div class="ttname"><a href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">RTT::nsecs</a></div><div class="ttdeci">long long nsecs</div><div class="ttdoc">nanoseconds as a signed long long. </div><div class="ttdef"><b>Definition:</b> <a href="os_2Time_8hpp_source.html#l00069">Time.hpp:69</a></div></div>
 <div class="ttc" id="classRTT_1_1os_1_1TimeService_html_accd937aad8cd6db7c1752dc1d70809cd"><div class="ttname"><a href="classRTT_1_1os_1_1TimeService.html#accd937aad8cd6db7c1752dc1d70809cd">RTT::os::TimeService::nsecs</a></div><div class="ttdeci">long long nsecs</div><div class="ttdoc">An integer representation of nanoseconds. </div><div class="ttdef"><b>Definition:</b> <a href="TimeService_8hpp_source.html#l00061">TimeService.hpp:61</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 28 2017 13:43:18 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 28 2017 14:55:13 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

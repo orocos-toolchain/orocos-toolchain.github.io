@@ -20519,8 +20519,8 @@
       <type></type>
       <name>Timer</name>
       <anchorfile>classRTT_1_1os_1_1Timer.html</anchorfile>
-      <anchor>a8538a80e574baa2c0d150ec97a92d9ee</anchor>
-      <arglist>(TimerId max_timers, int scheduler=-1, int priority=0)</arglist>
+      <anchor>a1b67f32343704651ab422c5b2897a97b</anchor>
+      <arglist>(TimerId max_timers, int scheduler=-1, int priority=0, const std::string &amp;name=std::string(&quot;Timer&quot;))</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
