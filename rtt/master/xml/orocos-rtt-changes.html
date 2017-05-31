@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Orocos Toolchain 2.6 Release Series Changes, New Features, and Fixes</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp46693910576384"></a>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Orocos Toolchain 2.6 Release Series Changes, New Features, and Fixes</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idp47214454685776"></a>
       <acronym class="acronym">Orocos</acronym> Toolchain 2.6 Release Series
       Changes, New Features, and Fixes 
     </h2></div><div><h3 class="subtitle"><em>
 			<span class="emphasis"><em>Open RObot COntrol Software</em></span>
-    </em></h3></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#upgrading">1. Upgrading from RTT 1.x to Toolchain 2.x</a></span></dt><dt><span class="section"><a href="#caveats">2. Important Caveats</a></span></dt><dt><span class="section"><a href="#ros">3. ROS Users</a></span></dt><dt><span class="section"><a href="#idp46693910848256">4. Improvements</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46693910848928">4.1. Building</a></span></dt><dt><span class="section"><a href="#idp46693910855424">4.2. TaskContext and Services</a></span></dt><dt><span class="section"><a href="#idp46693910677040">4.3. Data Types, Toolkits and Typekits</a></span></dt><dt><span class="section"><a href="#idp46693910682400">4.4. Operating Systems</a></span></dt></dl></dd><dt><span class="section"><a href="#idp46693910684640">5. Orocos Component Library (OCL)</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46693910685328">5.1. Lua scripting</a></span></dt><dt><span class="section"><a href="#idp46693910689888">5.2. Reporting</a></span></dt><dt><span class="section"><a href="#idp46693910692144">5.3. Deployment</a></span></dt></dl></dd><dt><span class="appendix"><a href="#idp46693910695760">1. About Orocos</a></span></dt></dl></div><p>
+    </em></h3></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#upgrading">1. Upgrading from RTT 1.x to Toolchain 2.x</a></span></dt><dt><span class="section"><a href="#caveats">2. Important Caveats</a></span></dt><dt><span class="section"><a href="#ros">3. ROS Users</a></span></dt><dt><span class="section"><a href="#idp47214454790928">4. Improvements</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47214454791600">4.1. Building</a></span></dt><dt><span class="section"><a href="#idp47214454798096">4.2. TaskContext and Services</a></span></dt><dt><span class="section"><a href="#idp47214454620592">4.3. Data Types, Toolkits and Typekits</a></span></dt><dt><span class="section"><a href="#idp47214454625952">4.4. Operating Systems</a></span></dt></dl></dd><dt><span class="section"><a href="#idp47214454628224">5. Orocos Component Library (OCL)</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47214454628912">5.1. Lua scripting</a></span></dt><dt><span class="section"><a href="#idp47214454633552">5.2. Reporting</a></span></dt><dt><span class="section"><a href="#idp47214454635808">5.3. Deployment</a></span></dt></dl></dd><dt><span class="appendix"><a href="#idp47214454639424">1. About Orocos</a></span></dt></dl></div><p>
     This document provides a quick overview of what changed between
     the <acronym class="acronym">Orocos</acronym> Toolchain 2.5 and version 2.6.
   </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="upgrading"></a>1. Upgrading from RTT 1.x to Toolchain 2.x</h2></div></div></div><p>
@@ -53,7 +53,7 @@
 					We fixed issues of conflicting typekits (see more on that below). This means that its
 					allowed now to load typekits from ROS and non-ROS packages, describing the same
 					structs.
-				</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp46693910848256"></a>4. Improvements</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46693910848928"></a>4.1. Building</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+				</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp47214454790928"></a>4. Improvements</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47214454791600"></a>4.1. Building</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
 					<span class="emphasis"><em>ROS_ROOT is no longer influencing your build, unless you're in a ROS_PACKAGE_PATH</em></span>
 					The last cornercases of ROS_ROOT influencing our build behavior have been ironed out in this release.
 				</p><p>
@@ -67,7 +67,7 @@
 					<span class="emphasis"><em>It's now possible to create applications that setup a CORBA proxy, without
 					linking to TAO/OMNIORB directly, but only to the RTT corba transport.</em></span> See the
 					<a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1corba_1_1TaskContextFactory.html">TaskContextFactory</a> class.
-				</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46693910855424"></a>4.2. TaskContext and Services</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+				</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47214454798096"></a>4.2. TaskContext and Services</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
 						<span class="emphasis"><em> A new connection type has been introduced, CIRCULAR_BUFFER</em></span>
 					</p><p>
 						This new type can be used in the ConnPolicy.type field in order to have circular
@@ -83,7 +83,7 @@
 					</p><p>
 						This means you no longer need a DeploymentComponent to import typekits or component
 						packages.
-					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46693910677040"></a>4.3. Data Types, Toolkits and Typekits</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>We restructured typekits such that it is now allowed to load multiple typekits for the same type.</em></span></p><p>
+					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47214454620592"></a>4.3. Data Types, Toolkits and Typekits</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="emphasis"><em>We restructured typekits such that it is now allowed to load multiple typekits for the same type.</em></span></p><p>
 						If these typekits name the type differently, the names will function as an alias. Also,
 						TypeInfo object pointers are now constant and can no longer become invalid in a running
 						application.  The restructuring allows one to install a TypeInfo object and later-on
@@ -98,10 +98,10 @@
 					There's now also
 						a real-time version of getMember, if you provide it a ReferenceDataSource such that a
 						reference to the member can be given without allocating a DataSource for it.
-					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46693910682400"></a>4.4. Operating Systems</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47214454625952"></a>4.4. Operating Systems</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
 						Creating a Linux thread now prints the TID or PID instead of the POSIX id, such that
 						RTT threads can be correlated to normal Unix tools such as top or ps.
-					</p></li></ul></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp46693910684640"></a>5. Orocos Component Library (OCL)</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46693910685328"></a>5.1. Lua scripting</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					</p></li></ul></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idp47214454628224"></a>5. Orocos Component Library (OCL)</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47214454628912"></a>5.1. Lua scripting</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
 						rttlua and tlsf-rttlua now support CORBA and Log4cpp logging as well.
 					</p></li><li class="listitem"><p>
 						tlsf-rttlua is now capable of executing RTT operations in hard real-time, as long
@@ -109,17 +109,17 @@
 					</p></li><li class="listitem"><p>
 						Consult the  <a class="ulink" href="http://www.orocos.org/wiki/orocos/toolchain/orocostoolchainluacookbook" target="_top">LuaCookbook</a>
 						for the latest changes
-					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46693910689888"></a>5.2. Reporting</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47214454633552"></a>5.2. Reporting</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
 						The reporting component has been rewritten (again) boosting its performance sometimes a
 						1000-fold (but at least a 100-fold), especially when using the NetCDF reporting component. We can now reliably log
 						a dozen ports at 1kHz, using only 10% cpu on an Intel i7 system.
-					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp46693910692144"></a>5.3. Deployment</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+					</p></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idp47214454635808"></a>5.3. Deployment</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
 						A <span class="emphasis"><em>-d or --daemon</em></span> flag has been added to the deployer to let it
 						run in the background. You can use the new signal catching functions in the deployer
 						API to catch shutdown/restart signals.
 					</p></li><li class="listitem"><p>
 						Two new operations were added: setFileDescriptorActivity and connectOperations.
-					</p></li></ul></div></div></div><div class="appendix"><h2 class="title" style="clear: both"><a id="idp46693910695760"></a>1. About Orocos</h2><p>
+					</p></li></ul></div></div></div><div class="appendix"><h2 class="title" style="clear: both"><a id="idp47214454639424"></a>1. About Orocos</h2><p>
 			Please send your Orocos questions to <a class="ulink" href="mailto: orocos-users at lists.mech.kuleuven.be" target="_top">
 			orocos-users at lists.mech.kuleuven.be </a>. 
 		</p><p>
