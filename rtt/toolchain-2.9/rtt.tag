@@ -19881,6 +19881,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual unsigned</type>
+      <name>getCpuAffinity</name>
+      <anchorfile>classRTT_1_1os_1_1MainThread.html</anchorfile>
+      <anchor>acaefb4ef47a6ccf86d474e90cc6aadfe</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>setWaitPeriodPolicy</name>
       <anchorfile>classRTT_1_1os_1_1MainThread.html</anchorfile>
@@ -20487,6 +20494,13 @@
       <name>getPid</name>
       <anchorfile>classRTT_1_1os_1_1ThreadInterface.html</anchorfile>
       <anchor>ace21c38e1a5dca14df53b95c05cb0b27</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual unsigned</type>
+      <name>getCpuAffinity</name>
+      <anchorfile>classRTT_1_1os_1_1ThreadInterface.html</anchorfile>
+      <anchor>abd02cd514e403a91fc35ef00f2bb88b7</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">

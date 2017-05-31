@@ -132,6 +132,8 @@ virtual const RTOS_TASK *&#160;</td><td class="memItemRight" valign="bottom"><a 
 <tr class="memitem:a433b55eed631c0747aed5dfa20319abb"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MainThread.html#a433b55eed631c0747aed5dfa20319abb">getPid</a> () const </td></tr>
 <tr class="memdesc:a433b55eed631c0747aed5dfa20319abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Process or <a class="el" href="classRTT_1_1os_1_1Thread.html" title="A Thread object executes user code in its own thread. ">Thread</a> ID of this thread, as assigned by the Operating System.  <a href="#a433b55eed631c0747aed5dfa20319abb">More...</a><br/></td></tr>
 <tr class="separator:a433b55eed631c0747aed5dfa20319abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaefb4ef47a6ccf86d474e90cc6aadfe"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MainThread.html#acaefb4ef47a6ccf86d474e90cc6aadfe">getCpuAffinity</a> () const </td></tr>
+<tr class="separator:acaefb4ef47a6ccf86d474e90cc6aadfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c385a96d1aae42e473cfb3c1fd4865a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c385a96d1aae42e473cfb3c1fd4865a"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxOverrun</b> (int m)</td></tr>
 <tr class="separator:a9c385a96d1aae42e473cfb3c1fd4865a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +175,36 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="MainThread_8hpp_source.html#l00052">52</a> of file <a class="el" href="MainThread_8hpp_source.html">MainThread.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="acaefb4ef47a6ccf86d474e90cc6aadfe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned RTT::os::MainThread::getCpuAffinity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the cpu affinity </dd></dl>
+
+<p>Implements <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#abd02cd514e403a91fc35ef00f2bb88b7">RTT::os::ThreadInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="MainThread_8cpp_source.html#l00114">114</a> of file <a class="el" href="MainThread_8cpp_source.html">MainThread.cpp</a>.</p>
+
+<p>References <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00451">RTT::os::rtos_task_get_cpu_affinity()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a433b55eed631c0747aed5dfa20319abb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -327,7 +359,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="MainThread_8cpp_source.html#l00058">58</a> of file <a class="el" href="MainThread_8cpp_source.html">MainThread.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="startstop_8cpp_source.html#l00075">__os_init()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00137">RTT::extras::SimulationThread::simthread()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00078">RTT::extras::SequentialActivity::thread()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00092">RTT::extras::SlaveActivity::thread()</a>, and <a class="el" href="FileDescriptorSimulationActivity_8cpp_source.html#l00240">RTT::extras::FileDescriptorSimulationActivity::thread()</a>.</p>
+<p>Referenced by <a class="el" href="startstop_8cpp_source.html#l00075">__os_init()</a>, <a class="el" href="TimerThread_8cpp_source.html#l00067">RTT::extras::TimerThread::Instance()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00137">RTT::extras::SimulationThread::simthread()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00078">RTT::extras::SequentialActivity::thread()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00092">RTT::extras::SlaveActivity::thread()</a>, and <a class="el" href="FileDescriptorSimulationActivity_8cpp_source.html#l00240">RTT::extras::FileDescriptorSimulationActivity::thread()</a>.</p>
 
 </div>
 </div>
@@ -476,7 +508,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#a14584665c85d0217fbcd7b8510fc8716">RTT::os::ThreadInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="MainThread_8cpp_source.html#l00128">128</a> of file <a class="el" href="MainThread_8cpp_source.html">MainThread.cpp</a>.</p>
+<p>Definition at line <a class="el" href="MainThread_8cpp_source.html#l00133">133</a> of file <a class="el" href="MainThread_8cpp_source.html">MainThread.cpp</a>.</p>
 
 <p>References <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00262">RTT::os::rtos_task_set_wait_period_policy()</a>.</p>
 
@@ -504,7 +536,7 @@ Protected Attributes</h2></td></tr>
 <p>Threads are given an unique number, which follows thread creation order. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="namespaceRTT_1_1os.html#ae6e8bb6fecf005ff4ecf3b57db4b26c8" title="The number of threads in addition to the main() thread. ">os::threads</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="ThreadInterface_8hpp_source.html#l00224">224</a> of file <a class="el" href="ThreadInterface_8hpp_source.html">ThreadInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ThreadInterface_8hpp_source.html#l00229">229</a> of file <a class="el" href="ThreadInterface_8hpp_source.html">ThreadInterface.hpp</a>.</p>
 
 </div>
 </div>
@@ -515,7 +547,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 8 2017 14:15:13 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 31 2017 15:38:09 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
