@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Tutorial on the Component Interface</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><meta name="description" content="This document gives an introduction on the different aspects of interfacing an Orocos component. This is an excerpt from the Component Builder's Manual and walks through the 'Hello World' program." /></head><body><div class="book"><div class="titlepage"><div><div><h1 class="title"><a id="idm46011877793104"></a>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Tutorial on the Component Interface</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><meta name="description" content="This document gives an introduction on the different aspects of interfacing an Orocos component. This is an excerpt from the Component Builder's Manual and walks through the 'Hello World' program." /></head><body><div class="book"><div class="titlepage"><div><div><h1 class="title"><a id="idm45815849814128"></a>
       Tutorial on the Component Interface
     </h1></div><div><h2 class="subtitle"><span class="emphasis"><em>Open RObot COntrol Software</em></span>
-    </h2></div><div><h2 class="subtitle">2.9.0</h2></div><div><p class="copyright">Copyright © 2002,2003,2004,2005,2006 Peter Soetens, FMTC</p></div><div><div class="legalnotice"><a id="idm46011880069008"></a><p>
+    </h2></div><div><h2 class="subtitle">2.9.0</h2></div><div><p class="copyright">Copyright © 2002,2003,2004,2005,2006 Peter Soetens, FMTC</p></div><div><div class="legalnotice"><a id="idm45815845552304"></a><p>
 	Orocos Version 2.9.0.
       </p><p>
 	Permission is granted to copy, distribute and/or modify this document
@@ -16,13 +16,13 @@
 	of interfacing an <acronym class="acronym">Orocos</acronym> component. This is an excerpt from 
 	the Component Builder's Manual and walks through the 'Hello World'
 	program.
-      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="chapter"><a href="#orocos-ocl-intro">1. </a></span></dt><dd><dl><dt><span class="section"><a href="#task-context-intro">1. Introduction</a></span></dt><dt><span class="section"><a href="#idm46011869149648">2. Hello World !</a></span></dt><dd><dl><dt><span class="section"><a href="#idm46011880238112">2.1. Using the Deployer</a></span></dt><dt><span class="section"><a href="#idm46011879920640">2.2. Starting your First Application</a></span></dt><dt><span class="section"><a href="#idm46011872311248">2.3. Displaying a TaskContext</a></span></dt><dt><span class="section"><a href="#idm46011872294480">2.4. Listing the Interface</a></span></dt><dt><span class="section"><a href="#idm46011872286896">2.5. Calling an Operation</a></span></dt><dt><span class="section"><a href="#idm46011872282464">2.6. Sending a Operation</a></span></dt><dt><span class="section"><a href="#idm46011872274400">2.7. Changing Values</a></span></dt><dt><span class="section"><a href="#idm46011872266992">2.8. Reading and Writing Ports</a></span></dt><dt><span class="section"><a href="#idm46011872260880">2.9. Last Words</a></span></dt></dl></dd></dl></dd></dl></div><div class="list-of-figures"><p><strong>List of Figures</strong></p><dl><dt>1.1. <a href="#fig-task-peers">
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="chapter"><a href="#orocos-ocl-intro">1. </a></span></dt><dd><dl><dt><span class="section"><a href="#task-context-intro">1. Introduction</a></span></dt><dt><span class="section"><a href="#idm45815841929008">2. Hello World !</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45815839099040">2.1. Using the Deployer</a></span></dt><dt><span class="section"><a href="#idm45815839093008">2.2. Starting your First Application</a></span></dt><dt><span class="section"><a href="#idm45815842590176">2.3. Displaying a TaskContext</a></span></dt><dt><span class="section"><a href="#idm45815842573408">2.4. Listing the Interface</a></span></dt><dt><span class="section"><a href="#idm45815842565824">2.5. Calling an Operation</a></span></dt><dt><span class="section"><a href="#idm45815842561392">2.6. Sending a Operation</a></span></dt><dt><span class="section"><a href="#idm45815842553328">2.7. Changing Values</a></span></dt><dt><span class="section"><a href="#idm45815842545920">2.8. Reading and Writing Ports</a></span></dt><dt><span class="section"><a href="#idm45815842539808">2.9. Last Words</a></span></dt></dl></dd></dl></dd></dl></div><div class="list-of-figures"><p><strong>List of Figures</strong></p><dl><dt>1.1. <a href="#fig-task-peers">
 	Typical application example for distributed control
       </a></dt><dt>1.2. <a href="#fig-hello-world-deployment">
 	  Dynamic vs static loading of components
 	</a></dt><dt>1.3. <a href="#fig-hello-world">
 	Schematic Overview of the Hello Component.
-      </a></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="orocos-ocl-intro"></a>Chapter 1. </h1></div></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#task-context-intro">1. Introduction</a></span></dt><dt><span class="section"><a href="#idm46011869149648">2. Hello World !</a></span></dt><dd><dl><dt><span class="section"><a href="#idm46011880238112">2.1. Using the Deployer</a></span></dt><dt><span class="section"><a href="#idm46011879920640">2.2. Starting your First Application</a></span></dt><dt><span class="section"><a href="#idm46011872311248">2.3. Displaying a TaskContext</a></span></dt><dt><span class="section"><a href="#idm46011872294480">2.4. Listing the Interface</a></span></dt><dt><span class="section"><a href="#idm46011872286896">2.5. Calling an Operation</a></span></dt><dt><span class="section"><a href="#idm46011872282464">2.6. Sending a Operation</a></span></dt><dt><span class="section"><a href="#idm46011872274400">2.7. Changing Values</a></span></dt><dt><span class="section"><a href="#idm46011872266992">2.8. Reading and Writing Ports</a></span></dt><dt><span class="section"><a href="#idm46011872260880">2.9. Last Words</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="task-context-intro"></a>1. Introduction</h2></div></div></div><p>
+      </a></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="orocos-ocl-intro"></a>Chapter 1. </h1></div></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#task-context-intro">1. Introduction</a></span></dt><dt><span class="section"><a href="#idm45815841929008">2. Hello World !</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45815839099040">2.1. Using the Deployer</a></span></dt><dt><span class="section"><a href="#idm45815839093008">2.2. Starting your First Application</a></span></dt><dt><span class="section"><a href="#idm45815842590176">2.3. Displaying a TaskContext</a></span></dt><dt><span class="section"><a href="#idm45815842573408">2.4. Listing the Interface</a></span></dt><dt><span class="section"><a href="#idm45815842565824">2.5. Calling an Operation</a></span></dt><dt><span class="section"><a href="#idm45815842561392">2.6. Sending a Operation</a></span></dt><dt><span class="section"><a href="#idm45815842553328">2.7. Changing Values</a></span></dt><dt><span class="section"><a href="#idm45815842545920">2.8. Reading and Writing Ports</a></span></dt><dt><span class="section"><a href="#idm45815842539808">2.9. Last Words</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="task-context-intro"></a>1. Introduction</h2></div></div></div><p>
       This manual documents how multi-threaded components can be
       defined in <acronym class="acronym">Orocos</acronym> such that they form a thread-safe
       robotics/machine control application.  Each control component is
@@ -62,7 +62,7 @@
     </p><p>
       The Scripting chapter gives more details about script syntax
       for state machines and programs.
-    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46011869149648"></a>2. Hello World !</h2></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45815841929008"></a>2. Hello World !</h2></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>
 				Before you proceed, make sure you printed the <a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.x/doc-xml/orocos_cheat_sheet.pdf" target="_top">Orocos Cheat Sheet</a> and
 				<a class="ulink" href="http://www.orocos.org/stable/documentation/rtt/v2.x/doc-xml/rtt_cheat_sheet.pdf" target="_top">RTT Cheat Sheet</a> ! They will definately guide you through this lengthy
 				text.
@@ -84,7 +84,7 @@ $ make
 			install your package:
 			</p><pre class="programlisting">$ make install
 			</pre><p>
-		</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46011880238112"></a>2.1. Using the Deployer</h3></div></div></div><p>
+		</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45815839099040"></a>2.1. Using the Deployer</h3></div></div></div><p>
 	The way we interact with TaskContexts during development of an
 	Orocos application is through the <span class="emphasis"><em>deployer
 	</em></span>.  This application consists of the 
@@ -109,7 +109,7 @@ $ make
 			</p><p>
 				This is going to be your primary tool to explore the Orocos
 				component model so get your seatbelts fastened!
-			</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46011879920640"></a>2.2. Starting your First Application</h3></div></div></div><p>
+			</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45815839093008"></a>2.2. Starting your First Application</h3></div></div></div><p>
 	Now let's start the HelloWorld application we just created with
 	<span class="command"><strong>orocreate-pkg</strong></span>.
       </p><p>
@@ -209,7 +209,7 @@ Hello [S]&gt;
       </p><pre class="screen">
 Hello[R] &gt; <span class="command"><strong>1+1</strong></span>
    = <span class="command"><strong>2</strong></span>
-      </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46011872311248"></a>2.3. Displaying a TaskContext</h3></div></div></div><p>
+      </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45815842590176"></a>2.3. Displaying a TaskContext</h3></div></div></div><p>
       A component's interface consists of: Attributes and Properties, Operations,
       and Data Flow ports which are all public.
       The class <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1TaskContext.html">TaskContext</a> 
@@ -265,7 +265,7 @@ Hello [S]&gt;
       </p><p>
 				You can see that the component is pretty empty: no data flow ports,
 				services or peers. We will add some of these right away.
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46011872294480"></a>2.4. Listing the Interface</h3></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45815842573408"></a>2.4. Listing the Interface</h3></div></div></div><p>
 	To get an overview of the Task's interface, you can use the help
 	command, for example <span class="emphasis"><em>help this</em></span> or <span class="emphasis"><em>help this.activate</em></span>
 	or just short: <span class="emphasis"><em>help activate</em></span>
@@ -291,7 +291,7 @@ Hello [R]&gt;
 	registered in the public interface. We see now that
 	the <span class="emphasis"><em>getPeriod</em></span> operations takes no arguments
 	You can invoke each operation right away.
-    </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46011872286896"></a>2.5. Calling an Operation</h3></div></div></div><pre class="screen">
+    </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45815842565824"></a>2.5. Calling an Operation</h3></div></div></div><pre class="screen">
 Hello [R]&gt; <span class="command"><strong>getPeriod()</strong></span>
  = <span class="command"><strong>0</strong></span>
       </pre><p>
@@ -300,7 +300,7 @@ Hello [R]&gt; <span class="command"><strong>getPeriod()</strong></span>
 	0. This works just like calling a 'C' function.
 	You can express calling explicitly by writing:
 	<span class="command"><strong>getPeriod.call()</strong></span>.
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46011872282464"></a>2.6. Sending a Operation</h3></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45815842561392"></a>2.6. Sending a Operation</h3></div></div></div><p>
 	When an operation is <span class="emphasis"><em>sent</em></span> to
 	the Hello component, another thread will execute it on
 	behalf of the sender. Each sent method returns a SendHandle object.
@@ -322,7 +322,7 @@ Hello [R]&gt; <span class="command"><strong>ret</strong></span>
 				SendHandles are further explained down the document.
 				They are not required understanding for a first discovery
 				of the Orocos world.
-			</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46011872274400"></a>2.7. Changing Values</h3></div></div></div><p>
+			</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45815842553328"></a>2.7. Changing Values</h3></div></div></div><p>
 	Besides calling or sending component methods, you can alter the
 	attributes of any task, program or state machine. The
 	TaskBrowser will confirm validity of the assignment with
@@ -336,11 +336,11 @@ Hello [R]&gt; <span class="command"><strong>the_attribute = "Veni Vidi Vici !"</
  = <span class="command"><strong>"Veni Vidi Vici !"</strong></span>
 Hello [R]&gt; <span class="command"><strong>the_attribute</strong></span>
  = <span class="command"><strong>Veni Vidi Vici !</strong></span>
-      </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46011872266992"></a>2.8. Reading and Writing Ports</h3></div></div></div><p>
+      </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45815842545920"></a>2.8. Reading and Writing Ports</h3></div></div></div><p>
 	The Data Ports allow seamless communication of calculation or 
 	measurement results between components. Adding and using ports is
 	described in <a class="xref" href="#">???</a>.
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46011872260880"></a>2.9. Last Words</h3></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45815842539808"></a>2.9. Last Words</h3></div></div></div><p>
 	Last but not least, hitting TAB twice, will show you a list of
 	possible completions, such as peers, services or methods.
       </p><p>
