@@ -74,29 +74,75 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a04ea92c8095ad01ec4a78d74f72060db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CatchConfig_8hpp.html#a04ea92c8095ad01ec4a78d74f72060db">TRY</a>(C)&#160;&#160;&#160;if(::RTT::internal::catch_exception()){C} else try{C}</td></tr>
+<tr class="memitem:a04ea92c8095ad01ec4a78d74f72060db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CatchConfig_8hpp.html#a04ea92c8095ad01ec4a78d74f72060db">TRY</a>(C)&#160;&#160;&#160;if(::<a class="el" href="namespaceRTT_1_1internal.html#a983e88dd436f624e90b48e75fbe9f164">RTT::internal::catch_exception</a>()){C} else try{C}</td></tr>
 <tr class="memdesc:a04ea92c8095ad01ec4a78d74f72060db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains static global configuration variables and cached entries.  <a href="#a04ea92c8095ad01ec4a78d74f72060db">More...</a><br /></td></tr>
 <tr class="separator:a04ea92c8095ad01ec4a78d74f72060db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c531a8ac444d67e0bc54fae82124c34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c531a8ac444d67e0bc54fae82124c34"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>CATCH</b>(T,  C)&#160;&#160;&#160;catch(T){C}</td></tr>
+<tr class="memitem:a0c531a8ac444d67e0bc54fae82124c34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CatchConfig_8hpp.html#a0c531a8ac444d67e0bc54fae82124c34">CATCH</a>(T,  C)&#160;&#160;&#160;catch(T){C}</td></tr>
 <tr class="separator:a0c531a8ac444d67e0bc54fae82124c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdcd300c0557a5386c677556d5cde4bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdcd300c0557a5386c677556d5cde4bc"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>CATCH_ALL</b>(C)&#160;&#160;&#160;catch(...){C}</td></tr>
+<tr class="memitem:afdcd300c0557a5386c677556d5cde4bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CatchConfig_8hpp.html#afdcd300c0557a5386c677556d5cde4bc">CATCH_ALL</a>(C)&#160;&#160;&#160;catch(...){C}</td></tr>
 <tr class="separator:afdcd300c0557a5386c677556d5cde4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a983e88dd436f624e90b48e75fbe9f164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a983e88dd436f624e90b48e75fbe9f164"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>RTT::internal::catch_exception</b> ()</td></tr>
+<tr class="memitem:a983e88dd436f624e90b48e75fbe9f164"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1internal.html#a983e88dd436f624e90b48e75fbe9f164">RTT::internal::catch_exception</a> ()</td></tr>
 <tr class="separator:a983e88dd436f624e90b48e75fbe9f164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a25e042379097111623ca13a952b2ccc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25e042379097111623ca13a952b2ccc9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>RTT::internal::m_catch_exception</b> =-1</td></tr>
+<tr class="memitem:a25e042379097111623ca13a952b2ccc9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1internal.html#a25e042379097111623ca13a952b2ccc9">RTT::internal::m_catch_exception</a> =-1</td></tr>
 <tr class="separator:a25e042379097111623ca13a952b2ccc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a0c531a8ac444d67e0bc54fae82124c34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CATCH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">C&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;catch(T){C}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CatchConfig_8hpp_source.html#l00057">57</a> of file <a class="el" href="CatchConfig_8hpp_source.html">CatchConfig.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00127">RTT::base::TaskCore::cleanup()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00104">RTT::base::TaskCore::configure()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00353">RTT::ExecutionEngine::processChildren()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afdcd300c0557a5386c677556d5cde4bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CATCH_ALL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">C</td><td>)</td>
+          <td>&#160;&#160;&#160;catch(...){C}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CatchConfig_8hpp_source.html#l00058">58</a> of file <a class="el" href="CatchConfig_8hpp_source.html">CatchConfig.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00127">RTT::base::TaskCore::cleanup()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00104">RTT::base::TaskCore::configure()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00353">RTT::ExecutionEngine::processChildren()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a04ea92c8095ad01ec4a78d74f72060db"></a>
 <div class="memitem">
 <div class="memproto">
@@ -106,7 +152,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>RTT::internal::m_catch
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">C</td><td>)</td>
-          <td>&#160;&#160;&#160;if(::RTT::internal::catch_exception()){C} else try{C}</td>
+          <td>&#160;&#160;&#160;if(::<a class="el" href="namespaceRTT_1_1internal.html#a983e88dd436f624e90b48e75fbe9f164">RTT::internal::catch_exception</a>()){C} else try{C}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -116,14 +162,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>RTT::internal::m_catch
 
 <p>Definition at line <a class="el" href="CatchConfig_8hpp_source.html#l00056">56</a> of file <a class="el" href="CatchConfig_8hpp_source.html">CatchConfig.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00127">RTT::base::TaskCore::cleanup()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00104">RTT::base::TaskCore::configure()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00347">RTT::ExecutionEngine::step()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00127">RTT::base::TaskCore::cleanup()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00104">RTT::base::TaskCore::configure()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00353">RTT::ExecutionEngine::processChildren()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:25 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

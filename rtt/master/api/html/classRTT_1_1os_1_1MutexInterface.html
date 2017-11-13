@@ -77,17 +77,15 @@ Inheritance diagram for RTT::os::MutexInterface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a065f77c8ceebc1eeac59695b197a68cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a065f77c8ceebc1eeac59695b197a68cb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>lock</b> ()=0</td></tr>
+<tr class="memitem:a98148293d1eef0c6e9224406add7b9f4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a98148293d1eef0c6e9224406add7b9f4">~MutexInterface</a> ()</td></tr>
+<tr class="separator:a98148293d1eef0c6e9224406add7b9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065f77c8ceebc1eeac59695b197a68cb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a065f77c8ceebc1eeac59695b197a68cb">lock</a> ()=0</td></tr>
 <tr class="separator:a065f77c8ceebc1eeac59695b197a68cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78e64384a0b1e645ef2ed72f41192f19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78e64384a0b1e645ef2ed72f41192f19"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>unlock</b> ()=0</td></tr>
+<tr class="memitem:a78e64384a0b1e645ef2ed72f41192f19"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a78e64384a0b1e645ef2ed72f41192f19">unlock</a> ()=0</td></tr>
 <tr class="separator:a78e64384a0b1e645ef2ed72f41192f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b1d68ccfdd3125789e322dae850c6ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b1d68ccfdd3125789e322dae850c6ea"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>trylock</b> ()=0</td></tr>
+<tr class="memitem:a3b1d68ccfdd3125789e322dae850c6ea"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a3b1d68ccfdd3125789e322dae850c6ea">trylock</a> ()=0</td></tr>
 <tr class="separator:a3b1d68ccfdd3125789e322dae850c6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3324c0787a8a33f65809a9b3f6fcc2af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3324c0787a8a33f65809a9b3f6fcc2af"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>timedlock</b> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> s)=0</td></tr>
+<tr class="memitem:a3324c0787a8a33f65809a9b3f6fcc2af"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a3324c0787a8a33f65809a9b3f6fcc2af">timedlock</a> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> s)=0</td></tr>
 <tr class="separator:a3324c0787a8a33f65809a9b3f6fcc2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -95,13 +93,143 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>timedlock</b>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classRTT_1_1os_1_1MutexLock.html" title="MutexLock is a scope based Monitor, protecting critical sections with a Mutex object through locking ...">MutexLock</a>, <a class="el" href="classRTT_1_1os_1_1MutexTryLock.html" title="A MutexTryLock tries to lock an Mutex object on construction and if successful, unlocks it on destruc...">MutexTryLock</a>, <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html" title="An object oriented wrapper around a recursive mutex. ">MutexRecursive</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00061">61</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a98148293d1eef0c6e9224406add7b9f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual RTT::os::MutexInterface::~MutexInterface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00064">64</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a065f77c8ceebc1eeac59695b197a68cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RTT::os::MutexInterface::lock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html#acc3c312208792042f93a5a4293a7e0c8">RTT::os::MutexRecursive</a>, and <a class="el" href="classRTT_1_1os_1_1Mutex.html#a9c4d69b6ce97c3d5819ef64d69d15867">RTT::os::Mutex</a>.</p>
+
+<p>Referenced by <a class="el" href="MutexLock_8hpp_source.html#l00060">RTT::os::MutexLock::MutexLock()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3324c0787a8a33f65809a9b3f6fcc2af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool RTT::os::MutexInterface::timedlock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html#a36a384b9712981cef800cdbbe8614838">RTT::os::MutexRecursive</a>, and <a class="el" href="classRTT_1_1os_1_1Mutex.html#af4d12bffcf0440f29a0b24ec47ba9998">RTT::os::Mutex</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b1d68ccfdd3125789e322dae850c6ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool RTT::os::MutexInterface::trylock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html#ae5068ded7c88f1af43f2e3b834bd3590">RTT::os::MutexRecursive</a>, and <a class="el" href="classRTT_1_1os_1_1Mutex.html#a512fd3946fa673c0e0822c5e7d40064f">RTT::os::Mutex</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78e64384a0b1e645ef2ed72f41192f19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RTT::os::MutexInterface::unlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html#af7f91f09c0d6a7c6a9b3e38a08e44731">RTT::os::MutexRecursive</a>, and <a class="el" href="classRTT_1_1os_1_1Mutex.html#ac7f2e68f884ffd45976574cb8581400d">RTT::os::Mutex</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>rtt/os/<a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:30 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

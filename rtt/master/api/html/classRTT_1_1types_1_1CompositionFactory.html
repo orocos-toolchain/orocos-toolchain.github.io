@@ -70,14 +70,22 @@ Inheritance diagram for RTT::types::CompositionFactory:</div>
  <div class="center">
   <img src="classRTT_1_1types_1_1CompositionFactory.png" usemap="#RTT::types::CompositionFactory_map" alt=""/>
   <map id="RTT::types::CompositionFactory_map" name="RTT::types::CompositionFactory_map">
-<area href="classRTT_1_1types_1_1BoostArrayTypeInfo.html" title="Template for data types that are of type boost::array&lt;U,int&gt;. " alt="RTT::types::BoostArrayTypeInfo&lt; T, has_ostream &gt;" shape="rect" coords="0,56,340,80"/>
-<area href="classRTT_1_1types_1_1CArrayTypeInfo.html" title="Template for data types that are C-style arrays. " alt="RTT::types::CArrayTypeInfo&lt; T, has_ostream &gt;" shape="rect" coords="350,56,690,80"/>
-<area href="classRTT_1_1types_1_1PrimitiveSequenceTypeInfo.html" title="New-style SequenceTypeInfo which offers type info for sequences which can NOT be sent over flow ports..." alt="RTT::types::PrimitiveSequenceTypeInfo&lt; T, has_ostream &gt;" shape="rect" coords="700,56,1040,80"/>
+<area href="classRTT_1_1types_1_1BoostArrayTypeInfo.html" title="Template for data types that are of type boost::array&lt;U,int&gt;. " alt="RTT::types::BoostArrayTypeInfo&lt; T, has_ostream &gt;" shape="rect" coords="392,56,774,80"/>
+<area href="classRTT_1_1types_1_1CArrayTypeInfo.html" title="Template for data types that are C-style arrays. " alt="RTT::types::CArrayTypeInfo&lt; T, has_ostream &gt;" shape="rect" coords="392,112,774,136"/>
+<area href="classRTT_1_1types_1_1PrimitiveSequenceTypeInfo.html" title="New-style SequenceTypeInfo which offers type info for sequences which can NOT be sent over flow ports..." alt="RTT::types::PrimitiveSequenceTypeInfo&lt; T, has_ostream &gt;" shape="rect" coords="392,168,774,192"/>
+<area href="classRTT_1_1types_1_1TemplateCompositionFactory.html" alt="RTT::types::TemplateCompositionFactory&lt; T &gt;" shape="rect" coords="392,224,774,248"/>
+<area href="classRTT_1_1types_1_1TemplateCompositionFactory.html" alt="RTT::types::TemplateCompositionFactory&lt; bool &gt;" shape="rect" coords="392,280,774,304"/>
+<area href="classRTT_1_1types_1_1TemplateCompositionFactory.html" alt="RTT::types::TemplateCompositionFactory&lt; rt_string &gt;" shape="rect" coords="392,336,774,360"/>
+<area href="classRTT_1_1types_1_1TemplateCompositionFactory.html" alt="RTT::types::TemplateCompositionFactory&lt; std::string &gt;" shape="rect" coords="392,392,774,416"/>
+<area href="classRTT_1_1types_1_1TemplateCompositionFactory.html" alt="RTT::types::TemplateCompositionFactory&lt; std::vector&lt; double &gt; &gt;" shape="rect" coords="392,448,774,472"/>
+<area href="classRTT_1_1types_1_1TemplateCompositionFactory.html" alt="RTT::types::TemplateCompositionFactory&lt; std::vector&lt; T &gt; &gt;" shape="rect" coords="392,504,774,528"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a2378c26c1108ab77e602392449c66ec0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1types_1_1CompositionFactory.html#a2378c26c1108ab77e602392449c66ec0">~CompositionFactory</a> ()</td></tr>
+<tr class="separator:a2378c26c1108ab77e602392449c66ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a491a1ea3b86d713dd0209b0939573a46"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1types_1_1CompositionFactory.html#a491a1ea3b86d713dd0209b0939573a46">composeType</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> source, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> target) const =0</td></tr>
 <tr class="memdesc:a491a1ea3b86d713dd0209b0939573a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compose a type (target) from a DataSourceBase (source) containing its members.  <a href="#a491a1ea3b86d713dd0209b0939573a46">More...</a><br /></td></tr>
 <tr class="separator:a491a1ea3b86d713dd0209b0939573a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,7 +100,33 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>A factory for composing/decomposing and converting types to a form suitable for persistent storage, such as an XML file. </p>
 
 <p>Definition at line <a class="el" href="CompositionFactory_8hpp_source.html#l00012">12</a> of file <a class="el" href="CompositionFactory_8hpp_source.html">CompositionFactory.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a2378c26c1108ab77e602392449c66ec0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual RTT::types::CompositionFactory::~CompositionFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CompositionFactory_8hpp_source.html#l00015">15</a> of file <a class="el" href="CompositionFactory_8hpp_source.html">CompositionFactory.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a491a1ea3b86d713dd0209b0939573a46"></a>
 <div class="memitem">
 <div class="memproto">
@@ -140,7 +174,7 @@ Public Member Functions</h2></td></tr>
 <dd>
 <a class="el" href="classRTT_1_1types_1_1CompositionFactory.html#aea6099823a252c74cda6c0fc0b9d2421" title="Specialize this function to return an alternate type which represents this one in a compatible way...">decomposeType</a> to do the inverse operation. </dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1types_1_1CArrayTypeInfo.html#a0c1fb6f42be1d648dc25e696a79b539b">RTT::types::CArrayTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1BoostArrayTypeInfo.html#ad4a06e2a774bc6d0d3bae1de73956b8b">RTT::types::BoostArrayTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="structRTT_1_1types_1_1EnumTypeInfo.html#a521854d995af218323691fb679f4c735">RTT::types::EnumTypeInfo&lt; T &gt;</a>, <a class="el" href="structRTT_1_1types_1_1StdVectorTemplateTypeInfo.html#aaf35e1b77fea9a26f5dc83617ecf3d7e">RTT::types::StdVectorTemplateTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="structRTT_1_1types_1_1StdVectorTypeInfo.html#a1097b3f79e94a10d364ae8700f633326">RTT::types::StdVectorTypeInfo</a>, and <a class="el" href="classRTT_1_1types_1_1PrimitiveSequenceTypeInfo.html#acb49abf6fd86b0b2ace5538585535e98">RTT::types::PrimitiveSequenceTypeInfo&lt; T, has_ostream &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1types_1_1CArrayTypeInfo.html#a0c1fb6f42be1d648dc25e696a79b539b">RTT::types::CArrayTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1BoostArrayTypeInfo.html#ad4a06e2a774bc6d0d3bae1de73956b8b">RTT::types::BoostArrayTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="structRTT_1_1types_1_1EnumTypeInfo.html#a521854d995af218323691fb679f4c735">RTT::types::EnumTypeInfo&lt; T &gt;</a>, <a class="el" href="structRTT_1_1types_1_1StdStringTypeInfo.html#aff1ebb607b35a6a12af83d4258869469">RTT::types::StdStringTypeInfo</a>, <a class="el" href="structRTT_1_1types_1_1RTStringTypeInfo.html#a65a0d599ba1c21d2fa6cb54c09a16fd8">RTT::types::RTStringTypeInfo</a>, <a class="el" href="structRTT_1_1types_1_1StdTypeInfo.html#a2c9888725ed2237a36dceeea4d99ad78">RTT::types::StdTypeInfo&lt; T &gt;</a>, <a class="el" href="structRTT_1_1types_1_1StdTypeInfo.html#a2c9888725ed2237a36dceeea4d99ad78">RTT::types::StdTypeInfo&lt; bool &gt;</a>, <a class="el" href="structRTT_1_1types_1_1StdVectorTemplateTypeInfo.html#aaf35e1b77fea9a26f5dc83617ecf3d7e">RTT::types::StdVectorTemplateTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="structRTT_1_1types_1_1StdVectorTypeInfo.html#a1097b3f79e94a10d364ae8700f633326">RTT::types::StdVectorTypeInfo</a>, <a class="el" href="classRTT_1_1types_1_1PrimitiveSequenceTypeInfo.html#acb49abf6fd86b0b2ace5538585535e98">RTT::types::PrimitiveSequenceTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#af8aab8843491da4fd6a2fd15cc4a4288">RTT::types::SequenceTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#af8aab8843491da4fd6a2fd15cc4a4288">RTT::types::SequenceTypeInfo&lt; rt_string, true &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#af8aab8843491da4fd6a2fd15cc4a4288">RTT::types::SequenceTypeInfo&lt; std::string, true &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#af8aab8843491da4fd6a2fd15cc4a4288">RTT::types::SequenceTypeInfo&lt; std::vector&lt; double &gt;, true &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#af8aab8843491da4fd6a2fd15cc4a4288">RTT::types::SequenceTypeInfo&lt; std::vector&lt; T &gt;, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#a30184f673ca6d5e11f3ffef5ec0f7e05">RTT::types::TemplateCompositionFactory&lt; T &gt;</a>, <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#a30184f673ca6d5e11f3ffef5ec0f7e05">RTT::types::TemplateCompositionFactory&lt; rt_string &gt;</a>, <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#a30184f673ca6d5e11f3ffef5ec0f7e05">RTT::types::TemplateCompositionFactory&lt; std::string &gt;</a>, <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#a30184f673ca6d5e11f3ffef5ec0f7e05">RTT::types::TemplateCompositionFactory&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#a30184f673ca6d5e11f3ffef5ec0f7e05">RTT::types::TemplateCompositionFactory&lt; std::vector&lt; double &gt; &gt;</a>, and <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#a30184f673ca6d5e11f3ffef5ec0f7e05">RTT::types::TemplateCompositionFactory&lt; bool &gt;</a>.</p>
 
 </div>
 </div>
@@ -201,7 +235,7 @@ Public Member Functions</h2></td></tr>
 <p>Specialize this function to return an alternate type which represents this one in a compatible way. </p>
 <p>For example, a short converts to an long or an enum to an int or a string. If your return a datasource containing a property bag, then this function should do the inverse of composeType: the returned property bag contains all parts of the current type (<em>source</em>) which can be modified and merged back into this type with composeType. Mathematically: composeType( decomposeType( A ), B); assert( A == B ); </p><dl class="section return"><dt>Returns</dt><dd>null in order to indicate that decomposition through getMember() may be tried. You may return <em>source</em> itself in order to prevent any further decomposition of your type (using getMember(), which is used as fall-back by the rest of the software. For example, to avoid that a string is decomposed into a sequence of chars, or to avoid that a primitive type like 'int' is further queried. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classRTT_1_1types_1_1CArrayTypeInfo.html#ab0088a4896c084937c7eb7c3c589252a">RTT::types::CArrayTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1BoostArrayTypeInfo.html#af62cca9d49dc2754eba1795173d55552">RTT::types::BoostArrayTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="structRTT_1_1types_1_1EnumTypeInfo.html#aea3e9f8f4a3fd4f5b6ef180849205bcb">RTT::types::EnumTypeInfo&lt; T &gt;</a>, <a class="el" href="structRTT_1_1types_1_1StdStringTypeInfo.html#a748e90950086c19613e0cde09e46f4b1">RTT::types::StdStringTypeInfo</a>, <a class="el" href="structRTT_1_1types_1_1RTStringTypeInfo.html#aa9b361f88845b657b3048b119fc2f678">RTT::types::RTStringTypeInfo</a>, <a class="el" href="structRTT_1_1types_1_1StdTypeInfo.html#a2ecec92fca75cdae23bfa9feeb9a1f3c">RTT::types::StdTypeInfo&lt; T &gt;</a>, <a class="el" href="structRTT_1_1types_1_1StdTypeInfo.html#a2ecec92fca75cdae23bfa9feeb9a1f3c">RTT::types::StdTypeInfo&lt; bool &gt;</a>, <a class="el" href="classRTT_1_1types_1_1PrimitiveSequenceTypeInfo.html#a27e2ac82c36477bf1431e1b3aabd7cd9">RTT::types::PrimitiveSequenceTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#ae0686ea74e44c32eb51df9b7095c20fb">RTT::types::SequenceTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#ae0686ea74e44c32eb51df9b7095c20fb">RTT::types::SequenceTypeInfo&lt; rt_string, true &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#ae0686ea74e44c32eb51df9b7095c20fb">RTT::types::SequenceTypeInfo&lt; std::string, true &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#ae0686ea74e44c32eb51df9b7095c20fb">RTT::types::SequenceTypeInfo&lt; std::vector&lt; double &gt;, true &gt;</a>, and <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#ae0686ea74e44c32eb51df9b7095c20fb">RTT::types::SequenceTypeInfo&lt; std::vector&lt; T &gt;, has_ostream &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1types_1_1CArrayTypeInfo.html#ab0088a4896c084937c7eb7c3c589252a">RTT::types::CArrayTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1BoostArrayTypeInfo.html#af62cca9d49dc2754eba1795173d55552">RTT::types::BoostArrayTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="structRTT_1_1types_1_1EnumTypeInfo.html#aea3e9f8f4a3fd4f5b6ef180849205bcb">RTT::types::EnumTypeInfo&lt; T &gt;</a>, <a class="el" href="structRTT_1_1types_1_1StdStringTypeInfo.html#a748e90950086c19613e0cde09e46f4b1">RTT::types::StdStringTypeInfo</a>, <a class="el" href="structRTT_1_1types_1_1RTStringTypeInfo.html#aa9b361f88845b657b3048b119fc2f678">RTT::types::RTStringTypeInfo</a>, <a class="el" href="structRTT_1_1types_1_1StdTypeInfo.html#a2ecec92fca75cdae23bfa9feeb9a1f3c">RTT::types::StdTypeInfo&lt; T &gt;</a>, <a class="el" href="structRTT_1_1types_1_1StdTypeInfo.html#a2ecec92fca75cdae23bfa9feeb9a1f3c">RTT::types::StdTypeInfo&lt; bool &gt;</a>, <a class="el" href="classRTT_1_1types_1_1PrimitiveSequenceTypeInfo.html#a27e2ac82c36477bf1431e1b3aabd7cd9">RTT::types::PrimitiveSequenceTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#ae0686ea74e44c32eb51df9b7095c20fb">RTT::types::SequenceTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#ae0686ea74e44c32eb51df9b7095c20fb">RTT::types::SequenceTypeInfo&lt; rt_string, true &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#ae0686ea74e44c32eb51df9b7095c20fb">RTT::types::SequenceTypeInfo&lt; std::string, true &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#ae0686ea74e44c32eb51df9b7095c20fb">RTT::types::SequenceTypeInfo&lt; std::vector&lt; double &gt;, true &gt;</a>, <a class="el" href="classRTT_1_1types_1_1SequenceTypeInfo.html#ae0686ea74e44c32eb51df9b7095c20fb">RTT::types::SequenceTypeInfo&lt; std::vector&lt; T &gt;, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#ab7af70d1532fafdb08e204666eeb6748">RTT::types::TemplateCompositionFactory&lt; T &gt;</a>, <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#ab7af70d1532fafdb08e204666eeb6748">RTT::types::TemplateCompositionFactory&lt; rt_string &gt;</a>, <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#ab7af70d1532fafdb08e204666eeb6748">RTT::types::TemplateCompositionFactory&lt; std::string &gt;</a>, <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#ab7af70d1532fafdb08e204666eeb6748">RTT::types::TemplateCompositionFactory&lt; std::vector&lt; T &gt; &gt;</a>, <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#ab7af70d1532fafdb08e204666eeb6748">RTT::types::TemplateCompositionFactory&lt; std::vector&lt; double &gt; &gt;</a>, and <a class="el" href="classRTT_1_1types_1_1TemplateCompositionFactory.html#ab7af70d1532fafdb08e204666eeb6748">RTT::types::TemplateCompositionFactory&lt; bool &gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="CompositionFactory_8cpp_source.html#l00011">11</a> of file <a class="el" href="CompositionFactory_8cpp_source.html">CompositionFactory.cpp</a>.</p>
 
@@ -216,7 +250,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:32 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

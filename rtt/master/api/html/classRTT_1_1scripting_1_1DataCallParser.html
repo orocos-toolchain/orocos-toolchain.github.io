@@ -67,17 +67,15 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7de3e827604f28eebc7812600267e0fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7de3e827604f28eebc7812600267e0fe"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DataCallParser</b> (<a class="el" href="classRTT_1_1scripting_1_1ExpressionParser.html">ExpressionParser</a> &amp;p, <a class="el" href="classRTT_1_1scripting_1_1CommonParser.html">CommonParser</a> &amp;cp, <a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *pc, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *caller)</td></tr>
+<tr class="memitem:a7de3e827604f28eebc7812600267e0fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1DataCallParser.html#a7de3e827604f28eebc7812600267e0fe">DataCallParser</a> (<a class="el" href="classRTT_1_1scripting_1_1ExpressionParser.html">ExpressionParser</a> &amp;p, <a class="el" href="classRTT_1_1scripting_1_1CommonParser.html">CommonParser</a> &amp;cp, <a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *pc, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *caller)</td></tr>
 <tr class="separator:a7de3e827604f28eebc7812600267e0fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cc4c004ab29341daea5d14466e8b50e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cc4c004ab29341daea5d14466e8b50e"></a>
-rule_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>parser</b> ()</td></tr>
+<tr class="memitem:a9f85d2bc227e29f4067f8f30dad95982"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1DataCallParser.html#a9f85d2bc227e29f4067f8f30dad95982">~DataCallParser</a> ()</td></tr>
+<tr class="separator:a9f85d2bc227e29f4067f8f30dad95982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc4c004ab29341daea5d14466e8b50e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1DataCallParser.html#a8cc4c004ab29341daea5d14466e8b50e">parser</a> ()</td></tr>
 <tr class="separator:a8cc4c004ab29341daea5d14466e8b50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f3e70a89918c33bce9691c66c028e3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f3e70a89918c33bce9691c66c028e3e"></a>
-<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getParseResult</b> ()</td></tr>
+<tr class="memitem:a6f3e70a89918c33bce9691c66c028e3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1DataCallParser.html#a6f3e70a89918c33bce9691c66c028e3e">getParseResult</a> ()</td></tr>
 <tr class="separator:a6f3e70a89918c33bce9691c66c028e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3340029ee5cc43234a8c5f0c11d9ca7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3340029ee5cc43234a8c5f0c11d9ca7d"></a>
-boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getParseHandle</b> ()</td></tr>
+<tr class="memitem:a3340029ee5cc43234a8c5f0c11d9ca7d"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1DataCallParser.html#a3340029ee5cc43234a8c5f0c11d9ca7d">getParseHandle</a> ()</td></tr>
 <tr class="separator:a3340029ee5cc43234a8c5f0c11d9ca7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -85,14 +83,156 @@ boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1AttributeBase.html
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>check why lexeme_d[] is used in implementation, thus why datacalls are parsed on the character level instead of on the phrase level. (probably for the dots ?) </dd></dl>
 
 <p>Definition at line <a class="el" href="ExpressionParser_8hpp_source.html#l00065">65</a> of file <a class="el" href="ExpressionParser_8hpp_source.html">ExpressionParser.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a7de3e827604f28eebc7812600267e0fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::DataCallParser::DataCallParser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1scripting_1_1ExpressionParser.html">ExpressionParser</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1scripting_1_1CommonParser.html">CommonParser</a> &amp;&#160;</td>
+          <td class="paramname"><em>cp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td>
+          <td class="paramname"><em>pc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td>
+          <td class="paramname"><em>caller</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExpressionParser_8cpp_source.html#l00079">79</a> of file <a class="el" href="ExpressionParser_8cpp_source.html">ExpressionParser.cpp</a>.</p>
+
+<p>References <a class="el" href="FactoryExceptions_8hpp_source.html#l00103">RTT::wrong_types_of_args_exception::expected_</a>, <a class="el" href="SendHandleAlias_8cpp_source.html#l00052">RTT::scripting::SendHandleAlias::getDataSource()</a>, <a class="el" href="SendHandleAlias_8cpp_source.html#l00057">RTT::scripting::SendHandleAlias::getFactory()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00128">RTT::TaskContext::getName()</a>, <a class="el" href="CommonParser_8hpp_source.html#l00068">RTT::scripting::CommonParser::identifier</a>, <a class="el" href="GlobalService_8cpp_source.html#l00031">RTT::internal::GlobalService::Instance()</a>, <a class="el" href="CommonParser_8hpp_source.html#l00061">RTT::scripting::CommonParser::keyword</a>, <a class="el" href="PeerParser_8cpp_source.html#l00220">RTT::scripting::PeerParser::locator()</a>, <a class="el" href="ArgumentsParser_8hpp_source.html#l00130">RTT::scripting::ArgumentsParser::methodname()</a>, <a class="el" href="ArgumentsParser_8hpp_source.html#l00099">RTT::scripting::ArgumentsParser::object()</a>, <a class="el" href="PeerParser_8cpp_source.html#l00235">RTT::scripting::PeerParser::object()</a>, <a class="el" href="ArgumentsParser_8hpp_source.html#l00126">RTT::scripting::ArgumentsParser::objectname()</a>, <a class="el" href="PeerParser_8cpp_source.html#l00225">RTT::scripting::PeerParser::peer()</a>, <a class="el" href="classRTT_1_1OperationInterfacePart.html#ae742505198d014dd3086570fa746427a">RTT::OperationInterfacePart::produceCollect()</a>, <a class="el" href="FactoryExceptions_8hpp_source.html#l00086">RTT::wrong_number_of_args_exception::received</a>, <a class="el" href="FactoryExceptions_8hpp_source.html#l00104">RTT::wrong_types_of_args_exception::received_</a>, <a class="el" href="PeerParser_8cpp_source.html#l00151">RTT::scripting::PeerParser::reset()</a>, <a class="el" href="ArgumentsParser_8hpp_source.html#l00112">RTT::scripting::ArgumentsParser::result()</a>, <a class="el" href="PeerParser_8cpp_source.html#l00230">RTT::scripting::PeerParser::taskObject()</a>, <a class="el" href="CommonParser_8hpp_source.html#l00070">RTT::scripting::CommonParser::tidentifier</a>, <a class="el" href="FactoryExceptions_8hpp_source.html#l00085">RTT::wrong_number_of_args_exception::wanted</a>, and <a class="el" href="FactoryExceptions_8hpp_source.html#l00102">RTT::wrong_types_of_args_exception::whicharg</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f85d2bc227e29f4067f8f30dad95982"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::DataCallParser::~DataCallParser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExpressionParser_8cpp_source.html#l00250">250</a> of file <a class="el" href="ExpressionParser_8cpp_source.html">ExpressionParser.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3340029ee5cc43234a8c5f0c11d9ca7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a>&gt; RTT::scripting::DataCallParser::getParseHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExpressionParser_8hpp_source.html#l00098">98</a> of file <a class="el" href="ExpressionParser_8hpp_source.html">ExpressionParser.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExpressionParser_8cpp_source.html#l00332">RTT::scripting::ExpressionParser::ExpressionParser()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f3e70a89918c33bce9691c66c028e3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a>* RTT::scripting::DataCallParser::getParseResult </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExpressionParser_8hpp_source.html#l00094">94</a> of file <a class="el" href="ExpressionParser_8hpp_source.html">ExpressionParser.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExpressionParser_8cpp_source.html#l00332">RTT::scripting::ExpressionParser::ExpressionParser()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8cc4c004ab29341daea5d14466e8b50e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a>&amp; RTT::scripting::DataCallParser::parser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExpressionParser_8hpp_source.html#l00089">89</a> of file <a class="el" href="ExpressionParser_8hpp_source.html">ExpressionParser.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExpressionParser_8cpp_source.html#l00332">RTT::scripting::ExpressionParser::ExpressionParser()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>rtt/scripting/<a class="el" href="ExpressionParser_8hpp_source.html">ExpressionParser.hpp</a></li>
 <li>rtt/scripting/<a class="el" href="ExpressionParser_8cpp_source.html">ExpressionParser.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

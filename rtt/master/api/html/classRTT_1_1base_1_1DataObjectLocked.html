@@ -77,13 +77,11 @@ Inheritance diagram for RTT::base::DataObjectLocked&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aa563aaefc14378ed0446d30b35648f5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa563aaefc14378ed0446d30b35648f5c"></a>
-typedef T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#aa563aaefc14378ed0446d30b35648f5c">DataType</a></td></tr>
-<tr class="memdesc:aa563aaefc14378ed0446d30b35648f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the data. <br /></td></tr>
+<tr class="memitem:aa563aaefc14378ed0446d30b35648f5c"><td class="memItemLeft" align="right" valign="top">typedef T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html#aa563aaefc14378ed0446d30b35648f5c">DataType</a></td></tr>
+<tr class="memdesc:aa563aaefc14378ed0446d30b35648f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the data.  <a href="#aa563aaefc14378ed0446d30b35648f5c">More...</a><br /></td></tr>
 <tr class="separator:aa563aaefc14378ed0446d30b35648f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa13e89f623ff495abac54837dc7b8ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa13e89f623ff495abac54837dc7b8ab"></a>
-typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html">DataObjectInterface</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#afa13e89f623ff495abac54837dc7b8ab">shared_ptr</a></td></tr>
-<tr class="memdesc:afa13e89f623ff495abac54837dc7b8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for shared_ptr management. <br /></td></tr>
+<tr class="memitem:afa13e89f623ff495abac54837dc7b8ab"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html">DataObjectInterface</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#afa13e89f623ff495abac54837dc7b8ab">shared_ptr</a></td></tr>
+<tr class="memdesc:afa13e89f623ff495abac54837dc7b8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for shared_ptr management.  <a href="#afa13e89f623ff495abac54837dc7b8ab">More...</a><br /></td></tr>
 <tr class="separator:afa13e89f623ff495abac54837dc7b8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -112,7 +110,52 @@ class RTT::base::DataObjectLocked&lt; T &gt;</h3>
 <p>It allows multiple read/write requests using a single lock. This is the in any case threadsafe implementation, and can be blocking in situations where you do not want that. </p>
 
 <p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00057">57</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="aa563aaefc14378ed0446d30b35648f5c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef T <a class="el" href="classRTT_1_1base_1_1DataObjectLocked.html">RTT::base::DataObjectLocked</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#a81a2bfa63e207d74b1aaa3477f0ec5e5">DataType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of the data. </p>
+
+<p>Definition at line <a class="el" href="DataObjectLocked_8hpp_source.html#l00078">78</a> of file <a class="el" href="DataObjectLocked_8hpp_source.html">DataObjectLocked.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afa13e89f623ff495abac54837dc7b8ab"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html">DataObjectInterface</a>&lt;T&gt; &gt; <a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html">RTT::base::DataObjectInterface</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1DataObjectInterface.html#afa13e89f623ff495abac54837dc7b8ab">shared_ptr</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used for shared_ptr management. </p>
+
+<p>Definition at line <a class="el" href="DataObjectInterface_8hpp_source.html#l00062">62</a> of file <a class="el" href="DataObjectInterface_8hpp_source.html">DataObjectInterface.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a275db2a8aae98218d6541a7e5c479ecc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -311,7 +354,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

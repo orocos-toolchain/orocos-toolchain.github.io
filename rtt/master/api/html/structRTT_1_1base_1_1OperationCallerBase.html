@@ -81,18 +81,18 @@ Inheritance diagram for RTT::base::OperationCallerBase&lt; F &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8b439b6ccbc1effc1f2386e654800e6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b439b6ccbc1effc1f2386e654800e6c"></a>
-typedef boost::shared_ptr&lt; <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">OperationCallerBase</a>&lt; F &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shared_ptr</b></td></tr>
+<tr class="memitem:a8b439b6ccbc1effc1f2386e654800e6c"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">OperationCallerBase</a>&lt; F &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html#a8b439b6ccbc1effc1f2386e654800e6c">shared_ptr</a></td></tr>
 <tr class="separator:a8b439b6ccbc1effc1f2386e654800e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0ce632b8b4756316f80cf535c4f4ea49"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">OperationCallerBase</a>&lt; F &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html#a0ce632b8b4756316f80cf535c4f4ea49">cloneI</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *caller) const =0</td></tr>
+<tr class="memitem:af818d75981dbb3d93f61730eb3923db3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html#af818d75981dbb3d93f61730eb3923db3">~OperationCallerBase</a> ()</td></tr>
+<tr class="separator:af818d75981dbb3d93f61730eb3923db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ce632b8b4756316f80cf535c4f4ea49"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">OperationCallerBase</a>&lt; F &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html#a0ce632b8b4756316f80cf535c4f4ea49">cloneI</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *<a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#afc3cd3a2cce0e1769b3187d0af9ac215">caller</a>) const =0</td></tr>
 <tr class="memdesc:a0ce632b8b4756316f80cf535c4f4ea49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new clone of this method using operator new().  <a href="#a0ce632b8b4756316f80cf535c4f4ea49">More...</a><br /></td></tr>
 <tr class="separator:a0ce632b8b4756316f80cf535c4f4ea49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b1b96467ed36f78d11e8d5bca8b26ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b1b96467ed36f78d11e8d5bca8b26ba"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a1b1b96467ed36f78d11e8d5bca8b26ba">ready</a> () const =0</td></tr>
-<tr class="memdesc:a1b1b96467ed36f78d11e8d5bca8b26ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available such that implementations have a way to expose their ready-ness, ie being able to do the call. <br /></td></tr>
+<tr class="memitem:a1b1b96467ed36f78d11e8d5bca8b26ba"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a1b1b96467ed36f78d11e8d5bca8b26ba">ready</a> () const =0</td></tr>
+<tr class="memdesc:a1b1b96467ed36f78d11e8d5bca8b26ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available such that implementations have a way to expose their ready-ness, ie being able to do the call.  <a href="#a1b1b96467ed36f78d11e8d5bca8b26ba">More...</a><br /></td></tr>
 <tr class="separator:a1b1b96467ed36f78d11e8d5bca8b26ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38a9a28992b855d57543d238ddcaada2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a38a9a28992b855d57543d238ddcaada2">setOwner</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ee)</td></tr>
 <tr class="memdesc:a38a9a28992b855d57543d238ddcaada2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of the task which owns this method.  <a href="#a38a9a28992b855d57543d238ddcaada2">More...</a><br /></td></tr>
@@ -103,37 +103,30 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:adb3ef74cecec973f485aa5b580d5ee73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#adb3ef74cecec973f485aa5b580d5ee73">setThread</a> (<a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *executor)</td></tr>
 <tr class="memdesc:adb3ef74cecec973f485aa5b580d5ee73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Thread execution policy of this object.  <a href="#adb3ef74cecec973f485aa5b580d5ee73">More...</a><br /></td></tr>
 <tr class="separator:adb3ef74cecec973f485aa5b580d5ee73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38c7a98ba5b885ff80eecac50d505c08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38c7a98ba5b885ff80eecac50d505c08"></a>
-<a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getThread</b> () const </td></tr>
+<tr class="memitem:a38c7a98ba5b885ff80eecac50d505c08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a38c7a98ba5b885ff80eecac50d505c08">getThread</a> () const </td></tr>
 <tr class="separator:a38c7a98ba5b885ff80eecac50d505c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae120e7c481fee4153bc5f4b7459f78c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#ae120e7c481fee4153bc5f4b7459f78c7">reportError</a> ()</td></tr>
 <tr class="memdesc:ae120e7c481fee4153bc5f4b7459f78c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executed when the operation execution resulted in a C++ exception.  <a href="#ae120e7c481fee4153bc5f4b7459f78c7">More...</a><br /></td></tr>
 <tr class="separator:ae120e7c481fee4153bc5f4b7459f78c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55d9c21f679c735ac63b2482d3b19145"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55d9c21f679c735ac63b2482d3b19145"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a55d9c21f679c735ac63b2482d3b19145">isSend</a> ()</td></tr>
-<tr class="memdesc:a55d9c21f679c735ac63b2482d3b19145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpful function to tell us if this operations is to be sent or not. <br /></td></tr>
+<tr class="memitem:a55d9c21f679c735ac63b2482d3b19145"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a55d9c21f679c735ac63b2482d3b19145">isSend</a> ()</td></tr>
+<tr class="memdesc:a55d9c21f679c735ac63b2482d3b19145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpful function to tell us if this operations is to be sent or not.  <a href="#a55d9c21f679c735ac63b2482d3b19145">More...</a><br /></td></tr>
 <tr class="separator:a55d9c21f679c735ac63b2482d3b19145"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab339d44f1262d749cf91c00c26d7c893"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab339d44f1262d749cf91c00c26d7c893"></a>
-<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getMessageProcessor</b> () const </td></tr>
+<tr class="memitem:ab339d44f1262d749cf91c00c26d7c893"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#ab339d44f1262d749cf91c00c26d7c893">getMessageProcessor</a> () const </td></tr>
 <tr class="separator:ab339d44f1262d749cf91c00c26d7c893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa219e67cd5ba6c860ef90e316cc7306d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#aa219e67cd5ba6c860ef90e316cc7306d">executeAndDispose</a> ()=0</td></tr>
 <tr class="memdesc:aa219e67cd5ba6c860ef90e316cc7306d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute functionality and free this object.  <a href="#aa219e67cd5ba6c860ef90e316cc7306d">More...</a><br /></td></tr>
 <tr class="separator:aa219e67cd5ba6c860ef90e316cc7306d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af51943bba34b7ba69c16d52ad74e1400"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af51943bba34b7ba69c16d52ad74e1400"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#af51943bba34b7ba69c16d52ad74e1400">dispose</a> ()=0</td></tr>
-<tr class="memdesc:af51943bba34b7ba69c16d52ad74e1400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just free this object without executing it. <br /></td></tr>
+<tr class="memitem:af51943bba34b7ba69c16d52ad74e1400"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#af51943bba34b7ba69c16d52ad74e1400">dispose</a> ()=0</td></tr>
+<tr class="memdesc:af51943bba34b7ba69c16d52ad74e1400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just free this object without executing it.  <a href="#af51943bba34b7ba69c16d52ad74e1400">More...</a><br /></td></tr>
 <tr class="separator:af51943bba34b7ba69c16d52ad74e1400"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a47e6235c055060ed6a3617696be88bb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47e6235c055060ed6a3617696be88bb8"></a>
-<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>myengine</b></td></tr>
+<tr class="memitem:a47e6235c055060ed6a3617696be88bb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a47e6235c055060ed6a3617696be88bb8">myengine</a></td></tr>
 <tr class="separator:a47e6235c055060ed6a3617696be88bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc3cd3a2cce0e1769b3187d0af9ac215"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc3cd3a2cce0e1769b3187d0af9ac215"></a>
-<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>caller</b></td></tr>
+<tr class="memitem:afc3cd3a2cce0e1769b3187d0af9ac215"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#afc3cd3a2cce0e1769b3187d0af9ac215">caller</a></td></tr>
 <tr class="separator:afc3cd3a2cce0e1769b3187d0af9ac215"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5c2888404a30db2bd038c9a7e5b7041"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5c2888404a30db2bd038c9a7e5b7041"></a>
-<a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a>&#160;</td><td class="memItemRight" valign="bottom"><b>met</b></td></tr>
+<tr class="memitem:ae5c2888404a30db2bd038c9a7e5b7041"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#ae5c2888404a30db2bd038c9a7e5b7041">met</a></td></tr>
 <tr class="separator:ae5c2888404a30db2bd038c9a7e5b7041"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -144,7 +137,52 @@ struct RTT::base::OperationCallerBase&lt; F &gt;</h3>
 <p>Both local and remote method implementations must inherit from this class. </p>
 
 <p>Definition at line <a class="el" href="OperationCallerBase_8hpp_source.html#l00056">56</a> of file <a class="el" href="OperationCallerBase_8hpp_source.html">OperationCallerBase.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a8b439b6ccbc1effc1f2386e654800e6c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">OperationCallerBase</a>&lt;F&gt; &gt; <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">RTT::base::OperationCallerBase</a>&lt; F &gt;::<a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#ac22230559dd1324a22259f0df18781d6">shared_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationCallerBase_8hpp_source.html#l00060">60</a> of file <a class="el" href="OperationCallerBase_8hpp_source.html">OperationCallerBase.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="af818d75981dbb3d93f61730eb3923db3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">RTT::base::OperationCallerBase</a>&lt; F &gt;::~<a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">OperationCallerBase</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationCallerBase_8hpp_source.html#l00061">61</a> of file <a class="el" href="OperationCallerBase_8hpp_source.html">OperationCallerBase.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a0ce632b8b4756316f80cf535c4f4ea49"></a>
 <div class="memitem">
 <div class="memproto">
@@ -178,6 +216,37 @@ template&lt;class F&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a clone.  </dd></dl>
 
+<p>Referenced by <a class="el" href="OperationCallerBase_8hpp_source.html#l00061">RTT::base::OperationCallerBase&lt; FunctionT &gt;::~OperationCallerBase()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af51943bba34b7ba69c16d52ad74e1400"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RTT::base::DisposableInterface::dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Just free this object without executing it. </p>
+
+<p>Implemented in <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ade71a27fafd17d9d068f8ead9004b987">RTT::internal::FusedMSignal&lt; Signature &gt;</a>, <a class="el" href="structRTT_1_1RemoveMsg.html#ab1e0b578308c1c283a7b1f0cb3321a50">RTT::RemoveMsg</a>, <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#a19b583d1028f50656cd17445e1d777f0">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#aa4bab9983dec19120c78794b65f036c3">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00076">RTT::ExecutionEngine::~ExecutionEngine()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa219e67cd5ba6c860ef90e316cc7306d"></a>
@@ -204,9 +273,121 @@ template&lt;class F&gt; </div>
 <p>Execute functionality and free this object. </p>
 <p>You may no longer use this object after calling this method. </p>
 
-<p>Implemented in <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ab44d9861778507ae7caa3eb1f0459f3e">RTT::internal::FusedMSignal&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#ad850ee6a0d3cebab3a64c65d238f38c8">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#af22e2c72a8c669b354f825f8d8159338">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>.</p>
+<p>Implemented in <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ab44d9861778507ae7caa3eb1f0459f3e">RTT::internal::FusedMSignal&lt; Signature &gt;</a>, <a class="el" href="structRTT_1_1RemoveMsg.html#ad1b864b47dafa18802cd64a94ab80b1a">RTT::RemoveMsg</a>, <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#ad850ee6a0d3cebab3a64c65d238f38c8">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#af22e2c72a8c669b354f825f8d8159338">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00212">RTT::ExecutionEngine::hasWork()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00217">RTT::ExecutionEngine::processMessages()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab339d44f1262d749cf91c00c26d7c893"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> * OperationCallerInterface::getMessageProcessor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">34</a> of file <a class="el" href="OperationCallerInterface_8cpp_source.html">OperationCallerInterface.cpp</a>.</p>
+
+<p>References <a class="el" href="GlobalEngine_8hpp_source.html#l00070">RTT::internal::GlobalEngine::Instance()</a>, <a class="el" href="OperationCallerInterface_8hpp_source.html#l00086">RTT::base::OperationCallerInterface::met</a>, <a class="el" href="OperationCallerInterface_8hpp_source.html#l00084">RTT::base::OperationCallerInterface::myengine</a>, and <a class="el" href="OperationBase_8hpp_source.html#l00059">RTT::OwnThread</a>.</p>
+
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00130">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::do_send()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a38c7a98ba5b885ff80eecac50d505c08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> RTT::base::OperationCallerInterface::getThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationCallerInterface_8hpp_source.html#l00067">67</a> of file <a class="el" href="OperationCallerInterface_8hpp_source.html">OperationCallerInterface.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55d9c21f679c735ac63b2482d3b19145"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::base::OperationCallerInterface::isSend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helpful function to tell us if this operations is to be sent or not. </p>
+
+<p>Definition at line <a class="el" href="OperationCallerInterface_8hpp_source.html#l00079">79</a> of file <a class="el" href="OperationCallerInterface_8hpp_source.html">OperationCallerInterface.hpp</a>.</p>
+
+<p>References <a class="el" href="OperationBase_8hpp_source.html#l00059">RTT::OwnThread</a>.</p>
+
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00351">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::call_impl()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b1b96467ed36f78d11e8d5bca8b26ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool RTT::base::OperationCallerInterface::ready </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Available such that implementations have a way to expose their ready-ness, ie being able to do the call. </p>
+
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#aface284b7fe9b35f348a284d0d9fc9db">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>.</p>
 
 </div>
 </div>
@@ -236,7 +417,7 @@ template&lt;class F&gt; </div>
 
 <p>Definition at line <a class="el" href="OperationCallerInterface_8cpp_source.html#l00044">44</a> of file <a class="el" href="OperationCallerInterface_8cpp_source.html">OperationCallerInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00438">RTT::ExecutionEngine::setExceptionTask()</a>.</p>
+<p>References <a class="el" href="OperationCallerInterface_8hpp_source.html#l00084">RTT::base::OperationCallerInterface::myengine</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00438">RTT::ExecutionEngine::setExceptionTask()</a>.</p>
 
 <p>Referenced by <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00292">RTT::internal::FusedMCallDataSource&lt; Signature &gt;::evaluate()</a>, and <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>.</p>
 
@@ -274,6 +455,8 @@ template&lt;class F&gt; </div>
 
 <p>Definition at line <a class="el" href="OperationCallerInterface_8cpp_source.html#l00024">24</a> of file <a class="el" href="OperationCallerInterface_8cpp_source.html">OperationCallerInterface.cpp</a>.</p>
 
+<p>References <a class="el" href="OperationCallerInterface_8hpp_source.html#l00085">RTT::base::OperationCallerInterface::caller</a>.</p>
+
 <p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00666">RTT::internal::LocalOperationCaller&lt; bool(std::string) &gt;::LocalOperationCaller()</a>.</p>
 
 </div>
@@ -309,6 +492,8 @@ template&lt;class F&gt; </div>
 </dl>
 
 <p>Definition at line <a class="el" href="OperationCallerInterface_8cpp_source.html#l00020">20</a> of file <a class="el" href="OperationCallerInterface_8cpp_source.html">OperationCallerInterface.cpp</a>.</p>
+
+<p>References <a class="el" href="OperationCallerInterface_8hpp_source.html#l00084">RTT::base::OperationCallerInterface::myengine</a>.</p>
 
 <p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00666">RTT::internal::LocalOperationCaller&lt; bool(std::string) &gt;::LocalOperationCaller()</a>, and <a class="el" href="OperationCallerInterface_8cpp_source.html#l00028">RTT::base::OperationCallerInterface::setThread()</a>.</p>
 
@@ -358,9 +543,82 @@ template&lt;class F&gt; </div>
 
 <p>Definition at line <a class="el" href="OperationCallerInterface_8cpp_source.html#l00028">28</a> of file <a class="el" href="OperationCallerInterface_8cpp_source.html">OperationCallerInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="GlobalEngine_8hpp_source.html#l00070">RTT::internal::GlobalEngine::Instance()</a>, and <a class="el" href="OperationCallerInterface_8cpp_source.html#l00020">RTT::base::OperationCallerInterface::setOwner()</a>.</p>
+<p>References <a class="el" href="OperationCallerInterface_8hpp_source.html#l00086">RTT::base::OperationCallerInterface::met</a>, and <a class="el" href="OperationCallerInterface_8cpp_source.html#l00020">RTT::base::OperationCallerInterface::setOwner()</a>.</p>
 
 <p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00666">RTT::internal::LocalOperationCaller&lt; bool(std::string) &gt;::LocalOperationCaller()</a>, and <a class="el" href="Service_8cpp_source.html#l00167">RTT::Service::setOperationThread()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="afc3cd3a2cce0e1769b3187d0af9ac215"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a>* RTT::base::OperationCallerInterface::caller</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationCallerInterface_8hpp_source.html#l00085">85</a> of file <a class="el" href="OperationCallerInterface_8hpp_source.html">OperationCallerInterface.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00284">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::checkCaller()</a>, <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00437">RTT::internal::RemoteOperationCaller&lt; OperationCallerT &gt;::cloneI()</a>, <a class="el" href="LocalOperationCaller_8hpp_source.html#l00293">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::collect_impl()</a>, <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00024">RTT::base::OperationCallerInterface::setCaller()</a>, and <a class="el" href="OperationCallerBase_8hpp_source.html#l00061">RTT::base::OperationCallerBase&lt; FunctionT &gt;::~OperationCallerBase()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5c2888404a30db2bd038c9a7e5b7041"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> RTT::base::OperationCallerInterface::met</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationCallerInterface_8hpp_source.html#l00086">86</a> of file <a class="el" href="OperationCallerInterface_8hpp_source.html">OperationCallerInterface.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::getMessageProcessor()</a>, and <a class="el" href="OperationCallerInterface_8cpp_source.html#l00028">RTT::base::OperationCallerInterface::setThread()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a47e6235c055060ed6a3617696be88bb8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a>* RTT::base::OperationCallerInterface::myengine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationCallerInterface_8hpp_source.html#l00084">84</a> of file <a class="el" href="OperationCallerInterface_8hpp_source.html">OperationCallerInterface.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::getMessageProcessor()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00044">RTT::base::OperationCallerInterface::reportError()</a>, and <a class="el" href="OperationCallerInterface_8cpp_source.html#l00020">RTT::base::OperationCallerInterface::setOwner()</a>.</p>
 
 </div>
 </div>
@@ -370,7 +628,7 @@ template&lt;class F&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -68,14 +68,12 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aa075956fd0755bf3cb6d2f9bc8e752b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa075956fd0755bf3cb6d2f9bc8e752b0"></a>
-typedef boost::remove_const&lt; typename boost::remove_reference&lt; T &gt;::type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+<tr class="memitem:aa075956fd0755bf3cb6d2f9bc8e752b0"><td class="memItemLeft" align="right" valign="top">typedef boost::remove_const&lt; typename boost::remove_reference&lt; T &gt;::type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1NA.html#aa075956fd0755bf3cb6d2f9bc8e752b0">value_type</a></td></tr>
 <tr class="separator:aa075956fd0755bf3cb6d2f9bc8e752b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad5ce3c2304873968a4e58cded94b29bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5ce3c2304873968a4e58cded94b29bf"></a>
-static T&#160;</td><td class="memItemRight" valign="bottom"><b>na</b> ()</td></tr>
+<tr class="memitem:ad5ce3c2304873968a4e58cded94b29bf"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1NA.html#ad5ce3c2304873968a4e58cded94b29bf">na</a> ()</td></tr>
 <tr class="separator:ad5ce3c2304873968a4e58cded94b29bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -85,13 +83,60 @@ struct RTT::internal::NA&lt; T &gt;</h3>
 <p>This class is used to return a 'default' value when no value is available ('Not Available'). </p>
 
 <p>Definition at line <a class="el" href="NA_8hpp_source.html#l00053">53</a> of file <a class="el" href="NA_8hpp_source.html">NA.hpp</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="aa075956fd0755bf3cb6d2f9bc8e752b0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::remove_const&lt;typename boost::remove_reference&lt;T&gt;::type&gt;::type <a class="el" href="structRTT_1_1internal_1_1NA.html">RTT::internal::NA</a>&lt; T &gt;::<a class="el" href="structRTT_1_1internal_1_1NA.html#aa075956fd0755bf3cb6d2f9bc8e752b0">value_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="NA_8hpp_source.html#l00056">56</a> of file <a class="el" href="NA_8hpp_source.html">NA.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad5ce3c2304873968a4e58cded94b29bf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T <a class="el" href="structRTT_1_1internal_1_1NA.html">RTT::internal::NA</a>&lt; T &gt;::na </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="NA_8hpp_source.html#l00057">57</a> of file <a class="el" href="NA_8hpp_source.html">NA.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00351">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::call_impl()</a>, <a class="el" href="signal__template_8hpp_source.html#l00135">RTT::internal::OROCOS_SIGNAL_N&lt; R, SlotFunctionT &gt;::emit()</a>, <a class="el" href="ArrayPartDataSource_8hpp_source.html#l00088">RTT::internal::ArrayPartDataSource&lt; T &gt;::get()</a>, <a class="el" href="SequenceTypeInfoBase_8hpp_source.html#l00085">RTT::types::get_container_item()</a>, <a class="el" href="SequenceTypeInfoBase_8hpp_source.html#l00100">RTT::types::get_container_item_copy()</a>, <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00511">RTT::internal::FusedMSignal&lt; Signature &gt;::invoke()</a>, <a class="el" href="InvokerSignature_8hpp_source.html#l00072">RTT::internal::InvokerSignature&lt; 0, F, ToInvoke &gt;::operator()()</a>, <a class="el" href="InvokerSignature_8hpp_source.html#l00107">RTT::internal::InvokerSignature&lt; 1, F, ToInvoke &gt;::operator()()</a>, <a class="el" href="InvokerSignature_8hpp_source.html#l00142">RTT::internal::InvokerSignature&lt; 2, F, ToInvoke &gt;::operator()()</a>, <a class="el" href="InvokerSignature_8hpp_source.html#l00178">RTT::internal::InvokerSignature&lt; 3, F, ToInvoke &gt;::operator()()</a>, <a class="el" href="InvokerSignature_8hpp_source.html#l00215">RTT::internal::InvokerSignature&lt; 4, F, ToInvoke &gt;::operator()()</a>, <a class="el" href="InvokerSignature_8hpp_source.html#l00254">RTT::internal::InvokerSignature&lt; 5, F, ToInvoke &gt;::operator()()</a>, <a class="el" href="InvokerSignature_8hpp_source.html#l00294">RTT::internal::InvokerSignature&lt; 6, F, ToInvoke &gt;::operator()()</a>, <a class="el" href="InvokerSignature_8hpp_source.html#l00335">RTT::internal::InvokerSignature&lt; 7, F, ToInvoke &gt;::operator()()</a>, <a class="el" href="ReturnSignature_8hpp_source.html#l00068">RTT::internal::ReturnSignature&lt; 0, F, ToInvoke &gt;::ret()</a>, <a class="el" href="ReturnSignature_8hpp_source.html#l00088">RTT::internal::ReturnSignature&lt; 1, F, ToInvoke &gt;::ret()</a>, <a class="el" href="ReturnSignature_8hpp_source.html#l00115">RTT::internal::ReturnSignature&lt; 2, F, ToInvoke &gt;::ret()</a>, <a class="el" href="ReturnSignature_8hpp_source.html#l00142">RTT::internal::ReturnSignature&lt; 3, F, ToInvoke &gt;::ret()</a>, <a class="el" href="ReturnSignature_8hpp_source.html#l00171">RTT::internal::ReturnSignature&lt; 4, F, ToInvoke &gt;::ret()</a>, <a class="el" href="ReturnSignature_8hpp_source.html#l00200">RTT::internal::ReturnSignature&lt; 5, F, ToInvoke &gt;::ret()</a>, <a class="el" href="ReturnSignature_8hpp_source.html#l00230">RTT::internal::ReturnSignature&lt; 6, F, ToInvoke &gt;::ret()</a>, <a class="el" href="ReturnSignature_8hpp_source.html#l00261">RTT::internal::ReturnSignature&lt; 7, F, ToInvoke &gt;::ret()</a>, and <a class="el" href="ArrayPartDataSource_8hpp_source.html#l00096">RTT::internal::ArrayPartDataSource&lt; T &gt;::value()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>rtt/internal/<a class="el" href="NA_8hpp_source.html">NA.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:29 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

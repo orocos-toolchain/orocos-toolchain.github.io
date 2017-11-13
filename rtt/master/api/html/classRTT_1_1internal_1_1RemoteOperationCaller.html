@@ -71,14 +71,14 @@ Inheritance diagram for RTT::internal::RemoteOperationCaller&lt; OperationCaller
  <div class="center">
   <img src="classRTT_1_1internal_1_1RemoteOperationCaller.png" usemap="#RTT::internal::RemoteOperationCaller_3C_20OperationCallerT_20_3E_map" alt=""/>
   <map id="RTT::internal::RemoteOperationCaller_3C_20OperationCallerT_20_3E_map" name="RTT::internal::RemoteOperationCaller&lt; OperationCallerT &gt;_map">
-<area href="structRTT_1_1internal_1_1Invoker.html" alt="RTT::internal::Invoker&lt; OperationCallerT, RemoteOperationCallerImpl&lt; OperationCallerT &gt; &gt;" shape="rect" coords="0,0,534,24"/>
+<area href="structRTT_1_1internal_1_1Invoker.html" alt="RTT::internal::Invoker&lt; OperationCallerT, RemoteOperationCallerImpl&lt; OperationCallerT &gt; &gt;" shape="rect" coords="0,56,832,80"/>
+<area href="structRTT_1_1internal_1_1InvokerImpl.html" alt="RTT::internal::InvokerImpl&lt; int, F, BaseImpl &gt;" shape="rect" coords="0,0,832,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a6b537333d610aafa033fe04bcdd6d51b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b537333d610aafa033fe04bcdd6d51b"></a>
-typedef OperationCallerT&#160;</td><td class="memItemRight" valign="bottom"><b>Signature</b></td></tr>
+<tr class="memitem:a6b537333d610aafa033fe04bcdd6d51b"><td class="memItemLeft" align="right" valign="top">typedef OperationCallerT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html#a6b537333d610aafa033fe04bcdd6d51b">Signature</a></td></tr>
 <tr class="separator:a6b537333d610aafa033fe04bcdd6d51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -86,14 +86,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af4ef449c862b76034ba7fa59b9037550"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html#af4ef449c862b76034ba7fa59b9037550">RemoteOperationCaller</a> (<a class="el" href="classRTT_1_1OperationInterfacePart.html">OperationInterfacePart</a> *of, std::string name, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *caller)</td></tr>
 <tr class="memdesc:af4ef449c862b76034ba7fa59b9037550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html" title="A OperationCaller implementation which delegates C++ to datasource conversions when C++ code tries to...">RemoteOperationCaller</a> object which executes a remote method.  <a href="#af4ef449c862b76034ba7fa59b9037550">More...</a><br /></td></tr>
 <tr class="separator:af4ef449c862b76034ba7fa59b9037550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3727a4311d07f09e935e6ec726a73dd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3727a4311d07f09e935e6ec726a73dd4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RemoteOperationCaller</b> (const <a class="el" href="classRTT_1_1internal_1_1SendHandleC.html">SendHandleC</a> &amp;sh)</td></tr>
+<tr class="memitem:a3727a4311d07f09e935e6ec726a73dd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html#a3727a4311d07f09e935e6ec726a73dd4">RemoteOperationCaller</a> (const <a class="el" href="classRTT_1_1internal_1_1SendHandleC.html">SendHandleC</a> &amp;sh)</td></tr>
 <tr class="separator:a3727a4311d07f09e935e6ec726a73dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26b9c8a21186bcce961e0d017b3b3032"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26b9c8a21186bcce961e0d017b3b3032"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>ready</b> () const </td></tr>
+<tr class="memitem:a26b9c8a21186bcce961e0d017b3b3032"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html#a26b9c8a21186bcce961e0d017b3b3032">ready</a> () const </td></tr>
 <tr class="separator:a26b9c8a21186bcce961e0d017b3b3032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d42c0b5ad591d03f3e418d5de9d697c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d42c0b5ad591d03f3e418d5de9d697c"></a>
-virtual <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">base::OperationCallerBase</a>&lt; OperationCallerT &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>cloneI</b> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *caller) const </td></tr>
+<tr class="memitem:a5d42c0b5ad591d03f3e418d5de9d697c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">base::OperationCallerBase</a>&lt; OperationCallerT &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html#a5d42c0b5ad591d03f3e418d5de9d697c">cloneI</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *caller) const </td></tr>
 <tr class="separator:a5d42c0b5ad591d03f3e418d5de9d697c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -110,7 +107,24 @@ class RTT::internal::RemoteOperationCaller&lt; OperationCallerT &gt;</h3>
 </dl>
 
 <p>Definition at line <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00404">404</a> of file <a class="el" href="RemoteOperationCaller_8hpp_source.html">RemoteOperationCaller.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a6b537333d610aafa033fe04bcdd6d51b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class OperationCallerT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef OperationCallerT <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html">RTT::internal::RemoteOperationCaller</a>&lt; OperationCallerT &gt;::<a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html#a6b537333d610aafa033fe04bcdd6d51b">Signature</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00408">408</a> of file <a class="el" href="RemoteOperationCaller_8hpp_source.html">RemoteOperationCaller.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af4ef449c862b76034ba7fa59b9037550"></a>
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +176,97 @@ template&lt;class OperationCallerT&gt; </div>
 
 <p>Definition at line <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00416">416</a> of file <a class="el" href="RemoteOperationCaller_8hpp_source.html">RemoteOperationCaller.hpp</a>.</p>
 
-<p>References <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html#a0ce632b8b4756316f80cf535c4f4ea49">RTT::base::OperationCallerBase&lt; OperationCallerT &gt;::cloneI()</a>, <a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a1b1b96467ed36f78d11e8d5bca8b26ba">RTT::base::OperationCallerInterface::ready()</a>, and <a class="el" href="classRTT_1_1internal_1_1SendHandleC.html#a47b001a7d8f03c400c340eed33ba6aae">RTT::internal::SendHandleC::setAutoCollect()</a>.</p>
+<p>References <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00076">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;::mmeth</a>, and <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00078">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;::sendargs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3727a4311d07f09e935e6ec726a73dd4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class OperationCallerT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html">RTT::internal::RemoteOperationCaller</a>&lt; OperationCallerT &gt;::<a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html">RemoteOperationCaller</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1internal_1_1SendHandleC.html">SendHandleC</a> &amp;&#160;</td>
+          <td class="paramname"><em>sh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00425">425</a> of file <a class="el" href="RemoteOperationCaller_8hpp_source.html">RemoteOperationCaller.hpp</a>.</p>
+
+<p>References <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00079">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;::collectargs</a>, <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00077">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;::mhandle</a>, and <a class="el" href="classRTT_1_1internal_1_1SendHandleC.html#a47b001a7d8f03c400c340eed33ba6aae">RTT::internal::SendHandleC::setAutoCollect()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a5d42c0b5ad591d03f3e418d5de9d697c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class OperationCallerT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">base::OperationCallerBase</a>&lt;OperationCallerT&gt;* <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html">RTT::internal::RemoteOperationCaller</a>&lt; OperationCallerT &gt;::cloneI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td>
+          <td class="paramname"><em>caller</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00437">437</a> of file <a class="el" href="RemoteOperationCaller_8hpp_source.html">RemoteOperationCaller.hpp</a>.</p>
+
+<p>References <a class="el" href="OperationCallerInterface_8hpp_source.html#l00085">RTT::base::OperationCallerInterface::caller</a>, <a class="el" href="classRTT_1_1internal_1_1OperationCallerC.html#a083c59b0949a03055d0ce97a7e2d26ba">RTT::internal::OperationCallerC::getName()</a>, <a class="el" href="classRTT_1_1internal_1_1OperationCallerC.html#aaa143ba517c53d3541359568a6fa05f9">RTT::internal::OperationCallerC::getOrp()</a>, and <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00076">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;::mmeth</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26b9c8a21186bcce961e0d017b3b3032"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class OperationCallerT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCaller.html">RTT::internal::RemoteOperationCaller</a>&lt; OperationCallerT &gt;::ready </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00433">433</a> of file <a class="el" href="RemoteOperationCaller_8hpp_source.html">RemoteOperationCaller.hpp</a>.</p>
+
+<p>References <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00076">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;::mmeth</a>, and <a class="el" href="classRTT_1_1internal_1_1OperationCallerC.html#adc3c441904ae474827a34f4decc7c74e">RTT::internal::OperationCallerC::ready()</a>.</p>
 
 </div>
 </div>
@@ -172,7 +276,7 @@ template&lt;class OperationCallerT&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:29 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

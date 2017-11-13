@@ -70,27 +70,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a83fbeb8b292f22c21d9a1018d7048957"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a83fbeb8b292f22c21d9a1018d7048957">PeerParser</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *c, <a class="el" href="classRTT_1_1scripting_1_1CommonParser.html">CommonParser</a> &amp;cp, bool fullpath=false)</td></tr>
 <tr class="memdesc:a83fbeb8b292f22c21d9a1018d7048957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classRTT_1_1scripting_1_1PeerParser.html" title="Get the peer and object from an invocation path like a.b.c.d() . ">PeerParser</a> which starts looking for peers from a task.  <a href="#a83fbeb8b292f22c21d9a1018d7048957">More...</a><br /></td></tr>
 <tr class="separator:a83fbeb8b292f22c21d9a1018d7048957"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b18669279e68a8c3d92bfdb3719c21b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b18669279e68a8c3d92bfdb3719c21b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a7b18669279e68a8c3d92bfdb3719c21b">reset</a> ()</td></tr>
-<tr class="memdesc:a7b18669279e68a8c3d92bfdb3719c21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">After reset, <a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#afe3521e54411fe0679096a1dbe0168d9" title="Returns the last matching peer. ">peer()</a> == current context and <a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a1546ea7134f58c78696b977e6df894be" title="Returns the last matching object name. ">object()</a> == "this". <br /></td></tr>
+<tr class="memitem:a7b18669279e68a8c3d92bfdb3719c21b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a7b18669279e68a8c3d92bfdb3719c21b">reset</a> ()</td></tr>
+<tr class="memdesc:a7b18669279e68a8c3d92bfdb3719c21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">After reset, <a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#afe3521e54411fe0679096a1dbe0168d9" title="Returns the last matching peer. ">peer()</a> == current context and <a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a1546ea7134f58c78696b977e6df894be" title="Returns the last matching object name. ">object()</a> == "this".  <a href="#a7b18669279e68a8c3d92bfdb3719c21b">More...</a><br /></td></tr>
 <tr class="separator:a7b18669279e68a8c3d92bfdb3719c21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d9e65b9e988de96e65f472849e6eb65"><td class="memItemLeft" align="right" valign="top">rule_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a2d9e65b9e988de96e65f472849e6eb65">parser</a> ()</td></tr>
+<tr class="memitem:a2d9e65b9e988de96e65f472849e6eb65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a2d9e65b9e988de96e65f472849e6eb65">parser</a> ()</td></tr>
 <tr class="memdesc:a2d9e65b9e988de96e65f472849e6eb65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parser tries to traverse a full peer-to-object path and throws if it got stuck in the middle.  <a href="#a2d9e65b9e988de96e65f472849e6eb65">More...</a><br /></td></tr>
 <tr class="separator:a2d9e65b9e988de96e65f472849e6eb65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac62a45e123ac184b2857b2c711feb54d"><td class="memItemLeft" align="right" valign="top">rule_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#ac62a45e123ac184b2857b2c711feb54d">locator</a> ()</td></tr>
+<tr class="memitem:ac62a45e123ac184b2857b2c711feb54d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#ac62a45e123ac184b2857b2c711feb54d">locator</a> ()</td></tr>
 <tr class="memdesc:ac62a45e123ac184b2857b2c711feb54d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The locator tries to go as far as possible in the peer-to-object path and will never throw.  <a href="#ac62a45e123ac184b2857b2c711feb54d">More...</a><br /></td></tr>
 <tr class="separator:ac62a45e123ac184b2857b2c711feb54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe3521e54411fe0679096a1dbe0168d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe3521e54411fe0679096a1dbe0168d9"></a>
-<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#afe3521e54411fe0679096a1dbe0168d9">peer</a> ()</td></tr>
-<tr class="memdesc:afe3521e54411fe0679096a1dbe0168d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last matching peer. <br /></td></tr>
+<tr class="memitem:afe3521e54411fe0679096a1dbe0168d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#afe3521e54411fe0679096a1dbe0168d9">peer</a> ()</td></tr>
+<tr class="memdesc:afe3521e54411fe0679096a1dbe0168d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last matching peer.  <a href="#afe3521e54411fe0679096a1dbe0168d9">More...</a><br /></td></tr>
 <tr class="separator:afe3521e54411fe0679096a1dbe0168d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1546ea7134f58c78696b977e6df894be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1546ea7134f58c78696b977e6df894be"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a1546ea7134f58c78696b977e6df894be">object</a> ()</td></tr>
-<tr class="memdesc:a1546ea7134f58c78696b977e6df894be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last matching object name. <br /></td></tr>
+<tr class="memitem:a1546ea7134f58c78696b977e6df894be"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a1546ea7134f58c78696b977e6df894be">object</a> ()</td></tr>
+<tr class="memdesc:a1546ea7134f58c78696b977e6df894be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last matching object name.  <a href="#a1546ea7134f58c78696b977e6df894be">More...</a><br /></td></tr>
 <tr class="separator:a1546ea7134f58c78696b977e6df894be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a519e95b2977dfde5a0e361c0dc590985"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a519e95b2977dfde5a0e361c0dc590985"></a>
-ServicePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a519e95b2977dfde5a0e361c0dc590985">taskObject</a> ()</td></tr>
-<tr class="memdesc:a519e95b2977dfde5a0e361c0dc590985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last matching <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> or zero if not found. <br /></td></tr>
+<tr class="memitem:a519e95b2977dfde5a0e361c0dc590985"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT.html#a5f9ed58ed2b48bc11e7a9a4a7c3de35a">ServicePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a519e95b2977dfde5a0e361c0dc590985">taskObject</a> ()</td></tr>
+<tr class="memdesc:a519e95b2977dfde5a0e361c0dc590985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last matching <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> or zero if not found.  <a href="#a519e95b2977dfde5a0e361c0dc590985">More...</a><br /></td></tr>
 <tr class="separator:a519e95b2977dfde5a0e361c0dc590985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab66b577f98e4cf830356a1975879365"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#aab66b577f98e4cf830356a1975879365">foundPath</a> ()</td></tr>
 <tr class="memdesc:aab66b577f98e4cf830356a1975879365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classRTT_1_1scripting_1_1PeerParser.html" title="Get the peer and object from an invocation path like a.b.c.d() . ">PeerParser</a> found a valid path.  <a href="#aab66b577f98e4cf830356a1975879365">More...</a><br /></td></tr>
@@ -172,7 +168,7 @@ ServicePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rule_t &amp; RTT::PeerParser::locator </td>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp; RTT::PeerParser::locator </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -185,6 +181,29 @@ ServicePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 
 <p>Definition at line <a class="el" href="PeerParser_8cpp_source.html#l00220">220</a> of file <a class="el" href="PeerParser_8cpp_source.html">PeerParser.cpp</a>.</p>
 
+<p>Referenced by <a class="el" href="ExpressionParser_8cpp_source.html#l00079">RTT::scripting::DataCallParser::DataCallParser()</a>, and <a class="el" href="ValueParser_8cpp_source.html#l00048">RTT::scripting::ValueParser::ValueParser()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1546ea7134f58c78696b977e6df894be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string RTT::PeerParser::object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the last matching object name. </p>
+
+<p>Definition at line <a class="el" href="PeerParser_8cpp_source.html#l00235">235</a> of file <a class="el" href="PeerParser_8cpp_source.html">PeerParser.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExpressionParser_8cpp_source.html#l00079">RTT::scripting::DataCallParser::DataCallParser()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2d9e65b9e988de96e65f472849e6eb65"></a>
@@ -192,7 +211,7 @@ ServicePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rule_t &amp; RTT::PeerParser::parser </td>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp; RTT::PeerParser::parser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -205,6 +224,73 @@ ServicePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 
 <p>Definition at line <a class="el" href="PeerParser_8cpp_source.html#l00215">215</a> of file <a class="el" href="PeerParser_8cpp_source.html">PeerParser.cpp</a>.</p>
 
+<p>Referenced by <a class="el" href="StateGraphParser_8cpp_source.html#l00101">RTT::scripting::StateGraphParser::StateGraphParser()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe3521e54411fe0679096a1dbe0168d9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> * RTT::PeerParser::peer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the last matching peer. </p>
+
+<p>Definition at line <a class="el" href="PeerParser_8cpp_source.html#l00225">225</a> of file <a class="el" href="PeerParser_8cpp_source.html">PeerParser.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExpressionParser_8cpp_source.html#l00079">RTT::scripting::DataCallParser::DataCallParser()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b18669279e68a8c3d92bfdb3719c21b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::PeerParser::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>After reset, <a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#afe3521e54411fe0679096a1dbe0168d9" title="Returns the last matching peer. ">peer()</a> == current context and <a class="el" href="classRTT_1_1scripting_1_1PeerParser.html#a1546ea7134f58c78696b977e6df894be" title="Returns the last matching object name. ">object()</a> == "this". </p>
+
+<p>Definition at line <a class="el" href="PeerParser_8cpp_source.html#l00151">151</a> of file <a class="el" href="PeerParser_8cpp_source.html">PeerParser.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00336">RTT::TaskContext::getPeer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00331">RTT::TaskContext::hasPeer()</a>, <a class="el" href="GlobalService_8cpp_source.html#l00031">RTT::internal::GlobalService::Instance()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00268">RTT::TaskContext::provides()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00390">RTT::TaskContext::ready()</a>, and <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Warning</a>.</p>
+
+<p>Referenced by <a class="el" href="ExpressionParser_8cpp_source.html#l00079">RTT::scripting::DataCallParser::DataCallParser()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00321">RTT::scripting::StateGraphParser::getParserResult()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00736">RTT::scripting::ProgramGraphParser::parseFunction()</a>, and <a class="el" href="ValueParser_8cpp_source.html#l00048">RTT::scripting::ValueParser::ValueParser()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a519e95b2977dfde5a0e361c0dc590985"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a> RTT::PeerParser::taskObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the last matching <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> or zero if not found. </p>
+
+<p>Definition at line <a class="el" href="PeerParser_8cpp_source.html#l00230">230</a> of file <a class="el" href="PeerParser_8cpp_source.html">PeerParser.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExpressionParser_8cpp_source.html#l00079">RTT::scripting::DataCallParser::DataCallParser()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00321">RTT::scripting::StateGraphParser::getParserResult()</a>, and <a class="el" href="ValueParser_8cpp_source.html#l00048">RTT::scripting::ValueParser::ValueParser()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -214,7 +300,7 @@ ServicePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

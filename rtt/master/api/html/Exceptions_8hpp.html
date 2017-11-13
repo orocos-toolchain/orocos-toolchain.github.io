@@ -59,17 +59,15 @@
 
 <p>When <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> is compiled without exceptions (define ORO_EMBEDDED), the functions which would throw an exception simply return.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;../rtt-config.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="rtt-config_8h_source.html">../rtt-config.h</a>&quot;</code><br />
 </div>
 <p><a href="Exceptions_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a8d87783dc67b34ee98d83b0f7526a811"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d87783dc67b34ee98d83b0f7526a811"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ORO_THROW</b>(x)&#160;&#160;&#160;throw x</td></tr>
+<tr class="memitem:a8d87783dc67b34ee98d83b0f7526a811"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Exceptions_8hpp.html#a8d87783dc67b34ee98d83b0f7526a811">ORO_THROW</a>(x)&#160;&#160;&#160;throw x</td></tr>
 <tr class="separator:a8d87783dc67b34ee98d83b0f7526a811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1306b93415cf64bbff01b278c9920e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1306b93415cf64bbff01b278c9920e4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ORO_THROW_OR_RETURN</b>(x,  rv)&#160;&#160;&#160;throw x</td></tr>
+<tr class="memitem:ab1306b93415cf64bbff01b278c9920e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Exceptions_8hpp.html#ab1306b93415cf64bbff01b278c9920e4">ORO_THROW_OR_RETURN</a>(x,  rv)&#160;&#160;&#160;throw x</td></tr>
 <tr class="separator:ab1306b93415cf64bbff01b278c9920e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -77,10 +75,61 @@ Macros</h2></td></tr>
 <p>For void functions, use ORO_THROW, for other functions, use ORO_THROW_OR_RETURN. </p>
 
 <p>Definition in file <a class="el" href="Exceptions_8hpp_source.html">Exceptions.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a8d87783dc67b34ee98d83b0f7526a811"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ORO_THROW</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;throw x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Exceptions_8hpp_source.html#l00052">52</a> of file <a class="el" href="Exceptions_8hpp_source.html">Exceptions.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="StateGraphParser_8cpp_source.html#l00321">RTT::scripting::StateGraphParser::getParserResult()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00786">RTT::scripting::StateGraphParser::~StateGraphParser()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1306b93415cf64bbff01b278c9920e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ORO_THROW_OR_RETURN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">rv&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;throw x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Exceptions_8hpp_source.html#l00053">53</a> of file <a class="el" href="Exceptions_8hpp_source.html">Exceptions.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="CreateSequence_8hpp_source.html#l00136">RTT::internal::create_sequence_helper::assignable()</a>, <a class="el" href="OperationInterface_8cpp_source.html#l00146">RTT::OperationInterface::getArgumentList()</a>, <a class="el" href="OperationInterface_8cpp_source.html#l00162">RTT::OperationInterface::getDescription()</a>, <a class="el" href="OperationInterface_8cpp_source.html#l00154">RTT::OperationInterface::getResultType()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00185">RTT::scripting::ScriptingService::loadStateMachine()</a>, <a class="el" href="OperationInterface_8cpp_source.html#l00105">RTT::OperationInterface::produce()</a>, <a class="el" href="OperationInterface_8cpp_source.html#l00129">RTT::OperationInterface::produceCollect()</a>, <a class="el" href="OperationInterface_8cpp_source.html#l00121">RTT::OperationInterface::produceHandle()</a>, <a class="el" href="OperationInterface_8cpp_source.html#l00113">RTT::OperationInterface::produceSend()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00210">RTT::scripting::ScriptingService::recursiveCheckLoadStateMachine()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00266">RTT::scripting::ScriptingService::recursiveCheckUnloadStateMachine()</a>, <a class="el" href="CreateSequence_8hpp_source.html#l00121">RTT::internal::create_sequence_helper::sources()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00383">RTT::scripting::ScriptingService::unloadProgram()</a>, and <a class="el" href="ScriptingService_8cpp_source.html#l00246">RTT::scripting::ScriptingService::unloadStateMachine()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:25 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

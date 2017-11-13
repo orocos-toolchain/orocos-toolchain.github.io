@@ -61,9 +61,9 @@
 
 <p>This file defines the interface of an <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> Corba TaskContext Component.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>import &quot;Service.idl&quot;;</code><br />
-<code>import &quot;ServiceRequester.idl&quot;;</code><br />
-<code>import &quot;DataFlow.idl&quot;;</code><br />
+<div class="textblock"><code>import &quot;<a class="el" href="Service_8idl_source.html">Service.idl</a>&quot;;</code><br />
+<code>import &quot;<a class="el" href="ServiceRequester_8idl_source.html">ServiceRequester.idl</a>&quot;;</code><br />
+<code>import &quot;<a class="el" href="DataFlow_8idl_source.html">DataFlow.idl</a>&quot;;</code><br />
 </div>
 <p><a href="TaskContext_8idl_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -79,20 +79,20 @@ Modules</h2></td></tr>
 <tr class="memdesc:namespaceRTT"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>, <a class="el" href="classRTT_1_1Activity.html" title="An Activity is an object that represents a thread. ">Activity</a>, <a class="el" href="classRTT_1_1OperationCaller.html" title="A OperationCaller serves as a placeholder (aka &#39;proxy&#39;) for a remote Operation. ">OperationCaller</a>, <a class="el" href="classRTT_1_1Operation.html" title="The operation ties a C or C++ function into a component interface. ">Operation</a>, <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a>, <a class="el" href="classRTT_1_1InputPort.html" title="A component&#39;s data input port. ">InputPort</a>, <a class="el" href="classRTT_1_1OutputPort.html" title="A component&#39;s data output port. ">OutputPort</a>, <a class="el" href="classRTT_1_1Attribute.html" title="An Attribute has a name and contains data which can be set and get. ">Attribute</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceRTT_1_1corba"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1corba.html">RTT::corba</a></td></tr>
-<tr class="memdesc:namespaceRTT_1_1corba"><td class="mdescLeft">&#160;</td><td class="mdescRight">CORBA (OmniORB/TAO) code for network data transport. <br /></td></tr>
+<tr class="memdesc:namespaceRTT_1_1corba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceCORBA.html">CORBA</a> (OmniORB/TAO) code for network data transport. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ga099e6ccd5476aa8ec1020e27b5e39558"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CompIDL.html#ga099e6ccd5476aa8ec1020e27b5e39558">RTT::corba::CTaskState</a> { <br />
-&#160;&#160;<b>CInit</b>, 
-<b>CPreOperational</b>, 
-<b>CFatalError</b>, 
-<b>CException</b>, 
+&#160;&#160;<a class="el" href="group__CompIDL.html#gga099e6ccd5476aa8ec1020e27b5e39558a0700ed3d088d44d8695de1c0e8a1e750">RTT::corba::CInit</a>, 
+<a class="el" href="group__CompIDL.html#gga099e6ccd5476aa8ec1020e27b5e39558a53acf0793a47b6db7f4839bb15926d1a">RTT::corba::CPreOperational</a>, 
+<a class="el" href="group__CompIDL.html#gga099e6ccd5476aa8ec1020e27b5e39558ab72b61b382acf3c80ade63e8b13344a8">RTT::corba::CFatalError</a>, 
+<a class="el" href="group__CompIDL.html#gga099e6ccd5476aa8ec1020e27b5e39558a1989c5ad215a3e91f0044c07a6a7dece">RTT::corba::CException</a>, 
 <br />
-&#160;&#160;<b>CStopped</b>, 
-<b>CRunning</b>, 
-<b>CRunTimeError</b>
+&#160;&#160;<a class="el" href="group__CompIDL.html#gga099e6ccd5476aa8ec1020e27b5e39558a6e52b85363d9037066b5273251c12bc1">RTT::corba::CStopped</a>, 
+<a class="el" href="group__CompIDL.html#gga099e6ccd5476aa8ec1020e27b5e39558a9ae0752e337483954c18e4248d80224f">RTT::corba::CRunning</a>, 
+<a class="el" href="group__CompIDL.html#gga099e6ccd5476aa8ec1020e27b5e39558a19a37e40095c4d028008c3e78ea6ea71">RTT::corba::CRunTimeError</a>
 <br />
  }<tr class="memdesc:ga099e6ccd5476aa8ec1020e27b5e39558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps 1-to-1 to <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296" title="Describes the different states a component can have. ">RTT::base::TaskCore::TaskState</a>.  <a href="group__CompIDL.html#ga099e6ccd5476aa8ec1020e27b5e39558">More...</a><br /></td></tr>
 </td></tr>
@@ -105,7 +105,7 @@ Enumerations</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:26 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

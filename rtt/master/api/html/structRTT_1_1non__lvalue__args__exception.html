@@ -76,37 +76,169 @@ Inheritance diagram for RTT::non_lvalue_args_exception:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afc3d654443f82b04fa85e210fa9a6127"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc3d654443f82b04fa85e210fa9a6127"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>non_lvalue_args_exception</b> (int w, const std::string &amp;received)</td></tr>
+<tr class="memitem:afc3d654443f82b04fa85e210fa9a6127"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1non__lvalue__args__exception.html#afc3d654443f82b04fa85e210fa9a6127">non_lvalue_args_exception</a> (int w, const std::string &amp;received)</td></tr>
 <tr class="separator:afc3d654443f82b04fa85e210fa9a6127"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a115b0dd4ad2520defa184a28075d7f04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a115b0dd4ad2520defa184a28075d7f04"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const   throw ()</td></tr>
+<tr class="memitem:a94918073730102f04038328068ca989d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1non__lvalue__args__exception.html#a94918073730102f04038328068ca989d">~non_lvalue_args_exception</a> ()  throw ()</td></tr>
+<tr class="separator:a94918073730102f04038328068ca989d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115b0dd4ad2520defa184a28075d7f04"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1non__lvalue__args__exception.html#a115b0dd4ad2520defa184a28075d7f04">what</a> () const   throw ()</td></tr>
 <tr class="separator:a115b0dd4ad2520defa184a28075d7f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3ae61cf787dfe1dee0a5279918a49bb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ae61cf787dfe1dee0a5279918a49bb2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>whicharg</b></td></tr>
+<tr class="memitem:a3ae61cf787dfe1dee0a5279918a49bb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1non__lvalue__args__exception.html#a3ae61cf787dfe1dee0a5279918a49bb2">whicharg</a></td></tr>
 <tr class="separator:a3ae61cf787dfe1dee0a5279918a49bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10d31f04d29843fe1b6c6b207a9c5a20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10d31f04d29843fe1b6c6b207a9c5a20"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>received_</b></td></tr>
+<tr class="memitem:a10d31f04d29843fe1b6c6b207a9c5a20"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1non__lvalue__args__exception.html#a10d31f04d29843fe1b6c6b207a9c5a20">received_</a></td></tr>
 <tr class="separator:a10d31f04d29843fe1b6c6b207a9c5a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad47d75b4ba3435eff02b9d4ba687f030"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad47d75b4ba3435eff02b9d4ba687f030"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>whatstr</b></td></tr>
+<tr class="memitem:ad47d75b4ba3435eff02b9d4ba687f030"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1non__lvalue__args__exception.html#ad47d75b4ba3435eff02b9d4ba687f030">whatstr</a></td></tr>
 <tr class="separator:ad47d75b4ba3435eff02b9d4ba687f030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exception thrown when a factory is requested to create an object, and one of the arguments needed to be an lvalue (AssignableDataSource) and an rvalue (plain DataSource) was given. </p>
 
 <p>Definition at line <a class="el" href="FactoryExceptions_8hpp_source.html#l00130">130</a> of file <a class="el" href="FactoryExceptions_8hpp_source.html">FactoryExceptions.hpp</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="afc3d654443f82b04fa85e210fa9a6127"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::non_lvalue_args_exception::non_lvalue_args_exception </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>received</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="FactoryExceptions_8cpp_source.html#l00113">113</a> of file <a class="el" href="FactoryExceptions_8cpp_source.html">FactoryExceptions.cpp</a>.</p>
+
+<p>References <a class="el" href="FactoryExceptions_8hpp_source.html#l00136">received_</a>, and <a class="el" href="FactoryExceptions_8hpp_source.html#l00137">whatstr</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94918073730102f04038328068ca989d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::non_lvalue_args_exception::~non_lvalue_args_exception </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="FactoryExceptions_8cpp_source.html#l00122">122</a> of file <a class="el" href="FactoryExceptions_8cpp_source.html">FactoryExceptions.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a115b0dd4ad2520defa184a28075d7f04"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * RTT::non_lvalue_args_exception::what </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="FactoryExceptions_8cpp_source.html#l00124">124</a> of file <a class="el" href="FactoryExceptions_8cpp_source.html">FactoryExceptions.cpp</a>.</p>
+
+<p>References <a class="el" href="FactoryExceptions_8hpp_source.html#l00137">whatstr</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a10d31f04d29843fe1b6c6b207a9c5a20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string RTT::non_lvalue_args_exception::received_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="FactoryExceptions_8hpp_source.html#l00136">136</a> of file <a class="el" href="FactoryExceptions_8hpp_source.html">FactoryExceptions.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="FactoryExceptions_8cpp_source.html#l00113">non_lvalue_args_exception()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad47d75b4ba3435eff02b9d4ba687f030"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string RTT::non_lvalue_args_exception::whatstr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="FactoryExceptions_8hpp_source.html#l00137">137</a> of file <a class="el" href="FactoryExceptions_8hpp_source.html">FactoryExceptions.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="FactoryExceptions_8cpp_source.html#l00113">non_lvalue_args_exception()</a>, and <a class="el" href="FactoryExceptions_8cpp_source.html#l00124">what()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ae61cf787dfe1dee0a5279918a49bb2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RTT::non_lvalue_args_exception::whicharg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="FactoryExceptions_8hpp_source.html#l00135">135</a> of file <a class="el" href="FactoryExceptions_8hpp_source.html">FactoryExceptions.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>rtt/<a class="el" href="FactoryExceptions_8hpp_source.html">FactoryExceptions.hpp</a></li>
 <li>rtt/<a class="el" href="FactoryExceptions_8cpp_source.html">FactoryExceptions.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:26 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

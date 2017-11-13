@@ -61,52 +61,231 @@
 </div><!--header-->
 <div class="contents">
 
-<p>This specialisation uses the toRTT() and toCORBA functions for converting between <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">RTT::ConnPolicy</a> and RTT::corba::CConPolicy.  
+<p>This specialisation uses the <a class="el" href="CorbaConnPolicy_8cpp.html#a1977dfbf68adbd14ea91447d8850a704" title="Converts a Corba CConnPolicy object to a RTT ConPolicy object. ">toRTT()</a> and toCORBA functions for converting between <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">RTT::ConnPolicy</a> and RTT::corba::CConPolicy.  
  <a href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="RTTCorbaConversion_8hpp_source.html">rtt/transports/corba/RTTCorbaConversion.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a33754627441fcfb8b6adb2aa670342c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33754627441fcfb8b6adb2aa670342c0"></a>
-typedef RTT::corba::CConnPolicy&#160;</td><td class="memItemRight" valign="bottom"><b>CorbaType</b></td></tr>
+<tr class="memitem:a33754627441fcfb8b6adb2aa670342c0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structRTT_1_1corba_1_1CConnPolicy.html">RTT::corba::CConnPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#a33754627441fcfb8b6adb2aa670342c0">CorbaType</a></td></tr>
 <tr class="separator:a33754627441fcfb8b6adb2aa670342c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad28c9cac997393b40e96ab5ab955c05c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad28c9cac997393b40e96ab5ab955c05c"></a>
-typedef <a class="el" href="classRTT_1_1ConnPolicy.html">RTT::ConnPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>StdType</b></td></tr>
+<tr class="memitem:ad28c9cac997393b40e96ab5ab955c05c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classRTT_1_1ConnPolicy.html">RTT::ConnPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a></td></tr>
 <tr class="separator:ad28c9cac997393b40e96ab5ab955c05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a2f1579c5821dc4538191675ec5085657"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f1579c5821dc4538191675ec5085657"></a>
-static CorbaType&#160;</td><td class="memItemRight" valign="bottom"><b>toAny</b> (const <a class="el" href="classRTT_1_1ConnPolicy.html">StdType</a> &amp;orig)</td></tr>
+<tr class="memitem:a2f1579c5821dc4538191675ec5085657"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#a33754627441fcfb8b6adb2aa670342c0">CorbaType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#a2f1579c5821dc4538191675ec5085657">toAny</a> (const <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a> &amp;orig)</td></tr>
 <tr class="separator:a2f1579c5821dc4538191675ec5085657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a764031bf14fc0e17fc79dbf71523ebce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a764031bf14fc0e17fc79dbf71523ebce"></a>
-static <a class="el" href="classRTT_1_1ConnPolicy.html">StdType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const CorbaType t)</td></tr>
+<tr class="memitem:a764031bf14fc0e17fc79dbf71523ebce"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#a764031bf14fc0e17fc79dbf71523ebce">get</a> (const <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#a33754627441fcfb8b6adb2aa670342c0">CorbaType</a> t)</td></tr>
 <tr class="separator:a764031bf14fc0e17fc79dbf71523ebce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaa1f167956fcdbd8656e275bff2e69e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaa1f167956fcdbd8656e275bff2e69e"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (const CORBA::Any &amp;any, <a class="el" href="classRTT_1_1ConnPolicy.html">StdType</a> &amp;_value)</td></tr>
+<tr class="memitem:acaa1f167956fcdbd8656e275bff2e69e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#acaa1f167956fcdbd8656e275bff2e69e">update</a> (const CORBA::Any &amp;any, <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a> &amp;_value)</td></tr>
 <tr class="separator:acaa1f167956fcdbd8656e275bff2e69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74bf262bd7d33c3002a37f857d8a1f93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74bf262bd7d33c3002a37f857d8a1f93"></a>
-static CORBA::Any_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>createAny</b> (const <a class="el" href="classRTT_1_1ConnPolicy.html">StdType</a> &amp;t)</td></tr>
+<tr class="memitem:a74bf262bd7d33c3002a37f857d8a1f93"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceCORBA.html#adeac34d2ada149e3c68679f895121aaf">CORBA::Any_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#a74bf262bd7d33c3002a37f857d8a1f93">createAny</a> (const <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a> &amp;t)</td></tr>
 <tr class="separator:a74bf262bd7d33c3002a37f857d8a1f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38095ef41ebbb680a60e643978680003"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38095ef41ebbb680a60e643978680003"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>updateAny</b> (<a class="el" href="classRTT_1_1ConnPolicy.html">StdType</a> const &amp;t, CORBA::Any &amp;any)</td></tr>
+<tr class="memitem:a38095ef41ebbb680a60e643978680003"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#a38095ef41ebbb680a60e643978680003">updateAny</a> (<a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a> const &amp;t, CORBA::Any &amp;any)</td></tr>
 <tr class="separator:a38095ef41ebbb680a60e643978680003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;&gt;<br />
 struct RTT::corba::AnyConversion&lt; ConnPolicy &gt;</h3>
 
-<p>This specialisation uses the toRTT() and toCORBA functions for converting between <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">RTT::ConnPolicy</a> and RTT::corba::CConPolicy. </p>
+<p>This specialisation uses the <a class="el" href="CorbaConnPolicy_8cpp.html#a1977dfbf68adbd14ea91447d8850a704" title="Converts a Corba CConnPolicy object to a RTT ConPolicy object. ">toRTT()</a> and toCORBA functions for converting between <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">RTT::ConnPolicy</a> and RTT::corba::CConPolicy. </p>
 
 <p>Definition at line <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00287">287</a> of file <a class="el" href="RTTCorbaConversion_8hpp_source.html">RTTCorbaConversion.hpp</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a33754627441fcfb8b6adb2aa670342c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structRTT_1_1corba_1_1CConnPolicy.html">RTT::corba::CConnPolicy</a> <a class="el" href="structRTT_1_1corba_1_1AnyConversion.html">RTT::corba::AnyConversion</a>&lt; <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &gt;::<a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#a33754627441fcfb8b6adb2aa670342c0">CorbaType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00289">289</a> of file <a class="el" href="RTTCorbaConversion_8hpp_source.html">RTTCorbaConversion.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad28c9cac997393b40e96ab5ab955c05c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classRTT_1_1ConnPolicy.html">RTT::ConnPolicy</a> <a class="el" href="structRTT_1_1corba_1_1AnyConversion.html">RTT::corba::AnyConversion</a>&lt; <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &gt;::<a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00290">290</a> of file <a class="el" href="RTTCorbaConversion_8hpp_source.html">RTTCorbaConversion.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a74bf262bd7d33c3002a37f857d8a1f93"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespaceCORBA.html#adeac34d2ada149e3c68679f895121aaf">CORBA::Any_ptr</a> <a class="el" href="structRTT_1_1corba_1_1AnyConversion.html">RTT::corba::AnyConversion</a>&lt; <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &gt;::createAny </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00310">310</a> of file <a class="el" href="RTTCorbaConversion_8hpp_source.html">RTTCorbaConversion.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a764031bf14fc0e17fc79dbf71523ebce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a> <a class="el" href="structRTT_1_1corba_1_1AnyConversion.html">RTT::corba::AnyConversion</a>&lt; <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#a33754627441fcfb8b6adb2aa670342c0">CorbaType</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00296">296</a> of file <a class="el" href="RTTCorbaConversion_8hpp_source.html">RTTCorbaConversion.hpp</a>.</p>
+
+<p>References <a class="el" href="CorbaConnPolicy_8cpp_source.html#l00062">toRTT()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f1579c5821dc4538191675ec5085657"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#a33754627441fcfb8b6adb2aa670342c0">CorbaType</a> <a class="el" href="structRTT_1_1corba_1_1AnyConversion.html">RTT::corba::AnyConversion</a>&lt; <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &gt;::toAny </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a> &amp;&#160;</td>
+          <td class="paramname"><em>orig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00291">291</a> of file <a class="el" href="RTTCorbaConversion_8hpp_source.html">RTTCorbaConversion.hpp</a>.</p>
+
+<p>References <a class="el" href="CorbaConnPolicy_8cpp_source.html#l00048">toCORBA()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acaa1f167956fcdbd8656e275bff2e69e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="structRTT_1_1corba_1_1AnyConversion.html">RTT::corba::AnyConversion</a>&lt; <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &gt;::update </td>
+          <td>(</td>
+          <td class="paramtype">const CORBA::Any &amp;&#160;</td>
+          <td class="paramname"><em>any</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a> &amp;&#160;</td>
+          <td class="paramname"><em>_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00300">300</a> of file <a class="el" href="RTTCorbaConversion_8hpp_source.html">RTTCorbaConversion.hpp</a>.</p>
+
+<p>References <a class="el" href="CorbaConnPolicy_8cpp_source.html#l00062">toRTT()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a38095ef41ebbb680a60e643978680003"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="structRTT_1_1corba_1_1AnyConversion.html">RTT::corba::AnyConversion</a>&lt; <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &gt;::updateAny </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRTT_1_1corba_1_1AnyConversion_3_01ConnPolicy_01_4.html#ad28c9cac997393b40e96ab5ab955c05c">StdType</a> const &amp;&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CORBA::Any &amp;&#160;</td>
+          <td class="paramname"><em>any</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00316">316</a> of file <a class="el" href="RTTCorbaConversion_8hpp_source.html">RTTCorbaConversion.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>rtt/transports/corba/<a class="el" href="RTTCorbaConversion_8hpp_source.html">RTTCorbaConversion.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

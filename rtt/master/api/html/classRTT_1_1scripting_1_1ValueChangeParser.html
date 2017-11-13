@@ -67,60 +67,53 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4c03a653f3507345d094a7c902431db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#ac4c03a653f3507345d094a7c902431db">ValueChangeParser</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *tc, <a class="el" href="classRTT_1_1scripting_1_1CommonParser.html">CommonParser</a> &amp;cp, Service::shared_ptr storage, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *caller)</td></tr>
+<tr class="memitem:ac4c03a653f3507345d094a7c902431db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#ac4c03a653f3507345d094a7c902431db">ValueChangeParser</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *tc, <a class="el" href="classRTT_1_1scripting_1_1CommonParser.html">CommonParser</a> &amp;cp, <a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a> storage, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *caller)</td></tr>
 <tr class="memdesc:ac4c03a653f3507345d094a7c902431db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html" title="This class is responsible for parsing constant definitions, variable definitions, variable change ins...">ValueChangeParser</a> which operates and stores values in a task.  <a href="#ac4c03a653f3507345d094a7c902431db">More...</a><br /></td></tr>
 <tr class="separator:ac4c03a653f3507345d094a7c902431db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5429f65ba1abe7bf65c713b494a44677"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5429f65ba1abe7bf65c713b494a44677">clear</a> ()</td></tr>
-<tr class="memdesc:a5429f65ba1abe7bf65c713b494a44677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear assignCommands(), definedValues() and definedNames().  <a href="#a5429f65ba1abe7bf65c713b494a44677">More...</a><br /></td></tr>
+<tr class="memdesc:a5429f65ba1abe7bf65c713b494a44677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a9d9f8c622266de14be5e910285f7a85e">assignCommands()</a>, <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a84d47d11861d3ac1c9f32b9f817a58dd">definedValues()</a> and <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#ad0ce55ee71586bdd9c204e06688bab1c">definedNames()</a>.  <a href="#a5429f65ba1abe7bf65c713b494a44677">More...</a><br /></td></tr>
 <tr class="separator:a5429f65ba1abe7bf65c713b494a44677"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85d87cd2c0cdab994feda9fa8177e01c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a85d87cd2c0cdab994feda9fa8177e01c">store</a> (Service::shared_ptr other)</td></tr>
-<tr class="memdesc:a85d87cd2c0cdab994feda9fa8177e01c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store allDefinedNames() in a service.  <a href="#a85d87cd2c0cdab994feda9fa8177e01c">More...</a><br /></td></tr>
+<tr class="memitem:a85d87cd2c0cdab994feda9fa8177e01c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a85d87cd2c0cdab994feda9fa8177e01c">store</a> (<a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a> other)</td></tr>
+<tr class="memdesc:a85d87cd2c0cdab994feda9fa8177e01c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a39775f2ae1a20e2c9ddafd8d40d87148">allDefinedNames()</a> in a service.  <a href="#a85d87cd2c0cdab994feda9fa8177e01c">More...</a><br /></td></tr>
 <tr class="separator:a85d87cd2c0cdab994feda9fa8177e01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e4ee2b367649b91009b34c8eeb707e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5e4ee2b367649b91009b34c8eeb707e8">load</a> (Service::shared_ptr source)</td></tr>
+<tr class="memitem:a5e4ee2b367649b91009b34c8eeb707e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a5e4ee2b367649b91009b34c8eeb707e8">load</a> (<a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a> source)</td></tr>
 <tr class="memdesc:a5e4ee2b367649b91009b34c8eeb707e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads all defined names from a service.  <a href="#a5e4ee2b367649b91009b34c8eeb707e8">More...</a><br /></td></tr>
 <tr class="separator:a5e4ee2b367649b91009b34c8eeb707e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68f173c84f66d02c71eed3b31dceb1ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a68f173c84f66d02c71eed3b31dceb1ae">assignCommand</a> ()</td></tr>
 <tr class="memdesc:a68f173c84f66d02c71eed3b31dceb1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This <a class="el" href="classRTT_1_1base_1_1ActionInterface.html" title="Based on the software pattern &#39;command&#39;, this interface allows execution of action objects...">base::ActionInterface</a> holds the command assigning a value to a variable that should be included in the program.  <a href="#a68f173c84f66d02c71eed3b31dceb1ae">More...</a><br /></td></tr>
 <tr class="separator:a68f173c84f66d02c71eed3b31dceb1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d9f8c622266de14be5e910285f7a85e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d9f8c622266de14be5e910285f7a85e"></a>
-std::vector&lt; <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>assignCommands</b> ()</td></tr>
+<tr class="memitem:a9d9f8c622266de14be5e910285f7a85e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a9d9f8c622266de14be5e910285f7a85e">assignCommands</a> ()</td></tr>
 <tr class="separator:a9d9f8c622266de14be5e910285f7a85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7504b676ab6ec6048bcd5f1569eae2e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7504b676ab6ec6048bcd5f1569eae2e2"></a>
-<a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lastDefinedValue</b> ()</td></tr>
+<tr class="memitem:a7504b676ab6ec6048bcd5f1569eae2e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a7504b676ab6ec6048bcd5f1569eae2e2">lastDefinedValue</a> ()</td></tr>
 <tr class="separator:a7504b676ab6ec6048bcd5f1569eae2e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84d47d11861d3ac1c9f32b9f817a58dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84d47d11861d3ac1c9f32b9f817a58dd"></a>
-std::vector&lt; <a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>definedValues</b> ()</td></tr>
+<tr class="memitem:a84d47d11861d3ac1c9f32b9f817a58dd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a84d47d11861d3ac1c9f32b9f817a58dd">definedValues</a> ()</td></tr>
 <tr class="separator:a84d47d11861d3ac1c9f32b9f817a58dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca71617872c968b6932899a13022bd7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca71617872c968b6932899a13022bd7f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>lastDefinedName</b> ()</td></tr>
+<tr class="memitem:aca71617872c968b6932899a13022bd7f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#aca71617872c968b6932899a13022bd7f">lastDefinedName</a> ()</td></tr>
 <tr class="separator:aca71617872c968b6932899a13022bd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0ce55ee71586bdd9c204e06688bab1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0ce55ee71586bdd9c204e06688bab1c"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>definedNames</b> ()</td></tr>
+<tr class="memitem:ad0ce55ee71586bdd9c204e06688bab1c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#ad0ce55ee71586bdd9c204e06688bab1c">definedNames</a> ()</td></tr>
 <tr class="separator:ad0ce55ee71586bdd9c204e06688bab1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39775f2ae1a20e2c9ddafd8d40d87148"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39775f2ae1a20e2c9ddafd8d40d87148"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>allDefinedNames</b> ()</td></tr>
+<tr class="memitem:a39775f2ae1a20e2c9ddafd8d40d87148"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a39775f2ae1a20e2c9ddafd8d40d87148">allDefinedNames</a> ()</td></tr>
 <tr class="separator:a39775f2ae1a20e2c9ddafd8d40d87148"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a9d8f145f508dee2cea6391341ef56"><td class="memItemLeft" align="right" valign="top">rule_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#af9a9d8f145f508dee2cea6391341ef56">parser</a> ()</td></tr>
+<tr class="memitem:af9a9d8f145f508dee2cea6391341ef56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#af9a9d8f145f508dee2cea6391341ef56">parser</a> ()</td></tr>
 <tr class="memdesc:af9a9d8f145f508dee2cea6391341ef56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the full parser, as it is used most.  <a href="#af9a9d8f145f508dee2cea6391341ef56">More...</a><br /></td></tr>
 <tr class="separator:af9a9d8f145f508dee2cea6391341ef56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c857db51ee501c11d5996d7b19070da"><td class="memItemLeft" align="right" valign="top">rule_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a4c857db51ee501c11d5996d7b19070da">constantDefinitionParser</a> ()</td></tr>
+<tr class="memitem:a4c857db51ee501c11d5996d7b19070da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a4c857db51ee501c11d5996d7b19070da">constantDefinitionParser</a> ()</td></tr>
 <tr class="memdesc:a4c857db51ee501c11d5996d7b19070da"><td class="mdescLeft">&#160;</td><td class="mdescRight">the parser that parses definitions of constants.  <a href="#a4c857db51ee501c11d5996d7b19070da">More...</a><br /></td></tr>
 <tr class="separator:a4c857db51ee501c11d5996d7b19070da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2322230cd02ed1aba998d548a1f0e721"><td class="memItemLeft" align="right" valign="top">rule_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a2322230cd02ed1aba998d548a1f0e721">variableDefinitionParser</a> ()</td></tr>
+<tr class="memitem:a2322230cd02ed1aba998d548a1f0e721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a2322230cd02ed1aba998d548a1f0e721">variableDefinitionParser</a> ()</td></tr>
 <tr class="memdesc:a2322230cd02ed1aba998d548a1f0e721"><td class="mdescLeft">&#160;</td><td class="mdescRight">the parser that parses variable definitions, don't forget to check <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a68f173c84f66d02c71eed3b31dceb1ae">assignCommand</a> after a variable definition is parsed.  <a href="#a2322230cd02ed1aba998d548a1f0e721">More...</a><br /></td></tr>
 <tr class="separator:a2322230cd02ed1aba998d548a1f0e721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63853ffe6f823415bd82cf3f2c92fcd4"><td class="memItemLeft" align="right" valign="top">rule_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a63853ffe6f823415bd82cf3f2c92fcd4">aliasDefinitionParser</a> ()</td></tr>
+<tr class="memitem:a63853ffe6f823415bd82cf3f2c92fcd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a63853ffe6f823415bd82cf3f2c92fcd4">aliasDefinitionParser</a> ()</td></tr>
 <tr class="memdesc:a63853ffe6f823415bd82cf3f2c92fcd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parser that parses alias definitions.  <a href="#a63853ffe6f823415bd82cf3f2c92fcd4">More...</a><br /></td></tr>
 <tr class="separator:a63853ffe6f823415bd82cf3f2c92fcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a766d6394b0c57984e1de8388975aa032"><td class="memItemLeft" align="right" valign="top">rule_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a766d6394b0c57984e1de8388975aa032">paramDefinitionParser</a> ()</td></tr>
+<tr class="memitem:a766d6394b0c57984e1de8388975aa032"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a766d6394b0c57984e1de8388975aa032">paramDefinitionParser</a> ()</td></tr>
 <tr class="memdesc:a766d6394b0c57984e1de8388975aa032"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parser that parses state context parameter definitions.  <a href="#a766d6394b0c57984e1de8388975aa032">More...</a><br /></td></tr>
 <tr class="separator:a766d6394b0c57984e1de8388975aa032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a212e98d58c9335351148dd2f895216f8"><td class="memItemLeft" align="right" valign="top">rule_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a212e98d58c9335351148dd2f895216f8">bareDefinitionParser</a> ()</td></tr>
+<tr class="memitem:a212e98d58c9335351148dd2f895216f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a212e98d58c9335351148dd2f895216f8">bareDefinitionParser</a> ()</td></tr>
 <tr class="memdesc:a212e98d58c9335351148dd2f895216f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parser that parses a bare variable definition.  <a href="#a212e98d58c9335351148dd2f895216f8">More...</a><br /></td></tr>
 <tr class="separator:a212e98d58c9335351148dd2f895216f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6314a53177667878351b26a5da58cd7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6314a53177667878351b26a5da58cd7d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a6314a53177667878351b26a5da58cd7d">reset</a> ()</td></tr>
-<tr class="memdesc:a6314a53177667878351b26a5da58cd7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completely clear all data and erase all parsed definitions from the taskcontext given in the constructor. <br /></td></tr>
+<tr class="memitem:a6314a53177667878351b26a5da58cd7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a6314a53177667878351b26a5da58cd7d">reset</a> ()</td></tr>
+<tr class="memdesc:a6314a53177667878351b26a5da58cd7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completely clear all data and erase all parsed definitions from the taskcontext given in the constructor.  <a href="#a6314a53177667878351b26a5da58cd7d">More...</a><br /></td></tr>
 <tr class="separator:a6314a53177667878351b26a5da58cd7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -148,7 +141,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Service::shared_ptr&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a>&#160;</td>
           <td class="paramname"><em>storage</em>, </td>
         </tr>
         <tr>
@@ -170,7 +163,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00073">73</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
-<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00205">RTT::types::TypeInfo::buildAlias()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00172">RTT::types::TypeInfo::buildConstant()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00082">RTT::types::TypeInfo::buildVariable()</a>, <a class="el" href="classRTT_1_1base_1_1AttributeBase.html#a3d2ad8fcaa5104bc86a135e203f27d33">RTT::base::AttributeBase::getDataSource()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00082">RTT::types::TypeInfo::getTypeName()</a>, and <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>.</p>
+<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00205">RTT::types::TypeInfo::buildAlias()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00172">RTT::types::TypeInfo::buildConstant()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00082">RTT::types::TypeInfo::buildVariable()</a>, <a class="el" href="ExpressionParser_8cpp_source.html#l00697">RTT::scripting::ExpressionParser::dropResult()</a>, <a class="el" href="Logger_8cpp_source.html#l00391">RTT::Logger::endl()</a>, <a class="el" href="classRTT_1_1base_1_1AttributeBase.html#a3d2ad8fcaa5104bc86a135e203f27d33">RTT::base::AttributeBase::getDataSource()</a>, <a class="el" href="ExpressionParser_8cpp_source.html#l00582">RTT::scripting::ExpressionParser::getResult()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00082">RTT::types::TypeInfo::getTypeName()</a>, <a class="el" href="ExpressionParser_8hpp_source.html#l00218">RTT::scripting::ExpressionParser::hasResult()</a>, <a class="el" href="CommonParser_8hpp_source.html#l00068">RTT::scripting::CommonParser::identifier</a>, <a class="el" href="CommonParser_8hpp_source.html#l00098">keyword_p</a>, <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="ExpressionParser_8cpp_source.html#l00577">RTT::scripting::ExpressionParser::parser()</a>, <a class="el" href="ValueChangeParser_8cpp.html#a27a056f453fcbd6f0a6a3a22865945fa">RULE</a>, and <a class="el" href="Logger_8hpp_source.html#l00121">RTT::Logger::Warning</a>.</p>
 
 </div>
 </div>
@@ -180,7 +173,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rule_t &amp; RTT::ValueChangeParser::aliasDefinitionParser </td>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp; RTT::ValueChangeParser::aliasDefinitionParser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -193,7 +186,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00367">367</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00157">assignCommand()</a>.</p>
+<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00193">allDefinedNames()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00101">RTT::scripting::StateGraphParser::StateGraphParser()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a39775f2ae1a20e2c9ddafd8d40d87148"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; RTT::scripting::ValueChangeParser::allDefinedNames </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ValueChangeParser_8hpp_source.html#l00193">193</a> of file <a class="el" href="ValueChangeParser_8hpp_source.html">ValueChangeParser.hpp</a>.</p>
+
+<p>References <a class="el" href="ValueChangeParser_8cpp_source.html#l00367">aliasDefinitionParser()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00382">bareDefinitionParser()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00362">constantDefinitionParser()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00377">paramDefinitionParser()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00357">parser()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00342">reset()</a>, and <a class="el" href="ValueChangeParser_8cpp_source.html#l00372">variableDefinitionParser()</a>.</p>
 
 </div>
 </div>
@@ -223,7 +243,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8hpp_source.html#l00157">157</a> of file <a class="el" href="ValueChangeParser_8hpp_source.html">ValueChangeParser.hpp</a>.</p>
 
-<p>References <a class="el" href="ValueChangeParser_8cpp_source.html#l00367">aliasDefinitionParser()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00382">bareDefinitionParser()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00362">constantDefinitionParser()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00377">paramDefinitionParser()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00357">parser()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00342">reset()</a>, and <a class="el" href="ValueChangeParser_8cpp_source.html#l00372">variableDefinitionParser()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a9d9f8c622266de14be5e910285f7a85e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a>*&gt; RTT::scripting::ValueChangeParser::assignCommands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ValueChangeParser_8hpp_source.html#l00164">164</a> of file <a class="el" href="ValueChangeParser_8hpp_source.html">ValueChangeParser.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ProgramGraphParser_8cpp_source.html#l00736">RTT::scripting::ProgramGraphParser::parseFunction()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>.</p>
 
 </div>
 </div>
@@ -232,7 +277,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rule_t &amp; RTT::ValueChangeParser::bareDefinitionParser </td>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp; RTT::ValueChangeParser::bareDefinitionParser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -245,7 +290,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00382">382</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00157">assignCommand()</a>.</p>
+<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00193">allDefinedNames()</a>, and <a class="el" href="ProgramGraphParser_8cpp_source.html#l00105">RTT::scripting::ProgramGraphParser::~ProgramGraphParser()</a>.</p>
 
 </div>
 </div>
@@ -262,12 +307,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div><div class="memdoc">
 
-<p>Clear assignCommands(), definedValues() and definedNames(). </p>
+<p>Clear <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a9d9f8c622266de14be5e910285f7a85e">assignCommands()</a>, <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a84d47d11861d3ac1c9f32b9f817a58dd">definedValues()</a> and <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#ad0ce55ee71586bdd9c204e06688bab1c">definedNames()</a>. </p>
 <p>Does not delete any variables or commands. </p>
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00333">333</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ValueChangeParser_8cpp_source.html#l00342">reset()</a>.</p>
+<p>Referenced by <a class="el" href="ProgramGraphParser_8cpp_source.html#l00736">RTT::scripting::ProgramGraphParser::parseFunction()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, <a class="el" href="ValueChangeParser_8cpp_source.html#l00342">reset()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>.</p>
 
 </div>
 </div>
@@ -276,7 +321,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rule_t &amp; RTT::ValueChangeParser::constantDefinitionParser </td>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp; RTT::ValueChangeParser::constantDefinitionParser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -289,7 +334,113 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00362">362</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00157">assignCommand()</a>.</p>
+<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00193">allDefinedNames()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00101">RTT::scripting::StateGraphParser::StateGraphParser()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad0ce55ee71586bdd9c204e06688bab1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; RTT::scripting::ValueChangeParser::definedNames </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ValueChangeParser_8hpp_source.html#l00188">188</a> of file <a class="el" href="ValueChangeParser_8hpp_source.html">ValueChangeParser.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a84d47d11861d3ac1c9f32b9f817a58dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a>*&gt; RTT::scripting::ValueChangeParser::definedValues </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ValueChangeParser_8hpp_source.html#l00176">176</a> of file <a class="el" href="ValueChangeParser_8hpp_source.html">ValueChangeParser.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca71617872c968b6932899a13022bd7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string RTT::scripting::ValueChangeParser::lastDefinedName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ValueChangeParser_8hpp_source.html#l00181">181</a> of file <a class="el" href="ValueChangeParser_8hpp_source.html">ValueChangeParser.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7504b676ab6ec6048bcd5f1569eae2e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a>* RTT::scripting::ValueChangeParser::lastDefinedValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ValueChangeParser_8hpp_source.html#l00169">169</a> of file <a class="el" href="ValueChangeParser_8hpp_source.html">ValueChangeParser.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>.</p>
 
 </div>
 </div>
@@ -300,7 +451,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="memname">void RTT::ValueChangeParser::load </td>
           <td>(</td>
-          <td class="paramtype">Service::shared_ptr&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a>&#160;</td>
           <td class="paramname"><em>source</em></td><td>)</td>
           <td></td>
         </tr>
@@ -312,6 +463,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00313">313</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
+<p>Referenced by <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a766d6394b0c57984e1de8388975aa032"></a>
@@ -319,7 +472,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rule_t &amp; RTT::ValueChangeParser::paramDefinitionParser </td>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp; RTT::ValueChangeParser::paramDefinitionParser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -332,7 +485,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00377">377</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00157">assignCommand()</a>.</p>
+<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00193">allDefinedNames()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00101">RTT::scripting::StateGraphParser::StateGraphParser()</a>.</p>
 
 </div>
 </div>
@@ -341,7 +494,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rule_t &amp; RTT::ValueChangeParser::parser </td>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp; RTT::ValueChangeParser::parser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -354,7 +507,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00357">357</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00157">assignCommand()</a>.</p>
+<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00193">allDefinedNames()</a>, and <a class="el" href="ProgramGraphParser_8cpp_source.html#l00105">RTT::scripting::ProgramGraphParser::~ProgramGraphParser()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6314a53177667878351b26a5da58cd7d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::ValueChangeParser::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Completely clear all data and erase all parsed definitions from the taskcontext given in the constructor. </p>
+
+<p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00342">342</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+
+<p>References <a class="el" href="ValueChangeParser_8cpp_source.html#l00333">clear()</a>.</p>
+
+<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00193">allDefinedNames()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00256">RTT::scripting::ProgramGraphParser::bodyParserResult()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00321">RTT::scripting::StateGraphParser::getParserResult()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00736">RTT::scripting::ProgramGraphParser::parseFunction()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00786">RTT::scripting::StateGraphParser::~StateGraphParser()</a>.</p>
 
 </div>
 </div>
@@ -365,17 +541,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="memname">void RTT::ValueChangeParser::store </td>
           <td>(</td>
-          <td class="paramtype">Service::shared_ptr&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a>&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Store allDefinedNames() in a service. </p>
+<p>Store <a class="el" href="classRTT_1_1scripting_1_1ValueChangeParser.html#a39775f2ae1a20e2c9ddafd8d40d87148">allDefinedNames()</a> in a service. </p>
 <p>This allows you to retrieve all parsed variable declarations. </p>
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00299">299</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ProgramGraphParser_8cpp_source.html#l00256">RTT::scripting::ProgramGraphParser::bodyParserResult()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00321">RTT::scripting::StateGraphParser::getParserResult()</a>, and <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>.</p>
 
 </div>
 </div>
@@ -384,7 +562,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rule_t &amp; RTT::ValueChangeParser::variableDefinitionParser </td>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1scripting.html#a476f1d0cdc9c58eb7fa64acec279e8f6">rule_t</a> &amp; RTT::ValueChangeParser::variableDefinitionParser </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -396,7 +574,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Definition at line <a class="el" href="ValueChangeParser_8cpp_source.html#l00372">372</a> of file <a class="el" href="ValueChangeParser_8cpp_source.html">ValueChangeParser.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00157">assignCommand()</a>.</p>
+<p>Referenced by <a class="el" href="ValueChangeParser_8hpp_source.html#l00193">allDefinedNames()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00101">RTT::scripting::StateGraphParser::StateGraphParser()</a>.</p>
 
 </div>
 </div>
@@ -407,7 +585,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:31 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

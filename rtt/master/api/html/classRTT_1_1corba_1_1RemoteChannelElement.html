@@ -63,7 +63,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Implements the <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html" title="The advanced channel element interface, used by Orocos to relay over-CORBA data flow connections...">CRemoteChannelElement</a> of the CORBA IDL interface.  
+<p>Implements the <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html" title="The advanced channel element interface, used by Orocos to relay over-CORBA data flow connections...">CRemoteChannelElement</a> of the <a class="el" href="namespaceCORBA.html">CORBA</a> IDL interface.  
  <a href="classRTT_1_1corba_1_1RemoteChannelElement.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="RemoteChannelElement_8hpp_source.html">rtt/transports/corba/RemoteChannelElement.hpp</a>&gt;</code></p>
@@ -73,79 +73,66 @@ Inheritance diagram for RTT::corba::RemoteChannelElement&lt; T &gt;:</div>
  <div class="center">
   <img src="classRTT_1_1corba_1_1RemoteChannelElement.png" usemap="#RTT::corba::RemoteChannelElement_3C_20T_20_3E_map" alt=""/>
   <map id="RTT::corba::RemoteChannelElement_3C_20T_20_3E_map" name="RTT::corba::RemoteChannelElement&lt; T &gt;_map">
-<area href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html" title="Base class for CORBA channel servers. " alt="RTT::corba::CRemoteChannelElement_i" shape="rect" coords="0,56,242,80"/>
-<area href="classRTT_1_1base_1_1ChannelElement.html" title="A typed version of ChannelElementBase. " alt="RTT::base::ChannelElement&lt; T &gt;" shape="rect" coords="252,56,494,80"/>
-<area href="classRTT_1_1base_1_1ChannelElementBase.html" title="In the data flow implementation, a channel is created by chaining ChannelElementBase objects..." alt="RTT::base::ChannelElementBase" shape="rect" coords="252,0,494,24"/>
+<area href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html" title="Base class for CORBA channel servers. " alt="RTT::corba::CRemoteChannelElement_i" shape="rect" coords="126,56,368,80"/>
+<area href="classRTT_1_1base_1_1ChannelElement.html" title="A typed version of ChannelElementBase. " alt="RTT::base::ChannelElement&lt; T &gt;" shape="rect" coords="504,56,746,80"/>
+<area href="classRTT_1_1base_1_1ChannelElementBase.html" title="In the data flow implementation, a channel is created by chaining ChannelElementBase objects..." alt="RTT::base::ChannelElementBase" shape="rect" coords="504,0,746,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aade45ccb41aa5214ec4d8181305f1da1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aade45ccb41aa5214ec4d8181305f1da1"></a>
-typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_t</b></td></tr>
+<tr class="memitem:aade45ccb41aa5214ec4d8181305f1da1"><td class="memItemLeft" align="right" valign="top">typedef T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#aade45ccb41aa5214ec4d8181305f1da1">value_t</a></td></tr>
 <tr class="separator:aade45ccb41aa5214ec4d8181305f1da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dd2d513f8c406094c8a1e014d7c7aec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0dd2d513f8c406094c8a1e014d7c7aec"></a>
-typedef boost::intrusive_ptr&lt; <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">ChannelElement</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shared_ptr</b></td></tr>
+<tr class="memitem:a0dd2d513f8c406094c8a1e014d7c7aec"><td class="memItemLeft" align="right" valign="top">typedef boost::intrusive_ptr&lt; <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">ChannelElement</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a0dd2d513f8c406094c8a1e014d7c7aec">shared_ptr</a></td></tr>
 <tr class="separator:a0dd2d513f8c406094c8a1e014d7c7aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02f0069d0143ebb53416110e7abd36df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02f0069d0143ebb53416110e7abd36df"></a>
-typedef boost::call_traits&lt; T &gt;::param_type&#160;</td><td class="memItemRight" valign="bottom"><b>param_t</b></td></tr>
+<tr class="memitem:a02f0069d0143ebb53416110e7abd36df"><td class="memItemLeft" align="right" valign="top">typedef boost::call_traits&lt; T &gt;::param_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a02f0069d0143ebb53416110e7abd36df">param_t</a></td></tr>
 <tr class="separator:a02f0069d0143ebb53416110e7abd36df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4da855b3b3636e479cf0fcd81cf2fe6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4da855b3b3636e479cf0fcd81cf2fe6f"></a>
-typedef boost::call_traits&lt; T &gt;::reference&#160;</td><td class="memItemRight" valign="bottom"><b>reference_t</b></td></tr>
+<tr class="memitem:a4da855b3b3636e479cf0fcd81cf2fe6f"><td class="memItemLeft" align="right" valign="top">typedef boost::call_traits&lt; T &gt;::reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a4da855b3b3636e479cf0fcd81cf2fe6f">reference_t</a></td></tr>
 <tr class="separator:a4da855b3b3636e479cf0fcd81cf2fe6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a24814918cb731699e5f8054771a78b55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a24814918cb731699e5f8054771a78b55">RemoteChannelElement</a> (<a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">CorbaTypeTransporter</a> const &amp;transport, <a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *sender, PortableServer::POA_ptr poa, bool is_pull)</td></tr>
+<tr class="memitem:a24814918cb731699e5f8054771a78b55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a24814918cb731699e5f8054771a78b55">RemoteChannelElement</a> (<a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">CorbaTypeTransporter</a> const &amp;<a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html#afe8a6c0fc930c2ab2b46919038e58749">transport</a>, <a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *sender, PortableServer::POA_ptr poa, bool is_pull)</td></tr>
 <tr class="memdesc:a24814918cb731699e5f8054771a78b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a channel element for remote data exchange.  <a href="#a24814918cb731699e5f8054771a78b55">More...</a><br /></td></tr>
 <tr class="separator:a24814918cb731699e5f8054771a78b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaa2103afabe6fc9509909930f06d6fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaa2103afabe6fc9509909930f06d6fe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aeaa2103afabe6fc9509909930f06d6fe">_add_ref</a> ()</td></tr>
-<tr class="memdesc:aeaa2103afabe6fc9509909930f06d6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the reference count, called from the CORBA side. <br /></td></tr>
+<tr class="memitem:a095890ad5f3eb706996cde1d15a4abe6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a095890ad5f3eb706996cde1d15a4abe6">~RemoteChannelElement</a> ()</td></tr>
+<tr class="separator:a095890ad5f3eb706996cde1d15a4abe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa2103afabe6fc9509909930f06d6fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aeaa2103afabe6fc9509909930f06d6fe">_add_ref</a> ()</td></tr>
+<tr class="memdesc:aeaa2103afabe6fc9509909930f06d6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the reference count, called from the <a class="el" href="namespaceCORBA.html">CORBA</a> side.  <a href="#aeaa2103afabe6fc9509909930f06d6fe">More...</a><br /></td></tr>
 <tr class="separator:aeaa2103afabe6fc9509909930f06d6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab65dfc80e6c634a2ff220e81d39668de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab65dfc80e6c634a2ff220e81d39668de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#ab65dfc80e6c634a2ff220e81d39668de">_remove_ref</a> ()</td></tr>
-<tr class="memdesc:ab65dfc80e6c634a2ff220e81d39668de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the reference count, called from the CORBA side. <br /></td></tr>
+<tr class="memitem:ab65dfc80e6c634a2ff220e81d39668de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#ab65dfc80e6c634a2ff220e81d39668de">_remove_ref</a> ()</td></tr>
+<tr class="memdesc:ab65dfc80e6c634a2ff220e81d39668de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease the reference count, called from the <a class="el" href="namespaceCORBA.html">CORBA</a> side.  <a href="#ab65dfc80e6c634a2ff220e81d39668de">More...</a><br /></td></tr>
 <tr class="separator:ab65dfc80e6c634a2ff220e81d39668de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af93cdeca6c332ef221c7e8fd0d3b5efe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af93cdeca6c332ef221c7e8fd0d3b5efe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#af93cdeca6c332ef221c7e8fd0d3b5efe">remoteSignal</a> () ACE_THROW_SPEC((CORBA</td></tr>
-<tr class="memdesc:af93cdeca6c332ef221c7e8fd0d3b5efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">CORBA IDL function. <br /></td></tr>
+<tr class="memitem:af93cdeca6c332ef221c7e8fd0d3b5efe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#af93cdeca6c332ef221c7e8fd0d3b5efe">remoteSignal</a> () <a class="el" href="corba_8h.html#a41ef87996adea09a07ce517c3b02bc1f">ACE_THROW_SPEC</a>((CORBA</td></tr>
+<tr class="memdesc:af93cdeca6c332ef221c7e8fd0d3b5efe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function.  <a href="#af93cdeca6c332ef221c7e8fd0d3b5efe">More...</a><br /></td></tr>
 <tr class="separator:af93cdeca6c332ef221c7e8fd0d3b5efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87dd55d601caccc5b15de5c86c64bfd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a87dd55d601caccc5b15de5c86c64bfd7">signal</a> ()</td></tr>
 <tr class="memdesc:a87dd55d601caccc5b15de5c86c64bfd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signals that there is new data available on this channel By default, the channel element forwards the call to its output.  <a href="#a87dd55d601caccc5b15de5c86c64bfd7">More...</a><br /></td></tr>
 <tr class="separator:a87dd55d601caccc5b15de5c86c64bfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2468156282c5a18bf4abadd48945f055"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a2468156282c5a18bf4abadd48945f055">transferSamples</a> ()</td></tr>
 <tr class="separator:a2468156282c5a18bf4abadd48945f055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8381e069ac6b880ab9b61bed9f9de06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8381e069ac6b880ab9b61bed9f9de06"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aa8381e069ac6b880ab9b61bed9f9de06">disconnect</a> () ACE_THROW_SPEC((CORBA</td></tr>
-<tr class="memdesc:aa8381e069ac6b880ab9b61bed9f9de06"><td class="mdescLeft">&#160;</td><td class="mdescRight">CORBA IDL function. <br /></td></tr>
+<tr class="memitem:aa8381e069ac6b880ab9b61bed9f9de06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aa8381e069ac6b880ab9b61bed9f9de06">disconnect</a> () <a class="el" href="corba_8h.html#a41ef87996adea09a07ce517c3b02bc1f">ACE_THROW_SPEC</a>((CORBA</td></tr>
+<tr class="memdesc:aa8381e069ac6b880ab9b61bed9f9de06"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function.  <a href="#aa8381e069ac6b880ab9b61bed9f9de06">More...</a><br /></td></tr>
 <tr class="separator:aa8381e069ac6b880ab9b61bed9f9de06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4953b88b749fd552cbd359d71b1bf24c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4953b88b749fd552cbd359d71b1bf24c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>remoteDisconnect</b> (bool writer_to_reader) ACE_THROW_SPEC((CORBA</td></tr>
+<tr class="memitem:a4953b88b749fd552cbd359d71b1bf24c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a4953b88b749fd552cbd359d71b1bf24c">remoteDisconnect</a> (bool writer_to_reader) <a class="el" href="corba_8h.html#a41ef87996adea09a07ce517c3b02bc1f">ACE_THROW_SPEC</a>((CORBA</td></tr>
 <tr class="separator:a4953b88b749fd552cbd359d71b1bf24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a985ad009356b51ac671f461f84fb4d3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a985ad009356b51ac671f461f84fb4d3a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a985ad009356b51ac671f461f84fb4d3a">disconnect</a> (bool writer_to_reader) ACE_THROW_SPEC((CORBA</td></tr>
-<tr class="memdesc:a985ad009356b51ac671f461f84fb4d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">CORBA IDL function. <br /></td></tr>
+<tr class="memitem:a985ad009356b51ac671f461f84fb4d3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a985ad009356b51ac671f461f84fb4d3a">disconnect</a> (bool writer_to_reader) <a class="el" href="corba_8h.html#a41ef87996adea09a07ce517c3b02bc1f">ACE_THROW_SPEC</a>((CORBA</td></tr>
+<tr class="memdesc:a985ad009356b51ac671f461f84fb4d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function.  <a href="#a985ad009356b51ac671f461f84fb4d3a">More...</a><br /></td></tr>
 <tr class="separator:a985ad009356b51ac671f461f84fb4d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3386b7361e30f5a9c6759ca966b8b569"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3386b7361e30f5a9c6759ca966b8b569"></a>
-<a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (typename <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt;::reference_t sample, bool copy_old_data)</td></tr>
+<tr class="memitem:a3386b7361e30f5a9c6759ca966b8b569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a3386b7361e30f5a9c6759ca966b8b569">read</a> (typename <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a4da855b3b3636e479cf0fcd81cf2fe6f">reference_t</a> sample, bool copy_old_data)</td></tr>
 <tr class="separator:a3386b7361e30f5a9c6759ca966b8b569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a832d073ed3a5fe862a427f9eba5ff389"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a832d073ed3a5fe862a427f9eba5ff389"></a>
-CFlowStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a832d073ed3a5fe862a427f9eba5ff389">read</a> (::CORBA::Any_out sample, bool copy_old_data) ACE_THROW_SPEC((CORBA</td></tr>
-<tr class="memdesc:a832d073ed3a5fe862a427f9eba5ff389"><td class="mdescLeft">&#160;</td><td class="mdescRight">CORBA IDL function. <br /></td></tr>
+<tr class="memitem:a832d073ed3a5fe862a427f9eba5ff389"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1corba.html#a56408c4be7abecf22e91d9c13a1daf5a">CFlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a832d073ed3a5fe862a427f9eba5ff389">read</a> (::CORBA::Any_out sample, bool copy_old_data) <a class="el" href="corba_8h.html#a41ef87996adea09a07ce517c3b02bc1f">ACE_THROW_SPEC</a>((CORBA</td></tr>
+<tr class="memdesc:a832d073ed3a5fe862a427f9eba5ff389"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function.  <a href="#a832d073ed3a5fe862a427f9eba5ff389">More...</a><br /></td></tr>
 <tr class="separator:a832d073ed3a5fe862a427f9eba5ff389"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a501c0323fdfc414823d32f40bad84d35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a501c0323fdfc414823d32f40bad84d35">write</a> (typename <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt;::param_t sample)</td></tr>
+<tr class="memitem:a501c0323fdfc414823d32f40bad84d35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a501c0323fdfc414823d32f40bad84d35">write</a> (typename <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a02f0069d0143ebb53416110e7abd36df">param_t</a> sample)</td></tr>
 <tr class="separator:a501c0323fdfc414823d32f40bad84d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba3751df8e510c2e81bd3f01cd8e17d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba3751df8e510c2e81bd3f01cd8e17d1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aba3751df8e510c2e81bd3f01cd8e17d1">write</a> (const ::CORBA::Any &amp;sample) ACE_THROW_SPEC((CORBA</td></tr>
-<tr class="memdesc:aba3751df8e510c2e81bd3f01cd8e17d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">CORBA IDL function. <br /></td></tr>
+<tr class="memitem:aba3751df8e510c2e81bd3f01cd8e17d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aba3751df8e510c2e81bd3f01cd8e17d1">write</a> (const ::CORBA::Any &amp;sample) <a class="el" href="corba_8h.html#a41ef87996adea09a07ce517c3b02bc1f">ACE_THROW_SPEC</a>((CORBA</td></tr>
+<tr class="memdesc:aba3751df8e510c2e81bd3f01cd8e17d1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function.  <a href="#aba3751df8e510c2e81bd3f01cd8e17d1">More...</a><br /></td></tr>
 <tr class="separator:aba3751df8e510c2e81bd3f01cd8e17d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea76d80f51861d35debeb1174e225f40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea76d80f51861d35debeb1174e225f40"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>data_sample</b> (typename <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt;::param_t sample)</td></tr>
+<tr class="memitem:aea76d80f51861d35debeb1174e225f40"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aea76d80f51861d35debeb1174e225f40">data_sample</a> (typename <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a02f0069d0143ebb53416110e7abd36df">param_t</a> sample)</td></tr>
 <tr class="separator:aea76d80f51861d35debeb1174e225f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaefd5fa013897851d813c3e9778252d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaaefd5fa013897851d813c3e9778252d"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aaaefd5fa013897851d813c3e9778252d">inputReady</a> ()</td></tr>
-<tr class="memdesc:aaaefd5fa013897851d813c3e9778252d"><td class="mdescLeft">&#160;</td><td class="mdescRight">CORBA IDL function. <br /></td></tr>
+<tr class="memitem:aaaefd5fa013897851d813c3e9778252d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#aaaefd5fa013897851d813c3e9778252d">inputReady</a> ()</td></tr>
+<tr class="memdesc:aaaefd5fa013897851d813c3e9778252d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function.  <a href="#aaaefd5fa013897851d813c3e9778252d">More...</a><br /></td></tr>
 <tr class="separator:aaaefd5fa013897851d813c3e9778252d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eddae46526c29d62c88d93c0e770908"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a0eddae46526c29d62c88d93c0e770908">isRemoteElement</a> () const </td></tr>
 <tr class="memdesc:a0eddae46526c29d62c88d93c0e770908"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function may be used to identify, if the current element uses a network transport, to send the data to the next Element in the logical chain.  <a href="#a0eddae46526c29d62c88d93c0e770908">More...</a><br /></td></tr>
@@ -159,43 +146,37 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:af49c702d3ed5f1e06f4b8e4e98331fd3"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#af49c702d3ed5f1e06f4b8e4e98331fd3">getElementName</a> () const </td></tr>
 <tr class="memdesc:af49c702d3ed5f1e06f4b8e4e98331fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the class name of this element.  <a href="#af49c702d3ed5f1e06f4b8e4e98331fd3">More...</a><br /></td></tr>
 <tr class="separator:af49c702d3ed5f1e06f4b8e4e98331fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad152a56418cc058cf8889c2b25f515f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad152a56418cc058cf8889c2b25f515f5"></a>
-virtual RTT::corba::CRemoteChannelElement_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>activate_this</b> ()</td></tr>
+<tr class="memitem:ad152a56418cc058cf8889c2b25f515f5"><td class="memItemLeft" align="right" valign="top">virtual RTT::corba::CRemoteChannelElement_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html#ad152a56418cc058cf8889c2b25f515f5">activate_this</a> ()</td></tr>
 <tr class="separator:ad152a56418cc058cf8889c2b25f515f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34760b745a87f7fed27db13068d674ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34760b745a87f7fed27db13068d674ba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCDataFlowInterface</b> (<a class="el" href="classRTT_1_1corba_1_1CDataFlowInterface__i.html">CDataFlowInterface_i</a> *dataflow)</td></tr>
+<tr class="memitem:a34760b745a87f7fed27db13068d674ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html#a34760b745a87f7fed27db13068d674ba">setCDataFlowInterface</a> (<a class="el" href="classRTT_1_1corba_1_1CDataFlowInterface__i.html">CDataFlowInterface_i</a> *dataflow)</td></tr>
 <tr class="separator:a34760b745a87f7fed27db13068d674ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fdc3c21dcdd8de7f02a8a07dd6072f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fdc3c21dcdd8de7f02a8a07dd6072f5"></a>
-PortableServer::POA_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>_default_POA</b> ()</td></tr>
+<tr class="memitem:a0fdc3c21dcdd8de7f02a8a07dd6072f5"><td class="memItemLeft" align="right" valign="top">PortableServer::POA_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html#a0fdc3c21dcdd8de7f02a8a07dd6072f5">_default_POA</a> ()</td></tr>
 <tr class="separator:a0fdc3c21dcdd8de7f02a8a07dd6072f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8995494df01a2b71b4c1365ddd15696"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8995494df01a2b71b4c1365ddd15696"></a>
-shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getOutput</b> ()</td></tr>
+<tr class="memitem:ad8995494df01a2b71b4c1365ddd15696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a0dd2d513f8c406094c8a1e014d7c7aec">shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#ad8995494df01a2b71b4c1365ddd15696">getOutput</a> ()</td></tr>
 <tr class="separator:ad8995494df01a2b71b4c1365ddd15696"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8e075866bf50078a5b1c8d564f567fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8e075866bf50078a5b1c8d564f567fe"></a>
-shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getInput</b> ()</td></tr>
+<tr class="memitem:ae8e075866bf50078a5b1c8d564f567fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a0dd2d513f8c406094c8a1e014d7c7aec">shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#ae8e075866bf50078a5b1c8d564f567fe">getInput</a> ()</td></tr>
 <tr class="separator:ae8e075866bf50078a5b1c8d564f567fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4985bbcda69d829c4eae69aad1d43766"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a4985bbcda69d829c4eae69aad1d43766">data_sample</a> (param_t sample)</td></tr>
+<tr class="memitem:a4985bbcda69d829c4eae69aad1d43766"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a4985bbcda69d829c4eae69aad1d43766">data_sample</a> (<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a02f0069d0143ebb53416110e7abd36df">param_t</a> sample)</td></tr>
 <tr class="memdesc:a4985bbcda69d829c4eae69aad1d43766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a data sample to initialize this connection.  <a href="#a4985bbcda69d829c4eae69aad1d43766">More...</a><br /></td></tr>
 <tr class="separator:a4985bbcda69d829c4eae69aad1d43766"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e4d43ddf599240a5a209546c6c1980d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e4d43ddf599240a5a209546c6c1980d"></a>
-virtual value_t&#160;</td><td class="memItemRight" valign="bottom"><b>data_sample</b> ()</td></tr>
+<tr class="memitem:a4e4d43ddf599240a5a209546c6c1980d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1ChannelElement.html#aade45ccb41aa5214ec4d8181305f1da1">value_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a4e4d43ddf599240a5a209546c6c1980d">data_sample</a> ()</td></tr>
 <tr class="separator:a4e4d43ddf599240a5a209546c6c1980d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af88c18652a5d860b88d788d4832eb488"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#af88c18652a5d860b88d788d4832eb488">write</a> (param_t sample)</td></tr>
+<tr class="memitem:af88c18652a5d860b88d788d4832eb488"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#af88c18652a5d860b88d788d4832eb488">write</a> (<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a02f0069d0143ebb53416110e7abd36df">param_t</a> sample)</td></tr>
 <tr class="memdesc:af88c18652a5d860b88d788d4832eb488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a new sample on this connection.  <a href="#af88c18652a5d860b88d788d4832eb488">More...</a><br /></td></tr>
 <tr class="separator:af88c18652a5d860b88d788d4832eb488"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0521e0ade45ecc0dfee715e0717ea903"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a0521e0ade45ecc0dfee715e0717ea903">read</a> (reference_t sample, bool copy_old_data)</td></tr>
+<tr class="memitem:a0521e0ade45ecc0dfee715e0717ea903"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a0521e0ade45ecc0dfee715e0717ea903">read</a> (<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a4da855b3b3636e479cf0fcd81cf2fe6f">reference_t</a> sample, bool copy_old_data)</td></tr>
 <tr class="memdesc:a0521e0ade45ecc0dfee715e0717ea903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a sample from the connection.  <a href="#a0521e0ade45ecc0dfee715e0717ea903">More...</a><br /></td></tr>
 <tr class="separator:a0521e0ade45ecc0dfee715e0717ea903"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab361a083bee6da8e0e94f71aa09fa30b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#ab361a083bee6da8e0e94f71aa09fa30b">removeInput</a> ()</td></tr>
 <tr class="memdesc:ab361a083bee6da8e0e94f71aa09fa30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the input channel (if any).  <a href="#ab361a083bee6da8e0e94f71aa09fa30b">More...</a><br /></td></tr>
 <tr class="separator:ab361a083bee6da8e0e94f71aa09fa30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63e9f77c9197ba424d824ff44b38349f"><td class="memItemLeft" align="right" valign="top">ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a63e9f77c9197ba424d824ff44b38349f">getInputEndPoint</a> ()</td></tr>
+<tr class="memitem:a63e9f77c9197ba424d824ff44b38349f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">ChannelElementBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a63e9f77c9197ba424d824ff44b38349f">getInputEndPoint</a> ()</td></tr>
 <tr class="memdesc:a63e9f77c9197ba424d824ff44b38349f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first input channel element of this connection.  <a href="#a63e9f77c9197ba424d824ff44b38349f">More...</a><br /></td></tr>
 <tr class="separator:a63e9f77c9197ba424d824ff44b38349f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefc45d26de98f37392cf01936f9ae2f6"><td class="memItemLeft" align="right" valign="top">ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#aefc45d26de98f37392cf01936f9ae2f6">getOutputEndPoint</a> ()</td></tr>
+<tr class="memitem:aefc45d26de98f37392cf01936f9ae2f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">ChannelElementBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#aefc45d26de98f37392cf01936f9ae2f6">getOutputEndPoint</a> ()</td></tr>
 <tr class="memdesc:aefc45d26de98f37392cf01936f9ae2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last output channel element of this connection.  <a href="#aefc45d26de98f37392cf01936f9ae2f6">More...</a><br /></td></tr>
 <tr class="separator:aefc45d26de98f37392cf01936f9ae2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e3363d762549f205196265128395c89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a0e3363d762549f205196265128395c89">setOutput</a> (shared_ptr output)</td></tr>
+<tr class="memitem:a0e3363d762549f205196265128395c89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a0e3363d762549f205196265128395c89">setOutput</a> (<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a0dd2d513f8c406094c8a1e014d7c7aec">shared_ptr</a> output)</td></tr>
 <tr class="memdesc:a0e3363d762549f205196265128395c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the output of this channel element to <em>output</em> and sets the input of <em>output</em> to this.  <a href="#a0e3363d762549f205196265128395c89">More...</a><br /></td></tr>
 <tr class="separator:a0e3363d762549f205196265128395c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac280457e88649d5e78a76ef1a89df62a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#ac280457e88649d5e78a76ef1a89df62a">clear</a> ()</td></tr>
@@ -210,39 +191,130 @@ virtual value_t&#160;</td><td class="memItemRight" valign="bottom"><b>data_sampl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a0373df868f76e95e0672977c55a2a937"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0373df868f76e95e0672977c55a2a937"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a0373df868f76e95e0672977c55a2a937">ref</a> ()</td></tr>
-<tr class="memdesc:a0373df868f76e95e0672977c55a2a937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases the reference count. <br /></td></tr>
+<tr class="memitem:a0373df868f76e95e0672977c55a2a937"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a0373df868f76e95e0672977c55a2a937">ref</a> ()</td></tr>
+<tr class="memdesc:a0373df868f76e95e0672977c55a2a937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases the reference count.  <a href="#a0373df868f76e95e0672977c55a2a937">More...</a><br /></td></tr>
 <tr class="separator:a0373df868f76e95e0672977c55a2a937"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a7de132a871f70881c182cbe4bef67b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a7de132a871f70881c182cbe4bef67b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a7a7de132a871f70881c182cbe4bef67b">deref</a> ()</td></tr>
-<tr class="memdesc:a7a7de132a871f70881c182cbe4bef67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decreases the reference count, and deletes the object if it is zero. <br /></td></tr>
+<tr class="memitem:a7a7de132a871f70881c182cbe4bef67b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a7a7de132a871f70881c182cbe4bef67b">deref</a> ()</td></tr>
+<tr class="memdesc:a7a7de132a871f70881c182cbe4bef67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decreases the reference count, and deletes the object if it is zero.  <a href="#a7a7de132a871f70881c182cbe4bef67b">More...</a><br /></td></tr>
 <tr class="separator:a7a7de132a871f70881c182cbe4bef67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aee075c79cacfac04a952a4b44548128f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee075c79cacfac04a952a4b44548128f"></a>
-CRemoteChannelElement_var&#160;</td><td class="memItemRight" valign="bottom"><b>remote_side</b></td></tr>
+<tr class="memitem:aee075c79cacfac04a952a4b44548128f"><td class="memItemLeft" align="right" valign="top">CRemoteChannelElement_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html#aee075c79cacfac04a952a4b44548128f">remote_side</a></td></tr>
 <tr class="separator:aee075c79cacfac04a952a4b44548128f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe8a6c0fc930c2ab2b46919038e58749"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe8a6c0fc930c2ab2b46919038e58749"></a>
-<a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>transport</b></td></tr>
+<tr class="memitem:afe8a6c0fc930c2ab2b46919038e58749"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html#afe8a6c0fc930c2ab2b46919038e58749">transport</a></td></tr>
 <tr class="separator:afe8a6c0fc930c2ab2b46919038e58749"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab76b314fe9711cf8d02748789d60bbeb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab76b314fe9711cf8d02748789d60bbeb"></a>
-PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><b>mpoa</b></td></tr>
+<tr class="memitem:ab76b314fe9711cf8d02748789d60bbeb"><td class="memItemLeft" align="right" valign="top">PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html#ab76b314fe9711cf8d02748789d60bbeb">mpoa</a></td></tr>
 <tr class="separator:ab76b314fe9711cf8d02748789d60bbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38ca1f5f9521aa1a2b129caefe03897a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38ca1f5f9521aa1a2b129caefe03897a"></a>
-<a class="el" href="classRTT_1_1corba_1_1CDataFlowInterface__i.html">CDataFlowInterface_i</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mdataflow</b></td></tr>
+<tr class="memitem:a38ca1f5f9521aa1a2b129caefe03897a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1corba_1_1CDataFlowInterface__i.html">CDataFlowInterface_i</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html#a38ca1f5f9521aa1a2b129caefe03897a">mdataflow</a></td></tr>
 <tr class="separator:a38ca1f5f9521aa1a2b129caefe03897a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class RTT::corba::RemoteChannelElement&lt; T &gt;</h3>
 
-<p>Implements the <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html" title="The advanced channel element interface, used by Orocos to relay over-CORBA data flow connections...">CRemoteChannelElement</a> of the CORBA IDL interface. </p>
-<p>It converts the C++ calls into CORBA calls and vice versa. A read will cause a call to the remote channel (which is of the same type of this <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html" title="Implements the CRemoteChannelElement of the CORBA IDL interface. ">RemoteChannelElement</a>) which returns an Any with the data. A similar mechanism is in place for a write. </p>
+<p>Implements the <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html" title="The advanced channel element interface, used by Orocos to relay over-CORBA data flow connections...">CRemoteChannelElement</a> of the <a class="el" href="namespaceCORBA.html">CORBA</a> IDL interface. </p>
+<p>It converts the C++ calls into <a class="el" href="namespaceCORBA.html">CORBA</a> calls and vice versa. A read will cause a call to the remote channel (which is of the same type of this <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html" title="Implements the CRemoteChannelElement of the CORBA IDL interface. ">RemoteChannelElement</a>) which returns an Any with the data. A similar mechanism is in place for a write. </p>
 
 <p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00059">59</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a02f0069d0143ebb53416110e7abd36df"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::call_traits&lt;T&gt;::param_type <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a02f0069d0143ebb53416110e7abd36df">param_t</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ChannelElement_8hpp_source.html#l00059">59</a> of file <a class="el" href="ChannelElement_8hpp_source.html">ChannelElement.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4da855b3b3636e479cf0fcd81cf2fe6f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::call_traits&lt;T&gt;::reference <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a4da855b3b3636e479cf0fcd81cf2fe6f">reference_t</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ChannelElement_8hpp_source.html#l00060">60</a> of file <a class="el" href="ChannelElement_8hpp_source.html">ChannelElement.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0dd2d513f8c406094c8a1e014d7c7aec"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::intrusive_ptr&lt; <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">ChannelElement</a>&lt;T&gt; &gt; <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a0dd2d513f8c406094c8a1e014d7c7aec">shared_ptr</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ChannelElement_8hpp_source.html#l00058">58</a> of file <a class="el" href="ChannelElement_8hpp_source.html">ChannelElement.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aade45ccb41aa5214ec4d8181305f1da1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef T <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#aade45ccb41aa5214ec4d8181305f1da1">value_t</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ChannelElement_8hpp_source.html#l00057">57</a> of file <a class="el" href="ChannelElement_8hpp_source.html">ChannelElement.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a24814918cb731699e5f8054771a78b55"></a>
 <div class="memitem">
 <div class="memproto">
@@ -300,11 +372,152 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00084">84</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
 
-<p>References <a class="el" href="CorbaDispatcher_8hpp_source.html#l00097">RTT::corba::CorbaDispatcher::Instance()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00160">RTT::base::ChannelElementBase::ref()</a>.</p>
+<p>References <a class="el" href="CorbaDispatcher_8hpp_source.html#l00097">RTT::corba::CorbaDispatcher::Instance()</a>, <a class="el" href="DataFlowI_8h_source.html#l00076">RTT::corba::CRemoteChannelElement_i::mpoa</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00160">RTT::base::ChannelElementBase::ref()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a095890ad5f3eb706996cde1d15a4abe6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::~<a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RemoteChannelElement</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00102">102</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aeaa2103afabe6fc9509909930f06d6fe"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::_add_ref </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Increase the reference count, called from the <a class="el" href="namespaceCORBA.html">CORBA</a> side. </p>
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00107">107</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00160">RTT::base::ChannelElementBase::ref()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0fdc3c21dcdd8de7f02a8a07dd6072f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortableServer::POA_ptr CRemoteChannelElement_i::_default_POA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="DataFlowI_8cpp_source.html#l00598">598</a> of file <a class="el" href="DataFlowI_8cpp_source.html">DataFlowI.cpp</a>.</p>
+
+<p>References <a class="el" href="corba_8h_source.html#l00065">ACE_THROW_SPEC</a>, <a class="el" href="DataFlowI_8h_source.html#l00076">RTT::corba::CRemoteChannelElement_i::mpoa</a>, and <a class="el" href="DataFlowI_8h_source.html#l00074">RTT::corba::CRemoteChannelElement_i::remote_side</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab65dfc80e6c634a2ff220e81d39668de"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::_remove_ref </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decrease the reference count, called from the <a class="el" href="namespaceCORBA.html">CORBA</a> side. </p>
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00110">110</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00165">RTT::base::ChannelElementBase::deref()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad152a56418cc058cf8889c2b25f515f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual RTT::corba::CRemoteChannelElement_ptr RTT::corba::CRemoteChannelElement_i::activate_this </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="DataFlowI_8h_source.html#l00085">85</a> of file <a class="el" href="DataFlowI_8h_source.html">DataFlowI.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac280457e88649d5e78a76ef1a89df62a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +565,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">virtual bool <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a>&lt; T &gt;::data_sample </td>
           <td>(</td>
-          <td class="paramtype">param_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a02f0069d0143ebb53416110e7abd36df">param_t</a>&#160;</td>
           <td class="paramname"><em>sample</em></td><td>)</td>
           <td></td>
         </tr>
@@ -372,9 +585,168 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="ChannelElement_8hpp_source.html#l00082">82</a> of file <a class="el" href="ChannelElement_8hpp_source.html">ChannelElement.hpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00082">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>.</p>
+<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00082">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00062">RTT::base::ChannelElement&lt; T &gt;::getOutput()</a>.</p>
 
 <p>Referenced by <a class="el" href="ChannelElement_8hpp_source.html#l00082">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="InputPort_8hpp_source.html#l00184">RTT::InputPort&lt; T &gt;::getDataSample()</a>, and <a class="el" href="MQChannelElement_8hpp_source.html#l00089">RTT::mqueue::MQChannelElement&lt; T &gt;::inputReady()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e4d43ddf599240a5a209546c6c1980d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classRTT_1_1base_1_1ChannelElement.html#aade45ccb41aa5214ec4d8181305f1da1">value_t</a> <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a>&lt; T &gt;::data_sample </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1ChannelBufferElement.html#ad0c527115f0645914ac1f8ab1ebda0f8">RTT::internal::ChannelBufferElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1ChannelDataElement.html#a980cd67c2d773b7f479032852eac1124">RTT::internal::ChannelDataElement&lt; T &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="ChannelElement_8hpp_source.html#l00090">90</a> of file <a class="el" href="ChannelElement_8hpp_source.html">ChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00082">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00068">RTT::base::ChannelElement&lt; T &gt;::getInput()</a>.</p>
+
+<p>Referenced by <a class="el" href="ChannelDataElement_8hpp_source.html#l00104">RTT::internal::ChannelDataElement&lt; T &gt;::data_sample()</a>, <a class="el" href="ChannelBufferElement_8hpp_source.html#l00139">RTT::internal::ChannelBufferElement&lt; T &gt;::data_sample()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00352">RTT::corba::RemoteChannelElement&lt; T &gt;::data_sample()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aea76d80f51861d35debeb1174e225f40"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::data_sample </td>
+          <td>(</td>
+          <td class="paramtype">typename <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a02f0069d0143ebb53416110e7abd36df">param_t</a>&#160;</td>
+          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00352">352</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00090">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00062">RTT::base::ChannelElement&lt; T &gt;::getOutput()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a7de132a871f70881c182cbe4bef67b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ChannelElementBase::deref </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decreases the reference count, and deletes the object if it is zero. </p>
+
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00165">165</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+
+<p>References <a class="el" href="oro__arch__interface_8h.html#a41838459c68a9dc60dc05f0a911b2971">oro_atomic_dec_and_test()</a>.</p>
+
+<p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00110">RTT::corba::RemoteChannelElement&lt; T &gt;::_remove_ref()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00173">RTT::base::intrusive_ptr_release()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8381e069ac6b880ab9b61bed9f9de06"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function. </p>
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00176">176</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="DataFlowI_8h_source.html#l00074">RTT::corba::CRemoteChannelElement_i::remote_side</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00191">RTT::corba::RemoteChannelElement&lt; T &gt;::remoteDisconnect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a985ad009356b51ac671f461f84fb4d3a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::disconnect </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>writer_to_reader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a9f604a6d6f285c35b0c82dad343af72c">RTT::base::ChannelElementBase</a>.</p>
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00213">213</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="DataFlowI_8cpp_source.html#l00231">RTT::corba::CDataFlowInterface_i::deregisterChannel()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00076">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="DataFlowI_8h_source.html#l00077">RTT::corba::CRemoteChannelElement_i::mdataflow</a>, <a class="el" href="DataFlowI_8h_source.html#l00076">RTT::corba::CRemoteChannelElement_i::mpoa</a>, and <a class="el" href="DataFlowI_8h_source.html#l00074">RTT::corba::CRemoteChannelElement_i::remote_side</a>.</p>
 
 </div>
 </div>
@@ -440,6 +812,37 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ae8e075866bf50078a5b1c8d564f567fe"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a0dd2d513f8c406094c8a1e014d7c7aec">shared_ptr</a> <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a>&lt; T &gt;::getInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ChannelElement_8hpp_source.html#l00068">68</a> of file <a class="el" href="ChannelElement_8hpp_source.html">ChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00059">RTT::base::ChannelElementBase::getInput()</a>.</p>
+
+<p>Referenced by <a class="el" href="ChannelElement_8hpp_source.html#l00090">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00366">RTT::corba::RemoteChannelElement&lt; T &gt;::inputReady()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00116">RTT::base::ChannelElement&lt; T &gt;::read()</a>, and <a class="el" href="MQChannelElement_8hpp_source.html#l00132">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a63e9f77c9197ba424d824ff44b38349f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -448,7 +851,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ChannelElementBase::shared_ptr ChannelElementBase::getInputEndPoint </td>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">ChannelElementBase::shared_ptr</a> ChannelElementBase::getInputEndPoint </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -504,6 +907,37 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ad8995494df01a2b71b4c1365ddd15696"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a0dd2d513f8c406094c8a1e014d7c7aec">shared_ptr</a> <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a>&lt; T &gt;::getOutput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ChannelElement_8hpp_source.html#l00062">62</a> of file <a class="el" href="ChannelElement_8hpp_source.html">ChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00064">RTT::base::ChannelElementBase::getOutput()</a>.</p>
+
+<p>Referenced by <a class="el" href="ChannelElement_8hpp_source.html#l00082">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00100">RTT::mqueue::MQChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00352">RTT::corba::RemoteChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00089">RTT::mqueue::MQChannelElement&lt; T &gt;::inputReady()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00132">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00103">RTT::base::ChannelElement&lt; T &gt;::write()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aefc45d26de98f37392cf01936f9ae2f6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -512,7 +946,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ChannelElementBase::shared_ptr ChannelElementBase::getOutputEndPoint </td>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">ChannelElementBase::shared_ptr</a> ChannelElementBase::getOutputEndPoint </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -595,7 +1029,40 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00380">380</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00064">RTT::base::ChannelElementBase::getOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00144">RTT::base::ChannelElementBase::getRemoteURI()</a>, and <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00064">RTT::base::ChannelElementBase::getOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00144">RTT::base::ChannelElementBase::getRemoteURI()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="DataFlowI_8h_source.html#l00074">RTT::corba::CRemoteChannelElement_i::remote_side</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaaefd5fa013897851d813c3e9778252d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::inputReady </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a69e529e0b3dcc4316cb00f3ff957505b">RTT::base::ChannelElementBase</a>.</p>
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00366">366</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00068">RTT::base::ChannelElement&lt; T &gt;::getInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00108">RTT::base::ChannelElementBase::inputReady()</a>.</p>
 
 </div>
 </div>
@@ -643,7 +1110,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">virtual <a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a> <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a>&lt; T &gt;::read </td>
           <td>(</td>
-          <td class="paramtype">reference_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a4da855b3b3636e479cf0fcd81cf2fe6f">reference_t</a>&#160;</td>
           <td class="paramname"><em>sample</em>, </td>
         </tr>
         <tr>
@@ -672,9 +1139,187 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="ChannelElement_8hpp_source.html#l00116">116</a> of file <a class="el" href="ChannelElement_8hpp_source.html">ChannelElement.hpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00116">RTT::base::ChannelElement&lt; T &gt;::read()</a>.</p>
+<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00068">RTT::base::ChannelElement&lt; T &gt;::getInput()</a>, <a class="el" href="FlowStatus_8hpp_source.html#l00054">RTT::NoData</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00116">RTT::base::ChannelElement&lt; T &gt;::read()</a>.</p>
 
 <p>Referenced by <a class="el" href="ChannelElement_8hpp_source.html#l00116">RTT::base::ChannelElement&lt; T &gt;::read()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00280">RTT::corba::RemoteChannelElement&lt; T &gt;::read()</a>, and <a class="el" href="MQChannelElement_8hpp_source.html#l00132">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3386b7361e30f5a9c6759ca966b8b569"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceRTT.html#aa92dce4aa147272a093143330ef11ab6">FlowStatus</a> <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::read </td>
+          <td>(</td>
+          <td class="paramtype">typename <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a4da855b3b3636e479cf0fcd81cf2fe6f">reference_t</a>&#160;</td>
+          <td class="paramname"><em>sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>copy_old_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00234">234</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="DataFlow_8idl_source.html#l00013">RTT::corba::CNewData</a>, <a class="el" href="DataFlow_8idl_source.html#l00013">RTT::corba::COldData</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="FlowStatus_8hpp_source.html#l00054">RTT::NoData</a>, <a class="el" href="DataSource_8cpp_source.html#l00080">RTT::base::DataSourceBase::ref()</a>, <a class="el" href="DataFlowI_8h_source.html#l00074">RTT::corba::CRemoteChannelElement_i::remote_side</a>, <a class="el" href="DataFlowI_8h_source.html#l00075">RTT::corba::CRemoteChannelElement_i::transport</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a0f4b7e15449ea243afa15dc9bf26588e">RTT::corba::CorbaTypeTransporter::updateFromAny()</a>.</p>
+
+<p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00137">RTT::corba::RemoteChannelElement&lt; T &gt;::transferSamples()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a832d073ed3a5fe862a427f9eba5ff389"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1corba.html#a56408c4be7abecf22e91d9c13a1daf5a">CFlowStatus</a> <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::read </td>
+          <td>(</td>
+          <td class="paramtype">::CORBA::Any_out&#160;</td>
+          <td class="paramname"><em>sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>copy_old_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function. </p>
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00280">280</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a9c31a1b39dd027f38958fbc6e444959e">RTT::corba::CorbaTypeTransporter::createAny()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="DataSource_8inl_source.html#l00026">RTT::internal::DataSource&lt; T &gt;::getTypeName()</a>, <a class="el" href="FlowStatus_8hpp_source.html#l00054">RTT::NewData</a>, <a class="el" href="FlowStatus_8hpp_source.html#l00054">RTT::OldData</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00116">RTT::base::ChannelElement&lt; T &gt;::read()</a>, <a class="el" href="DataSource_8cpp_source.html#l00080">RTT::base::DataSourceBase::ref()</a>, <a class="el" href="DataSources_8inl_source.html#l00026">RTT::internal::ValueDataSource&lt; T &gt;::set()</a>, and <a class="el" href="DataFlowI_8h_source.html#l00075">RTT::corba::CRemoteChannelElement_i::transport</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0373df868f76e95e0672977c55a2a937"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ChannelElementBase::ref </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Increases the reference count. </p>
+
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00160">160</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+
+<p>References <a class="el" href="oro__arch__interface_8h.html#af86230f87017f4dfd762ff6f27543bf0">oro_atomic_inc()</a>.</p>
+
+<p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00107">RTT::corba::RemoteChannelElement&lt; T &gt;::_add_ref()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00170">RTT::base::intrusive_ptr_add_ref()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00084">RTT::corba::RemoteChannelElement&lt; T &gt;::RemoteChannelElement()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4953b88b749fd552cbd359d71b1bf24c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::remoteDisconnect </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>writer_to_reader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00191">191</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="DataFlowI_8cpp_source.html#l00231">RTT::corba::CDataFlowInterface_i::deregisterChannel()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00076">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="DataFlowI_8h_source.html#l00077">RTT::corba::CRemoteChannelElement_i::mdataflow</a>, and <a class="el" href="DataFlowI_8h_source.html#l00076">RTT::corba::CRemoteChannelElement_i::mpoa</a>.</p>
+
+<p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00176">RTT::corba::RemoteChannelElement&lt; T &gt;::disconnect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af93cdeca6c332ef221c7e8fd0d3b5efe"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::remoteSignal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function. </p>
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00117">117</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00124">RTT::base::ChannelElementBase::signal()</a>.</p>
 
 </div>
 </div>
@@ -704,6 +1349,36 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a34760b745a87f7fed27db13068d674ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::CRemoteChannelElement_i::setCDataFlowInterface </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1corba_1_1CDataFlowInterface__i.html">CDataFlowInterface_i</a> *&#160;</td>
+          <td class="paramname"><em>dataflow</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="DataFlowI_8h_source.html#l00093">93</a> of file <a class="el" href="DataFlowI_8h_source.html">DataFlowI.h</a>.</p>
+
+<p>References <a class="el" href="corba_8h_source.html#l00065">ACE_THROW_SPEC</a>.</p>
+
+<p>Referenced by <a class="el" href="DataFlowI_8cpp_source.html#l00231">RTT::corba::CDataFlowInterface_i::deregisterChannel()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0e3363d762549f205196265128395c89"></a>
 <div class="memitem">
 <div class="memproto">
@@ -714,7 +1389,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">void ChannelElementBase::setOutput </td>
           <td>(</td>
-          <td class="paramtype">shared_ptr&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">shared_ptr</a>&#160;</td>
           <td class="paramname"><em>output</em></td><td>)</td>
           <td></td>
         </tr>
@@ -770,7 +1445,7 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00122">122</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
 
-<p>References <a class="el" href="CorbaDispatcher_8hpp_source.html#l00097">RTT::corba::CorbaDispatcher::Instance()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00124">RTT::base::ChannelElementBase::signal()</a>.</p>
+<p>References <a class="el" href="CorbaDispatcher_8hpp_source.html#l00156">RTT::corba::CorbaDispatcher::dispatchChannel()</a>, <a class="el" href="CorbaDispatcher_8hpp_source.html#l00097">RTT::corba::CorbaDispatcher::Instance()</a>, <a class="el" href="DataFlowI_8h_source.html#l00074">RTT::corba::CRemoteChannelElement_i::remote_side</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00124">RTT::base::ChannelElementBase::signal()</a>.</p>
 
 </div>
 </div>
@@ -798,11 +1473,11 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>This is used on to read the channel </p>
 
-<p>Implements <a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html">RTT::corba::CRemoteChannelElement_i</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html#a3bee0841b424632f36da14aa66f08b3f">RTT::corba::CRemoteChannelElement_i</a>.</p>
 
 <p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00137">137</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
 
-<p>References <a class="el" href="RemoteChannelElement_8hpp_source.html#l00302">RTT::corba::RemoteChannelElement&lt; T &gt;::write()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="FlowStatus_8hpp_source.html#l00054">RTT::NewData</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00234">RTT::corba::RemoteChannelElement&lt; T &gt;::read()</a>, <a class="el" href="DataFlowI_8h_source.html#l00074">RTT::corba::CRemoteChannelElement_i::remote_side</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00302">RTT::corba::RemoteChannelElement&lt; T &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -818,7 +1493,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">virtual bool <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">RTT::base::ChannelElement</a>&lt; T &gt;::write </td>
           <td>(</td>
-          <td class="paramtype">param_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a02f0069d0143ebb53416110e7abd36df">param_t</a>&#160;</td>
           <td class="paramname"><em>sample</em></td><td>)</td>
           <td></td>
         </tr>
@@ -838,7 +1513,7 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="ChannelElement_8hpp_source.html#l00103">103</a> of file <a class="el" href="ChannelElement_8hpp_source.html">ChannelElement.hpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00103">RTT::base::ChannelElement&lt; T &gt;::write()</a>.</p>
+<p>References <a class="el" href="ChannelElement_8hpp_source.html#l00062">RTT::base::ChannelElement&lt; T &gt;::getOutput()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00103">RTT::base::ChannelElement&lt; T &gt;::write()</a>.</p>
 
 <p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00132">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00103">RTT::base::ChannelElement&lt; T &gt;::write()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00342">RTT::corba::RemoteChannelElement&lt; T &gt;::write()</a>.</p>
 
@@ -856,7 +1531,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::write </td>
           <td>(</td>
-          <td class="paramtype">typename <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt;::param_t&#160;</td>
+          <td class="paramtype">typename <a class="el" href="classRTT_1_1base_1_1ChannelElement.html">base::ChannelElement</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ChannelElement.html#a02f0069d0143ebb53416110e7abd36df">param_t</a>&#160;</td>
           <td class="paramname"><em>sample</em></td><td>)</td>
           <td></td>
         </tr>
@@ -871,9 +1546,138 @@ template&lt;typename T&gt; </div>
 
 <p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00302">302</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
 
-<p>References <a class="el" href="DataSource_8cpp_source.html#l00080">RTT::base::DataSourceBase::ref()</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">RTT::corba::CorbaTypeTransporter::updateAny()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="DataSource_8cpp_source.html#l00080">RTT::base::DataSourceBase::ref()</a>, <a class="el" href="DataFlowI_8h_source.html#l00074">RTT::corba::CRemoteChannelElement_i::remote_side</a>, <a class="el" href="DataFlowI_8h_source.html#l00075">RTT::corba::CRemoteChannelElement_i::transport</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">RTT::corba::CorbaTypeTransporter::updateAny()</a>.</p>
 
 <p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00137">RTT::corba::RemoteChannelElement&lt; T &gt;::transferSamples()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba3751df8e510c2e81bd3f01cd8e17d1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html">RTT::corba::RemoteChannelElement</a>&lt; T &gt;::write </td>
+          <td>(</td>
+          <td class="paramtype">const ::CORBA::Any &amp;&#160;</td>
+          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespaceCORBA.html">CORBA</a> IDL function. </p>
+
+<p>Definition at line <a class="el" href="RemoteChannelElement_8hpp_source.html#l00342">342</a> of file <a class="el" href="RemoteChannelElement_8hpp_source.html">RemoteChannelElement.hpp</a>.</p>
+
+<p>References <a class="el" href="DataSource_8cpp_source.html#l00080">RTT::base::DataSourceBase::ref()</a>, <a class="el" href="DataSources_8hpp_source.html#l00095">RTT::internal::ValueDataSource&lt; T &gt;::rvalue()</a>, <a class="el" href="DataFlowI_8h_source.html#l00075">RTT::corba::CRemoteChannelElement_i::transport</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a0f4b7e15449ea243afa15dc9bf26588e">RTT::corba::CorbaTypeTransporter::updateFromAny()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00103">RTT::base::ChannelElement&lt; T &gt;::write()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a38ca1f5f9521aa1a2b129caefe03897a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1corba_1_1CDataFlowInterface__i.html">CDataFlowInterface_i</a>* RTT::corba::CRemoteChannelElement_i::mdataflow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="DataFlowI_8h_source.html#l00077">77</a> of file <a class="el" href="DataFlowI_8h_source.html">DataFlowI.h</a>.</p>
+
+<p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00213">RTT::corba::RemoteChannelElement&lt; T &gt;::disconnect()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00191">RTT::corba::RemoteChannelElement&lt; T &gt;::remoteDisconnect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab76b314fe9711cf8d02748789d60bbeb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortableServer::POA_var RTT::corba::CRemoteChannelElement_i::mpoa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="DataFlowI_8h_source.html#l00076">76</a> of file <a class="el" href="DataFlowI_8h_source.html">DataFlowI.h</a>.</p>
+
+<p>Referenced by <a class="el" href="DataFlowI_8cpp_source.html#l00598">RTT::corba::CRemoteChannelElement_i::_default_POA()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00213">RTT::corba::RemoteChannelElement&lt; T &gt;::disconnect()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00084">RTT::corba::RemoteChannelElement&lt; T &gt;::RemoteChannelElement()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00191">RTT::corba::RemoteChannelElement&lt; T &gt;::remoteDisconnect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee075c79cacfac04a952a4b44548128f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CRemoteChannelElement_var RTT::corba::CRemoteChannelElement_i::remote_side</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="DataFlowI_8h_source.html#l00074">74</a> of file <a class="el" href="DataFlowI_8h_source.html">DataFlowI.h</a>.</p>
+
+<p>Referenced by <a class="el" href="DataFlowI_8cpp_source.html#l00598">RTT::corba::CRemoteChannelElement_i::_default_POA()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00176">RTT::corba::RemoteChannelElement&lt; T &gt;::disconnect()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00380">RTT::corba::RemoteChannelElement&lt; T &gt;::getRemoteURI()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00234">RTT::corba::RemoteChannelElement&lt; T &gt;::read()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00122">RTT::corba::RemoteChannelElement&lt; T &gt;::signal()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00137">RTT::corba::RemoteChannelElement&lt; T &gt;::transferSamples()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00302">RTT::corba::RemoteChannelElement&lt; T &gt;::write()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe8a6c0fc930c2ab2b46919038e58749"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html">RTT::corba::CorbaTypeTransporter</a> const&amp; RTT::corba::CRemoteChannelElement_i::transport</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="DataFlowI_8h_source.html#l00075">75</a> of file <a class="el" href="DataFlowI_8h_source.html">DataFlowI.h</a>.</p>
+
+<p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00234">RTT::corba::RemoteChannelElement&lt; T &gt;::read()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00302">RTT::corba::RemoteChannelElement&lt; T &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -883,7 +1687,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

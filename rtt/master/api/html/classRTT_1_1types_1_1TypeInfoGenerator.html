@@ -83,6 +83,8 @@ Inheritance diagram for RTT::types::TypeInfoGenerator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a3775ff6a8c64894112dfa761d71ce78a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1types_1_1TypeInfoGenerator.html#a3775ff6a8c64894112dfa761d71ce78a">~TypeInfoGenerator</a> ()</td></tr>
+<tr class="separator:a3775ff6a8c64894112dfa761d71ce78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7678e34c359cb1ab1dfda9500a7dc6c"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1types_1_1TypeInfoGenerator.html#ac7678e34c359cb1ab1dfda9500a7dc6c">getTypeName</a> () const =0</td></tr>
 <tr class="memdesc:ac7678e34c359cb1ab1dfda9500a7dc6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type name for which this generator generates type info features.  <a href="#ac7678e34c359cb1ab1dfda9500a7dc6c">More...</a><br /></td></tr>
 <tr class="separator:ac7678e34c359cb1ab1dfda9500a7dc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,7 +100,33 @@ Public Member Functions</h2></td></tr>
 <p>This class is solely meant for installing <a class="el" href="classRTT_1_1types_1_1TypeInfo.html" title="A class for representing a user type, and which can build instances of that type. ...">TypeInfo</a> objects, so a helper class to the type system which has no function once the type registration is done. </p>
 
 <p>Definition at line <a class="el" href="TypeInfoGenerator_8hpp_source.html#l00020">20</a> of file <a class="el" href="TypeInfoGenerator_8hpp_source.html">TypeInfoGenerator.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3775ff6a8c64894112dfa761d71ce78a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual RTT::types::TypeInfoGenerator::~TypeInfoGenerator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TypeInfoGenerator_8hpp_source.html#l00023">23</a> of file <a class="el" href="TypeInfoGenerator_8hpp_source.html">TypeInfoGenerator.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a2ac544c7d7a0993e7e1e8c639753095b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -121,7 +149,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the <a class="el" href="classRTT_1_1types_1_1TypeInfo.html" title="A class for representing a user type, and which can build instances of that type. ...">TypeInfo</a> object of this type, or null if none exists yet. </p>
-<dl class="section return"><dt>Returns</dt><dd>All generators should return here TypeInfoRepository::Instance()-&gt;getTypeInfo&lt;T&gt;(); </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>All generators should return here <a class="el" href="classRTT_1_1types_1_1TypeInfoRepository.html#a48db2e739dd72ad730d67452a0e78612">TypeInfoRepository::Instance()</a>-&gt;getTypeInfo&lt;T&gt;(); </dd></dl>
 
 <p>Implemented in <a class="el" href="structRTT_1_1types_1_1TypeInfoName.html#a30b51b5a79e8ec87a194f4fb9c8e82ea">RTT::types::TypeInfoName&lt; T &gt;</a>, <a class="el" href="classRTT_1_1types_1_1PrimitiveTypeInfo.html#a3e5ef1a2707b54e4b2e40f3327715905">RTT::types::PrimitiveTypeInfo&lt; T, use_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1PrimitiveTypeInfo.html#a3e5ef1a2707b54e4b2e40f3327715905">RTT::types::PrimitiveTypeInfo&lt; bool, use_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1PrimitiveTypeInfo.html#a3e5ef1a2707b54e4b2e40f3327715905">RTT::types::PrimitiveTypeInfo&lt; T, has_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1PrimitiveTypeInfo.html#a3e5ef1a2707b54e4b2e40f3327715905">RTT::types::PrimitiveTypeInfo&lt; rt_string, use_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1PrimitiveTypeInfo.html#a3e5ef1a2707b54e4b2e40f3327715905">RTT::types::PrimitiveTypeInfo&lt; std::vector&lt; double &gt;, use_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1PrimitiveTypeInfo.html#a3e5ef1a2707b54e4b2e40f3327715905">RTT::types::PrimitiveTypeInfo&lt; std::string, use_ostream &gt;</a>, <a class="el" href="classRTT_1_1types_1_1PrimitiveTypeInfo.html#a3e5ef1a2707b54e4b2e40f3327715905">RTT::types::PrimitiveTypeInfo&lt; std::vector&lt; T &gt;, use_ostream &gt;</a>, and <a class="el" href="classRTT_1_1types_1_1EmptyTypeInfo.html#aeff3281377c10a2c0095b1d94fb7f07a">RTT::types::EmptyTypeInfo</a>.</p>
 
@@ -203,7 +231,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 13 2017 20:31:32 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
