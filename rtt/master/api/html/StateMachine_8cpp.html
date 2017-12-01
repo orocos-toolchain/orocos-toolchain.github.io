@@ -79,9 +79,7 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ad02591a13e1732638fcae4b564b92645"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="StateMachine_8cpp.html#ad02591a13e1732638fcae4b564b92645">TRACE_INIT</a>()&#160;&#160;&#160;Logger::In in( _name )</td></tr>
-<tr class="separator:ad02591a13e1732638fcae4b564b92645"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ebb0da27649da956f8d5b3ea1335d1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="StateMachine_8cpp.html#a9ebb0da27649da956f8d5b3ea1335d1c">TRACE</a>(msg)&#160;&#160;&#160;if (mtrace) log(Info) &lt;&lt; '[' &lt;&lt; this-&gt;getStatusStr() &lt;&lt; ']' &lt;&lt; std::string(&quot; &quot;) + msg &lt;&lt;endlog()</td></tr>
+<tr class="memitem:a9ebb0da27649da956f8d5b3ea1335d1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="StateMachine_8cpp.html#a9ebb0da27649da956f8d5b3ea1335d1c">TRACE</a>(msg)</td></tr>
 <tr class="separator:a9ebb0da27649da956f8d5b3ea1335d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -94,40 +92,22 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">msg</td><td>)</td>
-          <td>&#160;&#160;&#160;if (mtrace) log(Info) &lt;&lt; '[' &lt;&lt; this-&gt;getStatusStr() &lt;&lt; ']' &lt;&lt; std::string(&quot; &quot;) + msg &lt;&lt;endlog()</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="StateMachine_8cpp_source.html#l00051">51</a> of file <a class="el" href="StateMachine_8cpp_source.html">StateMachine.cpp</a>.</p>
-
-<p>Referenced by <a class="el" href="StateMachine_8cpp_source.html#l01174">RTT::scripting::StateMachine::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00209">RTT::scripting::StateMachine::automatic()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00415">RTT::scripting::StateMachine::changeState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00508">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="StateMachine_8cpp_source.html#l01227">RTT::scripting::StateMachine::deactivate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00263">RTT::scripting::StateMachine::execute()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00988">RTT::scripting::StateMachine::executePending()</a>, <a class="el" href="StateMachine_8cpp_source.html#l01122">RTT::scripting::StateMachine::executeProgram()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00081">RTT::scripting::StateMachine::loading()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00171">RTT::scripting::StateMachine::pause()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00226">RTT::scripting::StateMachine::reactive()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00396">RTT::scripting::StateMachine::requestFinalState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00380">RTT::scripting::StateMachine::requestInitialState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00250">RTT::scripting::StateMachine::reset()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00187">RTT::scripting::StateMachine::step()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00238">RTT::scripting::StateMachine::stop()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00901">RTT::scripting::StateMachine::transitionSet()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00105">RTT::scripting::StateMachine::unloading()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00071">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad02591a13e1732638fcae4b564b92645"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TRACE_INIT</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;Logger::In in( _name )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                     \</div><div class="line">    if (!mtrace)                                                                            \</div><div class="line">      break;                                                                                \</div><div class="line">    Logger::In in( _name );                                                                 \</div><div class="line">    log(<a class="code" href="namespaceRTT.html#a97636c8c36d7c811e3e32130c4079f2ea492b53c0b755ee240a62fb2f7a30883a">Info</a>) &lt;&lt; <span class="charliteral">&#39;[&#39;</span> &lt;&lt; this-&gt;getStatusStr() &lt;&lt; <span class="charliteral">&#39;]&#39;</span> &lt;&lt; std::string(<span class="stringliteral">&quot; &quot;</span>) + msg &lt;&lt;endlog();   \</div><div class="line">} <span class="keywordflow">while</span>(0)</div><div class="ttc" id="namespaceRTT_html_a97636c8c36d7c811e3e32130c4079f2ea492b53c0b755ee240a62fb2f7a30883a"><div class="ttname"><a href="namespaceRTT.html#a97636c8c36d7c811e3e32130c4079f2ea492b53c0b755ee240a62fb2f7a30883a">RTT::Info</a></div><div class="ttdef"><b>Definition:</b> <a href="Logger_8hpp_source.html#l00345">Logger.hpp:345</a></div></div>
+</div><!-- fragment -->
 <p>Definition at line <a class="el" href="StateMachine_8cpp_source.html#l00050">50</a> of file <a class="el" href="StateMachine_8cpp_source.html">StateMachine.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="StateMachine_8cpp_source.html#l01174">RTT::scripting::StateMachine::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00209">RTT::scripting::StateMachine::automatic()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00415">RTT::scripting::StateMachine::changeState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00508">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="StateMachine_8cpp_source.html#l01227">RTT::scripting::StateMachine::deactivate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00263">RTT::scripting::StateMachine::execute()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00988">RTT::scripting::StateMachine::executePending()</a>, <a class="el" href="StateMachine_8cpp_source.html#l01122">RTT::scripting::StateMachine::executeProgram()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00081">RTT::scripting::StateMachine::loading()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00171">RTT::scripting::StateMachine::pause()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00226">RTT::scripting::StateMachine::reactive()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00396">RTT::scripting::StateMachine::requestFinalState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00380">RTT::scripting::StateMachine::requestInitialState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00620">RTT::scripting::StateMachine::requestNextState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00250">RTT::scripting::StateMachine::reset()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00946">RTT::scripting::StateMachine::runState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00187">RTT::scripting::StateMachine::step()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00238">RTT::scripting::StateMachine::stop()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00901">RTT::scripting::StateMachine::transitionSet()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00105">RTT::scripting::StateMachine::unloading()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00071">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
+<p>Referenced by <a class="el" href="StateMachine_8cpp_source.html#l01155">RTT::scripting::StateMachine::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00208">RTT::scripting::StateMachine::automatic()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00407">RTT::scripting::StateMachine::changeState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00497">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="StateMachine_8cpp_source.html#l01207">RTT::scripting::StateMachine::deactivate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00258">RTT::scripting::StateMachine::execute()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00971">RTT::scripting::StateMachine::executePending()</a>, <a class="el" href="StateMachine_8cpp_source.html#l01104">RTT::scripting::StateMachine::executeProgram()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00084">RTT::scripting::StateMachine::loading()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00172">RTT::scripting::StateMachine::pause()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00224">RTT::scripting::StateMachine::reactive()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00389">RTT::scripting::StateMachine::requestFinalState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00374">RTT::scripting::StateMachine::requestInitialState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00246">RTT::scripting::StateMachine::reset()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00187">RTT::scripting::StateMachine::step()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00235">RTT::scripting::StateMachine::stop()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00888">RTT::scripting::StateMachine::transitionSet()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00107">RTT::scripting::StateMachine::unloading()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00075">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 15 2017 18:44:45 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 1 2017 19:32:43 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
