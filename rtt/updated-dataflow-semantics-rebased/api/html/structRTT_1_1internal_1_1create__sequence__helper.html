@@ -67,27 +67,118 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0630927baa8c11c43d3628590a222670"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0630927baa8c11c43d3628590a222670"></a>
-template&lt;class ds_arg_type , class ds_type &gt; </td></tr>
-<tr class="memitem:a0630927baa8c11c43d3628590a222670"><td class="memTemplItemLeft" align="right" valign="top">static ds_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sources</b> (std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt;::const_iterator front, int argnbr, std::string const &amp;tname)</td></tr>
+<tr class="memitem:a0630927baa8c11c43d3628590a222670"><td class="memTemplParams" colspan="2">template&lt;class ds_arg_type , class ds_type &gt; </td></tr>
+<tr class="memitem:a0630927baa8c11c43d3628590a222670"><td class="memTemplItemLeft" align="right" valign="top">static ds_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1create__sequence__helper.html#a0630927baa8c11c43d3628590a222670">sources</a> (std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt;::const_iterator front, int argnbr, std::string const &amp;tname)</td></tr>
 <tr class="separator:a0630927baa8c11c43d3628590a222670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a256ff01e03aa037b0b4bb6bd334aa49a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a256ff01e03aa037b0b4bb6bd334aa49a"></a>
-template&lt;class ds_arg_type , class ads_type &gt; </td></tr>
-<tr class="memitem:a256ff01e03aa037b0b4bb6bd334aa49a"><td class="memTemplItemLeft" align="right" valign="top">static ads_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>assignable</b> (std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt;::const_iterator front, int argnbr, std::string const &amp;tname)</td></tr>
+<tr class="memitem:a256ff01e03aa037b0b4bb6bd334aa49a"><td class="memTemplParams" colspan="2">template&lt;class ds_arg_type , class ads_type &gt; </td></tr>
+<tr class="memitem:a256ff01e03aa037b0b4bb6bd334aa49a"><td class="memTemplItemLeft" align="right" valign="top">static ads_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1create__sequence__helper.html#a256ff01e03aa037b0b4bb6bd334aa49a">assignable</a> (std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt;::const_iterator front, int argnbr, std::string const &amp;tname)</td></tr>
 <tr class="separator:a256ff01e03aa037b0b4bb6bd334aa49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Helper to convert a single data source base to a <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">DataSource</a> or <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html" title="A DataSource which has set() methods. ">AssignableDataSource</a>. </p>
-<p>Used by create_sequence_impl. </p>
+<p>Used by <a class="el" href="structRTT_1_1internal_1_1create__sequence__impl.html">create_sequence_impl</a>. </p>
 
 <p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00119">119</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a256ff01e03aa037b0b4bb6bd334aa49a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ds_arg_type , class ads_type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ads_type RTT::internal::create_sequence_helper::assignable </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt;::const_iterator&#160;</td>
+          <td class="paramname"><em>front</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argnbr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>tname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00136">136</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+
+<p>References <a class="el" href="Exceptions_8hpp_source.html#l00053">ORO_THROW_OR_RETURN</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0630927baa8c11c43d3628590a222670"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ds_arg_type , class ds_type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ds_type RTT::internal::create_sequence_helper::sources </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt;::const_iterator&#160;</td>
+          <td class="paramname"><em>front</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argnbr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>tname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="CreateSequence_8hpp_source.html#l00121">121</a> of file <a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a>.</p>
+
+<p>References <a class="el" href="TypeInfo_8cpp_source.html#l00118">RTT::types::TypeInfo::convert()</a>, <a class="el" href="DataSourceTypeInfo_8inl_source.html#l00026">RTT::internal::DataSourceTypeInfo&lt; T &gt;::getTypeInfo()</a>, and <a class="el" href="Exceptions_8hpp_source.html#l00053">ORO_THROW_OR_RETURN</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>rtt/internal/<a class="el" href="CreateSequence_8hpp_source.html">CreateSequence.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

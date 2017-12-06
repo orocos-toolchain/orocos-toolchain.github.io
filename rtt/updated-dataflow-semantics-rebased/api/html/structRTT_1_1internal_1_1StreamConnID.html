@@ -77,34 +77,134 @@ Inheritance diagram for RTT::internal::StreamConnID:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7415ef44fe69e5bb4a5af6b03c98f6f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7415ef44fe69e5bb4a5af6b03c98f6f1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StreamConnID</b> (const std::string &amp;name)</td></tr>
+<tr class="memitem:a7415ef44fe69e5bb4a5af6b03c98f6f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1StreamConnID.html#a7415ef44fe69e5bb4a5af6b03c98f6f1">StreamConnID</a> (const std::string &amp;name)</td></tr>
 <tr class="separator:a7415ef44fe69e5bb4a5af6b03c98f6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af816c5620ef5c31c86743e83141b1132"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af816c5620ef5c31c86743e83141b1132"></a>
-virtual <a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const </td></tr>
+<tr class="memitem:af816c5620ef5c31c86743e83141b1132"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1StreamConnID.html#af816c5620ef5c31c86743e83141b1132">clone</a> () const </td></tr>
 <tr class="separator:af816c5620ef5c31c86743e83141b1132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35b02de8692a35458171b19539f52be1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35b02de8692a35458171b19539f52be1"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSameID</b> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> const &amp;id) const </td></tr>
+<tr class="memitem:a35b02de8692a35458171b19539f52be1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1StreamConnID.html#a35b02de8692a35458171b19539f52be1">isSameID</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> const &amp;id) const </td></tr>
 <tr class="separator:a35b02de8692a35458171b19539f52be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a39d6716489ba2d59140c0557230ccbaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39d6716489ba2d59140c0557230ccbaf"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name_id</b></td></tr>
+<tr class="memitem:a39d6716489ba2d59140c0557230ccbaf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1internal_1_1StreamConnID.html#a39d6716489ba2d59140c0557230ccbaf">name_id</a></td></tr>
 <tr class="separator:a39d6716489ba2d59140c0557230ccbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a Stream connection created by the <a class="el" href="classRTT_1_1internal_1_1ConnFactory.html" title="This class provides the basic tools to create channels that represent connections between two ports...">ConnFactory</a>. </p>
 
 <p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00078">78</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a7415ef44fe69e5bb4a5af6b03c98f6f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::internal::StreamConnID::StreamConnID </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00081">81</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
+
+<p>References <a class="el" href="ConnFactory_8cpp_source.html#l00057">RTT::internal::LocalConnID::clone()</a>, and <a class="el" href="ConnFactory_8cpp_source.html#l00049">RTT::internal::LocalConnID::isSameID()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af816c5620ef5c31c86743e83141b1132"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> * StreamConnID::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1ConnID.html#ae506ab908a15835aeb7e9ff2b3956409">RTT::internal::ConnID</a>.</p>
+
+<p>Definition at line <a class="el" href="ConnFactory_8cpp_source.html#l00069">69</a> of file <a class="el" href="ConnFactory_8cpp_source.html">ConnFactory.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a35b02de8692a35458171b19539f52be1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StreamConnID::isSameID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> const &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1ConnID.html#afd18f874c9d8965adb5f077c0d38ee19">RTT::internal::ConnID</a>.</p>
+
+<p>Definition at line <a class="el" href="ConnFactory_8cpp_source.html#l00061">61</a> of file <a class="el" href="ConnFactory_8cpp_source.html">ConnFactory.cpp</a>.</p>
+
+<p>References <a class="el" href="ConnFactory_8hpp_source.html#l00080">name_id</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a39d6716489ba2d59140c0557230ccbaf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string RTT::internal::StreamConnID::name_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConnFactory_8hpp_source.html#l00080">80</a> of file <a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ConnFactory_8cpp_source.html#l00139">RTT::internal::ConnFactory::createAndCheckStream()</a>, and <a class="el" href="ConnFactory_8cpp_source.html#l00061">isSameID()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>rtt/internal/<a class="el" href="ConnFactory_8hpp_source.html">ConnFactory.hpp</a></li>
 <li>rtt/internal/<a class="el" href="ConnFactory_8cpp_source.html">ConnFactory.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

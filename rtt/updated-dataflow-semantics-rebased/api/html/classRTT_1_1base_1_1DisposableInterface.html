@@ -73,6 +73,7 @@ Inheritance diagram for RTT::base::DisposableInterface:</div>
   <map id="RTT::base::DisposableInterface_map" name="RTT::base::DisposableInterface_map">
 <area href="structRTT_1_1base_1_1OperationCallerInterface.html" title="The interface class for operation callers. " alt="RTT::base::OperationCallerInterface" shape="rect" coords="558,56,920,80"/>
 <area href="structRTT_1_1internal_1_1FusedMSignal.html" title="A Function object that reacts to a Signal by writing the arguments in data sources and calling an act..." alt="RTT::internal::FusedMSignal&lt; Signature &gt;" shape="rect" coords="930,56,1292,80"/>
+<area href="structRTT_1_1RemoveMsg.html" alt="RTT::RemoveMsg" shape="rect" coords="1302,56,1664,80"/>
 <area href="structRTT_1_1base_1_1OperationCallerBase.html" alt="RTT::base::OperationCallerBase&lt; FunctionT &gt;" shape="rect" coords="0,112,362,136"/>
 <area href="structRTT_1_1base_1_1OperationCallerBase.html" alt="RTT::base::OperationCallerBase&lt; OperationCallerT &gt;" shape="rect" coords="372,112,734,136"/>
 <area href="structRTT_1_1base_1_1OperationCallerBase.html" alt="RTT::base::OperationCallerBase&lt; Signature &gt;" shape="rect" coords="744,112,1106,136"/>
@@ -84,26 +85,98 @@ Inheritance diagram for RTT::base::DisposableInterface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac22230559dd1324a22259f0df18781d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac22230559dd1324a22259f0df18781d6"></a>
-typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html">DisposableInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#ac22230559dd1324a22259f0df18781d6">shared_ptr</a></td></tr>
-<tr class="memdesc:ac22230559dd1324a22259f0df18781d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this type for shared pointer storage of an <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html" title="An object that is executable and is freed after execution. ">DisposableInterface</a> object. <br /></td></tr>
+<tr class="memitem:ac22230559dd1324a22259f0df18781d6"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html">DisposableInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#ac22230559dd1324a22259f0df18781d6">shared_ptr</a></td></tr>
+<tr class="memdesc:ac22230559dd1324a22259f0df18781d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this type for shared pointer storage of an <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html" title="An object that is executable and is freed after execution. ">DisposableInterface</a> object.  <a href="#ac22230559dd1324a22259f0df18781d6">More...</a><br /></td></tr>
 <tr class="separator:ac22230559dd1324a22259f0df18781d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a33fc8ddf24cddb207d18a631f00eb912"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#a33fc8ddf24cddb207d18a631f00eb912">~DisposableInterface</a> ()</td></tr>
+<tr class="separator:a33fc8ddf24cddb207d18a631f00eb912"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa219e67cd5ba6c860ef90e316cc7306d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#aa219e67cd5ba6c860ef90e316cc7306d">executeAndDispose</a> ()=0</td></tr>
 <tr class="memdesc:aa219e67cd5ba6c860ef90e316cc7306d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute functionality and free this object.  <a href="#aa219e67cd5ba6c860ef90e316cc7306d">More...</a><br /></td></tr>
 <tr class="separator:aa219e67cd5ba6c860ef90e316cc7306d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af51943bba34b7ba69c16d52ad74e1400"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af51943bba34b7ba69c16d52ad74e1400"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#af51943bba34b7ba69c16d52ad74e1400">dispose</a> ()=0</td></tr>
-<tr class="memdesc:af51943bba34b7ba69c16d52ad74e1400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just free this object without executing it. <br /></td></tr>
+<tr class="memitem:af51943bba34b7ba69c16d52ad74e1400"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#af51943bba34b7ba69c16d52ad74e1400">dispose</a> ()=0</td></tr>
+<tr class="memdesc:af51943bba34b7ba69c16d52ad74e1400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just free this object without executing it.  <a href="#af51943bba34b7ba69c16d52ad74e1400">More...</a><br /></td></tr>
 <tr class="separator:af51943bba34b7ba69c16d52ad74e1400"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An object that is executable and is freed after execution. </p>
 
 <p>Definition at line <a class="el" href="DisposableInterface_8hpp_source.html#l00053">53</a> of file <a class="el" href="DisposableInterface_8hpp_source.html">DisposableInterface.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="ac22230559dd1324a22259f0df18781d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classRTT_1_1base_1_1DisposableInterface.html">DisposableInterface</a>&gt; <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#ac22230559dd1324a22259f0df18781d6">RTT::base::DisposableInterface::shared_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use this type for shared pointer storage of an <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html" title="An object that is executable and is freed after execution. ">DisposableInterface</a> object. </p>
+
+<p>Definition at line <a class="el" href="DisposableInterface_8hpp_source.html#l00060">60</a> of file <a class="el" href="DisposableInterface_8hpp_source.html">DisposableInterface.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a33fc8ddf24cddb207d18a631f00eb912"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual RTT::base::DisposableInterface::~DisposableInterface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="DisposableInterface_8hpp_source.html#l00062">62</a> of file <a class="el" href="DisposableInterface_8hpp_source.html">DisposableInterface.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af51943bba34b7ba69c16d52ad74e1400"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RTT::base::DisposableInterface::dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Just free this object without executing it. </p>
+
+<p>Implemented in <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ade71a27fafd17d9d068f8ead9004b987">RTT::internal::FusedMSignal&lt; Signature &gt;</a>, <a class="el" href="structRTT_1_1RemoveMsg.html#ab1e0b578308c1c283a7b1f0cb3321a50">RTT::RemoveMsg</a>, <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#a19b583d1028f50656cd17445e1d777f0">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#aa4bab9983dec19120c78794b65f036c3">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00076">RTT::ExecutionEngine::~ExecutionEngine()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa219e67cd5ba6c860ef90e316cc7306d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -128,9 +201,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>Execute functionality and free this object. </p>
 <p>You may no longer use this object after calling this method. </p>
 
-<p>Implemented in <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ab44d9861778507ae7caa3eb1f0459f3e">RTT::internal::FusedMSignal&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#ad850ee6a0d3cebab3a64c65d238f38c8">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#af22e2c72a8c669b354f825f8d8159338">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>.</p>
+<p>Implemented in <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ab44d9861778507ae7caa3eb1f0459f3e">RTT::internal::FusedMSignal&lt; Signature &gt;</a>, <a class="el" href="structRTT_1_1RemoveMsg.html#ad1b864b47dafa18802cd64a94ab80b1a">RTT::RemoveMsg</a>, <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#ad850ee6a0d3cebab3a64c65d238f38c8">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#af22e2c72a8c669b354f825f8d8159338">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00222">RTT::ExecutionEngine::hasWork()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00217">RTT::ExecutionEngine::processMessages()</a>.</p>
 
 </div>
 </div>
@@ -140,7 +213,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:03 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

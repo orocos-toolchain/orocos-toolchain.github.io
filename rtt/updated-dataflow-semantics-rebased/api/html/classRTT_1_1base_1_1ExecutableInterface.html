@@ -86,6 +86,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaca37926e68f7c7de74c043f8a2c267c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#aaca37926e68f7c7de74c043f8a2c267c">unloaded</a> ()</td></tr>
 <tr class="memdesc:aaca37926e68f7c7de74c043f8a2c267c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> <em>ee</em> to tell this object it is being unloaded.  <a href="#aaca37926e68f7c7de74c043f8a2c267c">More...</a><br /></td></tr>
 <tr class="separator:aaca37926e68f7c7de74c043f8a2c267c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0954935b398de634447d60b5531fe40e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#a0954935b398de634447d60b5531fe40e">ExecutableInterface</a> ()</td></tr>
+<tr class="separator:a0954935b398de634447d60b5531fe40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad989dfe96fcdd801cb69e48f8336f5b6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#ad989dfe96fcdd801cb69e48f8336f5b6">~ExecutableInterface</a> ()</td></tr>
+<tr class="separator:ad989dfe96fcdd801cb69e48f8336f5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95dfa05e8d4cee94f24dbe3fc6b60af6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#a95dfa05e8d4cee94f24dbe3fc6b60af6">loading</a> ()</td></tr>
 <tr class="memdesc:a95dfa05e8d4cee94f24dbe3fc6b60af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informs this object that it got loaded in an <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>.  <a href="#a95dfa05e8d4cee94f24dbe3fc6b60af6">More...</a><br /></td></tr>
 <tr class="separator:a95dfa05e8d4cee94f24dbe3fc6b60af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,8 +108,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:af25a96100b88cc32f7272de76f51db3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af25a96100b88cc32f7272de76f51db3d"></a>
-<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>engine</b></td></tr>
+<tr class="memitem:af25a96100b88cc32f7272de76f51db3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#af25a96100b88cc32f7272de76f51db3d">engine</a></td></tr>
 <tr class="separator:af25a96100b88cc32f7272de76f51db3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -114,7 +117,58 @@ Protected Attributes</h2></td></tr>
 <p>Be careful that all these functions may be called from a hard real-time context. </p>
 
 <p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00058">58</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a0954935b398de634447d60b5531fe40e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::base::ExecutableInterface::ExecutableInterface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00080">80</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad989dfe96fcdd801cb69e48f8336f5b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual RTT::base::ExecutableInterface::~ExecutableInterface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00081">81</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a485113b5518e732252b874b6939ca4cd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +195,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classRTT_1_1scripting_1_1StateMachine.html#af0bdf9b380482a39182c8aeccf55dd57">RTT::scripting::StateMachine</a>, <a class="el" href="classRTT_1_1scripting_1_1FunctionGraph.html#a7293011e7230b8e0d05901dd052b10fe">RTT::scripting::FunctionGraph</a>, and <a class="el" href="classRTT_1_1scripting_1_1ProgramInterface.html#aaa33f09ad435ccb8d1ec8c2d18243195">RTT::scripting::ProgramInterface</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00113">RTT::ExecutionEngine::removeChild()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00113">RTT::ExecutionEngine::processFunctions()</a>.</p>
 
 </div>
 </div>
@@ -171,7 +225,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00102">102</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="StateMachine_8cpp_source.html#l00508">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00094">RTT::scripting::FunctionGraph::finish()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00081">RTT::scripting::StateMachine::loading()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00071">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
+<p>Referenced by <a class="el" href="StateMachine_8cpp_source.html#l00497">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00084">RTT::scripting::StateMachine::loading()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00114">RTT::scripting::FunctionGraph::~FunctionGraph()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00075">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
 
 </div>
 </div>
@@ -201,7 +255,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00095">95</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="FunctionGraph_8cpp_source.html#l00094">RTT::scripting::FunctionGraph::finish()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00173">RTT::scripting::FunctionGraph::pause()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00168">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00159">RTT::scripting::FunctionGraph::start()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00185">RTT::scripting::FunctionGraph::step()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00071">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00159">RTT::RemoveMsg::done()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00173">RTT::scripting::FunctionGraph::pause()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00162">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00159">RTT::scripting::FunctionGraph::start()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00185">RTT::scripting::FunctionGraph::step()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00114">RTT::scripting::FunctionGraph::~FunctionGraph()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00075">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
 
 </div>
 </div>
@@ -237,7 +291,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00070">70</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00138">RTT::ExecutionEngine::runFunction()</a>.</p>
+<p>Referenced by <a class="el" href="StateInterface_8cpp_source.html#l00055">RTT::scripting::StateInterface::loaded()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00132">RTT::ExecutionEngine::runFunction()</a>.</p>
 
 </div>
 </div>
@@ -297,7 +351,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00078">78</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00074">RTT::ExecutionEngine::ExecutionEngine()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00113">RTT::ExecutionEngine::removeChild()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00168">RTT::ExecutionEngine::removeFunction()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00113">RTT::ExecutionEngine::processFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00162">RTT::ExecutionEngine::removeFunction()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00076">RTT::ExecutionEngine::~ExecutionEngine()</a>.</p>
 
 </div>
 </div>
@@ -331,13 +385,36 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="af25a96100b88cc32f7272de76f51db3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a>* RTT::base::ExecutableInterface::engine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00061">61</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>rtt/base/<a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:03 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

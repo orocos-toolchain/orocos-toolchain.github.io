@@ -70,29 +70,30 @@ Inheritance diagram for RTT::OperationInterfacePart:</div>
  <div class="center">
   <img src="classRTT_1_1OperationInterfacePart.png" usemap="#RTT::OperationInterfacePart_map" alt=""/>
   <map id="RTT::OperationInterfacePart_map" name="RTT::OperationInterfacePart_map">
-<area href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html" title="A local factory for creating remote Corba methods. " alt="RTT::corba::CorbaOperationCallerFactory" shape="rect" coords="0,56,405,80"/>
-<area href="classRTT_1_1internal_1_1OperationInterfacePartFused.html" title="OperationInterfacePart implementation that uses boost::fusion to produce items. " alt="RTT::internal::OperationInterfacePartFused&lt; Signature &gt;" shape="rect" coords="415,56,820,80"/>
-<area href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html" title="OperationInterfacePart implementation that uses boost::fusion to produce items. " alt="RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;" shape="rect" coords="830,56,1235,80"/>
-<area href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html" title="OperationInterfacePart implementation that only provides synchronous access to an operation..." alt="RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;" shape="rect" coords="1245,56,1650,80"/>
-<area href="classRTT_1_1scripting_1_1FunctionFactory.html" title="A Factory which delivers operations which execute a FunctionGraph in an engine. " alt="RTT::scripting::FunctionFactory" shape="rect" coords="1660,56,2065,80"/>
+<area href="classRTT_1_1internal_1_1OperationInterfacePartFused.html" alt="RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;" shape="rect" coords="0,56,405,80"/>
+<area href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html" title="A local factory for creating remote Corba methods. " alt="RTT::corba::CorbaOperationCallerFactory" shape="rect" coords="415,56,820,80"/>
+<area href="classRTT_1_1internal_1_1OperationInterfacePartFused.html" title="OperationInterfacePart implementation that uses boost::fusion to produce items. " alt="RTT::internal::OperationInterfacePartFused&lt; Signature &gt;" shape="rect" coords="830,56,1235,80"/>
+<area href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html" title="OperationInterfacePart implementation that uses boost::fusion to produce items. " alt="RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;" shape="rect" coords="1245,56,1650,80"/>
+<area href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html" title="OperationInterfacePart implementation that only provides synchronous access to an operation..." alt="RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;" shape="rect" coords="1660,56,2065,80"/>
+<area href="classRTT_1_1scripting_1_1FunctionFactory.html" title="A Factory which delivers operations which execute a FunctionGraph in an engine. " alt="RTT::scripting::FunctionFactory" shape="rect" coords="2075,56,2480,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a491acf16421f4a76092776a9a3186f8e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="rtt-config_8h.html#af1e1ad69baf12318ff1fde1ab942b32b">RTT_API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#a491acf16421f4a76092776a9a3186f8e">~OperationInterfacePart</a> ()</td></tr>
+<tr class="separator:a491acf16421f4a76092776a9a3186f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcd1c698b958ae35a70eeae0d64c99b6"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#abcd1c698b958ae35a70eeae0d64c99b6">getName</a> () const =0</td></tr>
 <tr class="memdesc:abcd1c698b958ae35a70eeae0d64c99b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this operation.  <a href="#abcd1c698b958ae35a70eeae0d64c99b6">More...</a><br /></td></tr>
 <tr class="separator:abcd1c698b958ae35a70eeae0d64c99b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee4f0cbbeaaa6b2de3d6442c42ab4ddd"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#aee4f0cbbeaaa6b2de3d6442c42ab4ddd">description</a> () const =0</td></tr>
 <tr class="memdesc:aee4f0cbbeaaa6b2de3d6442c42ab4ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the description of this operation.  <a href="#aee4f0cbbeaaa6b2de3d6442c42ab4ddd">More...</a><br /></td></tr>
 <tr class="separator:aee4f0cbbeaaa6b2de3d6442c42ab4ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33e0ae26fb003a4c991376f452da56b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33e0ae26fb003a4c991376f452da56b8"></a>
-virtual std::vector&lt; <a class="el" href="structRTT_1_1ArgumentDescription.html">ArgumentDescription</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#a33e0ae26fb003a4c991376f452da56b8">getArgumentList</a> () const =0</td></tr>
-<tr class="memdesc:a33e0ae26fb003a4c991376f452da56b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a description of the desired arguments in the <a class="el" href="structRTT_1_1ArgumentDescription.html" title="Description of one Argument of a Command. ">ArgumentDescription</a> format. <br /></td></tr>
+<tr class="memitem:a33e0ae26fb003a4c991376f452da56b8"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="structRTT_1_1ArgumentDescription.html">ArgumentDescription</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#a33e0ae26fb003a4c991376f452da56b8">getArgumentList</a> () const =0</td></tr>
+<tr class="memdesc:a33e0ae26fb003a4c991376f452da56b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a description of the desired arguments in the <a class="el" href="structRTT_1_1ArgumentDescription.html" title="Description of one Argument of a Command. ">ArgumentDescription</a> format.  <a href="#a33e0ae26fb003a4c991376f452da56b8">More...</a><br /></td></tr>
 <tr class="separator:a33e0ae26fb003a4c991376f452da56b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143e1c6d1ff84c84175397d2fae99ae6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a143e1c6d1ff84c84175397d2fae99ae6"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#a143e1c6d1ff84c84175397d2fae99ae6">resultType</a> () const =0</td></tr>
-<tr class="memdesc:a143e1c6d1ff84c84175397d2fae99ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the result (return) type of this operation. <br /></td></tr>
+<tr class="memitem:a143e1c6d1ff84c84175397d2fae99ae6"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#a143e1c6d1ff84c84175397d2fae99ae6">resultType</a> () const =0</td></tr>
+<tr class="memdesc:a143e1c6d1ff84c84175397d2fae99ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the result (return) type of this operation.  <a href="#a143e1c6d1ff84c84175397d2fae99ae6">More...</a><br /></td></tr>
 <tr class="separator:a143e1c6d1ff84c84175397d2fae99ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec3aefe99248918dfa083c6f94dfff9"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#adec3aefe99248918dfa083c6f94dfff9">arity</a> () const =0</td></tr>
 <tr class="memdesc:adec3aefe99248918dfa083c6f94dfff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the arity (number of arguments) of this operation.  <a href="#adec3aefe99248918dfa083c6f94dfff9">More...</a><br /></td></tr>
@@ -118,7 +119,7 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <tr class="memitem:ae742505198d014dd3086570fa746427a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#ae742505198d014dd3086570fa746427a">produceCollect</a> (const std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt; &amp;args, <a class="el" href="classRTT_1_1internal_1_1DataSource.html">internal::DataSource</a>&lt; bool &gt;::shared_ptr blocking) const =0</td></tr>
 <tr class="memdesc:ae742505198d014dd3086570fa746427a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a DataSource for collecting the results of a Send.  <a href="#ae742505198d014dd3086570fa746427a">More...</a><br /></td></tr>
 <tr class="separator:ae742505198d014dd3086570fa746427a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac9cfc91ff488aab9fa1d5a702701ee8"><td class="memItemLeft" align="right" valign="top">virtual RTT_API boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html">base::DisposableInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#aac9cfc91ff488aab9fa1d5a702701ee8">getLocalOperation</a> () const </td></tr>
+<tr class="memitem:aac9cfc91ff488aab9fa1d5a702701ee8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="rtt-config_8h.html#af1e1ad69baf12318ff1fde1ab942b32b">RTT_API</a> boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html">base::DisposableInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1OperationInterfacePart.html#aac9cfc91ff488aab9fa1d5a702701ee8">getLocalOperation</a> () const </td></tr>
 <tr class="memdesc:aac9cfc91ff488aab9fa1d5a702701ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns any local operation associated with this operation.  <a href="#aac9cfc91ff488aab9fa1d5a702701ee8">More...</a><br /></td></tr>
 <tr class="separator:aac9cfc91ff488aab9fa1d5a702701ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -130,7 +131,33 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <p>This class serves as a base class for the template based classes that implement the produce and query logic for a given operation. </p>
 
 <p>Definition at line <a class="el" href="OperationInterfacePart_8hpp_source.html#l00069">69</a> of file <a class="el" href="OperationInterfacePart_8hpp_source.html">OperationInterfacePart.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a491acf16421f4a76092776a9a3186f8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OperationInterfacePart::~OperationInterfacePart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationInterface_8cpp_source.html#l00049">49</a> of file <a class="el" href="OperationInterface_8cpp_source.html">OperationInterface.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="adec3aefe99248918dfa083c6f94dfff9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -155,7 +182,9 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <p>Returns the arity (number of arguments) of this operation. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classRTT_1_1OperationInterfacePart.html#acb8bfc58feeb11cbbebf219d1bd294fd" title="Create a DataSource for a given callable operation. ">produce</a>, <a class="el" href="classRTT_1_1OperationInterfacePart.html#a5bb20c59d3e2b24b44d071727d4b3406" title="Create a DataSource for a given send operation. ">produceSend</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#ae083054c8ec293871ab7e10d3ca5ce7b">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a8cde798cc157d47e122553d8a48b3d00">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a1feb467a3e9c47eec547843c130f2ea8">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a324a20baa8311c7b7f7454dcaf6ef7f9">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a84e089866aee0d723f1029bb23fa6225">RTT::scripting::FunctionFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#ae083054c8ec293871ab7e10d3ca5ce7b">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a8cde798cc157d47e122553d8a48b3d00">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a1feb467a3e9c47eec547843c130f2ea8">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a1feb467a3e9c47eec547843c130f2ea8">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a324a20baa8311c7b7f7454dcaf6ef7f9">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a84e089866aee0d723f1029bb23fa6225">RTT::scripting::FunctionFactory</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationCallerC_8cpp_source.html#l00062">RTT::OperationCallerC::D::checkAndCreate()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00320">RTT_corba_COperationInterface_i::checkOperation()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00278">RTT_corba_COperationInterface_i::getArgumentType()</a>, and <a class="el" href="OperationInterfaceI_8cpp_source.html#l00299">RTT_corba_COperationInterface_i::getArity()</a>.</p>
 
 </div>
 </div>
@@ -183,7 +212,9 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <p>Returns the number of collectable arguments of this operation's function. </p>
 <p>These consist of the return value and the reference arguments. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRTT_1_1OperationInterfacePart.html#ae742505198d014dd3086570fa746427a" title="Create a DataSource for collecting the results of a Send. ">produceCollect</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a055184f5f2639d207a8dd98270129d96">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a34ab73a54f0a17f892c60f98bf5192ff">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a485d634c618db438c20fb3d867ff9bb7">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a090778b991e740ec0137a127258defc5">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#ac77868efe141ca569eb34c6cc596d6db">RTT::scripting::FunctionFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a055184f5f2639d207a8dd98270129d96">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a34ab73a54f0a17f892c60f98bf5192ff">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a485d634c618db438c20fb3d867ff9bb7">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a485d634c618db438c20fb3d867ff9bb7">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a090778b991e740ec0137a127258defc5">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#ac77868efe141ca569eb34c6cc596d6db">RTT::scripting::FunctionFactory</a>.</p>
+
+<p>Referenced by <a class="el" href="SendHandleC_8cpp_source.html#l00118">RTT::SendHandleC::D::checkAndCreate()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00184">RTT_corba_CSendHandle_i::checkArguments()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00306">RTT_corba_COperationInterface_i::getCollectArity()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00288">RTT_corba_COperationInterface_i::getCollectType()</a>, and <a class="el" href="OperationInterfaceI_8cpp_source.html#l00084">RTT_corba_CSendHandle_i::RTT_corba_CSendHandle_i()</a>.</p>
 
 </div>
 </div>
@@ -211,7 +242,38 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <p>Returns the description of this operation. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a24cff5e4c3472238b79b462d1b6bff58">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a43f11132037656cfd2edc41cce149e31">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a8aef312cf9354b347755f767fb5dbb01">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a2530ba9350fec92edb64ecc624c5b976">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#ac9a80cd1b43e6d3ec205d6ac6323a83b">RTT::scripting::FunctionFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a24cff5e4c3472238b79b462d1b6bff58">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a43f11132037656cfd2edc41cce149e31">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a8aef312cf9354b347755f767fb5dbb01">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a8aef312cf9354b347755f767fb5dbb01">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a2530ba9350fec92edb64ecc624c5b976">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#ac9a80cd1b43e6d3ec205d6ac6323a83b">RTT::scripting::FunctionFactory</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationInterfaceI_8cpp_source.html#l00313">RTT_corba_COperationInterface_i::getDescription()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33e0ae26fb003a4c991376f452da56b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;<a class="el" href="structRTT_1_1ArgumentDescription.html">ArgumentDescription</a>&gt; RTT::OperationInterfacePart::getArgumentList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a description of the desired arguments in the <a class="el" href="structRTT_1_1ArgumentDescription.html" title="Description of one Argument of a Command. ">ArgumentDescription</a> format. </p>
+
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#aab6f00f3582b1bffe3215cdb4d3ea4fb">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#ab957e0cf34e15aaf7c4b4408b5fb368c">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#aec6401df7f16db6d4af9967a84bff789">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#aec6401df7f16db6d4af9967a84bff789">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a387010ebfad87b390133a8fa46885dfb">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a29657a38fbb15d21abfb27fb1066c48b">RTT::scripting::FunctionFactory</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationInterfaceI_8cpp_source.html#l00255">RTT_corba_COperationInterface_i::getArguments()</a>.</p>
 
 </div>
 </div>
@@ -249,7 +311,9 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </ul>
 </dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#acf7d7c730bbaadc822992981997fb485">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#af15c9d76aa1d36f555f2d27cd7a3f106">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a77e73a0838caea37737b16cf16632d6b">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a6b8a51b0d9db4e8dad6d4bc727d6e3e8">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a5024af7e29abb78874e8706741f371df">RTT::scripting::FunctionFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#acf7d7c730bbaadc822992981997fb485">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#af15c9d76aa1d36f555f2d27cd7a3f106">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a77e73a0838caea37737b16cf16632d6b">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a77e73a0838caea37737b16cf16632d6b">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a6b8a51b0d9db4e8dad6d4bc727d6e3e8">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a5024af7e29abb78874e8706741f371df">RTT::scripting::FunctionFactory</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationInterfaceI_8cpp_source.html#l00357">RTT_corba_COperationInterface_i::callOperation()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00320">RTT_corba_COperationInterface_i::checkOperation()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00278">RTT_corba_COperationInterface_i::getArgumentType()</a>, and <a class="el" href="OperationInterfaceI_8cpp_source.html#l00413">RTT_corba_COperationInterface_i::sendOperation()</a>.</p>
 
 </div>
 </div>
@@ -287,7 +351,9 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </ul>
 </dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a16f3bad7453b8f1e98e1c930aa1ec459">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a8f235730629db465d380f4ddbe519a51">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a81e6c09a830cec65ecf9d510743e06d3">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a3a83f41d370cf4b16786679bd0de6420">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a3d2a467c8e2cef40b0ddc464d66bbcd3">RTT::scripting::FunctionFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a16f3bad7453b8f1e98e1c930aa1ec459">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a8f235730629db465d380f4ddbe519a51">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a81e6c09a830cec65ecf9d510743e06d3">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a81e6c09a830cec65ecf9d510743e06d3">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a3a83f41d370cf4b16786679bd0de6420">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a3d2a467c8e2cef40b0ddc464d66bbcd3">RTT::scripting::FunctionFactory</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationInterfaceI_8cpp_source.html#l00184">RTT_corba_CSendHandle_i::checkArguments()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00288">RTT_corba_COperationInterface_i::getCollectType()</a>, and <a class="el" href="OperationInterfaceI_8cpp_source.html#l00084">RTT_corba_CSendHandle_i::RTT_corba_CSendHandle_i()</a>.</p>
 
 </div>
 </div>
@@ -315,11 +381,11 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <p>Returns any local operation associated with this operation. </p>
 <dl class="section return"><dt>Returns</dt><dd>null if no such operation exists, the operation's implementation otherwise. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a17422e73b014a4413f26062b0879e818">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a2fa2c4209eefd648901964361c47394b">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a78ec7c17c3a967bee2255e1b72f1dc9f">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a17422e73b014a4413f26062b0879e818">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a2fa2c4209eefd648901964361c47394b">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a78ec7c17c3a967bee2255e1b72f1dc9f">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a78ec7c17c3a967bee2255e1b72f1dc9f">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>.</p>
 
 <p>Definition at line <a class="el" href="OperationInterface_8cpp_source.html#l00053">53</a> of file <a class="el" href="OperationInterface_8cpp_source.html">OperationInterface.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="OperationCaller_8hpp_source.html#l00180">RTT::OperationCaller&lt; int(const std::string &amp;)&gt;::OperationCaller()</a>, <a class="el" href="OperationCaller_8hpp_source.html#l00236">RTT::OperationCaller&lt; int(const std::string &amp;)&gt;::operator=()</a>, and <a class="el" href="Service_8cpp_source.html#l00169">RTT::Service::setOperationThread()</a>.</p>
+<p>Referenced by <a class="el" href="OperationCaller_8hpp_source.html#l00180">RTT::OperationCaller&lt; int(const std::string &amp;)&gt;::OperationCaller()</a>, <a class="el" href="OperationCaller_8hpp_source.html#l00236">RTT::OperationCaller&lt; int(const std::string &amp;)&gt;::operator=()</a>, and <a class="el" href="Service_8cpp_source.html#l00167">RTT::Service::setOperationThread()</a>.</p>
 
 </div>
 </div>
@@ -347,7 +413,7 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <p>Returns the name of this operation. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a5a5203850d2ba9b858a41a14aa06b0d4">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#ad1adc6c71de099ee6ca9a84ae5af0bbf">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a4c3dcbe8138fbede49027bc8b2fc5488">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#af6631cbb7b3e9e6cfe9587066cbc1acc">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a02c89af895b4604e7eb249e24a9d0eec">RTT::scripting::FunctionFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a5a5203850d2ba9b858a41a14aa06b0d4">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#ad1adc6c71de099ee6ca9a84ae5af0bbf">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a4c3dcbe8138fbede49027bc8b2fc5488">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a4c3dcbe8138fbede49027bc8b2fc5488">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#af6631cbb7b3e9e6cfe9587066cbc1acc">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a02c89af895b4604e7eb249e24a9d0eec">RTT::scripting::FunctionFactory</a>.</p>
 
 <p>Referenced by <a class="el" href="OperationCaller_8hpp_source.html#l00180">RTT::OperationCaller&lt; int(const std::string &amp;)&gt;::OperationCaller()</a>.</p>
 
@@ -403,7 +469,9 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a1d5481cfb6bc8cd2b0db703a2b9ff1e7">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a187615aff42b64883f8ff15c33a3a57e">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a8515e679f9d6f8288b697cfb4df47985">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#aa3e41ae1d5b025dad996f4adef904810">RTT::scripting::FunctionFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a1d5481cfb6bc8cd2b0db703a2b9ff1e7">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a187615aff42b64883f8ff15c33a3a57e">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a187615aff42b64883f8ff15c33a3a57e">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a8515e679f9d6f8288b697cfb4df47985">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#aa3e41ae1d5b025dad996f4adef904810">RTT::scripting::FunctionFactory</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationCallerC_8cpp_source.html#l00062">RTT::OperationCallerC::D::checkAndCreate()</a>.</p>
 
 </div>
 </div>
@@ -458,7 +526,9 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#af7594f3819ea2264cf0281db16fba367">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a7a8bbccf905cf1d0c714aca437cdce06">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#abebb8e13f8e7d6a055e03cfc2530160e">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#aa2b8a05dc9515c5902f067d3f9e6c0a0">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a6d63e83cb8ab216f7f770b1524f8c5d1">RTT::scripting::FunctionFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#af7594f3819ea2264cf0281db16fba367">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a7a8bbccf905cf1d0c714aca437cdce06">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#abebb8e13f8e7d6a055e03cfc2530160e">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#abebb8e13f8e7d6a055e03cfc2530160e">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#aa2b8a05dc9515c5902f067d3f9e6c0a0">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a6d63e83cb8ab216f7f770b1524f8c5d1">RTT::scripting::FunctionFactory</a>.</p>
+
+<p>Referenced by <a class="el" href="SendHandleC_8cpp_source.html#l00118">RTT::SendHandleC::D::checkAndCreate()</a>, and <a class="el" href="ExpressionParser_8cpp_source.html#l00079">RTT::scripting::DataCallParser::DataCallParser()</a>.</p>
 
 </div>
 </div>
@@ -495,7 +565,7 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a6af4abd257ae0806a34638cd4f4e7c02">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#ad9034a7642d37749c33f7776bba5d384">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a1a9f4d08d24e46b17f4ec4b937d39093">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#ad4b332579747a1e86c5ac9b83e4c1b8e">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#aa88a750bcc61de0ffc49acc004d1fbf2">RTT::scripting::FunctionFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a6af4abd257ae0806a34638cd4f4e7c02">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#ad9034a7642d37749c33f7776bba5d384">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a1a9f4d08d24e46b17f4ec4b937d39093">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a1a9f4d08d24e46b17f4ec4b937d39093">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#ad4b332579747a1e86c5ac9b83e4c1b8e">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#aa88a750bcc61de0ffc49acc004d1fbf2">RTT::scripting::FunctionFactory</a>.</p>
 
 </div>
 </div>
@@ -551,7 +621,38 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a9d09158fb83304a252746a11324319ba">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#aaef42e03f76faa4f1cc1612e0ab7ecbe">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a48551e5ac3a94225cccbfa652ab6b015">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a9e9dd0eefe02a1a76e34a02689da56cc">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a3951961a760bc3b06d742632af4a4b4c">RTT::scripting::FunctionFactory</a>.</p>
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a9d09158fb83304a252746a11324319ba">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#aaef42e03f76faa4f1cc1612e0ab7ecbe">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a48551e5ac3a94225cccbfa652ab6b015">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a48551e5ac3a94225cccbfa652ab6b015">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#a9e9dd0eefe02a1a76e34a02689da56cc">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a3951961a760bc3b06d742632af4a4b4c">RTT::scripting::FunctionFactory</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationCallerC_8cpp_source.html#l00062">RTT::OperationCallerC::D::checkAndCreate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a143e1c6d1ff84c84175397d2fae99ae6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string RTT::OperationInterfacePart::resultType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the result (return) type of this operation. </p>
+
+<p>Implemented in <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFusedDS.html#a2601ea4bcaa17ea6e0be8e016e1213f0">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1SynchronousOperationInterfacePartFused.html#a04005012b8394f780a5b4f043b106898">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a196e2237b7422de642094d4e7bcad531">RTT::internal::OperationInterfacePartFused&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1OperationInterfacePartFused.html#a196e2237b7422de642094d4e7bcad531">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaOperationCallerFactory.html#abc56fa2a9697fc81378f2e3025fe1e5c">RTT::corba::CorbaOperationCallerFactory</a>, and <a class="el" href="classRTT_1_1scripting_1_1FunctionFactory.html#a45c6c2b5cbbac75f9c51e5598e935ef0">RTT::scripting::FunctionFactory</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationInterfaceI_8cpp_source.html#l00271">RTT_corba_COperationInterface_i::getResultType()</a>.</p>
 
 </div>
 </div>
@@ -562,7 +663,7 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:02 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

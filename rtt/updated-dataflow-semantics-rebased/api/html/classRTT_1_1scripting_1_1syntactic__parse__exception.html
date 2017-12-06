@@ -54,6 +54,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classRTT_1_1scripting_1_1syntactic__parse__exception-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">RTT::scripting::syntactic_parse_exception Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -70,31 +71,116 @@ Inheritance diagram for RTT::scripting::syntactic_parse_exception:</div>
  <div class="center">
   <img src="classRTT_1_1scripting_1_1syntactic__parse__exception.png" usemap="#RTT::scripting::syntactic_5Fparse_5Fexception_map" alt=""/>
   <map id="RTT::scripting::syntactic_5Fparse_5Fexception_map" name="RTT::scripting::syntactic_parse_exception_map">
-<area href="classRTT_1_1parse__exception.html" title="This is the uppermost exception class in the parser system. " alt="RTT::parse_exception" shape="rect" coords="0,0,280,24"/>
-<area href="classRTT_1_1scripting_1_1parse__exception__syntactic__error.html" title="parse_exception class that is used for various syntactic errors for which it was not worth defining a..." alt="RTT::scripting::parse_exception_syntactic_error" shape="rect" coords="0,112,280,136"/>
+<area href="classRTT_1_1parse__exception.html" title="This is the uppermost exception class in the parser system. " alt="RTT::parse_exception" shape="rect" coords="146,0,429,24"/>
+<area href="classRTT_1_1scripting_1_1parse__exception__illegal__identifier.html" alt="RTT::scripting::parse_exception_illegal_identifier" shape="rect" coords="0,112,283,136"/>
+<area href="classRTT_1_1scripting_1_1parse__exception__syntactic__error.html" title="parse_exception class that is used for various syntactic errors for which it was not worth defining a..." alt="RTT::scripting::parse_exception_syntactic_error" shape="rect" coords="293,112,576,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae6b7aacd1dfdd9fc93dd1044ca32e9bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6b7aacd1dfdd9fc93dd1044ca32e9bb"></a>
-virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const =0</td></tr>
+<tr class="memitem:ae6b7aacd1dfdd9fc93dd1044ca32e9bb"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1parse__exception.html#ae6b7aacd1dfdd9fc93dd1044ca32e9bb">what</a> () const =0</td></tr>
 <tr class="separator:ae6b7aacd1dfdd9fc93dd1044ca32e9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af92fe0ac329fe7d04cfa739b6e855acb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af92fe0ac329fe7d04cfa739b6e855acb"></a>
-virtual <a class="el" href="classRTT_1_1parse__exception.html">parse_exception</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>copy</b> () const =0</td></tr>
+<tr class="memitem:af92fe0ac329fe7d04cfa739b6e855acb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1parse__exception.html">parse_exception</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1parse__exception.html#af92fe0ac329fe7d04cfa739b6e855acb">copy</a> () const =0</td></tr>
 <tr class="separator:af92fe0ac329fe7d04cfa739b6e855acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ac389f1d4ebc58e2f34953f3cad4a2bea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1syntactic__parse__exception.html#ac389f1d4ebc58e2f34953f3cad4a2bea">syntactic_parse_exception</a> ()</td></tr>
+<tr class="separator:ac389f1d4ebc58e2f34953f3cad4a2bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A normal syntactic parse exception means the parser recognised the input, but got stuck later due to a syntactic error, like a missing brace. </p>
 
 <p>Definition at line <a class="el" href="parse__exception_8hpp_source.html#l00145">145</a> of file <a class="el" href="parse__exception_8hpp_source.html">parse_exception.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ac389f1d4ebc58e2f34953f3cad4a2bea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::scripting::syntactic_parse_exception::syntactic_parse_exception </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="parse__exception_8hpp_source.html#l00151">151</a> of file <a class="el" href="parse__exception_8hpp_source.html">parse_exception.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af92fe0ac329fe7d04cfa739b6e855acb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classRTT_1_1parse__exception.html">parse_exception</a>* RTT::parse_exception::copy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classRTT_1_1scripting_1_1parse__exception__no__such__constructor.html#ae2a7c31252fb3a4ed4e221281fa14336">RTT::scripting::parse_exception_no_such_constructor</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__undefined__value.html#a519e4294dd2dceefced6b2860b1f77f2">RTT::scripting::parse_exception_undefined_value</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__wrong__type__of__argument.html#a62a3eae6e5622a6aef47bfde1aec0d44">RTT::scripting::parse_exception_wrong_type_of_argument</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__wrong__number__of__arguments.html#ae322c962260ef1da539e6b6f8de215ef">RTT::scripting::parse_exception_wrong_number_of_arguments</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__no__such__method__on__component.html#a1d5991785d25a30e5bdce21c2053e296">RTT::scripting::parse_exception_no_such_method_on_component</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__no__such__component.html#ad42fea52900489e053d3f834c6687477">RTT::scripting::parse_exception_no_such_component</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__syntactic__error.html#a7eed0692fe7e3a85011de21c66115529">RTT::scripting::parse_exception_syntactic_error</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__parser__fail.html#a663e0f27439dd4661cff71ef3a318961">RTT::scripting::parse_exception_parser_fail</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__fatal__semantic__error.html#a114b0ac7dcbae05c6f997e83410464fe">RTT::scripting::parse_exception_fatal_semantic_error</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__semantic__error.html#a93f27c5a288d71e3c1128ffc2107dbeb">RTT::scripting::parse_exception_semantic_error</a>, and <a class="el" href="classRTT_1_1scripting_1_1parse__exception__illegal__identifier.html#ac4cd071716e6035ca228e89553f3d226">RTT::scripting::parse_exception_illegal_identifier</a>.</p>
+
+<p>Referenced by <a class="el" href="ScriptParser_8cpp_source.html#l00168">RTT::scripting::ScriptParser::parse()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00682">RTT::scripting::ProgramGraphParser::parse()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00722">RTT::scripting::StateGraphParser::parse()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00736">RTT::scripting::ProgramGraphParser::parseFunction()</a>, <a class="el" href="Parser_8cpp_source.html#l00107">RTT::scripting::Parser::parseStateMachine()</a>, and <a class="el" href="Parser_8cpp_source.html#l00062">RTT::scripting::Parser::runScript()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6b7aacd1dfdd9fc93dd1044ca32e9bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::string RTT::parse_exception::what </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classRTT_1_1scripting_1_1parse__exception__no__such__constructor.html#ae4e623972587d1d7381454d0b99ac9c9">RTT::scripting::parse_exception_no_such_constructor</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__undefined__value.html#af4281ec34574fae6c0fa02c73e45c3c0">RTT::scripting::parse_exception_undefined_value</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__wrong__type__of__argument.html#ad38c73f8b65d522bb7ff15e7ccc9cc9b">RTT::scripting::parse_exception_wrong_type_of_argument</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__wrong__number__of__arguments.html#ab9c82cc726f70034266ba0e4dba9c4c3">RTT::scripting::parse_exception_wrong_number_of_arguments</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__no__such__method__on__component.html#a55a2e04df84ad783d6c6f96836b05686">RTT::scripting::parse_exception_no_such_method_on_component</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__no__such__component.html#a2f0753eb26170f0a9221f29f1d0a1f7c">RTT::scripting::parse_exception_no_such_component</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__syntactic__error.html#a0e46d4a94884bbe22d0f8e0bb08f4e68">RTT::scripting::parse_exception_syntactic_error</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__parser__fail.html#ace26ba2cdc21d6e6423e3d2eae5b1bd8">RTT::scripting::parse_exception_parser_fail</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__fatal__semantic__error.html#abea5924b0f4aa077a21b7de151a9c5e2">RTT::scripting::parse_exception_fatal_semantic_error</a>, <a class="el" href="classRTT_1_1scripting_1_1parse__exception__semantic__error.html#a0e25b9d742ed96e85a2ec94b9640c95f">RTT::scripting::parse_exception_semantic_error</a>, and <a class="el" href="classRTT_1_1scripting_1_1parse__exception__illegal__identifier.html#a45f116b7679920cbff09a2061274accf">RTT::scripting::parse_exception_illegal_identifier</a>.</p>
+
+<p>Referenced by <a class="el" href="StatementProcessor_8cpp_source.html#l00072">RTT::StatementProcessor::D::doPrint()</a>, and <a class="el" href="parse__exception_8cpp_source.html#l00081">RTT::file_parse_exception::what()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>rtt/scripting/<a class="el" href="parse__exception_8hpp_source.html">parse_exception.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:09 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

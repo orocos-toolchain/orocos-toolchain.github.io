@@ -76,28 +76,104 @@ Inheritance diagram for RTT::internal::SimpleConnID:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a18974eeb5e83e4ddca0f2cac573092a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18974eeb5e83e4ddca0f2cac573092a5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SimpleConnID</b> (const <a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *orig=0)</td></tr>
+<tr class="memitem:a18974eeb5e83e4ddca0f2cac573092a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SimpleConnID.html#a18974eeb5e83e4ddca0f2cac573092a5">SimpleConnID</a> (const <a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *orig=0)</td></tr>
 <tr class="separator:a18974eeb5e83e4ddca0f2cac573092a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac54b73c4973bb53d4ba97be90808c6b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac54b73c4973bb53d4ba97be90808c6b8"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSameID</b> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> const &amp;id) const </td></tr>
+<tr class="memitem:ac54b73c4973bb53d4ba97be90808c6b8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SimpleConnID.html#ac54b73c4973bb53d4ba97be90808c6b8">isSameID</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> const &amp;id) const </td></tr>
 <tr class="separator:ac54b73c4973bb53d4ba97be90808c6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ea6ee83aefbc6d718e9f97456522e15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ea6ee83aefbc6d718e9f97456522e15"></a>
-virtual <a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const </td></tr>
+<tr class="memitem:a0ea6ee83aefbc6d718e9f97456522e15"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SimpleConnID.html#a0ea6ee83aefbc6d718e9f97456522e15">clone</a> () const </td></tr>
 <tr class="separator:a0ea6ee83aefbc6d718e9f97456522e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A simplistic id that is only same with its own clones (and clones of clones). </p>
 
 <p>Definition at line <a class="el" href="ConnID_8hpp_source.html#l00069">69</a> of file <a class="el" href="ConnID_8hpp_source.html">ConnID.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a18974eeb5e83e4ddca0f2cac573092a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SimpleConnID::SimpleConnID </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *&#160;</td>
+          <td class="paramname"><em>orig</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConnID_8cpp_source.html#l00050">50</a> of file <a class="el" href="ConnID_8cpp_source.html">ConnID.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ConnID_8cpp_source.html#l00057">clone()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a0ea6ee83aefbc6d718e9f97456522e15"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> * SimpleConnID::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1ConnID.html#ae506ab908a15835aeb7e9ff2b3956409">RTT::internal::ConnID</a>.</p>
+
+<p>Definition at line <a class="el" href="ConnID_8cpp_source.html#l00057">57</a> of file <a class="el" href="ConnID_8cpp_source.html">ConnID.cpp</a>.</p>
+
+<p>References <a class="el" href="ConnID_8cpp_source.html#l00050">SimpleConnID()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac54b73c4973bb53d4ba97be90808c6b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SimpleConnID::isSameID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> const &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1ConnID.html#afd18f874c9d8965adb5f077c0d38ee19">RTT::internal::ConnID</a>.</p>
+
+<p>Definition at line <a class="el" href="ConnID_8cpp_source.html#l00051">51</a> of file <a class="el" href="ConnID_8cpp_source.html">ConnID.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>rtt/internal/<a class="el" href="ConnID_8hpp_source.html">ConnID.hpp</a></li>
 <li>rtt/internal/<a class="el" href="ConnID_8cpp_source.html">ConnID.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

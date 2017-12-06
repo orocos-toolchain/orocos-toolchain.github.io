@@ -77,18 +77,15 @@ Inheritance diagram for RTT::os::SharedMutex:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a50ba97196d33ddd602ae3c30be1e5f24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50ba97196d33ddd602ae3c30be1e5f24"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a50ba97196d33ddd602ae3c30be1e5f24">SharedMutex</a> ()</td></tr>
-<tr class="memdesc:a50ba97196d33ddd602ae3c30be1e5f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a shared <a class="el" href="classRTT_1_1os_1_1Mutex.html" title="An object oriented wrapper around a non recursive mutex. ">Mutex</a>. <br /></td></tr>
+<tr class="memitem:a50ba97196d33ddd602ae3c30be1e5f24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a50ba97196d33ddd602ae3c30be1e5f24">SharedMutex</a> ()</td></tr>
+<tr class="memdesc:a50ba97196d33ddd602ae3c30be1e5f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a shared <a class="el" href="classRTT_1_1os_1_1Mutex.html" title="An object oriented wrapper around a non recursive mutex. ">Mutex</a>.  <a href="#a50ba97196d33ddd602ae3c30be1e5f24">More...</a><br /></td></tr>
 <tr class="separator:a50ba97196d33ddd602ae3c30be1e5f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abec6b33fba1e817da59fecf688c5dcb2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#abec6b33fba1e817da59fecf688c5dcb2">~SharedMutex</a> ()</td></tr>
 <tr class="memdesc:abec6b33fba1e817da59fecf688c5dcb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a shared <a class="el" href="classRTT_1_1os_1_1Mutex.html" title="An object oriented wrapper around a non recursive mutex. ">Mutex</a>.  <a href="#abec6b33fba1e817da59fecf688c5dcb2">More...</a><br /></td></tr>
 <tr class="separator:abec6b33fba1e817da59fecf688c5dcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a25a28068d4a36bf90412eab2f75fe0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a25a28068d4a36bf90412eab2f75fe0"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>lock</b> ()</td></tr>
+<tr class="memitem:a2a25a28068d4a36bf90412eab2f75fe0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a2a25a28068d4a36bf90412eab2f75fe0">lock</a> ()</td></tr>
 <tr class="separator:a2a25a28068d4a36bf90412eab2f75fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0df6fd1a2985294759de6b03d916f367"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0df6fd1a2985294759de6b03d916f367"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>unlock</b> ()</td></tr>
+<tr class="memitem:a0df6fd1a2985294759de6b03d916f367"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a0df6fd1a2985294759de6b03d916f367">unlock</a> ()</td></tr>
 <tr class="separator:a0df6fd1a2985294759de6b03d916f367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1379664d6af62164b5fa58c00541eaf0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a1379664d6af62164b5fa58c00541eaf0">trylock</a> ()</td></tr>
 <tr class="memdesc:a1379664d6af62164b5fa58c00541eaf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to lock this mutex exclusively.  <a href="#a1379664d6af62164b5fa58c00541eaf0">More...</a><br /></td></tr>
@@ -96,13 +93,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>unlock</b> ()
 <tr class="memitem:a67876edb0aaa2704374d3dddfe1db5e1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a67876edb0aaa2704374d3dddfe1db5e1">timedlock</a> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> s)</td></tr>
 <tr class="memdesc:a67876edb0aaa2704374d3dddfe1db5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock this mutex exclusively, but don't wait longer for the lock than the specified timeout.  <a href="#a67876edb0aaa2704374d3dddfe1db5e1">More...</a><br /></td></tr>
 <tr class="separator:a67876edb0aaa2704374d3dddfe1db5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a089771c866086bea9595eb7f00c34e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a089771c866086bea9595eb7f00c34e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a9a089771c866086bea9595eb7f00c34e">lock_shared</a> ()</td></tr>
-<tr class="memdesc:a9a089771c866086bea9595eb7f00c34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain shared ownership of this mutex. <br /></td></tr>
+<tr class="memitem:a9a089771c866086bea9595eb7f00c34e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a9a089771c866086bea9595eb7f00c34e">lock_shared</a> ()</td></tr>
+<tr class="memdesc:a9a089771c866086bea9595eb7f00c34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain shared ownership of this mutex.  <a href="#a9a089771c866086bea9595eb7f00c34e">More...</a><br /></td></tr>
 <tr class="separator:a9a089771c866086bea9595eb7f00c34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d0dc62a0cece788d72941bd8b1feb4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d0dc62a0cece788d72941bd8b1feb4c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a4d0dc62a0cece788d72941bd8b1feb4c">unlock_shared</a> ()</td></tr>
-<tr class="memdesc:a4d0dc62a0cece788d72941bd8b1feb4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release shared ownership of this mutex. <br /></td></tr>
+<tr class="memitem:a4d0dc62a0cece788d72941bd8b1feb4c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a4d0dc62a0cece788d72941bd8b1feb4c">unlock_shared</a> ()</td></tr>
+<tr class="memdesc:a4d0dc62a0cece788d72941bd8b1feb4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release shared ownership of this mutex.  <a href="#a4d0dc62a0cece788d72941bd8b1feb4c">More...</a><br /></td></tr>
 <tr class="separator:a4d0dc62a0cece788d72941bd8b1feb4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab804bbc3c75d750041f5266125fd06d9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#ab804bbc3c75d750041f5266125fd06d9">trylock_shared</a> ()</td></tr>
 <tr class="memdesc:ab804bbc3c75d750041f5266125fd06d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to obtain shared ownership of this mutex.  <a href="#ab804bbc3c75d750041f5266125fd06d9">More...</a><br /></td></tr>
@@ -113,29 +108,53 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a2664c00aea1b24f4e60d185e393c9572"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2664c00aea1b24f4e60d185e393c9572"></a>
-rt_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><b>m</b></td></tr>
+<tr class="memitem:a2664c00aea1b24f4e60d185e393c9572"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ecos_2fosi_8h.html#aebee142fa8d51190b44172aab5043ab0">rt_mutex_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a2664c00aea1b24f4e60d185e393c9572">m</a></td></tr>
 <tr class="separator:a2664c00aea1b24f4e60d185e393c9572"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ee6770edcc9fef72ac161a0dd3381b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ee6770edcc9fef72ac161a0dd3381b1"></a>
-rt_cond_t&#160;</td><td class="memItemRight" valign="bottom"><b>shared_cond</b></td></tr>
+<tr class="memitem:a9ee6770edcc9fef72ac161a0dd3381b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrt__cond__t.html">rt_cond_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a9ee6770edcc9fef72ac161a0dd3381b1">shared_cond</a></td></tr>
 <tr class="separator:a9ee6770edcc9fef72ac161a0dd3381b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c2c5f5ea97fd4ac881f6e6efdfd104b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c2c5f5ea97fd4ac881f6e6efdfd104b"></a>
-rt_cond_t&#160;</td><td class="memItemRight" valign="bottom"><b>exclusive_cond</b></td></tr>
+<tr class="memitem:a8c2c5f5ea97fd4ac881f6e6efdfd104b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrt__cond__t.html">rt_cond_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a8c2c5f5ea97fd4ac881f6e6efdfd104b">exclusive_cond</a></td></tr>
 <tr class="separator:a8c2c5f5ea97fd4ac881f6e6efdfd104b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade7bd8155505f74c0b30e87bb1806ac0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade7bd8155505f74c0b30e87bb1806ac0"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>shared_count</b></td></tr>
+<tr class="memitem:ade7bd8155505f74c0b30e87bb1806ac0"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#ade7bd8155505f74c0b30e87bb1806ac0">shared_count</a></td></tr>
 <tr class="separator:ade7bd8155505f74c0b30e87bb1806ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a171b6debf96bd259cfe73005fdd3db6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a171b6debf96bd259cfe73005fdd3db6e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>exclusive</b></td></tr>
+<tr class="memitem:a171b6debf96bd259cfe73005fdd3db6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a171b6debf96bd259cfe73005fdd3db6e">exclusive</a></td></tr>
 <tr class="separator:a171b6debf96bd259cfe73005fdd3db6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An object oriented wrapper around a shared mutex (multiple readers allowed). </p>
-<p>A mutex can only be unlock()'ed, by the thread which lock()'ed it. A trylock is a non blocking lock action which fails or succeeds.</p>
+<p>A mutex can only be <a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a0df6fd1a2985294759de6b03d916f367">unlock()</a>'ed, by the thread which <a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a2a25a28068d4a36bf90412eab2f75fe0">lock()</a>'ed it. A trylock is a non blocking lock action which fails or succeeds.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classRTT_1_1os_1_1MutexLock.html" title="MutexLock is a scope based Monitor, protecting critical sections with a Mutex object through locking ...">MutexLock</a>, <a class="el" href="classRTT_1_1os_1_1MutexTryLock.html" title="A MutexTryLock tries to lock an Mutex object on construction and if successful, unlocks it on destruc...">MutexTryLock</a>, <a class="el" href="classRTT_1_1os_1_1SharedMutexLock.html" title="SharedMutexLock is a scope based Monitor, protecting critical sections with a SharedMutex object thro...">SharedMutexLock</a>, SharedMutexTryLock, <a class="el" href="classRTT_1_1os_1_1Mutex.html" title="An object oriented wrapper around a non recursive mutex. ">Mutex</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00337">337</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a50ba97196d33ddd602ae3c30be1e5f24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::os::SharedMutex::SharedMutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize a shared <a class="el" href="classRTT_1_1os_1_1Mutex.html" title="An object oriented wrapper around a non recursive mutex. ">Mutex</a>. </p>
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00350">350</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+<p>References <a class="el" href="fosi__interface_8h.html#a6170d9e6dd7fa0f380dd8fa2981f5c7c">rtos_cond_init()</a>, and <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00298">rtos_mutex_init()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="abec6b33fba1e817da59fecf688c5dcb2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -162,9 +181,73 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>exclusive</b></td></t
 
 <p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00364">364</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
+<p>References <a class="el" href="fosi__interface_8h.html#a2fb342c097dc8b1e85ed97060772fcf0">rtos_cond_destroy()</a>, and <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00305">rtos_mutex_destroy()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2a25a28068d4a36bf90412eab2f75fe0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RTT::os::SharedMutex::lock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a065f77c8ceebc1eeac59695b197a68cb">RTT::os::MutexInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00374">374</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+<p>References <a class="el" href="fosi__interface_8h.html#a61fc84e10835361a2ba749e0beddabad">rtos_cond_wait()</a>, <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00314">rtos_mutex_lock()</a>, and <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00322">rtos_mutex_unlock()</a>.</p>
+
+<p>Referenced by <a class="el" href="Mutex_8hpp_source.html#l00484">timedlock_shared()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a089771c866086bea9595eb7f00c34e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::os::SharedMutex::lock_shared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain shared ownership of this mutex. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#af686b384db3180727a60e93d4fbd13f0">RTT::os::MutexInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00437">437</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+<p>References <a class="el" href="fosi__interface_8h.html#a61fc84e10835361a2ba749e0beddabad">rtos_cond_wait()</a>, <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00314">rtos_mutex_lock()</a>, and <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00322">rtos_mutex_unlock()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a67876edb0aaa2704374d3dddfe1db5e1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -196,11 +279,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>exclusive</b></td></t
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true when the locking succeeded, false otherwise </dd></dl>
 
-<p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html">RTT::os::MutexInterface</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a3324c0787a8a33f65809a9b3f6fcc2af">RTT::os::MutexInterface</a>.</p>
 
 <p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00419">419</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
-<p>References <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>.</p>
+<p>References <a class="el" href="fosi__interface_8h.html#ad37472d79e8cbc05fd87e9617e64ea03">rtos_cond_timedwait()</a>, <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>, <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00314">rtos_mutex_lock()</a>, <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00322">rtos_mutex_unlock()</a>, and <a class="el" href="os_2Time_8hpp_source.html#l00107">RTT::Seconds_to_nsecs()</a>.</p>
 
 </div>
 </div>
@@ -235,11 +318,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>exclusive</b></td></t
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true when the locking succeeded, false otherwise </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classRTT_1_1os_1_1MutexInterface.html">RTT::os::MutexInterface</a>.</p>
+<p>Reimplemented from <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#ab7eb9e083408b56d4963e1ebd88ae931">RTT::os::MutexInterface</a>.</p>
 
 <p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00484">484</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
-<p>References <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>.</p>
+<p>References <a class="el" href="Mutex_8hpp_source.html#l00374">lock()</a>, <a class="el" href="fosi__interface_8h.html#ad37472d79e8cbc05fd87e9617e64ea03">rtos_cond_timedwait()</a>, <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>, <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00314">rtos_mutex_lock()</a>, <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00322">rtos_mutex_unlock()</a>, and <a class="el" href="os_2Time_8hpp_source.html#l00107">RTT::Seconds_to_nsecs()</a>.</p>
 
 </div>
 </div>
@@ -267,9 +350,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>exclusive</b></td></t
 <p>Try to lock this mutex exclusively. </p>
 <dl class="section return"><dt>Returns</dt><dd>true when the locking succeeded, false otherwise </dd></dl>
 
-<p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html">RTT::os::MutexInterface</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a3b1d68ccfdd3125789e322dae850c6ea">RTT::os::MutexInterface</a>.</p>
 
 <p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00400">400</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+<p>References <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00314">rtos_mutex_lock()</a>, and <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00322">rtos_mutex_unlock()</a>.</p>
 
 </div>
 </div>
@@ -297,9 +382,182 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>exclusive</b></td></t
 <p>Attempt to obtain shared ownership of this mutex. </p>
 <dl class="section return"><dt>Returns</dt><dd>true when the locking succeeded, false otherwise </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classRTT_1_1os_1_1MutexInterface.html">RTT::os::MutexInterface</a>.</p>
+<p>Reimplemented from <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#aea5936ef391f1f1d88403aec630b9320">RTT::os::MutexInterface</a>.</p>
 
 <p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00465">465</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+<p>References <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00314">rtos_mutex_lock()</a>, and <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00322">rtos_mutex_unlock()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0df6fd1a2985294759de6b03d916f367"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RTT::os::SharedMutex::unlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a78e64384a0b1e645ef2ed72f41192f19">RTT::os::MutexInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00384">384</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+<p>References <a class="el" href="fosi__interface_8h.html#a3034d83b55b94d3c935cae85f0905e87">rtos_cond_broadcast()</a>, <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00314">rtos_mutex_lock()</a>, and <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00322">rtos_mutex_unlock()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d0dc62a0cece788d72941bd8b1feb4c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RTT::os::SharedMutex::unlock_shared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Release shared ownership of this mutex. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#af2d2aa6f2f45f25470adaa4da0ba925c">RTT::os::MutexInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00450">450</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+<p>References <a class="el" href="fosi__interface_8h.html#a3034d83b55b94d3c935cae85f0905e87">rtos_cond_broadcast()</a>, <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00314">rtos_mutex_lock()</a>, and <a class="el" href="macosx_2fosi__internal_8cpp_source.html#l00322">rtos_mutex_unlock()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a171b6debf96bd259cfe73005fdd3db6e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::os::SharedMutex::exclusive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00345">345</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c2c5f5ea97fd4ac881f6e6efdfd104b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrt__cond__t.html">rt_cond_t</a> RTT::os::SharedMutex::exclusive_cond</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00343">343</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2664c00aea1b24f4e60d185e393c9572"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ecos_2fosi_8h.html#aebee142fa8d51190b44172aab5043ab0">rt_mutex_t</a> RTT::os::SharedMutex::m</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00341">341</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ee6770edcc9fef72ac161a0dd3381b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrt__cond__t.html">rt_cond_t</a> RTT::os::SharedMutex::shared_cond</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00342">342</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ade7bd8155505f74c0b30e87bb1806ac0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned RTT::os::SharedMutex::shared_count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00344">344</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +567,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>exclusive</b></td></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:08 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

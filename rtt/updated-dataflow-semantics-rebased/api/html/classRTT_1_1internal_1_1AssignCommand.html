@@ -77,33 +77,27 @@ Inheritance diagram for RTT::internal::AssignCommand&lt; T, S &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4b2cab9c2e88edddfd18b2fb8f088ce5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b2cab9c2e88edddfd18b2fb8f088ce5"></a>
-typedef <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html">AssignableDataSource</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a88bcca083175ea427aa22fabb850b578">shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LHSSource</b></td></tr>
+<tr class="memitem:a4b2cab9c2e88edddfd18b2fb8f088ce5"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html">AssignableDataSource</a>&lt; T &gt;::<a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a88bcca083175ea427aa22fabb850b578">shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a4b2cab9c2e88edddfd18b2fb8f088ce5">LHSSource</a></td></tr>
 <tr class="separator:a4b2cab9c2e88edddfd18b2fb8f088ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e5d9745e0ac9cc804252534b2e18f44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e5d9745e0ac9cc804252534b2e18f44"></a>
-typedef <a class="el" href="classRTT_1_1internal_1_1DataSource.html">DataSource</a>&lt; S &gt;::const_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>RHSSource</b></td></tr>
+<tr class="memitem:a3e5d9745e0ac9cc804252534b2e18f44"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classRTT_1_1internal_1_1DataSource.html">DataSource</a>&lt; S &gt;::const_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a3e5d9745e0ac9cc804252534b2e18f44">RHSSource</a></td></tr>
 <tr class="separator:a3e5d9745e0ac9cc804252534b2e18f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88bcca083175ea427aa22fabb850b578"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88bcca083175ea427aa22fabb850b578"></a>
-typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">ActionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a88bcca083175ea427aa22fabb850b578">shared_ptr</a></td></tr>
-<tr class="memdesc:a88bcca083175ea427aa22fabb850b578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this type for shared pointer storage of an <a class="el" href="classRTT_1_1base_1_1ActionInterface.html" title="Based on the software pattern &#39;command&#39;, this interface allows execution of action objects...">ActionInterface</a> object. <br /></td></tr>
+<tr class="memitem:a88bcca083175ea427aa22fabb850b578"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">ActionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a88bcca083175ea427aa22fabb850b578">shared_ptr</a></td></tr>
+<tr class="memdesc:a88bcca083175ea427aa22fabb850b578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this type for shared pointer storage of an <a class="el" href="classRTT_1_1base_1_1ActionInterface.html" title="Based on the software pattern &#39;command&#39;, this interface allows execution of action objects...">ActionInterface</a> object.  <a href="#a88bcca083175ea427aa22fabb850b578">More...</a><br /></td></tr>
 <tr class="separator:a88bcca083175ea427aa22fabb850b578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4848785d656a3302442d1ee21e8ba3c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4848785d656a3302442d1ee21e8ba3c3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">AssignCommand</a> (LHSSource l, RHSSource r)</td></tr>
-<tr class="memdesc:a4848785d656a3302442d1ee21e8ba3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign <em>r</em> (rvalue) to <em>l</em> (lvalue);. <br /></td></tr>
+<tr class="memitem:a4848785d656a3302442d1ee21e8ba3c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a4848785d656a3302442d1ee21e8ba3c3">AssignCommand</a> (<a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a4b2cab9c2e88edddfd18b2fb8f088ce5">LHSSource</a> l, <a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a3e5d9745e0ac9cc804252534b2e18f44">RHSSource</a> r)</td></tr>
+<tr class="memdesc:a4848785d656a3302442d1ee21e8ba3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign <em>r</em> (rvalue) to <em>l</em> (lvalue);.  <a href="#a4848785d656a3302442d1ee21e8ba3c3">More...</a><br /></td></tr>
 <tr class="separator:a4848785d656a3302442d1ee21e8ba3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a908fd5cd76974818ff38cbd668fccbe9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a908fd5cd76974818ff38cbd668fccbe9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a908fd5cd76974818ff38cbd668fccbe9">readArguments</a> ()</td></tr>
-<tr class="memdesc:a908fd5cd76974818ff38cbd668fccbe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is invoked some time before <a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a5f3f82a731c4fb4c43ab4d758f24d178" title="Execute the functionality of this action. ">execute()</a> at a time when the action may read its function arguments. <br /></td></tr>
+<tr class="memitem:a908fd5cd76974818ff38cbd668fccbe9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a908fd5cd76974818ff38cbd668fccbe9">readArguments</a> ()</td></tr>
+<tr class="memdesc:a908fd5cd76974818ff38cbd668fccbe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is invoked some time before <a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a5f3f82a731c4fb4c43ab4d758f24d178" title="Execute the functionality of this action. ">execute()</a> at a time when the action may read its function arguments.  <a href="#a908fd5cd76974818ff38cbd668fccbe9">More...</a><br /></td></tr>
 <tr class="separator:a908fd5cd76974818ff38cbd668fccbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f3f82a731c4fb4c43ab4d758f24d178"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a5f3f82a731c4fb4c43ab4d758f24d178">execute</a> ()</td></tr>
 <tr class="memdesc:a5f3f82a731c4fb4c43ab4d758f24d178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the functionality of this action.  <a href="#a5f3f82a731c4fb4c43ab4d758f24d178">More...</a><br /></td></tr>
 <tr class="separator:a5f3f82a731c4fb4c43ab4d758f24d178"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a627d3fc3cf5b7c0491e8d502b04e13ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a627d3fc3cf5b7c0491e8d502b04e13ee"></a>
-virtual <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a627d3fc3cf5b7c0491e8d502b04e13ee">clone</a> () const </td></tr>
-<tr class="memdesc:a627d3fc3cf5b7c0491e8d502b04e13ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Clone Software Pattern. <br /></td></tr>
+<tr class="memitem:a627d3fc3cf5b7c0491e8d502b04e13ee"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a627d3fc3cf5b7c0491e8d502b04e13ee">clone</a> () const </td></tr>
+<tr class="memdesc:a627d3fc3cf5b7c0491e8d502b04e13ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Clone Software Pattern.  <a href="#a627d3fc3cf5b7c0491e8d502b04e13ee">More...</a><br /></td></tr>
 <tr class="separator:a627d3fc3cf5b7c0491e8d502b04e13ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16b5af42d8571b62c0d2f96765c05e7e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a16b5af42d8571b62c0d2f96765c05e7e">copy</a> (std::map&lt; const <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> * &gt; &amp;alreadyCloned) const </td></tr>
 <tr class="memdesc:a16b5af42d8571b62c0d2f96765c05e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">When copying an <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> program, we want identical <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a>'s to be mapped to identical DataSources, in order for the program to work correctly.  <a href="#a16b5af42d8571b62c0d2f96765c05e7e">More...</a><br /></td></tr>
@@ -129,7 +123,140 @@ class RTT::internal::AssignCommand&lt; T, S &gt;</h3>
 </dl>
 
 <p>Definition at line <a class="el" href="AssignCommand_8hpp_source.html#l00060">60</a> of file <a class="el" href="AssignCommand_8hpp_source.html">AssignCommand.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a4b2cab9c2e88edddfd18b2fb8f088ce5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename S = T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classRTT_1_1internal_1_1AssignableDataSource.html">AssignableDataSource</a>&lt;T&gt;::<a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a88bcca083175ea427aa22fabb850b578">shared_ptr</a> <a class="el" href="classRTT_1_1internal_1_1AssignCommand.html">RTT::internal::AssignCommand</a>&lt; T, S &gt;::<a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a4b2cab9c2e88edddfd18b2fb8f088ce5">LHSSource</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AssignCommand_8hpp_source.html#l00064">64</a> of file <a class="el" href="AssignCommand_8hpp_source.html">AssignCommand.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3e5d9745e0ac9cc804252534b2e18f44"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename S = T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classRTT_1_1internal_1_1DataSource.html">DataSource</a>&lt;S&gt;::const_ptr <a class="el" href="classRTT_1_1internal_1_1AssignCommand.html">RTT::internal::AssignCommand</a>&lt; T, S &gt;::<a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a3e5d9745e0ac9cc804252534b2e18f44">RHSSource</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AssignCommand_8hpp_source.html#l00065">65</a> of file <a class="el" href="AssignCommand_8hpp_source.html">AssignCommand.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a88bcca083175ea427aa22fabb850b578"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classRTT_1_1base_1_1ActionInterface.html">ActionInterface</a>&gt; <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a88bcca083175ea427aa22fabb850b578">RTT::base::ActionInterface::shared_ptr</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Use this type for shared pointer storage of an <a class="el" href="classRTT_1_1base_1_1ActionInterface.html" title="Based on the software pattern &#39;command&#39;, this interface allows execution of action objects...">ActionInterface</a> object. </p>
+
+<p>Definition at line <a class="el" href="ActionInterface_8hpp_source.html#l00078">78</a> of file <a class="el" href="ActionInterface_8hpp_source.html">ActionInterface.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4848785d656a3302442d1ee21e8ba3c3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename S = T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html">RTT::internal::AssignCommand</a>&lt; T, S &gt;::<a class="el" href="classRTT_1_1internal_1_1AssignCommand.html">AssignCommand</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a4b2cab9c2e88edddfd18b2fb8f088ce5">LHSSource</a>&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a3e5d9745e0ac9cc804252534b2e18f44">RHSSource</a>&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assign <em>r</em> (rvalue) to <em>l</em> (lvalue);. </p>
+
+<p>Definition at line <a class="el" href="AssignCommand_8hpp_source.html#l00074">74</a> of file <a class="el" href="AssignCommand_8hpp_source.html">AssignCommand.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="AssignCommand_8hpp_source.html#l00093">RTT::internal::AssignCommand&lt; T, S &gt;::clone()</a>, and <a class="el" href="AssignCommand_8hpp_source.html#l00098">RTT::internal::AssignCommand&lt; T, S &gt;::copy()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a627d3fc3cf5b7c0491e8d502b04e13ee"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename S = T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a>* <a class="el" href="classRTT_1_1internal_1_1AssignCommand.html">RTT::internal::AssignCommand</a>&lt; T, S &gt;::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The Clone Software Pattern. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a835bfbc61e66b94a4e0e5a62d8e22809">RTT::base::ActionInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="AssignCommand_8hpp_source.html#l00093">93</a> of file <a class="el" href="AssignCommand_8hpp_source.html">AssignCommand.hpp</a>.</p>
+
+<p>References <a class="el" href="AssignCommand_8hpp_source.html#l00074">RTT::internal::AssignCommand&lt; T, S &gt;::AssignCommand()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a16b5af42d8571b62c0d2f96765c05e7e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -199,6 +326,37 @@ template&lt;typename T, typename S = T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a908fd5cd76974818ff38cbd668fccbe9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename S = T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1internal_1_1AssignCommand.html">RTT::internal::AssignCommand</a>&lt; T, S &gt;::readArguments </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is invoked some time before <a class="el" href="classRTT_1_1internal_1_1AssignCommand.html#a5f3f82a731c4fb4c43ab4d758f24d178" title="Execute the functionality of this action. ">execute()</a> at a time when the action may read its function arguments. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#ac971ccfe3e4befa97513d715dba36098">RTT::base::ActionInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="AssignCommand_8hpp_source.html#l00079">79</a> of file <a class="el" href="AssignCommand_8hpp_source.html">AssignCommand.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aba0b4f6d3f57f0b4b8faad85686c9080"></a>
 <div class="memitem">
 <div class="memproto">
@@ -223,11 +381,11 @@ template&lt;typename T, typename S = T&gt; </div>
 <p>Reset this action. </p>
 <p>Must be used after <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a85f558f65b156911f3c004fd2aeb5094" title="Execute the functionality of this action. ">execute()</a> failed. </p>
 
-<p>Reimplemented in <a class="el" href="classRTT_1_1scripting_1_1EvalCommand.html#a59e3de6db2e7e8f22697840eecd35452">RTT::scripting::EvalCommand</a>, <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a2eae3d09c2b1a0aa5a781cc8c0ba5507">RTT::scripting::CallFunction</a>, <a class="el" href="structRTT_1_1scripting_1_1CommandDataSourceBool.html#aed2745ac53e40a6770161ae44ce38cf2">RTT::scripting::CommandDataSourceBool</a>, <a class="el" href="classRTT_1_1scripting_1_1TryCommand.html#a6820902afd88202a02cfb6bb10932c52">RTT::scripting::TryCommand</a>, <a class="el" href="classRTT_1_1scripting_1_1CommandCounter.html#a8e03413941b0bef1a0b268ef96b7c4fb">RTT::scripting::CommandCounter</a>, and <a class="el" href="structRTT_1_1scripting_1_1CommandDataSource.html#a5e599728ec3b24ca2f159a5d9da721b7">RTT::scripting::CommandDataSource</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1scripting_1_1EvalCommand.html#a59e3de6db2e7e8f22697840eecd35452">RTT::scripting::EvalCommand</a>, <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a2eae3d09c2b1a0aa5a781cc8c0ba5507">RTT::scripting::CallFunction</a>, <a class="el" href="structRTT_1_1scripting_1_1CommandDataSourceBool.html#aed2745ac53e40a6770161ae44ce38cf2">RTT::scripting::CommandDataSourceBool</a>, <a class="el" href="classRTT_1_1scripting_1_1TryCommand.html#a6820902afd88202a02cfb6bb10932c52">RTT::scripting::TryCommand</a>, <a class="el" href="structRTT_1_1scripting_1_1CommandBinary.html#ad429dd678f86e158ba815f4881285e50">RTT::scripting::CommandBinary</a>, <a class="el" href="classRTT_1_1scripting_1_1CommandCounter.html#a8e03413941b0bef1a0b268ef96b7c4fb">RTT::scripting::CommandCounter</a>, and <a class="el" href="structRTT_1_1scripting_1_1CommandDataSource.html#a5e599728ec3b24ca2f159a5d9da721b7">RTT::scripting::CommandDataSource</a>.</p>
 
 <p>Definition at line <a class="el" href="ActionInterface_8cpp_source.html#l00050">50</a> of file <a class="el" href="ActionInterface_8cpp_source.html">ActionInterface.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="StateMachine_8cpp_source.html#l01174">RTT::scripting::StateMachine::activate()</a>, <a class="el" href="DataSources_8hpp_source.html#l00530">RTT::internal::ActionAliasDataSource&lt; T &gt;::evaluate()</a>, <a class="el" href="DataSources_8hpp_source.html#l00590">RTT::internal::ActionAliasAssignableDataSource&lt; T &gt;::evaluate()</a>, <a class="el" href="DataSources_8hpp_source.html#l00541">RTT::internal::ActionAliasDataSource&lt; T &gt;::get()</a>, <a class="el" href="DataSources_8hpp_source.html#l00601">RTT::internal::ActionAliasAssignableDataSource&lt; T &gt;::get()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, <a class="el" href="DataSourceCommand_8cpp_source.html#l00082">RTT::internal::DataSourceCommand::reset()</a>, <a class="el" href="TryCommand_8cpp_source.html#l00070">RTT::scripting::TryCommand::reset()</a>, and <a class="el" href="VertexNode_8cpp_source.html#l00105">RTT::scripting::VertexNode::startExecution()</a>.</p>
+<p>Referenced by <a class="el" href="StateMachine_8cpp_source.html#l01155">RTT::scripting::StateMachine::activate()</a>, <a class="el" href="DataSources_8hpp_source.html#l00530">RTT::internal::ActionAliasDataSource&lt; T &gt;::evaluate()</a>, <a class="el" href="DataSources_8hpp_source.html#l00590">RTT::internal::ActionAliasAssignableDataSource&lt; T &gt;::evaluate()</a>, <a class="el" href="DataSources_8hpp_source.html#l00541">RTT::internal::ActionAliasDataSource&lt; T &gt;::get()</a>, <a class="el" href="DataSources_8hpp_source.html#l00601">RTT::internal::ActionAliasAssignableDataSource&lt; T &gt;::get()</a>, <a class="el" href="DataSourceCommand_8cpp_source.html#l00082">RTT::internal::DataSourceCommand::reset()</a>, <a class="el" href="CommandBinary_8hpp_source.html#l00074">RTT::scripting::CommandBinary::reset()</a>, <a class="el" href="TryCommand_8cpp_source.html#l00070">RTT::scripting::TryCommand::reset()</a>, and <a class="el" href="VertexNode_8cpp_source.html#l00105">RTT::scripting::VertexNode::startExecution()</a>.</p>
 
 </div>
 </div>
@@ -255,11 +413,11 @@ template&lt;typename T, typename S = T&gt; </div>
 <p>Inspect if this action was <em>executed</em> and <em>valid</em>. </p>
 <p>This method may not be called before <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a85f558f65b156911f3c004fd2aeb5094" title="Execute the functionality of this action. ">execute()</a>. The default implementation returns always <em>true</em>, i.e. after <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a85f558f65b156911f3c004fd2aeb5094" title="Execute the functionality of this action. ">execute()</a>, it was executed. Override this method if it has more complex state semantics. </p>
 
-<p>Reimplemented in <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#abdf5178529eb9291ef423f3e77b824b3">RTT::scripting::CallFunction</a>, <a class="el" href="classRTT_1_1scripting_1_1CommandComposite.html#ab846bc5ba750ff7cee69214e4313488e">RTT::scripting::CommandComposite</a>, and <a class="el" href="classRTT_1_1scripting_1_1TryCommand.html#aae06cdb938b53461cfd0bb2625582014">RTT::scripting::TryCommand</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#abdf5178529eb9291ef423f3e77b824b3">RTT::scripting::CallFunction</a>, <a class="el" href="classRTT_1_1scripting_1_1CommandComposite.html#ab846bc5ba750ff7cee69214e4313488e">RTT::scripting::CommandComposite</a>, <a class="el" href="classRTT_1_1scripting_1_1TryCommand.html#aae06cdb938b53461cfd0bb2625582014">RTT::scripting::TryCommand</a>, and <a class="el" href="structRTT_1_1scripting_1_1CommandBinary.html#a241e8bb2d2d307cfebee01995f3cab36">RTT::scripting::CommandBinary</a>.</p>
 
 <p>Definition at line <a class="el" href="ActionInterface_8cpp_source.html#l00053">53</a> of file <a class="el" href="ActionInterface_8cpp_source.html">ActionInterface.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="VertexNode_8cpp_source.html#l00079">RTT::scripting::VertexNode::isValid()</a>, and <a class="el" href="TryCommand_8cpp_source.html#l00075">RTT::scripting::TryCommand::valid()</a>.</p>
+<p>Referenced by <a class="el" href="VertexNode_8cpp_source.html#l00079">RTT::scripting::VertexNode::isValid()</a>, <a class="el" href="CommandBinary_8hpp_source.html#l00067">RTT::scripting::CommandBinary::valid()</a>, and <a class="el" href="TryCommand_8cpp_source.html#l00075">RTT::scripting::TryCommand::valid()</a>.</p>
 
 </div>
 </div>
@@ -269,7 +427,7 @@ template&lt;typename T, typename S = T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

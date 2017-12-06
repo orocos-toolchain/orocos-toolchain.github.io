@@ -84,13 +84,11 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ae610e6376e03f79fb097aacfd390aacc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae610e6376e03f79fb097aacfd390aacc"></a>
-static CORBA::ORB_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1ApplicationServer.html#ae610e6376e03f79fb097aacfd390aacc">orb</a></td></tr>
-<tr class="memdesc:ae610e6376e03f79fb097aacfd390aacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The orb of this process. <br /></td></tr>
+<tr class="memitem:ae610e6376e03f79fb097aacfd390aacc"><td class="memItemLeft" align="right" valign="top">static CORBA::ORB_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1ApplicationServer.html#ae610e6376e03f79fb097aacfd390aacc">orb</a></td></tr>
+<tr class="memdesc:ae610e6376e03f79fb097aacfd390aacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The orb of this process.  <a href="#ae610e6376e03f79fb097aacfd390aacc">More...</a><br /></td></tr>
 <tr class="separator:ae610e6376e03f79fb097aacfd390aacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eb9a81f3a8c3470d45e8464d126f470"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7eb9a81f3a8c3470d45e8464d126f470"></a>
-static PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1ApplicationServer.html#a7eb9a81f3a8c3470d45e8464d126f470">rootPOA</a></td></tr>
-<tr class="memdesc:a7eb9a81f3a8c3470d45e8464d126f470"><td class="mdescLeft">&#160;</td><td class="mdescRight">The root POA of this process. <br /></td></tr>
+<tr class="memitem:a7eb9a81f3a8c3470d45e8464d126f470"><td class="memItemLeft" align="right" valign="top">static PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1ApplicationServer.html#a7eb9a81f3a8c3470d45e8464d126f470">rootPOA</a></td></tr>
+<tr class="memdesc:a7eb9a81f3a8c3470d45e8464d126f470"><td class="mdescLeft">&#160;</td><td class="mdescRight">The root POA of this process.  <a href="#a7eb9a81f3a8c3470d45e8464d126f470">More...</a><br /></td></tr>
 <tr class="separator:a7eb9a81f3a8c3470d45e8464d126f470"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -146,9 +144,62 @@ static PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom
 
 <p>Definition at line <a class="el" href="ApplicationServer_8cpp_source.html#l00055">55</a> of file <a class="el" href="ApplicationServer_8cpp_source.html">ApplicationServer.cpp</a>.</p>
 
-<p>References <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="Logger_8cpp_source.html#l00380">RTT::Logger::nl()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">orb</a>, and <a class="el" href="ApplicationServer_8hpp_source.html#l00067">rootPOA</a>.</p>
+<p>References <a class="el" href="corba_8h_source.html#l00068">CORBA_EXCEPTION_INFO</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="Logger_8cpp_source.html#l00373">RTT::Logger::nl()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">orb</a>, and <a class="el" href="ApplicationServer_8hpp_source.html#l00067">rootPOA</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextFactory_8cpp_source.html#l00042">RTT::corba::TaskContextFactory::InitOrb()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ae610e6376e03f79fb097aacfd390aacc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORBA::ORB_var RTT::corba::ApplicationServer::orb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The orb of this process. </p>
+
+<p>Definition at line <a class="el" href="ApplicationServer_8hpp_source.html#l00062">62</a> of file <a class="el" href="ApplicationServer_8hpp_source.html">ApplicationServer.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00270">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00258">RTT::corba::TaskContextServer::CleanupServers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00396">RTT::corba::TaskContextProxy::Create()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00412">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00416">RTT::corba::TaskContextProxy::CreateFromFile()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00437">RTT::corba::TaskContextServer::CreateServer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00378">RTT::corba::TaskContextProxy::DestroyOrb()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00378">RTT::corba::TaskContextServer::DestroyOrb()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00288">RTT::corba::TaskContextServer::DoShutdownOrb()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00478">RTT::corba::RemoteChannelElement&lt; T &gt;::getRemoteURI()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">RTT::corba::TaskContextProxy::initFromURIOrTaskname()</a>, <a class="el" href="ApplicationServer_8cpp_source.html#l00055">InitOrb()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00776">RTT::corba::TaskContextProxy::ProxyPOA()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00090">RTT::corba::RemoteChannelElement&lt; T &gt;::RemoteChannelElement()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00316">RTT::corba::TaskContextServer::RunOrb()</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00362">RTT::corba::TaskContextServer::ThreadOrb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7eb9a81f3a8c3470d45e8464d126f470"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortableServer::POA_var RTT::corba::ApplicationServer::rootPOA</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The root POA of this process. </p>
+
+<p>Definition at line <a class="el" href="ApplicationServer_8hpp_source.html#l00067">67</a> of file <a class="el" href="ApplicationServer_8hpp_source.html">ApplicationServer.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00378">RTT::corba::TaskContextProxy::DestroyOrb()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00378">RTT::corba::TaskContextServer::DestroyOrb()</a>, and <a class="el" href="ApplicationServer_8cpp_source.html#l00055">InitOrb()</a>.</p>
 
 </div>
 </div>
@@ -159,7 +210,7 @@ static PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

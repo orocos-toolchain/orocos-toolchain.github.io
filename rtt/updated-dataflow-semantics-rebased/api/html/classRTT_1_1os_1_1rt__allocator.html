@@ -53,6 +53,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classRTT_1_1os_1_1rt__allocator-members.html">List of all members</a>  </div>
@@ -61,84 +62,560 @@
 </div><!--header-->
 <div class="contents">
 
-<p>A real-time malloc allocator which allocates every block with oro_rt_malloc() and deallocates with oro_rt_free().  
+<p>A real-time malloc allocator which allocates every block with <a class="el" href="oro__malloc_8h.html#a33426d61515dbce709065495e16419db">oro_rt_malloc()</a> and deallocates with <a class="el" href="oro__malloc_8h.html#a8ca8e306704847e5bb1a658fe05eb41a">oro_rt_free()</a>.  
  <a href="classRTT_1_1os_1_1rt__allocator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="oro__allocator_8hpp_source.html">rtt/os/oro_allocator.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1os_1_1rt__allocator_1_1rebind.html">rebind</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a74425c4fb19435acb7743c232cba0fb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74425c4fb19435acb7743c232cba0fb8"></a>
-typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+<tr class="memitem:a74425c4fb19435acb7743c232cba0fb8"><td class="memItemLeft" align="right" valign="top">typedef T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a></td></tr>
 <tr class="separator:a74425c4fb19435acb7743c232cba0fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30198bad5a93c0ce0c8a4f69f68e5cce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30198bad5a93c0ce0c8a4f69f68e5cce"></a>
-typedef value_type *&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b></td></tr>
+<tr class="memitem:a30198bad5a93c0ce0c8a4f69f68e5cce"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a></td></tr>
 <tr class="separator:a30198bad5a93c0ce0c8a4f69f68e5cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeac1aab9fe90464cb3f55be7d003a7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abeac1aab9fe90464cb3f55be7d003a7f"></a>
-typedef const value_type *&#160;</td><td class="memItemRight" valign="bottom"><b>const_pointer</b></td></tr>
+<tr class="memitem:abeac1aab9fe90464cb3f55be7d003a7f"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#abeac1aab9fe90464cb3f55be7d003a7f">const_pointer</a></td></tr>
 <tr class="separator:abeac1aab9fe90464cb3f55be7d003a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe9c54f1b3d8088235bc7767edbbe60c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe9c54f1b3d8088235bc7767edbbe60c"></a>
-typedef value_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b></td></tr>
+<tr class="memitem:abe9c54f1b3d8088235bc7767edbbe60c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#abe9c54f1b3d8088235bc7767edbbe60c">reference</a></td></tr>
 <tr class="separator:abe9c54f1b3d8088235bc7767edbbe60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67164cce27b996b3fcf732083fa04b5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67164cce27b996b3fcf732083fa04b5b"></a>
-typedef const value_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>const_reference</b></td></tr>
+<tr class="memitem:a67164cce27b996b3fcf732083fa04b5b"><td class="memItemLeft" align="right" valign="top">typedef const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a67164cce27b996b3fcf732083fa04b5b">const_reference</a></td></tr>
 <tr class="separator:a67164cce27b996b3fcf732083fa04b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ea5e69ef4a93eb0265af2e1bef680d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ea5e69ef4a93eb0265af2e1bef680d6"></a>
-typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b></td></tr>
+<tr class="memitem:a1ea5e69ef4a93eb0265af2e1bef680d6"><td class="memItemLeft" align="right" valign="top">typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a1ea5e69ef4a93eb0265af2e1bef680d6">size_type</a></td></tr>
 <tr class="separator:a1ea5e69ef4a93eb0265af2e1bef680d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dda5d601f76e51ec0cf8f480f3ca12e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0dda5d601f76e51ec0cf8f480f3ca12e"></a>
-typedef std::ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b></td></tr>
+<tr class="memitem:a0dda5d601f76e51ec0cf8f480f3ca12e"><td class="memItemLeft" align="right" valign="top">typedef std::ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a0dda5d601f76e51ec0cf8f480f3ca12e">difference_type</a></td></tr>
 <tr class="separator:a0dda5d601f76e51ec0cf8f480f3ca12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a107aa39260f3941e3e92f0186179ea0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a107aa39260f3941e3e92f0186179ea0e"></a>
-pointer&#160;</td><td class="memItemRight" valign="bottom"><b>address</b> (reference x) const </td></tr>
+<tr class="memitem:a107aa39260f3941e3e92f0186179ea0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a107aa39260f3941e3e92f0186179ea0e">address</a> (<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#abe9c54f1b3d8088235bc7767edbbe60c">reference</a> x) const </td></tr>
 <tr class="separator:a107aa39260f3941e3e92f0186179ea0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeea1f35bab2b4ce4fd0bcd3f23b06697"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeea1f35bab2b4ce4fd0bcd3f23b06697"></a>
-const_pointer&#160;</td><td class="memItemRight" valign="bottom"><b>address</b> (const_reference x) const </td></tr>
+<tr class="memitem:aeea1f35bab2b4ce4fd0bcd3f23b06697"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#abeac1aab9fe90464cb3f55be7d003a7f">const_pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#aeea1f35bab2b4ce4fd0bcd3f23b06697">address</a> (<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a67164cce27b996b3fcf732083fa04b5b">const_reference</a> x) const </td></tr>
 <tr class="separator:aeea1f35bab2b4ce4fd0bcd3f23b06697"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dfb6334f9cf9b5a6e145ee115281e7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dfb6334f9cf9b5a6e145ee115281e7d"></a>
-pointer&#160;</td><td class="memItemRight" valign="bottom"><b>allocate</b> (size_type n, const_pointer=0)</td></tr>
+<tr class="memitem:a4dfb6334f9cf9b5a6e145ee115281e7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a4dfb6334f9cf9b5a6e145ee115281e7d">allocate</a> (<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a1ea5e69ef4a93eb0265af2e1bef680d6">size_type</a> n, <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#abeac1aab9fe90464cb3f55be7d003a7f">const_pointer</a>=0)</td></tr>
 <tr class="separator:a4dfb6334f9cf9b5a6e145ee115281e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08380f4e5072f41bf45fb5e4dae99628"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08380f4e5072f41bf45fb5e4dae99628"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>deallocate</b> (pointer p, size_type)</td></tr>
+<tr class="memitem:a08380f4e5072f41bf45fb5e4dae99628"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a08380f4e5072f41bf45fb5e4dae99628">deallocate</a> (<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a> p, <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a1ea5e69ef4a93eb0265af2e1bef680d6">size_type</a>)</td></tr>
 <tr class="separator:a08380f4e5072f41bf45fb5e4dae99628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a302f222eb430e0434e347f7ffb814566"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a302f222eb430e0434e347f7ffb814566"></a>
-size_type&#160;</td><td class="memItemRight" valign="bottom"><b>max_size</b> () const </td></tr>
+<tr class="memitem:a302f222eb430e0434e347f7ffb814566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a1ea5e69ef4a93eb0265af2e1bef680d6">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a302f222eb430e0434e347f7ffb814566">max_size</a> () const </td></tr>
 <tr class="separator:a302f222eb430e0434e347f7ffb814566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afae5974d8889ce5d5f2632f2456e8936"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afae5974d8889ce5d5f2632f2456e8936"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>construct</b> (pointer p, const value_type &amp;x)</td></tr>
+<tr class="memitem:afae5974d8889ce5d5f2632f2456e8936"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#afae5974d8889ce5d5f2632f2456e8936">construct</a> (<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a> p, const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a> &amp;x)</td></tr>
 <tr class="separator:afae5974d8889ce5d5f2632f2456e8936"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d1074e348eb6fa0aeec30ff6ee533d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d1074e348eb6fa0aeec30ff6ee533d8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> (pointer p)</td></tr>
+<tr class="memitem:a5d1074e348eb6fa0aeec30ff6ee533d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a5d1074e348eb6fa0aeec30ff6ee533d8">destroy</a> (<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a> p)</td></tr>
 <tr class="separator:a5d1074e348eb6fa0aeec30ff6ee533d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b4e00c6d9be287820f388a21d45fdbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b4e00c6d9be287820f388a21d45fdbc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>rt_allocator</b> (const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a> &amp;)</td></tr>
+<tr class="memitem:a3211bcca8a489bfba8882ef3973b7793"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a3211bcca8a489bfba8882ef3973b7793">rt_allocator</a> ()</td></tr>
+<tr class="separator:a3211bcca8a489bfba8882ef3973b7793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4e00c6d9be287820f388a21d45fdbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a5b4e00c6d9be287820f388a21d45fdbc">rt_allocator</a> (const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a> &amp;)</td></tr>
 <tr class="separator:a5b4e00c6d9be287820f388a21d45fdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28e122eeb66f41397529952ff2ffbf31"><td class="memTemplParams" colspan="2"><a class="anchor" id="a28e122eeb66f41397529952ff2ffbf31"></a>
-template&lt;class U &gt; </td></tr>
-<tr class="memitem:a28e122eeb66f41397529952ff2ffbf31"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>rt_allocator</b> (const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a>&lt; U &gt; &amp;)</td></tr>
+<tr class="memitem:a504f17b11374ae05b3956be00fae063a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a504f17b11374ae05b3956be00fae063a">~rt_allocator</a> ()</td></tr>
+<tr class="separator:a504f17b11374ae05b3956be00fae063a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e122eeb66f41397529952ff2ffbf31"><td class="memTemplParams" colspan="2">template&lt;class U &gt; </td></tr>
+<tr class="memitem:a28e122eeb66f41397529952ff2ffbf31"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a28e122eeb66f41397529952ff2ffbf31">rt_allocator</a> (const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a>&lt; U &gt; &amp;)</td></tr>
 <tr class="separator:a28e122eeb66f41397529952ff2ffbf31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6101341dfa24f1636ece858affe33419"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6101341dfa24f1636ece858affe33419"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a> &amp;)</td></tr>
+<tr class="memitem:a6101341dfa24f1636ece858affe33419"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a6101341dfa24f1636ece858affe33419">operator=</a> (const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a> &amp;)</td></tr>
 <tr class="separator:a6101341dfa24f1636ece858affe33419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br />
 class RTT::os::rt_allocator&lt; T &gt;</h3>
 
-<p>A real-time malloc allocator which allocates every block with oro_rt_malloc() and deallocates with oro_rt_free(). </p>
+<p>A real-time malloc allocator which allocates every block with <a class="el" href="oro__malloc_8h.html#a33426d61515dbce709065495e16419db">oro_rt_malloc()</a> and deallocates with <a class="el" href="oro__malloc_8h.html#a8ca8e306704847e5bb1a658fe05eb41a">oro_rt_free()</a>. </p>
 <p>This relies on the TLSF implementation. </p>
 
 <p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00251">251</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="abeac1aab9fe90464cb3f55be7d003a7f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a>* <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#abeac1aab9fe90464cb3f55be7d003a7f">const_pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00256">256</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a67164cce27b996b3fcf732083fa04b5b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a>&amp; <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a67164cce27b996b3fcf732083fa04b5b">const_reference</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00258">258</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0dda5d601f76e51ec0cf8f480f3ca12e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::ptrdiff_t <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a0dda5d601f76e51ec0cf8f480f3ca12e">difference_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00260">260</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a30198bad5a93c0ce0c8a4f69f68e5cce"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a>* <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00255">255</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe9c54f1b3d8088235bc7767edbbe60c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a>&amp; <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#abe9c54f1b3d8088235bc7767edbbe60c">reference</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00257">257</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ea5e69ef4a93eb0265af2e1bef680d6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::size_t <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a1ea5e69ef4a93eb0265af2e1bef680d6">size_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00259">259</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a74425c4fb19435acb7743c232cba0fb8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef T <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::<a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00254">254</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a3211bcca8a489bfba8882ef3973b7793"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::<a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00293">293</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b4e00c6d9be287820f388a21d45fdbc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::<a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00294">294</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a504f17b11374ae05b3956be00fae063a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::~<a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00295">295</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28e122eeb66f41397529952ff2ffbf31"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<div class="memtemplate">
+template&lt;class U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::<a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00297">297</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a107aa39260f3941e3e92f0186179ea0e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a> <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::address </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#abe9c54f1b3d8088235bc7767edbbe60c">reference</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00263">263</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeea1f35bab2b4ce4fd0bcd3f23b06697"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#abeac1aab9fe90464cb3f55be7d003a7f">const_pointer</a> <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::address </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a67164cce27b996b3fcf732083fa04b5b">const_reference</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00267">267</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4dfb6334f9cf9b5a6e145ee115281e7d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a> <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::allocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a1ea5e69ef4a93eb0265af2e1bef680d6">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#abeac1aab9fe90464cb3f55be7d003a7f">const_pointer</a>&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00271">271</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+<p>References <a class="el" href="oro__malloc_8h_source.html#l00054">oro_rt_malloc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afae5974d8889ce5d5f2632f2456e8936"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::construct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a74425c4fb19435acb7743c232cba0fb8">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00286">286</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a08380f4e5072f41bf45fb5e4dae99628"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::deallocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a1ea5e69ef4a93eb0265af2e1bef680d6">size_type</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00278">278</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+<p>References <a class="el" href="oro__malloc_8h_source.html#l00055">oro_rt_free</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d1074e348eb6fa0aeec30ff6ee533d8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a30198bad5a93c0ce0c8a4f69f68e5cce">pointer</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00290">290</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a302f222eb430e0434e347f7ffb814566"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1rt__allocator.html#a1ea5e69ef4a93eb0265af2e1bef680d6">size_type</a> <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::max_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00282">282</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6101341dfa24f1636ece858affe33419"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">RTT::os::rt_allocator</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1os_1_1rt__allocator.html">rt_allocator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__allocator_8hpp_source.html#l00298">298</a> of file <a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>rtt/os/<a class="el" href="oro__allocator_8hpp_source.html">oro_allocator.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:08 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

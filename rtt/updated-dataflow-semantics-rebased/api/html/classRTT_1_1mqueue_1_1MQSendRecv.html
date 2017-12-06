@@ -48,7 +48,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceRTT.html">RTT</a></li><li class="navelem"><b>mqueue</b></li><li class="navelem"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html">MQSendRecv</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceRTT.html">RTT</a></li><li class="navelem"><a class="el" href="namespaceRTT_1_1mqueue.html">mqueue</a></li><li class="navelem"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html">MQSendRecv</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -80,11 +80,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a556afac2c97768838168e1ee827c0b07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a556afac2c97768838168e1ee827c0b07">MQSendRecv</a> (<a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html">types::TypeMarshaller</a> const &amp;transport)</td></tr>
 <tr class="memdesc:a556afac2c97768838168e1ee827c0b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a channel element for remote data exchange.  <a href="#a556afac2c97768838168e1ee827c0b07">More...</a><br /></td></tr>
 <tr class="separator:a556afac2c97768838168e1ee827c0b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4696652bfcb390e883070346c3bb539"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4696652bfcb390e883070346c3bb539"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setupStream</b> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> ds, <a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy, bool is_sender)</td></tr>
+<tr class="memitem:ad4696652bfcb390e883070346c3bb539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#ad4696652bfcb390e883070346c3bb539">setupStream</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> ds, <a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy, bool is_sender)</td></tr>
 <tr class="separator:ad4696652bfcb390e883070346c3bb539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa36f355376cb21bd75af7fcc4ca2d0a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa36f355376cb21bd75af7fcc4ca2d0a5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>cleanupStream</b> ()</td></tr>
+<tr class="memitem:ab9bb77467ab9426300bb7bc19323df81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#ab9bb77467ab9426300bb7bc19323df81">~MQSendRecv</a> ()</td></tr>
+<tr class="separator:ab9bb77467ab9426300bb7bc19323df81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36f355376cb21bd75af7fcc4ca2d0a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#aa36f355376cb21bd75af7fcc4ca2d0a5">cleanupStream</a> ()</td></tr>
 <tr class="separator:aa36f355376cb21bd75af7fcc4ca2d0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af687da2ce172b3ed6869eb877e09a954"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#af687da2ce172b3ed6869eb877e09a954">mqNewSample</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> ds)</td></tr>
 <tr class="memdesc:af687da2ce172b3ed6869eb877e09a954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adapts the mq send/receive buffer size according to the data in mqdata_source, or the value set in mdata_size;.  <a href="#af687da2ce172b3ed6869eb877e09a954">More...</a><br /></td></tr>
@@ -101,39 +101,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>cleanupStream</b> ()<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ae56e6832aae9920d4e74c1c71d75505c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae56e6832aae9920d4e74c1c71d75505c"></a>
-<a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html">types::TypeMarshaller</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#ae56e6832aae9920d4e74c1c71d75505c">mtransport</a></td></tr>
-<tr class="memdesc:ae56e6832aae9920d4e74c1c71d75505c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transport marshaller used for size calculations and data updates. <br /></td></tr>
+<tr class="memitem:ae56e6832aae9920d4e74c1c71d75505c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html">types::TypeMarshaller</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#ae56e6832aae9920d4e74c1c71d75505c">mtransport</a></td></tr>
+<tr class="memdesc:ae56e6832aae9920d4e74c1c71d75505c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transport marshaller used for size calculations and data updates.  <a href="#ae56e6832aae9920d4e74c1c71d75505c">More...</a><br /></td></tr>
 <tr class="separator:ae56e6832aae9920d4e74c1c71d75505c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12a0b2227bd4d9cccec2607227fecd59"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a12a0b2227bd4d9cccec2607227fecd59">marshaller_cookie</a></td></tr>
 <tr class="memdesc:a12a0b2227bd4d9cccec2607227fecd59"><td class="mdescLeft">&#160;</td><td class="mdescRight">A private blob that is returned by mtransport.getCookie().  <a href="#a12a0b2227bd4d9cccec2607227fecd59">More...</a><br /></td></tr>
 <tr class="separator:a12a0b2227bd4d9cccec2607227fecd59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f846d13e42728e2ee35c424d0963907"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f846d13e42728e2ee35c424d0963907"></a>
-mqd_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a0f846d13e42728e2ee35c424d0963907">mqdes</a></td></tr>
-<tr class="memdesc:a0f846d13e42728e2ee35c424d0963907"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQueue file descriptor. <br /></td></tr>
+<tr class="memitem:a0f846d13e42728e2ee35c424d0963907"><td class="memItemLeft" align="right" valign="top">mqd_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a0f846d13e42728e2ee35c424d0963907">mqdes</a></td></tr>
+<tr class="memdesc:a0f846d13e42728e2ee35c424d0963907"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQueue file descriptor.  <a href="#a0f846d13e42728e2ee35c424d0963907">More...</a><br /></td></tr>
 <tr class="separator:a0f846d13e42728e2ee35c424d0963907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a191d2d7bcc44bb99ba59f5a95c6be678"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a191d2d7bcc44bb99ba59f5a95c6be678">buf</a></td></tr>
 <tr class="memdesc:a191d2d7bcc44bb99ba59f5a95c6be678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send/Receive buffer.  <a href="#a191d2d7bcc44bb99ba59f5a95c6be678">More...</a><br /></td></tr>
 <tr class="separator:a191d2d7bcc44bb99ba59f5a95c6be678"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0df88d069c8752c4042d5a903d45182d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0df88d069c8752c4042d5a903d45182d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a0df88d069c8752c4042d5a903d45182d">mis_sender</a></td></tr>
-<tr class="memdesc:a0df88d069c8752c4042d5a903d45182d"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this object is a sender. <br /></td></tr>
+<tr class="memitem:a0df88d069c8752c4042d5a903d45182d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a0df88d069c8752c4042d5a903d45182d">mis_sender</a></td></tr>
+<tr class="memdesc:a0df88d069c8752c4042d5a903d45182d"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this object is a sender.  <a href="#a0df88d069c8752c4042d5a903d45182d">More...</a><br /></td></tr>
 <tr class="separator:a0df88d069c8752c4042d5a903d45182d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a468417ba1e1f6a7dac18e1724f673cc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a468417ba1e1f6a7dac18e1724f673cc0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a468417ba1e1f6a7dac18e1724f673cc0">minit_done</a></td></tr>
-<tr class="memdesc:a468417ba1e1f6a7dac18e1724f673cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if setupStream() was called, false after cleanupStream(). <br /></td></tr>
+<tr class="memitem:a468417ba1e1f6a7dac18e1724f673cc0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a468417ba1e1f6a7dac18e1724f673cc0">minit_done</a></td></tr>
+<tr class="memdesc:a468417ba1e1f6a7dac18e1724f673cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if <a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#ad4696652bfcb390e883070346c3bb539">setupStream()</a> was called, false after <a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#aa36f355376cb21bd75af7fcc4ca2d0a5">cleanupStream()</a>.  <a href="#a468417ba1e1f6a7dac18e1724f673cc0">More...</a><br /></td></tr>
 <tr class="separator:a468417ba1e1f6a7dac18e1724f673cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aca65de383ce108853ebc43140f6e8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9aca65de383ce108853ebc43140f6e8a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a9aca65de383ce108853ebc43140f6e8a">max_size</a></td></tr>
-<tr class="memdesc:a9aca65de383ce108853ebc43140f6e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of buf. <br /></td></tr>
+<tr class="memitem:a9aca65de383ce108853ebc43140f6e8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a9aca65de383ce108853ebc43140f6e8a">max_size</a></td></tr>
+<tr class="memdesc:a9aca65de383ce108853ebc43140f6e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of buf.  <a href="#a9aca65de383ce108853ebc43140f6e8a">More...</a><br /></td></tr>
 <tr class="separator:a9aca65de383ce108853ebc43140f6e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e319487b31e83d288038bebc80d30c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66e319487b31e83d288038bebc80d30c"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a66e319487b31e83d288038bebc80d30c">mqname</a></td></tr>
-<tr class="memdesc:a66e319487b31e83d288038bebc80d30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the queue, as specified in the <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">ConnPolicy</a> when creating the stream, or self-calculated when that name was empty. <br /></td></tr>
+<tr class="memitem:a66e319487b31e83d288038bebc80d30c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a66e319487b31e83d288038bebc80d30c">mqname</a></td></tr>
+<tr class="memdesc:a66e319487b31e83d288038bebc80d30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the queue, as specified in the <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">ConnPolicy</a> when creating the stream, or self-calculated when that name was empty.  <a href="#a66e319487b31e83d288038bebc80d30c">More...</a><br /></td></tr>
 <tr class="separator:a66e319487b31e83d288038bebc80d30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e3f05929bc35ed308ebfe9b30352fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29e3f05929bc35ed308ebfe9b30352fe"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a29e3f05929bc35ed308ebfe9b30352fe">mdata_size</a></td></tr>
-<tr class="memdesc:a29e3f05929bc35ed308ebfe9b30352fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the data, as specified in the <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">ConnPolicy</a> when creating the stream, or calculated using the transport when that size was zero. <br /></td></tr>
+<tr class="memitem:a29e3f05929bc35ed308ebfe9b30352fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#a29e3f05929bc35ed308ebfe9b30352fe">mdata_size</a></td></tr>
+<tr class="memdesc:a29e3f05929bc35ed308ebfe9b30352fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the data, as specified in the <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">ConnPolicy</a> when creating the stream, or calculated using the transport when that size was zero.  <a href="#a29e3f05929bc35ed308ebfe9b30352fe">More...</a><br /></td></tr>
 <tr class="separator:a29e3f05929bc35ed308ebfe9b30352fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -166,11 +159,49 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 
 <p>Definition at line <a class="el" href="MQSendRecv_8cpp_source.html#l00064">64</a> of file <a class="el" href="MQSendRecv_8cpp_source.html">MQSendRecv.cpp</a>.</p>
 
-<p>References <a class="el" href="MQSendRecv_8hpp_source.html#l00079">buf</a>, <a class="el" href="TypeMarshaller_8hpp_source.html#l00068">RTT::types::TypeMarshaller::createCookie()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00248">RTT::ConnPolicy::data_size</a>, <a class="el" href="TypeMarshaller_8hpp_source.html#l00070">RTT::types::TypeMarshaller::deleteCookie()</a>, <a class="el" href="PortInterface_8cpp_source.html#l00104">RTT::base::PortInterface::getInterface()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00128">RTT::TaskContext::getName()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00055">RTT::DataFlowInterface::getOwner()</a>, <a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html#a0aabb6cb6611806502df0752c83cdf72">RTT::types::TypeMarshaller::getSampleSize()</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00067">marshaller_cookie</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00091">max_size</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00102">mdata_size</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00087">minit_done</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00083">mis_sender</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00071">mqdes</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00096">mqname</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00061">mtransport</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00256">RTT::ConnPolicy::name_id</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00193">RTT::ConnPolicy::size</a>.</p>
+</div>
+</div>
+<a class="anchor" id="ab9bb77467ab9426300bb7bc19323df81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MQSendRecv::~MQSendRecv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="MQSendRecv_8cpp_source.html#l00153">153</a> of file <a class="el" href="MQSendRecv_8cpp_source.html">MQSendRecv.cpp</a>.</p>
+
+<p>References <a class="el" href="MQSendRecv_8hpp_source.html#l00071">mqdes</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa36f355376cb21bd75af7fcc4ca2d0a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MQSendRecv::cleanupStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="MQSendRecv_8cpp_source.html#l00159">159</a> of file <a class="el" href="MQSendRecv_8cpp_source.html">MQSendRecv.cpp</a>.</p>
+
+<p>References <a class="el" href="MQSendRecv_8hpp_source.html#l00079">buf</a>, <a class="el" href="TypeMarshaller_8hpp_source.html#l00070">RTT::types::TypeMarshaller::deleteCookie()</a>, <a class="el" href="Dispatcher_8hpp_source.html#l00134">RTT::mqueue::Dispatcher::Instance()</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00067">marshaller_cookie</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00087">minit_done</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00083">mis_sender</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00071">mqdes</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00096">mqname</a>, and <a class="el" href="MQSendRecv_8hpp_source.html#l00061">mtransport</a>.</p>
+
+<p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00085">RTT::mqueue::MQChannelElement&lt; T &gt;::~MQChannelElement()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af687da2ce172b3ed6869eb877e09a954"></a>
 <div class="memitem">
 <div class="memproto">
@@ -205,7 +236,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 
 <p>References <a class="el" href="MQSendRecv_8hpp_source.html#l00079">buf</a>, <a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html#a0aabb6cb6611806502df0752c83cdf72">RTT::types::TypeMarshaller::getSampleSize()</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00091">max_size</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00102">mdata_size</a>, and <a class="el" href="MQSendRecv_8hpp_source.html#l00061">mtransport</a>.</p>
 
-<p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00089">RTT::mqueue::MQChannelElement&lt; T &gt;::inputReady()</a>.</p>
+<p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00099">RTT::mqueue::MQChannelElement&lt; T &gt;::data_sample()</a>.</p>
 
 </div>
 </div>
@@ -277,7 +308,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 
 <p>Definition at line <a class="el" href="MQSendRecv_8cpp_source.html#l00198">198</a> of file <a class="el" href="MQSendRecv_8cpp_source.html">MQSendRecv.cpp</a>.</p>
 
-<p>References <a class="el" href="MQSendRecv_8hpp_source.html#l00079">buf</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00067">marshaller_cookie</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00091">max_size</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00087">minit_done</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00083">mis_sender</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00071">mqdes</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00061">mtransport</a>, and <a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html#aa35cc5d6eaa9d60cd0bf24e73590c622">RTT::types::TypeMarshaller::updateFromBlob()</a>.</p>
+<p>References <a class="el" href="MQSendRecv_8hpp_source.html#l00079">buf</a>, <a class="el" href="macosx_2fosi_8h_source.html#l00078">CLOCK_REALTIME</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Dispatcher_8hpp_source.html#l00134">RTT::mqueue::Dispatcher::Instance()</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00067">marshaller_cookie</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00091">max_size</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00087">minit_done</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00083">mis_sender</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00071">mqdes</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00061">mtransport</a>, <a class="el" href="os_2Time_8hpp_source.html#l00107">RTT::Seconds_to_nsecs()</a>, and <a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html#aa35cc5d6eaa9d60cd0bf24e73590c622">RTT::types::TypeMarshaller::updateFromBlob()</a>.</p>
 
 <p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00089">RTT::mqueue::MQChannelElement&lt; T &gt;::inputReady()</a>.</p>
 
@@ -309,9 +340,53 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 
 <p>Definition at line <a class="el" href="MQSendRecv_8cpp_source.html#l00261">261</a> of file <a class="el" href="MQSendRecv_8cpp_source.html">MQSendRecv.cpp</a>.</p>
 
-<p>References <a class="el" href="MQSendRecv_8hpp_source.html#l00079">buf</a>, <a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html#acb946c48dd52e635847105bccdcc0234">RTT::types::TypeMarshaller::fillBlob()</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00067">marshaller_cookie</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00091">max_size</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00071">mqdes</a>, and <a class="el" href="MQSendRecv_8hpp_source.html#l00061">mtransport</a>.</p>
+<p>References <a class="el" href="MQSendRecv_8hpp_source.html#l00079">buf</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html#acb946c48dd52e635847105bccdcc0234">RTT::types::TypeMarshaller::fillBlob()</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00067">marshaller_cookie</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00091">max_size</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00071">mqdes</a>, and <a class="el" href="MQSendRecv_8hpp_source.html#l00061">mtransport</a>.</p>
 
-<p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00089">RTT::mqueue::MQChannelElement&lt; T &gt;::inputReady()</a>, and <a class="el" href="MQChannelElement_8hpp_source.html#l00162">RTT::mqueue::MQChannelElement&lt; T &gt;::write()</a>.</p>
+<p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00099">RTT::mqueue::MQChannelElement&lt; T &gt;::data_sample()</a>, and <a class="el" href="MQChannelElement_8hpp_source.html#l00162">RTT::mqueue::MQChannelElement&lt; T &gt;::write()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad4696652bfcb390e883070346c3bb539"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MQSendRecv::setupStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td>
+          <td class="paramname"><em>ds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;&#160;</td>
+          <td class="paramname"><em>policy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_sender</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="MQSendRecv_8cpp_source.html#l00069">69</a> of file <a class="el" href="MQSendRecv_8cpp_source.html">MQSendRecv.cpp</a>.</p>
+
+<p>References <a class="el" href="MQSendRecv_8hpp_source.html#l00079">buf</a>, <a class="el" href="TypeMarshaller_8hpp_source.html#l00068">RTT::types::TypeMarshaller::createCookie()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00248">RTT::ConnPolicy::data_size</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="PortInterface_8cpp_source.html#l00104">RTT::base::PortInterface::getInterface()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00128">RTT::TaskContext::getName()</a>, <a class="el" href="DataFlowInterface_8cpp_source.html#l00055">RTT::DataFlowInterface::getOwner()</a>, <a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html#a0aabb6cb6611806502df0752c83cdf72">RTT::types::TypeMarshaller::getSampleSize()</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00067">marshaller_cookie</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00091">max_size</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00102">mdata_size</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00083">mis_sender</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00071">mqdes</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00096">mqname</a>, <a class="el" href="MQSendRecv_8hpp_source.html#l00061">mtransport</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00256">RTT::ConnPolicy::name_id</a>, and <a class="el" href="ConnPolicy_8hpp_source.html#l00193">RTT::ConnPolicy::size</a>.</p>
+
+<p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00074">RTT::mqueue::MQChannelElement&lt; T &gt;::MQChannelElement()</a>.</p>
 
 </div>
 </div>
@@ -340,7 +415,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 
 <p>Definition at line <a class="el" href="MQSendRecv_8hpp_source.html#l00079">79</a> of file <a class="el" href="MQSendRecv_8hpp_source.html">MQSendRecv.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00188">mqNewSample()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00246">mqRead()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00198">mqReady()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00064">MQSendRecv()</a>, and <a class="el" href="MQSendRecv_8cpp_source.html#l00261">mqWrite()</a>.</p>
+<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00159">cleanupStream()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00188">mqNewSample()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00246">mqRead()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00198">mqReady()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00261">mqWrite()</a>, and <a class="el" href="MQSendRecv_8cpp_source.html#l00069">setupStream()</a>.</p>
 
 </div>
 </div>
@@ -367,7 +442,189 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 
 <p>Definition at line <a class="el" href="MQSendRecv_8hpp_source.html#l00067">67</a> of file <a class="el" href="MQSendRecv_8hpp_source.html">MQSendRecv.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00246">mqRead()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00198">mqReady()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00064">MQSendRecv()</a>, and <a class="el" href="MQSendRecv_8cpp_source.html#l00261">mqWrite()</a>.</p>
+<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00159">cleanupStream()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00246">mqRead()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00198">mqReady()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00261">mqWrite()</a>, and <a class="el" href="MQSendRecv_8cpp_source.html#l00069">setupStream()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9aca65de383ce108853ebc43140f6e8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RTT::mqueue::MQSendRecv::max_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The size of buf. </p>
+
+<p>Definition at line <a class="el" href="MQSendRecv_8hpp_source.html#l00091">91</a> of file <a class="el" href="MQSendRecv_8hpp_source.html">MQSendRecv.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00188">mqNewSample()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00246">mqRead()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00198">mqReady()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00261">mqWrite()</a>, and <a class="el" href="MQSendRecv_8cpp_source.html#l00069">setupStream()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29e3f05929bc35ed308ebfe9b30352fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RTT::mqueue::MQSendRecv::mdata_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The size of the data, as specified in the <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">ConnPolicy</a> when creating the stream, or calculated using the transport when that size was zero. </p>
+
+<p>Definition at line <a class="el" href="MQSendRecv_8hpp_source.html#l00102">102</a> of file <a class="el" href="MQSendRecv_8hpp_source.html">MQSendRecv.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00188">mqNewSample()</a>, and <a class="el" href="MQSendRecv_8cpp_source.html#l00069">setupStream()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a468417ba1e1f6a7dac18e1724f673cc0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::mqueue::MQSendRecv::minit_done</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True if <a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#ad4696652bfcb390e883070346c3bb539">setupStream()</a> was called, false after <a class="el" href="classRTT_1_1mqueue_1_1MQSendRecv.html#aa36f355376cb21bd75af7fcc4ca2d0a5">cleanupStream()</a>. </p>
+
+<p>Definition at line <a class="el" href="MQSendRecv_8hpp_source.html#l00087">87</a> of file <a class="el" href="MQSendRecv_8hpp_source.html">MQSendRecv.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00159">cleanupStream()</a>, and <a class="el" href="MQSendRecv_8cpp_source.html#l00198">mqReady()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0df88d069c8752c4042d5a903d45182d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::mqueue::MQSendRecv::mis_sender</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>True if this object is a sender. </p>
+
+<p>Definition at line <a class="el" href="MQSendRecv_8hpp_source.html#l00083">83</a> of file <a class="el" href="MQSendRecv_8hpp_source.html">MQSendRecv.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00159">cleanupStream()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00099">RTT::mqueue::MQChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00198">mqReady()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00069">setupStream()</a>, and <a class="el" href="MQChannelElement_8hpp_source.html#l00128">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f846d13e42728e2ee35c424d0963907"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">mqd_t RTT::mqueue::MQSendRecv::mqdes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MQueue file descriptor. </p>
+
+<p>Definition at line <a class="el" href="MQSendRecv_8hpp_source.html#l00071">71</a> of file <a class="el" href="MQSendRecv_8hpp_source.html">MQSendRecv.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00159">cleanupStream()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00246">mqRead()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00198">mqReady()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00261">mqWrite()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00069">setupStream()</a>, and <a class="el" href="MQSendRecv_8cpp_source.html#l00153">~MQSendRecv()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a66e319487b31e83d288038bebc80d30c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string RTT::mqueue::MQSendRecv::mqname</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The name of the queue, as specified in the <a class="el" href="classRTT_1_1ConnPolicy.html" title="A connection policy object describes how a given connection should behave. ">ConnPolicy</a> when creating the stream, or self-calculated when that name was empty. </p>
+
+<p>Definition at line <a class="el" href="MQSendRecv_8hpp_source.html#l00096">96</a> of file <a class="el" href="MQSendRecv_8hpp_source.html">MQSendRecv.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00159">cleanupStream()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00186">RTT::mqueue::MQChannelElement&lt; T &gt;::getLocalURI()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00176">RTT::mqueue::MQChannelElement&lt; T &gt;::getRemoteURI()</a>, and <a class="el" href="MQSendRecv_8cpp_source.html#l00069">setupStream()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae56e6832aae9920d4e74c1c71d75505c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1types_1_1TypeMarshaller.html">types::TypeMarshaller</a> const&amp; RTT::mqueue::MQSendRecv::mtransport</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transport marshaller used for size calculations and data updates. </p>
+
+<p>Definition at line <a class="el" href="MQSendRecv_8hpp_source.html#l00061">61</a> of file <a class="el" href="MQSendRecv_8hpp_source.html">MQSendRecv.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="MQSendRecv_8cpp_source.html#l00159">cleanupStream()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00188">mqNewSample()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00246">mqRead()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00198">mqReady()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00261">mqWrite()</a>, and <a class="el" href="MQSendRecv_8cpp_source.html#l00069">setupStream()</a>.</p>
 
 </div>
 </div>
@@ -378,7 +635,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -79,15 +79,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a450d21811989b0fe20914ad51ce98e57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ConditionDSDuration.html#a450d21811989b0fe20914ad51ce98e57">ConditionDSDuration</a> (<a class="el" href="classRTT_1_1internal_1_1DataSource.html">internal::DataSource</a>&lt; double &gt;::shared_ptr ds, bool invert=false)</td></tr>
 <tr class="memdesc:a450d21811989b0fe20914ad51ce98e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a condition that changes after <em>ds-&gt;get()</em> seconds.  <a href="#a450d21811989b0fe20914ad51ce98e57">More...</a><br /></td></tr>
 <tr class="separator:a450d21811989b0fe20914ad51ce98e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcff9a25cbf94c0e97028270d410eca6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ConditionDSDuration.html#afcff9a25cbf94c0e97028270d410eca6">~ConditionDSDuration</a> ()</td></tr>
+<tr class="separator:afcff9a25cbf94c0e97028270d410eca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b327137150946e4aa99a10aedadfc92"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ConditionDSDuration.html#a6b327137150946e4aa99a10aedadfc92">evaluate</a> ()</td></tr>
 <tr class="memdesc:a6b327137150946e4aa99a10aedadfc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the Condition and return the outcome.  <a href="#a6b327137150946e4aa99a10aedadfc92">More...</a><br /></td></tr>
 <tr class="separator:a6b327137150946e4aa99a10aedadfc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a946f96e74748d3c8c4c646f5081dd1c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ConditionDSDuration.html#a946f96e74748d3c8c4c646f5081dd1c2">reset</a> ()</td></tr>
 <tr class="memdesc:a946f96e74748d3c8c4c646f5081dd1c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some conditions need to be reset at some points.  <a href="#a946f96e74748d3c8c4c646f5081dd1c2">More...</a><br /></td></tr>
 <tr class="separator:a946f96e74748d3c8c4c646f5081dd1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a82d7a4a96673e1af068116efb39ba2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a82d7a4a96673e1af068116efb39ba2"></a>
-<a class="el" href="classRTT_1_1scripting_1_1ConditionInterface.html">ConditionInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ConditionDSDuration.html#a6a82d7a4a96673e1af068116efb39ba2">clone</a> () const </td></tr>
-<tr class="memdesc:a6a82d7a4a96673e1af068116efb39ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Clone Software Pattern. <br /></td></tr>
+<tr class="memitem:a6a82d7a4a96673e1af068116efb39ba2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1scripting_1_1ConditionInterface.html">ConditionInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ConditionDSDuration.html#a6a82d7a4a96673e1af068116efb39ba2">clone</a> () const </td></tr>
+<tr class="memdesc:a6a82d7a4a96673e1af068116efb39ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Clone Software Pattern.  <a href="#a6a82d7a4a96673e1af068116efb39ba2">More...</a><br /></td></tr>
 <tr class="separator:a6a82d7a4a96673e1af068116efb39ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada4f98e16b10d84e921203fa22309a36"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1scripting_1_1ConditionInterface.html">ConditionInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1ConditionDSDuration.html#ada4f98e16b10d84e921203fa22309a36">copy</a> (std::map&lt; const <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> * &gt; &amp;alreadyCloned) const </td></tr>
 <tr class="memdesc:ada4f98e16b10d84e921203fa22309a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">When copying an <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> program, we want identical <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a>'s to be mapped to identical DataSources, in order for the program to work correctly.  <a href="#ada4f98e16b10d84e921203fa22309a36">More...</a><br /></td></tr>
@@ -138,7 +139,63 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afcff9a25cbf94c0e97028270d410eca6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::ConditionDSDuration::~ConditionDSDuration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConditionDSDuration_8cpp_source.html#l00050">50</a> of file <a class="el" href="ConditionDSDuration_8cpp_source.html">ConditionDSDuration.cpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6a82d7a4a96673e1af068116efb39ba2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1scripting_1_1ConditionInterface.html">ConditionInterface</a> * RTT::ConditionDSDuration::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The Clone Software Pattern. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1scripting_1_1ConditionInterface.html#a51a71508ecee5a0d9e988df21dea0f3c">RTT::scripting::ConditionInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="ConditionDSDuration_8cpp_source.html#l00063">63</a> of file <a class="el" href="ConditionDSDuration_8cpp_source.html">ConditionDSDuration.cpp</a>.</p>
+
+<p>References <a class="el" href="ConditionDSDuration_8cpp_source.html#l00045">ConditionDSDuration()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ada4f98e16b10d84e921203fa22309a36"></a>
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +302,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:08 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

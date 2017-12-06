@@ -62,83 +62,499 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Contains the common CORBA management code for proxy port objects representing ports available through CORBA.  
+<p>Contains the common <a class="el" href="namespaceCORBA.html">CORBA</a> management code for proxy port objects representing ports available through <a class="el" href="namespaceCORBA.html">CORBA</a>.  
  <a href="classRTT_1_1corba_1_1RemotePort.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="RemotePorts_8hpp_source.html">rtt/transports/corba/RemotePorts.hpp</a>&gt;</code></p>
-
-<p>Inherits PortClass.</p>
+<div class="dynheader">
+Inheritance diagram for RTT::corba::RemotePort&lt; PortClass &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classRTT_1_1corba_1_1RemotePort.png" usemap="#RTT::corba::RemotePort_3C_20PortClass_20_3E_map" alt=""/>
+  <map id="RTT::corba::RemotePort_3C_20PortClass_20_3E_map" name="RTT::corba::RemotePort&lt; PortClass &gt;_map">
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac2a32175fa7435e9721147078998f95e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2a32175fa7435e9721147078998f95e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RemotePort</b> (<a class="el" href="classRTT_1_1types_1_1TypeInfo.html">types::TypeInfo</a> const *type_info, CDataFlowInterface_ptr dataflow, std::string const &amp;name, PortableServer::POA_ptr poa)</td></tr>
+<tr class="memitem:ac2a32175fa7435e9721147078998f95e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#ac2a32175fa7435e9721147078998f95e">RemotePort</a> (<a class="el" href="classRTT_1_1types_1_1TypeInfo.html">types::TypeInfo</a> const *<a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a6fa787d5380e9e9379c540a2813670e3">type_info</a>, CDataFlowInterface_ptr <a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a834e59033025a6e2ba31423d988cbb56">dataflow</a>, std::string const &amp;name, PortableServer::POA_ptr poa)</td></tr>
 <tr class="separator:ac2a32175fa7435e9721147078998f95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80dc9065b6680fb5b87028873d52606d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80dc9065b6680fb5b87028873d52606d"></a>
-PortableServer::POA_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>_default_POA</b> ()</td></tr>
+<tr class="memitem:a80dc9065b6680fb5b87028873d52606d"><td class="memItemLeft" align="right" valign="top">PortableServer::POA_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a80dc9065b6680fb5b87028873d52606d">_default_POA</a> ()</td></tr>
 <tr class="separator:a80dc9065b6680fb5b87028873d52606d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a7127b3eeb8cbcb2453b8ce066b664b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a7127b3eeb8cbcb2453b8ce066b664b"></a>
-CDataFlowInterface_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getDataFlowInterface</b> () const </td></tr>
+<tr class="memitem:a4a7127b3eeb8cbcb2453b8ce066b664b"><td class="memItemLeft" align="right" valign="top">CDataFlowInterface_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a4a7127b3eeb8cbcb2453b8ce066b664b">getDataFlowInterface</a> () const </td></tr>
 <tr class="separator:a4a7127b3eeb8cbcb2453b8ce066b664b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf7cad9bd47ab7f6640eae9d873e9e33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf7cad9bd47ab7f6640eae9d873e9e33"></a>
-<a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPortID</b> () const </td></tr>
+<tr class="memitem:acf7cad9bd47ab7f6640eae9d873e9e33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#acf7cad9bd47ab7f6640eae9d873e9e33">getPortID</a> () const </td></tr>
 <tr class="separator:acf7cad9bd47ab7f6640eae9d873e9e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0799077e4e4f9f08c0014eea59a292d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0799077e4e4f9f08c0014eea59a292d"></a>
-<a class="el" href="classRTT_1_1types_1_1TypeInfo.html">types::TypeInfo</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>getTypeInfo</b> () const </td></tr>
+<tr class="memitem:ab0799077e4e4f9f08c0014eea59a292d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1types_1_1TypeInfo.html">types::TypeInfo</a> const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#ab0799077e4e4f9f08c0014eea59a292d">getTypeInfo</a> () const </td></tr>
 <tr class="separator:ab0799077e4e4f9f08c0014eea59a292d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a860a76a0e1dbebf45b37a27e00020cc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a860a76a0e1dbebf45b37a27e00020cc8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>serverProtocol</b> () const </td></tr>
+<tr class="memitem:a860a76a0e1dbebf45b37a27e00020cc8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a860a76a0e1dbebf45b37a27e00020cc8">serverProtocol</a> () const </td></tr>
 <tr class="separator:a860a76a0e1dbebf45b37a27e00020cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a2a58595cbce25b56ba841393bb8682"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a2a58595cbce25b56ba841393bb8682"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>connected</b> () const </td></tr>
+<tr class="memitem:a0a2a58595cbce25b56ba841393bb8682"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a0a2a58595cbce25b56ba841393bb8682">connected</a> () const </td></tr>
 <tr class="separator:a0a2a58595cbce25b56ba841393bb8682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7283bf1724a00f2abe569ddd87cf7d40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7283bf1724a00f2abe569ddd87cf7d40"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>createStream</b> (const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;policy)</td></tr>
+<tr class="memitem:a7283bf1724a00f2abe569ddd87cf7d40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a7283bf1724a00f2abe569ddd87cf7d40">createStream</a> (const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;policy)</td></tr>
 <tr class="separator:a7283bf1724a00f2abe569ddd87cf7d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d9e09c10ff2dd639b6ffbbab577dfab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d9e09c10ff2dd639b6ffbbab577dfab"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>addConnection</b> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *port_id, base::ChannelElementBase::shared_ptr channel_input, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy)</td></tr>
+<tr class="memitem:a1d9e09c10ff2dd639b6ffbbab577dfab"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a1d9e09c10ff2dd639b6ffbbab577dfab">addConnection</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *port_id, <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a> channel_input, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy)</td></tr>
 <tr class="separator:a1d9e09c10ff2dd639b6ffbbab577dfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea8565f0b70fa16e0767a72d69109295"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea8565f0b70fa16e0767a72d69109295"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b> ()</td></tr>
+<tr class="memitem:aea8565f0b70fa16e0767a72d69109295"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#aea8565f0b70fa16e0767a72d69109295">disconnect</a> ()</td></tr>
 <tr class="separator:aea8565f0b70fa16e0767a72d69109295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad940bd99b8b8e5f3c19e77b1d77d5a17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad940bd99b8b8e5f3c19e77b1d77d5a17"></a>
-<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">base::ChannelElementBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEndpoint</b> () const </td></tr>
+<tr class="memitem:ad940bd99b8b8e5f3c19e77b1d77d5a17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">base::ChannelElementBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#ad940bd99b8b8e5f3c19e77b1d77d5a17">getEndpoint</a> () const </td></tr>
 <tr class="separator:ad940bd99b8b8e5f3c19e77b1d77d5a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac1466a724f8333f149ac8d6e9804fb53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1466a724f8333f149ac8d6e9804fb53"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>connectionAdded</b> (base::ChannelElementBase::shared_ptr channel, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy)</td></tr>
+<tr class="memitem:ac1466a724f8333f149ac8d6e9804fb53"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#ac1466a724f8333f149ac8d6e9804fb53">connectionAdded</a> (<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a> channel, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy)</td></tr>
 <tr class="separator:ac1466a724f8333f149ac8d6e9804fb53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a6fa787d5380e9e9379c540a2813670e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fa787d5380e9e9379c540a2813670e3"></a>
-<a class="el" href="classRTT_1_1types_1_1TypeInfo.html">types::TypeInfo</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>type_info</b></td></tr>
+<tr class="memitem:a6fa787d5380e9e9379c540a2813670e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1types_1_1TypeInfo.html">types::TypeInfo</a> const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a6fa787d5380e9e9379c540a2813670e3">type_info</a></td></tr>
 <tr class="separator:a6fa787d5380e9e9379c540a2813670e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a834e59033025a6e2ba31423d988cbb56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a834e59033025a6e2ba31423d988cbb56"></a>
-CDataFlowInterface_var&#160;</td><td class="memItemRight" valign="bottom"><b>dataflow</b></td></tr>
+<tr class="memitem:a834e59033025a6e2ba31423d988cbb56"><td class="memItemLeft" align="right" valign="top">CDataFlowInterface_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a834e59033025a6e2ba31423d988cbb56">dataflow</a></td></tr>
 <tr class="separator:a834e59033025a6e2ba31423d988cbb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e626090a38a0fe4560cba44ed5f068e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e626090a38a0fe4560cba44ed5f068e"></a>
-PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><b>mpoa</b></td></tr>
+<tr class="memitem:a7e626090a38a0fe4560cba44ed5f068e"><td class="memItemLeft" align="right" valign="top">PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1RemotePort.html#a7e626090a38a0fe4560cba44ed5f068e">mpoa</a></td></tr>
 <tr class="separator:a7e626090a38a0fe4560cba44ed5f068e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename PortClass&gt;<br />
 class RTT::corba::RemotePort&lt; PortClass &gt;</h3>
 
-<p>Contains the common CORBA management code for proxy port objects representing ports available through CORBA. </p>
+<p>Contains the common <a class="el" href="namespaceCORBA.html">CORBA</a> management code for proxy port objects representing ports available through <a class="el" href="namespaceCORBA.html">CORBA</a>. </p>
 <p>A Remote port object is just a view (ie proxy) on a real port. This means that many remote port objects can point to the same real port and that destroying a remote port object does not lead to disconnection of the real port. All important functions are to be forwarded to the real port. </p>
 
 <p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00062">62</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ac2a32175fa7435e9721147078998f95e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">RemotePort::RemotePort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1types_1_1TypeInfo.html">types::TypeInfo</a> const *&#160;</td>
+          <td class="paramname"><em>type_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CDataFlowInterface_ptr&#160;</td>
+          <td class="paramname"><em>dataflow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PortableServer::POA_ptr&#160;</td>
+          <td class="paramname"><em>poa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00054">54</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a80dc9065b6680fb5b87028873d52606d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PortableServer::POA_ptr RemotePort::_default_POA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00083">83</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>References <a class="el" href="RemotePorts_8hpp_source.html#l00067">RTT::corba::RemotePort&lt; PortClass &gt;::mpoa</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d9e09c10ff2dd639b6ffbbab577dfab"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RemotePort::addConnection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *&#160;</td>
+          <td class="paramname"><em>port_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a>&#160;</td>
+          <td class="paramname"><em>channel_input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1ConnPolicy.html">RTT::ConnPolicy</a> const &amp;&#160;</td>
+          <td class="paramname"><em>policy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1RemoteInputPort.html#ae28b009417586ab394aa31d3b7a8e9f6">RTT::corba::RemoteInputPort</a>.</p>
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00098">98</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a2a58595cbce25b56ba841393bb8682"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RemotePort::connected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00071">71</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>References <a class="el" href="RemotePorts_8hpp_source.html#l00066">RTT::corba::RemotePort&lt; PortClass &gt;::dataflow</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1466a724f8333f149ac8d6e9804fb53"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classRTT_1_1corba_1_1RemotePort.html">RTT::corba::RemotePort</a>&lt; PortClass &gt;::connectionAdded </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a>&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;&#160;</td>
+          <td class="paramname"><em>policy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00069">69</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7283bf1724a00f2abe569ddd87cf7d40"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RemotePort::createStream </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;&#160;</td>
+          <td class="paramname"><em>policy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00091">91</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aea8565f0b70fa16e0767a72d69109295"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemotePort::disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00076">76</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>References <a class="el" href="RemotePorts_8hpp_source.html#l00066">RTT::corba::RemotePort&lt; PortClass &gt;::dataflow</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00138">RTT::corba::RemoteInputPort::addConnection()</a>, and <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a7127b3eeb8cbcb2453b8ce066b664b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">CDataFlowInterface_ptr RemotePort::getDataFlowInterface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00064">64</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>References <a class="el" href="RemotePorts_8hpp_source.html#l00066">RTT::corba::RemotePort&lt; PortClass &gt;::dataflow</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00275">RTT::corba::RemoteOutputPort::createConnection()</a>, and <a class="el" href="RemotePorts_8cpp_source.html#l00256">RTT::corba::RemoteOutputPort::disconnect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad940bd99b8b8e5f3c19e77b1d77d5a17"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">RTT::base::ChannelElementBase</a> * RemotePort::getEndpoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00105">105</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf7cad9bd47ab7f6640eae9d873e9e33"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">RTT::internal::ConnID</a> * RemotePort::getPortID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00087">87</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>References <a class="el" href="RemotePorts_8hpp_source.html#l00066">RTT::corba::RemotePort&lt; PortClass &gt;::dataflow</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0799077e4e4f9f08c0014eea59a292d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1types_1_1TypeInfo.html">RTT::types::TypeInfo</a> const * RemotePort::getTypeInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00067">67</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>References <a class="el" href="RemotePorts_8hpp_source.html#l00065">RTT::corba::RemotePort&lt; PortClass &gt;::type_info</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a860a76a0e1dbebf45b37a27e00020cc8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int RemotePort::serverProtocol </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8cpp_source.html#l00069">69</a> of file <a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a>.</p>
+
+<p>References <a class="el" href="CorbaLib_8hpp_source.html#l00045">ORO_CORBA_PROTOCOL_ID</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00069">RTT::corba::RemotePort&lt; base::OutputPortInterface &gt;::connectionAdded()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a834e59033025a6e2ba31423d988cbb56"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDataFlowInterface_var <a class="el" href="classRTT_1_1corba_1_1RemotePort.html">RTT::corba::RemotePort</a>&lt; PortClass &gt;::dataflow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00066">66</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00138">RTT::corba::RemoteInputPort::addConnection()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00071">RTT::corba::RemotePort&lt; PortClass &gt;::connected()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00076">RTT::corba::RemotePort&lt; PortClass &gt;::disconnect()</a>, <a class="el" href="RemotePorts_8cpp_source.html#l00064">RTT::corba::RemotePort&lt; PortClass &gt;::getDataFlowInterface()</a>, and <a class="el" href="RemotePorts_8cpp_source.html#l00087">RTT::corba::RemotePort&lt; PortClass &gt;::getPortID()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e626090a38a0fe4560cba44ed5f068e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortableServer::POA_var <a class="el" href="classRTT_1_1corba_1_1RemotePort.html">RTT::corba::RemotePort</a>&lt; PortClass &gt;::mpoa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00067">67</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8cpp_source.html#l00083">RTT::corba::RemotePort&lt; PortClass &gt;::_default_POA()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6fa787d5380e9e9379c540a2813670e3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PortClass&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1types_1_1TypeInfo.html">types::TypeInfo</a> const* <a class="el" href="classRTT_1_1corba_1_1RemotePort.html">RTT::corba::RemotePort</a>&lt; PortClass &gt;::type_info</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemotePorts_8hpp_source.html#l00065">65</a> of file <a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="RemotePorts_8hpp_source.html#l00138">RTT::corba::RemoteInputPort::addConnection()</a>, and <a class="el" href="RemotePorts_8cpp_source.html#l00067">RTT::corba::RemotePort&lt; PortClass &gt;::getTypeInfo()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>rtt/transports/corba/<a class="el" href="RemotePorts_8hpp_source.html">RemotePorts.hpp</a></li>
 <li>rtt/transports/corba/<a class="el" href="RemotePorts_8cpp_source.html">RemotePorts.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

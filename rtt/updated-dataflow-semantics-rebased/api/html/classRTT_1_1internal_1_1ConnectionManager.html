@@ -70,11 +70,10 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a2b38bb2997ad504a705a6ab969334848"><td class="memItemLeft" align="right" valign="top">typedef boost::tuple&lt; boost::shared_ptr&lt; <a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> &gt;, base::ChannelElementBase::shared_ptr, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">ChannelDescriptor</a></td></tr>
+<tr class="memitem:a2b38bb2997ad504a705a6ab969334848"><td class="memItemLeft" align="right" valign="top">typedef boost::tuple&lt; boost::shared_ptr&lt; <a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> &gt;, <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a>, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">ChannelDescriptor</a></td></tr>
 <tr class="memdesc:a2b38bb2997ad504a705a6ab969334848"><td class="mdescLeft">&#160;</td><td class="mdescRight">A connection is described by an opaque <a class="el" href="classRTT_1_1internal_1_1ConnID.html" title="This class is used in places where a permanent representation of a reference to a connection is neede...">ConnID</a> object, the first element of the connection and the policy of the connection.  <a href="#a2b38bb2997ad504a705a6ab969334848">More...</a><br /></td></tr>
 <tr class="separator:a2b38bb2997ad504a705a6ab969334848"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a356aca7614582f5e7b7ea84ac10ef6be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a356aca7614582f5e7b7ea84ac10ef6be"></a>
-typedef std::list&lt; <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">ChannelDescriptor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Connections</b></td></tr>
+<tr class="memitem:a356aca7614582f5e7b7ea84ac10ef6be"><td class="memItemLeft" align="right" valign="top">typedef std::list&lt; <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">ChannelDescriptor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a356aca7614582f5e7b7ea84ac10ef6be">Connections</a></td></tr>
 <tr class="separator:a356aca7614582f5e7b7ea84ac10ef6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -82,49 +81,41 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ada2cb7d0a6ec4271d2bdf2a80f17d6a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#ada2cb7d0a6ec4271d2bdf2a80f17d6a6">ConnectionManager</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port)</td></tr>
 <tr class="memdesc:ada2cb7d0a6ec4271d2bdf2a80f17d6a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a connection manager to manage the connections of <em>port</em>.  <a href="#ada2cb7d0a6ec4271d2bdf2a80f17d6a6">More...</a><br /></td></tr>
 <tr class="separator:ada2cb7d0a6ec4271d2bdf2a80f17d6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af289a05edbb954e96200cb3a526a6107"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#af289a05edbb954e96200cb3a526a6107">addConnection</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *port_id, base::ChannelElementBase::shared_ptr channel, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> policy)</td></tr>
+<tr class="memitem:ae6f5d35604eb7168ef84dba3b4ff0228"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#ae6f5d35604eb7168ef84dba3b4ff0228">~ConnectionManager</a> ()</td></tr>
+<tr class="separator:ae6f5d35604eb7168ef84dba3b4ff0228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af289a05edbb954e96200cb3a526a6107"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#af289a05edbb954e96200cb3a526a6107">addConnection</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *port_id, <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a> channel, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> policy)</td></tr>
 <tr class="memdesc:af289a05edbb954e96200cb3a526a6107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper method for port-to-port connection establishment.  <a href="#af289a05edbb954e96200cb3a526a6107">More...</a><br /></td></tr>
 <tr class="separator:af289a05edbb954e96200cb3a526a6107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a078eed3674a72fc7b5188950a88b007f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a078eed3674a72fc7b5188950a88b007f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>removeConnection</b> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *port_id, bool <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca">disconnect</a>=true)</td></tr>
+<tr class="memitem:a078eed3674a72fc7b5188950a88b007f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a078eed3674a72fc7b5188950a88b007f">removeConnection</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *port_id, bool <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca">disconnect</a>=true)</td></tr>
 <tr class="separator:a078eed3674a72fc7b5188950a88b007f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b0affac81e3c090e0a402024a9ead85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b0affac81e3c090e0a402024a9ead85"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>removeConnection</b> (<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">base::ChannelElementBase</a> *channel, bool <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca">disconnect</a>=true)</td></tr>
+<tr class="memitem:a4b0affac81e3c090e0a402024a9ead85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a4b0affac81e3c090e0a402024a9ead85">removeConnection</a> (<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">base::ChannelElementBase</a> *channel, bool <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca">disconnect</a>=true)</td></tr>
 <tr class="separator:a4b0affac81e3c090e0a402024a9ead85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1070d33dd99d0fe1030c8b6aae3096ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1070d33dd99d0fe1030c8b6aae3096ca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca">disconnect</a> ()</td></tr>
-<tr class="memdesc:a1070d33dd99d0fe1030c8b6aae3096ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect all connections. <br /></td></tr>
+<tr class="memitem:a1070d33dd99d0fe1030c8b6aae3096ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca">disconnect</a> ()</td></tr>
+<tr class="memdesc:a1070d33dd99d0fe1030c8b6aae3096ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect all connections.  <a href="#a1070d33dd99d0fe1030c8b6aae3096ca">More...</a><br /></td></tr>
 <tr class="separator:a1070d33dd99d0fe1030c8b6aae3096ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af26261c2f336fa248c386d390774e409"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af26261c2f336fa248c386d390774e409"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#af26261c2f336fa248c386d390774e409">connected</a> () const </td></tr>
-<tr class="memdesc:af26261c2f336fa248c386d390774e409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if there is at least one connection registered in this port's list of outputs. <br /></td></tr>
+<tr class="memitem:af26261c2f336fa248c386d390774e409"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#af26261c2f336fa248c386d390774e409">connected</a> () const </td></tr>
+<tr class="memdesc:af26261c2f336fa248c386d390774e409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if there is at least one connection registered in this port's list of outputs.  <a href="#af26261c2f336fa248c386d390774e409">More...</a><br /></td></tr>
 <tr class="separator:af26261c2f336fa248c386d390774e409"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4ea48d83495b212fc88039c0c52e794"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4ea48d83495b212fc88039c0c52e794"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#aa4ea48d83495b212fc88039c0c52e794">connectedTo</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port)</td></tr>
-<tr class="memdesc:aa4ea48d83495b212fc88039c0c52e794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if there exists a connection to the given port. <br /></td></tr>
+<tr class="memitem:aa4ea48d83495b212fc88039c0c52e794"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#aa4ea48d83495b212fc88039c0c52e794">connectedTo</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port)</td></tr>
+<tr class="memdesc:aa4ea48d83495b212fc88039c0c52e794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if there exists a connection to the given port.  <a href="#aa4ea48d83495b212fc88039c0c52e794">More...</a><br /></td></tr>
 <tr class="separator:aa4ea48d83495b212fc88039c0c52e794"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd1045b3445ff91659ef5b855fb608bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd1045b3445ff91659ef5b855fb608bc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#abd1045b3445ff91659ef5b855fb608bc">disconnect</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port)</td></tr>
-<tr class="memdesc:abd1045b3445ff91659ef5b855fb608bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the connection that connects this port to <code>port</code>. <br /></td></tr>
+<tr class="memitem:abd1045b3445ff91659ef5b855fb608bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#abd1045b3445ff91659ef5b855fb608bc">disconnect</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *port)</td></tr>
+<tr class="memdesc:abd1045b3445ff91659ef5b855fb608bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the connection that connects this port to <code>port</code>.  <a href="#abd1045b3445ff91659ef5b855fb608bc">More...</a><br /></td></tr>
 <tr class="separator:abd1045b3445ff91659ef5b855fb608bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ebdd0bb795856f2f1b4e38d782d9dae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2ebdd0bb795856f2f1b4e38d782d9dae">isSingleConnection</a> () const </td></tr>
 <tr class="memdesc:a2ebdd0bb795856f2f1b4e38d782d9dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this manager manages only one connection.  <a href="#a2ebdd0bb795856f2f1b4e38d782d9dae">More...</a><br /></td></tr>
 <tr class="separator:a2ebdd0bb795856f2f1b4e38d782d9dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04688d0b35aebf074bc78319eb1e3e2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04688d0b35aebf074bc78319eb1e3e2d"></a>
-Connections&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a04688d0b35aebf074bc78319eb1e3e2d">getConnections</a> () const </td></tr>
-<tr class="memdesc:a04688d0b35aebf074bc78319eb1e3e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all connections managed by this object. <br /></td></tr>
+<tr class="memitem:a04688d0b35aebf074bc78319eb1e3e2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a356aca7614582f5e7b7ea84ac10ef6be">Connections</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a04688d0b35aebf074bc78319eb1e3e2d">getConnections</a> () const </td></tr>
+<tr class="memdesc:a04688d0b35aebf074bc78319eb1e3e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all connections managed by this object.  <a href="#a04688d0b35aebf074bc78319eb1e3e2d">More...</a><br /></td></tr>
 <tr class="separator:a04688d0b35aebf074bc78319eb1e3e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0483f64f3116268f5f46d9b514f3fb93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0483f64f3116268f5f46d9b514f3fb93"></a>
-internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a0483f64f3116268f5f46d9b514f3fb93">getSharedConnection</a> () const </td></tr>
-<tr class="memdesc:a0483f64f3116268f5f46d9b514f3fb93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the shared connection element this port may be connected to. <br /></td></tr>
+<tr class="memitem:a0483f64f3116268f5f46d9b514f3fb93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html#ab9c887d71d1615f576b7cc6b6bd3458a">internal::SharedConnectionBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a0483f64f3116268f5f46d9b514f3fb93">getSharedConnection</a> () const </td></tr>
+<tr class="memdesc:a0483f64f3116268f5f46d9b514f3fb93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the shared connection element this port may be connected to.  <a href="#a0483f64f3116268f5f46d9b514f3fb93">More...</a><br /></td></tr>
 <tr class="separator:a0483f64f3116268f5f46d9b514f3fb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba75892d4a0f46c3618463025f7ffd15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba75892d4a0f46c3618463025f7ffd15"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#aba75892d4a0f46c3618463025f7ffd15">lock</a> () const </td></tr>
-<tr class="memdesc:aba75892d4a0f46c3618463025f7ffd15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the mutex protecting the channel element list. <br /></td></tr>
+<tr class="memitem:aba75892d4a0f46c3618463025f7ffd15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#aba75892d4a0f46c3618463025f7ffd15">lock</a> () const </td></tr>
+<tr class="memdesc:aba75892d4a0f46c3618463025f7ffd15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the mutex protecting the channel element list.  <a href="#aba75892d4a0f46c3618463025f7ffd15">More...</a><br /></td></tr>
 <tr class="separator:aba75892d4a0f46c3618463025f7ffd15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a263b371598bc5777f737df7a6c091e1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a263b371598bc5777f737df7a6c091e1b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a263b371598bc5777f737df7a6c091e1b">unlock</a> () const </td></tr>
-<tr class="memdesc:a263b371598bc5777f737df7a6c091e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlocks the mutex protecting the channel element list. <br /></td></tr>
+<tr class="memitem:a263b371598bc5777f737df7a6c091e1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a263b371598bc5777f737df7a6c091e1b">unlock</a> () const </td></tr>
+<tr class="memdesc:a263b371598bc5777f737df7a6c091e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlocks the mutex protecting the channel element list.  <a href="#a263b371598bc5777f737df7a6c091e1b">More...</a><br /></td></tr>
 <tr class="separator:a263b371598bc5777f737df7a6c091e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -135,20 +126,17 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a2f8030b0a2960f5d6363873fc8d07659"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f8030b0a2960f5d6363873fc8d07659"></a>
-<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2f8030b0a2960f5d6363873fc8d07659">mport</a></td></tr>
-<tr class="memdesc:a2f8030b0a2960f5d6363873fc8d07659"><td class="mdescLeft">&#160;</td><td class="mdescRight">The port for which we manage connections. <br /></td></tr>
+<tr class="memitem:a2f8030b0a2960f5d6363873fc8d07659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2f8030b0a2960f5d6363873fc8d07659">mport</a></td></tr>
+<tr class="memdesc:a2f8030b0a2960f5d6363873fc8d07659"><td class="mdescLeft">&#160;</td><td class="mdescRight">The port for which we manage connections.  <a href="#a2f8030b0a2960f5d6363873fc8d07659">More...</a><br /></td></tr>
 <tr class="separator:a2f8030b0a2960f5d6363873fc8d07659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7d52fa61c6d3322112a82de4c0ea43d"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">ChannelDescriptor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#ac7d52fa61c6d3322112a82de4c0ea43d">connections</a></td></tr>
 <tr class="memdesc:ac7d52fa61c6d3322112a82de4c0ea43d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of all our connections.  <a href="#ac7d52fa61c6d3322112a82de4c0ea43d">More...</a><br /></td></tr>
 <tr class="separator:ac7d52fa61c6d3322112a82de4c0ea43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98256cecaa95421a16f8c67299e466de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98256cecaa95421a16f8c67299e466de"></a>
-internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a98256cecaa95421a16f8c67299e466de">shared_connection</a></td></tr>
-<tr class="memdesc:a98256cecaa95421a16f8c67299e466de"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the shared connection this port may be connected to. <br /></td></tr>
+<tr class="memitem:a98256cecaa95421a16f8c67299e466de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html#ab9c887d71d1615f576b7cc6b6bd3458a">internal::SharedConnectionBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a98256cecaa95421a16f8c67299e466de">shared_connection</a></td></tr>
+<tr class="memdesc:a98256cecaa95421a16f8c67299e466de"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the shared connection this port may be connected to.  <a href="#a98256cecaa95421a16f8c67299e466de">More...</a><br /></td></tr>
 <tr class="separator:a98256cecaa95421a16f8c67299e466de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a53fb15978f15ade46946a9cf653f88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a53fb15978f15ade46946a9cf653f88"></a>
-<a class="el" href="classRTT_1_1os_1_1Mutex.html">RTT::os::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a3a53fb15978f15ade46946a9cf653f88">connection_lock</a></td></tr>
-<tr class="memdesc:a3a53fb15978f15ade46946a9cf653f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock that should be taken before the list of connections is accessed or modified. <br /></td></tr>
+<tr class="memitem:a3a53fb15978f15ade46946a9cf653f88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1Mutex.html">RTT::os::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a3a53fb15978f15ade46946a9cf653f88">connection_lock</a></td></tr>
+<tr class="memdesc:a3a53fb15978f15ade46946a9cf653f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock that should be taken before the list of connections is accessed or modified.  <a href="#a3a53fb15978f15ade46946a9cf653f88">More...</a><br /></td></tr>
 <tr class="separator:a3a53fb15978f15ade46946a9cf653f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -162,7 +150,7 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::tuple&lt;boost::shared_ptr&lt;<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a>&gt;, base::ChannelElementBase::shared_ptr, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a>&gt; <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">RTT::internal::ConnectionManager::ChannelDescriptor</a></td>
+          <td class="memname">typedef boost::tuple&lt;boost::shared_ptr&lt;<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a>&gt;, <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a>, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a>&gt; <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">RTT::internal::ConnectionManager::ChannelDescriptor</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -171,6 +159,20 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 <p>The policy is only given for read-only access, modifying it will not have any effect on the connection. </p>
 
 <p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00087">87</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a356aca7614582f5e7b7ea84ac10ef6be"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::list&lt;<a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a2b38bb2997ad504a705a6ab969334848">ChannelDescriptor</a>&gt; <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a356aca7614582f5e7b7ea84ac10ef6be">RTT::internal::ConnectionManager::Connections</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00089">89</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -199,7 +201,24 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 
 <p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00062">62</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="ae6f5d35604eb7168ef84dba3b4ff0228"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::internal::ConnectionManager::~ConnectionManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00068">68</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+
+<p>References <a class="el" href="ConnectionManager_8cpp_source.html#l00102">disconnect()</a>.</p>
 
 </div>
 </div>
@@ -217,7 +236,7 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">base::ChannelElementBase::shared_ptr&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a>&#160;</td>
           <td class="paramname"><em>channel</em>, </td>
         </tr>
         <tr>
@@ -237,9 +256,103 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 <p>Helper method for port-to-port connection establishment. </p>
 <p>This is the last step in adding a connection to an output port and also validates if the connection is sound. </p><dl class="section return"><dt>Returns</dt><dd>false if the connection failed to work, true otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00122">122</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00123">123</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00078">eraseConnection()</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00182">shared_connection</a>.</p>
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00182">shared_connection</a>.</p>
+
+<p>Referenced by <a class="el" href="OutputPortInterface_8cpp_source.html#l00073">RTT::base::OutputPortInterface::addConnection()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af26261c2f336fa248c386d390774e409"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::internal::ConnectionManager::connected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if there is at least one connection registered in this port's list of outputs. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00110">110</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>.</p>
+
+<p>Referenced by <a class="el" href="OutputPortInterface_8cpp_source.html#l00060">RTT::base::OutputPortInterface::connected()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4ea48d83495b212fc88039c0c52e794"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::internal::ConnectionManager::connectedTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if there exists a connection to the given port. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00113">113</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="PortInterface_8cpp_source.html#l00076">RTT::base::PortInterface::getPortID()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
+
+<p>Referenced by <a class="el" href="PortInterface_8cpp_source.html#l00067">RTT::base::PortInterface::connectedTo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1070d33dd99d0fe1030c8b6aae3096ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::internal::ConnectionManager::disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disconnect all connections. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00102">102</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
+
+<p>Referenced by <a class="el" href="OutputPortInterface_8cpp_source.html#l00063">RTT::base::OutputPortInterface::disconnect()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00068">~ConnectionManager()</a>, and <a class="el" href="OutputPortInterface_8cpp_source.html#l00054">RTT::base::OutputPortInterface::~OutputPortInterface()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd1045b3445ff91659ef5b855fb608bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::internal::ConnectionManager::disconnect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the connection that connects this port to <code>port</code>. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00073">73</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+
+<p>References <a class="el" href="PortInterface_8cpp_source.html#l00076">RTT::base::PortInterface::getPortID()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00140">removeConnection()</a>.</p>
 
 </div>
 </div>
@@ -278,11 +391,67 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 <p>Helper method for <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca" title="Disconnect all connections. ">disconnect()</a> </p>
 <p>Unconditionally removes the given connection and returns the next connection in the list or connections.end() </p>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00078">78</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00079">79</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00132">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="classRTT_1_1base_1_1PortInterface.html#af8d42fb68c00a6be39f2da0e57a8f47c">RTT::base::PortInterface::getEndpoint()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00171">mport</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00182">shared_connection</a>.</p>
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00132">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="classRTT_1_1base_1_1PortInterface.html#af8d42fb68c00a6be39f2da0e57a8f47c">RTT::base::PortInterface::getEndpoint()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00171">mport</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00182">shared_connection</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00122">addConnection()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>.</p>
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00102">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00140">removeConnection()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a04688d0b35aebf074bc78319eb1e3e2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a356aca7614582f5e7b7ea84ac10ef6be">Connections</a> RTT::internal::ConnectionManager::getConnections </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a list of all connections managed by this object. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00136">136</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0483f64f3116268f5f46d9b514f3fb93"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html#ab9c887d71d1615f576b7cc6b6bd3458a">internal::SharedConnectionBase::shared_ptr</a> RTT::internal::ConnectionManager::getSharedConnection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the shared connection element this port may be connected to. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00143">143</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="OutputPort_8hpp_source.html#l00227">RTT::OutputPort&lt; T &gt;::clear()</a>, and <a class="el" href="PortInterface_8cpp_source.html#l00109">RTT::base::PortInterface::getSharedConnection()</a>.</p>
 
 </div>
 </div>
@@ -314,7 +483,151 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 
 </div>
 </div>
+<a class="anchor" id="aba75892d4a0f46c3618463025f7ffd15"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::internal::ConnectionManager::lock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Locks the mutex protecting the channel element list. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00150">150</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00123">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00113">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00102">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00140">removeConnection()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a078eed3674a72fc7b5188950a88b007f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::internal::ConnectionManager::removeConnection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *&#160;</td>
+          <td class="paramname"><em>port_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disconnect</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00140">140</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>, <a class="el" href="classRTT_1_1internal_1_1ConnID.html#afd18f874c9d8965adb5f077c0d38ee19">RTT::internal::ConnID::isSameID()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
+
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00073">disconnect()</a>, and <a class="el" href="PortInterface_8cpp_source.html#l00095">RTT::base::PortInterface::removeConnection()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b0affac81e3c090e0a402024a9ead85"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::internal::ConnectionManager::removeConnection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">base::ChannelElementBase</a> *&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disconnect</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00155">155</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a263b371598bc5777f737df7a6c091e1b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::internal::ConnectionManager::unlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unlocks the mutex protecting the channel element list. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00157">157</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a3a53fb15978f15ade46946a9cf653f88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1Mutex.html">RTT::os::Mutex</a> RTT::internal::ConnectionManager::connection_lock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lock that should be taken before the list of connections is accessed or modified. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00188">188</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00123">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00113">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00102">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00140">removeConnection()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac7d52fa61c6d3322112a82de4c0ea43d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +651,59 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 
 <p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00177">177</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00122">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00109">connected()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00112">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00078">eraseConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00123">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00110">connected()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00113">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00102">disconnect()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00140">removeConnection()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f8030b0a2960f5d6363873fc8d07659"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>* RTT::internal::ConnectionManager::mport</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The port for which we manage connections. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00171">171</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98256cecaa95421a16f8c67299e466de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html#ab9c887d71d1615f576b7cc6b6bd3458a">internal::SharedConnectionBase::shared_ptr</a> RTT::internal::ConnectionManager::shared_connection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A pointer to the shared connection this port may be connected to. </p>
+
+<p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00182">182</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00123">addConnection()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>.</p>
 
 </div>
 </div>
@@ -349,7 +714,7 @@ internal::SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" va
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

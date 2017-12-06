@@ -59,34 +59,91 @@
 
 <p>Wraps the oro_rt_ allocator functions to standard C malloc function family or TLSF if available.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;../rtt-config.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="rtt-config_8h_source.html">../rtt-config.h</a>&quot;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
 </div>
 <p><a href="oro__malloc_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a33426d61515dbce709065495e16419db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33426d61515dbce709065495e16419db"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>oro_rt_malloc</b>&#160;&#160;&#160;malloc</td></tr>
+<tr class="memitem:a33426d61515dbce709065495e16419db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__malloc_8h.html#a33426d61515dbce709065495e16419db">oro_rt_malloc</a>&#160;&#160;&#160;malloc</td></tr>
 <tr class="separator:a33426d61515dbce709065495e16419db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ca8e306704847e5bb1a658fe05eb41a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ca8e306704847e5bb1a658fe05eb41a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>oro_rt_free</b>&#160;&#160;&#160;free</td></tr>
+<tr class="memitem:a8ca8e306704847e5bb1a658fe05eb41a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__malloc_8h.html#a8ca8e306704847e5bb1a658fe05eb41a">oro_rt_free</a>&#160;&#160;&#160;free</td></tr>
 <tr class="separator:a8ca8e306704847e5bb1a658fe05eb41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1354076d18c4d018c4b15e4ab4fd3d8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1354076d18c4d018c4b15e4ab4fd3d8d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>oro_rt_realloc</b>&#160;&#160;&#160;realloc</td></tr>
+<tr class="memitem:a1354076d18c4d018c4b15e4ab4fd3d8d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__malloc_8h.html#a1354076d18c4d018c4b15e4ab4fd3d8d">oro_rt_realloc</a>&#160;&#160;&#160;realloc</td></tr>
 <tr class="separator:a1354076d18c4d018c4b15e4ab4fd3d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad670699f0f6cc38fd1b2a55939b156e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad670699f0f6cc38fd1b2a55939b156e3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>oro_rt_calloc</b>&#160;&#160;&#160;rt_calloc</td></tr>
+<tr class="memitem:ad670699f0f6cc38fd1b2a55939b156e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__malloc_8h.html#ad670699f0f6cc38fd1b2a55939b156e3">oro_rt_calloc</a>&#160;&#160;&#160;rt_calloc</td></tr>
 <tr class="separator:ad670699f0f6cc38fd1b2a55939b156e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Wraps the oro_rt_ allocator functions to standard C malloc function family or TLSF if available. </p>
 
 <p>Definition in file <a class="el" href="oro__malloc_8h_source.html">oro_malloc.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ad670699f0f6cc38fd1b2a55939b156e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define oro_rt_calloc&#160;&#160;&#160;rt_calloc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__malloc_8h_source.html#l00057">57</a> of file <a class="el" href="oro__malloc_8h_source.html">oro_malloc.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ca8e306704847e5bb1a658fe05eb41a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define oro_rt_free&#160;&#160;&#160;free</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__malloc_8h_source.html#l00055">55</a> of file <a class="el" href="oro__malloc_8h_source.html">oro_malloc.h</a>.</p>
+
+<p>Referenced by <a class="el" href="oro__allocator_8hpp_source.html#l00278">RTT::os::rt_allocator&lt; T &gt;::deallocate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33426d61515dbce709065495e16419db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define oro_rt_malloc&#160;&#160;&#160;malloc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__malloc_8h_source.html#l00054">54</a> of file <a class="el" href="oro__malloc_8h_source.html">oro_malloc.h</a>.</p>
+
+<p>Referenced by <a class="el" href="oro__allocator_8hpp_source.html#l00271">RTT::os::rt_allocator&lt; T &gt;::allocate()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1354076d18c4d018c4b15e4ab4fd3d8d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define oro_rt_realloc&#160;&#160;&#160;realloc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__malloc_8h_source.html#l00056">56</a> of file <a class="el" href="oro__malloc_8h_source.html">oro_malloc.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:02 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

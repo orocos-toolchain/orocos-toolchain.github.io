@@ -62,9 +62,9 @@
 
 <p>(Almost) Real-Time output streams.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;fosi.h&quot;</code><br />
-<code>#include &quot;rtconversions.hpp&quot;</code><br />
-<code>#include &quot;rtstreambufs.hpp&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="fosi_8h_source.html">fosi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rtconversions_8hpp_source.html">rtconversions.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rtstreambufs_8hpp_source.html">rtstreambufs.hpp</a>&quot;</code><br />
 </div>
 <p><a href="rtstreams_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -82,8 +82,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1basic__iostreams.html">RTT::os::basic_iostreams</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An IO stream based on strings.  <a href="classRTT_1_1os_1_1basic__iostreams.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1os_1_1print__helper.html">RTT::os::print_helper</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1printstream.html">RTT::os::printstream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The printstream is a stream for printing characters to the terminal window.  <a href="classRTT_1_1os_1_1printstream.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1os_1_1string__helper.html">RTT::os::string_helper</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1stringstreams.html">RTT::os::stringstreams</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stringstreams, are not guaranteed to be hard realtime.  <a href="classRTT_1_1os_1_1stringstreams.html#details">More...</a><br /></td></tr>
@@ -98,11 +102,15 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespaceRTT_1_1os"><td class="mdescLeft">&#160;</td><td class="mdescRight">OS Abstractions such as Mutexes, Semaphores and Threads. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aedf4f37d2ede298f08fd5da2c3d5c9a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rtstreams_8hpp.html#aedf4f37d2ede298f08fd5da2c3d5c9a3">RTSTREAMS_HPP</a></td></tr>
+<tr class="separator:aedf4f37d2ede298f08fd5da2c3d5c9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a336aa8fb4f6d18c6f78913d81c8e133d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a336aa8fb4f6d18c6f78913d81c8e133d"></a>
-basic_ostreams &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1os.html#a336aa8fb4f6d18c6f78913d81c8e133d">RTT::os::endl</a> (basic_ostreams &amp;)</td></tr>
-<tr class="memdesc:a336aa8fb4f6d18c6f78913d81c8e133d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush and newline. <br /></td></tr>
+<tr class="memitem:a336aa8fb4f6d18c6f78913d81c8e133d"><td class="memItemLeft" align="right" valign="top">basic_ostreams &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1os.html#a336aa8fb4f6d18c6f78913d81c8e133d">RTT::os::endl</a> (basic_ostreams &amp;)</td></tr>
+<tr class="memdesc:a336aa8fb4f6d18c6f78913d81c8e133d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush and newline.  <a href="namespaceRTT_1_1os.html#a336aa8fb4f6d18c6f78913d81c8e133d">More...</a><br /></td></tr>
 <tr class="separator:a336aa8fb4f6d18c6f78913d81c8e133d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -110,10 +118,25 @@ basic_ostreams &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>If you really have to print something out from a RealTime thread, you can use the streams of the os namespace, which will call the rtos_printf functions (which are supposed to be as realtime as possible) of the OS you are using. Be warned, these classes have not been tested extensively and might in certain cases still break hard-realtime behaviour. avoid using it from your most critical threads and production code. </p>
 
 <p>Definition in file <a class="el" href="rtstreams_8hpp_source.html">rtstreams.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="aedf4f37d2ede298f08fd5da2c3d5c9a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RTSTREAMS_HPP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="rtstreams_8hpp_source.html#l00044">44</a> of file <a class="el" href="rtstreams_8hpp_source.html">rtstreams.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:02 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

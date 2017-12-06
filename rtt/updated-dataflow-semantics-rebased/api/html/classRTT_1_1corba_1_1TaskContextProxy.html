@@ -84,12 +84,10 @@ Inheritance diagram for RTT::corba::TaskContextProxy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ab7c900f8e0cd86dbc1383d17462b20b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7c900f8e0cd86dbc1383d17462b20b9"></a>
-typedef std::map&lt; <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html">TaskContextProxy</a> *, corba::CTaskContext_ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PMap</b></td></tr>
+<tr class="memitem:ab7c900f8e0cd86dbc1383d17462b20b9"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html">TaskContextProxy</a> *, corba::CTaskContext_ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ab7c900f8e0cd86dbc1383d17462b20b9">PMap</a></td></tr>
 <tr class="separator:ab7c900f8e0cd86dbc1383d17462b20b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1ebba86c109e257343eb1f432e97079"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1ebba86c109e257343eb1f432e97079"></a>
-typedef std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#ac1ebba86c109e257343eb1f432e97079">PeerList</a></td></tr>
-<tr class="memdesc:ac1ebba86c109e257343eb1f432e97079"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of Peer <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> names. <br /></td></tr>
+<tr class="memitem:ac1ebba86c109e257343eb1f432e97079"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#ac1ebba86c109e257343eb1f432e97079">PeerList</a></td></tr>
+<tr class="memdesc:ac1ebba86c109e257343eb1f432e97079"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of Peer <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> names.  <a href="#ac1ebba86c109e257343eb1f432e97079">More...</a><br /></td></tr>
 <tr class="separator:ac1ebba86c109e257343eb1f432e97079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec42df6b1b306b7a7102fa3bf8e2a296"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a> { <br />
 &#160;&#160;<a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296ad0f498835f4c0d0d028f17c3dded1808">Init</a>, 
@@ -107,6 +105,8 @@ typedef std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" vali
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af9c0824a80f77b3460cfab293c54e9e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#af9c0824a80f77b3460cfab293c54e9e2">~TaskContextProxy</a> ()</td></tr>
+<tr class="separator:af9c0824a80f77b3460cfab293c54e9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d7a5238ce5bea0359ba5c2bf766584a"><td class="memItemLeft" align="right" valign="top">corba::CTaskContext_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a6d7a5238ce5bea0359ba5c2bf766584a">server</a> () const </td></tr>
 <tr class="memdesc:a6d7a5238ce5bea0359ba5c2bf766584a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Corba Object of the <a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html" title="A CTaskContext is the main entry point of a distributed component and maps to a RTT::TaskContext. ">CTaskContext</a>.  <a href="#a6d7a5238ce5bea0359ba5c2bf766584a">More...</a><br /></td></tr>
 <tr class="separator:a6d7a5238ce5bea0359ba5c2bf766584a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,60 +137,49 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa58e8059f29506a1c4df9bd60eb24542"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#aa58e8059f29506a1c4df9bd60eb24542">inFatalError</a> () const </td></tr>
 <tr class="memdesc:aa58e8059f29506a1c4df9bd60eb24542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the component is in the FatalError state.  <a href="#aa58e8059f29506a1c4df9bd60eb24542">More...</a><br /></td></tr>
 <tr class="separator:aa58e8059f29506a1c4df9bd60eb24542"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae94d2e03dda53dcad5e4a2b4aea0032e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae94d2e03dda53dcad5e4a2b4aea0032e"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ae94d2e03dda53dcad5e4a2b4aea0032e">inRunTimeError</a> () const </td></tr>
-<tr class="memdesc:ae94d2e03dda53dcad5e4a2b4aea0032e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the component is in the RunTimeError state. <br /></td></tr>
+<tr class="memitem:ae94d2e03dda53dcad5e4a2b4aea0032e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ae94d2e03dda53dcad5e4a2b4aea0032e">inRunTimeError</a> () const </td></tr>
+<tr class="memdesc:ae94d2e03dda53dcad5e4a2b4aea0032e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the component is in the RunTimeError state.  <a href="#ae94d2e03dda53dcad5e4a2b4aea0032e">More...</a><br /></td></tr>
 <tr class="separator:ae94d2e03dda53dcad5e4a2b4aea0032e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03fd594949ef8654daa21998e313a7c9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a03fd594949ef8654daa21998e313a7c9">getTaskState</a> () const </td></tr>
 <tr class="memdesc:a03fd594949ef8654daa21998e313a7c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current state of the TaskCore.  <a href="#a03fd594949ef8654daa21998e313a7c9">More...</a><br /></td></tr>
 <tr class="separator:a03fd594949ef8654daa21998e313a7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fb55c7496b3e9b2ec7c7e224c337fe4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fb55c7496b3e9b2ec7c7e224c337fe4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (const std::string &amp;n)</td></tr>
+<tr class="memitem:a3fb55c7496b3e9b2ec7c7e224c337fe4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a3fb55c7496b3e9b2ec7c7e224c337fe4">setName</a> (const std::string &amp;n)</td></tr>
 <tr class="separator:a3fb55c7496b3e9b2ec7c7e224c337fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10ffef8be36a2ba8a74222f277b990bd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a10ffef8be36a2ba8a74222f277b990bd">addPeer</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *peer, std::string alias=&quot;&quot;)</td></tr>
 <tr class="memdesc:a10ffef8be36a2ba8a74222f277b990bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a one-way connection from this task to a peer task.  <a href="#a10ffef8be36a2ba8a74222f277b990bd">More...</a><br /></td></tr>
 <tr class="separator:a10ffef8be36a2ba8a74222f277b990bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae92b284f9a6ea5a548d7043fdc005eba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae92b284f9a6ea5a548d7043fdc005eba"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ae92b284f9a6ea5a548d7043fdc005eba">removePeer</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:ae92b284f9a6ea5a548d7043fdc005eba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a one-way connection from this task to a peer task. <br /></td></tr>
+<tr class="memitem:ae92b284f9a6ea5a548d7043fdc005eba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ae92b284f9a6ea5a548d7043fdc005eba">removePeer</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:ae92b284f9a6ea5a548d7043fdc005eba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a one-way connection from this task to a peer task.  <a href="#ae92b284f9a6ea5a548d7043fdc005eba">More...</a><br /></td></tr>
 <tr class="separator:ae92b284f9a6ea5a548d7043fdc005eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a051c31efd643ab61800e3dce2b9ad08f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a051c31efd643ab61800e3dce2b9ad08f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a051c31efd643ab61800e3dce2b9ad08f">removePeer</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *peer)</td></tr>
-<tr class="memdesc:a051c31efd643ab61800e3dce2b9ad08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a one-way connection from this task to a peer task. <br /></td></tr>
+<tr class="memitem:a051c31efd643ab61800e3dce2b9ad08f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a051c31efd643ab61800e3dce2b9ad08f">removePeer</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *peer)</td></tr>
+<tr class="memdesc:a051c31efd643ab61800e3dce2b9ad08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a one-way connection from this task to a peer task.  <a href="#a051c31efd643ab61800e3dce2b9ad08f">More...</a><br /></td></tr>
 <tr class="separator:a051c31efd643ab61800e3dce2b9ad08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38bac21e6c43395f9c3a8b3fc1db17ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38bac21e6c43395f9c3a8b3fc1db17ca"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a38bac21e6c43395f9c3a8b3fc1db17ca">connectPeers</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *peer)</td></tr>
-<tr class="memdesc:a38bac21e6c43395f9c3a8b3fc1db17ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a two-way connection from this task to a peer task. <br /></td></tr>
+<tr class="memitem:a38bac21e6c43395f9c3a8b3fc1db17ca"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a38bac21e6c43395f9c3a8b3fc1db17ca">connectPeers</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *peer)</td></tr>
+<tr class="memdesc:a38bac21e6c43395f9c3a8b3fc1db17ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a two-way connection from this task to a peer task.  <a href="#a38bac21e6c43395f9c3a8b3fc1db17ca">More...</a><br /></td></tr>
 <tr class="separator:a38bac21e6c43395f9c3a8b3fc1db17ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a859604ef48fae11211537048f305150b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a859604ef48fae11211537048f305150b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a859604ef48fae11211537048f305150b">disconnectPeers</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a859604ef48fae11211537048f305150b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a two-way connection from this task to a peer task. <br /></td></tr>
+<tr class="memitem:a859604ef48fae11211537048f305150b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a859604ef48fae11211537048f305150b">disconnectPeers</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a859604ef48fae11211537048f305150b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a two-way connection from this task to a peer task.  <a href="#a859604ef48fae11211537048f305150b">More...</a><br /></td></tr>
 <tr class="separator:a859604ef48fae11211537048f305150b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38955bca9a2ff2af401cb7f1a5824df2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38955bca9a2ff2af401cb7f1a5824df2"></a>
-virtual <a class="el" href="classRTT_1_1TaskContext.html#ac1ebba86c109e257343eb1f432e97079">PeerList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a38955bca9a2ff2af401cb7f1a5824df2">getPeerList</a> () const </td></tr>
-<tr class="memdesc:a38955bca9a2ff2af401cb7f1a5824df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a standard container which contains all the Peer names of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>. <br /></td></tr>
+<tr class="memitem:a38955bca9a2ff2af401cb7f1a5824df2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1TaskContext.html#ac1ebba86c109e257343eb1f432e97079">PeerList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a38955bca9a2ff2af401cb7f1a5824df2">getPeerList</a> () const </td></tr>
+<tr class="memdesc:a38955bca9a2ff2af401cb7f1a5824df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a standard container which contains all the Peer names of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#a38955bca9a2ff2af401cb7f1a5824df2">More...</a><br /></td></tr>
 <tr class="separator:a38955bca9a2ff2af401cb7f1a5824df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5afb105eb7dc8add32be6bfc67d4423"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5afb105eb7dc8add32be6bfc67d4423"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#af5afb105eb7dc8add32be6bfc67d4423">hasPeer</a> (const std::string &amp;peer_name) const </td></tr>
-<tr class="memdesc:af5afb105eb7dc8add32be6bfc67d4423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if it knows a peer by that name. <br /></td></tr>
+<tr class="memitem:af5afb105eb7dc8add32be6bfc67d4423"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#af5afb105eb7dc8add32be6bfc67d4423">hasPeer</a> (const std::string &amp;peer_name) const </td></tr>
+<tr class="memdesc:af5afb105eb7dc8add32be6bfc67d4423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if it knows a peer by that name.  <a href="#af5afb105eb7dc8add32be6bfc67d4423">More...</a><br /></td></tr>
 <tr class="separator:af5afb105eb7dc8add32be6bfc67d4423"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8422f6c124522214dd159f19b8067e7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#aa8422f6c124522214dd159f19b8067e7">getPeer</a> (const std::string &amp;peer_name) const </td></tr>
 <tr class="memdesc:aa8422f6c124522214dd159f19b8067e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to a peer of this task.  <a href="#aa8422f6c124522214dd159f19b8067e7">More...</a><br /></td></tr>
 <tr class="separator:aa8422f6c124522214dd159f19b8067e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac842b590f49e2356afb68f06ee62ab4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac842b590f49e2356afb68f06ee62ab4c"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ac842b590f49e2356afb68f06ee62ab4c">connectPorts</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *peer)</td></tr>
-<tr class="memdesc:ac842b590f49e2356afb68f06ee62ab4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a data flow connection from this task's ports to a peer's ports. <br /></td></tr>
+<tr class="memitem:ac842b590f49e2356afb68f06ee62ab4c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ac842b590f49e2356afb68f06ee62ab4c">connectPorts</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *peer)</td></tr>
+<tr class="memdesc:ac842b590f49e2356afb68f06ee62ab4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a data flow connection from this task's ports to a peer's ports.  <a href="#ac842b590f49e2356afb68f06ee62ab4c">More...</a><br /></td></tr>
 <tr class="separator:ac842b590f49e2356afb68f06ee62ab4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8d5035a98b5c38a4a1476aa50bcb0d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8d5035a98b5c38a4a1476aa50bcb0d4"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#af8d5035a98b5c38a4a1476aa50bcb0d4">connectServices</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *peer)</td></tr>
-<tr class="memdesc:af8d5035a98b5c38a4a1476aa50bcb0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects all requires/provides services of this component to these of a peer. <br /></td></tr>
+<tr class="memitem:af8d5035a98b5c38a4a1476aa50bcb0d4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#af8d5035a98b5c38a4a1476aa50bcb0d4">connectServices</a> (<a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *peer)</td></tr>
+<tr class="memdesc:af8d5035a98b5c38a4a1476aa50bcb0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects all requires/provides services of this component to these of a peer.  <a href="#af8d5035a98b5c38a4a1476aa50bcb0d4">More...</a><br /></td></tr>
 <tr class="separator:af8d5035a98b5c38a4a1476aa50bcb0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9ca163585e0ea9480424cd59531a0aa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ae9ca163585e0ea9480424cd59531a0aa">ready</a> ()</td></tr>
 <tr class="memdesc:ae9ca163585e0ea9480424cd59531a0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the validity of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#ae9ca163585e0ea9480424cd59531a0aa">More...</a><br /></td></tr>
 <tr class="separator:ae9ca163585e0ea9480424cd59531a0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aa7e91bf90f0793142432f74bb830a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7aa7e91bf90f0793142432f74bb830a1"></a>
-virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a7aa7e91bf90f0793142432f74bb830a1">getName</a> () const </td></tr>
-<tr class="memdesc:a7aa7e91bf90f0793142432f74bb830a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>. <br /></td></tr>
+<tr class="memitem:a7aa7e91bf90f0793142432f74bb830a1"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a7aa7e91bf90f0793142432f74bb830a1">getName</a> () const </td></tr>
+<tr class="memdesc:a7aa7e91bf90f0793142432f74bb830a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#a7aa7e91bf90f0793142432f74bb830a1">More...</a><br /></td></tr>
 <tr class="separator:a7aa7e91bf90f0793142432f74bb830a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65fa89828cdf260496f27643e4ab9344"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a65fa89828cdf260496f27643e4ab9344">setActivity</a> (<a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">base::ActivityInterface</a> *new_act)</td></tr>
 <tr class="memdesc:a65fa89828cdf260496f27643e4ab9344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the activity of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="#a65fa89828cdf260496f27643e4ab9344">More...</a><br /></td></tr>
@@ -211,13 +200,11 @@ virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="botto
 <tr class="memitem:a2da9f3834b14d21614fd481eaed4ecec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a2da9f3834b14d21614fd481eaed4ecec">setExecutionEngine</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *<a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad2522496caacc3e88065b5cb09dc2b7a">engine</a>)</td></tr>
 <tr class="memdesc:a2da9f3834b14d21614fd481eaed4ecec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this method to re-set the execution engine of this task core.  <a href="#a2da9f3834b14d21614fd481eaed4ecec">More...</a><br /></td></tr>
 <tr class="separator:a2da9f3834b14d21614fd481eaed4ecec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2522496caacc3e88065b5cb09dc2b7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2522496caacc3e88065b5cb09dc2b7a"></a>
-const <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad2522496caacc3e88065b5cb09dc2b7a">engine</a> () const </td></tr>
-<tr class="memdesc:ad2522496caacc3e88065b5cb09dc2b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const pointer to the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of this Task. <br /></td></tr>
+<tr class="memitem:ad2522496caacc3e88065b5cb09dc2b7a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad2522496caacc3e88065b5cb09dc2b7a">engine</a> () const </td></tr>
+<tr class="memdesc:ad2522496caacc3e88065b5cb09dc2b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const pointer to the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of this Task.  <a href="#ad2522496caacc3e88065b5cb09dc2b7a">More...</a><br /></td></tr>
 <tr class="separator:ad2522496caacc3e88065b5cb09dc2b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac18ebf7b987f142c8dad4413be2bbd30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac18ebf7b987f142c8dad4413be2bbd30"></a>
-<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ac18ebf7b987f142c8dad4413be2bbd30">engine</a> ()</td></tr>
-<tr class="memdesc:ac18ebf7b987f142c8dad4413be2bbd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of this Task. <br /></td></tr>
+<tr class="memitem:ac18ebf7b987f142c8dad4413be2bbd30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ac18ebf7b987f142c8dad4413be2bbd30">engine</a> ()</td></tr>
+<tr class="memdesc:ac18ebf7b987f142c8dad4413be2bbd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of this Task.  <a href="#ac18ebf7b987f142c8dad4413be2bbd30">More...</a><br /></td></tr>
 <tr class="separator:ac18ebf7b987f142c8dad4413be2bbd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Peer-to-Peer functions</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These functions are used to setup and manage peer-to-peer networks of <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> objects. </p>
@@ -229,19 +216,17 @@ const <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> 
 <tr><td colspan="2"><div class="groupText"><p>These functions are used to create and manage services.</p>
 <p>Use <a class="el" href="classRTT_1_1TaskContext.html#af11b11de5bb15692305f1d1df3840540" title="Returns this Service. ">provides()</a> or <a class="el" href="classRTT_1_1TaskContext.html#a29517582b6df25769e5ee0c3b9af165a" title="Returns the object that manages which methods this Task requires to be implemented by another task...">requires()</a> to access the <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a> or <a class="el" href="classRTT_1_1ServiceRequester.html" title="An object that expresses you wish to use a service. ">ServiceRequester</a> objects that contain all service related functions. </p>
 </div></td></tr>
-<tr class="memitem:af11b11de5bb15692305f1d1df3840540"><td class="memItemLeft" align="right" valign="top">Service::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#af11b11de5bb15692305f1d1df3840540">provides</a> ()</td></tr>
+<tr class="memitem:af11b11de5bb15692305f1d1df3840540"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#af11b11de5bb15692305f1d1df3840540">provides</a> ()</td></tr>
 <tr class="memdesc:af11b11de5bb15692305f1d1df3840540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a>.  <a href="#af11b11de5bb15692305f1d1df3840540">More...</a><br /></td></tr>
 <tr class="separator:af11b11de5bb15692305f1d1df3840540"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25f9aabe8979225a1bf4e2825920ff66"><td class="memItemLeft" align="right" valign="top">Service::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a25f9aabe8979225a1bf4e2825920ff66">provides</a> (const std::string &amp;service_name)</td></tr>
+<tr class="memitem:a25f9aabe8979225a1bf4e2825920ff66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a25f9aabe8979225a1bf4e2825920ff66">provides</a> (const std::string &amp;service_name)</td></tr>
 <tr class="memdesc:a25f9aabe8979225a1bf4e2825920ff66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a sub-Service which resorts under this <a class="el" href="classRTT_1_1Service.html" title="This class allows storage and retrieval of operations, ports, attributes and properties provided by a...">Service</a>.  <a href="#a25f9aabe8979225a1bf4e2825920ff66">More...</a><br /></td></tr>
 <tr class="separator:a25f9aabe8979225a1bf4e2825920ff66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29517582b6df25769e5ee0c3b9af165a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29517582b6df25769e5ee0c3b9af165a"></a>
-ServiceRequester::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a29517582b6df25769e5ee0c3b9af165a">requires</a> ()</td></tr>
-<tr class="memdesc:a29517582b6df25769e5ee0c3b9af165a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object that manages which methods this Task requires to be implemented by another task. <br /></td></tr>
+<tr class="memitem:a29517582b6df25769e5ee0c3b9af165a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ServiceRequester.html#adb53f55a1d20a838d6c71dbea46205b2">ServiceRequester::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a29517582b6df25769e5ee0c3b9af165a">requires</a> ()</td></tr>
+<tr class="memdesc:a29517582b6df25769e5ee0c3b9af165a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object that manages which methods this Task requires to be implemented by another task.  <a href="#a29517582b6df25769e5ee0c3b9af165a">More...</a><br /></td></tr>
 <tr class="separator:a29517582b6df25769e5ee0c3b9af165a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30eaef4efa1eea9ced363516523742d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30eaef4efa1eea9ced363516523742d7"></a>
-ServiceRequester::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a30eaef4efa1eea9ced363516523742d7">requires</a> (const std::string &amp;service_name)</td></tr>
-<tr class="memdesc:a30eaef4efa1eea9ced363516523742d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object that manages which methods this Task requires to be implemented by another service. <br /></td></tr>
+<tr class="memitem:a30eaef4efa1eea9ced363516523742d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ServiceRequester.html#adb53f55a1d20a838d6c71dbea46205b2">ServiceRequester::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a30eaef4efa1eea9ced363516523742d7">requires</a> (const std::string &amp;service_name)</td></tr>
+<tr class="memdesc:a30eaef4efa1eea9ced363516523742d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object that manages which methods this Task requires to be implemented by another service.  <a href="#a30eaef4efa1eea9ced363516523742d7">More...</a><br /></td></tr>
 <tr class="separator:a30eaef4efa1eea9ced363516523742d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a29ef110689fbd9a49181921136cf4f"><td class="memTemplParams" colspan="2">template&lt;class ServiceType &gt; </td></tr>
 <tr class="memitem:a0a29ef110689fbd9a49181921136cf4f"><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; ServiceType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a0a29ef110689fbd9a49181921136cf4f">getProvider</a> (const std::string &amp;name)</td></tr>
@@ -259,19 +244,18 @@ ServiceRequester::shared_ptr&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="memdesc:a4b21856b3e67a002937194e1ed20e24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an operation object to the interface.  <a href="#a4b21856b3e67a002937194e1ed20e24c">More...</a><br /></td></tr>
 <tr class="separator:a4b21856b3e67a002937194e1ed20e24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b7f65a4a63331de40b94d712eb49119"><td class="memTemplParams" colspan="2">template&lt;class Func , class Service &gt; </td></tr>
-<tr class="memitem:a0b7f65a4a63331de40b94d712eb49119"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Operation.html">Operation</a>&lt; typename <a class="el" href="structRTT_1_1internal_1_1GetSignature.html">internal::GetSignature</a>&lt; Func &gt;::Signature &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a0b7f65a4a63331de40b94d712eb49119">addOperation</a> (const std::string name, Func func, <a class="el" href="classRTT_1_1Service.html">Service</a> *serv, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=ClientThread)</td></tr>
+<tr class="memitem:a0b7f65a4a63331de40b94d712eb49119"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Operation.html">Operation</a>&lt; typename <a class="el" href="structRTT_1_1internal_1_1GetSignature.html">internal::GetSignature</a>&lt; Func &gt;::Signature &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a0b7f65a4a63331de40b94d712eb49119">addOperation</a> (const std::string name, Func func, <a class="el" href="classRTT_1_1Service.html">Service</a> *serv, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=<a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a>)</td></tr>
 <tr class="memdesc:a0b7f65a4a63331de40b94d712eb49119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a C++ function as an operation.  <a href="#a0b7f65a4a63331de40b94d712eb49119">More...</a><br /></td></tr>
 <tr class="separator:a0b7f65a4a63331de40b94d712eb49119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab20c2fe74dd0691f7c07e72948738c8f"><td class="memTemplParams" colspan="2">template&lt;class Signature &gt; </td></tr>
-<tr class="memitem:ab20c2fe74dd0691f7c07e72948738c8f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Operation.html">Operation</a>&lt; Signature &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#ab20c2fe74dd0691f7c07e72948738c8f">addOperation</a> (const std::string name, Signature *func, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=ClientThread)</td></tr>
+<tr class="memitem:ab20c2fe74dd0691f7c07e72948738c8f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Operation.html">Operation</a>&lt; Signature &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#ab20c2fe74dd0691f7c07e72948738c8f">addOperation</a> (const std::string name, Signature *func, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=<a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a>)</td></tr>
 <tr class="memdesc:ab20c2fe74dd0691f7c07e72948738c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a C function as an operation.  <a href="#ab20c2fe74dd0691f7c07e72948738c8f">More...</a><br /></td></tr>
 <tr class="separator:ab20c2fe74dd0691f7c07e72948738c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3261db01744046dfe1ad016bf4781c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1OperationInterfacePart.html">OperationInterfacePart</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#ad3261db01744046dfe1ad016bf4781c5">getOperation</a> (std::string name)</td></tr>
 <tr class="memdesc:ad3261db01744046dfe1ad016bf4781c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a previously added operation for use in a C++ <a class="el" href="classRTT_1_1OperationCaller.html" title="A OperationCaller serves as a placeholder (aka &#39;proxy&#39;) for a remote Operation. ">OperationCaller</a> object.  <a href="#ad3261db01744046dfe1ad016bf4781c5">More...</a><br /></td></tr>
 <tr class="separator:ad3261db01744046dfe1ad016bf4781c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaac15f93904c1653c7d67ae7cb13c3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaac15f93904c1653c7d67ae7cb13c3f"></a>
-<a class="el" href="classRTT_1_1OperationInterface.html">OperationInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#acaac15f93904c1653c7d67ae7cb13c3f">operations</a> ()</td></tr>
-<tr class="memdesc:acaac15f93904c1653c7d67ae7cb13c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the operations of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> as an <a class="el" href="classRTT_1_1OperationInterface.html" title="Holds all exported operations of a component and is able to produce callers for these operations...">OperationInterface</a>. <br /></td></tr>
+<tr class="memitem:acaac15f93904c1653c7d67ae7cb13c3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1OperationInterface.html">OperationInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#acaac15f93904c1653c7d67ae7cb13c3f">operations</a> ()</td></tr>
+<tr class="memdesc:acaac15f93904c1653c7d67ae7cb13c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the operations of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> as an <a class="el" href="classRTT_1_1OperationInterface.html" title="Holds all exported operations of a component and is able to produce callers for these operations...">OperationInterface</a>.  <a href="#acaac15f93904c1653c7d67ae7cb13c3f">More...</a><br /></td></tr>
 <tr class="separator:acaac15f93904c1653c7d67ae7cb13c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Attributes</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Adding and getting attributes from the <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> interface.</p>
@@ -291,9 +275,8 @@ ServiceRequester::shared_ptr&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="memitem:a3406693cbcf04d5128f71286056cc06f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1AttributeBase.html">base::AttributeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a3406693cbcf04d5128f71286056cc06f">getAttribute</a> (const std::string &amp;name) const </td></tr>
 <tr class="memdesc:a3406693cbcf04d5128f71286056cc06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a variable of any type as read/write attribute to the attribute interface.  <a href="#a3406693cbcf04d5128f71286056cc06f">More...</a><br /></td></tr>
 <tr class="separator:a3406693cbcf04d5128f71286056cc06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44d240a9e534409e31cd6d41385a6651"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44d240a9e534409e31cd6d41385a6651"></a>
-<a class="el" href="classRTT_1_1ConfigurationInterface.html">ConfigurationInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a44d240a9e534409e31cd6d41385a6651">attributes</a> ()</td></tr>
-<tr class="memdesc:a44d240a9e534409e31cd6d41385a6651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the attributes of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> as an <a class="el" href="classRTT_1_1ConfigurationInterface.html" title="A class for keeping track of Attribute, Constant and Property objects of a TaskContext. ">ConfigurationInterface</a>. <br /></td></tr>
+<tr class="memitem:a44d240a9e534409e31cd6d41385a6651"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ConfigurationInterface.html">ConfigurationInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a44d240a9e534409e31cd6d41385a6651">attributes</a> ()</td></tr>
+<tr class="memdesc:a44d240a9e534409e31cd6d41385a6651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the attributes of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> as an <a class="el" href="classRTT_1_1ConfigurationInterface.html" title="A class for keeping track of Attribute, Constant and Property objects of a TaskContext. ">ConfigurationInterface</a>.  <a href="#a44d240a9e534409e31cd6d41385a6651">More...</a><br /></td></tr>
 <tr class="separator:a44d240a9e534409e31cd6d41385a6651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Properties</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Adding and getting properties from the <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> interface.</p>
@@ -309,9 +292,8 @@ ServiceRequester::shared_ptr&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="memitem:a9ee485a4df00e9582430174a6505f538"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1PropertyBase.html">base::PropertyBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a9ee485a4df00e9582430174a6505f538">getProperty</a> (const std::string &amp;name) const </td></tr>
 <tr class="memdesc:a9ee485a4df00e9582430174a6505f538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a> with name <em>name</em>.  <a href="#a9ee485a4df00e9582430174a6505f538">More...</a><br /></td></tr>
 <tr class="separator:a9ee485a4df00e9582430174a6505f538"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1442b82a6d52954b8644b0f89d3a1080"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1442b82a6d52954b8644b0f89d3a1080"></a>
-<a class="el" href="classRTT_1_1PropertyBag.html">PropertyBag</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a1442b82a6d52954b8644b0f89d3a1080">properties</a> ()</td></tr>
-<tr class="memdesc:a1442b82a6d52954b8644b0f89d3a1080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the properties of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> as a <a class="el" href="classRTT_1_1PropertyBag.html" title="A container for holding references to properties. ">PropertyBag</a>. <br /></td></tr>
+<tr class="memitem:a1442b82a6d52954b8644b0f89d3a1080"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1PropertyBag.html">PropertyBag</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a1442b82a6d52954b8644b0f89d3a1080">properties</a> ()</td></tr>
+<tr class="memdesc:a1442b82a6d52954b8644b0f89d3a1080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the properties of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> as a <a class="el" href="classRTT_1_1PropertyBag.html" title="A container for holding references to properties. ">PropertyBag</a>.  <a href="#a1442b82a6d52954b8644b0f89d3a1080">More...</a><br /></td></tr>
 <tr class="separator:a1442b82a6d52954b8644b0f89d3a1080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Operations</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These TaskCore functions are exported in a <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> as script methods and are for configuration, starting and stopping its <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>. </p>
@@ -328,9 +310,8 @@ ServiceRequester::shared_ptr&#160;</td><td class="memItemRight" valign="bottom">
 <tr class="memitem:a4ed3cee9867d1367b6c482a0584f5045"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a4ed3cee9867d1367b6c482a0584f5045">setCpuAffinity</a> (unsigned cpu)</td></tr>
 <tr class="memdesc:a4ed3cee9867d1367b6c482a0584f5045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the cpu affinity of this component.  <a href="#a4ed3cee9867d1367b6c482a0584f5045">More...</a><br /></td></tr>
 <tr class="separator:a4ed3cee9867d1367b6c482a0584f5045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3f58ee59ba08f3c4cf7ab92bd7ff13e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3f58ee59ba08f3c4cf7ab92bd7ff13e"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad3f58ee59ba08f3c4cf7ab92bd7ff13e">inException</a> () const </td></tr>
-<tr class="memdesc:ad3f58ee59ba08f3c4cf7ab92bd7ff13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the component is in the Exception state. <br /></td></tr>
+<tr class="memitem:ad3f58ee59ba08f3c4cf7ab92bd7ff13e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad3f58ee59ba08f3c4cf7ab92bd7ff13e">inException</a> () const </td></tr>
+<tr class="memdesc:ad3f58ee59ba08f3c4cf7ab92bd7ff13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the component is in the Exception state.  <a href="#ad3f58ee59ba08f3c4cf7ab92bd7ff13e">More...</a><br /></td></tr>
 <tr class="separator:ad3f58ee59ba08f3c4cf7ab92bd7ff13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a940714024a53ffb17de749f3f909527d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a940714024a53ffb17de749f3f909527d">update</a> ()</td></tr>
 <tr class="memdesc:a940714024a53ffb17de749f3f909527d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke this method to <em>execute</em> the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> and the <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a940714024a53ffb17de749f3f909527d" title="Invoke this method to execute the ExecutionEngine and the update() method. ">update()</a> method.  <a href="#a940714024a53ffb17de749f3f909527d">More...</a><br /></td></tr>
@@ -347,22 +328,20 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6cdbb26dfc54b67c284135e826b62960"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cdbb26dfc54b67c284135e826b62960"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a6cdbb26dfc54b67c284135e826b62960">DestroyOrb</a> ()</td></tr>
-<tr class="memdesc:a6cdbb26dfc54b67c284135e826b62960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke this method once to cleanup the orb. <br /></td></tr>
+<tr class="memitem:a6cdbb26dfc54b67c284135e826b62960"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a6cdbb26dfc54b67c284135e826b62960">DestroyOrb</a> ()</td></tr>
+<tr class="memdesc:a6cdbb26dfc54b67c284135e826b62960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke this method once to cleanup the orb.  <a href="#a6cdbb26dfc54b67c284135e826b62960">More...</a><br /></td></tr>
 <tr class="separator:a6cdbb26dfc54b67c284135e826b62960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5221c6007b7ceb6d397b9b8bf02b5943"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html">TaskContextProxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a5221c6007b7ceb6d397b9b8bf02b5943">Create</a> (std::string name, bool is_ior=false)</td></tr>
-<tr class="memdesc:a5221c6007b7ceb6d397b9b8bf02b5943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: create a CORBA Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>.  <a href="#a5221c6007b7ceb6d397b9b8bf02b5943">More...</a><br /></td></tr>
+<tr class="memdesc:a5221c6007b7ceb6d397b9b8bf02b5943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: create a <a class="el" href="namespaceCORBA.html">CORBA</a> Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>.  <a href="#a5221c6007b7ceb6d397b9b8bf02b5943">More...</a><br /></td></tr>
 <tr class="separator:a5221c6007b7ceb6d397b9b8bf02b5943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af20c64c88305e2a64a8a1a778e8ebf2e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html">TaskContextProxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#af20c64c88305e2a64a8a1a778e8ebf2e">CreateFromFile</a> (std::string filename)</td></tr>
-<tr class="memdesc:af20c64c88305e2a64a8a1a778e8ebf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: create a CORBA Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>.  <a href="#af20c64c88305e2a64a8a1a778e8ebf2e">More...</a><br /></td></tr>
+<tr class="memdesc:af20c64c88305e2a64a8a1a778e8ebf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: create a <a class="el" href="namespaceCORBA.html">CORBA</a> Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>.  <a href="#af20c64c88305e2a64a8a1a778e8ebf2e">More...</a><br /></td></tr>
 <tr class="separator:af20c64c88305e2a64a8a1a778e8ebf2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a66a077c9d9add68b0057b6aa71feef"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a5a66a077c9d9add68b0057b6aa71feef">Create</a> (::RTT::corba::CTaskContext_ptr task, bool force_remote=false)</td></tr>
-<tr class="memdesc:a5a66a077c9d9add68b0057b6aa71feef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: create a CORBA Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>.  <a href="#a5a66a077c9d9add68b0057b6aa71feef">More...</a><br /></td></tr>
+<tr class="memdesc:a5a66a077c9d9add68b0057b6aa71feef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory method: create a <a class="el" href="namespaceCORBA.html">CORBA</a> Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>.  <a href="#a5a66a077c9d9add68b0057b6aa71feef">More...</a><br /></td></tr>
 <tr class="separator:a5a66a077c9d9add68b0057b6aa71feef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a664bef894603be46e6998955246d2d61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a664bef894603be46e6998955246d2d61"></a>
-static PortableServer::POA_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a664bef894603be46e6998955246d2d61">ProxyPOA</a> ()</td></tr>
-<tr class="memdesc:a664bef894603be46e6998955246d2d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default POA for all proxies. <br /></td></tr>
+<tr class="memitem:a664bef894603be46e6998955246d2d61"><td class="memItemLeft" align="right" valign="top">static PortableServer::POA_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a664bef894603be46e6998955246d2d61">ProxyPOA</a> ()</td></tr>
+<tr class="memdesc:a664bef894603be46e6998955246d2d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default POA for all proxies.  <a href="#a664bef894603be46e6998955246d2d61">More...</a><br /></td></tr>
 <tr class="separator:a664bef894603be46e6998955246d2d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32ebf2eb7aaf1d82875d8e5156bbdbda"><td class="memItemLeft" align="right" valign="top">static RTT_CORBA_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1ApplicationServer.html#a32ebf2eb7aaf1d82875d8e5156bbdbda">InitOrb</a> (int argc, char *argv[], <a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> orb_timeout=0)</td></tr>
 <tr class="memdesc:a32ebf2eb7aaf1d82875d8e5156bbdbda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke this method once to initialise the Orb which will run the task servers.  <a href="#a32ebf2eb7aaf1d82875d8e5156bbdbda">More...</a><br /></td></tr>
@@ -370,47 +349,36 @@ static PortableServer::POA_ptr&#160;</td><td class="memItemRight" valign="bottom
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aa703a4cb32277a3e51539844bb4b89cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa703a4cb32277a3e51539844bb4b89cd"></a>
-static PMap&#160;</td><td class="memItemRight" valign="bottom"><b>proxies</b></td></tr>
+<tr class="memitem:aa703a4cb32277a3e51539844bb4b89cd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ab7c900f8e0cd86dbc1383d17462b20b9">PMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#aa703a4cb32277a3e51539844bb4b89cd">proxies</a></td></tr>
 <tr class="separator:aa703a4cb32277a3e51539844bb4b89cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae610e6376e03f79fb097aacfd390aacc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae610e6376e03f79fb097aacfd390aacc"></a>
-static CORBA::ORB_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1ApplicationServer.html#ae610e6376e03f79fb097aacfd390aacc">orb</a></td></tr>
-<tr class="memdesc:ae610e6376e03f79fb097aacfd390aacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The orb of this process. <br /></td></tr>
+<tr class="memitem:ae610e6376e03f79fb097aacfd390aacc"><td class="memItemLeft" align="right" valign="top">static CORBA::ORB_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1ApplicationServer.html#ae610e6376e03f79fb097aacfd390aacc">orb</a></td></tr>
+<tr class="memdesc:ae610e6376e03f79fb097aacfd390aacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The orb of this process.  <a href="#ae610e6376e03f79fb097aacfd390aacc">More...</a><br /></td></tr>
 <tr class="separator:ae610e6376e03f79fb097aacfd390aacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eb9a81f3a8c3470d45e8464d126f470"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7eb9a81f3a8c3470d45e8464d126f470"></a>
-static PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1ApplicationServer.html#a7eb9a81f3a8c3470d45e8464d126f470">rootPOA</a></td></tr>
-<tr class="memdesc:a7eb9a81f3a8c3470d45e8464d126f470"><td class="mdescLeft">&#160;</td><td class="mdescRight">The root POA of this process. <br /></td></tr>
+<tr class="memitem:a7eb9a81f3a8c3470d45e8464d126f470"><td class="memItemLeft" align="right" valign="top">static PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1ApplicationServer.html#a7eb9a81f3a8c3470d45e8464d126f470">rootPOA</a></td></tr>
+<tr class="memdesc:a7eb9a81f3a8c3470d45e8464d126f470"><td class="mdescLeft">&#160;</td><td class="mdescRight">The root POA of this process.  <a href="#a7eb9a81f3a8c3470d45e8464d126f470">More...</a><br /></td></tr>
 <tr class="separator:a7eb9a81f3a8c3470d45e8464d126f470"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:afb77d6dc2a2ba13037ff23716df5a539"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb77d6dc2a2ba13037ff23716df5a539"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#afb77d6dc2a2ba13037ff23716df5a539">TaskContextProxy</a> (std::string location, bool is_ior)</td></tr>
-<tr class="memdesc:afb77d6dc2a2ba13037ff23716df5a539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor which creates a new connection to a stringified ior or taskname in NameServer. <br /></td></tr>
+<tr class="memitem:afb77d6dc2a2ba13037ff23716df5a539"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#afb77d6dc2a2ba13037ff23716df5a539">TaskContextProxy</a> (std::string location, bool is_ior)</td></tr>
+<tr class="memdesc:afb77d6dc2a2ba13037ff23716df5a539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor which creates a new connection to a stringified ior or taskname in NameServer.  <a href="#afb77d6dc2a2ba13037ff23716df5a539">More...</a><br /></td></tr>
 <tr class="separator:afb77d6dc2a2ba13037ff23716df5a539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09952a063807c4c700a815c6e6c2d13d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09952a063807c4c700a815c6e6c2d13d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a09952a063807c4c700a815c6e6c2d13d">TaskContextProxy</a> ()</td></tr>
-<tr class="memdesc:a09952a063807c4c700a815c6e6c2d13d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Private constructor which does nothing. <br /></td></tr>
+<tr class="memitem:a09952a063807c4c700a815c6e6c2d13d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a09952a063807c4c700a815c6e6c2d13d">TaskContextProxy</a> ()</td></tr>
+<tr class="memdesc:a09952a063807c4c700a815c6e6c2d13d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Private constructor which does nothing.  <a href="#a09952a063807c4c700a815c6e6c2d13d">More...</a><br /></td></tr>
 <tr class="separator:a09952a063807c4c700a815c6e6c2d13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac649aaa48922f229997a127672767ab4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac649aaa48922f229997a127672767ab4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ac649aaa48922f229997a127672767ab4">TaskContextProxy</a> (::RTT::corba::CTaskContext_ptr t)</td></tr>
-<tr class="memdesc:ac649aaa48922f229997a127672767ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor which creates a new connection to a corba object. <br /></td></tr>
+<tr class="memitem:ac649aaa48922f229997a127672767ab4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ac649aaa48922f229997a127672767ab4">TaskContextProxy</a> (::RTT::corba::CTaskContext_ptr t)</td></tr>
+<tr class="memdesc:ac649aaa48922f229997a127672767ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor which creates a new connection to a corba object.  <a href="#ac649aaa48922f229997a127672767ab4">More...</a><br /></td></tr>
 <tr class="separator:ac649aaa48922f229997a127672767ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7f38a761efa69863de69ad7ab7b74c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7f38a761efa69863de69ad7ab7b74c9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ab7f38a761efa69863de69ad7ab7b74c9">initFromURIOrTaskname</a> (std::string location, bool is_ior)</td></tr>
-<tr class="memdesc:ab7f38a761efa69863de69ad7ab7b74c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">initializes the class from a stringified ior or taskname in NameServer. <br /></td></tr>
+<tr class="memitem:ab7f38a761efa69863de69ad7ab7b74c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ab7f38a761efa69863de69ad7ab7b74c9">initFromURIOrTaskname</a> (std::string location, bool is_ior)</td></tr>
+<tr class="memdesc:ab7f38a761efa69863de69ad7ab7b74c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">initializes the class from a stringified ior or taskname in NameServer.  <a href="#ab7f38a761efa69863de69ad7ab7b74c9">More...</a><br /></td></tr>
 <tr class="separator:ab7f38a761efa69863de69ad7ab7b74c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a060b936bb810eb03c712b4ad2236aba4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a060b936bb810eb03c712b4ad2236aba4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>synchronize</b> ()</td></tr>
+<tr class="memitem:a060b936bb810eb03c712b4ad2236aba4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a060b936bb810eb03c712b4ad2236aba4">synchronize</a> ()</td></tr>
 <tr class="separator:a060b936bb810eb03c712b4ad2236aba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a756294752fc3eda11e3863a762a02e2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a756294752fc3eda11e3863a762a02e2e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fetchRequesters</b> (ServiceRequester::shared_ptr parent, CServiceRequester_ptr csrq)</td></tr>
+<tr class="memitem:a756294752fc3eda11e3863a762a02e2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a756294752fc3eda11e3863a762a02e2e">fetchRequesters</a> (<a class="el" href="classRTT_1_1ServiceRequester.html#adb53f55a1d20a838d6c71dbea46205b2">ServiceRequester::shared_ptr</a> parent, CServiceRequester_ptr csrq)</td></tr>
 <tr class="separator:a756294752fc3eda11e3863a762a02e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab93b2b67a04314340f44a5d7916f976"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab93b2b67a04314340f44a5d7916f976"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fetchServices</b> (Service::shared_ptr parent, CService_ptr mtask)</td></tr>
+<tr class="memitem:aab93b2b67a04314340f44a5d7916f976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#aab93b2b67a04314340f44a5d7916f976">fetchServices</a> (<a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a> parent, CService_ptr <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#af2d76d02ebbdc50ee9343d7a62feb25c">mtask</a>)</td></tr>
 <tr class="separator:aab93b2b67a04314340f44a5d7916f976"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17c8b0d4bc5574ad4e8394604052f9ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17c8b0d4bc5574ad4e8394604052f9ad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fetchPorts</b> (Service::shared_ptr parent, CDataFlowInterface_ptr serv)</td></tr>
+<tr class="memitem:a17c8b0d4bc5574ad4e8394604052f9ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a17c8b0d4bc5574ad4e8394604052f9ad">fetchPorts</a> (<a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a> parent, CDataFlowInterface_ptr serv)</td></tr>
 <tr class="separator:a17c8b0d4bc5574ad4e8394604052f9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59ef45d1d0a48a1123763ed534a9b4b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a59ef45d1d0a48a1123763ed534a9b4b2">forceActivity</a> (<a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">base::ActivityInterface</a> *new_act)</td></tr>
 <tr class="memdesc:a59ef45d1d0a48a1123763ed534a9b4b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces the current activity to become <em>new_act</em>, even if this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> is still running.  <a href="#a59ef45d1d0a48a1123763ed534a9b4b2">More...</a><br /></td></tr>
@@ -454,22 +422,18 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:afb54764824414d6de6c7255b826b51f6"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#afb54764824414d6de6c7255b826b51f6">port_proxies</a></td></tr>
 <tr class="memdesc:afb54764824414d6de6c7255b826b51f6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="interfaceRTT_1_1corba_1_1CDataFlowInterface.html" title="An interface to access the dataflow of a CControlTask object. ">CDataFlowInterface</a> does not delete ports automatically, because they can then be defined as members of the <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> classes.  <a href="#afb54764824414d6de6c7255b826b51f6">More...</a><br /></td></tr>
 <tr class="separator:afb54764824414d6de6c7255b826b51f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2d76d02ebbdc50ee9343d7a62feb25c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2d76d02ebbdc50ee9343d7a62feb25c"></a>
-corba::CTaskContext_var&#160;</td><td class="memItemRight" valign="bottom"><b>mtask</b></td></tr>
+<tr class="memitem:af2d76d02ebbdc50ee9343d7a62feb25c"><td class="memItemLeft" align="right" valign="top">corba::CTaskContext_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#af2d76d02ebbdc50ee9343d7a62feb25c">mtask</a></td></tr>
 <tr class="separator:af2d76d02ebbdc50ee9343d7a62feb25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdeffff3d523e09a22bfcb9f43f1cc5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdeffff3d523e09a22bfcb9f43f1cc5f"></a>
-<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#afdeffff3d523e09a22bfcb9f43f1cc5f">ee</a></td></tr>
-<tr class="memdesc:afdeffff3d523e09a22bfcb9f43f1cc5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The execution engine which calls <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a940714024a53ffb17de749f3f909527d" title="Invoke this method to execute the ExecutionEngine and the update() method. ">update()</a> and processes our commands, events etc. <br /></td></tr>
+<tr class="memitem:afdeffff3d523e09a22bfcb9f43f1cc5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#afdeffff3d523e09a22bfcb9f43f1cc5f">ee</a></td></tr>
+<tr class="memdesc:afdeffff3d523e09a22bfcb9f43f1cc5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The execution engine which calls <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a940714024a53ffb17de749f3f909527d" title="Invoke this method to execute the ExecutionEngine and the update() method. ">update()</a> and processes our commands, events etc.  <a href="#afdeffff3d523e09a22bfcb9f43f1cc5f">More...</a><br /></td></tr>
 <tr class="separator:afdeffff3d523e09a22bfcb9f43f1cc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29ab91fa8b90e2c9ac95652d67730d36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29ab91fa8b90e2c9ac95652d67730d36"></a>
-<a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mTaskState</b></td></tr>
+<tr class="memitem:a29ab91fa8b90e2c9ac95652d67730d36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a29ab91fa8b90e2c9ac95652d67730d36">mTaskState</a></td></tr>
 <tr class="separator:a29ab91fa8b90e2c9ac95652d67730d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a28725d9d3f6dee48da6d05dd51ac4b66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28725d9d3f6dee48da6d05dd51ac4b66"></a>
-static PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a28725d9d3f6dee48da6d05dd51ac4b66">proxy_poa</a></td></tr>
-<tr class="memdesc:a28725d9d3f6dee48da6d05dd51ac4b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">For now one POA handles all proxies. <br /></td></tr>
+<tr class="memitem:a28725d9d3f6dee48da6d05dd51ac4b66"><td class="memItemLeft" align="right" valign="top">static PortableServer::POA_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a28725d9d3f6dee48da6d05dd51ac4b66">proxy_poa</a></td></tr>
+<tr class="memdesc:a28725d9d3f6dee48da6d05dd51ac4b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">For now one POA handles all proxies.  <a href="#a28725d9d3f6dee48da6d05dd51ac4b66">More...</a><br /></td></tr>
 <tr class="separator:a28725d9d3f6dee48da6d05dd51ac4b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
@@ -495,13 +459,11 @@ Ports</h2></td></tr>
 <tr class="memitem:a76bdc1004f98bdb898581b5b71d126e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a76bdc1004f98bdb898581b5b71d126e0">getPort</a> (const std::string &amp;name) const </td></tr>
 <tr class="memdesc:a76bdc1004f98bdb898581b5b71d126e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a port of this Component.  <a href="#a76bdc1004f98bdb898581b5b71d126e0">More...</a><br /></td></tr>
 <tr class="separator:a76bdc1004f98bdb898581b5b71d126e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d0f38c658735ebce3e7dad89f9d1902"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d0f38c658735ebce3e7dad89f9d1902"></a>
-<a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a9d0f38c658735ebce3e7dad89f9d1902">ports</a> ()</td></tr>
-<tr class="memdesc:a9d0f38c658735ebce3e7dad89f9d1902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Data flow ports of this task. <br /></td></tr>
+<tr class="memitem:a9d0f38c658735ebce3e7dad89f9d1902"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#a9d0f38c658735ebce3e7dad89f9d1902">ports</a> ()</td></tr>
+<tr class="memdesc:a9d0f38c658735ebce3e7dad89f9d1902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Data flow ports of this task.  <a href="#a9d0f38c658735ebce3e7dad89f9d1902">More...</a><br /></td></tr>
 <tr class="separator:a9d0f38c658735ebce3e7dad89f9d1902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc8395096c3b337dbed1410b9b09ebe5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc8395096c3b337dbed1410b9b09ebe5"></a>
-const <a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#adc8395096c3b337dbed1410b9b09ebe5">ports</a> () const </td></tr>
-<tr class="memdesc:adc8395096c3b337dbed1410b9b09ebe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Data flow ports of this task. <br /></td></tr>
+<tr class="memitem:adc8395096c3b337dbed1410b9b09ebe5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1TaskContext.html#adc8395096c3b337dbed1410b9b09ebe5">ports</a> () const </td></tr>
+<tr class="memdesc:adc8395096c3b337dbed1410b9b09ebe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Data flow ports of this task.  <a href="#adc8395096c3b337dbed1410b9b09ebe5">More...</a><br /></td></tr>
 <tr class="separator:adc8395096c3b337dbed1410b9b09ebe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -509,6 +471,44 @@ const <a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface<
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8hpp_source.html#l00082">82</a> of file <a class="el" href="TaskContextProxy_8hpp_source.html">TaskContextProxy.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="ac1ebba86c109e257343eb1f432e97079"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt; std::string &gt; <a class="el" href="classRTT_1_1TaskContext.html#ac1ebba86c109e257343eb1f432e97079">RTT::TaskContext::PeerList</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A list of Peer <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> names. </p>
+
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00100">100</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7c900f8e0cd86dbc1383d17462b20b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt;<a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html">TaskContextProxy</a>*, corba::CTaskContext_ptr&gt; <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ab7c900f8e0cd86dbc1383d17462b20b9">RTT::corba::TaskContextProxy::PMap</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8hpp_source.html#l00087">87</a> of file <a class="el" href="TaskContextProxy_8hpp_source.html">TaskContextProxy.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a8cc279940c3e1d974831413c03b7b6e5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -596,6 +596,125 @@ const <a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface<
 
 </div>
 </div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="afb77d6dc2a2ba13037ff23716df5a539"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::corba::TaskContextProxy::TaskContextProxy </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_ior</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Private constructor which creates a new connection to a stringified ior or taskname in NameServer. </p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00094">94</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09952a063807c4c700a815c6e6c2d13d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::corba::TaskContextProxy::TaskContextProxy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A Private constructor which does nothing. </p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00100">100</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00396">Create()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac649aaa48922f229997a127672767ab4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::corba::TaskContextProxy::TaskContextProxy </td>
+          <td>(</td>
+          <td class="paramtype">::RTT::corba::CTaskContext_ptr&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Private constructor which creates a new connection to a corba object. </p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">172</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="corba_8h_source.html#l00068">CORBA_EXCEPTION_INFO</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="TaskContext_8cpp_source.html#l00364">RTT::TaskContext::forceActivity()</a>, <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="Logger_8cpp_source.html#l00373">RTT::Logger::nl()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00268">RTT::TaskContext::provides()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00088">proxies</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af9c0824a80f77b3460cfab293c54e9e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::corba::TaskContextProxy::~TaskContextProxy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00082">82</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="PropertyBag_8cpp_source.html#l00752">RTT::deletePropertyBag()</a>, and <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Info</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a702052a95f039f56c9de1519e10c0b8c"></a>
 <div class="memitem">
@@ -626,7 +745,7 @@ const <a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface<
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00498">498</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
 
 </div>
 </div>
@@ -894,7 +1013,7 @@ template&lt;class Signature &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00347">347</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00083">RTT::TaskContext::TaskContext()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00084">RTT_corba_CTaskContext_i::RTT_corba_CTaskContext_i()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00083">RTT::TaskContext::TaskContext()</a>.</p>
 
 </div>
 </div>
@@ -929,7 +1048,7 @@ template&lt;class Func , class Service &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a>&#160;</td>
-          <td class="paramname"><em>et</em> = <code>ClientThread</code>&#160;</td>
+          <td class="paramname"><em>et</em> = <code><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -976,7 +1095,7 @@ template&lt;class Signature &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a>&#160;</td>
-          <td class="paramname"><em>et</em> = <code>ClientThread</code>&#160;</td>
+          <td class="paramname"><em>et</em> = <code><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1043,7 +1162,7 @@ template&lt;class Signature &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00599">599</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00399">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00770">server()</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00448">RTT::corba::TaskContextServer::server()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00770">server()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>.</p>
 
 </div>
 </div>
@@ -1205,6 +1324,35 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a44d240a9e534409e31cd6d41385a6651"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ConfigurationInterface.html">ConfigurationInterface</a>* RTT::TaskContext::attributes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the attributes of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> as an <a class="el" href="classRTT_1_1ConfigurationInterface.html" title="A class for keeping track of Attribute, Constant and Property objects of a TaskContext. ">ConfigurationInterface</a>. </p>
+
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00458">458</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExpressionParser_8cpp_source.html#l00588">RTT::scripting::ExpressionParser::getHandle()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ad4a3f8cbcfee40c1bc1f4394dadfcf82"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1231,7 +1379,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00311">311</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00427">RTT::ExecutionEngine::breakLoop()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00417">RTT::ExecutionEngine::breakLoop()</a>.</p>
 
 </div>
 </div>
@@ -1264,7 +1412,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00542">542</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
 
 </div>
 </div>
@@ -1357,7 +1505,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00530">530</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
 
 </div>
 </div>
@@ -1398,6 +1546,102 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a38bac21e6c43395f9c3a8b3fc1db17ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::corba::TaskContextProxy::connectPeers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td>
+          <td class="paramname"><em>peer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a two-way connection from this task to a peer task. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#aac2ffdaa9d9af59f5cbaceb33ff118aa">RTT::TaskContext</a>.</p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00654">654</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac842b590f49e2356afb68f06ee62ab4c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::corba::TaskContextProxy::connectPorts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td>
+          <td class="paramname"><em>peer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a data flow connection from this task's ports to a peer's ports. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a67511f726158ff9ebad751991651ec8a">RTT::TaskContext</a>.</p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00723">723</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af8d5035a98b5c38a4a1476aa50bcb0d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::corba::TaskContextProxy::connectServices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td>
+          <td class="paramname"><em>peer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Connects all requires/provides services of this component to these of a peer. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a4b0cf7b019969abe36f40bcdaa9fb427">RTT::TaskContext</a>.</p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00738">738</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5221c6007b7ceb6d397b9b8bf02b5943"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1430,7 +1674,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Factory method: create a CORBA Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>. </p>
+<p>Factory method: create a <a class="el" href="namespaceCORBA.html">CORBA</a> Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>The name of the <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a> to connect to or the Object Reference of the object to connect to </td></tr>
@@ -1444,13 +1688,13 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new or previously created CORBA proxy for <em>name</em>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new or previously created <a class="el" href="namespaceCORBA.html">CORBA</a> proxy for <em>name</em>. </dd></dl>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00396">396</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="rtstreams_8cpp_source.html#l00110">RTT::os::endl()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00100">TaskContextProxy()</a>.</p>
+<p>References <a class="el" href="rtstreams_8cpp_source.html#l00110">RTT::os::endl()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00100">TaskContextProxy()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00075">RTT::corba::IllegalServer::what()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextFactory_8cpp_source.html#l00052">RTT::corba::TaskContextFactory::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00416">CreateFromFile()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00708">getPeer()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextFactory_8cpp_source.html#l00052">RTT::corba::TaskContextFactory::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00416">CreateFromFile()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00708">getPeer()</a>, and <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00328">RTT::corba::AnyConversion&lt; RTT::TaskContext * &gt;::update()</a>.</p>
 
 </div>
 </div>
@@ -1486,7 +1730,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Factory method: create a CORBA Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>. </p>
+<p>Factory method: create a <a class="el" href="namespaceCORBA.html">CORBA</a> Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>. </p>
 <p>This method may in fact return the real <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> in case the servant of <em>task</em> is in the same process. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">task</td><td>The Object to create a proxy for. </td></tr>
@@ -1499,11 +1743,11 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new or previously created CORBA proxy for <em>task</em>, or the <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> itself. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new or previously created <a class="el" href="namespaceCORBA.html">CORBA</a> proxy for <em>task</em>, or the <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> itself. </dd></dl>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00433">433</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="rtstreams_8cpp_source.html#l00110">RTT::os::endl()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00100">TaskContextProxy()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="rtstreams_8cpp_source.html#l00110">RTT::os::endl()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00088">proxies</a>, <a class="el" href="TaskContextServer_8hpp_source.html#l00073">RTT::corba::TaskContextServer::servers</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00100">TaskContextProxy()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00075">RTT::corba::IllegalServer::what()</a>.</p>
 
 </div>
 </div>
@@ -1529,7 +1773,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Factory method: create a CORBA Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>. </p>
+<p>Factory method: create a <a class="el" href="namespaceCORBA.html">CORBA</a> Proxy for an existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>A file containing an IOR which refers to the existing <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a>. </td></tr>
@@ -1542,11 +1786,11 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new or previously created CORBA proxy for <em>filename</em>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new or previously created <a class="el" href="namespaceCORBA.html">CORBA</a> proxy for <em>filename</em>. </dd></dl>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00416">416</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContextProxy_8cpp_source.html#l00396">Create()</a>, and <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>.</p>
+<p>References <a class="el" href="TaskContextProxy_8cpp_source.html#l00396">Create()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, and <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextFactory_8cpp_source.html#l00057">RTT::corba::TaskContextFactory::CreateFromFile()</a>.</p>
 
@@ -1593,6 +1837,37 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a6cdbb26dfc54b67c284135e826b62960"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::TaskContextProxy::DestroyOrb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Invoke this method once to cleanup the orb. </p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00378">378</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="corba_8h_source.html#l00068">CORBA_EXCEPTION_INFO</a>, <a class="el" href="rtstreams_8cpp_source.html#l00110">RTT::os::endl()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="Logger_8cpp_source.html#l00373">RTT::Logger::nl()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="ApplicationServer_8hpp_source.html#l00067">RTT::corba::ApplicationServer::rootPOA</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextFactory_8cpp_source.html#l00047">RTT::corba::TaskContextFactory::DestroyOrb()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa03a9ce88c728b6c996bf19f4ab3693d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1623,6 +1898,94 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a859604ef48fae11211537048f305150b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::TaskContextProxy::disconnectPeers </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a two-way connection from this task to a peer task. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a9a76246c2720b22546dd18ce0d0b38bf">RTT::TaskContext</a>.</p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00669">669</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2522496caacc3e88065b5cb09dc2b7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a>* RTT::base::TaskCore::engine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a const pointer to the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of this Task. </p>
+
+<p>Definition at line <a class="el" href="TaskCore_8hpp_source.html#l00327">327</a> of file <a class="el" href="TaskCore_8hpp_source.html">TaskCore.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00239">RTT::base::TaskCore::activate()</a>, <a class="el" href="Service_8cpp_source.html#l00185">RTT::Service::addLocalOperation()</a>, <a class="el" href="ServiceRequester_8cpp_source.html#l00136">RTT::ServiceRequester::connectTo()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00146">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00364">RTT::TaskContext::forceActivity()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00377">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00282">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="Service_8cpp_source.html#l00075">RTT::Service::getOwnerExecutionEngine()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00321">RTT::scripting::StateGraphParser::getParserResult()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00272">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00267">RTT::base::TaskCore::isActive()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00538">RTT::scripting::ScriptingService::loadFunctions()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00360">RTT::scripting::ScriptingService::loadProgram()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00631">RTT::scripting::ScriptingService::loadPrograms()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00716">RTT::scripting::ScriptingService::loadStateMachines()</a>, <a class="el" href="Parser_8cpp_source.html#l00131">RTT::scripting::Parser::parseCondition()</a>, <a class="el" href="Parser_8cpp_source.html#l00081">RTT::scripting::Parser::parseFunction()</a>, <a class="el" href="Parser_8cpp_source.html#l00093">RTT::scripting::Parser::parseProgram()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, <a class="el" href="Parser_8cpp_source.html#l00107">RTT::scripting::Parser::parseStateMachine()</a>, <a class="el" href="Parser_8cpp_source.html#l00197">RTT::scripting::Parser::parseValueStatement()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00230">RTT::scripting::ScriptingService::recursiveLoadStateMachine()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00288">RTT::scripting::ScriptingService::recursiveUnloadStateMachine()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00343">RTT::TaskContext::setActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00287">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00323">RTT::base::TaskCore::setExecutionEngine()</a>, <a class="el" href="ServiceRequester_8cpp_source.html#l00092">RTT::ServiceRequester::setOwner()</a>, <a class="el" href="Service_8cpp_source.html#l00261">RTT::Service::setOwner()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00277">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00097">RTT::base::TaskCore::trigger()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00383">RTT::scripting::ScriptingService::unloadProgram()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00090">RTT::base::TaskCore::update()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac18ebf7b987f142c8dad4413be2bbd30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a>* RTT::base::TaskCore::engine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a pointer to the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of this Task. </p>
+
+<p>Definition at line <a class="el" href="TaskCore_8hpp_source.html#l00335">335</a> of file <a class="el" href="TaskCore_8hpp_source.html">TaskCore.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3c3b01dff9aa92578d1657bdc3c0fb47"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1649,7 +2012,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00152">152</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, and <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00448">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, and <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00083">RTT::TaskContext::TaskContext()</a>.</p>
 
@@ -1681,7 +2044,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00301">301</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00357">RTT::ExecutionEngine::step()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00353">RTT::ExecutionEngine::processChildren()</a>.</p>
 
 </div>
 </div>
@@ -1711,9 +2074,9 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00159">159</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8cpp_source.html#l00244">RTT::base::TaskCore::cleanupHook()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, <a class="el" href="TaskCore_8cpp_source.html#l00316">RTT::base::TaskCore::exceptionHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00146">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00101">RTT::base::TaskCore::PreOperational</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, <a class="el" href="TaskCore_8cpp_source.html#l00319">RTT::base::TaskCore::stopHook()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00104">RTT::base::TaskCore::Stopped</a>, and <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>.</p>
+<p>References <a class="el" href="CatchConfig_8hpp_source.html#l00057">CATCH</a>, <a class="el" href="CatchConfig_8hpp_source.html#l00058">CATCH_ALL</a>, <a class="el" href="TaskCore_8cpp_source.html#l00244">RTT::base::TaskCore::cleanupHook()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, <a class="el" href="TaskCore_8cpp_source.html#l00316">RTT::base::TaskCore::exceptionHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00146">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00448">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="TaskCore_8hpp_source.html#l00101">RTT::base::TaskCore::PreOperational</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, <a class="el" href="TaskCore_8cpp_source.html#l00319">RTT::base::TaskCore::stopHook()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00104">RTT::base::TaskCore::Stopped</a>, and <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00127">RTT::base::TaskCore::cleanup()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00104">RTT::base::TaskCore::configure()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00448">RTT::ExecutionEngine::setExceptionTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00357">RTT::ExecutionEngine::step()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00127">RTT::base::TaskCore::cleanup()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00104">RTT::base::TaskCore::configure()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00353">RTT::ExecutionEngine::processChildren()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00438">RTT::ExecutionEngine::setExceptionTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>.</p>
 
 </div>
 </div>
@@ -1773,9 +2136,129 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00146">146</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a78717d9d9533a58bac8d1f0eadf564a1">RTT::base::ActivityInterface::stop()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00167">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00448">RTT::base::TaskCore::mTaskState</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a78717d9d9533a58bac8d1f0eadf564a1">RTT::base::ActivityInterface::stop()</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a17c8b0d4bc5574ad4e8394604052f9ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::TaskContextProxy::fetchPorts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CDataFlowInterface_ptr&#160;</td>
+          <td class="paramname"><em>serv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00345">345</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="DataFlow_8idl_source.html#l00128">RTT::corba::CInput</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="TypeInfoRepository_8cpp_source.html#l00063">RTT::types::TypeInfoRepository::Instance()</a>, <a class="el" href="DataFlow_8idl_source.html#l00133">RTT::corba::CPortDescription::name</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00114">port_proxies</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00776">ProxyPOA()</a>, <a class="el" href="DataFlow_8idl_source.html#l00132">RTT::corba::CPortDescription::type</a>, <a class="el" href="DataFlow_8idl_source.html#l00134">RTT::corba::CPortDescription::type_name</a>, and <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Warning</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00237">fetchServices()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a756294752fc3eda11e3863a762a02e2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::TaskContextProxy::fetchRequesters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1ServiceRequester.html#adb53f55a1d20a838d6c71dbea46205b2">ServiceRequester::shared_ptr</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CServiceRequester_ptr&#160;</td>
+          <td class="paramname"><em>csrq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00210">210</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00281">RTT::TaskContext::requires()</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aab93b2b67a04314340f44a5d7916f976"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::TaskContextProxy::fetchServices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CService_ptr&#160;</td>
+          <td class="paramname"><em>mtask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00237">237</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TypeInfo_8hpp_source.html#l00222">RTT::types::TypeInfo::buildAttribute()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00173">RTT::types::TypeInfo::buildConstant()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00214">RTT::types::TypeInfo::buildProperty()</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#aae142bbaf2d2b4f7eee716102a73192f">RTT::corba::CorbaTypeTransporter::createAttributeDataSource()</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a3f954d5fadeaaf475ad91d340988fa02">RTT::corba::CorbaTypeTransporter::createPropertyDataSource()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00345">fetchPorts()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00305">RTT::findProperty()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00150">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00168">RTT::types::TypeInfo::hasProtocol()</a>, <a class="el" href="TypeInfoRepository_8cpp_source.html#l00063">RTT::types::TypeInfoRepository::Instance()</a>, <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="CorbaLib_8hpp_source.html#l00045">ORO_CORBA_PROTOCOL_ID</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00776">ProxyPOA()</a>, and <a class="el" href="PropertyBag_8cpp_source.html#l00384">RTT::storeProperty()</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>.</p>
 
 </div>
 </div>
@@ -1947,6 +2430,35 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a7aa7e91bf90f0793142432f74bb830a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::string&amp; RTT::TaskContext::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the name of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>. </p>
+
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00128">128</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00252">RTT::TaskContext::addPeer()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00270">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00282">RTT::TaskContext::connectPeers()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00154">RTT::TaskContext::connectPorts()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00191">RTT::TaskContext::connectServices()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00433">RTT::corba::TaskContextServer::CreateServer()</a>, <a class="el" href="ExpressionParser_8cpp_source.html#l00079">RTT::scripting::DataCallParser::DataCallParser()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00292">RTT::TaskContext::disconnect()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00102">RTT_corba_CTaskContext_i::getName()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00194">RTT_corba_CTaskContext_i::getProvider()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00214">RTT_corba_CTaskContext_i::getRequester()</a>, <a class="el" href="CorbaDispatcher_8hpp_source.html#l00097">RTT::corba::CorbaDispatcher::Instance()</a>, <a class="el" href="PluginLoader_8cpp_source.html#l00356">RTT::plugin::PluginLoader::loadService()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00641">removePeer()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00438">RTT::ExecutionEngine::setExceptionTask()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00069">RTT::mqueue::MQSendRecv::setupStream()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ad3261db01744046dfe1ad016bf4781c5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2012,7 +2524,39 @@ template&lt;typename T &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00708">708</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContextProxy_8cpp_source.html#l00396">Create()</a>.</p>
+<p>References <a class="el" href="TaskContextProxy_8cpp_source.html#l00396">Create()</a>, and <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a38955bca9a2ff2af401cb7f1a5824df2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1TaskContext.html#ac1ebba86c109e257343eb1f432e97079">TaskContext::PeerList</a> RTT::corba::TaskContextProxy::getPeerList </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a standard container which contains all the Peer names of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a9d294341f8464b87c4609b2f89b5ecb7">RTT::TaskContext</a>.</p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00681">681</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
 </div>
 </div>
@@ -2226,7 +2770,68 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00584">584</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00100">RTT::base::TaskCore::Init</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00100">RTT::base::TaskCore::Init</a>, and <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5afb105eb7dc8add32be6bfc67d4423"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::corba::TaskContextProxy::hasPeer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>peer_name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return true if it knows a peer by that name. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a415123c0d3da013107eb7d0cf793a14d">RTT::TaskContext</a>.</p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00697">697</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3f58ee59ba08f3c4cf7ab92bd7ff13e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::TaskCore::inException </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inspect if the component is in the Exception state. </p>
+
+<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00259">259</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, and <a class="el" href="TaskCore_8hpp_source.html#l00448">RTT::base::TaskCore::mTaskState</a>.</p>
 
 </div>
 </div>
@@ -2258,6 +2863,50 @@ template&lt;class ServiceType &gt; </div>
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a17eced3a04772d8a2b36c9b37e5f630c">RTT::base::TaskCore</a>.</p>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00564">564</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7f38a761efa69863de69ad7ab7b74c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::TaskContextProxy::initFromURIOrTaskname </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_ior</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>initializes the class from a stringified ior or taskname in NameServer. </p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">105</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="corba_8h_source.html#l00068">CORBA_EXCEPTION_INFO</a>, <a class="el" href="Logger_8hpp_source.html#l00121">RTT::Logger::Debug</a>, <a class="el" href="Logger_8hpp_source.html#l00121">RTT::Logger::Error</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Logger_8hpp_source.html#l00121">RTT::Logger::Info</a>, <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, <a class="el" href="TaskContext_8hpp_source.html#l00268">RTT::TaskContext::provides()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00088">proxies</a>, <a class="el" href="TaskContext_8cpp_source.html#l00343">RTT::TaskContext::setActivity()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00094">TaskContextProxy()</a>.</p>
 
 </div>
 </div>
@@ -2309,9 +2958,41 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="ApplicationServer_8cpp_source.html#l00055">55</a> of file <a class="el" href="ApplicationServer_8cpp_source.html">ApplicationServer.cpp</a>.</p>
 
-<p>References <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="Logger_8cpp_source.html#l00380">RTT::Logger::nl()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="ApplicationServer_8hpp_source.html#l00067">RTT::corba::ApplicationServer::rootPOA</a>.</p>
+<p>References <a class="el" href="corba_8h_source.html#l00068">CORBA_EXCEPTION_INFO</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="Logger_8cpp_source.html#l00373">RTT::Logger::nl()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="ApplicationServer_8hpp_source.html#l00067">RTT::corba::ApplicationServer::rootPOA</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextFactory_8cpp_source.html#l00042">RTT::corba::TaskContextFactory::InitOrb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae94d2e03dda53dcad5e4a2b4aea0032e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::corba::TaskContextProxy::inRunTimeError </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inspect if the component is in the RunTimeError state. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#ae96c196ff77840408229ccd5018fc9c9">RTT::base::TaskCore</a>.</p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00574">574</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
 </div>
 </div>
@@ -2344,6 +3025,8 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00510">510</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
+<p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a1da68cc7d2a8de66bcda32096b754735"></a>
@@ -2375,6 +3058,8 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00554">554</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
+<p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3e5ecacf2bf68d3eabee711747a12dd7"></a>
@@ -2405,6 +3090,8 @@ template&lt;class ServiceType &gt; </div>
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a9168525a25ec73b7240042613688b6fa">RTT::base::TaskCore</a>.</p>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00520">520</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
 </div>
 </div>
@@ -2447,6 +3134,118 @@ template&lt;class ServiceType &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="acaac15f93904c1653c7d67ae7cb13c3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1OperationInterface.html">OperationInterface</a>* RTT::TaskContext::operations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the operations of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> as an <a class="el" href="classRTT_1_1OperationInterface.html" title="Holds all exported operations of a component and is able to produce callers for these operations...">OperationInterface</a>. </p>
+
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00391">391</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d0f38c658735ebce3e7dad89f9d1902"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a>* RTT::TaskContext::ports </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Data flow ports of this task. </p>
+
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00577">577</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00154">RTT::TaskContext::connectPorts()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00292">RTT::TaskContext::disconnect()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00403">RTT::TaskContext::start()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00413">RTT::TaskContext::stop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc8395096c3b337dbed1410b9b09ebe5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a>* RTT::TaskContext::ports </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Data flow ports of this task. </p>
+
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00584">584</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00395">RTT::connectPorts()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1442b82a6d52954b8644b0f89d3a1080"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1PropertyBag.html">PropertyBag</a>* RTT::TaskContext::properties </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the properties of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> as a <a class="el" href="classRTT_1_1PropertyBag.html" title="A container for holding references to properties. ">PropertyBag</a>. </p>
+
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00506">506</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af11b11de5bb15692305f1d1df3840540"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2455,7 +3254,7 @@ template&lt;class ServiceType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Service::shared_ptr RTT::TaskContext::provides </td>
+          <td class="memname"><a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a> RTT::TaskContext::provides </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2473,7 +3272,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00268">268</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00261">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00191">RTT::TaskContext::connectServices()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00056">RTT::marsh::MarshallingService::Create()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00065">RTT::scripting::ScriptingService::Create()</a>, <a class="el" href="Service_8cpp_source.html#l00052">RTT::Service::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00233">RTT::TaskContext::loadService()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, <a class="el" href="Parser_8cpp_source.html#l00197">RTT::scripting::Parser::parseValueStatement()</a>, <a class="el" href="PeerParser_8cpp_source.html#l00151">RTT::scripting::PeerParser::reset()</a>, <a class="el" href="ScriptParser_8cpp_source.html#l00046">RTT::scripting::ScriptParser::ScriptParser()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00083">RTT::TaskContext::TaskContext()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00270">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00191">RTT::TaskContext::connectServices()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00056">RTT::marsh::MarshallingService::Create()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00065">RTT::scripting::ScriptingService::Create()</a>, <a class="el" href="Service_8cpp_source.html#l00050">RTT::Service::Create()</a>, <a class="el" href="StatementProcessor_8cpp_source.html#l00072">RTT::StatementProcessor::D::doPrint()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00108">RTT_corba_CTaskContext_i::getDescription()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00321">RTT::scripting::StateGraphParser::getParserResult()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00194">RTT_corba_CTaskContext_i::getProvider()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00233">RTT::TaskContext::loadService()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00736">RTT::scripting::ProgramGraphParser::parseFunction()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, <a class="el" href="Parser_8cpp_source.html#l00197">RTT::scripting::Parser::parseValueStatement()</a>, <a class="el" href="PeerParser_8cpp_source.html#l00151">RTT::scripting::PeerParser::reset()</a>, <a class="el" href="ScriptParser_8cpp_source.html#l00046">RTT::scripting::ScriptParser::ScriptParser()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00083">RTT::TaskContext::TaskContext()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00786">RTT::scripting::StateGraphParser::~StateGraphParser()</a>.</p>
 
 </div>
 </div>
@@ -2485,7 +3284,7 @@ template&lt;class ServiceType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Service::shared_ptr RTT::TaskContext::provides </td>
+          <td class="memname"><a class="el" href="classRTT_1_1Service.html#a586d9dd29235367b735264a01867e93d">Service::shared_ptr</a> RTT::TaskContext::provides </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>service_name</em></td><td>)</td>
@@ -2508,6 +3307,37 @@ template&lt;class ServiceType &gt; </div>
 </dl>
 
 <p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00275">275</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a664bef894603be46e6998955246d2d61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortableServer::POA_ptr RTT::corba::TaskContextProxy::ProxyPOA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the default POA for all proxies. </p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00776">776</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="TaskContextProxy_8hpp_source.html#l00128">proxy_poa</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00345">fetchPorts()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00237">fetchServices()</a>.</p>
 
 </div>
 </div>
@@ -2540,7 +3370,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00753">753</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, and <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
 </div>
 </div>
@@ -2570,7 +3400,130 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00180">180</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, and <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, <a class="el" href="TaskCore_8hpp_source.html#l00448">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, and <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00150">RTT_corba_CTaskContext_i::resetException()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae92b284f9a6ea5a548d7043fdc005eba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::TaskContextProxy::removePeer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a one-way connection from this task to a peer task. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a3c3c00069dfb5ad81a343d81e7bd30c4">RTT::TaskContext</a>.</p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00628">628</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a051c31efd643ab61800e3dce2b9ad08f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::TaskContextProxy::removePeer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1TaskContext.html">TaskContext</a> *&#160;</td>
+          <td class="paramname"><em>peer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a one-way connection from this task to a peer task. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#ae4364c541a521eaed563232606022061">RTT::TaskContext</a>.</p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00641">641</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00128">RTT::TaskContext::getName()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29517582b6df25769e5ee0c3b9af165a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ServiceRequester.html#adb53f55a1d20a838d6c71dbea46205b2">ServiceRequester::shared_ptr</a> RTT::TaskContext::requires </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the object that manages which methods this Task requires to be implemented by another task. </p>
+
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00281">281</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00191">RTT::TaskContext::connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00210">fetchRequesters()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00214">RTT_corba_CTaskContext_i::getRequester()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a30eaef4efa1eea9ced363516523742d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ServiceRequester.html#adb53f55a1d20a838d6c71dbea46205b2">ServiceRequester::shared_ptr</a> RTT::TaskContext::requires </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>service_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the object that manages which methods this Task requires to be implemented by another service. </p>
+
+<p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00287">287</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
 </div>
 </div>
@@ -2591,6 +3544,8 @@ template&lt;class ServiceType &gt; </div>
 <p>You need to duplicate this object reference in case you wish to keep a reference to it. This object universally identifies the remote <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a> and can be used to tell other (remote) objects where to find it. </p>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00770">770</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00599">addPeer()</a>.</p>
 
@@ -2703,7 +3658,35 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00323">323</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00109">RTT::ExecutionEngine::addChild()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::ee</a>, <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00105">RTT::ExecutionEngine::getParent()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00113">RTT::ExecutionEngine::removeChild()</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00103">RTT::ExecutionEngine::addChild()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::ee</a>, <a class="el" href="TaskCore_8hpp_source.html#l00327">RTT::base::TaskCore::engine()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00099">RTT::ExecutionEngine::getParent()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00107">RTT::ExecutionEngine::removeChild()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3fb55c7496b3e9b2ec7c7e224c337fe4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::TaskContextProxy::setName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">594</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00498">activate()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00599">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00542">cleanup()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00530">configure()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00654">connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00723">connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00738">connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00669">disconnectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00628">removePeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00474">start()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00486">stop()</a>.</p>
 
 </div>
 </div>
@@ -2780,7 +3763,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00474">474</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
 
 </div>
 </div>
@@ -2849,7 +3832,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00486">486</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00384">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00594">setName()</a>.</p>
 
 </div>
 </div>
@@ -2880,6 +3863,35 @@ template&lt;class ServiceType &gt; </div>
 <p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00319">319</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a060b936bb810eb03c712b4ad2236aba4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::TaskContextProxy::synchronize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">195</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00210">fetchRequesters()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00237">fetchServices()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContext_8hpp_source.html#l00268">RTT::TaskContext::provides()</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00281">RTT::TaskContext::requires()</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00599">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>.</p>
 
 </div>
 </div>
@@ -2985,11 +3997,111 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00307">307</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00357">RTT::ExecutionEngine::step()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00353">RTT::ExecutionEngine::processChildren()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="afdeffff3d523e09a22bfcb9f43f1cc5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a>* RTT::base::TaskCore::ee</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The execution engine which calls <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a940714024a53ffb17de749f3f909527d" title="Invoke this method to execute the ExecutionEngine and the update() method. ">update()</a> and processes our commands, events etc. </p>
+
+<p>Definition at line <a class="el" href="TaskCore_8hpp_source.html#l00446">446</a> of file <a class="el" href="TaskCore_8hpp_source.html">TaskCore.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00323">RTT::base::TaskCore::setExecutionEngine()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00069">RTT::base::TaskCore::~TaskCore()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af2d76d02ebbdc50ee9343d7a62feb25c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">corba::CTaskContext_var RTT::corba::TaskContextProxy::mtask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">123</a> of file <a class="el" href="TaskContextProxy_8hpp_source.html">TaskContextProxy.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00498">activate()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00599">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00542">cleanup()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00530">configure()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00654">connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00723">connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00738">connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00669">disconnectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00708">getPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00681">getPeerList()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00584">getTaskState()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00697">hasPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00564">inFatalError()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00574">inRunTimeError()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00510">isActive()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00554">isConfigured()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00520">isRunning()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00753">ready()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00628">removePeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00770">server()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00474">start()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00486">stop()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29ab91fa8b90e2c9ac95652d67730d36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a> RTT::base::TaskCore::mTaskState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskCore_8hpp_source.html#l00448">448</a> of file <a class="el" href="TaskCore_8hpp_source.html">TaskCore.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00127">RTT::base::TaskCore::cleanup()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00104">RTT::base::TaskCore::configure()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00152">RTT::base::TaskCore::error()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00159">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00146">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00082">RTT::base::TaskCore::getTaskState()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00259">RTT::base::TaskCore::inException()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00255">RTT::base::TaskCore::inFatalError()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00263">RTT::base::TaskCore::inRunTimeError()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00251">RTT::base::TaskCore::isConfigured()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00247">RTT::base::TaskCore::isRunning()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00239">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00353">RTT::ExecutionEngine::processChildren()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00180">RTT::base::TaskCore::recover()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00132">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00192">RTT::base::TaskCore::start()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00214">RTT::base::TaskCore::stop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae610e6376e03f79fb097aacfd390aacc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORBA::ORB_var RTT::corba::ApplicationServer::orb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The orb of this process. </p>
+
+<p>Definition at line <a class="el" href="ApplicationServer_8hpp_source.html#l00062">62</a> of file <a class="el" href="ApplicationServer_8hpp_source.html">ApplicationServer.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00270">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00258">RTT::corba::TaskContextServer::CleanupServers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00396">Create()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00412">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00416">CreateFromFile()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00437">RTT::corba::TaskContextServer::CreateServer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00378">DestroyOrb()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00378">RTT::corba::TaskContextServer::DestroyOrb()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00288">RTT::corba::TaskContextServer::DoShutdownOrb()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00478">RTT::corba::RemoteChannelElement&lt; T &gt;::getRemoteURI()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="ApplicationServer_8cpp_source.html#l00055">RTT::corba::ApplicationServer::InitOrb()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00776">ProxyPOA()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00090">RTT::corba::RemoteChannelElement&lt; T &gt;::RemoteChannelElement()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00316">RTT::corba::TaskContextServer::RunOrb()</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00362">RTT::corba::TaskContextServer::ThreadOrb()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="afb54764824414d6de6c7255b826b51f6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3013,7 +4125,83 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8hpp_source.html#l00114">114</a> of file <a class="el" href="TaskContextProxy_8hpp_source.html">TaskContextProxy.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00345">fetchPorts()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa703a4cb32277a3e51539844bb4b89cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; <a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html">TaskContextProxy</a> *, corba::CTaskContext_ptr &gt; RTT::corba::TaskContextProxy::proxies</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8hpp_source.html#l00088">88</a> of file <a class="el" href="TaskContextProxy_8hpp_source.html">TaskContextProxy.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00433">Create()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00437">RTT::corba::TaskContextServer::CreateServer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00075">RTT::corba::IllegalServer::what()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28725d9d3f6dee48da6d05dd51ac4b66"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortableServer::POA_var RTT::corba::TaskContextProxy::proxy_poa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>For now one POA handles all proxies. </p>
+
+<p>Definition at line <a class="el" href="TaskContextProxy_8hpp_source.html#l00128">128</a> of file <a class="el" href="TaskContextProxy_8hpp_source.html">TaskContextProxy.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00776">ProxyPOA()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00075">RTT::corba::IllegalServer::what()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7eb9a81f3a8c3470d45e8464d126f470"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortableServer::POA_var RTT::corba::ApplicationServer::rootPOA</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The root POA of this process. </p>
+
+<p>Definition at line <a class="el" href="ApplicationServer_8hpp_source.html#l00067">67</a> of file <a class="el" href="ApplicationServer_8hpp_source.html">ApplicationServer.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00378">DestroyOrb()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00378">RTT::corba::TaskContextServer::DestroyOrb()</a>, and <a class="el" href="ApplicationServer_8cpp_source.html#l00055">RTT::corba::ApplicationServer::InitOrb()</a>.</p>
 
 </div>
 </div>
@@ -3024,7 +4212,7 @@ template&lt;class ServiceType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:04 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

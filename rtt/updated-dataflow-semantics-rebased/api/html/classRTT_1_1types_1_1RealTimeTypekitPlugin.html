@@ -125,6 +125,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="RealTimeTypekit_8cpp_source.html#l00049">49</a> of file <a class="el" href="RealTimeTypekit_8cpp_source.html">RealTimeTypekit.cpp</a>.</p>
 
+<p>References <a class="el" href="TypekitPlugin_8hpp_source.html#l00131">ORO_TYPEKIT_PLUGIN</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad7984c59d12588203b7e04032ec977d9"></a>
@@ -161,7 +163,7 @@ The RealTimeTypekit for an implementation example. </dd></dl>
 
 <p>Definition at line <a class="el" href="RealTimeTypekitConstructors_8cpp_source.html#l00210">210</a> of file <a class="el" href="RealTimeTypekitConstructors_8cpp_source.html">RealTimeTypekitConstructors.cpp</a>.</p>
 
-<p>References <a class="el" href="TemplateConstructor_8hpp_source.html#l00122">RTT::types::newConstructor()</a>.</p>
+<p>References <a class="el" href="TypeInfoRepository_8cpp_source.html#l00063">RTT::types::TypeInfoRepository::Instance()</a>, and <a class="el" href="TemplateConstructor_8hpp_source.html#l00122">RTT::types::newConstructor()</a>.</p>
 
 </div>
 </div>
@@ -193,7 +195,7 @@ The RealTimeTypekit for an implementation example. </dd></dl>
 
 <p>Definition at line <a class="el" href="RealTimeTypekitGlobals_8cpp_source.html#l00053">53</a> of file <a class="el" href="RealTimeTypekitGlobals_8cpp_source.html">RealTimeTypekitGlobals.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnPolicy_8cpp_source.html#l00071">RTT::ConnPolicy::Default()</a>, <a class="el" href="SendStatus_8hpp_source.html#l00055">RTT::SendFailure</a>, <a class="el" href="SendStatus_8hpp_source.html#l00056">RTT::SendNotReady</a>, and <a class="el" href="SendStatus_8hpp_source.html#l00057">RTT::SendSuccess</a>.</p>
+<p>References <a class="el" href="ConnPolicy_8hpp_source.html#l00112">RTT::ConnPolicy::BUFFER</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00113">RTT::ConnPolicy::CIRCULAR_BUFFER</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00111">RTT::ConnPolicy::DATA</a>, <a class="el" href="ConnPolicy_8cpp_source.html#l00071">RTT::ConnPolicy::Default()</a>, <a class="el" href="GlobalsRepository_8cpp_source.html#l00045">RTT::types::GlobalsRepository::Instance()</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00117">RTT::ConnPolicy::LOCK_FREE</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00116">RTT::ConnPolicy::LOCKED</a>, <a class="el" href="FlowStatus_8hpp_source.html#l00056">RTT::NewData</a>, <a class="el" href="FlowStatus_8hpp_source.html#l00056">RTT::NoData</a>, <a class="el" href="FlowStatus_8hpp_source.html#l00066">RTT::NotConnected</a>, <a class="el" href="FlowStatus_8hpp_source.html#l00056">RTT::OldData</a>, <a class="el" href="ecos_2fosi_8h_source.html#l00050">ORO_SCHED_OTHER</a>, <a class="el" href="ecos_2fosi_8h_source.html#l00049">ORO_SCHED_RT</a>, <a class="el" href="ecos_2fosi_8h_source.html#l00052">ORO_WAIT_ABS</a>, <a class="el" href="ecos_2fosi_8h_source.html#l00053">ORO_WAIT_REL</a>, <a class="el" href="BufferPolicy_8hpp_source.html#l00076">RTT::PerConnection</a>, <a class="el" href="BufferPolicy_8hpp_source.html#l00077">RTT::PerInputPort</a>, <a class="el" href="BufferPolicy_8hpp_source.html#l00078">RTT::PerOutputPort</a>, <a class="el" href="SendStatus_8hpp_source.html#l00055">RTT::SendFailure</a>, <a class="el" href="SendStatus_8hpp_source.html#l00056">RTT::SendNotReady</a>, <a class="el" href="SendStatus_8hpp_source.html#l00057">RTT::SendSuccess</a>, <a class="el" href="BufferPolicy_8hpp_source.html#l00079">RTT::Shared</a>, <a class="el" href="BufferPolicy_8hpp_source.html#l00075">RTT::UnspecifiedBufferPolicy</a>, <a class="el" href="ConnPolicy_8hpp_source.html#l00115">RTT::ConnPolicy::UNSYNC</a>, <a class="el" href="FlowStatus_8hpp_source.html#l00066">RTT::WriteFailure</a>, and <a class="el" href="FlowStatus_8hpp_source.html#l00066">RTT::WriteSuccess</a>.</p>
 
 </div>
 </div>
@@ -221,7 +223,7 @@ The RealTimeTypekit for an implementation example. </dd></dl>
 <p>Implement this method to load <a class="el" href="classRTT_1_1Scripting.html" title="The method interface of the scripting plugin. ">Scripting</a> operators on types, such as '+', '*', ... </p>
 <dl class="section see"><dt>See also</dt><dd>The <a class="el" href="classRTT_1_1types_1_1OperatorRepository.html" title="This class builds on upon construction all expression operators known to Orocos. ">OperatorRepository</a> for adding the Operators </dd>
 <dd>
-The <a class="el" href="classRTT_1_1types_1_1UnaryOp.html" title="UnaryOperator contains information on some unary operator that operates on one arg of a certain type...">UnaryOp</a>, BinaryOp and DotOp classes for the interface of an operation. </dd>
+The <a class="el" href="classRTT_1_1types_1_1UnaryOp.html" title="UnaryOperator contains information on some unary operator that operates on one arg of a certain type...">UnaryOp</a>, <a class="el" href="classRTT_1_1types_1_1BinaryOp.html">BinaryOp</a> and DotOp classes for the interface of an operation. </dd>
 <dd>
 The <a class="el" href="namespaceRTT_1_1types.html#ae8c2ab9b5a306d8927e62625e3418bdd" title="helper function to create a new UnaryOperator ">newUnaryOperator</a>, <a class="el" href="namespaceRTT_1_1types.html#ad425f739fe840a86629938c80eff875e" title="helper function to create a new BinaryOperator ">newBinaryOperator</a> and newDotOperator functions for creating new operator objects. </dd>
 <dd>
@@ -273,6 +275,8 @@ The RealTimeTypekit for an implementation example. </dd></dl>
 
 <p>Definition at line <a class="el" href="RealTimeTypekitTypes_8cpp_source.html#l00060">60</a> of file <a class="el" href="RealTimeTypekitTypes_8cpp_source.html">RealTimeTypekitTypes.cpp</a>.</p>
 
+<p>References <a class="el" href="TypeInfoRepository_8cpp_source.html#l00063">RTT::types::TypeInfoRepository::Instance()</a>, <a class="el" href="RealTimeTypekitTypes2_8cpp_source.html#l00069">RTT::types::loadOrocosTypes()</a>, and <a class="el" href="RealTimeTypekitStdTypes_8cpp_source.html#l00053">RTT::types::loadStdTypes()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -286,7 +290,7 @@ The RealTimeTypekit for an implementation example. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:04:09 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
