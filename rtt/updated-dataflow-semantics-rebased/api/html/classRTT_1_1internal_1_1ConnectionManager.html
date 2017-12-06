@@ -216,9 +216,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00068">68</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00067">67</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8cpp_source.html#l00102">disconnect()</a>.</p>
+<p>References <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>.</p>
 
 </div>
 </div>
@@ -256,7 +256,7 @@ Protected Attributes</h2></td></tr>
 <p>Helper method for port-to-port connection establishment. </p>
 <p>This is the last step in adding a connection to an output port and also validates if the connection is sound. </p><dl class="section return"><dt>Returns</dt><dd>false if the connection failed to work, true otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00123">123</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00122">122</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
 <p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00182">shared_connection</a>.</p>
 
@@ -279,7 +279,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if there is at least one connection registered in this port's list of outputs. </p>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00110">110</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00109">109</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
 <p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>.</p>
 
@@ -303,7 +303,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns true if there exists a connection to the given port. </p>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00113">113</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00112">112</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
 <p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="PortInterface_8cpp_source.html#l00076">RTT::base::PortInterface::getPortID()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
 
@@ -326,11 +326,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Disconnect all connections. </p>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00102">102</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00101">101</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00078">eraseConnection()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
 
-<p>Referenced by <a class="el" href="OutputPortInterface_8cpp_source.html#l00063">RTT::base::OutputPortInterface::disconnect()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00068">~ConnectionManager()</a>, and <a class="el" href="OutputPortInterface_8cpp_source.html#l00054">RTT::base::OutputPortInterface::~OutputPortInterface()</a>.</p>
+<p>Referenced by <a class="el" href="OutputPortInterface_8cpp_source.html#l00063">RTT::base::OutputPortInterface::disconnect()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00067">~ConnectionManager()</a>, and <a class="el" href="OutputPortInterface_8cpp_source.html#l00054">RTT::base::OutputPortInterface::~OutputPortInterface()</a>.</p>
 
 </div>
 </div>
@@ -350,9 +350,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Removes the connection that connects this port to <code>port</code>. </p>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00073">73</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00072">72</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
-<p>References <a class="el" href="PortInterface_8cpp_source.html#l00076">RTT::base::PortInterface::getPortID()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00140">removeConnection()</a>.</p>
+<p>References <a class="el" href="PortInterface_8cpp_source.html#l00076">RTT::base::PortInterface::getPortID()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00139">removeConnection()</a>.</p>
 
 </div>
 </div>
@@ -391,11 +391,11 @@ Protected Attributes</h2></td></tr>
 <p>Helper method for <a class="el" href="classRTT_1_1internal_1_1ConnectionManager.html#a1070d33dd99d0fe1030c8b6aae3096ca" title="Disconnect all connections. ">disconnect()</a> </p>
 <p>Unconditionally removes the given connection and returns the next connection in the list or connections.end() </p>
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00079">79</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00078">78</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
 <p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00132">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="classRTT_1_1base_1_1PortInterface.html#af8d42fb68c00a6be39f2da0e57a8f47c">RTT::base::PortInterface::getEndpoint()</a>, <a class="el" href="PortInterface_8hpp_source.html#l00079">RTT::base::PortInterface::getName()</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00171">mport</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00182">shared_connection</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00102">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00140">removeConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00139">removeConnection()</a>.</p>
 
 </div>
 </div>
@@ -508,7 +508,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00150">150</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00123">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00113">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00102">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00140">removeConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00122">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00112">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00139">removeConnection()</a>.</p>
 
 </div>
 </div>
@@ -536,11 +536,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00140">140</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00139">139</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>, <a class="el" href="classRTT_1_1internal_1_1ConnID.html#afd18f874c9d8965adb5f077c0d38ee19">RTT::internal::ConnID::isSameID()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00078">eraseConnection()</a>, <a class="el" href="classRTT_1_1internal_1_1ConnID.html#afd18f874c9d8965adb5f077c0d38ee19">RTT::internal::ConnID::isSameID()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00073">disconnect()</a>, and <a class="el" href="PortInterface_8cpp_source.html#l00095">RTT::base::PortInterface::removeConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00072">disconnect()</a>, and <a class="el" href="PortInterface_8cpp_source.html#l00095">RTT::base::PortInterface::removeConnection()</a>.</p>
 
 </div>
 </div>
@@ -568,9 +568,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00155">155</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ConnectionManager_8cpp_source.html#l00154">154</a> of file <a class="el" href="ConnectionManager_8cpp_source.html">ConnectionManager.cpp</a>.</p>
 
-<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
+<p>References <a class="el" href="ConnectionManager_8hpp_source.html#l00188">connection_lock</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00177">connections</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00078">eraseConnection()</a>, and <a class="el" href="ConnectionManager_8hpp_source.html#l00150">lock()</a>.</p>
 
 </div>
 </div>
@@ -624,7 +624,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00188">188</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00123">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00113">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00102">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00140">removeConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00122">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00112">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00139">removeConnection()</a>.</p>
 
 </div>
 </div>
@@ -651,7 +651,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00177">177</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00123">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00110">connected()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00113">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00102">disconnect()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00140">removeConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00122">addConnection()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00109">connected()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00112">connectedTo()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00101">disconnect()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00078">eraseConnection()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00139">removeConnection()</a>.</p>
 
 </div>
 </div>
@@ -677,7 +677,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00171">171</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00078">eraseConnection()</a>.</p>
 
 </div>
 </div>
@@ -703,7 +703,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ConnectionManager_8hpp_source.html#l00182">182</a> of file <a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00123">addConnection()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00079">eraseConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnectionManager_8cpp_source.html#l00122">addConnection()</a>, and <a class="el" href="ConnectionManager_8cpp_source.html#l00078">eraseConnection()</a>.</p>
 
 </div>
 </div>
@@ -714,7 +714,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 6 2017 02:04:05 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 02:25:10 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

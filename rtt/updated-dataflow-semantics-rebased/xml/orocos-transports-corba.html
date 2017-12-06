@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Distributing Orocos Components with CORBA</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><meta name="description" content="This document explains the principles of the Corba Transport of Orocos, the Open RObot COntrol Software project. It enables transparant deployment accross networked nodes of plain Orocos C++ components." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idm45459480640160"></a>Distributing Orocos Components with CORBA</h2></div><div><h3 class="subtitle"><em>The CORBA Transport Library</em></h3></div><div><p class="copyright">Copyright © 2006, 2007, 2008, 2009, 2010 FMTC, Peter Soetens</p></div><div><div class="legalnotice"><a id="idm45459480668384"></a><p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Distributing Orocos Components with CORBA</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><meta name="description" content="This document explains the principles of the Corba Transport of Orocos, the Open RObot COntrol Software project. It enables transparant deployment accross networked nodes of plain Orocos C++ components." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idm45125570149920"></a>Distributing Orocos Components with CORBA</h2></div><div><h3 class="subtitle"><em>The CORBA Transport Library</em></h3></div><div><p class="copyright">Copyright © 2006, 2007, 2008, 2009, 2010 FMTC, Peter Soetens</p></div><div><div class="legalnotice"><a id="idm45125567964688"></a><p>
 	Permission is granted to copy, distribute and/or modify this document
 	under the terms of the GNU Free Documentation License, Version 1.1 or
 	any later version published by the Free Software Foundation, with no
@@ -11,7 +11,7 @@
 	<span class="emphasis"><em>Corba Transport</em></span> of <acronym class="acronym">Orocos</acronym>, the <span class="emphasis"><em>Open
 	RObot COntrol Software</em></span> project. It enables transparant
 	deployment accross networked nodes of plain Orocos C++ components.
-      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idm45459480666032">1. The CORBA Transport</a></span></dt><dt><span class="section"><a href="#idm45459480661872">2. Setup CORBA Naming (Required!)</a></span></dt><dt><span class="section"><a href="#idm45459480654032">3. Connecting CORBA components</a></span></dt><dt><span class="section"><a href="#idm45459480787920">4. In-depth information</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45459480786704">4.1. Status</a></span></dt><dt><span class="section"><a href="#idm45459480781632">4.2. Limitations</a></span></dt></dl></dd><dt><span class="section"><a href="#idm45459480777664">5. Code Examples</a></span></dt><dt><span class="section"><a href="#idm45459480765312">6. Timing and time-outs</a></span></dt><dt><span class="section"><a href="#idm45459480762064">7. Orocos Corba Interfaces</a></span></dt><dt><span class="section"><a href="#idm45459475221008">8. The Naming Service</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45459475216176">8.1. Example</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45459480666032"></a>1. The CORBA Transport</h2></div></div></div><p>
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idm45125567962304">1. The CORBA Transport</a></span></dt><dt><span class="section"><a href="#idm45125567958096">2. Setup CORBA Naming (Required!)</a></span></dt><dt><span class="section"><a href="#idm45125565849120">3. Connecting CORBA components</a></span></dt><dt><span class="section"><a href="#idm45125565840352">4. In-depth information</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45125565839136">4.1. Status</a></span></dt><dt><span class="section"><a href="#idm45125570277648">4.2. Limitations</a></span></dt></dl></dd><dt><span class="section"><a href="#idm45125570273680">5. Code Examples</a></span></dt><dt><span class="section"><a href="#idm45125570261328">6. Timing and time-outs</a></span></dt><dt><span class="section"><a href="#idm45125570258080">7. Orocos Corba Interfaces</a></span></dt><dt><span class="section"><a href="#idm45125570249056">8. The Naming Service</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45125570243952">8.1. Example</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45125567962304"></a>1. The CORBA Transport</h2></div></div></div><p>
       This transport allows Orocos components to live in separate processes,
       distributed over a network and still communicate with each other.
       The underlying middleware is CORBA, but no CORBA knowledge is
@@ -20,7 +20,7 @@
       The Corba transport provides:
       </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Connection and communication of Orocos components over a network or between two processes on the same computer.</p></li><li class="listitem"><p>Clients (like visualisation) making a connection to any running Orocos component using the IDL interface.</p></li><li class="listitem"><p>Transparant use: no recompilation of existing components required.
 	The library acts as a run-time plugin.</p></li></ul></div><p> 
-    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45459480661872"></a>2. Setup CORBA Naming (Required!)</h2></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>Follow these instructions carefully or your setup will not work !</p></td></tr></table></div><p>
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45125567958096"></a>2. Setup CORBA Naming (Required!)</h2></div></div></div><div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/icons/important.png" /></td><th align="left">Important</th></tr><tr><td align="left" valign="top"><p>Follow these instructions carefully or your setup will not work !</p></td></tr></table></div><p>
 	In order to distribute Orocos components over a network, your
 	computers must be setup correctly for using Corba.
 	Start a Corba Naming Service once with
@@ -46,7 +46,7 @@
 				For more detailed information or if your deployer does not find the
 				Naming Service, take a look at this page: 
 				<a class="ulink" href="http://www.orocos.org/wiki/rtt/frequently-asked-questions-faq/using-corba" target="_top">Using CORBA</a>
-			</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45459480654032"></a>3. Connecting CORBA components</h2></div></div></div><p>
+			</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45125565849120"></a>3. Connecting CORBA components</h2></div></div></div><p>
 			Normally, the Orocos deployer will create connections for you between
 			CORBA components. Be sure to read the <a class="ulink" href="http://www.orocos.org/stable/documentation/ocl/v2.x/doc-xml/orocos-deployment.html" target="_top">OCL DeploymentComponent Manual</a>
 			for detailed instructions on how you can setup components such
@@ -77,17 +77,17 @@
 		</p><p>
 			More CORBA deployment options are described in the
 			<a class="ulink" href="http://www.orocos.org/stable/documentation/ocl/v2.x/doc-xml/orocos-deployment.html" target="_top">OCL DeploymentComponent Manual</a>.
-    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45459480787920"></a>4. In-depth information</h2></div></div></div><p>
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45125565840352"></a>4. In-depth information</h2></div></div></div><p>
 			You don't need this information unless you want to talk to the
 			CORBA layer directly, for example, from a non-Orocos GUI application.
-		</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45459480786704"></a>4.1. Status</h3></div></div></div><p>
+		</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45125565839136"></a>4.1. Status</h3></div></div></div><p>
 	The Corba transport aims to make the whole
 	Orocos Component interface available over the network. Consult the
 	<span class="emphasis"><em>Component Builder's Manual</em></span> for an overview of a Component's
 	interface.
       </p><p>These Component interfaces are available:
       </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>TaskContext interface: fully (TaskContext.idl)</p></li><li class="listitem"><p>Properties/Attributes interface: fully (ConfigurationInterface.idl)</p></li><li class="listitem"><p>OperationCaller/Operation interface: fully (OperationInterface.idl)</p></li><li class="listitem"><p>Service interface: fully (Service.idl, ServiceRequester.idl)</p></li><li class="listitem"><p>Data Flow interface: fully (DataFlow.idl)</p></li></ul></div><p> 
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45459480781632"></a>4.2. Limitations</h3></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45125570277648"></a>4.2. Limitations</h3></div></div></div><p>
 	The following limitations apply:
 	</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>You need the <span class="command"><strong>typegen</strong></span> command from the 'orogen'
 		package in order to communicate custom structs/data types between components.
@@ -96,7 +96,7 @@
 	      transport: reading and writing data ports is always real-time, the transport
 	      of the data itself is not a real-time process.
 	  </p></li></ul></div><p>
-      </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45459480777664"></a>5. Code Examples</h2></div></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You only need this example code if you don't use the deployer application!</p></td></tr></table></div><p>
+      </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45125570273680"></a>5. Code Examples</h2></div></div></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>You only need this example code if you don't use the deployer application!</p></td></tr></table></div><p>
       This example assumes that you have taken a look at the 'Component Builder's
       Manual'. It creates a simple 'Hello World' component and makes it available
       to the network. Another program connects to that component and starts the
@@ -174,7 +174,7 @@
       package on Orocos.org. You may use 'connectPeers' and the related methods
       to form component networks. Any Orocos component can be 'transformed' in
       this way.
-    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45459480765312"></a>6. Timing and time-outs</h2></div></div></div><p>
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45125570261328"></a>6. Timing and time-outs</h2></div></div></div><p>
       By default, a remote method invocation waits until the remote
       end completes and returns the call, or an exception is
       thrown. In case the caller only wishes to spend a limited amount
@@ -191,7 +191,7 @@
 	ApplicationSetup::InitORB(argc, argv, 0.1);</pre><p>
       TaskContextProxy and TaskContextServer inherit from ApplicationSetup,
       so you might as well use these classes to scope InitORB.
-    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45459480762064"></a>7. Orocos Corba Interfaces</h2></div></div></div><p>
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45125570258080"></a>7. Orocos Corba Interfaces</h2></div></div></div><p>
       Orocos does not require IDL or CORBA knowledge of the user when two
       Orocos components communicate. However, if you want to access an
       Orocos component from a non-Orocos program (like a MSWindows GUI), 
@@ -202,7 +202,7 @@
       All data is communicated with CORBA::Any types. The way of using
       these interfaces is very similar to using Orocos in C++, but using
       CORBA syntax.
-    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45459475221008"></a>8. The Naming Service</h2></div></div></div><p>
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45125570249056"></a>8. The Naming Service</h2></div></div></div><p>
       Orocos uses the CORBA Naming Service such that components can
       find each other on the same or different networked stations.
 			See also <a class="ulink" href="http://www.orocos.org/wiki/rtt/frequently-asked-questions-faq/using-corba" target="_top">Using CORBA</a>
@@ -219,7 +219,7 @@
       a file "<span class="emphasis"><em>ComponentName</em></span>.ior", but you can 'browse'
       to other components using the exported name and then using 'getPeer()'
       to access its peer components.
-    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45459475216176"></a>8.1. Example</h3></div></div></div><p>
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45125570243952"></a>8.1. Example</h3></div></div></div><p>
       Since the multicast service of the CORBA Naming_Server behaves very
       unpredictable (see <a class="ulink" href="http://www.theaceorb.com/faq/index.html#115" target="_top">this link</a>), you
       shouldn't use it.  Instead, it is better started via some extra lines in
