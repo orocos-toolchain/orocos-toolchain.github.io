@@ -79,15 +79,16 @@ Inheritance diagram for RTT::internal::ListLockFree&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aad23ddd8e4b230c1c5adb2dedd3b5489"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad23ddd8e4b230c1c5adb2dedd3b5489"></a>
-typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_t</b></td></tr>
+<tr class="memitem:aad23ddd8e4b230c1c5adb2dedd3b5489"><td class="memItemLeft" align="right" valign="top">typedef T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a></td></tr>
 <tr class="separator:aad23ddd8e4b230c1c5adb2dedd3b5489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3afb0eb0236bd23a913faf8920d1926e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a3afb0eb0236bd23a913faf8920d1926e">ListLockFree</a> (unsigned int lsize, unsigned int threads=ORONUM_OS_MAX_THREADS)</td></tr>
+<tr class="memitem:a3afb0eb0236bd23a913faf8920d1926e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a3afb0eb0236bd23a913faf8920d1926e">ListLockFree</a> (unsigned int lsize, unsigned int threads=<a class="el" href="gnulinux-config_8h.html#a6a30c349932c6f0d9fdb5791d061f162">ORONUM_OS_MAX_THREADS</a>)</td></tr>
 <tr class="memdesc:a3afb0eb0236bd23a913faf8920d1926e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a lock-free list wich can store <em>lsize</em> elements.  <a href="#a3afb0eb0236bd23a913faf8920d1926e">More...</a><br /></td></tr>
 <tr class="separator:a3afb0eb0236bd23a913faf8920d1926e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ac308984f7d0a78d1afeaf7a08f30b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a1ac308984f7d0a78d1afeaf7a08f30b0">~ListLockFree</a> ()</td></tr>
+<tr class="separator:a1ac308984f7d0a78d1afeaf7a08f30b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a551db73fd3adcd10819aac0af0de38d4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a551db73fd3adcd10819aac0af0de38d4">capacity</a> () const </td></tr>
 <tr class="memdesc:a551db73fd3adcd10819aac0af0de38d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum number of elements this list can hold.  <a href="#a551db73fd3adcd10819aac0af0de38d4">More...</a><br /></td></tr>
 <tr class="separator:a551db73fd3adcd10819aac0af0de38d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,20 +110,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab0a33a1fd530f769e8930a67690d7977"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#ab0a33a1fd530f769e8930a67690d7977">clear</a> ()</td></tr>
 <tr class="memdesc:ab0a33a1fd530f769e8930a67690d7977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all elements in the list.  <a href="#ab0a33a1fd530f769e8930a67690d7977">More...</a><br /></td></tr>
 <tr class="separator:ab0a33a1fd530f769e8930a67690d7977"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdccdb8c0f6ab07175eedb4a8d2f87c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#afdccdb8c0f6ab07175eedb4a8d2f87c2">append</a> (value_t item)</td></tr>
+<tr class="memitem:afdccdb8c0f6ab07175eedb4a8d2f87c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#afdccdb8c0f6ab07175eedb4a8d2f87c2">append</a> (<a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a> item)</td></tr>
 <tr class="memdesc:afdccdb8c0f6ab07175eedb4a8d2f87c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a single value to the list.  <a href="#afdccdb8c0f6ab07175eedb4a8d2f87c2">More...</a><br /></td></tr>
 <tr class="separator:afdccdb8c0f6ab07175eedb4a8d2f87c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e76e11049d5dc7d01f62d30ed80daec"><td class="memItemLeft" align="right" valign="top">value_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a8e76e11049d5dc7d01f62d30ed80daec">front</a> () const </td></tr>
+<tr class="memitem:a8e76e11049d5dc7d01f62d30ed80daec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a8e76e11049d5dc7d01f62d30ed80daec">front</a> () const </td></tr>
 <tr class="memdesc:a8e76e11049d5dc7d01f62d30ed80daec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first element of the list.  <a href="#a8e76e11049d5dc7d01f62d30ed80daec">More...</a><br /></td></tr>
 <tr class="separator:a8e76e11049d5dc7d01f62d30ed80daec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee2b1c6e45fd0050d31e184372884d81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee2b1c6e45fd0050d31e184372884d81"></a>
-value_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aee2b1c6e45fd0050d31e184372884d81">back</a> () const </td></tr>
-<tr class="memdesc:aee2b1c6e45fd0050d31e184372884d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last element of the list. <br /></td></tr>
+<tr class="memitem:aee2b1c6e45fd0050d31e184372884d81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aee2b1c6e45fd0050d31e184372884d81">back</a> () const </td></tr>
+<tr class="memdesc:aee2b1c6e45fd0050d31e184372884d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last element of the list.  <a href="#aee2b1c6e45fd0050d31e184372884d81">More...</a><br /></td></tr>
 <tr class="separator:aee2b1c6e45fd0050d31e184372884d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84bb35686c9469ac8d8574e6684fa23d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a84bb35686c9469ac8d8574e6684fa23d">append</a> (const std::vector&lt; T &gt; &amp;items)</td></tr>
 <tr class="memdesc:a84bb35686c9469ac8d8574e6684fa23d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a sequence of values to the list.  <a href="#a84bb35686c9469ac8d8574e6684fa23d">More...</a><br /></td></tr>
 <tr class="separator:a84bb35686c9469ac8d8574e6684fa23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3f6c0def76cfd1785ad1ce57a797f3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#af3f6c0def76cfd1785ad1ce57a797f3e">erase</a> (value_t item)</td></tr>
+<tr class="memitem:af3f6c0def76cfd1785ad1ce57a797f3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#af3f6c0def76cfd1785ad1ce57a797f3e">erase</a> (<a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a> item)</td></tr>
 <tr class="memdesc:af3f6c0def76cfd1785ad1ce57a797f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase a value from the list.  <a href="#af3f6c0def76cfd1785ad1ce57a797f3e">More...</a><br /></td></tr>
 <tr class="separator:af3f6c0def76cfd1785ad1ce57a797f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2a035be89881d237b556828371512fd"><td class="memTemplParams" colspan="2">template&lt;typename Pred &gt; </td></tr>
@@ -134,14 +134,14 @@ value_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:a91e5fea5fd6a55d35b14d1113744909a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a function to the elements of the whole list.  <a href="#a91e5fea5fd6a55d35b14d1113744909a">More...</a><br /></td></tr>
 <tr class="separator:a91e5fea5fd6a55d35b14d1113744909a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15580a2d3e277b49a62beb191ccd88e0"><td class="memTemplParams" colspan="2">template&lt;class Function &gt; </td></tr>
-<tr class="memitem:a15580a2d3e277b49a62beb191ccd88e0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a15580a2d3e277b49a62beb191ccd88e0">apply_and_blank</a> (Function func, value_t blank)</td></tr>
+<tr class="memitem:a15580a2d3e277b49a62beb191ccd88e0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a15580a2d3e277b49a62beb191ccd88e0">apply_and_blank</a> (Function func, <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a> blank)</td></tr>
 <tr class="memdesc:a15580a2d3e277b49a62beb191ccd88e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a function to the non-blanked elements of the list.  <a href="#a15580a2d3e277b49a62beb191ccd88e0">More...</a><br /></td></tr>
 <tr class="separator:a15580a2d3e277b49a62beb191ccd88e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0791134080e84bccfce42e390110dd25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a0791134080e84bccfce42e390110dd25">erase_and_blank</a> (value_t item, value_t blank)</td></tr>
+<tr class="memitem:a0791134080e84bccfce42e390110dd25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a0791134080e84bccfce42e390110dd25">erase_and_blank</a> (<a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a> item, <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a> blank)</td></tr>
 <tr class="memdesc:a0791134080e84bccfce42e390110dd25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase an element from the list and blank it if possible.  <a href="#a0791134080e84bccfce42e390110dd25">More...</a><br /></td></tr>
 <tr class="separator:a0791134080e84bccfce42e390110dd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0860c2d99cb8e4961d04955055c590df"><td class="memTemplParams" colspan="2">template&lt;class Function &gt; </td></tr>
-<tr class="memitem:a0860c2d99cb8e4961d04955055c590df"><td class="memTemplItemLeft" align="right" valign="top">value_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a0860c2d99cb8e4961d04955055c590df">find_if</a> (Function func, value_t blank=value_t())</td></tr>
+<tr class="memitem:a0860c2d99cb8e4961d04955055c590df"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#a0860c2d99cb8e4961d04955055c590df">find_if</a> (Function func, <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a> blank=<a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>())</td></tr>
 <tr class="memdesc:a0860c2d99cb8e4961d04955055c590df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an item in the list such that func( item ) == true.  <a href="#a0860c2d99cb8e4961d04955055c590df">More...</a><br /></td></tr>
 <tr class="separator:a0860c2d99cb8e4961d04955055c590df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -164,7 +164,24 @@ class RTT::internal::ListLockFree&lt; T &gt;</h3>
 </dl>
 
 <p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00085">85</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="aad23ddd8e4b230c1c5adb2dedd3b5489"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef T <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">RTT::internal::ListLockFree</a>&lt; T &gt;::<a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00095">95</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3afb0eb0236bd23a913faf8920d1926e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +201,7 @@ template&lt;class T&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>threads</em> = <code>ORONUM_OS_MAX_THREADS</code>&#160;</td>
+          <td class="paramname"><em>threads</em> = <code><a class="el" href="gnulinux-config_8h.html#a6a30c349932c6f0d9fdb5791d061f162">ORONUM_OS_MAX_THREADS</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -212,6 +229,33 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a1ac308984f7d0a78d1afeaf7a08f30b0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">RTT::internal::ListLockFree</a>&lt; T &gt;::~<a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">ListLockFree</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00171">171</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="afdccdb8c0f6ab07175eedb4a8d2f87c2"></a>
 <div class="memitem">
@@ -225,7 +269,7 @@ template&lt;class T&gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">RTT::internal::ListLockFree</a>&lt; T &gt;::append </td>
           <td>(</td>
-          <td class="paramtype">value_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
           <td></td>
         </tr>
@@ -249,7 +293,7 @@ template&lt;class T&gt; </div>
 
 <p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00344">344</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="CorbaDispatcher_8hpp_source.html#l00140">RTT::corba::CorbaDispatcher::ReleaseAll()</a>.</p>
+<p>Referenced by <a class="el" href="CorbaDispatcher_8hpp_source.html#l00156">RTT::corba::CorbaDispatcher::dispatchChannel()</a>.</p>
 
 </div>
 </div>
@@ -328,7 +372,7 @@ template&lt;class Function &gt; </div>
 
 <p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00524">524</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="CorbaDispatcher_8hpp_source.html#l00140">RTT::corba::CorbaDispatcher::ReleaseAll()</a>.</p>
+<p>Referenced by <a class="el" href="SignalBase_8cpp_source.html#l00240">RTT::internal::SignalBase::disconnect()</a>, and <a class="el" href="CorbaDispatcher_8hpp_source.html#l00156">RTT::corba::CorbaDispatcher::dispatchChannel()</a>.</p>
 
 </div>
 </div>
@@ -352,7 +396,7 @@ template&lt;class Function &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">value_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>&#160;</td>
           <td class="paramname"><em>blank</em>&#160;</td>
         </tr>
         <tr>
@@ -372,7 +416,7 @@ template&lt;class Function &gt; </div>
 <p>If during an apply_and_blank, the erase_and_blank function is called, that element will not be subject to <em>func</em> if not yet processed. You must not call this function concurrently from multiple threads. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>The function to apply. </td></tr>
-    <tr><td class="paramname">blank</td><td>The 'blank' item. Each item of this list will be compared to this item using operator==(), if it matches, it is considered blank, and func is <b>not</b> applied. </td></tr>
+    <tr><td class="paramname">blank</td><td>The 'blank' item. Each item of this list will be compared to this item using <a class="el" href="namespaceRTT_1_1marsh.html#adec5d0807df1fe9868976d457f2da796">operator==()</a>, if it matches, it is considered blank, and func is <b>not</b> applied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -381,6 +425,35 @@ template&lt;class Function &gt; </div>
 <dl class="section note"><dt>Note</dt><dd>This function is only real-time if the destructor and copy-constructor of of <em>T</em> is real-time. </dd></dl>
 
 <p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00552">552</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee2b1c6e45fd0050d31e184372884d81"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a> <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">RTT::internal::ListLockFree</a>&lt; T &gt;::back </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the last element of the list. </p>
+
+<p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00385">385</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
 
 </div>
 </div>
@@ -513,7 +586,7 @@ template&lt;class T&gt; </div>
 
 <p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00206">206</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="CorbaDispatcher_8hpp_source.html#l00174">RTT::corba::CorbaDispatcher::loop()</a>.</p>
+<p>Referenced by <a class="el" href="SignalBase_8cpp_source.html#l00251">RTT::internal::SignalBase::destroy()</a>, and <a class="el" href="CorbaDispatcher_8hpp_source.html#l00174">RTT::corba::CorbaDispatcher::loop()</a>.</p>
 
 </div>
 </div>
@@ -529,7 +602,7 @@ template&lt;class T&gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">RTT::internal::ListLockFree</a>&lt; T &gt;::erase </td>
           <td>(</td>
-          <td class="paramtype">value_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
           <td></td>
         </tr>
@@ -553,7 +626,7 @@ template&lt;class T&gt; </div>
 
 <p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00438">438</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="CorbaDispatcher_8hpp_source.html#l00174">RTT::corba::CorbaDispatcher::loop()</a>, and <a class="el" href="CorbaDispatcher_8hpp_source.html#l00140">RTT::corba::CorbaDispatcher::ReleaseAll()</a>.</p>
+<p>Referenced by <a class="el" href="CorbaDispatcher_8hpp_source.html#l00164">RTT::corba::CorbaDispatcher::cancelChannel()</a>, <a class="el" href="SignalBase_8cpp_source.html#l00251">RTT::internal::SignalBase::destroy()</a>, and <a class="el" href="CorbaDispatcher_8hpp_source.html#l00174">RTT::corba::CorbaDispatcher::loop()</a>.</p>
 
 </div>
 </div>
@@ -569,13 +642,13 @@ template&lt;class T&gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">RTT::internal::ListLockFree</a>&lt; T &gt;::erase_and_blank </td>
           <td>(</td>
-          <td class="paramtype">value_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>&#160;</td>
           <td class="paramname"><em>item</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">value_t&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>&#160;</td>
           <td class="paramname"><em>blank</em>&#160;</td>
         </tr>
         <tr>
@@ -620,7 +693,7 @@ template&lt;class Function &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">value_t <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">RTT::internal::ListLockFree</a>&lt; T &gt;::find_if </td>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a> <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">RTT::internal::ListLockFree</a>&lt; T &gt;::find_if </td>
           <td>(</td>
           <td class="paramtype">Function&#160;</td>
           <td class="paramname"><em>func</em>, </td>
@@ -628,8 +701,8 @@ template&lt;class Function &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">value_t&#160;</td>
-          <td class="paramname"><em>blank</em> = <code>value_t()</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>&#160;</td>
+          <td class="paramname"><em>blank</em> = <code><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -668,7 +741,7 @@ template&lt;class T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">value_t <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">RTT::internal::ListLockFree</a>&lt; T &gt;::front </td>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1ListLockFree.html#aad23ddd8e4b230c1c5adb2dedd3b5489">value_t</a> <a class="el" href="classRTT_1_1internal_1_1ListLockFree.html">RTT::internal::ListLockFree</a>&lt; T &gt;::front </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -686,7 +759,7 @@ template&lt;class T&gt; </div>
 
 <p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00373">373</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="CorbaDispatcher_8hpp_source.html#l00174">RTT::corba::CorbaDispatcher::loop()</a>.</p>
+<p>Referenced by <a class="el" href="SignalBase_8cpp_source.html#l00251">RTT::internal::SignalBase::destroy()</a>, and <a class="el" href="CorbaDispatcher_8hpp_source.html#l00174">RTT::corba::CorbaDispatcher::loop()</a>.</p>
 
 </div>
 </div>
@@ -760,6 +833,8 @@ template&lt;class T&gt; </div>
 </dl>
 
 <p>Definition at line <a class="el" href="ListLockFree_8hpp_source.html#l00252">252</a> of file <a class="el" href="ListLockFree_8hpp_source.html">ListLockFree.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="SignalBase_8cpp_source.html#l00267">RTT::internal::SignalBase::reserve()</a>.</p>
 
 </div>
 </div>
@@ -856,7 +931,7 @@ template&lt;class T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:24 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

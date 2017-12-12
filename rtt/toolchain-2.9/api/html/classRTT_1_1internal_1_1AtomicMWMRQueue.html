@@ -77,8 +77,7 @@ Inheritance diagram for RTT::internal::AtomicMWMRQueue&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aa9103ad1e46b9ab19e1a43b1e8d18edd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9103ad1e46b9ab19e1a43b1e8d18edd"></a>
-typedef <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html">AtomicQueue</a>&lt; T &gt;::size_type&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b></td></tr>
+<tr class="memitem:aa9103ad1e46b9ab19e1a43b1e8d18edd"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html">AtomicQueue</a>&lt; T &gt;::<a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#aa9103ad1e46b9ab19e1a43b1e8d18edd">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#aa9103ad1e46b9ab19e1a43b1e8d18edd">size_type</a></td></tr>
 <tr class="separator:aa9103ad1e46b9ab19e1a43b1e8d18edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -86,18 +85,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a62cb04eb651f9b92ed3cd8aa5dd36df3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a62cb04eb651f9b92ed3cd8aa5dd36df3">AtomicMWMRQueue</a> (unsigned int <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a8b61444eca624625e3b265beac177976">size</a>)</td></tr>
 <tr class="memdesc:a62cb04eb651f9b92ed3cd8aa5dd36df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html" title="An atomic, non-blocking single ended queue (FIFO) for storing a pointer to T. ">AtomicQueue</a> with queue size <em>size</em>.  <a href="#a62cb04eb651f9b92ed3cd8aa5dd36df3">More...</a><br /></td></tr>
 <tr class="separator:a62cb04eb651f9b92ed3cd8aa5dd36df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1a53b074444b087f7a9ae8283f7bb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a5e1a53b074444b087f7a9ae8283f7bb6">~AtomicMWMRQueue</a> ()</td></tr>
+<tr class="separator:a5e1a53b074444b087f7a9ae8283f7bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73005e4ebe9ad7eb9c43633ee074296b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a73005e4ebe9ad7eb9c43633ee074296b">isFull</a> () const </td></tr>
 <tr class="memdesc:a73005e4ebe9ad7eb9c43633ee074296b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the <a class="el" href="classRTT_1_1internal_1_1Queue.html" title="This object represents the default Multi-Writer/Multi-Reader queue implementation used by Orocos obje...">Queue</a> is full.  <a href="#a73005e4ebe9ad7eb9c43633ee074296b">More...</a><br /></td></tr>
 <tr class="separator:a73005e4ebe9ad7eb9c43633ee074296b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6a2c459f755717fac10fc81d59df15d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#aa6a2c459f755717fac10fc81d59df15d">isEmpty</a> () const </td></tr>
 <tr class="memdesc:aa6a2c459f755717fac10fc81d59df15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the <a class="el" href="classRTT_1_1internal_1_1Queue.html" title="This object represents the default Multi-Writer/Multi-Reader queue implementation used by Orocos obje...">Queue</a> is empty.  <a href="#aa6a2c459f755717fac10fc81d59df15d">More...</a><br /></td></tr>
 <tr class="separator:aa6a2c459f755717fac10fc81d59df15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9223f1573aa911145e0d1dc2dd433918"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9223f1573aa911145e0d1dc2dd433918"></a>
-size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a9223f1573aa911145e0d1dc2dd433918">capacity</a> () const </td></tr>
-<tr class="memdesc:a9223f1573aa911145e0d1dc2dd433918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the maximum number of items this queue can contain. <br /></td></tr>
+<tr class="memitem:a9223f1573aa911145e0d1dc2dd433918"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#aa9103ad1e46b9ab19e1a43b1e8d18edd">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a9223f1573aa911145e0d1dc2dd433918">capacity</a> () const </td></tr>
+<tr class="memdesc:a9223f1573aa911145e0d1dc2dd433918"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structRTT_1_1internal_1_1Return.html">Return</a> the maximum number of items this queue can contain.  <a href="#a9223f1573aa911145e0d1dc2dd433918">More...</a><br /></td></tr>
 <tr class="separator:a9223f1573aa911145e0d1dc2dd433918"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b61444eca624625e3b265beac177976"><td class="memItemLeft" align="right" valign="top">size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a8b61444eca624625e3b265beac177976">size</a> () const </td></tr>
-<tr class="memdesc:a8b61444eca624625e3b265beac177976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the exact number of elements in the queue.  <a href="#a8b61444eca624625e3b265beac177976">More...</a><br /></td></tr>
+<tr class="memitem:a8b61444eca624625e3b265beac177976"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#aa9103ad1e46b9ab19e1a43b1e8d18edd">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a8b61444eca624625e3b265beac177976">size</a> () const </td></tr>
+<tr class="memdesc:a8b61444eca624625e3b265beac177976"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structRTT_1_1internal_1_1Return.html">Return</a> the exact number of elements in the queue.  <a href="#a8b61444eca624625e3b265beac177976">More...</a><br /></td></tr>
 <tr class="separator:a8b61444eca624625e3b265beac177976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06663a0984594743b64d37a4c381107d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a06663a0984594743b64d37a4c381107d">enqueue</a> (const T &amp;value)</td></tr>
 <tr class="memdesc:a06663a0984594743b64d37a4c381107d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueue an item.  <a href="#a06663a0984594743b64d37a4c381107d">More...</a><br /></td></tr>
@@ -105,13 +105,11 @@ size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <tr class="memitem:adf029dfd7ecd983e47f98396bfa69383"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#adf029dfd7ecd983e47f98396bfa69383">dequeue</a> (T &amp;result)</td></tr>
 <tr class="memdesc:adf029dfd7ecd983e47f98396bfa69383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dequeue an item.  <a href="#adf029dfd7ecd983e47f98396bfa69383">More...</a><br /></td></tr>
 <tr class="separator:adf029dfd7ecd983e47f98396bfa69383"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad017f111bab66e1695662f842c0be7e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad017f111bab66e1695662f842c0be7e8"></a>
-const T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#ad017f111bab66e1695662f842c0be7e8">front</a> () const </td></tr>
-<tr class="memdesc:ad017f111bab66e1695662f842c0be7e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the next to be read value. <br /></td></tr>
+<tr class="memitem:ad017f111bab66e1695662f842c0be7e8"><td class="memItemLeft" align="right" valign="top">const T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#ad017f111bab66e1695662f842c0be7e8">front</a> () const </td></tr>
+<tr class="memdesc:ad017f111bab66e1695662f842c0be7e8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structRTT_1_1internal_1_1Return.html">Return</a> the next to be read value.  <a href="#ad017f111bab66e1695662f842c0be7e8">More...</a><br /></td></tr>
 <tr class="separator:ad017f111bab66e1695662f842c0be7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e7c9c54bb5117c1898a12ea0aac3603"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e7c9c54bb5117c1898a12ea0aac3603"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a9e7c9c54bb5117c1898a12ea0aac3603">clear</a> ()</td></tr>
-<tr class="memdesc:a9e7c9c54bb5117c1898a12ea0aac3603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all contents of the <a class="el" href="classRTT_1_1internal_1_1Queue.html" title="This object represents the default Multi-Writer/Multi-Reader queue implementation used by Orocos obje...">Queue</a> and thus make it empty. <br /></td></tr>
+<tr class="memitem:a9e7c9c54bb5117c1898a12ea0aac3603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#a9e7c9c54bb5117c1898a12ea0aac3603">clear</a> ()</td></tr>
+<tr class="memdesc:a9e7c9c54bb5117c1898a12ea0aac3603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all contents of the <a class="el" href="classRTT_1_1internal_1_1Queue.html" title="This object represents the default Multi-Writer/Multi-Reader queue implementation used by Orocos obje...">Queue</a> and thus make it empty.  <a href="#a9e7c9c54bb5117c1898a12ea0aac3603">More...</a><br /></td></tr>
 <tr class="separator:a9e7c9c54bb5117c1898a12ea0aac3603"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -131,7 +129,24 @@ class RTT::internal::AtomicMWMRQueue&lt; T &gt;</h3>
 </dl>
 
 <p>Definition at line <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00071">71</a> of file <a class="el" href="AtomicMWMRQueue_8hpp_source.html">AtomicMWMRQueue.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="aa9103ad1e46b9ab19e1a43b1e8d18edd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html">AtomicQueue</a>&lt;T&gt;::<a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#aa9103ad1e46b9ab19e1a43b1e8d18edd">size_type</a> <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html">RTT::internal::AtomicMWMRQueue</a>&lt; T &gt;::<a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#aa9103ad1e46b9ab19e1a43b1e8d18edd">size_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00185">185</a> of file <a class="el" href="AtomicMWMRQueue_8hpp_source.html">AtomicMWMRQueue.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a62cb04eb651f9b92ed3cd8aa5dd36df3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +185,98 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a5e1a53b074444b087f7a9ae8283f7bb6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html">RTT::internal::AtomicMWMRQueue</a>&lt; T &gt;::~<a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html">AtomicMWMRQueue</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00198">198</a> of file <a class="el" href="AtomicMWMRQueue_8hpp_source.html">AtomicMWMRQueue.hpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9223f1573aa911145e0d1dc2dd433918"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#aa9103ad1e46b9ab19e1a43b1e8d18edd">size_type</a> <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html">RTT::internal::AtomicMWMRQueue</a>&lt; T &gt;::capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structRTT_1_1internal_1_1Return.html">Return</a> the maximum number of items this queue can contain. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a8782badebec2e4e1751d8500acda45e6">RTT::internal::AtomicQueue&lt; T &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00232">232</a> of file <a class="el" href="AtomicMWMRQueue_8hpp_source.html">AtomicMWMRQueue.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e7c9c54bb5117c1898a12ea0aac3603"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html">RTT::internal::AtomicMWMRQueue</a>&lt; T &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear all contents of the <a class="el" href="classRTT_1_1internal_1_1Queue.html" title="This object represents the default Multi-Writer/Multi-Reader queue implementation used by Orocos obje...">Queue</a> and thus make it empty. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#abc65ced7c440e09161a80fd27fc94a26">RTT::internal::AtomicQueue&lt; T &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00305">305</a> of file <a class="el" href="AtomicMWMRQueue_8hpp_source.html">AtomicMWMRQueue.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00191">RTT::internal::AtomicMWMRQueue&lt; T &gt;::AtomicMWMRQueue()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="adf029dfd7ecd983e47f98396bfa69383"></a>
 <div class="memitem">
 <div class="memproto">
@@ -253,6 +359,37 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ad017f111bab66e1695662f842c0be7e8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html">RTT::internal::AtomicMWMRQueue</a>&lt; T &gt;::front </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structRTT_1_1internal_1_1Return.html">Return</a> the next to be read value. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a991509d83233c0e4b161a1ea79485b03">RTT::internal::AtomicQueue&lt; T &gt;</a>.</p>
+
+<p>Definition at line <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00297">297</a> of file <a class="el" href="AtomicMWMRQueue_8hpp_source.html">AtomicMWMRQueue.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa6a2c459f755717fac10fc81d59df15d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -327,7 +464,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_type <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html">RTT::internal::AtomicMWMRQueue</a>&lt; T &gt;::size </td>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html#aa9103ad1e46b9ab19e1a43b1e8d18edd">size_type</a> <a class="el" href="classRTT_1_1internal_1_1AtomicMWMRQueue.html">RTT::internal::AtomicMWMRQueue</a>&lt; T &gt;::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -340,7 +477,7 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Return the exact number of elements in the queue. </p>
+<p><a class="el" href="structRTT_1_1internal_1_1Return.html">Return</a> the exact number of elements in the queue. </p>
 <p>This is slow because it scans the whole queue. </p>
 
 <p>Implements <a class="el" href="classRTT_1_1internal_1_1AtomicQueue.html#a901fee268df48765afd7f81edb709dae">RTT::internal::AtomicQueue&lt; T &gt;</a>.</p>
@@ -355,7 +492,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:22 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

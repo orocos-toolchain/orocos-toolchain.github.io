@@ -77,8 +77,7 @@ Inheritance diagram for RTT::CleanupHandle:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abfceead3f6226b2f862513752e54664a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfceead3f6226b2f862513752e54664a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CleanupHandle</b> (const <a class="el" href="classRTT_1_1Handle.html">Handle</a> &amp;hs)</td></tr>
+<tr class="memitem:abfceead3f6226b2f862513752e54664a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1CleanupHandle.html#abfceead3f6226b2f862513752e54664a">CleanupHandle</a> (const <a class="el" href="classRTT_1_1Handle.html">Handle</a> &amp;hs)</td></tr>
 <tr class="separator:abfceead3f6226b2f862513752e54664a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b354a6a680dd20ca18fa583a941f17d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1CleanupHandle.html#a3b354a6a680dd20ca18fa583a941f17d">~CleanupHandle</a> ()</td></tr>
 <tr class="memdesc:a3b354a6a680dd20ca18fa583a941f17d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleanup all signal and slot connection resources.  <a href="#a3b354a6a680dd20ca18fa583a941f17d">More...</a><br /></td></tr>
@@ -101,9 +100,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a5a4853f46dc7a14c25cebcd8e276de2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a4853f46dc7a14c25cebcd8e276de2e"></a>
-connection_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Handle.html#a5a4853f46dc7a14c25cebcd8e276de2e">m_conn</a></td></tr>
-<tr class="memdesc:a5a4853f46dc7a14c25cebcd8e276de2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is actually a smart pointer which always points to an existing connection object. <br /></td></tr>
+<tr class="memitem:a5a4853f46dc7a14c25cebcd8e276de2e"><td class="memItemLeft" align="right" valign="top">connection_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Handle.html#a5a4853f46dc7a14c25cebcd8e276de2e">m_conn</a></td></tr>
+<tr class="memdesc:a5a4853f46dc7a14c25cebcd8e276de2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is actually a smart pointer which always points to an existing connection object.  <a href="#a5a4853f46dc7a14c25cebcd8e276de2e">More...</a><br /></td></tr>
 <tr class="separator:a5a4853f46dc7a14c25cebcd8e276de2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -112,6 +110,24 @@ connection_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Definition at line <a class="el" href="Handle_8hpp_source.html#l00163">163</a> of file <a class="el" href="Handle_8hpp_source.html">Handle.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="abfceead3f6226b2f862513752e54664a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::CleanupHandle::CleanupHandle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1Handle.html">Handle</a> &amp;&#160;</td>
+          <td class="paramname"><em>hs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Handle_8cpp_source.html#l00102">102</a> of file <a class="el" href="Handle_8cpp_source.html">Handle.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3b354a6a680dd20ca18fa583a941f17d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +185,7 @@ connection_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>References <a class="el" href="Handle_8cpp_source.html#l00079">RTT::Handle::connected()</a>, and <a class="el" href="Handle_8hpp_source.html#l00126">RTT::Handle::m_conn</a>.</p>
 
-<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>.</p>
+<p>Referenced by <a class="el" href="DataFlowInterface_8cpp_source.html#l00097">RTT::DataFlowInterface::addEventPort()</a>, and <a class="el" href="signal__template_8hpp_source.html#l00109">RTT::internal::OROCOS_SIGNAL_N&lt; R, SlotFunctionT &gt;::connect()</a>.</p>
 
 </div>
 </div>
@@ -299,7 +315,34 @@ connection_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Definition at line <a class="el" href="Handle_8cpp_source.html#l00087">87</a> of file <a class="el" href="Handle_8cpp_source.html">Handle.cpp</a>.</p>
 
-<p>References <a class="el" href="Handle_8cpp_source.html#l00046">RTT::Handle::Handle()</a>, and <a class="el" href="Handle_8hpp_source.html#l00126">RTT::Handle::m_conn</a>.</p>
+<p>References <a class="el" href="Handle_8hpp_source.html#l00126">RTT::Handle::m_conn</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a5a4853f46dc7a14c25cebcd8e276de2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">connection_t RTT::Handle::m_conn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is actually a smart pointer which always points to an existing connection object. </p>
+
+<p>Definition at line <a class="el" href="Handle_8hpp_source.html#l00126">126</a> of file <a class="el" href="Handle_8hpp_source.html">Handle.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Handle_8cpp_source.html#l00065">RTT::Handle::connect()</a>, <a class="el" href="Handle_8cpp_source.html#l00079">RTT::Handle::connected()</a>, <a class="el" href="Handle_8cpp_source.html#l00072">RTT::Handle::disconnect()</a>, <a class="el" href="Handle_8cpp_source.html#l00083">RTT::Handle::operator bool()</a>, <a class="el" href="Handle_8cpp_source.html#l00087">RTT::Handle::ready()</a>, and <a class="el" href="Handle_8cpp_source.html#l00107">~CleanupHandle()</a>.</p>
 
 </div>
 </div>
@@ -310,7 +353,7 @@ connection_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:20 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

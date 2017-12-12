@@ -61,7 +61,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a connection to a remote CORBA port.  
+<p>Represents a connection to a remote <a class="el" href="namespaceCORBA.html">CORBA</a> port.  
  <a href="structRTT_1_1corba_1_1RemoteConnID.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="RemoteConnID_8hpp_source.html">rtt/transports/corba/RemoteConnID.hpp</a>&gt;</code></p>
@@ -77,37 +77,156 @@ Inheritance diagram for RTT::corba::RemoteConnID:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0027501e601dc19498aa8dccf8d33e62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0027501e601dc19498aa8dccf8d33e62"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RemoteConnID</b> (CDataFlowInterface_ptr dataflow, std::string const &amp;name)</td></tr>
+<tr class="memitem:a0027501e601dc19498aa8dccf8d33e62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1RemoteConnID.html#a0027501e601dc19498aa8dccf8d33e62">RemoteConnID</a> (CDataFlowInterface_ptr <a class="el" href="structRTT_1_1corba_1_1RemoteConnID.html#a32355cdf85aec7cb0201d7287009ad30">dataflow</a>, std::string const &amp;<a class="el" href="structRTT_1_1corba_1_1RemoteConnID.html#a2a4b293cf08a845b185696bbd73cf1ee">name</a>)</td></tr>
 <tr class="separator:a0027501e601dc19498aa8dccf8d33e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3b382225af3675ea0f8b8f97b4a26e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3b382225af3675ea0f8b8f97b4a26e8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSameID</b> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> const &amp;id) const </td></tr>
+<tr class="memitem:aa3b382225af3675ea0f8b8f97b4a26e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1RemoteConnID.html#aa3b382225af3675ea0f8b8f97b4a26e8">isSameID</a> (<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> const &amp;id) const </td></tr>
 <tr class="separator:aa3b382225af3675ea0f8b8f97b4a26e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee73ede15ab00ecf22e19fa5125e2ae3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee73ede15ab00ecf22e19fa5125e2ae3"></a>
-<a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const </td></tr>
+<tr class="memitem:aee73ede15ab00ecf22e19fa5125e2ae3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1RemoteConnID.html#aee73ede15ab00ecf22e19fa5125e2ae3">clone</a> () const </td></tr>
 <tr class="separator:aee73ede15ab00ecf22e19fa5125e2ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a32355cdf85aec7cb0201d7287009ad30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32355cdf85aec7cb0201d7287009ad30"></a>
-const CDataFlowInterface_var&#160;</td><td class="memItemRight" valign="bottom"><b>dataflow</b></td></tr>
+<tr class="memitem:a32355cdf85aec7cb0201d7287009ad30"><td class="memItemLeft" align="right" valign="top">const CDataFlowInterface_var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1RemoteConnID.html#a32355cdf85aec7cb0201d7287009ad30">dataflow</a></td></tr>
 <tr class="separator:a32355cdf85aec7cb0201d7287009ad30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a4b293cf08a845b185696bbd73cf1ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a4b293cf08a845b185696bbd73cf1ee"></a>
-const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a2a4b293cf08a845b185696bbd73cf1ee"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1RemoteConnID.html#a2a4b293cf08a845b185696bbd73cf1ee">name</a></td></tr>
 <tr class="separator:a2a4b293cf08a845b185696bbd73cf1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a connection to a remote CORBA port. </p>
+<div class="textblock"><p>Represents a connection to a remote <a class="el" href="namespaceCORBA.html">CORBA</a> port. </p>
 
 <p>Definition at line <a class="el" href="RemoteConnID_8hpp_source.html#l00060">60</a> of file <a class="el" href="RemoteConnID_8hpp_source.html">RemoteConnID.hpp</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a0027501e601dc19498aa8dccf8d33e62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RemoteConnID::RemoteConnID </td>
+          <td>(</td>
+          <td class="paramtype">CDataFlowInterface_ptr&#160;</td>
+          <td class="paramname"><em>dataflow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteConnID_8cpp_source.html#l00050">50</a> of file <a class="el" href="RemoteConnID_8cpp_source.html">RemoteConnID.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="RemoteConnID_8cpp_source.html#l00061">clone()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aee73ede15ab00ecf22e19fa5125e2ae3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">RTT::internal::ConnID</a> * RemoteConnID::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1ConnID.html#ae506ab908a15835aeb7e9ff2b3956409">RTT::internal::ConnID</a>.</p>
+
+<p>Definition at line <a class="el" href="RemoteConnID_8cpp_source.html#l00061">61</a> of file <a class="el" href="RemoteConnID_8cpp_source.html">RemoteConnID.cpp</a>.</p>
+
+<p>References <a class="el" href="RemoteConnID_8hpp_source.html#l00062">dataflow</a>, <a class="el" href="RemoteConnID_8hpp_source.html#l00063">name</a>, and <a class="el" href="RemoteConnID_8cpp_source.html#l00050">RemoteConnID()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3b382225af3675ea0f8b8f97b4a26e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RemoteConnID::isSameID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1ConnID.html">ConnID</a> const &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1internal_1_1ConnID.html#afd18f874c9d8965adb5f077c0d38ee19">RTT::internal::ConnID</a>.</p>
+
+<p>Definition at line <a class="el" href="RemoteConnID_8cpp_source.html#l00054">54</a> of file <a class="el" href="RemoteConnID_8cpp_source.html">RemoteConnID.cpp</a>.</p>
+
+<p>References <a class="el" href="RemoteConnID_8hpp_source.html#l00062">dataflow</a>, and <a class="el" href="RemoteConnID_8hpp_source.html#l00063">name</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a32355cdf85aec7cb0201d7287009ad30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const CDataFlowInterface_var RTT::corba::RemoteConnID::dataflow</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteConnID_8hpp_source.html#l00062">62</a> of file <a class="el" href="RemoteConnID_8hpp_source.html">RemoteConnID.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="RemoteConnID_8cpp_source.html#l00061">clone()</a>, and <a class="el" href="RemoteConnID_8cpp_source.html#l00054">isSameID()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2a4b293cf08a845b185696bbd73cf1ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string RTT::corba::RemoteConnID::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="RemoteConnID_8hpp_source.html#l00063">63</a> of file <a class="el" href="RemoteConnID_8hpp_source.html">RemoteConnID.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="RemoteConnID_8cpp_source.html#l00061">clone()</a>, and <a class="el" href="RemoteConnID_8cpp_source.html#l00054">isSameID()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>rtt/transports/corba/<a class="el" href="RemoteConnID_8hpp_source.html">RemoteConnID.hpp</a></li>
 <li>rtt/transports/corba/<a class="el" href="RemoteConnID_8cpp_source.html">RemoteConnID.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:22 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -54,6 +54,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classRTT_1_1os_1_1SharedMutexLock-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -71,15 +72,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73a1dd0c0f1ad112c240864e9ffe30f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutexLock.html#a73a1dd0c0f1ad112c240864e9ffe30f3">SharedMutexLock</a> (<a class="el" href="classRTT_1_1os_1_1MutexInterface.html">MutexInterface</a> &amp;mutex)</td></tr>
 <tr class="memdesc:a73a1dd0c0f1ad112c240864e9ffe30f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a shared lock on a <a class="el" href="classRTT_1_1os_1_1SharedMutex.html" title="An object oriented wrapper around a shared mutex (multiple readers allowed). ">SharedMutex</a> object.  <a href="#a73a1dd0c0f1ad112c240864e9ffe30f3">More...</a><br /></td></tr>
 <tr class="separator:a73a1dd0c0f1ad112c240864e9ffe30f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa571fd423cf6b0b52c063585bdef260b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa571fd423cf6b0b52c063585bdef260b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutexLock.html#aa571fd423cf6b0b52c063585bdef260b">~SharedMutexLock</a> ()</td></tr>
-<tr class="memdesc:aa571fd423cf6b0b52c063585bdef260b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a lock from a <a class="el" href="classRTT_1_1os_1_1SharedMutex.html" title="An object oriented wrapper around a shared mutex (multiple readers allowed). ">SharedMutex</a> object. <br /></td></tr>
+<tr class="memitem:aa571fd423cf6b0b52c063585bdef260b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutexLock.html#aa571fd423cf6b0b52c063585bdef260b">~SharedMutexLock</a> ()</td></tr>
+<tr class="memdesc:aa571fd423cf6b0b52c063585bdef260b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a lock from a <a class="el" href="classRTT_1_1os_1_1SharedMutex.html" title="An object oriented wrapper around a shared mutex (multiple readers allowed). ">SharedMutex</a> object.  <a href="#aa571fd423cf6b0b52c063585bdef260b">More...</a><br /></td></tr>
 <tr class="separator:aa571fd423cf6b0b52c063585bdef260b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aff7f91657dc59b5050ec75bf49ed3088"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutexLock.html#aff7f91657dc59b5050ec75bf49ed3088">SharedMutexLock</a> ()</td></tr>
+<tr class="separator:aff7f91657dc59b5050ec75bf49ed3088"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a20e868da862cf958243e51af8d39acdf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20e868da862cf958243e51af8d39acdf"></a>
-<a class="el" href="classRTT_1_1os_1_1MutexInterface.html">MutexInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_mutex</b></td></tr>
+<tr class="memitem:a20e868da862cf958243e51af8d39acdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1MutexInterface.html">MutexInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutexLock.html#a20e868da862cf958243e51af8d39acdf">_mutex</a></td></tr>
 <tr class="separator:a20e868da862cf958243e51af8d39acdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -119,6 +123,83 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="MutexLock_8hpp_source.html#l00213">213</a> of file <a class="el" href="MutexLock_8hpp_source.html">MutexLock.hpp</a>.</p>
 
+<p>References <a class="el" href="Mutex_8hpp_source.html#l00073">RTT::os::MutexInterface::lock_shared()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa571fd423cf6b0b52c063585bdef260b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::os::SharedMutexLock::~SharedMutexLock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a lock from a <a class="el" href="classRTT_1_1os_1_1SharedMutex.html" title="An object oriented wrapper around a shared mutex (multiple readers allowed). ">SharedMutex</a> object. </p>
+
+<p>Definition at line <a class="el" href="MutexLock_8hpp_source.html#l00222">222</a> of file <a class="el" href="MutexLock_8hpp_source.html">MutexLock.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aff7f91657dc59b5050ec75bf49ed3088"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::os::SharedMutexLock::SharedMutexLock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="MutexLock_8hpp_source.html#l00230">230</a> of file <a class="el" href="MutexLock_8hpp_source.html">MutexLock.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a20e868da862cf958243e51af8d39acdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1MutexInterface.html">MutexInterface</a>* RTT::os::SharedMutexLock::_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="MutexLock_8hpp_source.html#l00228">228</a> of file <a class="el" href="MutexLock_8hpp_source.html">MutexLock.hpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -127,7 +208,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:25 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

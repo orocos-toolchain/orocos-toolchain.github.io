@@ -53,6 +53,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
@@ -78,15 +79,19 @@ Inheritance diagram for RTT::os::Timer:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1os_1_1Timer_1_1TimerInfo.html">TimerInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:af40115442f2f261296ab9e8f270317ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af40115442f2f261296ab9e8f270317ea"></a>
-typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a></td></tr>
-<tr class="memdesc:af40115442f2f261296ab9e8f270317ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">A positive numeric ID representing a timer. <br /></td></tr>
+<tr class="memitem:af40115442f2f261296ab9e8f270317ea"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a></td></tr>
+<tr class="memdesc:af40115442f2f261296ab9e8f270317ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">A positive numeric ID representing a timer.  <a href="#af40115442f2f261296ab9e8f270317ea">More...</a><br /></td></tr>
 <tr class="separator:af40115442f2f261296ab9e8f270317ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93db616570e910bcbdf835eebd1d09a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93db616570e910bcbdf835eebd1d09a2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>WorkReason</b> { <b>TimeOut</b> = 0, 
-<b>Trigger</b>, 
-<b>IOReady</b>
+<tr class="memitem:a93db616570e910bcbdf835eebd1d09a2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2">WorkReason</a> { <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2adda55d6e664961143becf9fe14075f31">TimeOut</a> = 0, 
+<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2ac9eae0cbdd07910ee0798825e996235e">Trigger</a>, 
+<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2a0c82d259bcd937f796bb01c6848f1a71">IOReady</a>
  }</td></tr>
 <tr class="separator:a93db616570e910bcbdf835eebd1d09a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -95,6 +100,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1b67f32343704651ab422c5b2897a97b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a1b67f32343704651ab422c5b2897a97b">Timer</a> (<a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> max_timers, int scheduler=-1, int priority=0, const std::string &amp;name=std::string(&quot;Timer&quot;))</td></tr>
 <tr class="memdesc:a1b67f32343704651ab422c5b2897a97b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a named timer object which can hold <em>max_timers</em> timers.  <a href="#a1b67f32343704651ab422c5b2897a97b">More...</a><br /></td></tr>
 <tr class="separator:a1b67f32343704651ab422c5b2897a97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbeb78608f748fdf06b1291a5d6844f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#abbeb78608f748fdf06b1291a5d6844f7">~Timer</a> ()</td></tr>
+<tr class="separator:abbeb78608f748fdf06b1291a5d6844f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e2f92009c78fa7f734a6e06ca6bf97e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a8e2f92009c78fa7f734a6e06ca6bf97e">timeout</a> (<a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">TimerId</a> timer_id)</td></tr>
 <tr class="memdesc:a8e2f92009c78fa7f734a6e06ca6bf97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called each time an armed or periodic timer expires.  <a href="#a8e2f92009c78fa7f734a6e06ca6bf97e">More...</a><br /></td></tr>
 <tr class="separator:a8e2f92009c78fa7f734a6e06ca6bf97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,7 +129,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acf5c802d3faa9f3f6b8d700b8b3ddf43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#acf5c802d3faa9f3f6b8d700b8b3ddf43">waitForUntil</a> (<a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a> id, <a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> abs_time)</td></tr>
 <tr class="memdesc:acf5c802d3faa9f3f6b8d700b8b3ddf43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a timer to expire with timeout.  <a href="#acf5c802d3faa9f3f6b8d700b8b3ddf43">More...</a><br /></td></tr>
 <tr class="separator:acf5c802d3faa9f3f6b8d700b8b3ddf43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a578a2025eaf9af809a72d9783fdaa803"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803">work</a> (WorkReason reason)</td></tr>
+<tr class="memitem:a578a2025eaf9af809a72d9783fdaa803"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803">work</a> (<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2">WorkReason</a> reason)</td></tr>
 <tr class="memdesc:a578a2025eaf9af809a72d9783fdaa803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identical to <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a> but gives a reason why the function was called.  <a href="#a578a2025eaf9af809a72d9783fdaa803">More...</a><br /></td></tr>
 <tr class="separator:a578a2025eaf9af809a72d9783fdaa803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10c3cbd96505481cbd9c2f5081c2cd72"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html">os::ThreadInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a10c3cbd96505481cbd9c2f5081c2cd72">getThread</a> () const </td></tr>
@@ -140,26 +147,22 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr class="memitem:acbb28484697178efcb0cdfef2a55ad37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbb28484697178efcb0cdfef2a55ad37"></a>
-typedef <a class="el" href="classRTT_1_1os_1_1TimeService.html#accd937aad8cd6db7c1752dc1d70809cd">TimeService::nsecs</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Time</b></td></tr>
+<tr class="memitem:acbb28484697178efcb0cdfef2a55ad37"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classRTT_1_1os_1_1TimeService.html#accd937aad8cd6db7c1752dc1d70809cd">TimeService::nsecs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#acbb28484697178efcb0cdfef2a55ad37">Time</a></td></tr>
 <tr class="separator:acbb28484697178efcb0cdfef2a55ad37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf02e89f4fb03702b2979dd699edde40"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; TimerInfo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">TimerIds</a></td></tr>
+<tr class="memitem:aaf02e89f4fb03702b2979dd699edde40"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="structRTT_1_1os_1_1Timer_1_1TimerInfo.html">TimerInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">TimerIds</a></td></tr>
 <tr class="memdesc:aaf02e89f4fb03702b2979dd699edde40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index in vector is the timer id.  <a href="#aaf02e89f4fb03702b2979dd699edde40">More...</a><br /></td></tr>
 <tr class="separator:aaf02e89f4fb03702b2979dd699edde40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a2606193d96db504b4b52df3dcb8d631b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2606193d96db504b4b52df3dcb8d631b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a2606193d96db504b4b52df3dcb8d631b">initialize</a> ()</td></tr>
-<tr class="memdesc:a2606193d96db504b4b52df3dcb8d631b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called before the first periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the thread is started. <br /></td></tr>
+<tr class="memitem:a2606193d96db504b4b52df3dcb8d631b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a2606193d96db504b4b52df3dcb8d631b">initialize</a> ()</td></tr>
+<tr class="memdesc:a2606193d96db504b4b52df3dcb8d631b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called before the first periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the thread is started.  <a href="#a2606193d96db504b4b52df3dcb8d631b">More...</a><br /></td></tr>
 <tr class="separator:a2606193d96db504b4b52df3dcb8d631b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfc2e3a95a863e1105e05b983f23f50f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfc2e3a95a863e1105e05b983f23f50f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#abfc2e3a95a863e1105e05b983f23f50f">finalize</a> ()</td></tr>
-<tr class="memdesc:abfc2e3a95a863e1105e05b983f23f50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called after the last periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the RunnableInterface is stopped. <br /></td></tr>
+<tr class="memitem:abfc2e3a95a863e1105e05b983f23f50f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#abfc2e3a95a863e1105e05b983f23f50f">finalize</a> ()</td></tr>
+<tr class="memdesc:abfc2e3a95a863e1105e05b983f23f50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called after the last periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the RunnableInterface is stopped.  <a href="#abfc2e3a95a863e1105e05b983f23f50f">More...</a><br /></td></tr>
 <tr class="separator:abfc2e3a95a863e1105e05b983f23f50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5d7104ef70085ddf0880cf429a540f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5d7104ef70085ddf0880cf429a540f4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4">step</a> ()</td></tr>
-<tr class="memdesc:ab5d7104ef70085ddf0880cf429a540f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be (periodically) executed when this object is run in an <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a>. <br /></td></tr>
+<tr class="memitem:ab5d7104ef70085ddf0880cf429a540f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4">step</a> ()</td></tr>
+<tr class="memdesc:ab5d7104ef70085ddf0880cf429a540f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be (periodically) executed when this object is run in an <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a>.  <a href="#ab5d7104ef70085ddf0880cf429a540f4">More...</a><br /></td></tr>
 <tr class="separator:ab5d7104ef70085ddf0880cf429a540f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfbcfa7d6da2bc548f6a4f5275caf0ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed">loop</a> ()</td></tr>
 <tr class="memdesc:adfbcfa7d6da2bc548f6a4f5275caf0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be executed once when this class is run in a non periodic <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a>.  <a href="#adfbcfa7d6da2bc548f6a4f5275caf0ed">More...</a><br /></td></tr>
@@ -170,20 +173,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a81270f42cfa32403217319a624137ebb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81270f42cfa32403217319a624137ebb"></a>
-<a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">base::ActivityInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mThread</b></td></tr>
+<tr class="memitem:a81270f42cfa32403217319a624137ebb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">base::ActivityInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a81270f42cfa32403217319a624137ebb">mThread</a></td></tr>
 <tr class="separator:a81270f42cfa32403217319a624137ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f86817e6ec3f082d2163f0a78e8d75a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f86817e6ec3f082d2163f0a78e8d75a"></a>
-<a class="el" href="classRTT_1_1os_1_1Semaphore.html">Semaphore</a>&#160;</td><td class="memItemRight" valign="bottom"><b>msem</b></td></tr>
+<tr class="memitem:a7f86817e6ec3f082d2163f0a78e8d75a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1Semaphore.html">Semaphore</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a7f86817e6ec3f082d2163f0a78e8d75a">msem</a></td></tr>
 <tr class="separator:a7f86817e6ec3f082d2163f0a78e8d75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b38d0c6b828b577bb3864d24f9c93fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b38d0c6b828b577bb3864d24f9c93fa"></a>
-<a class="el" href="classRTT_1_1os_1_1Mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m</b></td></tr>
+<tr class="memitem:a8b38d0c6b828b577bb3864d24f9c93fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1Mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a8b38d0c6b828b577bb3864d24f9c93fa">m</a></td></tr>
 <tr class="separator:a8b38d0c6b828b577bb3864d24f9c93fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab7d7af5651e8f088568c4d18775167d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab7d7af5651e8f088568c4d18775167d"></a>
-<a class="el" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">TimerIds</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mtimers</b></td></tr>
+<tr class="memitem:aab7d7af5651e8f088568c4d18775167d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">TimerIds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#aab7d7af5651e8f088568c4d18775167d">mtimers</a></td></tr>
 <tr class="separator:aab7d7af5651e8f088568c4d18775167d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a042835a4311cb23e1aec796a3de2e42b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a042835a4311cb23e1aec796a3de2e42b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr>
+<tr class="memitem:a042835a4311cb23e1aec796a3de2e42b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Timer.html#a042835a4311cb23e1aec796a3de2e42b">mdo_quit</a></td></tr>
 <tr class="separator:a042835a4311cb23e1aec796a3de2e42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -193,6 +191,44 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 <p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00068">68</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="acbb28484697178efcb0cdfef2a55ad37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classRTT_1_1os_1_1TimeService.html#accd937aad8cd6db7c1752dc1d70809cd">TimeService::nsecs</a> <a class="el" href="classRTT_1_1os_1_1Timer.html#acbb28484697178efcb0cdfef2a55ad37">RTT::os::Timer::Time</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00080">80</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af40115442f2f261296ab9e8f270317ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int <a class="el" href="classRTT_1_1os_1_1Timer.html#af40115442f2f261296ab9e8f270317ea">RTT::os::Timer::TimerId</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A positive numeric ID representing a timer. </p>
+
+<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00075">75</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aaf02e89f4fb03702b2979dd699edde40"></a>
 <div class="memitem">
 <div class="memproto">
@@ -201,7 +237,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;TimerInfo&gt; <a class="el" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">RTT::os::Timer::TimerIds</a></td>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="structRTT_1_1os_1_1Timer_1_1TimerInfo.html">TimerInfo</a>&gt; <a class="el" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">RTT::os::Timer::TimerIds</a></td>
         </tr>
       </table>
   </td>
@@ -215,6 +251,37 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 <p>1st Time is the absolute time upon which the timer expires. 2nd Time is the optional period of the timer. </p>
 
 <p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00097">97</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a93db616570e910bcbdf835eebd1d09a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2">RTT::base::RunnableInterface::WorkReason</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a93db616570e910bcbdf835eebd1d09a2adda55d6e664961143becf9fe14075f31"></a>TimeOut&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a93db616570e910bcbdf835eebd1d09a2ac9eae0cbdd07910ee0798825e996235e"></a>Trigger&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a93db616570e910bcbdf835eebd1d09a2a0c82d259bcd937f796bb01c6848f1a71"></a>IOReady&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="RunnableInterface_8hpp_source.html#l00076">76</a> of file <a class="el" href="RunnableInterface_8hpp_source.html">RunnableInterface.hpp</a>.</p>
 
 </div>
 </div>
@@ -268,7 +335,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 <p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00143">143</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
-<p>References <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a6ccbd039e0df4bae31fe63a988b3c2f3">RTT::base::ActivityInterface::start()</a>.</p>
+<p>References <a class="el" href="Timer_8hpp_source.html#l00077">mThread</a>, <a class="el" href="Timer_8hpp_source.html#l00098">mtimers</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a6ccbd039e0df4bae31fe63a988b3c2f3">RTT::base::ActivityInterface::start()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abbeb78608f748fdf06b1291a5d6844f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::Timer::~Timer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00153">153</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+
+<p>References <a class="el" href="Timer_8hpp_source.html#l00077">mThread</a>.</p>
 
 </div>
 </div>
@@ -309,7 +395,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 <p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00189">189</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
-<p>References <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>, and <a class="el" href="Semaphore_8hpp_source.html#l00096">RTT::os::Semaphore::signal()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Timer_8hpp_source.html#l00079">m</a>, <a class="el" href="Timer_8hpp_source.html#l00078">msem</a>, <a class="el" href="Timer_8hpp_source.html#l00098">mtimers</a>, <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>, <a class="el" href="os_2Time_8hpp_source.html#l00107">RTT::Seconds_to_nsecs()</a>, and <a class="el" href="Semaphore_8hpp_source.html#l00096">RTT::os::Semaphore::signal()</a>.</p>
 
 </div>
 </div>
@@ -343,6 +429,35 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 </div>
 </div>
+<a class="anchor" id="abfc2e3a95a863e1105e05b983f23f50f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::Timer::finalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The method that will be called after the last periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the RunnableInterface is stopped. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a32b9c766a8c8af74c8a9adbe7281f61d">RTT::base::RunnableInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00055">55</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a70c18e6321d3e6929e0097940d68c1ef"></a>
 <div class="memitem">
 <div class="memproto">
@@ -370,7 +485,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 <p>Definition at line <a class="el" href="RunnableInterface_8hpp_source.html#l00175">175</a> of file <a class="el" href="RunnableInterface_8hpp_source.html">RunnableInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00512">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00374">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00271">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00261">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::isSend()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00276">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00266">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">RTT::ExecutionEngine::stopTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00083">RTT::base::TaskCore::update()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">RTT::ExecutionEngine::waitForFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00500">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00374">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00271">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00261">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::isSend()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00276">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00266">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">RTT::ExecutionEngine::stopTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00083">RTT::base::TaskCore::update()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">RTT::ExecutionEngine::waitForFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
 
 </div>
 </div>
@@ -437,6 +552,35 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 </div>
 </div>
+<a class="anchor" id="a2606193d96db504b4b52df3dcb8d631b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::Timer::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The method that will be called before the first periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#ab5d7104ef70085ddf0880cf429a540f4" title="The method that will be (periodically) executed when this object is run in an Activity. ">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1os_1_1Timer.html#adfbcfa7d6da2bc548f6a4f5275caf0ed" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the thread is started. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a1fc18ba15bd1fd69759e127a2e466e65">RTT::base::RunnableInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00050">50</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5f4c6af23b66acdbaa96f1f54130f54d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -460,6 +604,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </dl>
 
 <p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00209">209</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Timer_8hpp_source.html#l00079">m</a>, and <a class="el" href="Timer_8hpp_source.html#l00098">mtimers</a>.</p>
 
 </div>
 </div>
@@ -486,6 +632,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </dl>
 
 <p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00236">236</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Timer_8hpp_source.html#l00079">m</a>, and <a class="el" href="Timer_8hpp_source.html#l00098">mtimers</a>.</p>
 
 </div>
 </div>
@@ -558,7 +706,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 <p>References <a class="el" href="ActivityInterface_8hpp_source.html#l00073">RTT::base::ActivityInterface::disableRun()</a>.</p>
 
-<p>Referenced by <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00309">RTT::ExecutionEngine::setActivity()</a>.</p>
+<p>Referenced by <a class="el" href="ActivityInterface_8cpp_source.html#l00045">RTT::base::ActivityInterface::ActivityInterface()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00309">RTT::ExecutionEngine::setActivity()</a>, and <a class="el" href="ActivityInterface_8cpp_source.html#l00050">RTT::base::ActivityInterface::~ActivityInterface()</a>.</p>
 
 </div>
 </div>
@@ -580,6 +728,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 <p>Any added timer with id &gt;= <em>max</em> will be removed. </p>
 
 <p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00164">164</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+
+<p>References <a class="el" href="Timer_8hpp_source.html#l00079">m</a>, and <a class="el" href="Timer_8hpp_source.html#l00098">mtimers</a>.</p>
 
 </div>
 </div>
@@ -619,7 +769,36 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 <p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00170">170</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
-<p>References <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>, and <a class="el" href="Semaphore_8hpp_source.html#l00096">RTT::os::Semaphore::signal()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Timer_8hpp_source.html#l00079">m</a>, <a class="el" href="Timer_8hpp_source.html#l00078">msem</a>, <a class="el" href="Timer_8hpp_source.html#l00098">mtimers</a>, <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>, <a class="el" href="os_2Time_8hpp_source.html#l00107">RTT::Seconds_to_nsecs()</a>, and <a class="el" href="Semaphore_8hpp_source.html#l00096">RTT::os::Semaphore::signal()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5d7104ef70085ddf0880cf429a540f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::Timer::step </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The method that will be (periodically) executed when this object is run in an <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a>. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">RTT::base::RunnableInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00057">57</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
 </div>
 </div>
@@ -682,7 +861,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 <p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00220">220</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
 
-<p>References <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Timer_8hpp_source.html#l00079">m</a>, <a class="el" href="Timer_8hpp_source.html#l00098">mtimers</a>, <a class="el" href="os_2Time_8hpp_source.html#l00108">RTT::nsecs_to_Seconds()</a>, and <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>.</p>
 
 </div>
 </div>
@@ -710,6 +889,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 <dl class="section return"><dt>Returns</dt><dd>true if timer has expired or if it was killed and false if the timer is not armed </dd></dl>
 
 <p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00250">250</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Timer_8hpp_source.html#l00079">m</a>, and <a class="el" href="Timer_8hpp_source.html#l00098">mtimers</a>.</p>
 
 </div>
 </div>
@@ -741,13 +922,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">timer_id</td><td>The number of the timer, starting from zero. </td></tr>
-    <tr><td class="paramname">abs_time</td><td>The absolute time to wait until before the condition happens. Use <a class="el" href="fosi__interface_8h.html#a86faa704540130956d12e5df711c48aa" title="Get &quot;system&quot; time in nanoseconds. ">rtos_get_time_ns()</a> to get the current time and Seconds_to_nsecs to add a certain amount to the result. </td></tr>
+    <tr><td class="paramname">abs_time</td><td>The absolute time to wait until before the condition happens. Use <a class="el" href="ecos_2fosi_8h.html#a86faa704540130956d12e5df711c48aa" title="Get &quot;system&quot; time in nanoseconds. ">rtos_get_time_ns()</a> to get the current time and Seconds_to_nsecs to add a certain amount to the result. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if timer has expired or if it was killed before abs_time and false if the timer is not armed </dd></dl>
 
 <p>Definition at line <a class="el" href="Timer_8cpp_source.html#l00263">263</a> of file <a class="el" href="Timer_8cpp_source.html">Timer.cpp</a>.</p>
+
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Timer_8hpp_source.html#l00079">m</a>, and <a class="el" href="Timer_8hpp_source.html#l00098">mtimers</a>.</p>
 
 </div>
 </div>
@@ -761,7 +944,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
         <tr>
           <td class="memname">void RTT::RunnableInterface::work </td>
           <td>(</td>
-          <td class="paramtype">WorkReason&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2">WorkReason</a>&#160;</td>
           <td class="paramname"><em>reason</em></td><td>)</td>
           <td></td>
         </tr>
@@ -780,7 +963,126 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 
 <p>Definition at line <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00071">71</a> of file <a class="el" href="CoreRunnableInterface_8cpp_source.html">CoreRunnableInterface.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="SlaveActivity_8cpp_source.html#l00202">RTT::extras::SlaveActivity::execute()</a>, <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Activity_8cpp_source.html#l00123">RTT::Activity::step()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00145">RTT::extras::SequentialActivity::trigger()</a>, and <a class="el" href="PeriodicActivity_8cpp_source.html#l00207">RTT::extras::PeriodicActivity::work()</a>.</p>
+<p>Referenced by <a class="el" href="SlaveActivity_8cpp_source.html#l00202">RTT::extras::SlaveActivity::execute()</a>, <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00145">RTT::extras::SequentialActivity::trigger()</a>, <a class="el" href="FileDescriptorSimulationActivity_8cpp_source.html#l00245">RTT::extras::FileDescriptorSimulationActivity::work()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00207">RTT::extras::PeriodicActivity::work()</a>, <a class="el" href="Activity_8cpp_source.html#l00128">RTT::Activity::work()</a>, and <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00432">RTT::extras::FileDescriptorActivity::work()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a8b38d0c6b828b577bb3864d24f9c93fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1Mutex.html">Mutex</a> RTT::os::Timer::m</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00079">79</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Timer_8cpp_source.html#l00189">arm()</a>, <a class="el" href="Timer_8cpp_source.html#l00209">isArmed()</a>, <a class="el" href="Timer_8cpp_source.html#l00236">killTimer()</a>, <a class="el" href="Timer_8cpp_source.html#l00164">setMaxTimers()</a>, <a class="el" href="Timer_8cpp_source.html#l00170">startTimer()</a>, <a class="el" href="Timer_8cpp_source.html#l00220">timeRemaining()</a>, <a class="el" href="Timer_8cpp_source.html#l00250">waitFor()</a>, and <a class="el" href="Timer_8cpp_source.html#l00263">waitForUntil()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a042835a4311cb23e1aec796a3de2e42b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::os::Timer::mdo_quit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00099">99</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f86817e6ec3f082d2163f0a78e8d75a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1Semaphore.html">Semaphore</a> RTT::os::Timer::msem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00078">78</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Timer_8cpp_source.html#l00189">arm()</a>, and <a class="el" href="Timer_8cpp_source.html#l00170">startTimer()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a81270f42cfa32403217319a624137ebb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">base::ActivityInterface</a>* RTT::os::Timer::mThread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00077">77</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Timer_8cpp_source.html#l00143">Timer()</a>, and <a class="el" href="Timer_8cpp_source.html#l00153">~Timer()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aab7d7af5651e8f088568c4d18775167d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1Timer.html#aaf02e89f4fb03702b2979dd699edde40">TimerIds</a> RTT::os::Timer::mtimers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Timer_8hpp_source.html#l00098">98</a> of file <a class="el" href="Timer_8hpp_source.html">Timer.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Timer_8cpp_source.html#l00189">arm()</a>, <a class="el" href="Timer_8cpp_source.html#l00209">isArmed()</a>, <a class="el" href="Timer_8cpp_source.html#l00236">killTimer()</a>, <a class="el" href="Timer_8cpp_source.html#l00164">setMaxTimers()</a>, <a class="el" href="Timer_8cpp_source.html#l00170">startTimer()</a>, <a class="el" href="Timer_8cpp_source.html#l00143">Timer()</a>, <a class="el" href="Timer_8cpp_source.html#l00220">timeRemaining()</a>, <a class="el" href="Timer_8cpp_source.html#l00250">waitFor()</a>, and <a class="el" href="Timer_8cpp_source.html#l00263">waitForUntil()</a>.</p>
 
 </div>
 </div>
@@ -791,7 +1093,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mdo_quit</b></td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:26 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

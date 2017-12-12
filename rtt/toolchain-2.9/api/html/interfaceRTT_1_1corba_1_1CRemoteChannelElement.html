@@ -76,9 +76,8 @@ Inheritance diagram for RTT::corba::CRemoteChannelElement:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6105a1478880c436e408bb9bb5747bd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6105a1478880c436e408bb9bb5747bd9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#a6105a1478880c436e408bb9bb5747bd9">setRemoteSide</a> (in <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">CRemoteChannelElement</a> other)</td></tr>
-<tr class="memdesc:a6105a1478880c436e408bb9bb5747bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to inform this channel element which the other side is such that they can relay a signal or disconnect. <br /></td></tr>
+<tr class="memitem:a6105a1478880c436e408bb9bb5747bd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#a6105a1478880c436e408bb9bb5747bd9">setRemoteSide</a> (in <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">CRemoteChannelElement</a> other)</td></tr>
+<tr class="memdesc:a6105a1478880c436e408bb9bb5747bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to inform this channel element which the other side is such that they can relay a signal or disconnect.  <a href="#a6105a1478880c436e408bb9bb5747bd9">More...</a><br /></td></tr>
 <tr class="separator:a6105a1478880c436e408bb9bb5747bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abae51a6ff7bd88e24e228973a65d0248"><td class="memItemLeft" align="right" valign="top">oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html#abae51a6ff7bd88e24e228973a65d0248">remoteSignal</a> ()</td></tr>
 <tr class="memdesc:abae51a6ff7bd88e24e228973a65d0248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by the 'remote' side to inform this channel element that new data is available for reading.  <a href="#abae51a6ff7bd88e24e228973a65d0248">More...</a><br /></td></tr>
@@ -89,19 +88,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inte
 <tr class="memitem:a9fd6b00e2dcacb71653c523b1b8232be"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#a9fd6b00e2dcacb71653c523b1b8232be">inputReady</a> ()</td></tr>
 <tr class="memdesc:a9fd6b00e2dcacb71653c523b1b8232be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used during connection setup to pass on an example of the data.  <a href="#a9fd6b00e2dcacb71653c523b1b8232be">More...</a><br /></td></tr>
 <tr class="separator:a9fd6b00e2dcacb71653c523b1b8232be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fc59de2c43ae702203f5cc8c7050320"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#a3fc59de2c43ae702203f5cc8c7050320">channelReady</a> (in CConnPolicy cp)</td></tr>
+<tr class="memitem:a3fc59de2c43ae702203f5cc8c7050320"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#a3fc59de2c43ae702203f5cc8c7050320">channelReady</a> (in <a class="el" href="structRTT_1_1corba_1_1CConnPolicy.html">CConnPolicy</a> cp)</td></tr>
 <tr class="memdesc:a3fc59de2c43ae702203f5cc8c7050320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the connection channel elements are ready for a given input port.  <a href="#a3fc59de2c43ae702203f5cc8c7050320">More...</a><br /></td></tr>
 <tr class="separator:a3fc59de2c43ae702203f5cc8c7050320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5d1d2e6501ebbe7361000de539b54b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5d1d2e6501ebbe7361000de539b54b5"></a>
-CFlowStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#ae5d1d2e6501ebbe7361000de539b54b5">read</a> (out any sample, in boolean copy_old_data)</td></tr>
-<tr class="memdesc:ae5d1d2e6501ebbe7361000de539b54b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads from this Channel Element. <br /></td></tr>
+<tr class="memitem:ae5d1d2e6501ebbe7361000de539b54b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1corba.html#a56408c4be7abecf22e91d9c13a1daf5a">CFlowStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#ae5d1d2e6501ebbe7361000de539b54b5">read</a> (out any sample, in boolean copy_old_data)</td></tr>
+<tr class="memdesc:ae5d1d2e6501ebbe7361000de539b54b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads from this Channel Element.  <a href="#ae5d1d2e6501ebbe7361000de539b54b5">More...</a><br /></td></tr>
 <tr class="separator:ae5d1d2e6501ebbe7361000de539b54b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c7eaf814a80d0a8dbc67db9c6da13f6"><td class="memItemLeft" align="right" valign="top">CWriteStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#a7c7eaf814a80d0a8dbc67db9c6da13f6">write</a> (in any sample)</td></tr>
+<tr class="memitem:a7c7eaf814a80d0a8dbc67db9c6da13f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceRTT_1_1corba.html#ad3f439ad39165c30e9b66f703a37ce4a">CWriteStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#a7c7eaf814a80d0a8dbc67db9c6da13f6">write</a> (in any sample)</td></tr>
 <tr class="memdesc:a7c7eaf814a80d0a8dbc67db9c6da13f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes into this Channel Element.  <a href="#a7c7eaf814a80d0a8dbc67db9c6da13f6">More...</a><br /></td></tr>
 <tr class="separator:a7c7eaf814a80d0a8dbc67db9c6da13f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab40ae9b514210b8cd9291eac045972d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab40ae9b514210b8cd9291eac045972d1"></a>
-oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#ab40ae9b514210b8cd9291eac045972d1">writeOneway</a> (in any sample)</td></tr>
-<tr class="memdesc:ab40ae9b514210b8cd9291eac045972d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes into this Channel Element (one-way) <br /></td></tr>
+<tr class="memitem:ab40ae9b514210b8cd9291eac045972d1"><td class="memItemLeft" align="right" valign="top">oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#ab40ae9b514210b8cd9291eac045972d1">writeOneway</a> (in any sample)</td></tr>
+<tr class="memdesc:ab40ae9b514210b8cd9291eac045972d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes into this Channel Element (one-way)  <a href="#ab40ae9b514210b8cd9291eac045972d1">More...</a><br /></td></tr>
 <tr class="separator:ab40ae9b514210b8cd9291eac045972d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3c7f61320f0c09c203fc9db64efc26d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CChannelElement.html#ae3c7f61320f0c09c203fc9db64efc26d">disconnect</a> ()</td></tr>
 <tr class="memdesc:ae3c7f61320f0c09c203fc9db64efc26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect and dispose this object.  <a href="#ae3c7f61320f0c09c203fc9db64efc26d">More...</a><br /></td></tr>
@@ -122,7 +119,7 @@ oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
         <tr>
           <td class="memname">boolean RTT::corba::CChannelElement::channelReady </td>
           <td>(</td>
-          <td class="paramtype">in CConnPolicy&#160;</td>
+          <td class="paramtype">in <a class="el" href="structRTT_1_1corba_1_1CConnPolicy.html">CConnPolicy</a>&#160;</td>
           <td class="paramname"><em>cp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -198,6 +195,42 @@ oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
+<a class="anchor" id="ae5d1d2e6501ebbe7361000de539b54b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1corba.html#a56408c4be7abecf22e91d9c13a1daf5a">CFlowStatus</a> RTT::corba::CChannelElement::read </td>
+          <td>(</td>
+          <td class="paramtype">out any&#160;</td>
+          <td class="paramname"><em>sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in boolean&#160;</td>
+          <td class="paramname"><em>copy_old_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads from this Channel Element. </p>
+
+</div>
+</div>
 <a class="anchor" id="ab175cc3f166214a59e60147ccabf6e20"></a>
 <div class="memitem">
 <div class="memproto">
@@ -240,6 +273,24 @@ oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
+<a class="anchor" id="a6105a1478880c436e408bb9bb5747bd9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::corba::CRemoteChannelElement::setRemoteSide </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="interfaceRTT_1_1corba_1_1CRemoteChannelElement.html">CRemoteChannelElement</a>&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used to inform this channel element which the other side is such that they can relay a signal or disconnect. </p>
+
+</div>
+</div>
 <a class="anchor" id="a7c7eaf814a80d0a8dbc67db9c6da13f6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +299,7 @@ oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">CWriteStatus RTT::corba::CChannelElement::write </td>
+          <td class="memname"><a class="el" href="namespaceRTT_1_1corba.html#ad3f439ad39165c30e9b66f703a37ce4a">CWriteStatus</a> RTT::corba::CChannelElement::write </td>
           <td>(</td>
           <td class="paramtype">in any&#160;</td>
           <td class="paramname"><em>sample</em></td><td>)</td>
@@ -267,13 +318,39 @@ oneway void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
+<a class="anchor" id="ab40ae9b514210b8cd9291eac045972d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneway void RTT::corba::CChannelElement::writeOneway </td>
+          <td>(</td>
+          <td class="paramtype">in any&#160;</td>
+          <td class="paramname"><em>sample</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes into this Channel Element (one-way) </p>
+
+</div>
+</div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
 <li>rtt/transports/corba/<a class="el" href="DataFlow_8idl_source.html">DataFlow.idl</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:21 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

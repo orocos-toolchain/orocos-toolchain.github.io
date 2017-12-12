@@ -65,7 +65,7 @@
 <p>The operation ties a C or C++ function into a component interface.  
  <a href="classRTT_1_1Operation.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Operation_8hpp_source.html">rtt/Operation.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="OperationBase_8hpp_source.html">rtt/base/OperationBase.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for RTT::Operation&lt; Signature &gt;:</div>
 <div class="dyncontent">
@@ -81,37 +81,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a82a9ede1a5050520a557df559934063b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a82a9ede1a5050520a557df559934063b">Operation</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a82a9ede1a5050520a557df559934063b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an operation object with a name.  <a href="#a82a9ede1a5050520a557df559934063b">More...</a><br /></td></tr>
 <tr class="separator:a82a9ede1a5050520a557df559934063b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83785423225c6a9f795d3d338bd38c1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a83785423225c6a9f795d3d338bd38c1d">Operation</a> (const std::string &amp;name, boost::function&lt; Signature &gt; func, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=ClientThread, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ownerEngine=NULL)</td></tr>
+<tr class="memitem:a83785423225c6a9f795d3d338bd38c1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a83785423225c6a9f795d3d338bd38c1d">Operation</a> (const std::string &amp;name, boost::function&lt; Signature &gt; func, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=<a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a>, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ownerEngine=NULL)</td></tr>
 <tr class="memdesc:a83785423225c6a9f795d3d338bd38c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an operation object with a name and function to execute.  <a href="#a83785423225c6a9f795d3d338bd38c1d">More...</a><br /></td></tr>
 <tr class="separator:a83785423225c6a9f795d3d338bd38c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa949c2a52017a9562890456ff7597fa4"><td class="memTemplParams" colspan="2">template&lt;class Function , class Object &gt; </td></tr>
-<tr class="memitem:aa949c2a52017a9562890456ff7597fa4"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#aa949c2a52017a9562890456ff7597fa4">Operation</a> (const std::string &amp;name, Function func, Object o, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=ClientThread, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ownerEngine=NULL)</td></tr>
+<tr class="memitem:aa949c2a52017a9562890456ff7597fa4"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#aa949c2a52017a9562890456ff7597fa4">Operation</a> (const std::string &amp;name, Function func, Object o, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=<a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a>, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ownerEngine=NULL)</td></tr>
 <tr class="memdesc:aa949c2a52017a9562890456ff7597fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an operation object with a name and class member function to execute.  <a href="#aa949c2a52017a9562890456ff7597fa4">More...</a><br /></td></tr>
 <tr class="separator:aa949c2a52017a9562890456ff7597fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9239b06fea2b06be27232ad52f6fa2b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a9239b06fea2b06be27232ad52f6fa2b8">~Operation</a> ()</td></tr>
+<tr class="separator:a9239b06fea2b06be27232ad52f6fa2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a698f35951b6a50d6d9265bcc258bb62e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Operation.html">Operation</a>&lt; Signature &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a698f35951b6a50d6d9265bcc258bb62e">doc</a> (const std::string &amp;description)</td></tr>
 <tr class="memdesc:a698f35951b6a50d6d9265bcc258bb62e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Document this operation.  <a href="#a698f35951b6a50d6d9265bcc258bb62e">More...</a><br /></td></tr>
 <tr class="separator:a698f35951b6a50d6d9265bcc258bb62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a154e1dfab74c396bbaba7c93a505854c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Operation.html">Operation</a>&lt; Signature &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a154e1dfab74c396bbaba7c93a505854c">arg</a> (const std::string &amp;name, const std::string &amp;description)</td></tr>
 <tr class="memdesc:a154e1dfab74c396bbaba7c93a505854c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Document an argument of this operation.  <a href="#a154e1dfab74c396bbaba7c93a505854c">More...</a><br /></td></tr>
 <tr class="separator:a154e1dfab74c396bbaba7c93a505854c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ee129f9959c20b50d0851d0252f98c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Operation.html">Operation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a7ee129f9959c20b50d0851d0252f98c7">calls</a> (boost::function&lt; Signature &gt; func, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=ClientThread, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ownerEngine=NULL)</td></tr>
+<tr class="memitem:a7ee129f9959c20b50d0851d0252f98c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Operation.html">Operation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a7ee129f9959c20b50d0851d0252f98c7">calls</a> (boost::function&lt; Signature &gt; func, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=<a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a>, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ownerEngine=NULL)</td></tr>
 <tr class="memdesc:a7ee129f9959c20b50d0851d0252f98c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate that this operation calls a given function.  <a href="#a7ee129f9959c20b50d0851d0252f98c7">More...</a><br /></td></tr>
 <tr class="separator:a7ee129f9959c20b50d0851d0252f98c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fe4d213e70bc74c7534047ebb50a5b3"><td class="memTemplParams" colspan="2">template&lt;class Function , class Object &gt; </td></tr>
-<tr class="memitem:a6fe4d213e70bc74c7534047ebb50a5b3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Operation.html">Operation</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a6fe4d213e70bc74c7534047ebb50a5b3">calls</a> (Function func, Object o, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=ClientThread, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ownerEngine=NULL)</td></tr>
+<tr class="memitem:a6fe4d213e70bc74c7534047ebb50a5b3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1Operation.html">Operation</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a6fe4d213e70bc74c7534047ebb50a5b3">calls</a> (Function func, Object o, <a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et=<a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a>, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ownerEngine=NULL)</td></tr>
 <tr class="memdesc:a6fe4d213e70bc74c7534047ebb50a5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate that this operation calls a given class member function.  <a href="#a6fe4d213e70bc74c7534047ebb50a5b3">More...</a><br /></td></tr>
 <tr class="separator:a6fe4d213e70bc74c7534047ebb50a5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf077f032a9feb84b59c812466108854"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#ac22230559dd1324a22259f0df18781d6">base::DisposableInterface::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#acf077f032a9feb84b59c812466108854">getImplementation</a> ()</td></tr>
 <tr class="memdesc:acf077f032a9feb84b59c812466108854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the implementation object of this operation.  <a href="#acf077f032a9feb84b59c812466108854">More...</a><br /></td></tr>
 <tr class="separator:acf077f032a9feb84b59c812466108854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6181342dbe3ac4753b77347ee218c715"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6181342dbe3ac4753b77347ee218c715"></a>
-virtual const <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#ac22230559dd1324a22259f0df18781d6">base::DisposableInterface::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getImplementation</b> () const </td></tr>
+<tr class="memitem:a6181342dbe3ac4753b77347ee218c715"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#ac22230559dd1324a22259f0df18781d6">base::DisposableInterface::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a6181342dbe3ac4753b77347ee218c715">getImplementation</a> () const </td></tr>
 <tr class="separator:a6181342dbe3ac4753b77347ee218c715"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3d5b7ca25742ec1b8d3fd8aa2cbe921"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3d5b7ca25742ec1b8d3fd8aa2cbe921"></a>
-virtual <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">base::OperationCallerBase</a>&lt; Signature &gt;::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getOperationCaller</b> ()</td></tr>
+<tr class="memitem:ae3d5b7ca25742ec1b8d3fd8aa2cbe921"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">base::OperationCallerBase</a>&lt; Signature &gt;::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#ae3d5b7ca25742ec1b8d3fd8aa2cbe921">getOperationCaller</a> ()</td></tr>
 <tr class="separator:ae3d5b7ca25742ec1b8d3fd8aa2cbe921"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d97aea04fe7166b0f7c6856b5ca63a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d97aea04fe7166b0f7c6856b5ca63a3"></a>
-virtual const <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">base::OperationCallerBase</a>&lt; Signature &gt;::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getOperationCaller</b> () const </td></tr>
+<tr class="memitem:a3d97aea04fe7166b0f7c6856b5ca63a3"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">base::OperationCallerBase</a>&lt; Signature &gt;::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Operation.html#a3d97aea04fe7166b0f7c6856b5ca63a3">getOperationCaller</a> () const </td></tr>
 <tr class="separator:a3d97aea04fe7166b0f7c6856b5ca63a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ae8de185c0c827fe3562e1310f4e3e2"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1OperationBase.html#a9ae8de185c0c827fe3562e1310f4e3e2">getName</a> ()</td></tr>
 <tr class="memdesc:a9ae8de185c0c827fe3562e1310f4e3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of this operation.  <a href="#a9ae8de185c0c827fe3562e1310f4e3e2">More...</a><br /></td></tr>
@@ -125,29 +124,23 @@ virtual const <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html"
 <tr class="memitem:aad15cbde431c19377d06f3011c68a0dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1OperationBase.html#aad15cbde431c19377d06f3011c68a0dd">setOwner</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ee)</td></tr>
 <tr class="memdesc:aad15cbde431c19377d06f3011c68a0dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the owning <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> that might execute this operation.  <a href="#aad15cbde431c19377d06f3011c68a0dd">More...</a><br /></td></tr>
 <tr class="separator:aad15cbde431c19377d06f3011c68a0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b9bf85387fa96556c052cad68196a29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b9bf85387fa96556c052cad68196a29"></a>
-<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getOwner</b> () const </td></tr>
+<tr class="memitem:a1b9bf85387fa96556c052cad68196a29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1OperationBase.html#a1b9bf85387fa96556c052cad68196a29">getOwner</a> () const </td></tr>
 <tr class="separator:a1b9bf85387fa96556c052cad68196a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a024bea887fc232731e144366646afbb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a024bea887fc232731e144366646afbb7"></a>
-RTT_API void&#160;</td><td class="memItemRight" valign="bottom"><b>mdoc</b> (const std::string &amp;description)</td></tr>
+<tr class="memitem:a024bea887fc232731e144366646afbb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rtt-config_8h.html#af1e1ad69baf12318ff1fde1ab942b32b">RTT_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1OperationBase.html#a024bea887fc232731e144366646afbb7">mdoc</a> (const std::string &amp;description)</td></tr>
 <tr class="separator:a024bea887fc232731e144366646afbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad00859558ba92968dbd8a6472f04a982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad00859558ba92968dbd8a6472f04a982"></a>
-RTT_API void&#160;</td><td class="memItemRight" valign="bottom"><b>marg</b> (const std::string &amp;name, const std::string &amp;description)</td></tr>
+<tr class="memitem:ad00859558ba92968dbd8a6472f04a982"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rtt-config_8h.html#af1e1ad69baf12318ff1fde1ab942b32b">RTT_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1OperationBase.html#ad00859558ba92968dbd8a6472f04a982">marg</a> (const std::string &amp;name, const std::string &amp;description)</td></tr>
 <tr class="separator:ad00859558ba92968dbd8a6472f04a982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ade4106559a4bb88f579b30fa26783e60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade4106559a4bb88f579b30fa26783e60"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mname</b></td></tr>
+<tr class="memitem:ade4106559a4bb88f579b30fa26783e60"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1OperationBase.html#ade4106559a4bb88f579b30fa26783e60">mname</a></td></tr>
 <tr class="separator:ade4106559a4bb88f579b30fa26783e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1f71d63bf50ebb8c8f70121a34f3cbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1f71d63bf50ebb8c8f70121a34f3cbc"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>descriptions</b></td></tr>
+<tr class="memitem:ad1f71d63bf50ebb8c8f70121a34f3cbc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1OperationBase.html#ad1f71d63bf50ebb8c8f70121a34f3cbc">descriptions</a></td></tr>
 <tr class="separator:ad1f71d63bf50ebb8c8f70121a34f3cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd7f84c0356754152381bff68fe10be0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd7f84c0356754152381bff68fe10be0"></a>
-<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mowner</b></td></tr>
+<tr class="memitem:acd7f84c0356754152381bff68fe10be0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1OperationBase.html#acd7f84c0356754152381bff68fe10be0">mowner</a></td></tr>
 <tr class="separator:acd7f84c0356754152381bff68fe10be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -228,7 +221,7 @@ template&lt;class Signature&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a>&#160;</td>
-          <td class="paramname"><em>et</em> = <code>ClientThread</code>, </td>
+          <td class="paramname"><em>et</em> = <code><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -297,7 +290,7 @@ template&lt;class Function , class Object &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a>&#160;</td>
-          <td class="paramname"><em>et</em> = <code>ClientThread</code>, </td>
+          <td class="paramname"><em>et</em> = <code><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -331,6 +324,33 @@ template&lt;class Function , class Object &gt; </div>
 </dl>
 
 <p>Definition at line <a class="el" href="Operation_8hpp_source.html#l00113">113</a> of file <a class="el" href="Operation_8hpp_source.html">Operation.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9239b06fea2b06be27232ad52f6fa2b8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Signature&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1Operation.html">RTT::Operation</a>&lt; Signature &gt;::~<a class="el" href="classRTT_1_1Operation.html">Operation</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Operation_8hpp_source.html#l00119">119</a> of file <a class="el" href="Operation_8hpp_source.html">Operation.hpp</a>.</p>
 
 </div>
 </div>
@@ -381,6 +401,8 @@ template&lt;class Signature&gt; </div>
 
 <p>Definition at line <a class="el" href="Operation_8hpp_source.html#l00137">137</a> of file <a class="el" href="Operation_8hpp_source.html">Operation.hpp</a>.</p>
 
+<p>Referenced by <a class="el" href="OperationInterfaceI_8cpp_source.html#l00217">RTT_corba_COperationInterface_i::RTT_corba_COperationInterface_i()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7ee129f9959c20b50d0851d0252f98c7"></a>
@@ -402,7 +424,7 @@ template&lt;class Signature&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a>&#160;</td>
-          <td class="paramname"><em>et</em> = <code>ClientThread</code>, </td>
+          <td class="paramname"><em>et</em> = <code><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -467,7 +489,7 @@ template&lt;class Function , class Object &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a>&#160;</td>
-          <td class="paramname"><em>et</em> = <code>ClientThread</code>, </td>
+          <td class="paramname"><em>et</em> = <code><a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915acb3106faefa378f28873a070ee9272fb">ClientThread</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -539,6 +561,8 @@ template&lt;class Signature&gt; </div>
 
 <p>Definition at line <a class="el" href="Operation_8hpp_source.html#l00128">128</a> of file <a class="el" href="Operation_8hpp_source.html">Operation.hpp</a>.</p>
 
+<p>Referenced by <a class="el" href="OperationInterfaceI_8cpp_source.html#l00217">RTT_corba_COperationInterface_i::RTT_corba_COperationInterface_i()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aeb83ec311d7eb650f1a0cd7d7068d9e0"></a>
@@ -567,9 +591,9 @@ template&lt;class Signature&gt; </div>
 
 <p>Definition at line <a class="el" href="OperationBase_8hpp_source.html#l00093">93</a> of file <a class="el" href="OperationBase_8hpp_source.html">OperationBase.hpp</a>.</p>
 
-<p>References <a class="el" href="classRTT_1_1base_1_1OperationBase.html#a710a6931a7b0e7dfc96620028ef85a5d">RTT::base::OperationBase::getImplementation()</a>.</p>
+<p>References <a class="el" href="OperationBase_8hpp_source.html#l00071">RTT::base::OperationBase::descriptions</a>, and <a class="el" href="classRTT_1_1base_1_1OperationBase.html#a710a6931a7b0e7dfc96620028ef85a5d">RTT::base::OperationBase::getImplementation()</a>.</p>
 
-<p>Referenced by <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00377">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;::description()</a>, and <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00381">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;::getArgumentList()</a>.</p>
+<p>Referenced by <a class="el" href="OperationInterfacePartFused_8cpp_source.html#l00046">RTT::internal::OperationInterfacePartHelper::description()</a>, <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00377">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;::description()</a>, <a class="el" href="OperationInterfacePartFused_8cpp_source.html#l00050">RTT::internal::OperationInterfacePartHelper::getArgumentList()</a>, and <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00381">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;::getArgumentList()</a>.</p>
 
 </div>
 </div>
@@ -603,7 +627,36 @@ template&lt;class Signature&gt; </div>
 
 <p>Definition at line <a class="el" href="Operation_8hpp_source.html#l00226">226</a> of file <a class="el" href="Operation_8hpp_source.html">Operation.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Operation_8hpp_source.html#l00226">RTT::Operation&lt; bool(std::string) &gt;::getImplementation()</a>, <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00180">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;::getLocalOperation()</a>, <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00321">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;::getLocalOperation()</a>, and <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00466">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;::getLocalOperation()</a>.</p>
+<p>Referenced by <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00180">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;::getLocalOperation()</a>, <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00321">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;::getLocalOperation()</a>, and <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00466">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;::getLocalOperation()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6181342dbe3ac4753b77347ee218c715"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Signature&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#ac22230559dd1324a22259f0df18781d6">base::DisposableInterface::shared_ptr</a> <a class="el" href="classRTT_1_1Operation.html">RTT::Operation</a>&lt; Signature &gt;::getImplementation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1OperationBase.html#a130610d7974de18678554af14172d115">RTT::base::OperationBase</a>.</p>
+
+<p>Definition at line <a class="el" href="Operation_8hpp_source.html#l00227">227</a> of file <a class="el" href="Operation_8hpp_source.html">Operation.hpp</a>.</p>
 
 </div>
 </div>
@@ -633,7 +686,162 @@ template&lt;class Signature&gt; </div>
 
 <p>Definition at line <a class="el" href="OperationBase_8hpp_source.html#l00084">84</a> of file <a class="el" href="OperationBase_8hpp_source.html">OperationBase.hpp</a>.</p>
 
+<p>References <a class="el" href="OperationBase_8hpp_source.html#l00070">RTT::base::OperationBase::mname</a>.</p>
+
 <p>Referenced by <a class="el" href="Service_8cpp_source.html#l00178">RTT::Service::addLocalOperation()</a>, <a class="el" href="Service_8hpp_source.html#l00344">RTT::Service::addOperation()</a>, <a class="el" href="Service_8hpp_source.html#l00524">RTT::Service::addOperationDS()</a>, <a class="el" href="Service_8hpp_source.html#l00382">RTT::Service::addSynchronousOperation()</a>, <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00110">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;::getName()</a>, <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00277">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;::getName()</a>, and <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00373">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;::getName()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae3d5b7ca25742ec1b8d3fd8aa2cbe921"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Signature&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">base::OperationCallerBase</a>&lt;Signature&gt;::shared_ptr <a class="el" href="classRTT_1_1Operation.html">RTT::Operation</a>&lt; Signature &gt;::getOperationCaller </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Operation_8hpp_source.html#l00229">229</a> of file <a class="el" href="Operation_8hpp_source.html">Operation.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00146">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;::produce()</a>, <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00312">RTT::internal::SynchronousOperationInterfacePartFused&lt; Signature &gt;::produce()</a>, <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00390">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;::produce()</a>, <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00418">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;::produceCollect()</a>, <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00155">RTT::internal::OperationInterfacePartFused&lt; bool(std::string)&gt;::produceSend()</a>, and <a class="el" href="OperationInterfacePartFused_8hpp_source.html#l00402">RTT::internal::OperationInterfacePartFusedDS&lt; Signature, ObjT &gt;::produceSend()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d97aea04fe7166b0f7c6856b5ca63a3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Signature&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">base::OperationCallerBase</a>&lt;Signature&gt;::shared_ptr <a class="el" href="classRTT_1_1Operation.html">RTT::Operation</a>&lt; Signature &gt;::getOperationCaller </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Operation_8hpp_source.html#l00230">230</a> of file <a class="el" href="Operation_8hpp_source.html">Operation.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1b9bf85387fa96556c052cad68196a29"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a>* RTT::base::OperationBase::getOwner </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationBase_8hpp_source.html#l00122">122</a> of file <a class="el" href="OperationBase_8hpp_source.html">OperationBase.hpp</a>.</p>
+
+<p>References <a class="el" href="OperationBase_8hpp_source.html#l00072">RTT::base::OperationBase::mowner</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad00859558ba92968dbd8a6472f04a982"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::base::OperationBase::marg </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationBase_8cpp_source.html#l00068">68</a> of file <a class="el" href="OperationBase_8cpp_source.html">OperationBase.cpp</a>.</p>
+
+<p>References <a class="el" href="OperationBase_8hpp_source.html#l00071">RTT::base::OperationBase::descriptions</a>.</p>
+
+<p>Referenced by <a class="el" href="Operation_8hpp_source.html#l00137">RTT::Operation&lt; bool(std::string) &gt;::arg()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a024bea887fc232731e144366646afbb7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::base::OperationBase::mdoc </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>description</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationBase_8cpp_source.html#l00064">64</a> of file <a class="el" href="OperationBase_8cpp_source.html">OperationBase.cpp</a>.</p>
+
+<p>References <a class="el" href="OperationBase_8hpp_source.html#l00071">RTT::base::OperationBase::descriptions</a>.</p>
+
+<p>Referenced by <a class="el" href="Operation_8hpp_source.html#l00128">RTT::Operation&lt; bool(std::string) &gt;::doc()</a>.</p>
 
 </div>
 </div>
@@ -699,7 +907,82 @@ template&lt;class Signature&gt; </div>
 
 <p>Definition at line <a class="el" href="OperationBase_8hpp_source.html#l00116">116</a> of file <a class="el" href="OperationBase_8hpp_source.html">OperationBase.hpp</a>.</p>
 
+<p>References <a class="el" href="classRTT_1_1base_1_1OperationBase.html#a808598152677888aab4a0d4833a8438b">RTT::base::OperationBase::ownerUpdated()</a>.</p>
+
 <p>Referenced by <a class="el" href="Service_8cpp_source.html#l00178">RTT::Service::addLocalOperation()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ad1f71d63bf50ebb8c8f70121a34f3cbc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; RTT::base::OperationBase::descriptions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationBase_8hpp_source.html#l00071">71</a> of file <a class="el" href="OperationBase_8hpp_source.html">OperationBase.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationBase_8hpp_source.html#l00093">RTT::base::OperationBase::getDescriptions()</a>, <a class="el" href="OperationBase_8cpp_source.html#l00068">RTT::base::OperationBase::marg()</a>, <a class="el" href="OperationBase_8cpp_source.html#l00064">RTT::base::OperationBase::mdoc()</a>, and <a class="el" href="OperationBase_8cpp_source.html#l00054">RTT::base::OperationBase::OperationBase()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ade4106559a4bb88f579b30fa26783e60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string RTT::base::OperationBase::mname</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationBase_8hpp_source.html#l00070">70</a> of file <a class="el" href="OperationBase_8hpp_source.html">OperationBase.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationBase_8hpp_source.html#l00084">RTT::base::OperationBase::getName()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd7f84c0356754152381bff68fe10be0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a>* RTT::base::OperationBase::mowner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperationBase_8hpp_source.html#l00072">72</a> of file <a class="el" href="OperationBase_8hpp_source.html">OperationBase.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Operation_8hpp_source.html#l00147">RTT::Operation&lt; bool(std::string) &gt;::calls()</a>, <a class="el" href="Operation_8hpp_source.html#l00230">RTT::Operation&lt; bool(std::string) &gt;::getOperationCaller()</a>, and <a class="el" href="OperationBase_8hpp_source.html#l00122">RTT::base::OperationBase::getOwner()</a>.</p>
 
 </div>
 </div>
@@ -710,7 +993,7 @@ template&lt;class Signature&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:20 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

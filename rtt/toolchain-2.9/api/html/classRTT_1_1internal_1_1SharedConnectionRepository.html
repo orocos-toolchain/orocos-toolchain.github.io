@@ -69,49 +69,194 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac531496aa38b5c1e23426da58183898f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac531496aa38b5c1e23426da58183898f"></a>
-typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html">SharedConnectionRepository</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shared_ptr</b></td></tr>
+<tr class="memitem:ac531496aa38b5c1e23426da58183898f"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html">SharedConnectionRepository</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#ac531496aa38b5c1e23426da58183898f">shared_ptr</a></td></tr>
 <tr class="separator:ac531496aa38b5c1e23426da58183898f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41aab1b1a9654e7dd4b470782bb1294d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41aab1b1a9654e7dd4b470782bb1294d"></a>
-typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><b>key_t</b></td></tr>
+<tr class="memitem:a41aab1b1a9654e7dd4b470782bb1294d"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a41aab1b1a9654e7dd4b470782bb1294d">key_t</a></td></tr>
 <tr class="separator:a41aab1b1a9654e7dd4b470782bb1294d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfabdd04c64f98f347de52448681e32e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfabdd04c64f98f347de52448681e32e"></a>
-typedef std::map&lt; key_t, <a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html">SharedConnectionBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Map</b></td></tr>
+<tr class="memitem:adfabdd04c64f98f347de52448681e32e"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a41aab1b1a9654e7dd4b470782bb1294d">key_t</a>, <a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html">SharedConnectionBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#adfabdd04c64f98f347de52448681e32e">Map</a></td></tr>
 <tr class="separator:adfabdd04c64f98f347de52448681e32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4856138d8672fd0f00d7cdf3d0592ce9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4856138d8672fd0f00d7cdf3d0592ce9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (const key_t &amp;key, <a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html">SharedConnectionBase</a> *connection)</td></tr>
+<tr class="memitem:a4856138d8672fd0f00d7cdf3d0592ce9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a4856138d8672fd0f00d7cdf3d0592ce9">add</a> (const <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a41aab1b1a9654e7dd4b470782bb1294d">key_t</a> &amp;key, <a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html">SharedConnectionBase</a> *connection)</td></tr>
 <tr class="separator:a4856138d8672fd0f00d7cdf3d0592ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe361c2fb4fab49438d103f3d6ee6d12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe361c2fb4fab49438d103f3d6ee6d12"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>remove</b> (<a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html">SharedConnectionBase</a> *connection)</td></tr>
+<tr class="memitem:abe361c2fb4fab49438d103f3d6ee6d12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#abe361c2fb4fab49438d103f3d6ee6d12">remove</a> (<a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html">SharedConnectionBase</a> *connection)</td></tr>
 <tr class="separator:abe361c2fb4fab49438d103f3d6ee6d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab617876614a06c4edeea2366fa9f50cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab617876614a06c4edeea2366fa9f50cb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>has</b> (const key_t &amp;key) const </td></tr>
+<tr class="memitem:ab617876614a06c4edeea2366fa9f50cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#ab617876614a06c4edeea2366fa9f50cb">has</a> (const <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a41aab1b1a9654e7dd4b470782bb1294d">key_t</a> &amp;key) const </td></tr>
 <tr class="separator:ab617876614a06c4edeea2366fa9f50cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e07bd1d3bbb7425085244cd1972fc5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e07bd1d3bbb7425085244cd1972fc5f"></a>
-SharedConnectionBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const key_t &amp;key) const </td></tr>
+<tr class="memitem:a2e07bd1d3bbb7425085244cd1972fc5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html#ab9c887d71d1615f576b7cc6b6bd3458a">SharedConnectionBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a2e07bd1d3bbb7425085244cd1972fc5f">get</a> (const <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a41aab1b1a9654e7dd4b470782bb1294d">key_t</a> &amp;key) const </td></tr>
 <tr class="separator:a2e07bd1d3bbb7425085244cd1972fc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad58518a50a149861d0e5a290f30299f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad58518a50a149861d0e5a290f30299f2"></a>
-static shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b> ()</td></tr>
+<tr class="memitem:ad58518a50a149861d0e5a290f30299f2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#ac531496aa38b5c1e23426da58183898f">shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#ad58518a50a149861d0e5a290f30299f2">Instance</a> ()</td></tr>
 <tr class="separator:ad58518a50a149861d0e5a290f30299f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A repository which stores pointers to all shared connections within the process. </p>
 
 <p>Definition at line <a class="el" href="SharedConnection_8hpp_source.html#l00109">109</a> of file <a class="el" href="SharedConnection_8hpp_source.html">SharedConnection.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a41aab1b1a9654e7dd4b470782bb1294d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::string <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a41aab1b1a9654e7dd4b470782bb1294d">RTT::internal::SharedConnectionRepository::key_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SharedConnection_8hpp_source.html#l00114">114</a> of file <a class="el" href="SharedConnection_8hpp_source.html">SharedConnection.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adfabdd04c64f98f347de52448681e32e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt;<a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a41aab1b1a9654e7dd4b470782bb1294d">key_t</a>, <a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html">SharedConnectionBase</a>*&gt; <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#adfabdd04c64f98f347de52448681e32e">RTT::internal::SharedConnectionRepository::Map</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SharedConnection_8hpp_source.html#l00115">115</a> of file <a class="el" href="SharedConnection_8hpp_source.html">SharedConnection.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac531496aa38b5c1e23426da58183898f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html">SharedConnectionRepository</a>&gt; <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#ac531496aa38b5c1e23426da58183898f">RTT::internal::SharedConnectionRepository::shared_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SharedConnection_8hpp_source.html#l00112">112</a> of file <a class="el" href="SharedConnection_8hpp_source.html">SharedConnection.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4856138d8672fd0f00d7cdf3d0592ce9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SharedConnectionRepository::add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a41aab1b1a9654e7dd4b470782bb1294d">key_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html">SharedConnectionBase</a> *&#160;</td>
+          <td class="paramname"><em>connection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SharedConnection_8cpp_source.html#l00124">124</a> of file <a class="el" href="SharedConnection_8cpp_source.html">SharedConnection.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e07bd1d3bbb7425085244cd1972fc5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html#ab9c887d71d1615f576b7cc6b6bd3458a">SharedConnectionBase::shared_ptr</a> SharedConnectionRepository::get </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a41aab1b1a9654e7dd4b470782bb1294d">key_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SharedConnection_8cpp_source.html#l00152">152</a> of file <a class="el" href="SharedConnection_8cpp_source.html">SharedConnection.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab617876614a06c4edeea2366fa9f50cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SharedConnectionRepository::has </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#a41aab1b1a9654e7dd4b470782bb1294d">key_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SharedConnection_8cpp_source.html#l00146">146</a> of file <a class="el" href="SharedConnection_8cpp_source.html">SharedConnection.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad58518a50a149861d0e5a290f30299f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionRepository.html#ac531496aa38b5c1e23426da58183898f">SharedConnectionRepository::shared_ptr</a> SharedConnectionRepository::Instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SharedConnection_8cpp_source.html#l00116">116</a> of file <a class="el" href="SharedConnection_8cpp_source.html">SharedConnection.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="SharedConnection_8cpp_source.html#l00070">RTT::internal::SharedConnectionBase::SharedConnectionBase()</a>, and <a class="el" href="SharedConnection_8cpp_source.html#l00092">RTT::internal::SharedConnectionBase::~SharedConnectionBase()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe361c2fb4fab49438d103f3d6ee6d12"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SharedConnectionRepository::remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html">SharedConnectionBase</a> *&#160;</td>
+          <td class="paramname"><em>connection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SharedConnection_8cpp_source.html#l00132">132</a> of file <a class="el" href="SharedConnection_8cpp_source.html">SharedConnection.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>rtt/internal/<a class="el" href="SharedConnection_8hpp_source.html">SharedConnection.hpp</a></li>
 <li>rtt/internal/<a class="el" href="SharedConnection_8cpp_source.html">SharedConnection.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:25 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

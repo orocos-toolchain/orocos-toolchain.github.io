@@ -77,9 +77,10 @@ Inheritance diagram for RTT::types::TypeConstructor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad0605327f190bd1930c7643b9688e890"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0605327f190bd1930c7643b9688e890"></a>
-virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1types_1_1TypeConstructor.html#ad0605327f190bd1930c7643b9688e890">build</a> (const std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt; &amp;args) const =0</td></tr>
-<tr class="memdesc:ad0605327f190bd1930c7643b9688e890"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect args and return a type constructed with these args if such a constructor exists. <br /></td></tr>
+<tr class="memitem:adb044906b31aab5561d955bd25d52b3e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1types_1_1TypeConstructor.html#adb044906b31aab5561d955bd25d52b3e">~TypeConstructor</a> ()</td></tr>
+<tr class="separator:adb044906b31aab5561d955bd25d52b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0605327f190bd1930c7643b9688e890"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1types_1_1TypeConstructor.html#ad0605327f190bd1930c7643b9688e890">build</a> (const std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt; &amp;args) const =0</td></tr>
+<tr class="memdesc:ad0605327f190bd1930c7643b9688e890"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect args and return a type constructed with these args if such a constructor exists.  <a href="#ad0605327f190bd1930c7643b9688e890">More...</a><br /></td></tr>
 <tr class="separator:ad0605327f190bd1930c7643b9688e890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2615c58c4b70d2da55ccf3ecdadad64a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1types_1_1TypeConstructor.html#a2615c58c4b70d2da55ccf3ecdadad64a">convert</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> arg) const </td></tr>
 <tr class="memdesc:a2615c58c4b70d2da55ccf3ecdadad64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatic type conversion (float-&gt;double,...  <a href="#a2615c58c4b70d2da55ccf3ecdadad64a">More...</a><br /></td></tr>
@@ -89,7 +90,61 @@ virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a
 <div class="textblock"><p>This interface describes how constructors work. </p>
 
 <p>Definition at line <a class="el" href="TypeConstructor_8hpp_source.html#l00050">50</a> of file <a class="el" href="TypeConstructor_8hpp_source.html">TypeConstructor.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="adb044906b31aab5561d955bd25d52b3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::TypeConstructor::~TypeConstructor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TypeConstructor_8cpp_source.html#l00047">47</a> of file <a class="el" href="TypeConstructor_8cpp_source.html">TypeConstructor.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad0605327f190bd1930c7643b9688e890"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> RTT::types::TypeConstructor::build </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inspect args and return a type constructed with these args if such a constructor exists. </p>
+
+<p>Implemented in <a class="el" href="structRTT_1_1types_1_1TemplateConstructor.html#aeb845d09282ebc754ed9ff3778fd2a8e">RTT::types::TemplateConstructor&lt; S &gt;</a>, and <a class="el" href="structRTT_1_1types_1_1SequenceBuilder.html#a50b1dcde8ed664ec57ef1c83bdb3e52c">RTT::types::SequenceBuilder&lt; T &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a2615c58c4b70d2da55ccf3ecdadad64a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +183,7 @@ virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

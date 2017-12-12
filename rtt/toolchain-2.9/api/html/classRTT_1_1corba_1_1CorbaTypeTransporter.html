@@ -78,32 +78,28 @@ Inheritance diagram for RTT::corba::CorbaTypeTransporter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9c31a1b39dd027f38958fbc6e444959e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c31a1b39dd027f38958fbc6e444959e"></a>
-virtual CORBA::Any_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a9c31a1b39dd027f38958fbc6e444959e">createAny</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> source) const =0</td></tr>
-<tr class="memdesc:a9c31a1b39dd027f38958fbc6e444959e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate <em>source</em> and create an any which contains the value of <em>source</em>. <br /></td></tr>
+<tr class="memitem:a9c31a1b39dd027f38958fbc6e444959e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceCORBA.html#adeac34d2ada149e3c68679f895121aaf">CORBA::Any_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a9c31a1b39dd027f38958fbc6e444959e">createAny</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> source) const =0</td></tr>
+<tr class="memdesc:a9c31a1b39dd027f38958fbc6e444959e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate <em>source</em> and create an any which contains the value of <em>source</em>.  <a href="#a9c31a1b39dd027f38958fbc6e444959e">More...</a><br /></td></tr>
 <tr class="separator:a9c31a1b39dd027f38958fbc6e444959e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25de6e28d4c3a70684e8a0a04f1c8744"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25de6e28d4c3a70684e8a0a04f1c8744"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">updateAny</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> source, CORBA::Any &amp;any) const =0</td></tr>
-<tr class="memdesc:a25de6e28d4c3a70684e8a0a04f1c8744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate <em>source</em> and update an any which contains the value of <em>source</em>. <br /></td></tr>
+<tr class="memitem:a25de6e28d4c3a70684e8a0a04f1c8744"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">updateAny</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> source, CORBA::Any &amp;any) const =0</td></tr>
+<tr class="memdesc:a25de6e28d4c3a70684e8a0a04f1c8744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate <em>source</em> and update an any which contains the value of <em>source</em>.  <a href="#a25de6e28d4c3a70684e8a0a04f1c8744">More...</a><br /></td></tr>
 <tr class="separator:a25de6e28d4c3a70684e8a0a04f1c8744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66b348bb84e53427f8fddffbf4bbb8f8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a66b348bb84e53427f8fddffbf4bbb8f8">createDataSource</a> (const CORBA::Any *any) const =0</td></tr>
 <tr class="memdesc:a66b348bb84e53427f8fddffbf4bbb8f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Data Source from an any.  <a href="#a66b348bb84e53427f8fddffbf4bbb8f8">More...</a><br /></td></tr>
 <tr class="separator:a66b348bb84e53427f8fddffbf4bbb8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f4b7e15449ea243afa15dc9bf26588e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f4b7e15449ea243afa15dc9bf26588e"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a0f4b7e15449ea243afa15dc9bf26588e">updateFromAny</a> (const CORBA::Any *blob, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> target) const =0</td></tr>
-<tr class="memdesc:a0f4b7e15449ea243afa15dc9bf26588e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update an assignable datasource <em>target</em> with the contents of <em>blob</em>. <br /></td></tr>
+<tr class="memitem:a0f4b7e15449ea243afa15dc9bf26588e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a0f4b7e15449ea243afa15dc9bf26588e">updateFromAny</a> (const CORBA::Any *blob, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> target) const =0</td></tr>
+<tr class="memdesc:a0f4b7e15449ea243afa15dc9bf26588e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update an assignable datasource <em>target</em> with the contents of <em>blob</em>.  <a href="#a0f4b7e15449ea243afa15dc9bf26588e">More...</a><br /></td></tr>
 <tr class="separator:a0f4b7e15449ea243afa15dc9bf26588e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a051f9e37a82d2d4311f76f8ff32c7304"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1corba_1_1CRemoteChannelElement__i.html">CRemoteChannelElement_i</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a051f9e37a82d2d4311f76f8ff32c7304">createChannelElement_i</a> (<a class="el" href="classRTT_1_1DataFlowInterface.html">DataFlowInterface</a> *sender,::PortableServer::POA *poa, const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;policy) const =0</td></tr>
 <tr class="memdesc:a051f9e37a82d2d4311f76f8ff32c7304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a channel element for remote transport in both directions.  <a href="#a051f9e37a82d2d4311f76f8ff32c7304">More...</a><br /></td></tr>
 <tr class="separator:a051f9e37a82d2d4311f76f8ff32c7304"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a823843b549845093c1ec30e8f4451522"><td class="memItemLeft" align="right" valign="top">virtual base::ChannelElementBase::shared_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a823843b549845093c1ec30e8f4451522">createStream</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *, const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;, bool) const </td></tr>
-<tr class="memdesc:a823843b549845093c1ec30e8f4451522"><td class="mdescLeft">&#160;</td><td class="mdescRight">The CORBA transport does not support creating 'CORBA' streams.  <a href="#a823843b549845093c1ec30e8f4451522">More...</a><br /></td></tr>
+<tr class="memitem:a823843b549845093c1ec30e8f4451522"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a823843b549845093c1ec30e8f4451522">createStream</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *, const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;, bool) const </td></tr>
+<tr class="memdesc:a823843b549845093c1ec30e8f4451522"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="namespaceCORBA.html">CORBA</a> transport does not support creating '<a class="el" href="namespaceCORBA.html">CORBA</a>' streams.  <a href="#a823843b549845093c1ec30e8f4451522">More...</a><br /></td></tr>
 <tr class="separator:a823843b549845093c1ec30e8f4451522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f954d5fadeaaf475ad91d340988fa02"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a3f954d5fadeaaf475ad91d340988fa02">createPropertyDataSource</a> (CService_ptr serv, const std::string &amp;vname)=0</td></tr>
 <tr class="memdesc:a3f954d5fadeaaf475ad91d340988fa02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a data source for an attribute or property.  <a href="#a3f954d5fadeaaf475ad91d340988fa02">More...</a><br /></td></tr>
 <tr class="separator:a3f954d5fadeaaf475ad91d340988fa02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1174bdc669af819ce8efea3e5a61c7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1174bdc669af819ce8efea3e5a61c7f"></a>
-virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>createAttributeDataSource</b> (CService_ptr serv, const std::string &amp;vname, bool is_assignable)=0</td></tr>
+<tr class="memitem:af1174bdc669af819ce8efea3e5a61c7f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#af1174bdc669af819ce8efea3e5a61c7f">createAttributeDataSource</a> (CService_ptr serv, const std::string &amp;vname, bool is_assignable)=0</td></tr>
 <tr class="separator:af1174bdc669af819ce8efea3e5a61c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -111,6 +107,80 @@ virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a
 
 <p>Definition at line <a class="el" href="CorbaTypeTransporter_8hpp_source.html#l00056">56</a> of file <a class="el" href="CorbaTypeTransporter_8hpp_source.html">CorbaTypeTransporter.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9c31a1b39dd027f38958fbc6e444959e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceCORBA.html#adeac34d2ada149e3c68679f895121aaf">CORBA::Any_ptr</a> RTT::corba::CorbaTypeTransporter::createAny </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluate <em>source</em> and create an any which contains the value of <em>source</em>. </p>
+
+<p>Implemented in <a class="el" href="classRTT_1_1corba_1_1CorbaTemplateProtocol.html#ab29f89ce6bbf9648233efb04dfae273b">RTT::corba::CorbaTemplateProtocol&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaFallBackProtocol.html#aab9a7ca8ee171213c85606b728df68db">RTT::corba::CorbaFallBackProtocol</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationInterfaceI_8cpp_source.html#l00380">RTT_corba_COperationInterface_i::callOperation()</a>, <a class="el" href="ConfigurationInterfaceI_8cpp_source.html#l00166">RTT_corba_CConfigurationInterface_i::getAttribute()</a>, <a class="el" href="ConfigurationInterfaceI_8cpp_source.html#l00195">RTT_corba_CConfigurationInterface_i::getProperty()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00293">RTT::corba::RemoteChannelElement&lt; T &gt;::read()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00164">RTT_corba_CSendHandle_i::ret()</a>, and <a class="el" href="DataSourceProxy_8hpp_source.html#l00195">RTT::corba::ValueDataSourceProxy&lt; T &gt;::set()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af1174bdc669af819ce8efea3e5a61c7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> RTT::corba::CorbaTypeTransporter::createAttributeDataSource </td>
+          <td>(</td>
+          <td class="paramtype">CService_ptr&#160;</td>
+          <td class="paramname"><em>serv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>vname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_assignable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classRTT_1_1corba_1_1CorbaFallBackProtocol.html#a7b9c9523c4b19401580a03d92af3436d">RTT::corba::CorbaFallBackProtocol</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTemplateProtocol.html#a8b5f1630808825109957ea23a5d14d61">RTT::corba::CorbaTemplateProtocol&lt; T &gt;</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00232">RTT::corba::TaskContextProxy::synchronizeServices()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a051f9e37a82d2d4311f76f8ff32c7304"></a>
 <div class="memitem">
 <div class="memproto">
@@ -192,6 +262,8 @@ virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a
 
 <p>Implemented in <a class="el" href="classRTT_1_1corba_1_1CorbaTemplateProtocol.html#a5e2701c6ad57677eb80625a1439695c0">RTT::corba::CorbaTemplateProtocol&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaFallBackProtocol.html#a7c166b971fda74ad8b44761a8c3478f3">RTT::corba::CorbaFallBackProtocol</a>.</p>
 
+<p>Referenced by <a class="el" href="OperationInterfaceI_8cpp_source.html#l00380">RTT_corba_COperationInterface_i::callOperation()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00184">RTT_corba_CSendHandle_i::checkArguments()</a>, and <a class="el" href="OperationInterfaceI_8cpp_source.html#l00343">RTT_corba_COperationInterface_i::checkOperation()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a3f954d5fadeaaf475ad91d340988fa02"></a>
@@ -231,7 +303,7 @@ virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a
 
 <p>Implemented in <a class="el" href="classRTT_1_1corba_1_1CorbaFallBackProtocol.html#a4af0a0af340334a142b09ec72f4062e2">RTT::corba::CorbaFallBackProtocol</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaTemplateProtocol.html#a9f349534782703e62dc957db20b5b9f4">RTT::corba::CorbaTemplateProtocol&lt; T &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">RTT::corba::TaskContextProxy::TaskContextProxy()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00232">RTT::corba::TaskContextProxy::synchronizeServices()</a>.</p>
 
 </div>
 </div>
@@ -243,7 +315,7 @@ virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">base::ChannelElementBase::shared_ptr CorbaTypeTransporter::createStream </td>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a> CorbaTypeTransporter::createStream </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *&#160;</td>
           <td class="paramname">, </td>
@@ -273,7 +345,7 @@ virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a
 </table>
 </div><div class="memdoc">
 
-<p>The CORBA transport does not support creating 'CORBA' streams. </p>
+<p>The <a class="el" href="namespaceCORBA.html">CORBA</a> transport does not support creating '<a class="el" href="namespaceCORBA.html">CORBA</a>' streams. </p>
 <dl class="section return"><dt>Returns</dt><dd>null </dd></dl>
 
 <p>Implements <a class="el" href="classRTT_1_1types_1_1TypeTransporter.html#a26b001061c666f942058d1e84db7bbc6">RTT::types::TypeTransporter</a>.</p>
@@ -284,6 +356,86 @@ virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a
 
 </div>
 </div>
+<a class="anchor" id="a25de6e28d4c3a70684e8a0a04f1c8744"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool RTT::corba::CorbaTypeTransporter::updateAny </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CORBA::Any &amp;&#160;</td>
+          <td class="paramname"><em>any</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluate <em>source</em> and update an any which contains the value of <em>source</em>. </p>
+
+<p>Implemented in <a class="el" href="classRTT_1_1corba_1_1CorbaTemplateProtocol.html#aee567f66c2adc0fd02e55b9396e929d4">RTT::corba::CorbaTemplateProtocol&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaFallBackProtocol.html#a2d77cb15508767d331f6cbd4bca07ecc">RTT::corba::CorbaFallBackProtocol</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationInterfaceI_8cpp_source.html#l00380">RTT_corba_COperationInterface_i::callOperation()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00294">RTT::corba::CorbaOperationCallerFactory::produce()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00463">RTT::corba::CorbaOperationCallerFactory::produceCollect()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00346">RTT::corba::CorbaOperationCallerFactory::produceSend()</a>, <a class="el" href="OperationInterfaceI_8cpp_source.html#l00117">sourcevector_to_anysequence()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00315">RTT::corba::RemoteChannelElement&lt; T &gt;::write()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f4b7e15449ea243afa15dc9bf26588e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool RTT::corba::CorbaTypeTransporter::updateFromAny </td>
+          <td>(</td>
+          <td class="paramtype">const CORBA::Any *&#160;</td>
+          <td class="paramname"><em>blob</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update an assignable datasource <em>target</em> with the contents of <em>blob</em>. </p>
+
+<p>Implemented in <a class="el" href="classRTT_1_1corba_1_1CorbaTemplateProtocol.html#a529999d7f9ad199a413238d808d62cfc">RTT::corba::CorbaTemplateProtocol&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1corba_1_1CorbaFallBackProtocol.html#abcc28c444ee87b99e4133760211c753b">RTT::corba::CorbaFallBackProtocol</a>.</p>
+
+<p>Referenced by <a class="el" href="DataSourceProxy_8hpp_source.html#l00108">RTT::corba::DataSourceProxy&lt; T &gt;::get()</a>, <a class="el" href="DataSourceProxy_8hpp_source.html#l00181">RTT::corba::ValueDataSourceProxy&lt; T &gt;::get()</a>, <a class="el" href="CorbaOperationCallerFactory_8cpp_source.html#l00420">CorbaOperationCallerCollect::get()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00242">RTT::corba::RemoteChannelElement&lt; T &gt;::read()</a>, <a class="el" href="ConfigurationInterfaceI_8cpp_source.html#l00182">RTT_corba_CConfigurationInterface_i::setAttribute()</a>, <a class="el" href="ConfigurationInterfaceI_8cpp_source.html#l00217">RTT_corba_CConfigurationInterface_i::setProperty()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00371">RTT::corba::RemoteChannelElement&lt; T &gt;::write()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>rtt/transports/corba/<a class="el" href="CorbaTypeTransporter_8hpp_source.html">CorbaTypeTransporter.hpp</a></li>
 <li>rtt/transports/corba/<a class="el" href="CorbaTypeTransporter_8cpp_source.html">CorbaTypeTransporter.cpp</a></li>
@@ -291,7 +443,7 @@ virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:21 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

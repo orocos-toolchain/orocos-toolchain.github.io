@@ -90,15 +90,17 @@ Inheritance diagram for RTT::base::ActivityInterface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:abe8831aae12b67409f4a3c4055b3bf3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe8831aae12b67409f4a3c4055b3bf3f"></a>
-typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">ActivityInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shared_ptr</b></td></tr>
+<tr class="memitem:abe8831aae12b67409f4a3c4055b3bf3f"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">ActivityInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#abe8831aae12b67409f4a3c4055b3bf3f">shared_ptr</a></td></tr>
 <tr class="separator:abe8831aae12b67409f4a3c4055b3bf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af016f52cd62844184c0d9fc77f39d2a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af016f52cd62844184c0d9fc77f39d2a8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ActivityInterface</b> (<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *<a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a82544a7ce478a5fa1dbc61888a04ca9c">run</a>)</td></tr>
+<tr class="memitem:a26f25a52b3cf0ef34f0c3f46da692f8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a26f25a52b3cf0ef34f0c3f46da692f8f">ActivityInterface</a> ()</td></tr>
+<tr class="separator:a26f25a52b3cf0ef34f0c3f46da692f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af016f52cd62844184c0d9fc77f39d2a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#af016f52cd62844184c0d9fc77f39d2a8">ActivityInterface</a> (<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *<a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a82544a7ce478a5fa1dbc61888a04ca9c">run</a>)</td></tr>
 <tr class="separator:af016f52cd62844184c0d9fc77f39d2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe61f1513938fda82f33238bb8850d09"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#abe61f1513938fda82f33238bb8850d09">~ActivityInterface</a> ()</td></tr>
+<tr class="separator:abe61f1513938fda82f33238bb8850d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82544a7ce478a5fa1dbc61888a04ca9c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a82544a7ce478a5fa1dbc61888a04ca9c">run</a> (<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *r)</td></tr>
 <tr class="memdesc:a82544a7ce478a5fa1dbc61888a04ca9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run exclusively this <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a>.  <a href="#a82544a7ce478a5fa1dbc61888a04ca9c">More...</a><br /></td></tr>
 <tr class="separator:a82544a7ce478a5fa1dbc61888a04ca9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,9 +143,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a190329785c1c7e4a542db833402a7811"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html">os::ThreadInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a190329785c1c7e4a542db833402a7811">thread</a> ()=0</td></tr>
 <tr class="memdesc:a190329785c1c7e4a542db833402a7811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the thread which will run this activity.  <a href="#a190329785c1c7e4a542db833402a7811">More...</a><br /></td></tr>
 <tr class="separator:a190329785c1c7e4a542db833402a7811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77cc446f3e244790c48bf7a4124e592d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77cc446f3e244790c48bf7a4124e592d"></a>
-virtual <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a77cc446f3e244790c48bf7a4124e592d">getRunner</a> () const </td></tr>
-<tr class="memdesc:a77cc446f3e244790c48bf7a4124e592d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a> instance. <br /></td></tr>
+<tr class="memitem:a77cc446f3e244790c48bf7a4124e592d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a77cc446f3e244790c48bf7a4124e592d">getRunner</a> () const </td></tr>
+<tr class="memdesc:a77cc446f3e244790c48bf7a4124e592d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a> instance.  <a href="#a77cc446f3e244790c48bf7a4124e592d">More...</a><br /></td></tr>
 <tr class="separator:a77cc446f3e244790c48bf7a4124e592d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -154,14 +155,12 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a0711c7e698f87ead4e89309c9fc84910"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0711c7e698f87ead4e89309c9fc84910"></a>
-<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>runner</b></td></tr>
+<tr class="memitem:a0711c7e698f87ead4e89309c9fc84910"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a0711c7e698f87ead4e89309c9fc84910">runner</a></td></tr>
 <tr class="separator:a0711c7e698f87ead4e89309c9fc84910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ad9cc4867bf01358b5a8a45e0c67967fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9cc4867bf01358b5a8a45e0c67967fb"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>RunnableInterface</b></td></tr>
+<tr class="memitem:ad9cc4867bf01358b5a8a45e0c67967fb"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#ad9cc4867bf01358b5a8a45e0c67967fb">RunnableInterface</a></td></tr>
 <tr class="separator:ad9cc4867bf01358b5a8a45e0c67967fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -170,7 +169,96 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RunnableInterface</b
 <p>It is complementary to the <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a>, which defines the methods for the functionality that is executed. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="ActivityInterface_8hpp_source.html#l00062">62</a> of file <a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="abe8831aae12b67409f4a3c4055b3bf3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">ActivityInterface</a>&gt; <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#abe8831aae12b67409f4a3c4055b3bf3f">RTT::base::ActivityInterface::shared_ptr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="_2home_2jenkins_2workspace_2rtt-doc_2rtt_2TaskContext_8hpp-example.html#a7">/home/jenkins/workspace/rtt-doc/rtt/TaskContext.hpp</a>.</dd>
+</dl>
+<p>Definition at line <a class="el" href="ActivityInterface_8hpp_source.html#l00077">77</a> of file <a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a26f25a52b3cf0ef34f0c3f46da692f8f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::base::ActivityInterface::ActivityInterface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ActivityInterface_8hpp_source.html#l00079">79</a> of file <a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af016f52cd62844184c0d9fc77f39d2a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ActivityInterface::ActivityInterface </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *&#160;</td>
+          <td class="paramname"><em>run</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ActivityInterface_8cpp_source.html#l00045">45</a> of file <a class="el" href="ActivityInterface_8cpp_source.html">ActivityInterface.cpp</a>.</p>
+
+<p>References <a class="el" href="ActivityInterface_8hpp_source.html#l00065">runner</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe61f1513938fda82f33238bb8850d09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ActivityInterface::~ActivityInterface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ActivityInterface_8cpp_source.html#l00050">50</a> of file <a class="el" href="ActivityInterface_8cpp_source.html">ActivityInterface.cpp</a>.</p>
+
+<p>References <a class="el" href="ActivityInterface_8hpp_source.html#l00065">runner</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aa7aebb13bd56f9409f0b2344a2e43c2d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -301,6 +389,37 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RunnableInterface</b
 
 </div>
 </div>
+<a class="anchor" id="a77cc446f3e244790c48bf7a4124e592d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> * ActivityInterface::getRunner </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a> instance. </p>
+
+<p>Definition at line <a class="el" href="ActivityInterface_8cpp_source.html#l00070">70</a> of file <a class="el" href="ActivityInterface_8cpp_source.html">ActivityInterface.cpp</a>.</p>
+
+<p>References <a class="el" href="ActivityInterface_8hpp_source.html#l00065">runner</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00309">RTT::ExecutionEngine::setActivity()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5b728aaf49da0fefabdf099f2c42ff7a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -328,7 +447,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RunnableInterface</b
 
 <p>Implemented in <a class="el" href="classRTT_1_1extras_1_1PeriodicActivity.html#aba07b50ee59196fd4455d4eb553d1e6f">RTT::extras::PeriodicActivity</a>, <a class="el" href="classRTT_1_1Activity.html#aefddbddb0c10214090f4b86756d129d8">RTT::Activity</a>, <a class="el" href="classRTT_1_1extras_1_1SlaveActivity.html#a7b2a4d011bc38ad3043c9146a2a53a70">RTT::extras::SlaveActivity</a>, <a class="el" href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#a43c43f955123aac577b7b44b64e25885">RTT::extras::FileDescriptorSimulationActivity</a>, and <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a819a65c63a987b6a5a747551534b54a0">RTT::extras::SequentialActivity</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, and <a class="el" href="SlaveActivity_8cpp_source.html#l00130">RTT::extras::SlaveActivity::start()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00057">run()</a>, and <a class="el" href="SlaveActivity_8cpp_source.html#l00130">RTT::extras::SlaveActivity::start()</a>.</p>
 
 </div>
 </div>
@@ -426,7 +545,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RunnableInterface</b
 
 <p>Definition at line <a class="el" href="ActivityInterface_8cpp_source.html#l00057">57</a> of file <a class="el" href="ActivityInterface_8cpp_source.html">ActivityInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">isActive()</a>, <a class="el" href="ActivityInterface_8hpp_source.html#l00065">runner</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00339">RTT::TaskContext::setActivity()</a>.</p>
 
@@ -522,7 +641,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RunnableInterface</b
 
 <p>Implemented in <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a64ecda39f8c91afde14b64aa71b67f90">RTT::extras::FileDescriptorActivity</a>, <a class="el" href="classRTT_1_1extras_1_1PeriodicActivity.html#a0bcdfe88feb65d01144de3f57acc9c93">RTT::extras::PeriodicActivity</a>, <a class="el" href="classRTT_1_1Activity.html#a890880a5b0782720786d49d2a2cd327d">RTT::Activity</a>, <a class="el" href="classRTT_1_1extras_1_1SlaveActivity.html#ab883c67a72e9b487a4f5e73d7a8cc4a3">RTT::extras::SlaveActivity</a>, <a class="el" href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#a58487e9d94fe422993e2a7fefcc1fab9">RTT::extras::FileDescriptorSimulationActivity</a>, <a class="el" href="classRTT_1_1extras_1_1IRQActivity.html#aaea3053773a4c7b16cfb526d20ac84fb">RTT::extras::IRQActivity</a>, <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a66cb3ea82084c7b2fa0092935f34984d">RTT::extras::SequentialActivity</a>, and <a class="el" href="classRTT_1_1extras_1_1SimulationActivity.html#a6384c0421d5286b72a003b0dd169436e">RTT::extras::SimulationActivity</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">RTT::ExecutionEngine::stopTask()</a>, and <a class="el" href="Timer_8cpp_source.html#l00143">RTT::os::Timer::Timer()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">RTT::ExecutionEngine::stopTask()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00362">RTT::corba::TaskContextServer::ThreadOrb()</a>, and <a class="el" href="Timer_8cpp_source.html#l00143">RTT::os::Timer::Timer()</a>.</p>
 
 </div>
 </div>
@@ -553,7 +672,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RunnableInterface</b
 
 <p>Implemented in <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a311c8656b08744fa5dd3a7b28184a57b">RTT::extras::FileDescriptorActivity</a>, <a class="el" href="classRTT_1_1extras_1_1PeriodicActivity.html#a08eea5381e3ec00421ab8a756a3f9c80">RTT::extras::PeriodicActivity</a>, <a class="el" href="classRTT_1_1Activity.html#a12c408623bd8daae95f80ee6cbbe9292">RTT::Activity</a>, <a class="el" href="classRTT_1_1extras_1_1SlaveActivity.html#a10a2b74ac9491d431cb4646e4a92abf9">RTT::extras::SlaveActivity</a>, <a class="el" href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#a2ddc04e97a697c0ebb80d542f8ba9e93">RTT::extras::FileDescriptorSimulationActivity</a>, and <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a198d86398fc2a9bc5dd6769ea72fea29">RTT::extras::SequentialActivity</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00361">RTT::TaskContext::forceActivity()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00339">RTT::TaskContext::setActivity()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00378">RTT::corba::TaskContextServer::DestroyOrb()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00361">RTT::TaskContext::forceActivity()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00339">RTT::TaskContext::setActivity()</a>.</p>
 
 </div>
 </div>
@@ -613,7 +732,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RunnableInterface</b
 
 <p>Implemented in <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a55607d1457744df8dc8b1644dd04dd89">RTT::extras::FileDescriptorActivity</a>, <a class="el" href="classRTT_1_1extras_1_1PeriodicActivity.html#a7caec1daa2e1b86868326bdc722fc4fc">RTT::extras::PeriodicActivity</a>, <a class="el" href="classRTT_1_1Activity.html#a8be589ef0d784a9c93f195ae1a17e35c">RTT::Activity</a>, <a class="el" href="classRTT_1_1extras_1_1SlaveActivity.html#a26d888f3664f8ebf2a882141a05b817e">RTT::extras::SlaveActivity</a>, <a class="el" href="classRTT_1_1extras_1_1FileDescriptorSimulationActivity.html#a3742a7e0f6d4d85c9e73ee8cdedf537b">RTT::extras::FileDescriptorSimulationActivity</a>, and <a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html#a9ede175403b8b2627736333c061b4cd6">RTT::extras::SequentialActivity</a>.</p>
 
-<p>Referenced by <a class="el" href="StateMachine_8cpp_source.html#l00512">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00195">RTT::extras::SlaveActivity::timeout()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>.</p>
+<p>Referenced by <a class="el" href="StateMachine_8cpp_source.html#l00500">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00195">RTT::extras::SlaveActivity::timeout()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>.</p>
 
 </div>
 </div>
@@ -656,6 +775,54 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RunnableInterface</b
 
 </div>
 </div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="ad9cc4867bf01358b5a8a45e0c67967fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ActivityInterface_8hpp_source.html#l00075">75</a> of file <a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a0711c7e698f87ead4e89309c9fc84910"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a>* RTT::base::ActivityInterface::runner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ActivityInterface_8hpp_source.html#l00065">65</a> of file <a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ActivityInterface_8cpp_source.html#l00045">ActivityInterface()</a>, <a class="el" href="Activity_8cpp_source.html#l00256">RTT::Activity::breakLoop()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00202">RTT::extras::SlaveActivity::execute()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00214">RTT::extras::PeriodicActivity::finalize()</a>, <a class="el" href="Activity_8cpp_source.html#l00262">RTT::Activity::finalize()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00070">getRunner()</a>, <a class="el" href="Activity_8cpp_source.html#l00117">RTT::Activity::initialize()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00178">RTT::extras::PeriodicActivity::initialize()</a>, <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00057">run()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00102">RTT::extras::SequentialActivity::start()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00130">RTT::extras::SlaveActivity::start()</a>, <a class="el" href="Activity_8cpp_source.html#l00123">RTT::Activity::step()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00200">RTT::extras::PeriodicActivity::step()</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00424">RTT::extras::FileDescriptorActivity::step()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00117">RTT::extras::SequentialActivity::stop()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00154">RTT::extras::SlaveActivity::stop()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00145">RTT::extras::SequentialActivity::trigger()</a>, <a class="el" href="FileDescriptorSimulationActivity_8cpp_source.html#l00245">RTT::extras::FileDescriptorSimulationActivity::work()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00207">RTT::extras::PeriodicActivity::work()</a>, <a class="el" href="Activity_8cpp_source.html#l00128">RTT::Activity::work()</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00432">RTT::extras::FileDescriptorActivity::work()</a>, and <a class="el" href="ActivityInterface_8cpp_source.html#l00050">~ActivityInterface()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>rtt/base/<a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a></li>
 <li>rtt/base/<a class="el" href="ActivityInterface_8cpp_source.html">ActivityInterface.cpp</a></li>
@@ -663,7 +830,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RunnableInterface</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:20 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

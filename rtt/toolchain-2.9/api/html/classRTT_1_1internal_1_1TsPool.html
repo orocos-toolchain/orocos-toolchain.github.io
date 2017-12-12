@@ -64,37 +64,34 @@
 <p>A multi-reader multi-writer MemoryPool implementation.  
  <a href="classRTT_1_1internal_1_1TsPool.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="TsPool_8hpp_source.html">rtt/internal/TsPool.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="rtt-internal-fwd_8hpp_source.html">rtt/internal/rtt-internal-fwd.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4d539531fc5977673d643b3f2656777c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d539531fc5977673d643b3f2656777c"></a>
-typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>value_t</b></td></tr>
+<tr class="memitem:a4d539531fc5977673d643b3f2656777c"><td class="memItemLeft" align="right" valign="top">typedef T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#a4d539531fc5977673d643b3f2656777c">value_t</a></td></tr>
 <tr class="separator:a4d539531fc5977673d643b3f2656777c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e1d7846b27f6e5799c6fada32cdc23e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e1d7846b27f6e5799c6fada32cdc23e"></a>
-typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b></td></tr>
+<tr class="memitem:a3e1d7846b27f6e5799c6fada32cdc23e"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#a3e1d7846b27f6e5799c6fada32cdc23e">size_type</a></td></tr>
 <tr class="separator:a3e1d7846b27f6e5799c6fada32cdc23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a42cfce721a56fe7631e250feb8d09e89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42cfce721a56fe7631e250feb8d09e89"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#a42cfce721a56fe7631e250feb8d09e89">TsPool</a> (unsigned int ssize, const T &amp;sample=T())</td></tr>
-<tr class="memdesc:a42cfce721a56fe7631e250feb8d09e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a fixed size memory pool holding <em>ssize</em> blocks of memory that can hold an object of class <em>T</em>. <br /></td></tr>
+<tr class="memitem:a42cfce721a56fe7631e250feb8d09e89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#a42cfce721a56fe7631e250feb8d09e89">TsPool</a> (unsigned int ssize, const T &amp;sample=T())</td></tr>
+<tr class="memdesc:a42cfce721a56fe7631e250feb8d09e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a fixed size memory pool holding <em>ssize</em> blocks of memory that can hold an object of class <em>T</em>.  <a href="#a42cfce721a56fe7631e250feb8d09e89">More...</a><br /></td></tr>
 <tr class="separator:a42cfce721a56fe7631e250feb8d09e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff400f77cb15c1e274d82798fdd5459"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#a1ff400f77cb15c1e274d82798fdd5459">~TsPool</a> ()</td></tr>
+<tr class="separator:a1ff400f77cb15c1e274d82798fdd5459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97f664f5217e8e25288398f917f3b5d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#a97f664f5217e8e25288398f917f3b5d2">clear</a> ()</td></tr>
 <tr class="memdesc:a97f664f5217e8e25288398f917f3b5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all internal management data of this Memory Pool.  <a href="#a97f664f5217e8e25288398f917f3b5d2">More...</a><br /></td></tr>
 <tr class="separator:a97f664f5217e8e25288398f917f3b5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a923ec29c8748259fff3a8863863c50fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#a923ec29c8748259fff3a8863863c50fa">data_sample</a> (const T &amp;sample)</td></tr>
 <tr class="memdesc:a923ec29c8748259fff3a8863863c50fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes every element of the pool with the given sample and clears the pool.  <a href="#a923ec29c8748259fff3a8863863c50fa">More...</a><br /></td></tr>
 <tr class="separator:a923ec29c8748259fff3a8863863c50fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f81bb7d6becacece9ac67e9abf0b58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4f81bb7d6becacece9ac67e9abf0b58"></a>
-value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>allocate</b> ()</td></tr>
+<tr class="memitem:ad4f81bb7d6becacece9ac67e9abf0b58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#a4d539531fc5977673d643b3f2656777c">value_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#ad4f81bb7d6becacece9ac67e9abf0b58">allocate</a> ()</td></tr>
 <tr class="separator:ad4f81bb7d6becacece9ac67e9abf0b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ff9b7b4fc9864636451282225d3d05b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ff9b7b4fc9864636451282225d3d05b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>deallocate</b> (T *Value)</td></tr>
+<tr class="memitem:a8ff9b7b4fc9864636451282225d3d05b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#a8ff9b7b4fc9864636451282225d3d05b">deallocate</a> (T *Value)</td></tr>
 <tr class="separator:a8ff9b7b4fc9864636451282225d3d05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2c1d8776e667d1791fde41e1a3d130c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#aa2c1d8776e667d1791fde41e1a3d130c">size</a> ()</td></tr>
-<tr class="memdesc:aa2c1d8776e667d1791fde41e1a3d130c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of elements that are available to be allocated.  <a href="#aa2c1d8776e667d1791fde41e1a3d130c">More...</a><br /></td></tr>
+<tr class="memdesc:aa2c1d8776e667d1791fde41e1a3d130c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structRTT_1_1internal_1_1Return.html">Return</a> the number of elements that are available to be allocated.  <a href="#aa2c1d8776e667d1791fde41e1a3d130c">More...</a><br /></td></tr>
 <tr class="separator:aa2c1d8776e667d1791fde41e1a3d130c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac4d0d16ce02bf044af123562fe394e6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#aac4d0d16ce02bf044af123562fe394e6">capacity</a> ()</td></tr>
 <tr class="memdesc:aac4d0d16ce02bf044af123562fe394e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of elements available for allocation.  <a href="#aac4d0d16ce02bf044af123562fe394e6">More...</a><br /></td></tr>
@@ -108,7 +105,137 @@ class RTT::internal::TsPool&lt; T &gt;</h3>
 <p>It can hold max 65535 elements of type T. </p>
 
 <p>Definition at line <a class="el" href="rtt-internal-fwd_8hpp_source.html#l00168">168</a> of file <a class="el" href="rtt-internal-fwd_8hpp_source.html">rtt-internal-fwd.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a3e1d7846b27f6e5799c6fada32cdc23e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned int <a class="el" href="classRTT_1_1internal_1_1TsPool.html">RTT::internal::TsPool</a>&lt; T &gt;::<a class="el" href="classRTT_1_1internal_1_1TsPool.html#a3e1d7846b27f6e5799c6fada32cdc23e">size_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TsPool_8hpp_source.html#l00100">100</a> of file <a class="el" href="TsPool_8hpp_source.html">TsPool.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4d539531fc5977673d643b3f2656777c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef T <a class="el" href="classRTT_1_1internal_1_1TsPool.html">RTT::internal::TsPool</a>&lt; T &gt;::<a class="el" href="classRTT_1_1internal_1_1TsPool.html#a4d539531fc5977673d643b3f2656777c">value_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TsPool_8hpp_source.html#l00065">65</a> of file <a class="el" href="TsPool_8hpp_source.html">TsPool.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a42cfce721a56fe7631e250feb8d09e89"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1TsPool.html">RTT::internal::TsPool</a>&lt; T &gt;::<a class="el" href="classRTT_1_1internal_1_1TsPool.html">TsPool</a> </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>ssize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>sample</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a fixed size memory pool holding <em>ssize</em> blocks of memory that can hold an object of class <em>T</em>. </p>
+
+<p>Definition at line <a class="el" href="TsPool_8hpp_source.html#l00105">105</a> of file <a class="el" href="TsPool_8hpp_source.html">TsPool.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ff400f77cb15c1e274d82798fdd5459"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1TsPool.html">RTT::internal::TsPool</a>&lt; T &gt;::~<a class="el" href="classRTT_1_1internal_1_1TsPool.html">TsPool</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TsPool_8hpp_source.html#l00112">112</a> of file <a class="el" href="TsPool_8hpp_source.html">TsPool.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad4f81bb7d6becacece9ac67e9abf0b58"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1TsPool.html#a4d539531fc5977673d643b3f2656777c">value_t</a>* <a class="el" href="classRTT_1_1internal_1_1TsPool.html">RTT::internal::TsPool</a>&lt; T &gt;::allocate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TsPool_8hpp_source.html#l00159">159</a> of file <a class="el" href="TsPool_8hpp_source.html">TsPool.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="BufferLockFree_8hpp_source.html#l00148">RTT::base::BufferLockFree&lt; T &gt;::data_sample()</a>, and <a class="el" href="BufferLockFree_8hpp_source.html#l00192">RTT::base::BufferLockFree&lt; T &gt;::Push()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aac4d0d16ce02bf044af123562fe394e6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -203,6 +330,36 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a8ff9b7b4fc9864636451282225d3d05b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classRTT_1_1internal_1_1TsPool.html">RTT::internal::TsPool</a>&lt; T &gt;::deallocate </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>Value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TsPool_8hpp_source.html#l00179">179</a> of file <a class="el" href="TsPool_8hpp_source.html">TsPool.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="BufferLockFree_8hpp_source.html#l00180">RTT::base::BufferLockFree&lt; T &gt;::clear()</a>, <a class="el" href="BufferLockFree_8hpp_source.html#l00148">RTT::base::BufferLockFree&lt; T &gt;::data_sample()</a>, <a class="el" href="BufferLockFree_8hpp_source.html#l00263">RTT::base::BufferLockFree&lt; T &gt;::Pop()</a>, <a class="el" href="BufferLockFree_8hpp_source.html#l00192">RTT::base::BufferLockFree&lt; T &gt;::Push()</a>, and <a class="el" href="BufferLockFree_8hpp_source.html#l00294">RTT::base::BufferLockFree&lt; T &gt;::Release()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa2c1d8776e667d1791fde41e1a3d130c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -226,12 +383,12 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Return the number of elements that are available to be allocated. </p>
-<p>This function is not thread-safe and should not be used when concurrent allocate()/deallocate() functions are running. </p><dl class="section return"><dt>Returns</dt><dd>the number of elements left to allocate. </dd></dl>
+<p><a class="el" href="structRTT_1_1internal_1_1Return.html">Return</a> the number of elements that are available to be allocated. </p>
+<p>This function is not thread-safe and should not be used when concurrent <a class="el" href="classRTT_1_1internal_1_1TsPool.html#ad4f81bb7d6becacece9ac67e9abf0b58">allocate()</a>/deallocate() functions are running. </p><dl class="section return"><dt>Returns</dt><dd>the number of elements left to allocate. </dd></dl>
 
 <p>Definition at line <a class="el" href="TsPool_8hpp_source.html#l00205">205</a> of file <a class="el" href="TsPool_8hpp_source.html">TsPool.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TsPool_8hpp_source.html#l00105">RTT::internal::TsPool&lt; Item &gt;::TsPool()</a>.</p>
+<p>Referenced by <a class="el" href="TsPool_8hpp_source.html#l00112">RTT::internal::TsPool&lt; Item &gt;::~TsPool()</a>.</p>
 
 </div>
 </div>
@@ -242,7 +399,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:25 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -85,6 +85,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1ReadOnlyPointer.html">ReadOnlyPointer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smart pointer that allows safe sharing of data between multiple threads.  <a href="classRTT_1_1extras_1_1ReadOnlyPointer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1extras_1_1ROPtrInternal.html">ROPtrInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1SequentialActivity.html">SequentialActivity</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default, thread-less activity for any newly created <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a>.  <a href="classRTT_1_1extras_1_1SequentialActivity.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,83 +105,463 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a6b335af9b09392da66ca6051c1c1064c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b335af9b09392da66ca6051c1c1064c"></a>
-typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; 6, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a6b335af9b09392da66ca6051c1c1064c">Double6D</a></td></tr>
-<tr class="memdesc:a6b335af9b09392da66ca6051c1c1064c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 doubles. <br /></td></tr>
+<tr class="memitem:a6b335af9b09392da66ca6051c1c1064c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; 6, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a6b335af9b09392da66ca6051c1c1064c">Double6D</a></td></tr>
+<tr class="memdesc:a6b335af9b09392da66ca6051c1c1064c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 doubles.  <a href="#a6b335af9b09392da66ca6051c1c1064c">More...</a><br /></td></tr>
 <tr class="separator:a6b335af9b09392da66ca6051c1c1064c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e1bc3286d786f3bb4ca52b2f74651c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e1bc3286d786f3bb4ca52b2f74651c8"></a>
-typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; 6, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a5e1bc3286d786f3bb4ca52b2f74651c8">Int6D</a></td></tr>
-<tr class="memdesc:a5e1bc3286d786f3bb4ca52b2f74651c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 integers. <br /></td></tr>
+<tr class="memitem:a5e1bc3286d786f3bb4ca52b2f74651c8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; 6, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a5e1bc3286d786f3bb4ca52b2f74651c8">Int6D</a></td></tr>
+<tr class="memdesc:a5e1bc3286d786f3bb4ca52b2f74651c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 integers.  <a href="#a5e1bc3286d786f3bb4ca52b2f74651c8">More...</a><br /></td></tr>
 <tr class="separator:a5e1bc3286d786f3bb4ca52b2f74651c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f92b51c32521a925c6c585b692e67b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f92b51c32521a925c6c585b692e67b2"></a>
-typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; 6, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a8f92b51c32521a925c6c585b692e67b2">Bool6D</a></td></tr>
-<tr class="memdesc:a8f92b51c32521a925c6c585b692e67b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 booleans. <br /></td></tr>
+<tr class="memitem:a8f92b51c32521a925c6c585b692e67b2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; 6, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a8f92b51c32521a925c6c585b692e67b2">Bool6D</a></td></tr>
+<tr class="memdesc:a8f92b51c32521a925c6c585b692e67b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 booleans.  <a href="#a8f92b51c32521a925c6c585b692e67b2">More...</a><br /></td></tr>
 <tr class="separator:a8f92b51c32521a925c6c585b692e67b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad949fdee31daadae8be40f07a5a5299c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad949fdee31daadae8be40f07a5a5299c"></a>
-typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; 6, long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#ad949fdee31daadae8be40f07a5a5299c">Long6D</a></td></tr>
-<tr class="memdesc:ad949fdee31daadae8be40f07a5a5299c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 longs. <br /></td></tr>
+<tr class="memitem:ad949fdee31daadae8be40f07a5a5299c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; 6, long &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#ad949fdee31daadae8be40f07a5a5299c">Long6D</a></td></tr>
+<tr class="memdesc:ad949fdee31daadae8be40f07a5a5299c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 longs.  <a href="#ad949fdee31daadae8be40f07a5a5299c">More...</a><br /></td></tr>
 <tr class="separator:ad949fdee31daadae8be40f07a5a5299c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a541e8eb896d34c29f733ceaf8cb538ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a541e8eb896d34c29f733ceaf8cb538ce"></a>
-typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1extras_1_1SimulationThread.html">SimulationThread</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>SimulationThreadPtr</b></td></tr>
+<tr class="memitem:a541e8eb896d34c29f733ceaf8cb538ce"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1extras_1_1SimulationThread.html">SimulationThread</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a541e8eb896d34c29f733ceaf8cb538ce">SimulationThreadPtr</a></td></tr>
 <tr class="separator:a541e8eb896d34c29f733ceaf8cb538ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2527e5f831cdac569196f3d34958f2eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2527e5f831cdac569196f3d34958f2eb"></a>
-typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1extras_1_1TimerThread.html">TimerThread</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a2527e5f831cdac569196f3d34958f2eb">TimerThreadPtr</a></td></tr>
-<tr class="memdesc:a2527e5f831cdac569196f3d34958f2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classRTT_1_1extras_1_1TimerThread.html" title="This Periodic Thread is meant for executing a PeriodicActivity object periodically. ">TimerThread</a> objects are reference counted such that when the last <a class="el" href="classRTT_1_1extras_1_1PeriodicActivity.html" title="A PeriodicActivity is the general implementation of a Activity which has (realtime) periodic constrai...">PeriodicActivity</a> which uses it is deleted, the thread is deleted as well. <br /></td></tr>
+<tr class="memitem:a2527e5f831cdac569196f3d34958f2eb"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1extras_1_1TimerThread.html">TimerThread</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a2527e5f831cdac569196f3d34958f2eb">TimerThreadPtr</a></td></tr>
+<tr class="memdesc:a2527e5f831cdac569196f3d34958f2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classRTT_1_1extras_1_1TimerThread.html" title="This Periodic Thread is meant for executing a PeriodicActivity object periodically. ">TimerThread</a> objects are reference counted such that when the last <a class="el" href="classRTT_1_1extras_1_1PeriodicActivity.html" title="A PeriodicActivity is the general implementation of a Activity which has (realtime) periodic constrai...">PeriodicActivity</a> which uses it is deleted, the thread is deleted as well.  <a href="#a2527e5f831cdac569196f3d34958f2eb">More...</a><br /></td></tr>
 <tr class="separator:a2527e5f831cdac569196f3d34958f2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a512285f09004bb6b806664e4cfc731e7"><td class="memTemplParams" colspan="2"><a class="anchor" id="a512285f09004bb6b806664e4cfc731e7"></a>
-template&lt;unsigned S, typename D &gt; </td></tr>
-<tr class="memitem:a512285f09004bb6b806664e4cfc731e7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (const D d, const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt; &amp;v)</td></tr>
+<tr class="memitem:a512285f09004bb6b806664e4cfc731e7"><td class="memTemplParams" colspan="2">template&lt;unsigned S, typename D &gt; </td></tr>
+<tr class="memitem:a512285f09004bb6b806664e4cfc731e7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a512285f09004bb6b806664e4cfc731e7">operator*</a> (const D d, const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt; &amp;v)</td></tr>
 <tr class="separator:a512285f09004bb6b806664e4cfc731e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1a17961a09ceaa374232e19663ff2f2"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad1a17961a09ceaa374232e19663ff2f2"></a>
-template&lt;unsigned S, typename D &gt; </td></tr>
-<tr class="memitem:ad1a17961a09ceaa374232e19663ff2f2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const D d, const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt; &amp;v)</td></tr>
+<tr class="memitem:ad1a17961a09ceaa374232e19663ff2f2"><td class="memTemplParams" colspan="2">template&lt;unsigned S, typename D &gt; </td></tr>
+<tr class="memitem:ad1a17961a09ceaa374232e19663ff2f2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#ad1a17961a09ceaa374232e19663ff2f2">operator+</a> (const D d, const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt; &amp;v)</td></tr>
 <tr class="separator:ad1a17961a09ceaa374232e19663ff2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ac76b6c3a82eb9c825452d80c7a4d43"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9ac76b6c3a82eb9c825452d80c7a4d43"></a>
-template&lt;unsigned S, typename D &gt; </td></tr>
-<tr class="memitem:a9ac76b6c3a82eb9c825452d80c7a4d43"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const D d, const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt; &amp;v)</td></tr>
+<tr class="memitem:a9ac76b6c3a82eb9c825452d80c7a4d43"><td class="memTemplParams" colspan="2">template&lt;unsigned S, typename D &gt; </td></tr>
+<tr class="memitem:a9ac76b6c3a82eb9c825452d80c7a4d43"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a9ac76b6c3a82eb9c825452d80c7a4d43">operator-</a> (const D d, const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt; &amp;v)</td></tr>
 <tr class="separator:a9ac76b6c3a82eb9c825452d80c7a4d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5603b9ed4e95438fc3efe130f928dcd"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac5603b9ed4e95438fc3efe130f928dcd"></a>
-template&lt;unsigned int S, class T &gt; </td></tr>
+<tr class="memitem:ac5603b9ed4e95438fc3efe130f928dcd"><td class="memTemplParams" colspan="2">template&lt;unsigned int S, class T &gt; </td></tr>
 <tr class="memitem:ac5603b9ed4e95438fc3efe130f928dcd"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#ac5603b9ed4e95438fc3efe130f928dcd">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &amp;q)</td></tr>
-<tr class="memdesc:ac5603b9ed4e95438fc3efe130f928dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output to standard C++ output stream. <br /></td></tr>
+<tr class="memdesc:ac5603b9ed4e95438fc3efe130f928dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output to standard C++ output stream.  <a href="#ac5603b9ed4e95438fc3efe130f928dcd">More...</a><br /></td></tr>
 <tr class="separator:ac5603b9ed4e95438fc3efe130f928dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c6009f86438775322b1949ccd10eaba"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5c6009f86438775322b1949ccd10eaba"></a>
-template&lt;unsigned int S, class T &gt; </td></tr>
+<tr class="memitem:a5c6009f86438775322b1949ccd10eaba"><td class="memTemplParams" colspan="2">template&lt;unsigned int S, class T &gt; </td></tr>
 <tr class="memitem:a5c6009f86438775322b1949ccd10eaba"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a5c6009f86438775322b1949ccd10eaba">operator&gt;&gt;</a> (std::istream &amp;os, <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &amp;q)</td></tr>
-<tr class="memdesc:a5c6009f86438775322b1949ccd10eaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output to standard C++ input stream. <br /></td></tr>
+<tr class="memdesc:a5c6009f86438775322b1949ccd10eaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output to standard C++ input stream.  <a href="#a5c6009f86438775322b1949ccd10eaba">More...</a><br /></td></tr>
 <tr class="separator:a5c6009f86438775322b1949ccd10eaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae35ec884a3cf1af72671e91d2841c5c1"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae35ec884a3cf1af72671e91d2841c5c1"></a>
-template&lt;class T , int S&gt; </td></tr>
+<tr class="memitem:ae35ec884a3cf1af72671e91d2841c5c1"><td class="memTemplParams" colspan="2">template&lt;class T , int S&gt; </td></tr>
 <tr class="memitem:ae35ec884a3cf1af72671e91d2841c5c1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#ae35ec884a3cf1af72671e91d2841c5c1">decomposeProperty</a> (<a class="el" href="classRTT_1_1base_1_1PropertyIntrospection.html">base::PropertyIntrospection</a> *pi, const <a class="el" href="classRTT_1_1Property.html">Property</a>&lt; <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &gt; &amp;c)</td></tr>
-<tr class="memdesc:ae35ec884a3cf1af72671e91d2841c5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A decomposeProperty method for decomposing a <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a>&lt; MultiVector&lt;S,T&gt; &gt; into a <a class="el" href="classRTT_1_1PropertyBag.html" title="A container for holding references to properties. ">PropertyBag</a> with Property&lt;T&gt;'s. <br /></td></tr>
+<tr class="memdesc:ae35ec884a3cf1af72671e91d2841c5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A decomposeProperty method for decomposing a <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a>&lt; MultiVector&lt;S,T&gt; &gt; into a <a class="el" href="classRTT_1_1PropertyBag.html" title="A container for holding references to properties. ">PropertyBag</a> with Property&lt;T&gt;'s.  <a href="#ae35ec884a3cf1af72671e91d2841c5c1">More...</a><br /></td></tr>
 <tr class="separator:ae35ec884a3cf1af72671e91d2841c5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa46d866dbe5336641e83375acc78c3bd"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa46d866dbe5336641e83375acc78c3bd"></a>
-template&lt;class T , int S&gt; </td></tr>
-<tr class="memitem:aa46d866dbe5336641e83375acc78c3bd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>decomposeProperty</b> (<a class="el" href="classRTT_1_1base_1_1PropertyIntrospection.html">base::PropertyIntrospection</a> *pi, const <a class="el" href="classRTT_1_1Property.html">Property</a>&lt; const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &amp; &gt; &amp;c)</td></tr>
+<tr class="memitem:aa46d866dbe5336641e83375acc78c3bd"><td class="memTemplParams" colspan="2">template&lt;class T , int S&gt; </td></tr>
+<tr class="memitem:aa46d866dbe5336641e83375acc78c3bd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#aa46d866dbe5336641e83375acc78c3bd">decomposeProperty</a> (<a class="el" href="classRTT_1_1base_1_1PropertyIntrospection.html">base::PropertyIntrospection</a> *pi, const <a class="el" href="classRTT_1_1Property.html">Property</a>&lt; const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &amp; &gt; &amp;c)</td></tr>
 <tr class="separator:aa46d866dbe5336641e83375acc78c3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2494f853f769876d91b5b640ecedc684"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2494f853f769876d91b5b640ecedc684"></a>
-template&lt;class T , int S&gt; </td></tr>
+<tr class="memitem:a2494f853f769876d91b5b640ecedc684"><td class="memTemplParams" colspan="2">template&lt;class T , int S&gt; </td></tr>
 <tr class="memitem:a2494f853f769876d91b5b640ecedc684"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a2494f853f769876d91b5b640ecedc684">composeProperty</a> (const <a class="el" href="classRTT_1_1PropertyBag.html">PropertyBag</a> &amp;bag, <a class="el" href="classRTT_1_1Property.html">Property</a>&lt; <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &gt; &amp;result)</td></tr>
-<tr class="memdesc:a2494f853f769876d91b5b640ecedc684"><td class="mdescLeft">&#160;</td><td class="mdescRight">A composeProperty method for composing a property of a MultiVector&lt;S, T&gt; <br /></td></tr>
+<tr class="memdesc:a2494f853f769876d91b5b640ecedc684"><td class="mdescLeft">&#160;</td><td class="mdescRight">A composeProperty method for composing a property of a MultiVector&lt;S, T&gt;  <a href="#a2494f853f769876d91b5b640ecedc684">More...</a><br /></td></tr>
 <tr class="separator:a2494f853f769876d91b5b640ecedc684"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48064ae5fe435f6a30fc0c5b5ac52239"><td class="memTemplParams" colspan="2"><a class="anchor" id="a48064ae5fe435f6a30fc0c5b5ac52239"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a48064ae5fe435f6a30fc0c5b5ac52239"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>intrusive_ptr_add_ref</b> (ROPtrInternal&lt; T &gt; *data)</td></tr>
+<tr class="memitem:a48064ae5fe435f6a30fc0c5b5ac52239"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a48064ae5fe435f6a30fc0c5b5ac52239"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a48064ae5fe435f6a30fc0c5b5ac52239">intrusive_ptr_add_ref</a> (<a class="el" href="structRTT_1_1extras_1_1ROPtrInternal.html">ROPtrInternal</a>&lt; T &gt; *data)</td></tr>
 <tr class="separator:a48064ae5fe435f6a30fc0c5b5ac52239"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75b4770f8d7ee830f00529c8d5f53cc1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a75b4770f8d7ee830f00529c8d5f53cc1"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a75b4770f8d7ee830f00529c8d5f53cc1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>intrusive_ptr_release</b> (ROPtrInternal&lt; T &gt; *data)</td></tr>
+<tr class="memitem:a75b4770f8d7ee830f00529c8d5f53cc1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a75b4770f8d7ee830f00529c8d5f53cc1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1extras.html#a75b4770f8d7ee830f00529c8d5f53cc1">intrusive_ptr_release</a> (<a class="el" href="structRTT_1_1extras_1_1ROPtrInternal.html">ROPtrInternal</a>&lt; T &gt; *data)</td></tr>
 <tr class="separator:a75b4770f8d7ee830f00529c8d5f53cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Extra classes not neccesary to build an <a class="el" href="namespaceOrocos.html" title="The project wide Orocos namespace contains all user classes of various projects. ">Orocos</a> application, but are handy in some cases, or serve as an example on how to extend the <a class="el" href="namespaceRTT.html" title="Contains TaskContext, Activity, OperationCaller, Operation, Property, InputPort, OutputPort, Attribute. ">RTT</a>. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a8f92b51c32521a925c6c585b692e67b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt;6, bool&gt; <a class="el" href="namespaceRTT_1_1extras.html#a8f92b51c32521a925c6c585b692e67b2">RTT::extras::Bool6D</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 booleans. </p>
+
+<p>Definition at line <a class="el" href="MultiVector_8hpp_source.html#l00417">417</a> of file <a class="el" href="MultiVector_8hpp_source.html">MultiVector.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b335af9b09392da66ca6051c1c1064c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt;6, double&gt; <a class="el" href="namespaceRTT_1_1extras.html#a6b335af9b09392da66ca6051c1c1064c">RTT::extras::Double6D</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 doubles. </p>
+
+<p>Definition at line <a class="el" href="MultiVector_8hpp_source.html#l00407">407</a> of file <a class="el" href="MultiVector_8hpp_source.html">MultiVector.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e1bc3286d786f3bb4ca52b2f74651c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt;6, int&gt; <a class="el" href="namespaceRTT_1_1extras.html#a5e1bc3286d786f3bb4ca52b2f74651c8">RTT::extras::Int6D</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 integers. </p>
+
+<p>Definition at line <a class="el" href="MultiVector_8hpp_source.html#l00412">412</a> of file <a class="el" href="MultiVector_8hpp_source.html">MultiVector.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad949fdee31daadae8be40f07a5a5299c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt;6, long&gt; <a class="el" href="namespaceRTT_1_1extras.html#ad949fdee31daadae8be40f07a5a5299c">RTT::extras::Long6D</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A <a class="el" href="structRTT_1_1extras_1_1MultiVector.html" title="A static allocated Vector. ">MultiVector</a> consisting of 6 longs. </p>
+
+<p>Definition at line <a class="el" href="MultiVector_8hpp_source.html#l00422">422</a> of file <a class="el" href="MultiVector_8hpp_source.html">MultiVector.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a541e8eb896d34c29f733ceaf8cb538ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classRTT_1_1extras_1_1SimulationThread.html">SimulationThread</a>&gt; <a class="el" href="namespaceRTT_1_1extras.html#a541e8eb896d34c29f733ceaf8cb538ce">RTT::extras::SimulationThreadPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="SimulationThread_8hpp_source.html#l00049">49</a> of file <a class="el" href="SimulationThread_8hpp_source.html">SimulationThread.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2527e5f831cdac569196f3d34958f2eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classRTT_1_1extras_1_1TimerThread.html">TimerThread</a>&gt; <a class="el" href="namespaceRTT_1_1extras.html#a2527e5f831cdac569196f3d34958f2eb">RTT::extras::TimerThreadPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classRTT_1_1extras_1_1TimerThread.html" title="This Periodic Thread is meant for executing a PeriodicActivity object periodically. ">TimerThread</a> objects are reference counted such that when the last <a class="el" href="classRTT_1_1extras_1_1PeriodicActivity.html" title="A PeriodicActivity is the general implementation of a Activity which has (realtime) periodic constrai...">PeriodicActivity</a> which uses it is deleted, the thread is deleted as well. </p>
+
+<p>Definition at line <a class="el" href="TimerThread_8hpp_source.html#l00061">61</a> of file <a class="el" href="TimerThread_8hpp_source.html">TimerThread.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a2494f853f769876d91b5b640ecedc684"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , int S&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::extras::composeProperty </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1PropertyBag.html">PropertyBag</a> &amp;&#160;</td>
+          <td class="paramname"><em>bag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1Property.html">Property</a>&lt; <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A composeProperty method for composing a property of a MultiVector&lt;S, T&gt; </p>
+
+<p>Definition at line <a class="el" href="MultiVectorComposition_8hpp_source.html#l00107">107</a> of file <a class="el" href="MultiVectorComposition_8hpp_source.html">MultiVectorComposition.hpp</a>.</p>
+
+<p>References <a class="el" href="Logger_8hpp_source.html#l00121">RTT::Logger::Debug</a>, <a class="el" href="Logger_8cpp_source.html#l00383">RTT::Logger::endl()</a>, <a class="el" href="Logger_8hpp_source.html#l00121">RTT::Logger::Error</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00210">RTT::PropertyBag::find()</a>, <a class="el" href="Property_8hpp_source.html#l00246">RTT::Property&lt; T &gt;::get()</a>, <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#aef1f9e802faddb20dc36ccb6a737869c">RTT::base::PropertyBase::getDataSource()</a>, <a class="el" href="DataSource_8inl_source.html#l00032">RTT::internal::DataSource&lt; T &gt;::GetType()</a>, <a class="el" href="classRTT_1_1base_1_1PropertyBase.html#a1c8554af80cc98c0d4f5ca4c9a2cefeb">RTT::base::PropertyBase::getType()</a>, <a class="el" href="Property_8hpp_source.html#l00421">RTT::Property&lt; T &gt;::getTypeInfo()</a>, <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, and <a class="el" href="Types_8cpp_source.html#l00048">RTT::types::Types()</a>.</p>
+
+<p>Referenced by <a class="el" href="StdVectorTypeInfo_8hpp_source.html#l00060">RTT::types::StdVectorTypeInfo::composeType()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae35ec884a3cf1af72671e91d2841c5c1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , int S&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::extras::decomposeProperty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1PropertyIntrospection.html">base::PropertyIntrospection</a> *&#160;</td>
+          <td class="paramname"><em>pi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1Property.html">Property</a>&lt; <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A decomposeProperty method for decomposing a <a class="el" href="classRTT_1_1Property.html" title="A property represents a named value of any type with a description. ">Property</a>&lt; MultiVector&lt;S,T&gt; &gt; into a <a class="el" href="classRTT_1_1PropertyBag.html" title="A container for holding references to properties. ">PropertyBag</a> with Property&lt;T&gt;'s. </p>
+
+<p>Definition at line <a class="el" href="MultiVectorComposition_8hpp_source.html#l00056">56</a> of file <a class="el" href="MultiVectorComposition_8hpp_source.html">MultiVectorComposition.hpp</a>.</p>
+
+<p>References <a class="el" href="PropertyBag_8cpp_source.html#l00738">RTT::deleteProperties()</a>, <a class="el" href="Property_8hpp_source.html#l00246">RTT::Property&lt; T &gt;::get()</a>, <a class="el" href="Property_8cpp_source.html#l00058">RTT::base::PropertyIntrospection::introspect()</a>, and <a class="el" href="Property_8hpp_source.html#l00277">RTT::Property&lt; T &gt;::value()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa46d866dbe5336641e83375acc78c3bd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , int S&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::extras::decomposeProperty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1PropertyIntrospection.html">base::PropertyIntrospection</a> *&#160;</td>
+          <td class="paramname"><em>pi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classRTT_1_1Property.html">Property</a>&lt; const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &amp; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="MultiVectorComposition_8hpp_source.html#l00080">80</a> of file <a class="el" href="MultiVectorComposition_8hpp_source.html">MultiVectorComposition.hpp</a>.</p>
+
+<p>References <a class="el" href="PropertyBag_8cpp_source.html#l00738">RTT::deleteProperties()</a>, <a class="el" href="Property_8hpp_source.html#l00246">RTT::Property&lt; T &gt;::get()</a>, <a class="el" href="Property_8cpp_source.html#l00058">RTT::base::PropertyIntrospection::introspect()</a>, and <a class="el" href="Property_8hpp_source.html#l00277">RTT::Property&lt; T &gt;::value()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48064ae5fe435f6a30fc0c5b5ac52239"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::extras::intrusive_ptr_add_ref </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRTT_1_1extras_1_1ROPtrInternal.html">ROPtrInternal</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ReadOnlyPointer_8hpp_source.html#l00073">73</a> of file <a class="el" href="ReadOnlyPointer_8hpp_source.html">ReadOnlyPointer.hpp</a>.</p>
+
+<p>References <a class="el" href="ReadOnlyPointer_8hpp_source.html#l00062">RTT::extras::ROPtrInternal&lt; T &gt;::ref()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a75b4770f8d7ee830f00529c8d5f53cc1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::extras::intrusive_ptr_release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRTT_1_1extras_1_1ROPtrInternal.html">ROPtrInternal</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ReadOnlyPointer_8hpp_source.html#l00078">78</a> of file <a class="el" href="ReadOnlyPointer_8hpp_source.html">ReadOnlyPointer.hpp</a>.</p>
+
+<p>References <a class="el" href="ReadOnlyPointer_8hpp_source.html#l00066">RTT::extras::ROPtrInternal&lt; T &gt;::deref()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a512285f09004bb6b806664e4cfc731e7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned S, typename D &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt;S,D&gt; RTT::extras::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const D&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="MultiVector_8hpp_source.html#l00386">386</a> of file <a class="el" href="MultiVector_8hpp_source.html">MultiVector.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1a17961a09ceaa374232e19663ff2f2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned S, typename D &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt;S,D&gt; RTT::extras::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const D&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="MultiVector_8hpp_source.html#l00392">392</a> of file <a class="el" href="MultiVector_8hpp_source.html">MultiVector.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ac76b6c3a82eb9c825452d80c7a4d43"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned S, typename D &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt;S,D&gt; RTT::extras::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const D&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="MultiVector_8hpp_source.html#l00398">398</a> of file <a class="el" href="MultiVector_8hpp_source.html">MultiVector.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5603b9ed4e95438fc3efe130f928dcd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int S, class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; RTT::extras::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output to standard C++ output stream. </p>
+
+<p>Definition at line <a class="el" href="MultiVector_8hpp_source.html#l00428">428</a> of file <a class="el" href="MultiVector_8hpp_source.html">MultiVector.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c6009f86438775322b1949ccd10eaba"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int S, class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; RTT::extras::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structRTT_1_1extras_1_1MultiVector.html">MultiVector</a>&lt; S, T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Output to standard C++ input stream. </p>
+
+<p>Definition at line <a class="el" href="MultiVector_8hpp_source.html#l00446">446</a> of file <a class="el" href="MultiVector_8hpp_source.html">MultiVector.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:22 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

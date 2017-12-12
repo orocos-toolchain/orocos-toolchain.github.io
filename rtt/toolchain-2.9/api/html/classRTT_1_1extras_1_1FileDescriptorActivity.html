@@ -85,8 +85,7 @@ Inheritance diagram for RTT::extras::FileDescriptorActivity:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:abe8831aae12b67409f4a3c4055b3bf3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe8831aae12b67409f4a3c4055b3bf3f"></a>
-typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">ActivityInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shared_ptr</b></td></tr>
+<tr class="memitem:abe8831aae12b67409f4a3c4055b3bf3f"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">ActivityInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#abe8831aae12b67409f4a3c4055b3bf3f">shared_ptr</a></td></tr>
 <tr class="separator:abe8831aae12b67409f4a3c4055b3bf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -103,16 +102,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af49efaa4c63df7bf1b3d7a71cf756e79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#af49efaa4c63df7bf1b3d7a71cf756e79">FileDescriptorActivity</a> (int scheduler, int priority, <a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> <a class="el" href="classRTT_1_1os_1_1Thread.html#a02acd637f8631315695dfd8a8cdd3de6">period</a>, unsigned cpu_affinity, <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">base::RunnableInterface</a> *_r=0, const std::string &amp;name=&quot;FileDescriptorActivity&quot;)</td></tr>
 <tr class="memdesc:af49efaa4c63df7bf1b3d7a71cf756e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html" title="An activity which is triggered by the availability of data on a set of file descriptors. ">FileDescriptorActivity</a> with a given scheduler type, priority, <em>intended</em> period, CPU affinity, and RunnableInterface instance.  <a href="#af49efaa4c63df7bf1b3d7a71cf756e79">More...</a><br /></td></tr>
 <tr class="separator:af49efaa4c63df7bf1b3d7a71cf756e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa068522076b0eb022ae5ab34bc1b0d82"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#aa068522076b0eb022ae5ab34bc1b0d82">~FileDescriptorActivity</a> ()</td></tr>
+<tr class="separator:aa068522076b0eb022ae5ab34bc1b0d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41ea7eb806cb34dac532c0acc12513dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a41ea7eb806cb34dac532c0acc12513dc">isRunning</a> () const </td></tr>
 <tr class="memdesc:a41ea7eb806cb34dac532c0acc12513dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query if the activity is initialized and executing.  <a href="#a41ea7eb806cb34dac532c0acc12513dc">More...</a><br /></td></tr>
 <tr class="separator:a41ea7eb806cb34dac532c0acc12513dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a7ae66f0c1c77c17acf05eae57d3e11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a7ae66f0c1c77c17acf05eae57d3e11"></a>
-virtual <a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a1a7ae66f0c1c77c17acf05eae57d3e11">getPeriod</a> () const </td></tr>
-<tr class="memdesc:a1a7ae66f0c1c77c17acf05eae57d3e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <em>intended</em> period (not the actual running period) <br /></td></tr>
+<tr class="memitem:a1a7ae66f0c1c77c17acf05eae57d3e11"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a1a7ae66f0c1c77c17acf05eae57d3e11">getPeriod</a> () const </td></tr>
+<tr class="memdesc:a1a7ae66f0c1c77c17acf05eae57d3e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <em>intended</em> period (not the actual running period)  <a href="#a1a7ae66f0c1c77c17acf05eae57d3e11">More...</a><br /></td></tr>
 <tr class="separator:a1a7ae66f0c1c77c17acf05eae57d3e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab945813a275686f6bbaf6e55c3e102a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab945813a275686f6bbaf6e55c3e102a3"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ab945813a275686f6bbaf6e55c3e102a3">setPeriod</a> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> <a class="el" href="classRTT_1_1os_1_1Thread.html#a02acd637f8631315695dfd8a8cdd3de6">period</a>)</td></tr>
-<tr class="memdesc:ab945813a275686f6bbaf6e55c3e102a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <em>intended</em> period (not the actual running period) <br /></td></tr>
+<tr class="memitem:ab945813a275686f6bbaf6e55c3e102a3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ab945813a275686f6bbaf6e55c3e102a3">setPeriod</a> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> <a class="el" href="classRTT_1_1os_1_1Thread.html#a02acd637f8631315695dfd8a8cdd3de6">period</a>)</td></tr>
+<tr class="memdesc:ab945813a275686f6bbaf6e55c3e102a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <em>intended</em> period (not the actual running period)  <a href="#ab945813a275686f6bbaf6e55c3e102a3">More...</a><br /></td></tr>
 <tr class="separator:ab945813a275686f6bbaf6e55c3e102a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaffa36dd8a3bece07ce48b773e48fafc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#aaffa36dd8a3bece07ce48b773e48fafc">watch</a> (int fd)</td></tr>
 <tr class="memdesc:aaffa36dd8a3bece07ce48b773e48fafc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the file descriptor the activity should be listening to.  <a href="#aaffa36dd8a3bece07ce48b773e48fafc">More...</a><br /></td></tr>
@@ -120,9 +119,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a248b4473d666ecef8ad4644a51c7f83c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a248b4473d666ecef8ad4644a51c7f83c">unwatch</a> (int fd)</td></tr>
 <tr class="memdesc:a248b4473d666ecef8ad4644a51c7f83c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a file descriptor from the set of watched FDs.  <a href="#a248b4473d666ecef8ad4644a51c7f83c">More...</a><br /></td></tr>
 <tr class="separator:a248b4473d666ecef8ad4644a51c7f83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02e98b358e83f845c5a43597406f464a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02e98b358e83f845c5a43597406f464a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a02e98b358e83f845c5a43597406f464a">clearAllWatches</a> ()</td></tr>
-<tr class="memdesc:a02e98b358e83f845c5a43597406f464a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all FDs that are currently being watched. <br /></td></tr>
+<tr class="memitem:a02e98b358e83f845c5a43597406f464a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a02e98b358e83f845c5a43597406f464a">clearAllWatches</a> ()</td></tr>
+<tr class="memdesc:a02e98b358e83f845c5a43597406f464a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all FDs that are currently being watched.  <a href="#a02e98b358e83f845c5a43597406f464a">More...</a><br /></td></tr>
 <tr class="separator:a02e98b358e83f845c5a43597406f464a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3361185c2083bf10c2f149336343e71d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a3361185c2083bf10c2f149336343e71d">isWatched</a> (int fd) const </td></tr>
 <tr class="memdesc:a3361185c2083bf10c2f149336343e71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if this specific FD is being watched by the activity.  <a href="#a3361185c2083bf10c2f149336343e71d">More...</a><br /></td></tr>
@@ -161,16 +159,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ac9e8bef0993c0fd1219567c61673d113"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113">step</a> ()</td></tr>
 <tr class="memdesc:ac9e8bef0993c0fd1219567c61673d113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6c8e8b54ca6f7dbf6ef902a26f039231">loop()</a> when data is available on the file descriptor.  <a href="#ac9e8bef0993c0fd1219567c61673d113">More...</a><br /></td></tr>
 <tr class="separator:ac9e8bef0993c0fd1219567c61673d113"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a343e98d60b9b52b390c889e3fde3a149"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a343e98d60b9b52b390c889e3fde3a149">work</a> (base::RunnableInterface::WorkReason reason)</td></tr>
+<tr class="memitem:a343e98d60b9b52b390c889e3fde3a149"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a343e98d60b9b52b390c889e3fde3a149">work</a> (<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2">base::RunnableInterface::WorkReason</a> reason)</td></tr>
 <tr class="memdesc:a343e98d60b9b52b390c889e3fde3a149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6c8e8b54ca6f7dbf6ef902a26f039231">loop()</a> when data is available on the file descriptor.  <a href="#a343e98d60b9b52b390c889e3fde3a149">More...</a><br /></td></tr>
 <tr class="separator:a343e98d60b9b52b390c889e3fde3a149"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7a62d5013ac78a6cb5e0414eabd09d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7a62d5013ac78a6cb5e0414eabd09d9"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#af7a62d5013ac78a6cb5e0414eabd09d9">trigger</a> ()</td></tr>
-<tr class="memdesc:af7a62d5013ac78a6cb5e0414eabd09d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force calling <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113" title="Called by loop() when data is available on the file descriptor. ">step()</a> even if no data is available on the file descriptor, and returns true if the signalling was successful. <br /></td></tr>
+<tr class="memitem:af7a62d5013ac78a6cb5e0414eabd09d9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#af7a62d5013ac78a6cb5e0414eabd09d9">trigger</a> ()</td></tr>
+<tr class="memdesc:af7a62d5013ac78a6cb5e0414eabd09d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force calling <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113" title="Called by loop() when data is available on the file descriptor. ">step()</a> even if no data is available on the file descriptor, and returns true if the signalling was successful.  <a href="#af7a62d5013ac78a6cb5e0414eabd09d9">More...</a><br /></td></tr>
 <tr class="separator:af7a62d5013ac78a6cb5e0414eabd09d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55607d1457744df8dc8b1644dd04dd89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55607d1457744df8dc8b1644dd04dd89"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a55607d1457744df8dc8b1644dd04dd89">timeout</a> ()</td></tr>
-<tr class="memdesc:a55607d1457744df8dc8b1644dd04dd89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns false. <br /></td></tr>
+<tr class="memitem:a55607d1457744df8dc8b1644dd04dd89"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a55607d1457744df8dc8b1644dd04dd89">timeout</a> ()</td></tr>
+<tr class="memdesc:a55607d1457744df8dc8b1644dd04dd89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns false.  <a href="#a55607d1457744df8dc8b1644dd04dd89">More...</a><br /></td></tr>
 <tr class="separator:a55607d1457744df8dc8b1644dd04dd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0c782762a21088a9c8b27229ce9e906"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#ad0c782762a21088a9c8b27229ce9e906">execute</a> ()</td></tr>
 <tr class="memdesc:ad0c782762a21088a9c8b27229ce9e906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute this activity such that it <em>executes</em> a step or loop of the RunnableInterface.  <a href="#ad0c782762a21088a9c8b27229ce9e906">More...</a><br /></td></tr>
@@ -181,17 +177,14 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a1d43fd70a77b8caf26fe43da0c82a86f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#a1d43fd70a77b8caf26fe43da0c82a86f">isPeriodic</a> () const </td></tr>
 <tr class="memdesc:a1d43fd70a77b8caf26fe43da0c82a86f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if this activity is periodic.  <a href="#a1d43fd70a77b8caf26fe43da0c82a86f">More...</a><br /></td></tr>
 <tr class="separator:a1d43fd70a77b8caf26fe43da0c82a86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2b2d41c3d7b6a6e8c9b7b308e43845e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2b2d41c3d7b6a6e8c9b7b308e43845e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#aa2b2d41c3d7b6a6e8c9b7b308e43845e">getPeriod</a> (<a class="el" href="namespaceRTT.html#a3975a0691735afcdd8744e443df0715d">secs</a> &amp;s, <a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> &amp;ns) const </td></tr>
-<tr class="memdesc:aa2b2d41c3d7b6a6e8c9b7b308e43845e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the periodicity of this thread (seconds, nanoseconds) <br /></td></tr>
+<tr class="memitem:aa2b2d41c3d7b6a6e8c9b7b308e43845e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#aa2b2d41c3d7b6a6e8c9b7b308e43845e">getPeriod</a> (<a class="el" href="namespaceRTT.html#a3975a0691735afcdd8744e443df0715d">secs</a> &amp;s, <a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> &amp;ns) const </td></tr>
+<tr class="memdesc:aa2b2d41c3d7b6a6e8c9b7b308e43845e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the periodicity of this thread (seconds, nanoseconds)  <a href="#aa2b2d41c3d7b6a6e8c9b7b308e43845e">More...</a><br /></td></tr>
 <tr class="separator:aa2b2d41c3d7b6a6e8c9b7b308e43845e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25d3452af9a71ec58ad1434147144a42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25d3452af9a71ec58ad1434147144a42"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a25d3452af9a71ec58ad1434147144a42">setPeriod</a> (<a class="el" href="namespaceRTT.html#a3975a0691735afcdd8744e443df0715d">secs</a> s, <a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> ns)</td></tr>
-<tr class="memdesc:a25d3452af9a71ec58ad1434147144a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the periodicity of this thread (seconds, nanoseconds) <br /></td></tr>
+<tr class="memitem:a25d3452af9a71ec58ad1434147144a42"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a25d3452af9a71ec58ad1434147144a42">setPeriod</a> (<a class="el" href="namespaceRTT.html#a3975a0691735afcdd8744e443df0715d">secs</a> s, <a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> ns)</td></tr>
+<tr class="memdesc:a25d3452af9a71ec58ad1434147144a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the periodicity of this thread (seconds, nanoseconds)  <a href="#a25d3452af9a71ec58ad1434147144a42">More...</a><br /></td></tr>
 <tr class="separator:a25d3452af9a71ec58ad1434147144a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a505857cee34f093923e8f63bf3e8cfda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a505857cee34f093923e8f63bf3e8cfda"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a505857cee34f093923e8f63bf3e8cfda">setPeriod</a> (TIME_SPEC p)</td></tr>
-<tr class="memdesc:a505857cee34f093923e8f63bf3e8cfda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the periodicity of this thread. <br /></td></tr>
+<tr class="memitem:a505857cee34f093923e8f63bf3e8cfda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a505857cee34f093923e8f63bf3e8cfda">setPeriod</a> (<a class="el" href="ecos_2fosi_8h.html#a4ef906eef95148d61fa59dcb351d53a7">TIME_SPEC</a> p)</td></tr>
+<tr class="memdesc:a505857cee34f093923e8f63bf3e8cfda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the periodicity of this thread.  <a href="#a505857cee34f093923e8f63bf3e8cfda">More...</a><br /></td></tr>
 <tr class="separator:a505857cee34f093923e8f63bf3e8cfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfb3e2b0da14f0f94bc94f614f47114d"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#acfb3e2b0da14f0f94bc94f614f47114d">getCpuAffinity</a> () const </td></tr>
 <tr class="memdesc:acfb3e2b0da14f0f94bc94f614f47114d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the cpu affinity of this activity.  <a href="#acfb3e2b0da14f0f94bc94f614f47114d">More...</a><br /></td></tr>
@@ -212,9 +205,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a82544a7ce478a5fa1dbc61888a04ca9c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a82544a7ce478a5fa1dbc61888a04ca9c">run</a> (<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *r)</td></tr>
 <tr class="memdesc:a82544a7ce478a5fa1dbc61888a04ca9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run exclusively this <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a>.  <a href="#a82544a7ce478a5fa1dbc61888a04ca9c">More...</a><br /></td></tr>
 <tr class="separator:a82544a7ce478a5fa1dbc61888a04ca9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77cc446f3e244790c48bf7a4124e592d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77cc446f3e244790c48bf7a4124e592d"></a>
-virtual <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a77cc446f3e244790c48bf7a4124e592d">getRunner</a> () const </td></tr>
-<tr class="memdesc:a77cc446f3e244790c48bf7a4124e592d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a> instance. <br /></td></tr>
+<tr class="memitem:a77cc446f3e244790c48bf7a4124e592d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a77cc446f3e244790c48bf7a4124e592d">getRunner</a> () const </td></tr>
+<tr class="memdesc:a77cc446f3e244790c48bf7a4124e592d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a> instance.  <a href="#a77cc446f3e244790c48bf7a4124e592d">More...</a><br /></td></tr>
 <tr class="separator:a77cc446f3e244790c48bf7a4124e592d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d515d3080cf343c48314c99d8c9477d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a6d515d3080cf343c48314c99d8c9477d">setStopTimeout</a> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> s)</td></tr>
 <tr class="memdesc:a6d515d3080cf343c48314c99d8c9477d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the timeout for <a class="el" href="classRTT_1_1os_1_1Thread.html#a49ccf6e01b1cbde69452d4449de4f237" title="Stop the Thread. ">stop()</a>, in seconds.  <a href="#a6d515d3080cf343c48314c99d8c9477d">More...</a><br /></td></tr>
@@ -225,16 +217,14 @@ virtual <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">Runnable
 <tr class="memitem:a80dd84b525cab472c70d6f7579d26ecd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a80dd84b525cab472c70d6f7579d26ecd">getPeriodNS</a> () const </td></tr>
 <tr class="memdesc:a80dd84b525cab472c70d6f7579d26ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the periodicity in nanoseconds.  <a href="#a80dd84b525cab472c70d6f7579d26ecd">More...</a><br /></td></tr>
 <tr class="separator:a80dd84b525cab472c70d6f7579d26ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1eb44bd232ed259b95e50ebd728ba2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1eb44bd232ed259b95e50ebd728ba2c"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ae1eb44bd232ed259b95e50ebd728ba2c">getName</a> () const </td></tr>
-<tr class="memdesc:ae1eb44bd232ed259b95e50ebd728ba2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the name of this task. <br /></td></tr>
+<tr class="memitem:ae1eb44bd232ed259b95e50ebd728ba2c"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ae1eb44bd232ed259b95e50ebd728ba2c">getName</a> () const </td></tr>
+<tr class="memdesc:ae1eb44bd232ed259b95e50ebd728ba2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the name of this task.  <a href="#ae1eb44bd232ed259b95e50ebd728ba2c">More...</a><br /></td></tr>
 <tr class="separator:ae1eb44bd232ed259b95e50ebd728ba2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0801b17719b897552bf89b8d728a89ad"><td class="memItemLeft" align="right" valign="top">virtual RTOS_TASK *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a0801b17719b897552bf89b8d728a89ad">getTask</a> ()</td></tr>
-<tr class="memdesc:a0801b17719b897552bf89b8d728a89ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the RTOS_TASK pointer.  <a href="#a0801b17719b897552bf89b8d728a89ad">More...</a><br /></td></tr>
+<tr class="memitem:a0801b17719b897552bf89b8d728a89ad"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structRTOS__TASK.html">RTOS_TASK</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a0801b17719b897552bf89b8d728a89ad">getTask</a> ()</td></tr>
+<tr class="memdesc:a0801b17719b897552bf89b8d728a89ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="structRTOS__TASK.html">RTOS_TASK</a> pointer.  <a href="#a0801b17719b897552bf89b8d728a89ad">More...</a><br /></td></tr>
 <tr class="separator:a0801b17719b897552bf89b8d728a89ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6773640897f8ae122da0b4e14630414a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6773640897f8ae122da0b4e14630414a"></a>
-virtual const RTOS_TASK *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a6773640897f8ae122da0b4e14630414a">getTask</a> () const </td></tr>
-<tr class="memdesc:a6773640897f8ae122da0b4e14630414a"><td class="mdescLeft">&#160;</td><td class="mdescRight">const version of the above. <br /></td></tr>
+<tr class="memitem:a6773640897f8ae122da0b4e14630414a"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="structRTOS__TASK.html">RTOS_TASK</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a6773640897f8ae122da0b4e14630414a">getTask</a> () const </td></tr>
+<tr class="memdesc:a6773640897f8ae122da0b4e14630414a"><td class="mdescLeft">&#160;</td><td class="mdescRight">const version of the above.  <a href="#a6773640897f8ae122da0b4e14630414a">More...</a><br /></td></tr>
 <tr class="separator:a6773640897f8ae122da0b4e14630414a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd4c8dce0ebd111b20e558371119a15b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#acd4c8dce0ebd111b20e558371119a15b">setScheduler</a> (int sched_type)</td></tr>
 <tr class="memdesc:acd4c8dce0ebd111b20e558371119a15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the scheduler policy in which this thread runs.  <a href="#acd4c8dce0ebd111b20e558371119a15b">More...</a><br /></td></tr>
@@ -251,22 +241,17 @@ virtual const RTOS_TASK *&#160;</td><td class="memItemRight" valign="bottom"><a 
 <tr class="memitem:a2c3b1dfb00f9f103582bc17267ba6b5b"><td class="memItemLeft" align="right" valign="top">virtual unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a2c3b1dfb00f9f103582bc17267ba6b5b">getPid</a> () const </td></tr>
 <tr class="memdesc:a2c3b1dfb00f9f103582bc17267ba6b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Process or <a class="el" href="classRTT_1_1os_1_1Thread.html" title="A Thread object executes user code in its own thread. ">Thread</a> ID of this thread, as assigned by the Operating System.  <a href="#a2c3b1dfb00f9f103582bc17267ba6b5b">More...</a><br /></td></tr>
 <tr class="separator:a2c3b1dfb00f9f103582bc17267ba6b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab375c5a6f35fb2e7368bd16a5e13fa2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab375c5a6f35fb2e7368bd16a5e13fa2e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ab375c5a6f35fb2e7368bd16a5e13fa2e">yield</a> ()</td></tr>
-<tr class="memdesc:ab375c5a6f35fb2e7368bd16a5e13fa2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields (put to the back of the scheduler queue) the calling thread. <br /></td></tr>
+<tr class="memitem:ab375c5a6f35fb2e7368bd16a5e13fa2e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ab375c5a6f35fb2e7368bd16a5e13fa2e">yield</a> ()</td></tr>
+<tr class="memdesc:ab375c5a6f35fb2e7368bd16a5e13fa2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields (put to the back of the scheduler queue) the calling thread.  <a href="#ab375c5a6f35fb2e7368bd16a5e13fa2e">More...</a><br /></td></tr>
 <tr class="separator:ab375c5a6f35fb2e7368bd16a5e13fa2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb74a93d70d3f4027f130d4063617cf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb74a93d70d3f4027f130d4063617cf4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxOverrun</b> (int m)</td></tr>
+<tr class="memitem:adb74a93d70d3f4027f130d4063617cf4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#adb74a93d70d3f4027f130d4063617cf4">setMaxOverrun</a> (int m)</td></tr>
 <tr class="separator:adb74a93d70d3f4027f130d4063617cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23ef528eef224bfe21c69496d9cf14d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23ef528eef224bfe21c69496d9cf14d8"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxOverrun</b> () const </td></tr>
+<tr class="memitem:a23ef528eef224bfe21c69496d9cf14d8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a23ef528eef224bfe21c69496d9cf14d8">getMaxOverrun</a> () const </td></tr>
 <tr class="separator:a23ef528eef224bfe21c69496d9cf14d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6b17eb11b2a816e4b5804ff626c68f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6b17eb11b2a816e4b5804ff626c68f1"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#ac6b17eb11b2a816e4b5804ff626c68f1">threadNumber</a> () const </td></tr>
-<tr class="memdesc:ac6b17eb11b2a816e4b5804ff626c68f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique thread number (within the same process). <br /></td></tr>
+<tr class="memitem:ac6b17eb11b2a816e4b5804ff626c68f1"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#ac6b17eb11b2a816e4b5804ff626c68f1">threadNumber</a> () const </td></tr>
+<tr class="memdesc:ac6b17eb11b2a816e4b5804ff626c68f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique thread number (within the same process).  <a href="#ac6b17eb11b2a816e4b5804ff626c68f1">More...</a><br /></td></tr>
 <tr class="separator:ac6b17eb11b2a816e4b5804ff626c68f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40fb865c89b5d39d24f9a9f8ee11282e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40fb865c89b5d39d24f9a9f8ee11282e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSelf</b> () const </td></tr>
+<tr class="memitem:a40fb865c89b5d39d24f9a9f8ee11282e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#a40fb865c89b5d39d24f9a9f8ee11282e">isSelf</a> () const </td></tr>
 <tr class="separator:a40fb865c89b5d39d24f9a9f8ee11282e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -289,78 +274,59 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4f1930836d6387ccaa86e4742c567cb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a4f1930836d6387ccaa86e4742c567cb0">terminate</a> ()</td></tr>
 <tr class="memdesc:a4f1930836d6387ccaa86e4742c567cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exit and destroy the thread.  <a href="#a4f1930836d6387ccaa86e4742c567cb0">More...</a><br /></td></tr>
 <tr class="separator:a4f1930836d6387ccaa86e4742c567cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bd59de6d99286181b47a2f7ad1318d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bd59de6d99286181b47a2f7ad1318d4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>emergencyStop</b> ()</td></tr>
+<tr class="memitem:a7bd59de6d99286181b47a2f7ad1318d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a7bd59de6d99286181b47a2f7ad1318d4">emergencyStop</a> ()</td></tr>
 <tr class="separator:a7bd59de6d99286181b47a2f7ad1318d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aa7d44ac0d07d07e53c9e226859d7cc7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7d44ac0d07d07e53c9e226859d7cc7c"></a>
-<a class="el" href="classRTT_1_1os_1_1Mutex.html">os::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>msg_lock</b></td></tr>
+<tr class="memitem:aa7d44ac0d07d07e53c9e226859d7cc7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1Mutex.html">os::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#aa7d44ac0d07d07e53c9e226859d7cc7c">msg_lock</a></td></tr>
 <tr class="separator:aa7d44ac0d07d07e53c9e226859d7cc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e5c4d33c575c00827813bf1bd44c6ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e5c4d33c575c00827813bf1bd44c6ce"></a>
-<a class="el" href="classRTT_1_1os_1_1Condition.html">os::Condition</a>&#160;</td><td class="memItemRight" valign="bottom"><b>msg_cond</b></td></tr>
+<tr class="memitem:a8e5c4d33c575c00827813bf1bd44c6ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1Condition.html">os::Condition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#a8e5c4d33c575c00827813bf1bd44c6ce">msg_cond</a></td></tr>
 <tr class="separator:a8e5c4d33c575c00827813bf1bd44c6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f728c55e42aef29228c92991619d427"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f728c55e42aef29228c92991619d427"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#a3f728c55e42aef29228c92991619d427">update_period</a></td></tr>
-<tr class="memdesc:a3f728c55e42aef29228c92991619d427"><td class="mdescLeft">&#160;</td><td class="mdescRight">The period at which the <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a> steps(). <br /></td></tr>
+<tr class="memitem:a3f728c55e42aef29228c92991619d427"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#a3f728c55e42aef29228c92991619d427">update_period</a></td></tr>
+<tr class="memdesc:a3f728c55e42aef29228c92991619d427"><td class="mdescLeft">&#160;</td><td class="mdescRight">The period at which the <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a> steps().  <a href="#a3f728c55e42aef29228c92991619d427">More...</a><br /></td></tr>
 <tr class="separator:a3f728c55e42aef29228c92991619d427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab64f826491a648a1067e96c898d880c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab64f826491a648a1067e96c898d880c3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#ab64f826491a648a1067e96c898d880c3">mtimeout</a></td></tr>
-<tr class="memdesc:ab64f826491a648a1067e96c898d880c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">When set to true, a next cycle will be a TimeOut cycle. <br /></td></tr>
+<tr class="memitem:ab64f826491a648a1067e96c898d880c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#ab64f826491a648a1067e96c898d880c3">mtimeout</a></td></tr>
+<tr class="memdesc:ab64f826491a648a1067e96c898d880c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">When set to true, a next cycle will be a TimeOut cycle.  <a href="#ab64f826491a648a1067e96c898d880c3">More...</a><br /></td></tr>
 <tr class="separator:ab64f826491a648a1067e96c898d880c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6f518c5967ab1f28b15ed9868906ad9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6f518c5967ab1f28b15ed9868906ad9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>mstopRequested</b></td></tr>
+<tr class="memitem:ab6f518c5967ab1f28b15ed9868906ad9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#ab6f518c5967ab1f28b15ed9868906ad9">mstopRequested</a></td></tr>
 <tr class="separator:ab6f518c5967ab1f28b15ed9868906ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a159ee935879a03376aad074b9e6b5b20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a159ee935879a03376aad074b9e6b5b20"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>mabswaitpolicy</b></td></tr>
+<tr class="memitem:a159ee935879a03376aad074b9e6b5b20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#a159ee935879a03376aad074b9e6b5b20">mabswaitpolicy</a></td></tr>
 <tr class="separator:a159ee935879a03376aad074b9e6b5b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0711c7e698f87ead4e89309c9fc84910"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0711c7e698f87ead4e89309c9fc84910"></a>
-<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>runner</b></td></tr>
+<tr class="memitem:a0711c7e698f87ead4e89309c9fc84910"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a0711c7e698f87ead4e89309c9fc84910">runner</a></td></tr>
 <tr class="separator:a0711c7e698f87ead4e89309c9fc84910"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94f375df5f026684f8724185b930c584"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94f375df5f026684f8724185b930c584"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a94f375df5f026684f8724185b930c584">msched_type</a></td></tr>
-<tr class="memdesc:a94f375df5f026684f8724185b930c584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desired scheduler type. <br /></td></tr>
+<tr class="memitem:a94f375df5f026684f8724185b930c584"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a94f375df5f026684f8724185b930c584">msched_type</a></td></tr>
+<tr class="memdesc:a94f375df5f026684f8724185b930c584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desired scheduler type.  <a href="#a94f375df5f026684f8724185b930c584">More...</a><br /></td></tr>
 <tr class="separator:a94f375df5f026684f8724185b930c584"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae4e5b4743923f0797b26e939ffe5b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adae4e5b4743923f0797b26e939ffe5b7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#adae4e5b4743923f0797b26e939ffe5b7">active</a></td></tr>
-<tr class="memdesc:adae4e5b4743923f0797b26e939ffe5b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">When set to 1, the thread will run, when set to 0 the thread will stop ( <a class="el" href="classRTT_1_1os_1_1Thread.html#a0e351c9ab63970389eee3f2e9b602adb" title="Returns whether the thread is active. ">isActive()</a> ) <br /></td></tr>
+<tr class="memitem:adae4e5b4743923f0797b26e939ffe5b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#adae4e5b4743923f0797b26e939ffe5b7">active</a></td></tr>
+<tr class="memdesc:adae4e5b4743923f0797b26e939ffe5b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">When set to 1, the thread will run, when set to 0 the thread will stop ( <a class="el" href="classRTT_1_1os_1_1Thread.html#a0e351c9ab63970389eee3f2e9b602adb" title="Returns whether the thread is active. ">isActive()</a> )  <a href="#adae4e5b4743923f0797b26e939ffe5b7">More...</a><br /></td></tr>
 <tr class="separator:adae4e5b4743923f0797b26e939ffe5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ad0eccac77f5c77cbd5690c7de784e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ad0eccac77f5c77cbd5690c7de784e2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a4ad0eccac77f5c77cbd5690c7de784e2">prepareForExit</a></td></tr>
-<tr class="memdesc:a4ad0eccac77f5c77cbd5690c7de784e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the thread that it should exit. <br /></td></tr>
+<tr class="memitem:a4ad0eccac77f5c77cbd5690c7de784e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a4ad0eccac77f5c77cbd5690c7de784e2">prepareForExit</a></td></tr>
+<tr class="memdesc:a4ad0eccac77f5c77cbd5690c7de784e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the thread that it should exit.  <a href="#a4ad0eccac77f5c77cbd5690c7de784e2">More...</a><br /></td></tr>
 <tr class="separator:a4ad0eccac77f5c77cbd5690c7de784e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7cd90b220ad93c165775e8348e9aed8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7cd90b220ad93c165775e8348e9aed8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ad7cd90b220ad93c165775e8348e9aed8">inloop</a></td></tr>
-<tr class="memdesc:ad7cd90b220ad93c165775e8348e9aed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is true when in the loop (<a class="el" href="classRTT_1_1os_1_1Thread.html#a49de57cf538992cb54fdc20658094aab" title="Returns whether the thread is running. ">isRunning()</a> ) <br /></td></tr>
+<tr class="memitem:ad7cd90b220ad93c165775e8348e9aed8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ad7cd90b220ad93c165775e8348e9aed8">inloop</a></td></tr>
+<tr class="memdesc:ad7cd90b220ad93c165775e8348e9aed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is true when in the loop (<a class="el" href="classRTT_1_1os_1_1Thread.html#a49de57cf538992cb54fdc20658094aab" title="Returns whether the thread is running. ">isRunning()</a> )  <a href="#ad7cd90b220ad93c165775e8348e9aed8">More...</a><br /></td></tr>
 <tr class="separator:ad7cd90b220ad93c165775e8348e9aed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dcdfd94eb560ea59f26498299ec90d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dcdfd94eb560ea59f26498299ec90d5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a6dcdfd94eb560ea59f26498299ec90d5">running</a></td></tr>
-<tr class="memdesc:a6dcdfd94eb560ea59f26498299ec90d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if <a class="el" href="classRTT_1_1os_1_1Thread.html#aa818917a1c75631736a079246328d9a8">step()</a> or <a class="el" href="classRTT_1_1os_1_1Thread.html#ae1d49c238372d1336e21ec9b3adc6349">loop()</a> should be executed. <br /></td></tr>
+<tr class="memitem:a6dcdfd94eb560ea59f26498299ec90d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a6dcdfd94eb560ea59f26498299ec90d5">running</a></td></tr>
+<tr class="memdesc:a6dcdfd94eb560ea59f26498299ec90d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if <a class="el" href="classRTT_1_1os_1_1Thread.html#aa818917a1c75631736a079246328d9a8">step()</a> or <a class="el" href="classRTT_1_1os_1_1Thread.html#ae1d49c238372d1336e21ec9b3adc6349">loop()</a> should be executed.  <a href="#a6dcdfd94eb560ea59f26498299ec90d5">More...</a><br /></td></tr>
 <tr class="separator:a6dcdfd94eb560ea59f26498299ec90d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf6258b13c0ed5c38eb045430b97fcd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf6258b13c0ed5c38eb045430b97fcd9"></a>
-RTOS_TASK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#abf6258b13c0ed5c38eb045430b97fcd9">rtos_task</a></td></tr>
-<tr class="memdesc:abf6258b13c0ed5c38eb045430b97fcd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The realtime task structure created by this object. <br /></td></tr>
+<tr class="memitem:abf6258b13c0ed5c38eb045430b97fcd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRTOS__TASK.html">RTOS_TASK</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#abf6258b13c0ed5c38eb045430b97fcd9">rtos_task</a></td></tr>
+<tr class="memdesc:abf6258b13c0ed5c38eb045430b97fcd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The realtime task structure created by this object.  <a href="#abf6258b13c0ed5c38eb045430b97fcd9">More...</a><br /></td></tr>
 <tr class="separator:abf6258b13c0ed5c38eb045430b97fcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64bc10f4712bbd143cc447169b77e594"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64bc10f4712bbd143cc447169b77e594"></a>
-rt_sem_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a64bc10f4712bbd143cc447169b77e594">sem</a></td></tr>
-<tr class="memdesc:a64bc10f4712bbd143cc447169b77e594"><td class="mdescLeft">&#160;</td><td class="mdescRight">The semaphore used for starting the thread. <br /></td></tr>
+<tr class="memitem:a64bc10f4712bbd143cc447169b77e594"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ecos_2fosi_8h.html#a3fba3ae04ecbaff331cc1fcf6ff35ac2">rt_sem_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a64bc10f4712bbd143cc447169b77e594">sem</a></td></tr>
+<tr class="memdesc:a64bc10f4712bbd143cc447169b77e594"><td class="mdescLeft">&#160;</td><td class="mdescRight">The semaphore used for starting the thread.  <a href="#a64bc10f4712bbd143cc447169b77e594">More...</a><br /></td></tr>
 <tr class="separator:a64bc10f4712bbd143cc447169b77e594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab87576530375ca0b5570cc14e7b65ca5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab87576530375ca0b5570cc14e7b65ca5"></a>
-<a class="el" href="classRTT_1_1os_1_1MutexRecursive.html">MutexRecursive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ab87576530375ca0b5570cc14e7b65ca5">breaker</a></td></tr>
-<tr class="memdesc:ab87576530375ca0b5570cc14e7b65ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to implement synchronising <a class="el" href="classRTT_1_1os_1_1Thread.html#a138e3536f1de8b4361f0db9ad9dfd07d">breakLoop()</a>. <br /></td></tr>
+<tr class="memitem:ab87576530375ca0b5570cc14e7b65ca5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1MutexRecursive.html">MutexRecursive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#ab87576530375ca0b5570cc14e7b65ca5">breaker</a></td></tr>
+<tr class="memdesc:ab87576530375ca0b5570cc14e7b65ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to implement synchronising <a class="el" href="classRTT_1_1os_1_1Thread.html#a138e3536f1de8b4361f0db9ad9dfd07d">breakLoop()</a>.  <a href="#ab87576530375ca0b5570cc14e7b65ca5">More...</a><br /></td></tr>
 <tr class="separator:ab87576530375ca0b5570cc14e7b65ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf2c15d2b691b5401695e038296cca69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf2c15d2b691b5401695e038296cca69"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#aaf2c15d2b691b5401695e038296cca69">maxOverRun</a></td></tr>
-<tr class="memdesc:aaf2c15d2b691b5401695e038296cca69"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum times a periodic overrun may happen, or -1 if unlimited. <br /></td></tr>
+<tr class="memitem:aaf2c15d2b691b5401695e038296cca69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#aaf2c15d2b691b5401695e038296cca69">maxOverRun</a></td></tr>
+<tr class="memdesc:aaf2c15d2b691b5401695e038296cca69"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum times a periodic overrun may happen, or -1 if unlimited.  <a href="#aaf2c15d2b691b5401695e038296cca69">More...</a><br /></td></tr>
 <tr class="separator:aaf2c15d2b691b5401695e038296cca69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02acd637f8631315695dfd8a8cdd3de6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02acd637f8631315695dfd8a8cdd3de6"></a>
-<a class="el" href="fosi__interface_8h.html#a384fff99a7383ab85bc17d20e28bb581">NANO_TIME</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a02acd637f8631315695dfd8a8cdd3de6">period</a></td></tr>
-<tr class="memdesc:a02acd637f8631315695dfd8a8cdd3de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The period as it is passed to the operating system. <br /></td></tr>
+<tr class="memitem:a02acd637f8631315695dfd8a8cdd3de6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ecos_2fosi_8h.html#a384fff99a7383ab85bc17d20e28bb581">NANO_TIME</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a02acd637f8631315695dfd8a8cdd3de6">period</a></td></tr>
+<tr class="memdesc:a02acd637f8631315695dfd8a8cdd3de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The period as it is passed to the operating system.  <a href="#a02acd637f8631315695dfd8a8cdd3de6">More...</a><br /></td></tr>
 <tr class="separator:a02acd637f8631315695dfd8a8cdd3de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5db64c49d83e14a634c0e8cf6422a53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5db64c49d83e14a634c0e8cf6422a53"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#af5db64c49d83e14a634c0e8cf6422a53">stopTimeout</a></td></tr>
-<tr class="memdesc:af5db64c49d83e14a634c0e8cf6422a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">The timeout, in seconds, for <a class="el" href="classRTT_1_1os_1_1Thread.html#a49ccf6e01b1cbde69452d4449de4f237" title="Stop the Thread. ">stop()</a> <br /></td></tr>
+<tr class="memitem:af5db64c49d83e14a634c0e8cf6422a53"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#af5db64c49d83e14a634c0e8cf6422a53">stopTimeout</a></td></tr>
+<tr class="memdesc:af5db64c49d83e14a634c0e8cf6422a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">The timeout, in seconds, for <a class="el" href="classRTT_1_1os_1_1Thread.html#a49ccf6e01b1cbde69452d4449de4f237" title="Stop the Thread. ">stop()</a>  <a href="#af5db64c49d83e14a634c0e8cf6422a53">More...</a><br /></td></tr>
 <tr class="separator:af5db64c49d83e14a634c0e8cf6422a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25fb4baabceaf85e83ccb1f8e4d7d99c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#a25fb4baabceaf85e83ccb1f8e4d7d99c">threadnb</a></td></tr>
 <tr class="memdesc:a25fb4baabceaf85e83ccb1f8e4d7d99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Threads are given an unique number, which follows thread creation order.  <a href="#a25fb4baabceaf85e83ccb1f8e4d7d99c">More...</a><br /></td></tr>
@@ -368,16 +334,13 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a0963ed3103fccd151ec151398a3a20e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0963ed3103fccd151ec151398a3a20e4"></a>
-static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>default_stack_size</b> = 0</td></tr>
+<tr class="memitem:a0963ed3103fccd151ec151398a3a20e4"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a0963ed3103fccd151ec151398a3a20e4">default_stack_size</a> = 0</td></tr>
 <tr class="separator:a0963ed3103fccd151ec151398a3a20e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7374ef37bb1b188e6e3c79dd4f6e231e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7374ef37bb1b188e6e3c79dd4f6e231e"></a>
-static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a7374ef37bb1b188e6e3c79dd4f6e231e">lock_timeout_no_period_in_s</a> = 1.0</td></tr>
-<tr class="memdesc:a7374ef37bb1b188e6e3c79dd4f6e231e"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration of the lock timeout in seconds <br /></td></tr>
+<tr class="memitem:a7374ef37bb1b188e6e3c79dd4f6e231e"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a7374ef37bb1b188e6e3c79dd4f6e231e">lock_timeout_no_period_in_s</a> = 1.0</td></tr>
+<tr class="memdesc:a7374ef37bb1b188e6e3c79dd4f6e231e"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration of the lock timeout in seconds  <a href="#a7374ef37bb1b188e6e3c79dd4f6e231e">More...</a><br /></td></tr>
 <tr class="separator:a7374ef37bb1b188e6e3c79dd4f6e231e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a891ddc39c519e3561aa6277978cc2b89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a891ddc39c519e3561aa6277978cc2b89"></a>
-static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a891ddc39c519e3561aa6277978cc2b89">lock_timeout_period_factor</a> = 10.0</td></tr>
-<tr class="memdesc:a891ddc39c519e3561aa6277978cc2b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration of the lock timeout for periodic tasks in seconds <br /></td></tr>
+<tr class="memitem:a891ddc39c519e3561aa6277978cc2b89"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a891ddc39c519e3561aa6277978cc2b89">lock_timeout_period_factor</a> = 10.0</td></tr>
+<tr class="memdesc:a891ddc39c519e3561aa6277978cc2b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">configuration of the lock timeout for periodic tasks in seconds  <a href="#a891ddc39c519e3561aa6277978cc2b89">More...</a><br /></td></tr>
 <tr class="separator:a891ddc39c519e3561aa6277978cc2b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -397,7 +360,31 @@ the timeout is reached </li>
 <p><code> FileDescriptorActivity* fd_activity = dynamic_cast&lt;FileDescriptorActivity*&gt;(getActivity().get()); if (fd_activity) { if (fd_activity-&gt;<a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a770952053f01743cc517d5cb2d479ea4" title="True if one of the file descriptors has a problem (for instance it has been closed) ...">hasError()</a>) { } else if (fd_activity-&gt;<a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a9f5975a8dd88124fa9885cca379decaf" title="True if the base::RunnableInterface has been triggered because of a timeout, instead of because of ne...">hasTimeout()</a>) { } else { // If there is more than one FD, discriminate. Otherwise, // we don't need to use isUpdated if (fd_activity-&gt;isUpdated(device_fd)) { } else if (fd_activity-&gt;isUpdated(another_fd)) { } } } </code> </p>
 
 <p>Definition at line <a class="el" href="FileDescriptorActivity_8hpp_source.html#l00104">104</a> of file <a class="el" href="FileDescriptorActivity_8hpp_source.html">FileDescriptorActivity.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="abe8831aae12b67409f4a3c4055b3bf3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">ActivityInterface</a>&gt; <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#abe8831aae12b67409f4a3c4055b3bf3f">RTT::base::ActivityInterface::shared_ptr</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="_2home_2jenkins_2workspace_2rtt-doc_2rtt_2TaskContext_8hpp-example.html#a7">/home/jenkins/workspace/rtt-doc/rtt/TaskContext.hpp</a>.</dd>
+</dl>
+<p>Definition at line <a class="el" href="ActivityInterface_8hpp_source.html#l00077">77</a> of file <a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="afd5aa263867e5ebd5a187bbfe3b87262"></a>
 <div class="memitem">
 <div class="memproto">
@@ -628,6 +615,31 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00135">135</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
 
+</div>
+</div>
+<a class="anchor" id="aa068522076b0eb022ae5ab34bc1b0d82"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FileDescriptorActivity::~FileDescriptorActivity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00151">151</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
+
 <p>References <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00440">stop()</a>.</p>
 
 </div>
@@ -661,6 +673,35 @@ the timeout is reached </li>
 
 </div>
 </div>
+<a class="anchor" id="a02e98b358e83f845c5a43597406f464a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileDescriptorActivity::clearAllWatches </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove all FDs that are currently being watched. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivityInterface.html#a4c5183a8e3a8c8fc07b5e676862ad4db">RTT::extras::FileDescriptorActivityInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00206">206</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa7aebb13bd56f9409f0b2344a2e43c2d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -689,6 +730,35 @@ the timeout is reached </li>
 <p>Definition at line <a class="el" href="ActivityInterface_8hpp_source.html#l00073">73</a> of file <a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00047">RTT::base::RunnableInterface::~RunnableInterface()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7bd59de6d99286181b47a2f7ad1318d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::os::Thread::emergencyStop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00226">226</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8hpp_source.html#l00311">RTT::os::Thread::active</a>, <a class="el" href="Thread_8cpp_source.html#l00532">RTT::os::Thread::finalize()</a>, <a class="el" href="Thread_8hpp_source.html#l00321">RTT::os::Thread::inloop</a>, and <a class="el" href="Thread_8hpp_source.html#l00326">RTT::os::Thread::running</a>.</p>
+
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
 
 </div>
 </div>
@@ -759,7 +829,7 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00262">262</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
-<p>References <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a32b9c766a8c8af74c8a9adbe7281f61d">RTT::base::RunnableInterface::finalize()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a32b9c766a8c8af74c8a9adbe7281f61d">RTT::base::RunnableInterface::finalize()</a>, and <a class="el" href="ActivityInterface_8hpp_source.html#l00065">RTT::base::ActivityInterface::runner</a>.</p>
 
 <p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>.</p>
 
@@ -794,6 +864,137 @@ the timeout is reached </li>
 <p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00333">333</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
 <p>References <a class="el" href="Thread_8cpp_source.html#l00606">RTT::os::Thread::getCpuAffinity()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a23ef528eef224bfe21c69496d9cf14d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RTT::os::Thread::getMaxOverrun </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#a4d6db90f8766f20ab624c3f3983f44de">RTT::os::ThreadInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00643">643</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8hpp_source.html#l00347">RTT::os::Thread::maxOverRun</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1eb44bd232ed259b95e50ebd728ba2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * RTT::os::Thread::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read the name of this task. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#a21d1e14930cdc18b36b5122242b6aa14">RTT::os::ThreadInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00633">633</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00466">RTT::os::rtos_task_get_name()</a>.</p>
+
+<p>Referenced by <a class="el" href="CorbaDispatcher_8hpp_source.html#l00168">RTT::corba::CorbaDispatcher::initialize()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00086">RTT::extras::SimulationThread::SimulationThread()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>, and <a class="el" href="Thread_8cpp_source.html#l00325">RTT::os::Thread::~Thread()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a7ae66f0c1c77c17acf05eae57d3e11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> FileDescriptorActivity::getPeriod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the <em>intended</em> period (not the actual running period) </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1Activity.html#abd1ac406693189570b3aad112267a24a">RTT::Activity</a>.</p>
+
+<p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00156">156</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2b2d41c3d7b6a6e8c9b7b308e43845e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::os::Thread::getPeriod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceRTT.html#a3975a0691735afcdd8744e443df0715d">secs</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> &amp;&#160;</td>
+          <td class="paramname"><em>ns</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the periodicity of this thread (seconds, nanoseconds) </p>
+
+<p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00570">570</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8hpp_source.html#l00352">RTT::os::Thread::period</a>.</p>
 
 </div>
 </div>
@@ -898,6 +1099,37 @@ the timeout is reached </li>
 
 </div>
 </div>
+<a class="anchor" id="a77cc446f3e244790c48bf7a4124e592d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> * ActivityInterface::getRunner </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html" title="A class for running a certain piece of code in a thread. ">RunnableInterface</a> instance. </p>
+
+<p>Definition at line <a class="el" href="ActivityInterface_8cpp_source.html#l00070">70</a> of file <a class="el" href="ActivityInterface_8cpp_source.html">ActivityInterface.cpp</a>.</p>
+
+<p>References <a class="el" href="ActivityInterface_8hpp_source.html#l00065">RTT::base::ActivityInterface::runner</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00309">RTT::ExecutionEngine::setActivity()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a2f14393fe55e4e2e7d740b918adefbe7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -973,7 +1205,7 @@ the timeout is reached </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual RTOS_TASK* RTT::os::Thread::getTask </td>
+          <td class="memname">virtual <a class="el" href="structRTOS__TASK.html">RTOS_TASK</a>* RTT::os::Thread::getTask </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -986,7 +1218,7 @@ the timeout is reached </li>
 </table>
 </div><div class="memdoc">
 
-<p>Get the RTOS_TASK pointer. </p>
+<p>Get the <a class="el" href="structRTOS__TASK.html">RTOS_TASK</a> pointer. </p>
 <dl class="section note"><dt>Note</dt><dd>Using this function leads to non-portable code. It is here for users which wish to tweak OS specific thread settings. </dd></dl>
 
 <p>Implements <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#ab1d1abcb68728cd30853437905dfa6e5">RTT::os::ThreadInterface</a>.</p>
@@ -994,6 +1226,35 @@ the timeout is reached </li>
 <p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00205">205</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6773640897f8ae122da0b4e14630414a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="structRTOS__TASK.html">RTOS_TASK</a>* RTT::os::Thread::getTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>const version of the above. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#ac5c8cc24649a8109d3584461c820dd46">RTT::os::ThreadInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00210">210</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
 
 </div>
 </div>
@@ -1147,7 +1408,7 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00117">117</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
-<p>References <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a1fc18ba15bd1fd69759e127a2e466e65">RTT::base::RunnableInterface::initialize()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a1fc18ba15bd1fd69759e127a2e466e65">RTT::base::RunnableInterface::initialize()</a>, and <a class="el" href="ActivityInterface_8hpp_source.html#l00065">RTT::base::ActivityInterface::runner</a>.</p>
 
 </div>
 </div>
@@ -1215,7 +1476,7 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00329">329</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
-<p>References <a class="el" href="Activity_8hpp_source.html#l00228">RTT::Activity::update_period</a>.</p>
+<p>References <a class="el" href="Thread_8cpp_source.html#l00581">RTT::os::Thread::isPeriodic()</a>, and <a class="el" href="Activity_8hpp_source.html#l00228">RTT::Activity::update_period</a>.</p>
 
 </div>
 </div>
@@ -1249,6 +1510,35 @@ the timeout is reached </li>
 <p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00167">167</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
 
 <p>References <a class="el" href="Activity_8cpp_source.html#l00321">RTT::Activity::isRunning()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a40fb865c89b5d39d24f9a9f8ee11282e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ThreadInterface::isSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ThreadInterface_8cpp_source.html#l00058">58</a> of file <a class="el" href="ThreadInterface_8cpp_source.html">ThreadInterface.cpp</a>.</p>
+
+<p>References <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#ab1d1abcb68728cd30853437905dfa6e5">RTT::os::ThreadInterface::getTask()</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00216">RTT::os::rtos_task_is_self()</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::isSend()</a>.</p>
 
 </div>
 </div>
@@ -1351,7 +1641,7 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00303">303</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
 
-<p>References <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00424">step()</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00286">timeout()</a>, and <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00432">work()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::IOReady</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00424">step()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::TimeOut</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00286">timeout()</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::Trigger</a>, and <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00432">work()</a>.</p>
 
 </div>
 </div>
@@ -1389,7 +1679,7 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="ActivityInterface_8cpp_source.html#l00057">57</a> of file <a class="el" href="ActivityInterface_8cpp_source.html">ActivityInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>.</p>
+<p>References <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface::isActive()</a>, <a class="el" href="ActivityInterface_8hpp_source.html#l00065">RTT::base::ActivityInterface::runner</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00339">RTT::TaskContext::setActivity()</a>.</p>
 
@@ -1500,6 +1790,136 @@ the timeout is reached </li>
 
 </div>
 </div>
+<a class="anchor" id="adb74a93d70d3f4027f130d4063617cf4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::os::Thread::setMaxOverrun </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#a0f4d349019332e0e4facb3f72edfc44a">RTT::os::ThreadInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00638">638</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8hpp_source.html#l00347">RTT::os::Thread::maxOverRun</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25d3452af9a71ec58ad1434147144a42"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::os::Thread::setPeriod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceRTT.html#a3975a0691735afcdd8744e443df0715d">secs</a>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a>&#160;</td>
+          <td class="paramname"><em>ns</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the periodicity of this thread (seconds, nanoseconds) </p>
+
+<p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00542">542</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8hpp_source.html#l00352">RTT::os::Thread::period</a>, <a class="el" href="fosi__interface_8h.html#ab626c40620b37327259017af0c248c9d">rtos_sem_signal()</a>, <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, <a class="el" href="ecos_2fosi__internal_8cpp_source.html#l00106">RTT::os::rtos_task_make_periodic()</a>, and <a class="el" href="Thread_8hpp_source.html#l00336">RTT::os::Thread::sem</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a505857cee34f093923e8f63bf3e8cfda"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::os::Thread::setPeriod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ecos_2fosi_8h.html#a4ef906eef95148d61fa59dcb351d53a7">TIME_SPEC</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the periodicity of this thread. </p>
+
+<p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00565">565</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8cpp_source.html#l00536">RTT::os::Thread::setPeriod()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab945813a275686f6bbaf6e55c3e102a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FileDescriptorActivity::setPeriod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a>&#160;</td>
+          <td class="paramname"><em>period</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the <em>intended</em> period (not the actual running period) </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1Activity.html#a897a4d499ca2268500296406236ef39a">RTT::Activity</a>.</p>
+
+<p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00159">159</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a90198c8c137fe06f489455bd7584352f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1535,7 +1955,7 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00576">576</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="Thread_8hpp_source.html#l00352">RTT::os::Thread::period</a>, <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00406">RTT::os::rtos_task_set_priority()</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00406">RTT::os::rtos_task_set_priority()</a>.</p>
 
 </div>
 </div>
@@ -1579,7 +1999,7 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00469">469</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="threads_8cpp_source.html#l00046">RTT::os::CheckScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00488">RTT::os::Thread::getScheduler()</a>, <a class="el" href="Thread_8hpp_source.html#l00305">RTT::os::Thread::msched_type</a>, <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00466">RTT::os::rtos_task_get_name()</a>, <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00223">RTT::os::rtos_task_set_scheduler()</a>, and <a class="el" href="Thread_8hpp_source.html#l00336">RTT::os::Thread::sem</a>.</p>
+<p>References <a class="el" href="threads_8cpp_source.html#l00046">RTT::os::CheckScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00488">RTT::os::Thread::getScheduler()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Info</a>, <a class="el" href="Thread_8hpp_source.html#l00305">RTT::os::Thread::msched_type</a>, <a class="el" href="fosi__interface_8h.html#ab626c40620b37327259017af0c248c9d">rtos_sem_signal()</a>, <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00466">RTT::os::rtos_task_get_name()</a>, <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00223">RTT::os::rtos_task_set_scheduler()</a>, and <a class="el" href="Thread_8hpp_source.html#l00336">RTT::os::Thread::sem</a>.</p>
 
 <p>Referenced by <a class="el" href="SimulationThread_8cpp_source.html#l00086">RTT::extras::SimulationThread::SimulationThread()</a>.</p>
 
@@ -1616,6 +2036,8 @@ the timeout is reached </li>
 </dl>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00069">69</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8hpp_source.html#l00290">RTT::os::Thread::default_stack_size</a>.</p>
 
 </div>
 </div>
@@ -1724,6 +2146,8 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00177">177</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
 
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>.</p>
+
 <p>Referenced by <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00173">setTimeout()</a>.</p>
 
 </div>
@@ -1762,6 +2186,8 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00343">343</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
+<p>References <a class="el" href="Activity_8hpp_source.html#l00235">RTT::Activity::mabswaitpolicy</a>, and <a class="el" href="ecos_2fosi_8h_source.html#l00052">ORO_WAIT_ABS</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a64ecda39f8c91afde14b64aa71b67f90"></a>
@@ -1793,7 +2219,7 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00230">230</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
 
-<p>References <a class="el" href="Activity_8cpp_source.html#l00325">RTT::Activity::isActive()</a>, and <a class="el" href="Activity_8cpp_source.html#l00268">RTT::Activity::start()</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Activity_8cpp_source.html#l00325">RTT::Activity::isActive()</a>, and <a class="el" href="Activity_8cpp_source.html#l00268">RTT::Activity::start()</a>.</p>
 
 </div>
 </div>
@@ -1824,6 +2250,8 @@ the timeout is reached </li>
 <p>Reimplemented from <a class="el" href="classRTT_1_1Activity.html#a87b4be7d3090736f3a1ab36640e6e7f0">RTT::Activity</a>.</p>
 
 <p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00424">424</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
+
+<p>References <a class="el" href="ActivityInterface_8hpp_source.html#l00065">RTT::base::ActivityInterface::runner</a>, and <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">RTT::base::RunnableInterface::step()</a>.</p>
 
 <p>Referenced by <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00303">loop()</a>.</p>
 
@@ -1860,7 +2288,7 @@ the timeout is reached </li>
 
 <p>References <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>.</p>
 
-<p>Referenced by <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00135">FileDescriptorActivity()</a>.</p>
+<p>Referenced by <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00151">~FileDescriptorActivity()</a>.</p>
 
 </div>
 </div>
@@ -1891,9 +2319,9 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00621">621</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
 
-<p>References <a class="el" href="Thread_8hpp_source.html#l00311">RTT::os::Thread::active</a>, <a class="el" href="Thread_8hpp_source.html#l00316">RTT::os::Thread::prepareForExit</a>, <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00310">RTT::os::rtos_task_delete()</a>, and <a class="el" href="Thread_8hpp_source.html#l00336">RTT::os::Thread::sem</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00311">RTT::os::Thread::active</a>, <a class="el" href="Thread_8hpp_source.html#l00316">RTT::os::Thread::prepareForExit</a>, <a class="el" href="fosi__interface_8h.html#ab626c40620b37327259017af0c248c9d">rtos_sem_signal()</a>, <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00310">RTT::os::rtos_task_delete()</a>, and <a class="el" href="Thread_8hpp_source.html#l00336">RTT::os::Thread::sem</a>.</p>
 
-<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, and <a class="el" href="Activity_8cpp_source.html#l00104">RTT::Activity::~Activity()</a>.</p>
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00104">RTT::Activity::~Activity()</a>, and <a class="el" href="Thread_8cpp_source.html#l00325">RTT::os::Thread::~Thread()</a>.</p>
 
 </div>
 </div>
@@ -1924,6 +2352,97 @@ the timeout is reached </li>
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a190329785c1c7e4a542db833402a7811">RTT::base::ActivityInterface</a>.</p>
 
 <p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00113">113</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac6b17eb11b2a816e4b5804ff626c68f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int RTT::os::ThreadInterface::threadNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The unique thread number (within the same process). </p>
+
+<p>Definition at line <a class="el" href="ThreadInterface_8hpp_source.html#l00217">217</a> of file <a class="el" href="ThreadInterface_8hpp_source.html">ThreadInterface.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55607d1457744df8dc8b1644dd04dd89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FileDescriptorActivity::timeout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Always returns false. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1Activity.html#a8be589ef0d784a9c93f195ae1a17e35c">RTT::Activity</a>.</p>
+
+<p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00286">286</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00303">loop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af7a62d5013ac78a6cb5e0414eabd09d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FileDescriptorActivity::trigger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Force calling <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113" title="Called by loop() when data is available on the file descriptor. ">step()</a> even if no data is available on the file descriptor, and returns true if the signalling was successful. </p>
+
+<p>Reimplemented from <a class="el" href="classRTT_1_1Activity.html#a7c625d705a155061c0f7a258978b26af">RTT::Activity</a>.</p>
+
+<p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00273">273</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
+
+<p>References <a class="el" href="Activity_8cpp_source.html#l00325">RTT::Activity::isActive()</a>.</p>
 
 </div>
 </div>
@@ -1999,6 +2518,8 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00188">188</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
 
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a343e98d60b9b52b390c889e3fde3a149"></a>
@@ -2011,7 +2532,7 @@ the timeout is reached </li>
         <tr>
           <td class="memname">void FileDescriptorActivity::work </td>
           <td>(</td>
-          <td class="paramtype">base::RunnableInterface::WorkReason&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2">base::RunnableInterface::WorkReason</a>&#160;</td>
           <td class="paramname"><em>reason</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2026,15 +2547,556 @@ the timeout is reached </li>
 <p>Called by <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a6c8e8b54ca6f7dbf6ef902a26f039231">loop()</a> when data is available on the file descriptor. </p>
 <p>By default, it calls <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#ac9e8bef0993c0fd1219567c61673d113" title="Called by loop() when data is available on the file descriptor. ">step()</a> on the associated runner interface (if any) </p>
 
-<p>Reimplemented from <a class="el" href="classRTT_1_1Activity.html">RTT::Activity</a>.</p>
+<p>Reimplemented from <a class="el" href="classRTT_1_1Activity.html#a18cf57277b0c74d5ec29e6219004074f">RTT::Activity</a>.</p>
 
 <p>Definition at line <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00432">432</a> of file <a class="el" href="FileDescriptorActivity_8cpp_source.html">FileDescriptorActivity.cpp</a>.</p>
+
+<p>References <a class="el" href="ActivityInterface_8hpp_source.html#l00065">RTT::base::ActivityInterface::runner</a>, and <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00071">RTT::base::RunnableInterface::work()</a>.</p>
 
 <p>Referenced by <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00303">loop()</a>.</p>
 
 </div>
 </div>
+<a class="anchor" id="ab375c5a6f35fb2e7368bd16a5e13fa2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::os::Thread::yield </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Yields (put to the back of the scheduler queue) the calling thread. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html#ad241b1ba9de51462ffdbcf043dae68b7">RTT::os::ThreadInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="Thread_8cpp_source.html#l00616">616</a> of file <a class="el" href="Thread_8cpp_source.html">Thread.cpp</a>.</p>
+
+<p>References <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, and <a class="el" href="ecos_2fosi__internal_8cpp_source.html#l00096">RTT::os::rtos_task_yield()</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="adae4e5b4743923f0797b26e939ffe5b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::os::Thread::active</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>When set to 1, the thread will run, when set to 0 the thread will stop ( <a class="el" href="classRTT_1_1os_1_1Thread.html#a0e351c9ab63970389eee3f2e9b602adb" title="Returns whether the thread is active. ">isActive()</a> ) </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00311">311</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00226">RTT::os::Thread::emergencyStop()</a>, <a class="el" href="Thread_8cpp_source.html#l00464">RTT::os::Thread::isActive()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00621">RTT::os::Thread::terminate()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab87576530375ca0b5570cc14e7b65ca5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1MutexRecursive.html">MutexRecursive</a> RTT::os::Thread::breaker</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used to implement synchronising <a class="el" href="classRTT_1_1os_1_1Thread.html#a138e3536f1de8b4361f0db9ad9dfd07d">breakLoop()</a>. </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00341">341</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0963ed3103fccd151ec151398a3a20e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int RTT::os::Thread::default_stack_size = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00290">290</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00069">RTT::os::Thread::setStackSize()</a>, and <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad7cd90b220ad93c165775e8348e9aed8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::os::Thread::inloop</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is true when in the loop (<a class="el" href="classRTT_1_1os_1_1Thread.html#a49de57cf538992cb54fdc20658094aab" title="Returns whether the thread is running. ">isRunning()</a> ) </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00321">321</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00226">RTT::os::Thread::emergencyStop()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7374ef37bb1b188e6e3c79dd4f6e231e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RTT::os::Thread::lock_timeout_no_period_in_s = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>configuration of the lock timeout in seconds </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00295">295</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00408">RTT::os::Thread::getStopTimeout()</a>, and <a class="el" href="Thread_8cpp_source.html#l00071">RTT::os::Thread::setLockTimeoutNoPeriod()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a891ddc39c519e3561aa6277978cc2b89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RTT::os::Thread::lock_timeout_period_factor = 10.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>configuration of the lock timeout for periodic tasks in seconds </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00300">300</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00408">RTT::os::Thread::getStopTimeout()</a>, and <a class="el" href="Thread_8cpp_source.html#l00073">RTT::os::Thread::setLockTimeoutPeriodFactor()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a159ee935879a03376aad074b9e6b5b20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::Activity::mabswaitpolicy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00235">235</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00343">RTT::Activity::setWaitPeriodPolicy()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf2c15d2b691b5401695e038296cca69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RTT::os::Thread::maxOverRun</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The maximum times a periodic overrun may happen, or -1 if unlimited. </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00347">347</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00643">RTT::os::Thread::getMaxOverrun()</a>, <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Thread_8cpp_source.html#l00638">RTT::os::Thread::setMaxOverrun()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94f375df5f026684f8724185b930c584"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RTT::os::Thread::msched_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Desired scheduler type. </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00305">305</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00488">RTT::os::Thread::getScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00469">RTT::os::Thread::setScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e5c4d33c575c00827813bf1bd44c6ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1Condition.html">os::Condition</a> RTT::Activity::msg_cond</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00224">224</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00160">RTT::Activity::timeout()</a>, and <a class="el" href="Activity_8cpp_source.html#l00146">RTT::Activity::trigger()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa7d44ac0d07d07e53c9e226859d7cc7c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1Mutex.html">os::Mutex</a> RTT::Activity::msg_lock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00223">223</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6f518c5967ab1f28b15ed9868906ad9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::Activity::mstopRequested</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00234">234</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Activity_8cpp_source.html#l00268">RTT::Activity::start()</a>, and <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab64f826491a648a1067e96c898d880c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::Activity::mtimeout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>When set to true, a next cycle will be a TimeOut cycle. </p>
+
+<p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00233">233</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00160">RTT::Activity::timeout()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02acd637f8631315695dfd8a8cdd3de6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ecos_2fosi_8h.html#a384fff99a7383ab85bc17d20e28bb581">NANO_TIME</a> RTT::os::Thread::period</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The period as it is passed to the operating system. </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00352">352</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00570">RTT::os::Thread::getPeriod()</a>, <a class="el" href="Thread_8cpp_source.html#l00596">RTT::os::Thread::getPeriodNS()</a>, <a class="el" href="Thread_8cpp_source.html#l00488">RTT::os::Thread::getScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00408">RTT::os::Thread::getStopTimeout()</a>, <a class="el" href="Thread_8cpp_source.html#l00581">RTT::os::Thread::isPeriodic()</a>, <a class="el" href="Thread_8cpp_source.html#l00542">RTT::os::Thread::setPeriod()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4ad0eccac77f5c77cbd5690c7de784e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::os::Thread::prepareForExit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal the thread that it should exit. </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00316">316</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00621">RTT::os::Thread::terminate()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf6258b13c0ed5c38eb045430b97fcd9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structRTOS__TASK.html">RTOS_TASK</a> RTT::os::Thread::rtos_task</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The realtime task structure created by this object. </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00331">331</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00606">RTT::os::Thread::getCpuAffinity()</a>, <a class="el" href="Thread_8cpp_source.html#l00633">RTT::os::Thread::getName()</a>, <a class="el" href="Thread_8cpp_source.html#l00611">RTT::os::Thread::getPid()</a>, <a class="el" href="Thread_8cpp_source.html#l00586">RTT::os::Thread::getPriority()</a>, <a class="el" href="Thread_8cpp_source.html#l00488">RTT::os::Thread::getScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00601">RTT::os::Thread::setCpuAffinity()</a>, <a class="el" href="Thread_8cpp_source.html#l00542">RTT::os::Thread::setPeriod()</a>, <a class="el" href="Thread_8cpp_source.html#l00576">RTT::os::Thread::setPriority()</a>, <a class="el" href="Thread_8cpp_source.html#l00469">RTT::os::Thread::setScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00648">RTT::os::Thread::setWaitPeriodPolicy()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00621">RTT::os::Thread::terminate()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, and <a class="el" href="Thread_8cpp_source.html#l00616">RTT::os::Thread::yield()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0711c7e698f87ead4e89309c9fc84910"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a>* RTT::base::ActivityInterface::runner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ActivityInterface_8hpp_source.html#l00065">65</a> of file <a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ActivityInterface_8cpp_source.html#l00045">RTT::base::ActivityInterface::ActivityInterface()</a>, <a class="el" href="Activity_8cpp_source.html#l00256">RTT::Activity::breakLoop()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00202">RTT::extras::SlaveActivity::execute()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00214">RTT::extras::PeriodicActivity::finalize()</a>, <a class="el" href="Activity_8cpp_source.html#l00262">RTT::Activity::finalize()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00070">RTT::base::ActivityInterface::getRunner()</a>, <a class="el" href="Activity_8cpp_source.html#l00117">RTT::Activity::initialize()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00178">RTT::extras::PeriodicActivity::initialize()</a>, <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00102">RTT::extras::SequentialActivity::start()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00130">RTT::extras::SlaveActivity::start()</a>, <a class="el" href="Activity_8cpp_source.html#l00123">RTT::Activity::step()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00200">RTT::extras::PeriodicActivity::step()</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00424">step()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00117">RTT::extras::SequentialActivity::stop()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00154">RTT::extras::SlaveActivity::stop()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00145">RTT::extras::SequentialActivity::trigger()</a>, <a class="el" href="FileDescriptorSimulationActivity_8cpp_source.html#l00245">RTT::extras::FileDescriptorSimulationActivity::work()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00207">RTT::extras::PeriodicActivity::work()</a>, <a class="el" href="Activity_8cpp_source.html#l00128">RTT::Activity::work()</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00432">work()</a>, and <a class="el" href="ActivityInterface_8cpp_source.html#l00050">RTT::base::ActivityInterface::~ActivityInterface()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6dcdfd94eb560ea59f26498299ec90d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::os::Thread::running</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates if <a class="el" href="classRTT_1_1os_1_1Thread.html#aa818917a1c75631736a079246328d9a8">step()</a> or <a class="el" href="classRTT_1_1os_1_1Thread.html#ae1d49c238372d1336e21ec9b3adc6349">loop()</a> should be executed. </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00326">326</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00226">RTT::os::Thread::emergencyStop()</a>, <a class="el" href="Thread_8cpp_source.html#l00459">RTT::os::Thread::isRunning()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64bc10f4712bbd143cc447169b77e594"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ecos_2fosi_8h.html#a3fba3ae04ecbaff331cc1fcf6ff35ac2">rt_sem_t</a> RTT::os::Thread::sem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The semaphore used for starting the thread. </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00336">336</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00542">RTT::os::Thread::setPeriod()</a>, <a class="el" href="Thread_8cpp_source.html#l00469">RTT::os::Thread::setScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00621">RTT::os::Thread::terminate()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>, and <a class="el" href="Thread_8cpp_source.html#l00325">RTT::os::Thread::~Thread()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5db64c49d83e14a634c0e8cf6422a53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RTT::os::Thread::stopTimeout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The timeout, in seconds, for <a class="el" href="classRTT_1_1os_1_1Thread.html#a49ccf6e01b1cbde69452d4449de4f237" title="Stop the Thread. ">stop()</a> </p>
+
+<p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00357">357</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00408">RTT::os::Thread::getStopTimeout()</a>, and <a class="el" href="Thread_8cpp_source.html#l00403">RTT::os::Thread::setStopTimeout()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a25fb4baabceaf85e83ccb1f8e4d7d99c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2058,6 +3120,34 @@ the timeout is reached </li>
 
 <p>Definition at line <a class="el" href="ThreadInterface_8hpp_source.html#l00229">229</a> of file <a class="el" href="ThreadInterface_8hpp_source.html">ThreadInterface.hpp</a>.</p>
 
+<p>Referenced by <a class="el" href="ThreadInterface_8cpp_source.html#l00045">RTT::os::ThreadInterface::ThreadInterface()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f728c55e42aef29228c92991619d427"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double RTT::Activity::update_period</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The period at which the <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a> steps(). </p>
+
+<p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00228">228</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00142">RTT::Activity::getPeriod()</a>, <a class="el" href="Activity_8cpp_source.html#l00329">RTT::Activity::isPeriodic()</a>, <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Activity_8cpp_source.html#l00133">RTT::Activity::setPeriod()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00160">RTT::Activity::timeout()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -2067,7 +3157,7 @@ the timeout is reached </li>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:22 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

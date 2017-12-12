@@ -64,19 +64,25 @@
  <a href="classRTT_1_1types_1_1BinaryOperator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="OperatorTypes_8hpp_source.html">rtt/types/OperatorTypes.hpp</a>&gt;</code></p>
-
-<p>Inherits RTT::types::BinaryOp.</p>
+<div class="dynheader">
+Inheritance diagram for RTT::types::BinaryOperator&lt; function &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classRTT_1_1types_1_1BinaryOperator.png" usemap="#RTT::types::BinaryOperator_3C_20function_20_3E_map" alt=""/>
+  <map id="RTT::types::BinaryOperator_3C_20function_20_3E_map" name="RTT::types::BinaryOperator&lt; function &gt;_map">
+<area href="classRTT_1_1types_1_1BinaryOp.html" alt="RTT::types::BinaryOp" shape="rect" coords="0,0,233,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac1f73443a2d4acc7e3ccb43493a04bb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1f73443a2d4acc7e3ccb43493a04bb4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BinaryOperator</b> (const char *op, function f)</td></tr>
+<tr class="memitem:ac1f73443a2d4acc7e3ccb43493a04bb4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1types_1_1BinaryOperator.html#ac1f73443a2d4acc7e3ccb43493a04bb4">BinaryOperator</a> (const char *op, function f)</td></tr>
 <tr class="separator:ac1f73443a2d4acc7e3ccb43493a04bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5fdc11f3a04a4c0d6651549ecd949d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5fdc11f3a04a4c0d6651549ecd949d1"></a>
-<a class="el" href="classRTT_1_1internal_1_1DataSource.html">internal::DataSource</a>&lt; result_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>build</b> (const std::string &amp;op, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *a, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *b)</td></tr>
+<tr class="memitem:af5fdc11f3a04a4c0d6651549ecd949d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1DataSource.html">internal::DataSource</a>&lt; result_t &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1types_1_1BinaryOperator.html#af5fdc11f3a04a4c0d6651549ecd949d1">build</a> (const std::string &amp;op, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *a, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *b)</td></tr>
+<tr class="memdesc:af5fdc11f3a04a4c0d6651549ecd949d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">If op is the operator you are responsible for, and if the argument <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a>'s are of the correct type, then return an appropriate <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a> ( i.e.  <a href="#af5fdc11f3a04a4c0d6651549ecd949d1">More...</a><br /></td></tr>
 <tr class="separator:af5fdc11f3a04a4c0d6651549ecd949d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cf0ccc639f0a384dfc240e9900bd627"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cf0ccc639f0a384dfc240e9900bd627"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isExactMatch</b> (const std::string &amp;op, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *a, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *b)</td></tr>
+<tr class="memitem:a5cf0ccc639f0a384dfc240e9900bd627"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1types_1_1BinaryOperator.html#a5cf0ccc639f0a384dfc240e9900bd627">isExactMatch</a> (const std::string &amp;op, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *a, <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *b)</td></tr>
+<tr class="memdesc:a5cf0ccc639f0a384dfc240e9900bd627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this binary operator matches <em>op</em>, and <em>a</em> and <em>b</em> are the exact types this operator expects.  <a href="#a5cf0ccc639f0a384dfc240e9900bd627">More...</a><br /></td></tr>
 <tr class="separator:a5cf0ccc639f0a384dfc240e9900bd627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -86,13 +92,154 @@ class RTT::types::BinaryOperator&lt; function &gt;</h3>
 <p>An operator which reads a two DataSources and returns a modified result. </p>
 
 <p>Definition at line <a class="el" href="OperatorTypes_8hpp_source.html#l00084">84</a> of file <a class="el" href="OperatorTypes_8hpp_source.html">OperatorTypes.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ac1f73443a2d4acc7e3ccb43493a04bb4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename function&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1types_1_1BinaryOperator.html">RTT::types::BinaryOperator</a>&lt; function &gt;::<a class="el" href="classRTT_1_1types_1_1BinaryOperator.html">BinaryOperator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">function&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="OperatorTypes_8hpp_source.html#l00093">93</a> of file <a class="el" href="OperatorTypes_8hpp_source.html">OperatorTypes.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af5fdc11f3a04a4c0d6651549ecd949d1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename function&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1DataSource.html">internal::DataSource</a>&lt;result_t&gt;* <a class="el" href="classRTT_1_1types_1_1BinaryOperator.html">RTT::types::BinaryOperator</a>&lt; function &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If op is the operator you are responsible for, and if the argument <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a>'s are of the correct type, then return an appropriate <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a> ( i.e. </p>
+<p>a <a class="el" href="classRTT_1_1internal_1_1DataSource.html" title="DataSource is a base class representing a generic way to read data of type T. ">internal::DataSource</a> that will apply a certain operation on the values it gets from its argument DataSources, and will return that value ). Otherwise, return 0. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1types_1_1BinaryOp.html#aca2b143bf1be92aff05b7e536e54cfa6">RTT::types::BinaryOp</a>.</p>
+
+<p>Definition at line <a class="el" href="OperatorTypes_8hpp_source.html#l00097">97</a> of file <a class="el" href="OperatorTypes_8hpp_source.html">OperatorTypes.hpp</a>.</p>
+
+<p>References <a class="el" href="TypeInfo_8cpp_source.html#l00118">RTT::types::TypeInfo::convert()</a>, <a class="el" href="DataSourceTypeInfo_8inl_source.html#l00026">RTT::internal::DataSourceTypeInfo&lt; T &gt;::getTypeInfo()</a>, and <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a79c71f0c57abdb17f557ff1a0fa62399">RTT::base::DataSourceBase::getTypeInfo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5cf0ccc639f0a384dfc240e9900bd627"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename function&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classRTT_1_1types_1_1BinaryOperator.html">RTT::types::BinaryOperator</a>&lt; function &gt;::isExactMatch </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html">base::DataSourceBase</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if this binary operator matches <em>op</em>, and <em>a</em> and <em>b</em> are the exact types this operator expects. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1types_1_1BinaryOp.html#a6ff0c2d8b4143062f1251481c70432ce">RTT::types::BinaryOp</a>.</p>
+
+<p>Definition at line <a class="el" href="OperatorTypes_8hpp_source.html#l00115">115</a> of file <a class="el" href="OperatorTypes_8hpp_source.html">OperatorTypes.hpp</a>.</p>
+
+<p>References <a class="el" href="DataSourceTypeInfo_8inl_source.html#l00026">RTT::internal::DataSourceTypeInfo&lt; T &gt;::getTypeInfo()</a>, and <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#a79c71f0c57abdb17f557ff1a0fa62399">RTT::base::DataSourceBase::getTypeInfo()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>rtt/types/<a class="el" href="OperatorTypes_8hpp_source.html">OperatorTypes.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

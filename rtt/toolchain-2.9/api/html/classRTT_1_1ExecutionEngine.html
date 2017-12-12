@@ -80,9 +80,9 @@ Inheritance diagram for RTT::ExecutionEngine:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a93db616570e910bcbdf835eebd1d09a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93db616570e910bcbdf835eebd1d09a2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>WorkReason</b> { <b>TimeOut</b> = 0, 
-<b>Trigger</b>, 
-<b>IOReady</b>
+<tr class="memitem:a93db616570e910bcbdf835eebd1d09a2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2">WorkReason</a> { <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2adda55d6e664961143becf9fe14075f31">TimeOut</a> = 0, 
+<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2ac9eae0cbdd07910ee0798825e996235e">Trigger</a>, 
+<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2a0c82d259bcd937f796bb01c6848f1a71">IOReady</a>
  }</td></tr>
 <tr class="separator:a93db616570e910bcbdf835eebd1d09a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -91,6 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1dca09fcf4886ae4e7bd677201a7489a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a1dca09fcf4886ae4e7bd677201a7489a">ExecutionEngine</a> (<a class="el" href="classRTT_1_1base_1_1TaskCore.html">base::TaskCore</a> *owner=0)</td></tr>
 <tr class="memdesc:a1dca09fcf4886ae4e7bd677201a7489a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an execution engine with a internal::CommandProcessor, scripting::ProgramProcessor and StateMachineProcessor.  <a href="#a1dca09fcf4886ae4e7bd677201a7489a">More...</a><br /></td></tr>
 <tr class="separator:a1dca09fcf4886ae4e7bd677201a7489a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631bf914302f86d0219bcdbd4e86728b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a631bf914302f86d0219bcdbd4e86728b">~ExecutionEngine</a> ()</td></tr>
+<tr class="separator:a631bf914302f86d0219bcdbd4e86728b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32a0b5dbeb1b46b264a938c6d3bfe69b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1TaskCore.html">base::TaskCore</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a32a0b5dbeb1b46b264a938c6d3bfe69b">getParent</a> ()</td></tr>
 <tr class="memdesc:a32a0b5dbeb1b46b264a938c6d3bfe69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classRTT_1_1base_1_1TaskCore.html" title="The minimal Orocos task. ">base::TaskCore</a> which created this <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>.  <a href="#a32a0b5dbeb1b46b264a938c6d3bfe69b">More...</a><br /></td></tr>
 <tr class="separator:a32a0b5dbeb1b46b264a938c6d3bfe69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,9 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d22ea9534992a8e6416ec6838d73b84"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a1d22ea9534992a8e6416ec6838d73b84">stopTask</a> (<a class="el" href="classRTT_1_1base_1_1TaskCore.html">base::TaskCore</a> *task)</td></tr>
 <tr class="memdesc:a1d22ea9534992a8e6416ec6838d73b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops executing the updateHook of <em>task</em>.  <a href="#a1d22ea9534992a8e6416ec6838d73b84">More...</a><br /></td></tr>
 <tr class="separator:a1d22ea9534992a8e6416ec6838d73b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af371ca99138fb1b44857e3f796fa9477"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af371ca99138fb1b44857e3f796fa9477"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#af371ca99138fb1b44857e3f796fa9477">setExceptionTask</a> ()</td></tr>
-<tr class="memdesc:af371ca99138fb1b44857e3f796fa9477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the 'owner' task in the exception state. <br /></td></tr>
+<tr class="memitem:af371ca99138fb1b44857e3f796fa9477"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#af371ca99138fb1b44857e3f796fa9477">setExceptionTask</a> ()</td></tr>
+<tr class="memdesc:af371ca99138fb1b44857e3f796fa9477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the 'owner' task in the exception state.  <a href="#af371ca99138fb1b44857e3f796fa9477">More...</a><br /></td></tr>
 <tr class="separator:af371ca99138fb1b44857e3f796fa9477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e9ba95daa969ce48537a862fb513bd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a6e9ba95daa969ce48537a862fb513bd7">setMaster</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *master)</td></tr>
 <tr class="memdesc:a6e9ba95daa969ce48537a862fb513bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the master <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>.  <a href="#a6e9ba95daa969ce48537a862fb513bd7">More...</a><br /></td></tr>
@@ -152,35 +153,28 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5a1d79b5da733c511d90d8b4562de5eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a5a1d79b5da733c511d90d8b4562de5eb">waitAndProcessFunctions</a> (boost::function&lt; bool(void)&gt; const &amp;pred)</td></tr>
 <tr class="memdesc:a5a1d79b5da733c511d90d8b4562de5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if you wish to block on a function completing in the Execution Engine and execute it.  <a href="#a5a1d79b5da733c511d90d8b4562de5eb">More...</a><br /></td></tr>
 <tr class="separator:a5a1d79b5da733c511d90d8b4562de5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a081fe8bd03ae9984f5ff51435fa0da87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a081fe8bd03ae9984f5ff51435fa0da87"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>processMessages</b> ()</td></tr>
+<tr class="memitem:a081fe8bd03ae9984f5ff51435fa0da87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a081fe8bd03ae9984f5ff51435fa0da87">processMessages</a> ()</td></tr>
 <tr class="separator:a081fe8bd03ae9984f5ff51435fa0da87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17f69ba3dcac8f33dda27ca0d4dd840b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17f69ba3dcac8f33dda27ca0d4dd840b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>processPortCallbacks</b> ()</td></tr>
+<tr class="memitem:a17f69ba3dcac8f33dda27ca0d4dd840b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a17f69ba3dcac8f33dda27ca0d4dd840b">processPortCallbacks</a> ()</td></tr>
 <tr class="separator:a17f69ba3dcac8f33dda27ca0d4dd840b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf869c0f569b1d1ddc75f5fd3e68afc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf869c0f569b1d1ddc75f5fd3e68afc6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>processFunctions</b> ()</td></tr>
+<tr class="memitem:adf869c0f569b1d1ddc75f5fd3e68afc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#adf869c0f569b1d1ddc75f5fd3e68afc6">processFunctions</a> ()</td></tr>
 <tr class="separator:adf869c0f569b1d1ddc75f5fd3e68afc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10950bed8d5ff17dc5beee9dd41772e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10950bed8d5ff17dc5beee9dd41772e8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>processHooks</b> ()</td></tr>
+<tr class="memitem:a10950bed8d5ff17dc5beee9dd41772e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a10950bed8d5ff17dc5beee9dd41772e8">processHooks</a> ()</td></tr>
 <tr class="separator:a10950bed8d5ff17dc5beee9dd41772e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37a60f7b0673bab85e3c024903aed7ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37a60f7b0673bab85e3c024903aed7ca"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a37a60f7b0673bab85e3c024903aed7ca">initialize</a> ()</td></tr>
-<tr class="memdesc:a37a60f7b0673bab85e3c024903aed7ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called before the first periodical execution of <em><a class="el" href="classRTT_1_1ExecutionEngine.html#aaae452e029ed5e188ac76d9447befc6a" title="Executes (in that order) Messages, Functions and updateHook() functions of this TaskContext and its c...">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the thread is started. <br /></td></tr>
+<tr class="memitem:a37a60f7b0673bab85e3c024903aed7ca"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a37a60f7b0673bab85e3c024903aed7ca">initialize</a> ()</td></tr>
+<tr class="memdesc:a37a60f7b0673bab85e3c024903aed7ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called before the first periodical execution of <em><a class="el" href="classRTT_1_1ExecutionEngine.html#aaae452e029ed5e188ac76d9447befc6a" title="Executes (in that order) Messages, Functions and updateHook() functions of this TaskContext and its c...">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the thread is started.  <a href="#a37a60f7b0673bab85e3c024903aed7ca">More...</a><br /></td></tr>
 <tr class="separator:a37a60f7b0673bab85e3c024903aed7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaae452e029ed5e188ac76d9447befc6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaae452e029ed5e188ac76d9447befc6a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#aaae452e029ed5e188ac76d9447befc6a">step</a> ()</td></tr>
-<tr class="memdesc:aaae452e029ed5e188ac76d9447befc6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes (in that order) Messages, Functions and updateHook() functions of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> and its children. <br /></td></tr>
+<tr class="memitem:aaae452e029ed5e188ac76d9447befc6a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#aaae452e029ed5e188ac76d9447befc6a">step</a> ()</td></tr>
+<tr class="memdesc:aaae452e029ed5e188ac76d9447befc6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes (in that order) Messages, Functions and updateHook() functions of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> and its children.  <a href="#aaae452e029ed5e188ac76d9447befc6a">More...</a><br /></td></tr>
 <tr class="separator:aaae452e029ed5e188ac76d9447befc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8cafe41e40c69803988744e07dfcb72"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#ae8cafe41e40c69803988744e07dfcb72">work</a> (RunnableInterface::WorkReason reason)</td></tr>
+<tr class="memitem:ae8cafe41e40c69803988744e07dfcb72"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#ae8cafe41e40c69803988744e07dfcb72">work</a> (<a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2">RunnableInterface::WorkReason</a> reason)</td></tr>
 <tr class="memdesc:ae8cafe41e40c69803988744e07dfcb72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identical to <a class="el" href="classRTT_1_1ExecutionEngine.html#aaae452e029ed5e188ac76d9447befc6a" title="Executes (in that order) Messages, Functions and updateHook() functions of this TaskContext and its c...">step()</a> but gives a reason why the function was called.  <a href="#ae8cafe41e40c69803988744e07dfcb72">More...</a><br /></td></tr>
 <tr class="separator:ae8cafe41e40c69803988744e07dfcb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26205393f406511efbf43360af25f4bb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a26205393f406511efbf43360af25f4bb">breakLoop</a> ()</td></tr>
 <tr class="memdesc:a26205393f406511efbf43360af25f4bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called by the framework to break out of the <em><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> method.  <a href="#a26205393f406511efbf43360af25f4bb">More...</a><br /></td></tr>
 <tr class="separator:a26205393f406511efbf43360af25f4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a968d06304e043aa67075f5da402eaa9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a968d06304e043aa67075f5da402eaa9a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a968d06304e043aa67075f5da402eaa9a">finalize</a> ()</td></tr>
-<tr class="memdesc:a968d06304e043aa67075f5da402eaa9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called after the last periodical execution of <em><a class="el" href="classRTT_1_1ExecutionEngine.html#aaae452e029ed5e188ac76d9447befc6a" title="Executes (in that order) Messages, Functions and updateHook() functions of this TaskContext and its c...">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the RunnableInterface is stopped. <br /></td></tr>
+<tr class="memitem:a968d06304e043aa67075f5da402eaa9a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a968d06304e043aa67075f5da402eaa9a">finalize</a> ()</td></tr>
+<tr class="memdesc:a968d06304e043aa67075f5da402eaa9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be called after the last periodical execution of <em><a class="el" href="classRTT_1_1ExecutionEngine.html#aaae452e029ed5e188ac76d9447befc6a" title="Executes (in that order) Messages, Functions and updateHook() functions of this TaskContext and its c...">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the RunnableInterface is stopped.  <a href="#a968d06304e043aa67075f5da402eaa9a">More...</a><br /></td></tr>
 <tr class="separator:a968d06304e043aa67075f5da402eaa9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e767baa0ee365ed77142e755bc51323"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a3e767baa0ee365ed77142e755bc51323">hasWork</a> ()</td></tr>
 <tr class="memdesc:a3e767baa0ee365ed77142e755bc51323"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is for 'intelligent' activity implementations that wish to see if it is required to call <a class="el" href="classRTT_1_1ExecutionEngine.html#aaae452e029ed5e188ac76d9447befc6a" title="Executes (in that order) Messages, Functions and updateHook() functions of this TaskContext and its c...">step()</a> (again).  <a href="#a3e767baa0ee365ed77142e755bc51323">More...</a><br /></td></tr>
@@ -188,27 +182,21 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a6fc9359abc8c2d9c484763618b562f50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fc9359abc8c2d9c484763618b562f50"></a>
-<a class="el" href="classRTT_1_1base_1_1TaskCore.html">base::TaskCore</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a6fc9359abc8c2d9c484763618b562f50">taskc</a></td></tr>
-<tr class="memdesc:a6fc9359abc8c2d9c484763618b562f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parent or 'owner' of this <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>, may be null. <br /></td></tr>
+<tr class="memitem:a6fc9359abc8c2d9c484763618b562f50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1TaskCore.html">base::TaskCore</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a6fc9359abc8c2d9c484763618b562f50">taskc</a></td></tr>
+<tr class="memdesc:a6fc9359abc8c2d9c484763618b562f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parent or 'owner' of this <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>, may be null.  <a href="#a6fc9359abc8c2d9c484763618b562f50">More...</a><br /></td></tr>
 <tr class="separator:a6fc9359abc8c2d9c484763618b562f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49ec437ba2d6d809b9b08472c732c9d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49ec437ba2d6d809b9b08472c732c9d8"></a>
-<a class="el" href="classRTT_1_1internal_1_1MWSRQueue.html">internal::MWSRQueue</a>&lt; <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html">base::DisposableInterface</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a49ec437ba2d6d809b9b08472c732c9d8">mqueue</a></td></tr>
-<tr class="memdesc:a49ec437ba2d6d809b9b08472c732c9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Our Message queue. <br /></td></tr>
+<tr class="memitem:a49ec437ba2d6d809b9b08472c732c9d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1MWSRQueue.html">internal::MWSRQueue</a>&lt; <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html">base::DisposableInterface</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a49ec437ba2d6d809b9b08472c732c9d8">mqueue</a></td></tr>
+<tr class="memdesc:a49ec437ba2d6d809b9b08472c732c9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Our Message queue.  <a href="#a49ec437ba2d6d809b9b08472c732c9d8">More...</a><br /></td></tr>
 <tr class="separator:a49ec437ba2d6d809b9b08472c732c9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b3d929bd060348ccca63c5704bf0346"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b3d929bd060348ccca63c5704bf0346"></a>
-<a class="el" href="classRTT_1_1internal_1_1MWSRQueue.html">internal::MWSRQueue</a>&lt; <a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a6b3d929bd060348ccca63c5704bf0346">port_queue</a></td></tr>
-<tr class="memdesc:a6b3d929bd060348ccca63c5704bf0346"><td class="mdescLeft">&#160;</td><td class="mdescRight">The port callback queue. <br /></td></tr>
+<tr class="memitem:a6b3d929bd060348ccca63c5704bf0346"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1MWSRQueue.html">internal::MWSRQueue</a>&lt; <a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a6b3d929bd060348ccca63c5704bf0346">port_queue</a></td></tr>
+<tr class="memdesc:a6b3d929bd060348ccca63c5704bf0346"><td class="mdescLeft">&#160;</td><td class="mdescRight">The port callback queue.  <a href="#a6b3d929bd060348ccca63c5704bf0346">More...</a><br /></td></tr>
 <tr class="separator:a6b3d929bd060348ccca63c5704bf0346"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a466a68650254e029d4eea6722ba5915a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a466a68650254e029d4eea6722ba5915a"></a>
-<a class="el" href="classRTT_1_1internal_1_1MWSRQueue.html">internal::MWSRQueue</a>&lt; <a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html">base::ExecutableInterface</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a466a68650254e029d4eea6722ba5915a">f_queue</a></td></tr>
-<tr class="memdesc:a466a68650254e029d4eea6722ba5915a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores all functions we're executing. <br /></td></tr>
+<tr class="memitem:a466a68650254e029d4eea6722ba5915a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1internal_1_1MWSRQueue.html">internal::MWSRQueue</a>&lt; <a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html">base::ExecutableInterface</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a466a68650254e029d4eea6722ba5915a">f_queue</a></td></tr>
+<tr class="memdesc:a466a68650254e029d4eea6722ba5915a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores all functions we're executing.  <a href="#a466a68650254e029d4eea6722ba5915a">More...</a><br /></td></tr>
 <tr class="separator:a466a68650254e029d4eea6722ba5915a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c83aec88698b7df69f14aeb5b1d23ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c83aec88698b7df69f14aeb5b1d23ce"></a>
-<a class="el" href="classRTT_1_1os_1_1Mutex.html">os::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>msg_lock</b></td></tr>
+<tr class="memitem:a1c83aec88698b7df69f14aeb5b1d23ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1Mutex.html">os::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a1c83aec88698b7df69f14aeb5b1d23ce">msg_lock</a></td></tr>
 <tr class="separator:a1c83aec88698b7df69f14aeb5b1d23ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad10217462ab4e022f5388768dc3c62fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad10217462ab4e022f5388768dc3c62fe"></a>
-<a class="el" href="classRTT_1_1os_1_1Condition.html">os::Condition</a>&#160;</td><td class="memItemRight" valign="bottom"><b>msg_cond</b></td></tr>
+<tr class="memitem:ad10217462ab4e022f5388768dc3c62fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1Condition.html">os::Condition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#ad10217462ab4e022f5388768dc3c62fe">msg_cond</a></td></tr>
 <tr class="separator:ad10217462ab4e022f5388768dc3c62fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74d7968137f1997f83847cd5119ac5b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a74d7968137f1997f83847cd5119ac5b6">mmaster</a></td></tr>
 <tr class="memdesc:a74d7968137f1997f83847cd5119ac5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A master <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> which should process our messages.  <a href="#a74d7968137f1997f83847cd5119ac5b6">More...</a><br /></td></tr>
@@ -219,7 +207,38 @@ Protected Attributes</h2></td></tr>
 <p>Any function executing in the same execution engine is guaranteed to be thread-safe with respect to other functions executing in the same execution engine. </p>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00069">69</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a93db616570e910bcbdf835eebd1d09a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2">RTT::base::RunnableInterface::WorkReason</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a93db616570e910bcbdf835eebd1d09a2adda55d6e664961143becf9fe14075f31"></a>TimeOut&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a93db616570e910bcbdf835eebd1d09a2ac9eae0cbdd07910ee0798825e996235e"></a>Trigger&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a93db616570e910bcbdf835eebd1d09a2a0c82d259bcd937f796bb01c6848f1a71"></a>IOReady&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="RunnableInterface_8hpp_source.html#l00076">76</a> of file <a class="el" href="RunnableInterface_8hpp_source.html">RunnableInterface.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1dca09fcf4886ae4e7bd677201a7489a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -243,6 +262,23 @@ Protected Attributes</h2></td></tr>
 </dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00068">68</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a631bf914302f86d0219bcdbd4e86728b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTT::ExecutionEngine::~ExecutionEngine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00077">77</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
 <p>References <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#af51943bba34b7ba69c16d52ad74e1400">RTT::base::DisposableInterface::dispose()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">f_queue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">mqueue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">port_queue</a>, and <a class="el" href="ExecutableInterface_8hpp_source.html#l00078">RTT::base::ExecutableInterface::unloaded()</a>.</p>
 
@@ -281,6 +317,35 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a968d06304e043aa67075f5da402eaa9a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::ExecutionEngine::finalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The method that will be called after the last periodical execution of <em><a class="el" href="classRTT_1_1ExecutionEngine.html#aaae452e029ed5e188ac76d9447befc6a" title="Executes (in that order) Messages, Functions and updateHook() functions of this TaskContext and its c...">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the RunnableInterface is stopped. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a32b9c766a8c8af74c8a9adbe7281f61d">RTT::base::RunnableInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00471">471</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a70c18e6321d3e6929e0097940d68c1ef"></a>
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +373,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="RunnableInterface_8hpp_source.html#l00175">175</a> of file <a class="el" href="RunnableInterface_8hpp_source.html">RunnableInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00512">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00374">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00271">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00261">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::isSend()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">removeFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00276">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00266">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">stopTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00083">RTT::base::TaskCore::update()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">waitForFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">waitForMessages()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00500">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00374">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00271">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00261">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::isSend()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">removeFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00276">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00266">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">stopTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00083">RTT::base::TaskCore::update()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">waitForFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">waitForMessages()</a>.</p>
 
 </div>
 </div>
@@ -330,9 +395,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00094">94</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#a485113b5518e732252b874b6939ca4cd">RTT::base::ExecutableInterface::execute()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">f_queue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>, and <a class="el" href="ExecutableInterface_8hpp_source.html#l00078">RTT::base::ExecutableInterface::unloaded()</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>.</p>
 
-<p>Referenced by <a class="el" href="IRQActivity_8cpp_source.html#l00069">RTT::extras::IRQActivity::start()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00051">RTT::base::TaskCore::TaskCore()</a>.</p>
+<p>Referenced by <a class="el" href="IRQActivity_8cpp_source.html#l00069">RTT::extras::IRQActivity::start()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00064">RTT::base::TaskCore::~TaskCore()</a>.</p>
 
 </div>
 </div>
@@ -423,7 +488,36 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00194">194</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00434">RTT::TaskContext::dataOnPortCallback()</a>, <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#aa219e67cd5ba6c860ef90e316cc7306d">RTT::base::DisposableInterface::executeAndDispose()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">mqueue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">port_queue</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">mqueue</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37a60f7b0673bab85e3c024903aed7ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::ExecutionEngine::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The method that will be called before the first periodical execution of <em><a class="el" href="classRTT_1_1ExecutionEngine.html#aaae452e029ed5e188ac76d9447befc6a" title="Executes (in that order) Messages, Functions and updateHook() functions of this TaskContext and its c...">step()</a></em> ( or non periodical execution of <em><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2" title="The method that will be executed once when this class is run in a non periodic Activity. ">loop()</a></em> ), when the thread is started. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a1fc18ba15bd1fd69759e127a2e466e65">RTT::base::RunnableInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00190">190</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -491,9 +585,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">242</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">mmaster</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">mqueue</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">RTT::base::ActivityInterface::trigger()</a>.</p>
+<p>References <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">mmaster</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">mqueue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">msg_cond</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">RTT::base::ActivityInterface::trigger()</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00126">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::dispose()</a>, <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>, <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00559">RTT::internal::FusedMSignal&lt; Signature &gt;::invoke()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">removeFunction()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00410">RTT::TaskContext::stop()</a>.</p>
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00130">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::do_send()</a>, <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>, <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00559">RTT::internal::FusedMSignal&lt; Signature &gt;::invoke()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">removeFunction()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00410">RTT::TaskContext::stop()</a>.</p>
 
 </div>
 </div>
@@ -527,7 +621,123 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00262">262</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">mmaster</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">port_queue</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">RTT::base::ActivityInterface::trigger()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">mmaster</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">port_queue</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">RTT::base::ActivityInterface::trigger()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf869c0f569b1d1ddc75f5fd3e68afc6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::ExecutionEngine::processFunctions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">98</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+<p>References <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#a485113b5518e732252b874b6939ca4cd">RTT::base::ExecutableInterface::execute()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">f_queue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">msg_cond</a>, and <a class="el" href="ExecutableInterface_8hpp_source.html#l00078">RTT::base::ExecutableInterface::unloaded()</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00354">waitAndProcessFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">work()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a10950bed8d5ff17dc5beee9dd41772e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::ExecutionEngine::processHooks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00406">406</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+<p>References <a class="el" href="CatchConfig_8hpp_source.html#l00057">CATCH</a>, <a class="el" href="CatchConfig_8hpp_source.html#l00058">CATCH_ALL</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="TaskCore_8cpp_source.html#l00290">RTT::base::TaskCore::errorHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>, <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00293">RTT::base::TaskCore::updateHook()</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">work()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a081fe8bd03ae9984f5ff51435fa0da87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::ExecutionEngine::processMessages </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">199</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+<p>References <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#aa219e67cd5ba6c860ef90e316cc7306d">RTT::base::DisposableInterface::executeAndDispose()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">mqueue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">msg_cond</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00258">msg_lock</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">waitAndProcessMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">work()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a17f69ba3dcac8f33dda27ca0d4dd840b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::ExecutionEngine::processPortCallbacks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00224">224</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00434">RTT::TaskContext::dataOnPortCallback()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">port_queue</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">work()</a>.</p>
 
 </div>
 </div>
@@ -558,9 +768,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">145</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface::isActive()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00095">RTT::base::ExecutableInterface::isLoaded()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00171">removeSelfFunction()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00078">RTT::base::ExecutableInterface::unloaded()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">waitForMessages()</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00142">RTT::RemoveMsg::done()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00133">RTT::RemoveMsg::found</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface::isActive()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00095">RTT::base::ExecutableInterface::isLoaded()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00171">removeSelfFunction()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00078">RTT::base::ExecutableInterface::unloaded()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">waitForMessages()</a>.</p>
 
-<p>Referenced by <a class="el" href="FunctionGraph_8cpp_source.html#l00094">RTT::scripting::FunctionGraph::finish()</a>, <a class="el" href="CmdFunction_8hpp_source.html#l00102">RTT::scripting::CmdFunction::reset()</a>, <a class="el" href="CallFunction_8hpp_source.html#l00118">RTT::scripting::CallFunction::reset()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00383">RTT::scripting::ScriptingService::unloadProgram()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00246">RTT::scripting::ScriptingService::unloadStateMachine()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00071">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
+<p>Referenced by <a class="el" href="ScriptingService_8cpp_source.html#l00288">RTT::scripting::ScriptingService::recursiveUnloadStateMachine()</a>, <a class="el" href="CmdFunction_8hpp_source.html#l00102">RTT::scripting::CmdFunction::reset()</a>, <a class="el" href="CallFunction_8hpp_source.html#l00118">RTT::scripting::CallFunction::reset()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00383">RTT::scripting::ScriptingService::unloadProgram()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00114">RTT::scripting::FunctionGraph::~FunctionGraph()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00075">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
 
 </div>
 </div>
@@ -593,7 +803,7 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">f_queue</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">removeFunction()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">runFunction()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00136">RTT::RemoveMsg::executeAndDispose()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">removeFunction()</a>.</p>
 
 </div>
 </div>
@@ -625,9 +835,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">117</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">f_queue</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00095">RTT::base::ExecutableInterface::isLoaded()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00070">RTT::base::ExecutableInterface::loaded()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00171">removeSelfFunction()</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">f_queue</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00070">RTT::base::ExecutableInterface::loaded()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>.</p>
 
-<p>Referenced by <a class="el" href="CallFunction_8hpp_source.html#l00096">RTT::scripting::CallFunction::execute()</a>, <a class="el" href="CmdFunction_8hpp_source.html#l00060">RTT::scripting::CmdFunction::get()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00538">RTT::scripting::ScriptingService::loadFunctions()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00360">RTT::scripting::ScriptingService::loadProgram()</a>, and <a class="el" href="ScriptingService_8cpp_source.html#l00185">RTT::scripting::ScriptingService::loadStateMachine()</a>.</p>
+<p>Referenced by <a class="el" href="CallFunction_8hpp_source.html#l00096">RTT::scripting::CallFunction::execute()</a>, <a class="el" href="CmdFunction_8hpp_source.html#l00060">RTT::scripting::CmdFunction::get()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00538">RTT::scripting::ScriptingService::loadFunctions()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00360">RTT::scripting::ScriptingService::loadProgram()</a>, and <a class="el" href="ScriptingService_8cpp_source.html#l00230">RTT::scripting::ScriptingService::recursiveLoadStateMachine()</a>.</p>
 
 </div>
 </div>
@@ -666,7 +876,30 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00309">309</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ActivityInterface_8cpp_source.html#l00070">RTT::base::ActivityInterface::getRunner()</a>, <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00304">setMaster()</a>.</p>
+<p>References <a class="el" href="SlaveActivity_8cpp_source.html#l00097">RTT::extras::SlaveActivity::getMaster()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00070">RTT::base::ActivityInterface::getRunner()</a>, <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00304">setMaster()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af371ca99138fb1b44857e3f796fa9477"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::ExecutionEngine::setExceptionTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the 'owner' task in the exception state. </p>
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00456">456</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00117">RTT::TaskContext::getName()</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>.</p>
+
+<p>Referenced by <a class="el" href="OperationCallerInterface_8cpp_source.html#l00052">RTT::base::OperationCallerInterface::reportError()</a>.</p>
 
 </div>
 </div>
@@ -698,6 +931,35 @@ false if the engine does not accept messages. </dd></dl>
 <p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">mmaster</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00309">setActivity()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaae452e029ed5e188ac76d9447befc6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTT::ExecutionEngine::step </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes (in that order) Messages, Functions and updateHook() functions of this <a class="el" href="classRTT_1_1TaskContext.html" title="The TaskContext is the C++ representation of an Orocos component. ">TaskContext</a> and its children. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">RTT::base::RunnableInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00372">372</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -760,9 +1022,11 @@ false if the engine does not accept messages. </dd></dl>
   </dd>
 </dl>
 <p>This function is for internal use only and is required for asynchronous function invocations.</p>
-<dl class="section note"><dt>Note</dt><dd>waitAndProcessFunctions will call in turn this-&gt;processFunctions() and may as a consequence recurse if we get an asynchronous call-back. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>waitAndProcessFunctions will call in turn this-&gt;<a class="el" href="classRTT_1_1ExecutionEngine.html#adf869c0f569b1d1ddc75f5fd3e68afc6">processFunctions()</a> and may as a consequence recurse if we get an asynchronous call-back. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00354">354</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">msg_cond</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00258">msg_lock</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">processFunctions()</a>, and <a class="el" href="Condition_8hpp_source.html#l00090">RTT::os::Condition::wait()</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">waitForFunctions()</a>.</p>
 
@@ -798,11 +1062,11 @@ false if the engine does not accept messages. </dd></dl>
   </dd>
 </dl>
 <p>This function is for internal use only and is required for asynchronous method invocations.</p>
-<dl class="section note"><dt>Note</dt><dd>waitAndProcessMessages will call in turn this-&gt;processMessages() and may as a consequence recurse if we get an asynchronous call-back. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>waitAndProcessMessages will call in turn this-&gt;<a class="el" href="classRTT_1_1ExecutionEngine.html#a081fe8bd03ae9984f5ff51435fa0da87">processMessages()</a> and may as a consequence recurse if we get an asynchronous call-back. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">335</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">mmaster</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">mmaster</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">msg_cond</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00258">msg_lock</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">processMessages()</a>, and <a class="el" href="Condition_8hpp_source.html#l00090">RTT::os::Condition::wait()</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">waitForMessages()</a>.</p>
 
@@ -866,7 +1130,7 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>References <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">mmaster</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">waitAndProcessMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">waitForMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00321">waitForMessagesInternal()</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00126">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::dispose()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">removeFunction()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">waitForMessages()</a>.</p>
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00294">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::collect_impl()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">removeFunction()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">waitForMessages()</a>.</p>
 
 </div>
 </div>
@@ -900,9 +1164,11 @@ false if the engine does not accept messages. </dd></dl>
   </dd>
 </dl>
 <p>This function is for internal use only and is required for asynchronous method invocations.</p>
-<dl class="section note"><dt>Note</dt><dd>waitForMessages requires another thread to execute processMessages() and may therefor not be called from within the component's Thread. Use <a class="el" href="classRTT_1_1ExecutionEngine.html#a9b1435416406d34e86fb03289ea2d53e" title="Call this if you wish to block on a message arriving in the Execution Engine and execute it...">waitAndProcessMessages()</a> instead. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>waitForMessages requires another thread to execute <a class="el" href="classRTT_1_1ExecutionEngine.html#a081fe8bd03ae9984f5ff51435fa0da87">processMessages()</a> and may therefor not be called from within the component's Thread. Use <a class="el" href="classRTT_1_1ExecutionEngine.html#a9b1435416406d34e86fb03289ea2d53e" title="Call this if you wish to block on a message arriving in the Execution Engine and execute it...">waitAndProcessMessages()</a> instead. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00321">321</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">msg_cond</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00258">msg_lock</a>, and <a class="el" href="Condition_8hpp_source.html#l00090">RTT::os::Condition::wait()</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">waitForFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">waitForMessages()</a>.</p>
 
@@ -918,7 +1184,7 @@ false if the engine does not accept messages. </dd></dl>
         <tr>
           <td class="memname">void RTT::ExecutionEngine::work </td>
           <td>(</td>
-          <td class="paramtype">RunnableInterface::WorkReason&#160;</td>
+          <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a93db616570e910bcbdf835eebd1d09a2">RunnableInterface::WorkReason</a>&#160;</td>
           <td class="paramname"><em>reason</em></td><td>)</td>
           <td></td>
         </tr>
@@ -937,11 +1203,37 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">376</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8cpp_source.html#l00290">RTT::base::TaskCore::errorHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00476">RTT::base::TaskCore::mCycleCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00480">RTT::base::TaskCore::mIOCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00484">RTT::base::TaskCore::mTimeOutCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00488">RTT::base::TaskCore::mTriggerCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>, <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00293">RTT::base::TaskCore::updateHook()</a>.</p>
+<p>References <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::IOReady</a>, <a class="el" href="TaskCore_8hpp_source.html#l00476">RTT::base::TaskCore::mCycleCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00480">RTT::base::TaskCore::mIOCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00484">RTT::base::TaskCore::mTimeOutCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00488">RTT::base::TaskCore::mTriggerCounter</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">processFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00406">processHooks()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">processMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00224">processPortCallbacks()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">taskc</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::TimeOut</a>, and <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::Trigger</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a466a68650254e029d4eea6722ba5915a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1MWSRQueue.html">internal::MWSRQueue</a>&lt;<a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html">base::ExecutableInterface</a>*&gt;* RTT::ExecutionEngine::f_queue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stores all functions we're executing. </p>
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">256</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">processFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00171">removeSelfFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">runFunction()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00077">~ExecutionEngine()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a74d7968137f1997f83847cd5119ac5b6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -969,6 +1261,132 @@ false if the engine does not accept messages. </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a49ec437ba2d6d809b9b08472c732c9d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1MWSRQueue.html">internal::MWSRQueue</a>&lt;<a class="el" href="classRTT_1_1base_1_1DisposableInterface.html">base::DisposableInterface</a>*&gt;* RTT::ExecutionEngine::mqueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Our Message queue. </p>
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">246</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00194">hasWork()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">processMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00077">~ExecutionEngine()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad10217462ab4e022f5388768dc3c62fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1Condition.html">os::Condition</a> RTT::ExecutionEngine::msg_cond</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">259</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">processFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">processMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00354">waitAndProcessFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">waitAndProcessMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00321">waitForMessagesInternal()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c83aec88698b7df69f14aeb5b1d23ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1Mutex.html">os::Mutex</a> RTT::ExecutionEngine::msg_lock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00258">258</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">processMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00354">waitAndProcessFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">waitAndProcessMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00321">waitForMessagesInternal()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b3d929bd060348ccca63c5704bf0346"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1internal_1_1MWSRQueue.html">internal::MWSRQueue</a>&lt;<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a>*&gt;* RTT::ExecutionEngine::port_queue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The port callback queue. </p>
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">251</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00262">process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00224">processPortCallbacks()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00077">~ExecutionEngine()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6fc9359abc8c2d9c484763618b562f50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRTT_1_1base_1_1TaskCore.html">base::TaskCore</a>* RTT::ExecutionEngine::taskc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The parent or 'owner' of this <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>, may be null. </p>
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">241</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00438">breakLoop()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00094">getParent()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00406">processHooks()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00224">processPortCallbacks()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">runFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00456">setExceptionTask()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">work()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>rtt/<a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a></li>
 <li>rtt/<a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a></li>
@@ -976,7 +1394,7 @@ false if the engine does not accept messages. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 23:53:20 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
