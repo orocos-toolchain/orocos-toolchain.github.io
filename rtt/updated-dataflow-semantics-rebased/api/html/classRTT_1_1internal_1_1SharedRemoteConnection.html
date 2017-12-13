@@ -130,9 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa985c67248dbe492db1f53b5b7c54c21"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#aa985c67248dbe492db1f53b5b7c54c21">signal</a> ()</td></tr>
 <tr class="memdesc:aa985c67248dbe492db1f53b5b7c54c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signals that there is new data available on this channel By default, the channel element forwards the call to its output.  <a href="#aa985c67248dbe492db1f53b5b7c54c21">More...</a><br /></td></tr>
 <tr class="separator:aa985c67248dbe492db1f53b5b7c54c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bde254d97586f315db880a8574bc0d5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a3bde254d97586f315db880a8574bc0d5">signalFrom</a> (<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a> *caller)</td></tr>
-<tr class="memdesc:a3bde254d97586f315db880a8574bc0d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signals that there is new data available on this channel Forwards to <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#aa985c67248dbe492db1f53b5b7c54c21">signal()</a> unless overwritten in a derived class.  <a href="#a3bde254d97586f315db880a8574bc0d5">More...</a><br /></td></tr>
-<tr class="separator:a3bde254d97586f315db880a8574bc0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85acfa49b7f0417453cf764fa98006c8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a85acfa49b7f0417453cf764fa98006c8">signalFrom</a> (<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a> *)</td></tr>
+<tr class="memdesc:a85acfa49b7f0417453cf764fa98006c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signals that there is new data available on this channel Forwards to <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#aa985c67248dbe492db1f53b5b7c54c21">signal()</a> unless overwritten in a derived class.  <a href="#a85acfa49b7f0417453cf764fa98006c8">More...</a><br /></td></tr>
+<tr class="separator:a85acfa49b7f0417453cf764fa98006c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec63f79d9ccff06c58c836697911b454"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#aec63f79d9ccff06c58c836697911b454">channelReady</a> (<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">ChannelElementBase::shared_ptr</a> const &amp;caller, <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> const &amp;policy, <a class="el" href="classRTT_1_1internal_1_1ConnID.html">internal::ConnID</a> *conn_id=0)</td></tr>
 <tr class="memdesc:aec63f79d9ccff06c58c836697911b454"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called on the output half of a new connection by the connection factory in order to notify the output side of the new connection and check if it is ready to receive data.  <a href="#aec63f79d9ccff06c58c836697911b454">More...</a><br /></td></tr>
 <tr class="separator:aec63f79d9ccff06c58c836697911b454"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -675,7 +675,7 @@ template&lt;typename T &gt; </div>
 
 <p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00081">RTT::base::ChannelElementBase::addOutput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00090">RTT::base::ChannelElementBase::removeOutput()</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00310">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00405">RTT::internal::ConnFactory::buildSharedConnection()</a>, and <a class="el" href="ConnFactory_8cpp_source.html#l00214">RTT::internal::ConnFactory::createAndCheckSharedConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00219">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00305">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00400">RTT::internal::ConnFactory::buildSharedConnection()</a>, and <a class="el" href="ConnFactory_8cpp_source.html#l00214">RTT::internal::ConnFactory::createAndCheckSharedConnection()</a>.</p>
 
 </div>
 </div>
@@ -892,7 +892,7 @@ template&lt;typename T&gt; </div>
 
 <p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00078">RTT::base::ChannelElementBase::buffer_policy</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00082">RTT::base::ChannelElementBase::buffer_policy_lock</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00310">RTT::internal::ConnFactory::buildChannelOutput()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00176">RTT::base::MultipleInputsChannelElement&lt; T &gt;::currentInput()</a>.</p>
+<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00219">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00305">RTT::internal::ConnFactory::buildChannelOutput()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00176">RTT::base::MultipleInputsChannelElement&lt; T &gt;::currentInput()</a>.</p>
 
 </div>
 </div>
@@ -1622,7 +1622,7 @@ template&lt;typename T&gt; </div>
 
 <p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00078">RTT::base::ChannelElementBase::buffer_policy</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00082">RTT::base::ChannelElementBase::buffer_policy_lock</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00224">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00310">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00263">RTT::base::MultipleInputsChannelElementBase::removeInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00367">RTT::base::MultipleOutputsChannelElementBase::removeOutput()</a>.</p>
+<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00219">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00305">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00263">RTT::base::MultipleInputsChannelElementBase::removeInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00367">RTT::base::MultipleOutputsChannelElementBase::removeOutput()</a>.</p>
 
 </div>
 </div>
@@ -1712,7 +1712,7 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a3bde254d97586f315db880a8574bc0d5"></a>
+<a class="anchor" id="a85acfa49b7f0417453cf764fa98006c8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1723,7 +1723,7 @@ template&lt;typename T&gt; </div>
           <td class="memname">virtual bool RTT::base::ChannelElementBase::signalFrom </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a> *&#160;</td>
-          <td class="paramname"><em>caller</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1931,7 +1931,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 6 2017 02:25:12 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 13 2017 16:42:44 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

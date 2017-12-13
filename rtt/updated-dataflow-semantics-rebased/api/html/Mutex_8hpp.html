@@ -60,7 +60,10 @@
 <div class="textblock"><code>#include &quot;<a class="el" href="fosi_8h_source.html">fosi.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="rtt-config_8h_source.html">../rtt-config.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="rtt-os-fwd_8hpp_source.html">rtt-os-fwd.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CAS_8hpp_source.html">CAS.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Semaphore_8hpp_source.html">Semaphore.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="os_2Time_8hpp_source.html">Time.hpp</a>&quot;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
 </div>
 <p><a href="Mutex_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -76,7 +79,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object oriented wrapper around a recursive mutex.  <a href="classRTT_1_1os_1_1MutexRecursive.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object oriented wrapper around a shared mutex (multiple readers allowed).  <a href="classRTT_1_1os_1_1SharedMutex.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object oriented wrapper around a shared mutex (multiple readers allowed, but only one writer with exclusive access).  <a href="classRTT_1_1os_1_1SharedMutex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -91,7 +94,7 @@ Namespaces</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 6 2017 02:25:07 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 13 2017 16:42:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
