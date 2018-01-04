@@ -99,8 +99,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af2d2aa6f2f45f25470adaa4da0ba925c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea5936ef391f1f1d88403aec630b9320"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MutexInterface.html#aea5936ef391f1f1d88403aec630b9320">trylock_shared</a> ()</td></tr>
 <tr class="separator:aea5936ef391f1f1d88403aec630b9320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a590a3c4bcef3568cd888b22dab8b5bc4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a590a3c4bcef3568cd888b22dab8b5bc4">timedlock_shared</a> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a>)</td></tr>
-<tr class="separator:a590a3c4bcef3568cd888b22dab8b5bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7eb9e083408b56d4963e1ebd88ae931"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1MutexInterface.html#ab7eb9e083408b56d4963e1ebd88ae931">timedlock_shared</a> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> s)</td></tr>
+<tr class="separator:ab7eb9e083408b56d4963e1ebd88ae931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -112,7 +112,7 @@ Protected Attributes</h2></td></tr>
 <p>A mutex can only be <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html#af7f91f09c0d6a7c6a9b3e38a08e44731">unlock()</a>'ed, by the thread which <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html#acc3c312208792042f93a5a4293a7e0c8">lock()</a>'ed it. A trylock is a non blocking lock action which fails or succeeds.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classRTT_1_1os_1_1MutexLock.html" title="MutexLock is a scope based Monitor, protecting critical sections with a Mutex object through locking ...">MutexLock</a>, <a class="el" href="classRTT_1_1os_1_1MutexTryLock.html" title="A MutexTryLock tries to lock an Mutex object on construction and if successful, unlocks it on destruc...">MutexTryLock</a>, <a class="el" href="classRTT_1_1os_1_1Mutex.html" title="An object oriented wrapper around a non recursive mutex. ">Mutex</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00218">218</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00213">213</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7ae41348823c11d24c088ef89fd453a2"></a>
 <div class="memitem">
@@ -137,7 +137,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Initialize a recursive <a class="el" href="classRTT_1_1os_1_1Mutex.html" title="An object oriented wrapper around a non recursive mutex. ">Mutex</a>. </p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00227">227</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00222">222</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 <p>References <a class="el" href="fosi__interface_8h.html#ae71230cf926e7b99d63ca9c10d68e6fd">rtos_mutex_rec_init()</a>.</p>
 
@@ -167,7 +167,7 @@ Protected Attributes</h2></td></tr>
 <p>Destroy a <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html" title="An object oriented wrapper around a recursive mutex. ">MutexRecursive</a>. </p>
 <p>If the <a class="el" href="classRTT_1_1os_1_1MutexRecursive.html" title="An object oriented wrapper around a recursive mutex. ">MutexRecursive</a> is still locked, the RTOS will not be asked to clean up its resources. </p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00237">237</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00232">232</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 <p>References <a class="el" href="fosi__interface_8h.html#aad5f9c9cc79df5d24886f0c22bec9f04">rtos_mutex_rec_destroy()</a>.</p>
 
@@ -197,11 +197,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a065f77c8ceebc1eeac59695b197a68cb">RTT::os::MutexInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00245">245</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00240">240</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 <p>References <a class="el" href="fosi__interface_8h.html#a60eb020a348100b86911ca1523b76e21">rtos_mutex_rec_lock()</a>.</p>
 
-<p>Referenced by <a class="el" href="Mutex_8hpp_source.html#l00274">timedlock()</a>.</p>
+<p>Referenced by <a class="el" href="Mutex_8hpp_source.html#l00269">timedlock()</a>.</p>
 
 </div>
 </div>
@@ -228,7 +228,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a9a089771c866086bea9595eb7f00c34e">RTT::os::SharedMutex</a>.</p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00075">75</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00070">70</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="MutexLock_8hpp_source.html#l00213">RTT::os::SharedMutexLock::SharedMutexLock()</a>.</p>
 
@@ -265,15 +265,15 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true when the locking succeeded, false otherwise </dd></dl>
 
-<p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#abfd0bcb6b96e2684e16df09c4b2a490f">RTT::os::MutexInterface</a>.</p>
+<p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a3324c0787a8a33f65809a9b3f6fcc2af">RTT::os::MutexInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00274">274</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00269">269</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
-<p>References <a class="el" href="Mutex_8hpp_source.html#l00245">lock()</a>, <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>, <a class="el" href="fosi__interface_8h.html#a7546328b6d86f75b0d0068cbbc775f8e">rtos_mutex_rec_lock_until()</a>, and <a class="el" href="os_2Time_8hpp_source.html#l00107">RTT::Seconds_to_nsecs()</a>.</p>
+<p>References <a class="el" href="Mutex_8hpp_source.html#l00240">lock()</a>, <a class="el" href="ecos_2fosi_8h_source.html#l00113">rtos_get_time_ns()</a>, <a class="el" href="fosi__interface_8h.html#a7546328b6d86f75b0d0068cbbc775f8e">rtos_mutex_rec_lock_until()</a>, and <a class="el" href="os_2Time_8hpp_source.html#l00107">RTT::Seconds_to_nsecs()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a590a3c4bcef3568cd888b22dab8b5bc4"></a>
+<a class="anchor" id="ab7eb9e083408b56d4963e1ebd88ae931"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -284,7 +284,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">virtual bool RTT::os::MutexInterface::timedlock_shared </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -297,7 +297,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a99c7657911989de1ac8ae3b6e559eb91">RTT::os::SharedMutex</a>.</p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00078">78</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00073">73</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 </div>
 </div>
@@ -327,7 +327,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a3b1d68ccfdd3125789e322dae850c6ea">RTT::os::MutexInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00260">260</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00255">255</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 <p>References <a class="el" href="fosi__interface_8h.html#a99cd7db550424525d3a3f2152c440865">rtos_mutex_rec_trylock()</a>.</p>
 
@@ -356,7 +356,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1os_1_1SharedMutex.html#ab804bbc3c75d750041f5266125fd06d9">RTT::os::SharedMutex</a>.</p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00077">77</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00072">72</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 </div>
 </div>
@@ -383,7 +383,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classRTT_1_1os_1_1MutexInterface.html#a78e64384a0b1e645ef2ed72f41192f19">RTT::os::MutexInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00250">250</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00245">245</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 <p>References <a class="el" href="fosi__interface_8h.html#accecef6a038c52705531856417c78c45">rtos_mutex_rec_unlock()</a>.</p>
 
@@ -412,7 +412,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a4d0dc62a0cece788d72941bd8b1feb4c">RTT::os::SharedMutex</a>.</p>
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00076">76</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00071">71</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 </div>
 </div>
@@ -435,7 +435,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00222">222</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Mutex_8hpp_source.html#l00217">217</a> of file <a class="el" href="Mutex_8hpp_source.html">Mutex.hpp</a>.</p>
 
 </div>
 </div>
@@ -445,7 +445,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 13 2017 16:42:45 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 4 2018 15:40:24 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

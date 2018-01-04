@@ -112,9 +112,9 @@ Macros</h2></td></tr>
 <tr class="separator:adf1859d8627ddac96446433c98a0d6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41350e4bd258ca4215e1cde73a432523"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#a41350e4bd258ca4215e1cde73a432523">oro_atomic_set</a>(v,  i)&#160;&#160;&#160;(((v)-&gt;counter) = (i))</td></tr>
 <tr class="separator:a41350e4bd258ca4215e1cde73a432523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad900711455e9130212baf66e6ada2bc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#ad900711455e9130212baf66e6ada2bc1">oro_atomic_add_negative</a>(a,  v)&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#afa1389d04151754bc38f3ec26c56e390">oro_atomic_add_return</a>((a), (v)) &lt; 0)</td></tr>
+<tr class="memitem:ad900711455e9130212baf66e6ada2bc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#ad900711455e9130212baf66e6ada2bc1">oro_atomic_add_negative</a>(a,  v)&#160;&#160;&#160;(oro_atomic_add_return((a), (v)) &lt; 0)</td></tr>
 <tr class="separator:ad900711455e9130212baf66e6ada2bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9656185d7a82df787ded580d7a95f55f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#a9656185d7a82df787ded580d7a95f55f">oro_atomic_inc_and_test</a>(v)&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#aec29584abca513a539bfe82123fa7f20">oro_atomic_inc_return</a>(v) == 0)</td></tr>
+<tr class="memitem:a9656185d7a82df787ded580d7a95f55f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#a9656185d7a82df787ded580d7a95f55f">oro_atomic_inc_and_test</a>(v)&#160;&#160;&#160;(oro_atomic_inc_return(v) == 0)</td></tr>
 <tr class="separator:a9656185d7a82df787ded580d7a95f55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21fd2c6c36f7d69c79cea0ba427bc4b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#a21fd2c6c36f7d69c79cea0ba427bc4b0">oro_atomic_oro_cmpxchg</a>(v,  o,  n)&#160;&#160;&#160;((int)<a class="el" href="oro__msvc_2oro__arch_8h.html#a20a5a9669aaef7b5dedb2e96caac8cac">oro_cmpxchg</a>(&amp;((v)-&gt;counter), (o), (n)))</td></tr>
 <tr class="separator:a21fd2c6c36f7d69c79cea0ba427bc4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,9 +125,9 @@ Macros</h2></td></tr>
 <tr class="separator:a0cc7e4d0c02abc9ee71beb23ac9c739e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8124641502194d8fee6bfc5c22379b1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#a8124641502194d8fee6bfc5c22379b1f">oro_atomic_inc_not_zero</a>(v)&#160;&#160;&#160;<a class="el" href="oro__atomic_8h.html#a0cc7e4d0c02abc9ee71beb23ac9c739e">oro_atomic_add_unless</a>((v), 1, 0)</td></tr>
 <tr class="separator:a8124641502194d8fee6bfc5c22379b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae807351b13a967b381081ee41756718f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#ae807351b13a967b381081ee41756718f">oro_atomic_sub_and_test</a>(a,  v)&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#a6be7507721d0536925b2ad9c212ff8ca">oro_atomic_sub_return</a>((a), (v)) == 0)</td></tr>
+<tr class="memitem:ae807351b13a967b381081ee41756718f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#ae807351b13a967b381081ee41756718f">oro_atomic_sub_and_test</a>(a,  v)&#160;&#160;&#160;(oro_atomic_sub_return((a), (v)) == 0)</td></tr>
 <tr class="separator:ae807351b13a967b381081ee41756718f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a231b158e1ac520db66eac8f51b06e132"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#a231b158e1ac520db66eac8f51b06e132">oro_atomic_dec_and_test</a>(v)&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#a2bb1dc8eb960a2c3d5a76412755687b4">oro_atomic_dec_return</a>((v)) == 0)</td></tr>
+<tr class="memitem:a231b158e1ac520db66eac8f51b06e132"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#a231b158e1ac520db66eac8f51b06e132">oro_atomic_dec_and_test</a>(v)&#160;&#160;&#160;(oro_atomic_dec_return((v)) == 0)</td></tr>
 <tr class="separator:a231b158e1ac520db66eac8f51b06e132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb1bf2f8a6158b147e19a3e91f2140cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__atomic_8h.html#afb1bf2f8a6158b147e19a3e91f2140cb">smp_mb__before_oro_atomic_dec</a>()&#160;&#160;&#160;smp_mb()</td></tr>
 <tr class="separator:afb1bf2f8a6158b147e19a3e91f2140cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,7 +254,7 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#afa1389d04151754bc38f3ec26c56e390">oro_atomic_add_return</a>((a), (v)) &lt; 0)</td>
+          <td></td><td>&#160;&#160;&#160;(oro_atomic_add_return((a), (v)) &lt; 0)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -330,7 +330,7 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">v</td><td>)</td>
-          <td>&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#a2bb1dc8eb960a2c3d5a76412755687b4">oro_atomic_dec_return</a>((v)) == 0)</td>
+          <td>&#160;&#160;&#160;(oro_atomic_dec_return((v)) == 0)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -348,7 +348,7 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">v</td><td>)</td>
-          <td>&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#aec29584abca513a539bfe82123fa7f20">oro_atomic_inc_return</a>(v) == 0)</td>
+          <td>&#160;&#160;&#160;(oro_atomic_inc_return(v) == 0)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -506,7 +506,7 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#a6be7507721d0536925b2ad9c212ff8ca">oro_atomic_sub_return</a>((a), (v)) == 0)</td>
+          <td></td><td>&#160;&#160;&#160;(oro_atomic_sub_return((a), (v)) == 0)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -786,7 +786,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 13 2017 16:42:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 4 2018 15:40:19 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
