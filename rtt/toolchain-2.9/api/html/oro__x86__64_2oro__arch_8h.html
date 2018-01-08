@@ -81,6 +81,10 @@ Macros</h2></td></tr>
 <tr class="separator:adf1859d8627ddac96446433c98a0d6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41350e4bd258ca4215e1cde73a432523"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__x86__64_2oro__arch_8h.html#a41350e4bd258ca4215e1cde73a432523">oro_atomic_set</a>(v,  i)&#160;&#160;&#160;(((v)-&gt;counter) = (i))</td></tr>
 <tr class="separator:a41350e4bd258ca4215e1cde73a432523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354f443ba03d37ab0173745b04138e49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__x86__64_2oro__arch_8h.html#a354f443ba03d37ab0173745b04138e49">oro_atomic_inc_return</a>(v)&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#afa1389d04151754bc38f3ec26c56e390">oro_atomic_add_return</a>(v, 1))</td></tr>
+<tr class="separator:a354f443ba03d37ab0173745b04138e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafbaaae0012bcb6bae468893bb7d9aa0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__x86__64_2oro__arch_8h.html#aafbaaae0012bcb6bae468893bb7d9aa0">oro_atomic_dec_return</a>(v)&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#a6be7507721d0536925b2ad9c212ff8ca">oro_atomic_sub_return</a>(v, 1))</td></tr>
+<tr class="separator:aafbaaae0012bcb6bae468893bb7d9aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bba090dcbd3895b71b1d527a96ad652"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__x86__64_2oro__arch_8h.html#a5bba090dcbd3895b71b1d527a96ad652">ORO_LOCK_PREFIX</a>&#160;&#160;&#160;&quot;lock ; &quot;</td></tr>
 <tr class="separator:a5bba090dcbd3895b71b1d527a96ad652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad17409a449f60468c64fc83b63ba7684"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oro__x86__64_2oro__arch_8h.html#ad17409a449f60468c64fc83b63ba7684">oro__xg</a>(x)&#160;&#160;&#160;((struct <a class="el" href="structoro____xchg__dummy.html">oro__xchg_dummy</a> *)(x))</td></tr>
@@ -103,7 +107,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="oro__x86__64_2oro__arch_8h_source.html#l00142">142</a> of file <a class="el" href="oro__x86__64_2oro__arch_8h_source.html">oro_arch.h</a>.</p>
+<p>Definition at line <a class="el" href="oro__x86__64_2oro__arch_8h_source.html#l00160">160</a> of file <a class="el" href="oro__x86__64_2oro__arch_8h_source.html">oro_arch.h</a>.</p>
 
 </div>
 </div>
@@ -122,6 +126,42 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="oro__x86__64_2oro__arch_8h_source.html#l00053">53</a> of file <a class="el" href="oro__x86__64_2oro__arch_8h_source.html">oro_arch.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafbaaae0012bcb6bae468893bb7d9aa0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define oro_atomic_dec_return</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#a6be7507721d0536925b2ad9c212ff8ca">oro_atomic_sub_return</a>(v, 1))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__x86__64_2oro__arch_8h_source.html#l00118">118</a> of file <a class="el" href="oro__x86__64_2oro__arch_8h_source.html">oro_arch.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a354f443ba03d37ab0173745b04138e49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define oro_atomic_inc_return</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="oro__arch__interface_8h.html#afa1389d04151754bc38f3ec26c56e390">oro_atomic_add_return</a>(v, 1))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="oro__x86__64_2oro__arch_8h_source.html#l00117">117</a> of file <a class="el" href="oro__x86__64_2oro__arch_8h_source.html">oro_arch.h</a>.</p>
 
 </div>
 </div>
@@ -215,7 +255,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((__typeof__(*(ptr)))__oro_cmpxchg((ptr),(<span class="keywordtype">unsigned</span> long)(o),\</div><div class="line">                    (<span class="keywordtype">unsigned</span> long)(n),<span class="keyword">sizeof</span>(*(ptr))))</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="oro__x86__64_2oro__arch_8h_source.html#l00178">178</a> of file <a class="el" href="oro__x86__64_2oro__arch_8h_source.html">oro_arch.h</a>.</p>
+<p>Definition at line <a class="el" href="oro__x86__64_2oro__arch_8h_source.html#l00196">196</a> of file <a class="el" href="oro__x86__64_2oro__arch_8h_source.html">oro_arch.h</a>.</p>
 
 </div>
 </div>
@@ -243,14 +283,14 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="oro__x86__64_2oro__arch_8h_source.html#l00136">136</a> of file <a class="el" href="oro__x86__64_2oro__arch_8h_source.html">oro_arch.h</a>.</p>
+<p>Definition at line <a class="el" href="oro__x86__64_2oro__arch_8h_source.html#l00154">154</a> of file <a class="el" href="oro__x86__64_2oro__arch_8h_source.html">oro_arch.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 12 2017 23:53:19 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 8 2018 21:42:33 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
