@@ -137,10 +137,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object oriented wrapper around a counting semaphore.  <a href="classRTT_1_1os_1_1Semaphore.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html">SharedMutex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object oriented wrapper around a shared mutex (multiple readers allowed).  <a href="classRTT_1_1os_1_1SharedMutex.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An object oriented wrapper around a shared mutex (multiple readers allowed, but only one writer with exclusive access).  <a href="classRTT_1_1os_1_1SharedMutex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1SharedMutexLock.html">SharedMutexLock</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classRTT_1_1os_1_1SharedMutexLock.html" title="SharedMutexLock is a scope based Monitor, protecting critical sections with a SharedMutex object thro...">SharedMutexLock</a> is a scope based Monitor, protecting critical sections with a <a class="el" href="classRTT_1_1os_1_1SharedMutex.html" title="An object oriented wrapper around a shared mutex (multiple readers allowed). ">SharedMutex</a> object through locking and unlocking it.  <a href="classRTT_1_1os_1_1SharedMutexLock.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classRTT_1_1os_1_1SharedMutexLock.html" title="SharedMutexLock is a scope based Monitor, protecting critical sections with a SharedMutex object thro...">SharedMutexLock</a> is a scope based Monitor, protecting critical sections with a <a class="el" href="classRTT_1_1os_1_1SharedMutex.html" title="An object oriented wrapper around a shared mutex (multiple readers allowed, but only one writer with ...">SharedMutex</a> object through locking and unlocking it.  <a href="classRTT_1_1os_1_1SharedMutexLock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1StartStopManager.html">StartStopManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This manager starts and stops all globally registered start/stop functions, without a particular order.  <a href="classRTT_1_1os_1_1StartStopManager.html#details">More...</a><br /></td></tr>
@@ -179,6 +179,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab0b670c83a99f4708ee795641439792c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1os.html#ab0b670c83a99f4708ee795641439792c">CAS</a> (volatile T *addr, const V &amp;expected, const W &amp;value)</td></tr>
 <tr class="memdesc:ab0b670c83a99f4708ee795641439792c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare And Swap.  <a href="#ab0b670c83a99f4708ee795641439792c">More...</a><br /></td></tr>
 <tr class="separator:ab0b670c83a99f4708ee795641439792c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0760f5ea57212dc3317a654c41a223fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1os.html#a0760f5ea57212dc3317a654c41a223fb">CAS</a> (volatile <a class="el" href="structoro__atomic__t.html">oro_atomic_t</a> *addr, const int expected, const int value)</td></tr>
+<tr class="memdesc:a0760f5ea57212dc3317a654c41a223fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of Compare And Swap for <a class="el" href="structoro__atomic__t.html" title="Structure that contains an int for atomic operations. ">oro_atomic_t</a>.  <a href="#a0760f5ea57212dc3317a654c41a223fb">More...</a><br /></td></tr>
+<tr class="separator:a0760f5ea57212dc3317a654c41a223fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa319232bbd7d78d759935b24f8bbb0cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="xenomai_2fosi__internal_8cpp.html#aa150bc54c2c912dc076e7a8b74074fb1">INTERNAL_QUAL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceRTT_1_1os.html#aa319232bbd7d78d759935b24f8bbb0cb">rtos_task_create_main</a> (<a class="el" href="structRTOS__TASK.html">RTOS_TASK</a> *main_task)</td></tr>
 <tr class="memdesc:aa319232bbd7d78d759935b24f8bbb0cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the main thread.  <a href="#aa319232bbd7d78d759935b24f8bbb0cb">More...</a><br /></td></tr>
 <tr class="separator:aa319232bbd7d78d759935b24f8bbb0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -311,6 +314,9 @@ Variables</h2></td></tr>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T , class V , class W &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool RTT::os::CAS </td>
@@ -336,6 +342,11 @@ template&lt;class T , class V , class W &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Compare And Swap. </p>
@@ -343,9 +354,55 @@ template&lt;class T , class V , class W &gt; </div>
 
 <p>Definition at line <a class="el" href="CAS_8hpp_source.html#l00054">54</a> of file <a class="el" href="CAS_8hpp_source.html">CAS.hpp</a>.</p>
 
-<p>References <a class="el" href="oro__gcc_2oro__arch_8h_source.html#l00080">oro_cmpxchg</a>.</p>
+<p>References <a class="el" href="oro__gcc_2oro__arch_8h_source.html#l00112">oro_cmpxchg</a>.</p>
 
-<p>Referenced by <a class="el" href="TsPool_8hpp_source.html#l00159">RTT::internal::TsPool&lt; Item &gt;::allocate()</a>, <a class="el" href="ListLockFree_8hpp_source.html#l00344">RTT::internal::ListLockFree&lt; connection_t &gt;::append()</a>, <a class="el" href="ListLockFree_8hpp_source.html#l00316">RTT::internal::ListLockFree&lt; connection_t &gt;::clear()</a>, <a class="el" href="DataObjectLockFree_8hpp_source.html#l00337">RTT::base::DataObjectLockFree&lt; T &gt;::clear()</a>, <a class="el" href="TsPool_8hpp_source.html#l00179">RTT::internal::TsPool&lt; Item &gt;::deallocate()</a>, <a class="el" href="ListLockFree_8hpp_source.html#l00480">RTT::internal::ListLockFree&lt; connection_t &gt;::delete_if()</a>, <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00279">RTT::internal::AtomicMWMRQueue&lt; T &gt;::dequeue()</a>, <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00259">RTT::internal::AtomicMWMRQueue&lt; T &gt;::enqueue()</a>, <a class="el" href="ListLockFree_8hpp_source.html#l00438">RTT::internal::ListLockFree&lt; connection_t &gt;::erase()</a>, <a class="el" href="DataObjectLockFree_8hpp_source.html#l00197">RTT::base::DataObjectLockFree&lt; T &gt;::Get()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00263">RTT::base::MultipleInputsChannelElementBase::removeInput()</a>, and <a class="el" href="ListLockFree_8hpp_source.html#l00252">RTT::internal::ListLockFree&lt; connection_t &gt;::reserve()</a>.</p>
+<p>Referenced by <a class="el" href="TsPool_8hpp_source.html#l00159">RTT::internal::TsPool&lt; Item &gt;::allocate()</a>, <a class="el" href="ListLockFree_8hpp_source.html#l00344">RTT::internal::ListLockFree&lt; connection_t &gt;::append()</a>, <a class="el" href="ListLockFree_8hpp_source.html#l00316">RTT::internal::ListLockFree&lt; connection_t &gt;::clear()</a>, <a class="el" href="DataObjectLockFree_8hpp_source.html#l00337">RTT::base::DataObjectLockFree&lt; T &gt;::clear()</a>, <a class="el" href="TsPool_8hpp_source.html#l00179">RTT::internal::TsPool&lt; Item &gt;::deallocate()</a>, <a class="el" href="ListLockFree_8hpp_source.html#l00480">RTT::internal::ListLockFree&lt; connection_t &gt;::delete_if()</a>, <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00279">RTT::internal::AtomicMWMRQueue&lt; T &gt;::dequeue()</a>, <a class="el" href="AtomicMWMRQueue_8hpp_source.html#l00259">RTT::internal::AtomicMWMRQueue&lt; T &gt;::enqueue()</a>, <a class="el" href="ListLockFree_8hpp_source.html#l00438">RTT::internal::ListLockFree&lt; connection_t &gt;::erase()</a>, <a class="el" href="DataObjectLockFree_8hpp_source.html#l00197">RTT::base::DataObjectLockFree&lt; T &gt;::Get()</a>, <a class="el" href="Mutex_8hpp_source.html#l00388">RTT::os::SharedMutex::lock()</a>, <a class="el" href="Mutex_8hpp_source.html#l00457">RTT::os::SharedMutex::lock_shared()</a>, <a class="el" href="ListLockFree_8hpp_source.html#l00252">RTT::internal::ListLockFree&lt; connection_t &gt;::reserve()</a>, <a class="el" href="Mutex_8hpp_source.html#l00402">RTT::os::SharedMutex::unlock()</a>, and <a class="el" href="Mutex_8hpp_source.html#l00480">RTT::os::SharedMutex::unlock_shared()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0760f5ea57212dc3317a654c41a223fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::os::CAS </td>
+          <td>(</td>
+          <td class="paramtype">volatile <a class="el" href="structoro__atomic__t.html">oro_atomic_t</a> *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overload of Compare And Swap for <a class="el" href="structoro__atomic__t.html" title="Structure that contains an int for atomic operations. ">oro_atomic_t</a>. </p>
+
+<p>Definition at line <a class="el" href="CAS_8hpp_source.html#l00061">61</a> of file <a class="el" href="CAS_8hpp_source.html">CAS.hpp</a>.</p>
+
+<p>References <a class="el" href="oro__arch__interface_8h.html#a7062627f054d754c78a42b6b29562068">oro_atomic_read()</a>, and <a class="el" href="oro__gcc_2oro__arch_8h_source.html#l00112">oro_cmpxchg</a>.</p>
 
 </div>
 </div>
@@ -1676,7 +1733,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 8 2018 20:28:43 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 9 2018 11:25:32 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

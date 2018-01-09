@@ -141,6 +141,9 @@
 , <a class="el" href="structRTT_1_1types_1_1TypeStreamSelector_3_01T_00_01false_01_4.html#a2036e5423d48fef1937f7a807535c66b">RTT::types::TypeStreamSelector&lt; T, false &gt;</a>
 , <a class="el" href="structRTT_1_1types_1_1TypeStreamSelector_3_01T_00_01true_01_4.html#ad542969c5a299942fa017b9fd940216c">RTT::types::TypeStreamSelector&lt; T, true &gt;</a>
 </li>
+<li>read_semaphore
+: <a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a814fa940199e79801cccbf54a9e42d91">RTT::os::SharedMutex</a>
+</li>
 <li>readArguments()
 : <a class="el" href="classCorbaOperationCallerCall.html#a87cd1b769ef601f8a64180e0dc19bee3">CorbaOperationCallerCall</a>
 , <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#ac971ccfe3e4befa97513d715dba36098">RTT::base::ActionInterface</a>
@@ -163,6 +166,7 @@
 </li>
 <li>readers
 : <a class="el" href="structRTT_1_1extras_1_1ROPtrInternal.html#ae319eba95b1d70d3b9671e534bbe000c">RTT::extras::ROPtrInternal&lt; T &gt;</a>
+, <a class="el" href="classRTT_1_1os_1_1SharedMutex.html#a06c4c80b2c06f59b312c779b9a6e9a14">RTT::os::SharedMutex</a>
 </li>
 <li>ReadName()
 : <a class="el" href="classRTT_1_1marsh_1_1TiXmlBase.html#a1892b8288d14ed75777bbc82f25f3065">RTT::marsh::TiXmlBase</a>
@@ -728,16 +732,16 @@
 , <a class="el" href="structRTT_1_1internal_1_1FusedFunctorDataSource.html#a326b9d00a7e7d906f497b01f0a7c66d7">RTT::internal::FusedFunctorDataSource&lt; Signature, Enable &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1FusedFunctorDataSource_3_01Signature_00_01typename_01boost_1_1enable__ie353b2375333941b0d79e5ad3fa622bf.html#a5fca4dcd695b994b4cef2614ff81b6f2">RTT::internal::FusedFunctorDataSource&lt; Signature, typename boost::enable_if&lt; is_pure_reference&lt; typename boost::function_traits&lt; Signature &gt;::result_type &gt; &gt;::type &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1FusedMCallDataSource.html#ae93ee518f42260f935f6a07688f124b6">RTT::internal::FusedMCallDataSource&lt; Signature &gt;</a>
-, <a class="el" href="structRTT_1_1internal_1_1InvokerImpl_3_011_00_01F_00_01BaseImpl_01_4.html#a1637f45402ebd3a8d3e2dd4e42e6ed3d">RTT::internal::InvokerImpl&lt; 1, F, BaseImpl &gt;</a>
+, <a class="el" href="structRTT_1_1internal_1_1InvokerImpl_3_011_00_01F_00_01BaseImpl_01_4.html#a82f202e4ab35bbc7b88934fb58987798">RTT::internal::InvokerImpl&lt; 1, F, BaseImpl &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1InvokerImpl_3_012_00_01F_00_01BaseImpl_01_4.html#a0ba230f86579237fb5b44d61269f0b9a">RTT::internal::InvokerImpl&lt; 2, F, BaseImpl &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1InvokerImpl_3_013_00_01F_00_01BaseImpl_01_4.html#a06cf2e1dd12a797c62c0fbdb9a0877e3">RTT::internal::InvokerImpl&lt; 3, F, BaseImpl &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1InvokerImpl_3_014_00_01F_00_01BaseImpl_01_4.html#a81023c2c2be6d889a4d826275b6a2a00">RTT::internal::InvokerImpl&lt; 4, F, BaseImpl &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1InvokerImpl_3_015_00_01F_00_01BaseImpl_01_4.html#ad4c55b467daca1e7c964acb051bfc3bb">RTT::internal::InvokerImpl&lt; 5, F, BaseImpl &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1InvokerImpl_3_016_00_01F_00_01BaseImpl_01_4.html#a57c70485d375cdeda7a6921892b7c39d">RTT::internal::InvokerImpl&lt; 6, F, BaseImpl &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1InvokerImpl_3_017_00_01F_00_01BaseImpl_01_4.html#a2fa0c703c3b9188dab0d3d87a270f472">RTT::internal::InvokerImpl&lt; 7, F, BaseImpl &gt;</a>
-, <a class="el" href="classRTT_1_1internal_1_1OperationCallerC.html#ac6f0e7a5b1fdb8c1d1bc55e5191cfa53">RTT::internal::OperationCallerC</a>
+, <a class="el" href="classRTT_1_1internal_1_1OperationCallerC.html#aaf99ba898219e2c99d2c72233e509a4f">RTT::internal::OperationCallerC</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnBaseImpl_3_010_00_01F_01_4.html#a9f12f861780e8c853f56013986d85a3a">RTT::internal::ReturnBaseImpl&lt; 0, F &gt;</a>
-, <a class="el" href="structRTT_1_1internal_1_1ReturnBaseImpl_3_011_00_01F_01_4.html#a4d8fd54de3974ce3d5787204a0bdcdc7">RTT::internal::ReturnBaseImpl&lt; 1, F &gt;</a>
+, <a class="el" href="structRTT_1_1internal_1_1ReturnBaseImpl_3_011_00_01F_01_4.html#a8d88db46d6a21f6ab6a0fbd805bd6a4b">RTT::internal::ReturnBaseImpl&lt; 1, F &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnBaseImpl_3_012_00_01F_01_4.html#a5d14a1ca50019c8d368ea3e490656141">RTT::internal::ReturnBaseImpl&lt; 2, F &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnBaseImpl_3_013_00_01F_01_4.html#a79ca7e4e93a153846fdaa1743f42c16c">RTT::internal::ReturnBaseImpl&lt; 3, F &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnBaseImpl_3_014_00_01F_01_4.html#af0f5b4d42b352be63a93cf2cb837c301">RTT::internal::ReturnBaseImpl&lt; 4, F &gt;</a>
@@ -745,19 +749,19 @@
 , <a class="el" href="structRTT_1_1internal_1_1ReturnBaseImpl_3_016_00_01F_01_4.html#a2ca9c19fd70b43f0fea58b6d96fd0b1c">RTT::internal::ReturnBaseImpl&lt; 6, F &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnBaseImpl_3_017_00_01F_01_4.html#adbda7ccc39eefa19d9cf6d85e2e83b47">RTT::internal::ReturnBaseImpl&lt; 7, F &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_010_00_01F_00_01ToInvoke_01_4.html#ad8333b229bdac2aeb08b4b927a67c70b">RTT::internal::ReturnSignature&lt; 0, F, ToInvoke &gt;</a>
-, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_011_00_01F_00_01ToInvoke_01_4.html#afc0928e799fac10a9e43295007593e13">RTT::internal::ReturnSignature&lt; 1, F, ToInvoke &gt;</a>
+, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_011_00_01F_00_01ToInvoke_01_4.html#accf2a30ee2bbc9ba0ff04c090dfb78bf">RTT::internal::ReturnSignature&lt; 1, F, ToInvoke &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_012_00_01F_00_01ToInvoke_01_4.html#aa4a5887b979a2aaf806eafbe986d6baf">RTT::internal::ReturnSignature&lt; 2, F, ToInvoke &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_013_00_01F_00_01ToInvoke_01_4.html#a294324ef4d7c673c4819d2ec0690c47a">RTT::internal::ReturnSignature&lt; 3, F, ToInvoke &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_014_00_01F_00_01ToInvoke_01_4.html#a7f85765dcabaef962787bd298c1e6a39">RTT::internal::ReturnSignature&lt; 4, F, ToInvoke &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_015_00_01F_00_01ToInvoke_01_4.html#afcf102b68c1bf0837b02697612bdb3c5">RTT::internal::ReturnSignature&lt; 5, F, ToInvoke &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_016_00_01F_00_01ToInvoke_01_4.html#aa45f76a6f72226cb9846c591ac750c62">RTT::internal::ReturnSignature&lt; 6, F, ToInvoke &gt;</a>
-, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_017_00_01F_00_01ToInvoke_01_4.html#abe8ce67efc4b7788de7c55e18bee3684">RTT::internal::ReturnSignature&lt; 7, F, ToInvoke &gt;</a>
+, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_017_00_01F_00_01ToInvoke_01_4.html#ab5185b57f3c0e3c00f4670a013fa1484">RTT::internal::ReturnSignature&lt; 7, F, ToInvoke &gt;</a>
 , <a class="el" href="classRTT_1_1OperationCallerC_1_1D.html#a997ec0fc8a2f4f925a64306746b805ac">RTT::OperationCallerC::D</a>
 , <a class="el" href="classRTT__corba__CSendHandle__i.html#a9af0250202cc66b7519b51336aef3516">RTT_corba_CSendHandle_i</a>
 </li>
 <li>ret_impl()
-: <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#a9eae72a5e0532414f8f9bb37c041faf9">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>
-, <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#a1242a168aa93d30c36378996f3242ff7">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>
+: <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#ad25e2ebd87b3dbef174e88a7fea30996">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>
+, <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#a1f2fd91d3592c52ec88f8802fd545b60">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>
 </li>
 <li>retn
 : <a class="el" href="structRTT_1_1internal_1_1DataSourceResultStorage.html#af446d768726f5ce518aaf1f7fdd926a7">RTT::internal::DataSourceResultStorage&lt; R &gt;</a>
@@ -769,13 +773,13 @@
 : <a class="el" href="classRTT_1_1scripting_1_1FunctionGraphBuilder.html#a011e904bc560deed93e08719be4e887c">RTT::scripting::FunctionGraphBuilder</a>
 </li>
 <li>ReturnSignature()
-: <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_010_00_01F_00_01ToInvoke_01_4.html#a2edad451477dc90bef9abce7a3f356da">RTT::internal::ReturnSignature&lt; 0, F, ToInvoke &gt;</a>
-, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_011_00_01F_00_01ToInvoke_01_4.html#ad753bd8f225ca65cf44f9dddea5f9a76">RTT::internal::ReturnSignature&lt; 1, F, ToInvoke &gt;</a>
-, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_012_00_01F_00_01ToInvoke_01_4.html#a658f56602d12acec2cd739922c164abf">RTT::internal::ReturnSignature&lt; 2, F, ToInvoke &gt;</a>
-, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_013_00_01F_00_01ToInvoke_01_4.html#a53d04879ca6c33a202f585a250b36583">RTT::internal::ReturnSignature&lt; 3, F, ToInvoke &gt;</a>
+: <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_010_00_01F_00_01ToInvoke_01_4.html#afe7875033a1d3122e5be33849b8687d3">RTT::internal::ReturnSignature&lt; 0, F, ToInvoke &gt;</a>
+, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_011_00_01F_00_01ToInvoke_01_4.html#a1d913f47423fa6c1ec7c40a9d9f2f789">RTT::internal::ReturnSignature&lt; 1, F, ToInvoke &gt;</a>
+, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_012_00_01F_00_01ToInvoke_01_4.html#ab62be7bc55aa946ae0f95cb08bfe7dcb">RTT::internal::ReturnSignature&lt; 2, F, ToInvoke &gt;</a>
+, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_013_00_01F_00_01ToInvoke_01_4.html#ad5be839eff9788f66a72ef5a0434a77b">RTT::internal::ReturnSignature&lt; 3, F, ToInvoke &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_014_00_01F_00_01ToInvoke_01_4.html#a90a386e9fb1476ad19271c18491a1a28">RTT::internal::ReturnSignature&lt; 4, F, ToInvoke &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_015_00_01F_00_01ToInvoke_01_4.html#aa5a847a6303ffe4f05eb560333e6aef1">RTT::internal::ReturnSignature&lt; 5, F, ToInvoke &gt;</a>
-, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_016_00_01F_00_01ToInvoke_01_4.html#a1ff9394be0415dc279ad4effb7ada5f4">RTT::internal::ReturnSignature&lt; 6, F, ToInvoke &gt;</a>
+, <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_016_00_01F_00_01ToInvoke_01_4.html#a25c98d4138861e0787cb4c208f744d91">RTT::internal::ReturnSignature&lt; 6, F, ToInvoke &gt;</a>
 , <a class="el" href="structRTT_1_1internal_1_1ReturnSignature_3_017_00_01F_00_01ToInvoke_01_4.html#aa055d16047547d1b14858d756e0b45c8">RTT::internal::ReturnSignature&lt; 7, F, ToInvoke &gt;</a>
 </li>
 <li>retv
@@ -936,7 +940,7 @@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 8 2018 20:28:46 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 9 2018 11:25:34 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

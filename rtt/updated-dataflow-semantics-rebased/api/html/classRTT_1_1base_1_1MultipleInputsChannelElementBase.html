@@ -148,12 +148,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a41b0d0d3b22eb597141eebae0401cf97"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a41b0d0d3b22eb597141eebae0401cf97">getConnPolicy</a> () const </td></tr>
 <tr class="memdesc:a41b0d0d3b22eb597141eebae0401cf97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the connection policy used to build this channel element, if available.  <a href="#a41b0d0d3b22eb597141eebae0401cf97">More...</a><br /></td></tr>
 <tr class="separator:a41b0d0d3b22eb597141eebae0401cf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf12aec54e7a4e436e6608f35bcbc1d4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#abf12aec54e7a4e436e6608f35bcbc1d4">setBufferPolicy</a> (int policy, bool force=false)</td></tr>
-<tr class="memdesc:abf12aec54e7a4e436e6608f35bcbc1d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> of this channel element.  <a href="#abf12aec54e7a4e436e6608f35bcbc1d4">More...</a><br /></td></tr>
-<tr class="separator:abf12aec54e7a4e436e6608f35bcbc1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a877444985ef48ee5d3e9f1297d6239a4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a877444985ef48ee5d3e9f1297d6239a4">getBufferPolicy</a> () const </td></tr>
-<tr class="memdesc:a877444985ef48ee5d3e9f1297d6239a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> of this channel element.  <a href="#a877444985ef48ee5d3e9f1297d6239a4">More...</a><br /></td></tr>
-<tr class="separator:a877444985ef48ee5d3e9f1297d6239a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8a516378722f20ae0e53a07064cea88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rtt-config_8h.html#ac76286eda68024e4586ee7205aada2ac">RTT_DEPRECATED</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#af8a516378722f20ae0e53a07064cea88">setOutput</a> (const <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">ChannelElementBase::shared_ptr</a> &amp;<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a9c4e2df1a665e53f0b707ad350364e19">output</a>)</td></tr>
 <tr class="separator:af8a516378722f20ae0e53a07064cea88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afebc8c2edea8f72d58e376111132a4e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rtt-config_8h.html#ac76286eda68024e4586ee7205aada2ac">RTT_DEPRECATED</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#afebc8c2edea8f72d58e376111132a4e4">setInput</a> (const <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">ChannelElementBase::shared_ptr</a> &amp;<a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a42a23dd060035b3ecea0dcfb75f00c70">input</a>)</td></tr>
@@ -205,25 +199,19 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a75fda1ddd4344c190a4193fc27cf3da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a254f9f83dbfae4c1c0445f386e92aee1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1MultipleInputsChannelElementBase.html#a254f9f83dbfae4c1c0445f386e92aee1">inputs_lock</a></td></tr>
 <tr class="separator:a254f9f83dbfae4c1c0445f386e92aee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac82506439560d75026b7cc3c6b712abd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1MultipleInputsChannelElementBase.html#ac82506439560d75026b7cc3c6b712abd">last_signalled</a></td></tr>
-<tr class="separator:ac82506439560d75026b7cc3c6b712abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42a23dd060035b3ecea0dcfb75f00c70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a42a23dd060035b3ecea0dcfb75f00c70">input</a></td></tr>
 <tr class="separator:a42a23dd060035b3ecea0dcfb75f00c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c4e2df1a665e53f0b707ad350364e19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a9c4e2df1a665e53f0b707ad350364e19">output</a></td></tr>
 <tr class="separator:a9c4e2df1a665e53f0b707ad350364e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ba58aa5e0b72e3001661f8e616a29b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a2ba58aa5e0b72e3001661f8e616a29b4">buffer_policy</a></td></tr>
-<tr class="separator:a2ba58aa5e0b72e3001661f8e616a29b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1011eaa2395edec94233771af5b974b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#ad1011eaa2395edec94233771af5b974b">input_lock</a></td></tr>
 <tr class="separator:ad1011eaa2395edec94233771af5b974b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee85e82db3d9c9df962b47206a72df10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#aee85e82db3d9c9df962b47206a72df10">output_lock</a></td></tr>
 <tr class="separator:aee85e82db3d9c9df962b47206a72df10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92dc4885ab041d802acb8b66dfbf2918"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a92dc4885ab041d802acb8b66dfbf2918">buffer_policy_lock</a></td></tr>
-<tr class="separator:a92dc4885ab041d802acb8b66dfbf2918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html" title="In the data flow implementation, a channel is created by chaining ChannelElementBase objects...">ChannelElementBase</a> variant with multiple input channels. </p>
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00349">349</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00331">331</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a4c9a7049dc2d20ee7f41d576032e4f4e"></a>
 <div class="memitem">
@@ -235,7 +223,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00353">353</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00335">335</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -249,7 +237,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00352">352</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00334">334</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +255,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00249">249</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00231">231</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 </div>
 </div>
@@ -305,9 +293,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a194d84e56b2a7876ec319b01daa81ddf">RTT::base::ChannelElementBase</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00253">253</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00234">234</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00356">inputs</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00357">inputs_lock</a>.</p>
+<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>.</p>
 
 </div>
 </div>
@@ -355,11 +343,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html#a7d8b962f5a5fe1fa58d68ce5189e9e8d">RTT::base::MultipleOutputsChannelElementBase</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00081">81</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00079">79</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00081">RTT::base::ChannelElementBase::output_lock</a>.</p>
+<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00080">RTT::base::ChannelElementBase::output_lock</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00071">RTT::base::ChannelElementBase::connectTo()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00069">RTT::base::ChannelElementBase::connectTo()</a>.</p>
 
 </div>
 </div>
@@ -404,11 +392,11 @@ Protected Attributes</h2></td></tr>
 <p>This is called on the output half of a new connection by the connection factory in order to notify the output side of the new connection and check if it is ready to receive data. </p>
 <p>Each channel element has the responsibility to pass this notification on to the next, in the direction of the input. The ConnOutputEndPoint then calls back the inputReady() method in reverse direction to notify the output that the connection was successfully established. </p><dl class="section return"><dt>Returns</dt><dd>false if a fatal connection failure was encountered and the channel needs to be destroyed. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html#a99ba11be6c99d97ff16e75aaac2aa812">RTT::base::MultipleOutputsChannelElementBase</a>, <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a9eb5dcafa4fac5aa84e5ec8d91b00e7e">RTT::corba::RemoteChannelElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#a2b4f01dea288f6fb7dd6dc98739464fc">RTT::internal::ConnOutputEndpoint&lt; T &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a9eb5dcafa4fac5aa84e5ec8d91b00e7e">RTT::corba::RemoteChannelElement&lt; T &gt;</a>, <a class="el" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html#a99ba11be6c99d97ff16e75aaac2aa812">RTT::base::MultipleOutputsChannelElementBase</a>, and <a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#a2b4f01dea288f6fb7dd6dc98739464fc">RTT::internal::ConnOutputEndpoint&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00171">171</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00169">169</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00059">RTT::base::ChannelElementBase::getInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00065">RTT::base::ChannelElementBase::getOutput()</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>, <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a1d5804375c6925e005af865deb89869b">RTT::base::ChannelElementBase::inputReady()</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00057">RTT::base::ChannelElementBase::getInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00063">RTT::base::ChannelElementBase::getOutput()</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>, <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a1d5804375c6925e005af865deb89869b">RTT::base::ChannelElementBase::inputReady()</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>.</p>
 
 <p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00464">RTT::corba::RemoteChannelElement&lt; T &gt;::channelReady()</a>.</p>
 
@@ -442,9 +430,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1SharedConnection.html#a666e8604da6ab51736fe6b9201286fc0">RTT::internal::SharedConnection&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00285">285</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
-
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00356">inputs</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00357">inputs_lock</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00264">264</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 </div>
 </div>
@@ -475,11 +461,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1base_1_1MultipleInputsMultipleOutputsChannelElementBase.html#a5f75582d35a0790135b24772c38880df">RTT::base::MultipleInputsMultipleOutputsChannelElementBase</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00270">270</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00249">249</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00356">inputs</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00357">inputs_lock</a>.</p>
-
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00305">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00454">RTT::base::MultipleInputsMultipleOutputsChannelElementBase::connected()</a>, and <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00129">RTT::internal::ConnOutputEndpoint&lt; T &gt;::disconnect()</a>.</p>
+<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00297">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00431">RTT::base::MultipleInputsMultipleOutputsChannelElementBase::connected()</a>, and <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00129">RTT::internal::ConnOutputEndpoint&lt; T &gt;::disconnect()</a>.</p>
 
 </div>
 </div>
@@ -513,9 +497,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00098">98</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00096">96</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00108">RTT::base::ChannelElementBase::addInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00117">RTT::base::ChannelElementBase::removeInput()</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00106">RTT::base::ChannelElementBase::addInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00115">RTT::base::ChannelElementBase::removeInput()</a>.</p>
 
 </div>
 </div>
@@ -560,11 +544,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00071">71</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00069">69</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00081">RTT::base::ChannelElementBase::addOutput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00090">RTT::base::ChannelElementBase::removeOutput()</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00079">RTT::base::ChannelElementBase::addOutput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00088">RTT::base::ChannelElementBase::removeOutput()</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00219">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00305">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00400">RTT::internal::ConnFactory::buildSharedConnection()</a>, and <a class="el" href="ConnFactory_8cpp_source.html#l00214">RTT::internal::ConnFactory::createAndCheckSharedConnection()</a>.</p>
+<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00219">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00297">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00384">RTT::internal::ConnFactory::buildSharedConnection()</a>, and <a class="el" href="ConnFactory_8cpp_source.html#l00214">RTT::internal::ConnFactory::createAndCheckSharedConnection()</a>.</p>
 
 </div>
 </div>
@@ -591,7 +575,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Decreases the reference count, and deletes the object if it is zero. </p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00490">490</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00467">467</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 <p>References <a class="el" href="oro__arch__interface_8h.html#a41838459c68a9dc60dc05f0a911b2971">oro_atomic_dec_and_test()</a>.</p>
 
@@ -624,11 +608,11 @@ Protected Attributes</h2></td></tr>
 <p>Performs a disconnection of this channel's endpoints. </p>
 <p>If <em>forward</em> is true, then the disconnection is initiated by the input endpoint. Otherwise, it has been initiated by the output endpoint. </p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00132">132</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00130">130</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00059">RTT::base::ChannelElementBase::getInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00065">RTT::base::ChannelElementBase::getOutput()</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00117">RTT::base::ChannelElementBase::removeInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00090">RTT::base::ChannelElementBase::removeOutput()</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00057">RTT::base::ChannelElementBase::getInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00063">RTT::base::ChannelElementBase::getOutput()</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00115">RTT::base::ChannelElementBase::removeInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00088">RTT::base::ChannelElementBase::removeOutput()</a>.</p>
 
-<p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00214">RTT::corba::RemoteChannelElement&lt; T &gt;::disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00293">disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00397">RTT::base::MultipleOutputsChannelElementBase::disconnect()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00078">RTT::internal::ConnectionManager::eraseConnection()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00195">RTT::corba::RemoteChannelElement&lt; T &gt;::remoteDisconnect()</a>.</p>
+<p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00214">RTT::corba::RemoteChannelElement&lt; T &gt;::disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00272">disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00374">RTT::base::MultipleOutputsChannelElementBase::disconnect()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00078">RTT::internal::ConnectionManager::eraseConnection()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00195">RTT::corba::RemoteChannelElement&lt; T &gt;::remoteDisconnect()</a>.</p>
 
 </div>
 </div>
@@ -670,43 +654,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1base_1_1MultipleInputsMultipleOutputsChannelElementBase.html#ae4507e4e15a465fa998ff28211e4f024">RTT::base::MultipleInputsMultipleOutputsChannelElementBase</a>, and <a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#a55fe3b37f6a64c92719cb9b0203283e3">RTT::internal::ConnOutputEndpoint&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00293">293</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00272">272</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00132">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00356">inputs</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00357">inputs_lock</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00263">removeInput()</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00130">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00115">RTT::base::ChannelElementBase::removeInput()</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00129">RTT::internal::ConnOutputEndpoint&lt; T &gt;::disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00459">RTT::base::MultipleInputsMultipleOutputsChannelElementBase::disconnect()</a>, and <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00110">RTT::internal::ConnOutputEndpoint&lt; T &gt;::write()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a877444985ef48ee5d3e9f1297d6239a4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> ChannelElementBase::getBufferPolicy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the current <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> of this channel element. </p>
-<dl class="section return"><dt>Returns</dt><dd>a BufferPolicy instance </dd></dl>
-
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00223">223</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
-
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00078">RTT::base::ChannelElementBase::buffer_policy</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00082">RTT::base::ChannelElementBase::buffer_policy_lock</a>.</p>
-
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00219">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00305">RTT::internal::ConnFactory::buildChannelOutput()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00176">RTT::base::MultipleInputsChannelElement&lt; T &gt;::currentInput()</a>.</p>
+<p>Referenced by <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00129">RTT::internal::ConnOutputEndpoint&lt; T &gt;::disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00436">RTT::base::MultipleInputsMultipleOutputsChannelElementBase::disconnect()</a>, and <a class="el" href="ConnOutputEndPoint_8hpp_source.html#l00110">RTT::internal::ConnOutputEndpoint&lt; T &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -736,9 +688,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1ChannelBufferElement.html#a25e5f0ace3c191c7a572535da9b558d5">RTT::internal::ChannelBufferElement&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1ChannelDataElement.html#a4b9da624116295f1fe5d4d8b100cecaa">RTT::internal::ChannelDataElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1SharedConnectionBase.html#a7dddf93435491502aaabf8083d2115e7">RTT::internal::SharedConnectionBase</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00209">209</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00207">207</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00219">RTT::internal::ConnFactory::buildChannelInput()</a>, and <a class="el" href="ConnFactory_8hpp_source.html#l00305">RTT::internal::ConnFactory::buildChannelOutput()</a>.</p>
+<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00219">RTT::internal::ConnFactory::buildChannelInput()</a>, and <a class="el" href="ConnFactory_8hpp_source.html#l00297">RTT::internal::ConnFactory::buildChannelOutput()</a>.</p>
 
 </div>
 </div>
@@ -768,7 +720,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#af49c702d3ed5f1e06f4b8e4e98331fd3">RTT::corba::RemoteChannelElement&lt; T &gt;</a>, <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a6014e7d5f669cf248922d7c943088c32">RTT::mqueue::MQChannelElement&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#a6d96d73ffae8886ab693a6574a3eeb80">RTT::internal::ConnOutputEndpoint&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1ChannelBufferElement.html#aea9ca772ae81980b716639999b258ce1">RTT::internal::ChannelBufferElement&lt; T &gt;</a>, <a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html#adc8b82059a9ed58c1c76982cd22e2ccc">RTT::internal::ConnInputEndpoint&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1ChannelDataElement.html#ac73ce4889bf3ff1c3137a1a2bda5b67d">RTT::internal::ChannelDataElement&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00245">245</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00227">227</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 </div>
 </div>
@@ -796,11 +748,11 @@ Protected Attributes</h2></td></tr>
 <p>Returns the current input channel element. </p>
 <p>This will only return a valid channel element if another element has received this object as an argument to <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#af51bbede4b7cef19688822fea37ffdce" title="Connects a new output to this element. ">connectTo()</a>. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00059">59</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00057">57</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00080">RTT::base::ChannelElementBase::input_lock</a>.</p>
+<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00079">RTT::base::ChannelElementBase::input_lock</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00171">RTT::base::ChannelElementBase::channelReady()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00190">RTT::base::ChannelElementBase::clear()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00132">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00074">RTT::base::ChannelElement&lt; T &gt;::getInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00159">RTT::base::ChannelElementBase::getInputEndPoint()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00186">RTT::mqueue::MQChannelElement&lt; T &gt;::getLocalURI()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00488">RTT::corba::RemoteChannelElement&lt; T &gt;::getLocalURI()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00169">RTT::base::ChannelElementBase::channelReady()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00188">RTT::base::ChannelElementBase::clear()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00130">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00074">RTT::base::ChannelElement&lt; T &gt;::getInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00157">RTT::base::ChannelElementBase::getInputEndPoint()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00186">RTT::mqueue::MQChannelElement&lt; T &gt;::getLocalURI()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00488">RTT::corba::RemoteChannelElement&lt; T &gt;::getLocalURI()</a>.</p>
 
 </div>
 </div>
@@ -830,9 +782,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html#a779fa399a4cf186a86fffc43fa5fd838">RTT::internal::ConnInputEndpoint&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00159">159</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00157">157</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00059">RTT::base::ChannelElementBase::getInput()</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00057">RTT::base::ChannelElementBase::getInput()</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">RTT::base::ChannelElementBase::input</a>.</p>
 
 </div>
 </div>
@@ -862,7 +814,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#abf1600b52dd92f337b5742fbaad0ed7a">RTT::corba::RemoteChannelElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a92de07aadda7043a8ce1b74ad33774ad">RTT::mqueue::MQChannelElement&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00241">241</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00223">223</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 <p>Referenced by <a class="el" href="MQChannelElement_8hpp_source.html#l00186">RTT::mqueue::MQChannelElement&lt; T &gt;::getLocalURI()</a>, and <a class="el" href="RemoteChannelElement_8hpp_source.html#l00488">RTT::corba::RemoteChannelElement&lt; T &gt;::getLocalURI()</a>.</p>
 
@@ -891,11 +843,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the next channel element in the channel's propagation direction. </p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00065">65</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00063">63</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00081">RTT::base::ChannelElementBase::output_lock</a>.</p>
+<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00080">RTT::base::ChannelElementBase::output_lock</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00171">RTT::base::ChannelElementBase::channelReady()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00132">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00069">RTT::base::ChannelElement&lt; T &gt;::getOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00165">RTT::base::ChannelElementBase::getOutputEndPoint()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00176">RTT::mqueue::MQChannelElement&lt; T &gt;::getRemoteURI()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00477">RTT::corba::RemoteChannelElement&lt; T &gt;::getRemoteURI()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00197">RTT::base::ChannelElementBase::signal()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00169">RTT::base::ChannelElementBase::channelReady()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00130">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00069">RTT::base::ChannelElement&lt; T &gt;::getOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00163">RTT::base::ChannelElementBase::getOutputEndPoint()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00176">RTT::mqueue::MQChannelElement&lt; T &gt;::getRemoteURI()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00477">RTT::corba::RemoteChannelElement&lt; T &gt;::getRemoteURI()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00195">RTT::base::ChannelElementBase::signal()</a>.</p>
 
 </div>
 </div>
@@ -925,9 +877,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#ac58cc3e00affe83e1992ca8b27828d5e">RTT::internal::ConnOutputEndpoint&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00165">165</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00163">163</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00065">RTT::base::ChannelElementBase::getOutput()</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00063">RTT::base::ChannelElementBase::getOutput()</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>.</p>
 
 <p>Referenced by <a class="el" href="DataFlowI_8cpp_source.html#l00231">RTT::corba::CDataFlowInterface_i::deregisterChannel()</a>.</p>
 
@@ -959,7 +911,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#a4184200033a0953f57ac8e1d8cfc5dbd">RTT::internal::ConnOutputEndpoint&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1ConnInputEndpoint.html#ab67f67007cdb4c655aa195ed69a9da12">RTT::internal::ConnInputEndpoint&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00205">205</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00203">203</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 </div>
 </div>
@@ -990,7 +942,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a39d8fa0d035c119106a0822a790d799d">RTT::corba::RemoteChannelElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a63c1ccd3e23783738c942b72294f693a">RTT::mqueue::MQChannelElement&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00233">233</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00215">215</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 <p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>.</p>
 
@@ -1025,9 +977,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a1d5804375c6925e005af865deb89869b">RTT::base::ChannelElementBase</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00276">276</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
-
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00356">inputs</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00357">inputs_lock</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00255">255</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1007,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a0eddae46526c29d62c88d93c0e770908">RTT::corba::RemoteChannelElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a10bfcee86c4f172889c6e4faecfdfcc8">RTT::mqueue::MQChannelElement&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00229">229</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00211">211</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 </div>
 </div>
@@ -1087,9 +1037,9 @@ template&lt;typename T &gt; </div>
 
 <p>Return a pointer to the typed instance of a <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html" title="In the data flow implementation, a channel is created by chaining ChannelElementBase objects...">ChannelElementBase</a>. </p>
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00103">103</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00101">101</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelElement_8hpp_source.html#l00176">RTT::base::MultipleInputsChannelElement&lt; T &gt;::currentInput()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelElement_8hpp_source.html#l00164">RTT::base::MultipleInputsChannelElement&lt; T &gt;::read()</a>.</p>
 
 </div>
 </div>
@@ -1118,7 +1068,7 @@ template&lt;typename T &gt; </div>
 
 <p>Return a pointer to the typed variant of this <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html" title="In the data flow implementation, a channel is created by chaining ChannelElementBase objects...">ChannelElementBase</a>. </p>
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00111">111</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00109">109</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1145,7 +1095,7 @@ template&lt;typename T &gt; </div>
 
 <p>Increases the reference count. </p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00485">485</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00462">462</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
 <p>References <a class="el" href="oro__arch__interface_8h.html#af86230f87017f4dfd762ff6f27543bf0">oro_atomic_inc()</a>.</p>
 
@@ -1187,11 +1137,9 @@ template&lt;typename T &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1base_1_1MultipleInputsChannelElement.html#a6a2c92c5af6549213121e7ad63ec4987">RTT::base::MultipleInputsChannelElement&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00263">263</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00244">244</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="CAS_8hpp_source.html#l00054">RTT::os::CAS()</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00356">inputs</a>, <a class="el" href="ChannelElementBase_8hpp_source.html#l00358">last_signalled</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00213">RTT::base::ChannelElementBase::setBufferPolicy()</a>, and <a class="el" href="BufferPolicy_8hpp_source.html#l00075">RTT::UnspecifiedBufferPolicy</a>.</p>
-
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00293">disconnect()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00262">RTT::base::MultipleInputsChannelElement&lt; T &gt;::removeInput()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelElement_8hpp_source.html#l00247">RTT::base::MultipleInputsChannelElement&lt; T &gt;::removeInput()</a>.</p>
 
 </div>
 </div>
@@ -1227,61 +1175,11 @@ template&lt;typename T &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html#a449d523dbcd940e8645d2a3b7afa5f06">RTT::base::MultipleOutputsChannelElementBase</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00090">90</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00088">88</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00081">RTT::base::ChannelElementBase::output_lock</a>.</p>
+<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00080">RTT::base::ChannelElementBase::output_lock</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00071">RTT::base::ChannelElementBase::connectTo()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00132">RTT::base::ChannelElementBase::disconnect()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abf12aec54e7a4e436e6608f35bcbc1d4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ChannelElementBase::setBufferPolicy </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>policy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>force</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the <a class="el" href="group__Ports.html#gadc680c5e9ed12ee0889933483c89b7ea">BufferPolicy</a> of this channel element. </p>
-<p>The BufferPolicy controls how reads and writes are handled for channel elements which have multiple connections. The policy can only be set once unless the force argument is set to true. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">policy</td><td>the new buffer policy </td></tr>
-    <tr><td class="paramname">force</td><td>overwrite a buffer policy set previously </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the given policy was successfully applied </dd></dl>
-
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00213">213</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
-
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00078">RTT::base::ChannelElementBase::buffer_policy</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00082">RTT::base::ChannelElementBase::buffer_policy_lock</a>.</p>
-
-<p>Referenced by <a class="el" href="ConnFactory_8hpp_source.html#l00219">RTT::internal::ConnFactory::buildChannelInput()</a>, <a class="el" href="ConnFactory_8hpp_source.html#l00305">RTT::internal::ConnFactory::buildChannelOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00263">removeInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00367">RTT::base::MultipleOutputsChannelElementBase::removeOutput()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00069">RTT::base::ChannelElementBase::connectTo()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00130">RTT::base::ChannelElementBase::disconnect()</a>.</p>
 
 </div>
 </div>
@@ -1307,7 +1205,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00262">262</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00244">244</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1333,7 +1231,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00256">256</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00238">238</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1363,11 +1261,11 @@ template&lt;typename T &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1base_1_1MultipleOutputsChannelElementBase.html#afb3c87bb1d1c48b608d24ab538559bb0">RTT::base::MultipleOutputsChannelElementBase</a>, <a class="el" href="classRTT_1_1internal_1_1ConnOutputEndpoint.html#a50c1b0f70fd902dbd239f4ae84ade643">RTT::internal::ConnOutputEndpoint&lt; T &gt;</a>, <a class="el" href="classRTT_1_1corba_1_1RemoteChannelElement.html#a87dd55d601caccc5b15de5c86c64bfd7">RTT::corba::RemoteChannelElement&lt; T &gt;</a>, and <a class="el" href="classRTT_1_1mqueue_1_1MQChannelElement.html#a17bec196982377f40a7691b1854d8586">RTT::mqueue::MQChannelElement&lt; T &gt;</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00197">197</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00195">195</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00065">RTT::base::ChannelElementBase::getOutput()</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00063">RTT::base::ChannelElementBase::getOutput()</a>, and <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">RTT::base::ChannelElementBase::output</a>.</p>
 
-<p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00123">RTT::corba::RemoteChannelElement&lt; T &gt;::remoteSignal()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00128">RTT::corba::RemoteChannelElement&lt; T &gt;::signal()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00379">RTT::base::MultipleOutputsChannelElementBase::signal()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00337">signalFrom()</a>, and <a class="el" href="ChannelDataElement_8hpp_source.html#l00066">RTT::internal::ChannelDataElement&lt; T &gt;::write()</a>.</p>
+<p>Referenced by <a class="el" href="RemoteChannelElement_8hpp_source.html#l00123">RTT::corba::RemoteChannelElement&lt; T &gt;::remoteSignal()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00128">RTT::corba::RemoteChannelElement&lt; T &gt;::signal()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00356">RTT::base::MultipleOutputsChannelElementBase::signal()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00316">signalFrom()</a>, and <a class="el" href="ChannelDataElement_8hpp_source.html#l00066">RTT::internal::ChannelDataElement&lt; T &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -1397,61 +1295,13 @@ template&lt;typename T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a85acfa49b7f0417453cf764fa98006c8">RTT::base::ChannelElementBase</a>.</p>
 
-<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00337">337</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelInterface_8cpp_source.html#l00316">316</a> of file <a class="el" href="ChannelInterface_8cpp_source.html">ChannelInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="ChannelElementBase_8hpp_source.html#l00358">last_signalled</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00197">RTT::base::ChannelElementBase::signal()</a>.</p>
+<p>References <a class="el" href="ChannelInterface_8cpp_source.html#l00195">RTT::base::ChannelElementBase::signal()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a2ba58aa5e0b72e3001661f8e616a29b4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RTT::base::ChannelElementBase::buffer_policy</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00078">78</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="ChannelElement_8hpp_source.html#l00176">RTT::base::MultipleInputsChannelElement&lt; T &gt;::currentInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00223">RTT::base::ChannelElementBase::getBufferPolicy()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00213">RTT::base::ChannelElementBase::setBufferPolicy()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a92dc4885ab041d802acb8b66dfbf2918"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classRTT_1_1os_1_1SharedMutex.html">RTT::os::SharedMutex</a> RTT::base::ChannelElementBase::buffer_policy_lock</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00082">82</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00223">RTT::base::ChannelElementBase::getBufferPolicy()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00213">RTT::base::ChannelElementBase::setBufferPolicy()</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a42a23dd060035b3ecea0dcfb75f00c70"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1472,7 +1322,7 @@ template&lt;typename T &gt; </div>
 
 <p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00076">76</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00108">RTT::base::ChannelElementBase::addInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00253">addInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00171">RTT::base::ChannelElementBase::channelReady()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00190">RTT::base::ChannelElementBase::clear()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00125">RTT::base::ChannelElementBase::connected()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00176">RTT::base::MultipleInputsChannelElement&lt; T &gt;::currentInput()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00095">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00149">RTT::base::MultipleInputsChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00132">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00293">disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00059">RTT::base::ChannelElementBase::getInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00159">RTT::base::ChannelElementBase::getInputEndPoint()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00421">RTT::corba::RemoteChannelElement&lt; T &gt;::inputReady()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00121">RTT::base::ChannelElement&lt; T &gt;::read()</a>, and <a class="el" href="MQChannelElement_8hpp_source.html#l00128">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00106">RTT::base::ChannelElementBase::addInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00234">addInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00169">RTT::base::ChannelElementBase::channelReady()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00188">RTT::base::ChannelElementBase::clear()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00123">RTT::base::ChannelElementBase::connected()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00095">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00149">RTT::base::MultipleInputsChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00130">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00272">disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00057">RTT::base::ChannelElementBase::getInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00157">RTT::base::ChannelElementBase::getInputEndPoint()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00421">RTT::corba::RemoteChannelElement&lt; T &gt;::inputReady()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00121">RTT::base::ChannelElement&lt; T &gt;::read()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00164">RTT::base::MultipleInputsChannelElement&lt; T &gt;::read()</a>, and <a class="el" href="MQChannelElement_8hpp_source.html#l00128">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>.</p>
 
 </div>
 </div>
@@ -1494,9 +1344,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00080">80</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00079">79</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00108">RTT::base::ChannelElementBase::addInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00125">RTT::base::ChannelElementBase::connected()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00059">RTT::base::ChannelElementBase::getInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00117">RTT::base::ChannelElementBase::removeInput()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00106">RTT::base::ChannelElementBase::addInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00123">RTT::base::ChannelElementBase::connected()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00057">RTT::base::ChannelElementBase::getInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00115">RTT::base::ChannelElementBase::removeInput()</a>.</p>
 
 </div>
 </div>
@@ -1518,9 +1368,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00356">356</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00253">addInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00285">clear()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00270">connected()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00293">disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00276">inputReady()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00263">removeInput()</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00338">338</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1542,33 +1390,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00357">357</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00253">addInput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00285">clear()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00270">connected()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00293">disconnect()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00276">inputReady()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac82506439560d75026b7cc3c6b712abd"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html">ChannelElementBase</a>* RTT::base::MultipleInputsChannelElementBase::last_signalled</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00358">358</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00263">removeInput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00337">signalFrom()</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00339">339</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
 </div>
 </div>
@@ -1592,7 +1414,7 @@ template&lt;typename T &gt; </div>
 
 <p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00077">77</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00081">RTT::base::ChannelElementBase::addOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00357">RTT::base::MultipleOutputsChannelElementBase::addOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00171">RTT::base::ChannelElementBase::channelReady()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00125">RTT::base::ChannelElementBase::connected()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00087">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00283">RTT::base::MultipleOutputsChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00132">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00397">RTT::base::MultipleOutputsChannelElementBase::disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00065">RTT::base::ChannelElementBase::getOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00165">RTT::base::ChannelElementBase::getOutputEndPoint()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00233">RTT::base::ChannelElementBase::getRemoteURI()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00089">RTT::mqueue::MQChannelElement&lt; T &gt;::inputReady()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00442">RTT::base::MultipleOutputsChannelElementBase::removeDisconnectedOutputs()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00128">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00197">RTT::base::ChannelElementBase::signal()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00379">RTT::base::MultipleOutputsChannelElementBase::signal()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00108">RTT::base::ChannelElement&lt; T &gt;::write()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00319">RTT::base::MultipleOutputsChannelElement&lt; T &gt;::write()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00079">RTT::base::ChannelElementBase::addOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00335">RTT::base::MultipleOutputsChannelElementBase::addOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00169">RTT::base::ChannelElementBase::channelReady()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00123">RTT::base::ChannelElementBase::connected()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00087">RTT::base::ChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00268">RTT::base::MultipleOutputsChannelElement&lt; T &gt;::data_sample()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00130">RTT::base::ChannelElementBase::disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00374">RTT::base::MultipleOutputsChannelElementBase::disconnect()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00063">RTT::base::ChannelElementBase::getOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00163">RTT::base::ChannelElementBase::getOutputEndPoint()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00215">RTT::base::ChannelElementBase::getRemoteURI()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00089">RTT::mqueue::MQChannelElement&lt; T &gt;::inputReady()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00419">RTT::base::MultipleOutputsChannelElementBase::removeDisconnectedOutputs()</a>, <a class="el" href="MQChannelElement_8hpp_source.html#l00128">RTT::mqueue::MQChannelElement&lt; T &gt;::signal()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00195">RTT::base::ChannelElementBase::signal()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00356">RTT::base::MultipleOutputsChannelElementBase::signal()</a>, <a class="el" href="ChannelElement_8hpp_source.html#l00108">RTT::base::ChannelElement&lt; T &gt;::write()</a>, and <a class="el" href="ChannelElement_8hpp_source.html#l00304">RTT::base::MultipleOutputsChannelElement&lt; T &gt;::write()</a>.</p>
 
 </div>
 </div>
@@ -1614,9 +1436,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00081">81</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ChannelElementBase_8hpp_source.html#l00080">80</a> of file <a class="el" href="ChannelElementBase_8hpp_source.html">ChannelElementBase.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00081">RTT::base::ChannelElementBase::addOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00125">RTT::base::ChannelElementBase::connected()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00065">RTT::base::ChannelElementBase::getOutput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00090">RTT::base::ChannelElementBase::removeOutput()</a>.</p>
+<p>Referenced by <a class="el" href="ChannelInterface_8cpp_source.html#l00079">RTT::base::ChannelElementBase::addOutput()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00123">RTT::base::ChannelElementBase::connected()</a>, <a class="el" href="ChannelInterface_8cpp_source.html#l00063">RTT::base::ChannelElementBase::getOutput()</a>, and <a class="el" href="ChannelInterface_8cpp_source.html#l00088">RTT::base::ChannelElementBase::removeOutput()</a>.</p>
 
 </div>
 </div>
@@ -1627,7 +1449,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 8 2018 20:28:39 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 9 2018 11:25:27 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
