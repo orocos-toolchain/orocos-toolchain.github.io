@@ -93,6 +93,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3e63664cacbf6a7dd80522e36c337820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a077e65af66f34edbc9e27d70912070b4"><td class="memItemLeft" align="right" valign="top">virtual ::CORBA::Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT__corba__CTaskContext__i.html#a077e65af66f34edbc9e27d70912070b4">cleanup</a> (void)</td></tr>
 <tr class="separator:a077e65af66f34edbc9e27d70912070b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6351924588737921fedf439293346992"><td class="memItemLeft" align="right" valign="top">virtual ::CORBA::Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT__corba__CTaskContext__i.html#a6351924588737921fedf439293346992">recover</a> (void)</td></tr>
+<tr class="separator:a6351924588737921fedf439293346992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ab934e827272823c64e1f61d71c14f9"><td class="memItemLeft" align="right" valign="top">virtual ::CORBA::Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT__corba__CTaskContext__i.html#a2ab934e827272823c64e1f61d71c14f9">resetException</a> (void)</td></tr>
 <tr class="separator:a2ab934e827272823c64e1f61d71c14f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a4658d16e7d9cda993e23d044cb7d94"><td class="memItemLeft" align="right" valign="top">virtual ::CORBA::Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT__corba__CTaskContext__i.html#a4a4658d16e7d9cda993e23d044cb7d94">isActive</a> (void)</td></tr>
@@ -105,6 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9e5a49047f645d179db6a4c71850e584"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb5716c430ccbf393d67b2121eb149cc"><td class="memItemLeft" align="right" valign="top">virtual ::CORBA::Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT__corba__CTaskContext__i.html#acb5716c430ccbf393d67b2121eb149cc">inRunTimeError</a> (void)</td></tr>
 <tr class="separator:acb5716c430ccbf393d67b2121eb149cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fffe11c70974ca0a71a1d0d23f364f8"><td class="memItemLeft" align="right" valign="top">virtual ::CORBA::Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT__corba__CTaskContext__i.html#a0fffe11c70974ca0a71a1d0d23f364f8">inException</a> (void)</td></tr>
+<tr class="separator:a0fffe11c70974ca0a71a1d0d23f364f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1faf226c8ed50a8b2719b794d1c6a1cf"><td class="memItemLeft" align="right" valign="top">virtual ::RTT::corba::CDataFlowInterface_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT__corba__CTaskContext__i.html#a1faf226c8ed50a8b2719b794d1c6a1cf">ports</a> (void)</td></tr>
 <tr class="separator:a1faf226c8ed50a8b2719b794d1c6a1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4b6f5045003d9b6fcfd768f18656d3b"><td class="memItemLeft" align="right" valign="top">virtual ::RTT::corba::CService_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT__corba__CTaskContext__i.html#aa4b6f5045003d9b6fcfd768f18656d3b">getProvider</a> (const char *service_name)</td></tr>
@@ -251,7 +255,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="TaskContextI_8h_source.html#l00108">108</a> of file <a class="el" href="TaskContextI_8h_source.html">TaskContextI.h</a>.</p>
 
-<p>References <a class="el" href="TaskContextI_8cpp_source.html#l00132">activate()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00266">addPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00144">cleanup()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00120">configure()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00284">connectPeers()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00299">connectPorts()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00306">connectServices()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00291">disconnectPeers()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00108">getDescription()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00102">getName()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00246">getPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00234">getPeerList()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00194">getProvider()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00214">getRequester()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00114">getTaskState()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00259">hasPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00176">inFatalError()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00182">inRunTimeError()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00158">isActive()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00170">isConfigured()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00164">isRunning()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00188">ports()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00276">removePeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00150">resetException()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00098">shutdownCORBA()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00126">start()</a>, and <a class="el" href="TaskContextI_8cpp_source.html#l00138">stop()</a>.</p>
+<p>References <a class="el" href="TaskContextI_8cpp_source.html#l00132">activate()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00278">addPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00150">cleanup()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00120">configure()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00296">connectPeers()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00311">connectPorts()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00318">connectServices()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00303">disconnectPeers()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00108">getDescription()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00102">getName()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00258">getPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00246">getPeerList()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00206">getProvider()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00226">getRequester()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00114">getTaskState()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00271">hasPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00194">inException()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00182">inFatalError()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00188">inRunTimeError()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00164">isActive()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00176">isConfigured()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00170">isRunning()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00200">ports()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00144">recover()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00288">removePeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00156">resetException()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00098">shutdownCORBA()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00126">start()</a>, and <a class="el" href="TaskContextI_8cpp_source.html#l00138">stop()</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00119">RTT::corba::TaskContextServer::initTaskContextServer()</a>.</p>
 
@@ -281,7 +285,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00266">266</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00278">278</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContext_8cpp_source.html#l00252">RTT::TaskContext::addPeer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00331">RTT::TaskContext::hasPeer()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -303,7 +307,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00144">144</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00150">150</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8cpp_source.html#l00127">RTT::base::TaskCore::cleanup()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -347,7 +351,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00284">284</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00296">296</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContext_8cpp_source.html#l00282">RTT::TaskContext::connectPeers()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -369,7 +373,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00299">299</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00311">311</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContext_8cpp_source.html#l00154">RTT::TaskContext::connectPorts()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -391,7 +395,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00306">306</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00318">318</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContext_8cpp_source.html#l00191">RTT::TaskContext::connectServices()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -413,7 +417,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00291">291</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00303">303</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContext_8cpp_source.html#l00313">RTT::TaskContext::disconnectPeers()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -495,7 +499,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00246">246</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00258">258</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContext_8cpp_source.html#l00336">RTT::TaskContext::getPeer()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -517,7 +521,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00234">234</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00246">246</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContext_8cpp_source.html#l00322">RTT::TaskContext::getPeerList()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -539,11 +543,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00194">194</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00206">206</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="ServiceI_8h_source.html#l00107">RTT_corba_CService_i::activate_this()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="TaskContext_8hpp_source.html#l00128">RTT::TaskContext::getName()</a>, <a class="el" href="TaskContextI_8h_source.html#l00092">mpoa</a>, <a class="el" href="TaskContextI_8h_source.html#l00095">mService</a>, <a class="el" href="TaskContextI_8h_source.html#l00099">mService_i</a>, <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00268">RTT::TaskContext::provides()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextI_8h_source.html#l00108">activate_this()</a>, and <a class="el" href="TaskContextI_8cpp_source.html#l00188">ports()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextI_8h_source.html#l00108">activate_this()</a>, and <a class="el" href="TaskContextI_8cpp_source.html#l00200">ports()</a>.</p>
 
 </div>
 </div>
@@ -561,7 +565,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00214">214</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00226">226</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="ServiceRequesterI_8h_source.html#l00100">RTT_corba_CServiceRequester_i::activate_this()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="TaskContext_8hpp_source.html#l00128">RTT::TaskContext::getName()</a>, <a class="el" href="TaskContextI_8h_source.html#l00092">mpoa</a>, <a class="el" href="TaskContextI_8h_source.html#l00096">mRequest</a>, <a class="el" href="TaskContextI_8h_source.html#l00098">mRequest_i</a>, <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>, and <a class="el" href="TaskContext_8hpp_source.html#l00281">RTT::TaskContext::requires()</a>.</p>
 
@@ -605,9 +609,31 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00259">259</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00271">271</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContext_8cpp_source.html#l00331">RTT::TaskContext::hasPeer()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextI_8h_source.html#l00108">activate_this()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0fffe11c70974ca0a71a1d0d23f364f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORBA::Boolean RTT_corba_CTaskContext_i::inException </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00194">194</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskCore_8cpp_source.html#l00259">RTT::base::TaskCore::inException()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextI_8h_source.html#l00108">activate_this()</a>.</p>
 
@@ -627,7 +653,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00176">176</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00182">182</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8cpp_source.html#l00255">RTT::base::TaskCore::inFatalError()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -649,7 +675,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00182">182</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00188">188</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8cpp_source.html#l00263">RTT::base::TaskCore::inRunTimeError()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -671,7 +697,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00158">158</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00164">164</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8cpp_source.html#l00267">RTT::base::TaskCore::isActive()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -693,7 +719,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00170">170</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00176">176</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8cpp_source.html#l00251">RTT::base::TaskCore::isConfigured()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -715,7 +741,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00164">164</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00170">170</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8cpp_source.html#l00247">RTT::base::TaskCore::isRunning()</a>, and <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>.</p>
 
@@ -737,9 +763,31 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00188">188</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00200">200</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContextI_8cpp_source.html#l00194">getProvider()</a>.</p>
+<p>References <a class="el" href="TaskContextI_8cpp_source.html#l00206">getProvider()</a>.</p>
+
+<p>Referenced by <a class="el" href="TaskContextI_8h_source.html#l00108">activate_this()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6351924588737921fedf439293346992"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CORBA::Boolean RTT_corba_CTaskContext_i::recover </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00144">144</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00180">RTT::base::TaskCore::recover()</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextI_8h_source.html#l00108">activate_this()</a>.</p>
 
@@ -759,7 +807,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00276">276</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00288">288</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00263">RTT::TaskContext::removePeer()</a>.</p>
 
@@ -781,7 +829,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00150">150</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextI_8cpp_source.html#l00156">156</a> of file <a class="el" href="TaskContextI_8cpp_source.html">TaskContextI.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, <a class="el" href="TaskCore_8cpp_source.html#l00082">RTT::base::TaskCore::getTaskState()</a>, <a class="el" href="TaskContextI_8h_source.html#l00093">mtask</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00180">RTT::base::TaskCore::recover()</a>.</p>
 
@@ -873,7 +921,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="TaskContextI_8h_source.html#l00092">92</a> of file <a class="el" href="TaskContextI_8h_source.html">TaskContextI.h</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00194">getProvider()</a>, and <a class="el" href="TaskContextI_8cpp_source.html#l00214">getRequester()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00206">getProvider()</a>, and <a class="el" href="TaskContextI_8cpp_source.html#l00226">getRequester()</a>.</p>
 
 </div>
 </div>
@@ -897,7 +945,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="TaskContextI_8h_source.html#l00096">96</a> of file <a class="el" href="TaskContextI_8h_source.html">TaskContextI.h</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00214">getRequester()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00226">getRequester()</a>.</p>
 
 </div>
 </div>
@@ -921,7 +969,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="TaskContextI_8h_source.html#l00098">98</a> of file <a class="el" href="TaskContextI_8h_source.html">TaskContextI.h</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00214">getRequester()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00226">getRequester()</a>.</p>
 
 </div>
 </div>
@@ -945,7 +993,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="TaskContextI_8h_source.html#l00095">95</a> of file <a class="el" href="TaskContextI_8h_source.html">TaskContextI.h</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00194">getProvider()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00206">getProvider()</a>.</p>
 
 </div>
 </div>
@@ -969,7 +1017,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="TaskContextI_8h_source.html#l00099">99</a> of file <a class="el" href="TaskContextI_8h_source.html">TaskContextI.h</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00194">getProvider()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00206">getProvider()</a>.</p>
 
 </div>
 </div>
@@ -993,7 +1041,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="TaskContextI_8h_source.html#l00093">93</a> of file <a class="el" href="TaskContextI_8h_source.html">TaskContextI.h</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00132">activate()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00266">addPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00144">cleanup()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00120">configure()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00284">connectPeers()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00299">connectPorts()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00306">connectServices()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00291">disconnectPeers()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00108">getDescription()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00102">getName()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00246">getPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00234">getPeerList()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00194">getProvider()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00214">getRequester()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00114">getTaskState()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00259">hasPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00176">inFatalError()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00182">inRunTimeError()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00158">isActive()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00170">isConfigured()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00164">isRunning()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00276">removePeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00150">resetException()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00084">RTT_corba_CTaskContext_i()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00126">start()</a>, and <a class="el" href="TaskContextI_8cpp_source.html#l00138">stop()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00132">activate()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00278">addPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00150">cleanup()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00120">configure()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00296">connectPeers()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00311">connectPorts()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00318">connectServices()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00303">disconnectPeers()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00108">getDescription()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00102">getName()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00258">getPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00246">getPeerList()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00206">getProvider()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00226">getRequester()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00114">getTaskState()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00271">hasPeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00194">inException()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00182">inFatalError()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00188">inRunTimeError()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00164">isActive()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00176">isConfigured()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00170">isRunning()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00144">recover()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00288">removePeer()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00156">resetException()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00084">RTT_corba_CTaskContext_i()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00126">start()</a>, and <a class="el" href="TaskContextI_8cpp_source.html#l00138">stop()</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1052,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 5 2018 19:33:15 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 9 2018 11:18:29 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
