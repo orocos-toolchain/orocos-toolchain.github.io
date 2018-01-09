@@ -113,9 +113,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb235144afc09805d9cd1982afac023b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#aeb235144afc09805d9cd1982afac023b">waitForMessages</a> (const boost::function&lt; bool(void)&gt; &amp;pred)</td></tr>
 <tr class="memdesc:aeb235144afc09805d9cd1982afac023b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if you wish to block on a message arriving in the Execution Engine.  <a href="#aeb235144afc09805d9cd1982afac023b">More...</a><br /></td></tr>
 <tr class="separator:aeb235144afc09805d9cd1982afac023b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4703380e45a26dd1a0ef62c6cb3069eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a4703380e45a26dd1a0ef62c6cb3069eb">waitForFunctions</a> (const boost::function&lt; bool(void)&gt; &amp;pred)</td></tr>
-<tr class="memdesc:a4703380e45a26dd1a0ef62c6cb3069eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if you wish to block on a function completing in the Execution Engine.  <a href="#a4703380e45a26dd1a0ef62c6cb3069eb">More...</a><br /></td></tr>
-<tr class="separator:a4703380e45a26dd1a0ef62c6cb3069eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d22ea9534992a8e6416ec6838d73b84"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a1d22ea9534992a8e6416ec6838d73b84">stopTask</a> (<a class="el" href="classRTT_1_1base_1_1TaskCore.html">base::TaskCore</a> *task)</td></tr>
 <tr class="memdesc:a1d22ea9534992a8e6416ec6838d73b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops executing the updateHook of <em>task</em>.  <a href="#a1d22ea9534992a8e6416ec6838d73b84">More...</a><br /></td></tr>
 <tr class="separator:a1d22ea9534992a8e6416ec6838d73b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,12 +125,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8b290342974c0b41c97515b1a4e9fd6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#ac8b290342974c0b41c97515b1a4e9fd6">setActivity</a> (<a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">base::ActivityInterface</a> *task)</td></tr>
 <tr class="memdesc:ac8b290342974c0b41c97515b1a4e9fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overridden version of <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a563528c3275ef0631f17928a80994371" title="Set the task this interface is run in. ">RTT::base::RunnableInterface::setActivity()</a>.  <a href="#ac8b290342974c0b41c97515b1a4e9fd6">More...</a><br /></td></tr>
 <tr class="separator:ac8b290342974c0b41c97515b1a4e9fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d2daf43266db68945dc11cd53e4065"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html">os::ThreadInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a86d2daf43266db68945dc11cd53e4065">getThread</a> () const </td></tr>
+<tr class="memdesc:a86d2daf43266db68945dc11cd53e4065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread that processes messages send to this engine.  <a href="#a86d2daf43266db68945dc11cd53e4065">More...</a><br /></td></tr>
+<tr class="separator:a86d2daf43266db68945dc11cd53e4065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a8ac3b20466cfbca21c7785ac5289c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#ad8a8ac3b20466cfbca21c7785ac5289c">isSelf</a> () const </td></tr>
+<tr class="memdesc:ad8a8ac3b20466cfbca21c7785ac5289c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the thread that processes messages send to this engine is the same as the calling thread.  <a href="#ad8a8ac3b20466cfbca21c7785ac5289c">More...</a><br /></td></tr>
+<tr class="separator:ad8a8ac3b20466cfbca21c7785ac5289c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6faeed04034647645557eb05f6f3eec2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a6faeed04034647645557eb05f6f3eec2">loop</a> ()</td></tr>
 <tr class="memdesc:a6faeed04034647645557eb05f6f3eec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that will be executed once when this class is run in a non periodic <a class="el" href="classRTT_1_1Activity.html" title="An Activity executes a RunnableInterface object in a (periodic) thread. ">Activity</a>.  <a href="#a6faeed04034647645557eb05f6f3eec2">More...</a><br /></td></tr>
 <tr class="separator:a6faeed04034647645557eb05f6f3eec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c3cbd96505481cbd9c2f5081c2cd72"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1os_1_1ThreadInterface.html">os::ThreadInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a10c3cbd96505481cbd9c2f5081c2cd72">getThread</a> () const </td></tr>
-<tr class="memdesc:a10c3cbd96505481cbd9c2f5081c2cd72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread this object is run in.  <a href="#a10c3cbd96505481cbd9c2f5081c2cd72">More...</a><br /></td></tr>
-<tr class="separator:a10c3cbd96505481cbd9c2f5081c2cd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70c18e6321d3e6929e0097940d68c1ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html">ActivityInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a70c18e6321d3e6929e0097940d68c1ef">getActivity</a> () const </td></tr>
 <tr class="memdesc:a70c18e6321d3e6929e0097940d68c1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query for the task this interface is run in.  <a href="#a70c18e6321d3e6929e0097940d68c1ef">More...</a><br /></td></tr>
 <tr class="separator:a70c18e6321d3e6929e0097940d68c1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,9 +156,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a9b1435416406d34e86fb03289ea2d53e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a9b1435416406d34e86fb03289ea2d53e">waitAndProcessMessages</a> (boost::function&lt; bool(void)&gt; const &amp;pred)</td></tr>
 <tr class="memdesc:a9b1435416406d34e86fb03289ea2d53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if you wish to block on a message arriving in the Execution Engine and execute it.  <a href="#a9b1435416406d34e86fb03289ea2d53e">More...</a><br /></td></tr>
 <tr class="separator:a9b1435416406d34e86fb03289ea2d53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a1d79b5da733c511d90d8b4562de5eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a5a1d79b5da733c511d90d8b4562de5eb">waitAndProcessFunctions</a> (boost::function&lt; bool(void)&gt; const &amp;pred)</td></tr>
-<tr class="memdesc:a5a1d79b5da733c511d90d8b4562de5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if you wish to block on a function completing in the Execution Engine and execute it.  <a href="#a5a1d79b5da733c511d90d8b4562de5eb">More...</a><br /></td></tr>
-<tr class="separator:a5a1d79b5da733c511d90d8b4562de5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a081fe8bd03ae9984f5ff51435fa0da87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a081fe8bd03ae9984f5ff51435fa0da87">processMessages</a> ()</td></tr>
 <tr class="separator:a081fe8bd03ae9984f5ff51435fa0da87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17f69ba3dcac8f33dda27ca0d4dd840b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1ExecutionEngine.html#a17f69ba3dcac8f33dda27ca0d4dd840b">processPortCallbacks</a> ()</td></tr>
@@ -271,9 +268,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a1e8f7d948dce8a8eafd420f6a4baf574">RTT::base::RunnableInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00438">438</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00427">427</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8cpp_source.html#l00297">RTT::base::TaskCore::breakUpdateHook()</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">RTT::ExecutionEngine::taskc</a>.</p>
+<p>References <a class="el" href="TaskCore_8cpp_source.html#l00297">RTT::base::TaskCore::breakUpdateHook()</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00233">RTT::ExecutionEngine::taskc</a>.</p>
 
 </div>
 </div>
@@ -302,7 +299,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a32b9c766a8c8af74c8a9adbe7281f61d">RTT::base::RunnableInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00471">471</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00460">460</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -333,7 +330,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="RunnableInterface_8hpp_source.html#l00175">175</a> of file <a class="el" href="RunnableInterface_8hpp_source.html">RunnableInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00500">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00374">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00271">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00261">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::isSend()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00276">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00266">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">RTT::ExecutionEngine::stopTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00083">RTT::base::TaskCore::update()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">RTT::ExecutionEngine::waitForFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00500">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00374">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00271">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00261">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00276">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00266">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00434">RTT::ExecutionEngine::stopTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00083">RTT::base::TaskCore::update()</a>.</p>
 
 </div>
 </div>
@@ -363,7 +360,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00094">94</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">RTT::ExecutionEngine::taskc</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00233">RTT::ExecutionEngine::taskc</a>.</p>
 
 <p>Referenced by <a class="el" href="IRQActivity_8cpp_source.html#l00069">RTT::extras::IRQActivity::start()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00064">RTT::base::TaskCore::~TaskCore()</a>.</p>
 
@@ -397,7 +394,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a10c3cbd96505481cbd9c2f5081c2cd72"></a>
+<a class="anchor" id="a86d2daf43266db68945dc11cd53e4065"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -405,7 +402,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classRTT_1_1os_1_1ThreadInterface.html">os::ThreadInterface</a> * RTT::RunnableInterface::getThread </td>
+          <td class="memname"><a class="el" href="classRTT_1_1os_1_1ThreadInterface.html">os::ThreadInterface</a> * RTT::ExecutionEngine::getThread </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -418,12 +415,17 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the thread this object is run in. </p>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to the thread or 0 if not run by a thread. </dd></dl>
+<p>Get the thread that processes messages send to this engine. </p>
+<dl class="section see"><dt>See also</dt><dd>reimplementation of <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a10c3cbd96505481cbd9c2f5081c2cd72" title="Get the thread this object is run in. ">base::RunnableInterface::getThread()</a></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the thread, or 0 if there is no activity assigned. </dd></dl>
 
-<p>Definition at line <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00082">82</a> of file <a class="el" href="CoreRunnableInterface_8cpp_source.html">CoreRunnableInterface.cpp</a>.</p>
+<p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a10c3cbd96505481cbd9c2f5081c2cd72">RTT::base::RunnableInterface</a>.</p>
 
-<p>References <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a190329785c1c7e4a542db833402a7811">RTT::base::ActivityInterface::thread()</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00312">312</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+<p>References <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00082">RTT::base::RunnableInterface::getThread()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00312">RTT::ExecutionEngine::getThread()</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00257">RTT::ExecutionEngine::mmaster</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00312">RTT::ExecutionEngine::getThread()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00320">RTT::ExecutionEngine::isSelf()</a>.</p>
 
 </div>
 </div>
@@ -456,7 +458,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00194">194</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">RTT::ExecutionEngine::mqueue</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00238">RTT::ExecutionEngine::mqueue</a>.</p>
 
 </div>
 </div>
@@ -562,6 +564,38 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad8a8ac3b20466cfbca21c7785ac5289c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTT::ExecutionEngine::isSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the thread that processes messages send to this engine is the same as the calling thread. </p>
+<p>This method is typically used to check if operation or function calls can be inlined or even must be inlined to resolve potential dead-locks. </p><dl class="section return"><dt>Returns</dt><dd>true if it is safe to process messages directly that otherwise would have been passed to <a class="el" href="classRTT_1_1ExecutionEngine.html#a9e0d36338cc3c7467325b8408f4f4648" title="Queue and execute (process) a given message. ">ExecutionEngine::process(base::DisposableInterface *)</a> </dd></dl>
+
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00320">320</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+
+<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00312">RTT::ExecutionEngine::getThread()</a>, and <a class="el" href="ThreadInterface_8cpp_source.html#l00058">RTT::os::ThreadInterface::isSelf()</a>.</p>
+
+<p>Referenced by <a class="el" href="CallFunction_8hpp_source.html#l00131">RTT::scripting::CallFunction::execute()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::isSend()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6faeed04034647645557eb05f6f3eec2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -626,9 +660,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">242</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">RTT::ExecutionEngine::mmaster</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">RTT::ExecutionEngine::mqueue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">RTT::ExecutionEngine::msg_cond</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">RTT::ExecutionEngine::taskc</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">RTT::base::ActivityInterface::trigger()</a>.</p>
+<p>References <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00257">RTT::ExecutionEngine::mmaster</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00238">RTT::ExecutionEngine::mqueue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">RTT::ExecutionEngine::msg_cond</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00233">RTT::ExecutionEngine::taskc</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">RTT::base::ActivityInterface::trigger()</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00130">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::do_send()</a>, <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>, <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00559">RTT::internal::FusedMSignal&lt; Signature &gt;::invoke()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00410">RTT::TaskContext::stop()</a>.</p>
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00130">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::do_send()</a>, <a class="el" href="CallFunction_8hpp_source.html#l00131">RTT::scripting::CallFunction::execute()</a>, <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>, <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00559">RTT::internal::FusedMSignal&lt; Signature &gt;::invoke()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00410">RTT::TaskContext::stop()</a>.</p>
 
 </div>
 </div>
@@ -662,7 +696,7 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00262">262</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">RTT::ExecutionEngine::mmaster</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">RTT::ExecutionEngine::port_queue</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">RTT::ExecutionEngine::taskc</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">RTT::base::ActivityInterface::trigger()</a>.</p>
+<p>References <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00257">RTT::ExecutionEngine::mmaster</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00243">RTT::ExecutionEngine::port_queue</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00233">RTT::ExecutionEngine::taskc</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#acc594ecea241aee2390664e2e4a70a32">RTT::base::ActivityInterface::trigger()</a>.</p>
 
 </div>
 </div>
@@ -689,9 +723,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">98</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#a485113b5518e732252b874b6939ca4cd">RTT::base::ExecutableInterface::execute()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">RTT::ExecutionEngine::f_queue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">RTT::ExecutionEngine::msg_cond</a>, and <a class="el" href="ExecutableInterface_8hpp_source.html#l00078">RTT::base::ExecutableInterface::unloaded()</a>.</p>
+<p>References <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#a485113b5518e732252b874b6939ca4cd">RTT::base::ExecutableInterface::execute()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00248">RTT::ExecutionEngine::f_queue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">RTT::ExecutionEngine::msg_cond</a>, and <a class="el" href="ExecutableInterface_8hpp_source.html#l00088">RTT::base::ExecutableInterface::unloaded()</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00354">RTT::ExecutionEngine::waitAndProcessFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">RTT::ExecutionEngine::work()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00365">RTT::ExecutionEngine::work()</a>.</p>
 
 </div>
 </div>
@@ -716,11 +750,11 @@ false if the engine does not accept messages. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00406">406</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00395">395</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="CatchConfig_8hpp_source.html#l00057">CATCH</a>, <a class="el" href="CatchConfig_8hpp_source.html#l00058">CATCH_ALL</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="TaskCore_8cpp_source.html#l00290">RTT::base::TaskCore::errorHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">RTT::ExecutionEngine::taskc</a>, <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00293">RTT::base::TaskCore::updateHook()</a>.</p>
+<p>References <a class="el" href="CatchConfig_8hpp_source.html#l00057">CATCH</a>, <a class="el" href="CatchConfig_8hpp_source.html#l00058">CATCH_ALL</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="TaskCore_8cpp_source.html#l00290">RTT::base::TaskCore::errorHook()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00233">RTT::ExecutionEngine::taskc</a>, <a class="el" href="CatchConfig_8hpp_source.html#l00056">TRY</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00293">RTT::base::TaskCore::updateHook()</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">RTT::ExecutionEngine::work()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00365">RTT::ExecutionEngine::work()</a>.</p>
 
 </div>
 </div>
@@ -747,9 +781,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">199</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#aa219e67cd5ba6c860ef90e316cc7306d">RTT::base::DisposableInterface::executeAndDispose()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">RTT::ExecutionEngine::mqueue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">RTT::ExecutionEngine::msg_cond</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00258">RTT::ExecutionEngine::msg_lock</a>.</p>
+<p>References <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#aa219e67cd5ba6c860ef90e316cc7306d">RTT::base::DisposableInterface::executeAndDispose()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00238">RTT::ExecutionEngine::mqueue</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">RTT::ExecutionEngine::msg_cond</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00250">RTT::ExecutionEngine::msg_lock</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">RTT::ExecutionEngine::waitAndProcessMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">RTT::ExecutionEngine::work()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00338">RTT::ExecutionEngine::waitAndProcessMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00365">RTT::ExecutionEngine::work()</a>.</p>
 
 </div>
 </div>
@@ -776,9 +810,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00224">224</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00434">RTT::TaskContext::dataOnPortCallback()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">RTT::ExecutionEngine::port_queue</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">RTT::ExecutionEngine::taskc</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00434">RTT::TaskContext::dataOnPortCallback()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00243">RTT::ExecutionEngine::port_queue</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00233">RTT::ExecutionEngine::taskc</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">RTT::ExecutionEngine::work()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00365">RTT::ExecutionEngine::work()</a>.</p>
 
 </div>
 </div>
@@ -836,9 +870,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">145</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00142">RTT::RemoveMsg::done()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00133">RTT::RemoveMsg::found</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface::isActive()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00095">RTT::base::ExecutableInterface::isLoaded()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00171">RTT::ExecutionEngine::removeSelfFunction()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00078">RTT::base::ExecutableInterface::unloaded()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00142">RTT::RemoveMsg::done()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00133">RTT::RemoveMsg::found</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface::isActive()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00110">RTT::base::ExecutableInterface::isLoaded()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00171">RTT::ExecutionEngine::removeSelfFunction()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00088">RTT::base::ExecutableInterface::unloaded()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
 
-<p>Referenced by <a class="el" href="ScriptingService_8cpp_source.html#l00288">RTT::scripting::ScriptingService::recursiveUnloadStateMachine()</a>, <a class="el" href="CmdFunction_8hpp_source.html#l00102">RTT::scripting::CmdFunction::reset()</a>, <a class="el" href="CallFunction_8hpp_source.html#l00118">RTT::scripting::CallFunction::reset()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00383">RTT::scripting::ScriptingService::unloadProgram()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00114">RTT::scripting::FunctionGraph::~FunctionGraph()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00075">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
+<p>Referenced by <a class="el" href="ScriptingService_8cpp_source.html#l00288">RTT::scripting::ScriptingService::recursiveUnloadStateMachine()</a>, <a class="el" href="CmdFunction_8hpp_source.html#l00102">RTT::scripting::CmdFunction::reset()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00383">RTT::scripting::ScriptingService::unloadProgram()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00114">RTT::scripting::FunctionGraph::~FunctionGraph()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00075">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
 
 </div>
 </div>
@@ -869,7 +903,7 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00171">171</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">RTT::ExecutionEngine::f_queue</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00248">RTT::ExecutionEngine::f_queue</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00136">RTT::RemoveMsg::executeAndDispose()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>.</p>
 
@@ -903,9 +937,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">117</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">RTT::ExecutionEngine::f_queue</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00070">RTT::base::ExecutableInterface::loaded()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">RTT::ExecutionEngine::taskc</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00248">RTT::ExecutionEngine::f_queue</a>, <a class="el" href="TaskCore_8hpp_source.html#l00102">RTT::base::TaskCore::FatalError</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00073">RTT::base::ExecutableInterface::loaded()</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00233">RTT::ExecutionEngine::taskc</a>.</p>
 
-<p>Referenced by <a class="el" href="CallFunction_8hpp_source.html#l00096">RTT::scripting::CallFunction::execute()</a>, <a class="el" href="CmdFunction_8hpp_source.html#l00060">RTT::scripting::CmdFunction::get()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00538">RTT::scripting::ScriptingService::loadFunctions()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00360">RTT::scripting::ScriptingService::loadProgram()</a>, and <a class="el" href="ScriptingService_8cpp_source.html#l00230">RTT::scripting::ScriptingService::recursiveLoadStateMachine()</a>.</p>
+<p>Referenced by <a class="el" href="CallFunction_8hpp_source.html#l00131">RTT::scripting::CallFunction::execute()</a>, <a class="el" href="CmdFunction_8hpp_source.html#l00060">RTT::scripting::CmdFunction::get()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00538">RTT::scripting::ScriptingService::loadFunctions()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00360">RTT::scripting::ScriptingService::loadProgram()</a>, and <a class="el" href="ScriptingService_8cpp_source.html#l00230">RTT::scripting::ScriptingService::recursiveLoadStateMachine()</a>.</p>
 
 </div>
 </div>
@@ -942,9 +976,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a563528c3275ef0631f17928a80994371">RTT::base::RunnableInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00309">309</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00300">300</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="SlaveActivity_8cpp_source.html#l00097">RTT::extras::SlaveActivity::getMaster()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00070">RTT::base::ActivityInterface::getRunner()</a>, <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00304">RTT::ExecutionEngine::setMaster()</a>.</p>
+<p>References <a class="el" href="SlaveActivity_8cpp_source.html#l00097">RTT::extras::SlaveActivity::getMaster()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00070">RTT::base::ActivityInterface::getRunner()</a>, <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00073">RTT::base::RunnableInterface::setActivity()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00295">RTT::ExecutionEngine::setMaster()</a>.</p>
 
 </div>
 </div>
@@ -971,9 +1005,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Set the 'owner' task in the exception state. </p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00456">456</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">445</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00117">RTT::TaskContext::getName()</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">RTT::ExecutionEngine::taskc</a>.</p>
+<p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="TaskCore_8cpp_source.html#l00147">RTT::base::TaskCore::exception()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00117">RTT::TaskContext::getName()</a>, and <a class="el" href="ExecutionEngine_8hpp_source.html#l00233">RTT::ExecutionEngine::taskc</a>.</p>
 
 <p>Referenced by <a class="el" href="OperationCallerInterface_8cpp_source.html#l00052">RTT::base::OperationCallerInterface::reportError()</a>.</p>
 
@@ -1010,11 +1044,11 @@ false if the engine does not accept messages. </dd></dl>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00304">304</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00295">295</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">RTT::ExecutionEngine::mmaster</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00257">RTT::ExecutionEngine::mmaster</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00309">RTT::ExecutionEngine::setActivity()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00300">RTT::ExecutionEngine::setActivity()</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1077,7 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#abec8b9e213e32c21b57266211703dc45">RTT::base::RunnableInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00372">372</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00361">361</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
 </div>
 </div>
@@ -1078,49 +1112,9 @@ false if the engine does not accept messages. </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if it's updateHook() is no longer being executed, false otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">445</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00434">434</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
 <p>References <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a6ccbd039e0df4bae31fe63a988b3c2f3">RTT::base::ActivityInterface::start()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5a1d79b5da733c511d90d8b4562de5eb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RTT::ExecutionEngine::waitAndProcessFunctions </td>
-          <td>(</td>
-          <td class="paramtype">boost::function&lt; bool(void)&gt; const &amp;&#160;</td>
-          <td class="paramname"><em>pred</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Call this if you wish to block on a function completing in the Execution Engine and execute it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pred</td><td>As long as !pred() waits and processes functions. If pred() == true when entering this function, then no functions will be processed and this function returns immediately.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>This function is for internal use only and is required for asynchronous function invocations.</p>
-<dl class="section note"><dt>Note</dt><dd>waitAndProcessFunctions will call in turn this-&gt;<a class="el" href="classRTT_1_1ExecutionEngine.html#adf869c0f569b1d1ddc75f5fd3e68afc6">processFunctions()</a> and may as a consequence recurse if we get an asynchronous call-back. </dd></dl>
-
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00354">354</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
-
-<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">RTT::ExecutionEngine::msg_cond</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00258">RTT::ExecutionEngine::msg_lock</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">RTT::ExecutionEngine::processFunctions()</a>, and <a class="el" href="Condition_8hpp_source.html#l00090">RTT::os::Condition::wait()</a>.</p>
-
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">RTT::ExecutionEngine::waitForFunctions()</a>.</p>
 
 </div>
 </div>
@@ -1156,50 +1150,11 @@ false if the engine does not accept messages. </dd></dl>
 <p>This function is for internal use only and is required for asynchronous method invocations.</p>
 <dl class="section note"><dt>Note</dt><dd>waitAndProcessMessages will call in turn this-&gt;<a class="el" href="classRTT_1_1ExecutionEngine.html#a081fe8bd03ae9984f5ff51435fa0da87">processMessages()</a> and may as a consequence recurse if we get an asynchronous call-back. </dd></dl>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">335</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00338">338</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">RTT::ExecutionEngine::mmaster</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">RTT::ExecutionEngine::msg_cond</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00258">RTT::ExecutionEngine::msg_lock</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">RTT::ExecutionEngine::processMessages()</a>, and <a class="el" href="Condition_8hpp_source.html#l00090">RTT::os::Condition::wait()</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00257">RTT::ExecutionEngine::mmaster</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">RTT::ExecutionEngine::msg_cond</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00250">RTT::ExecutionEngine::msg_lock</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">RTT::ExecutionEngine::processMessages()</a>, and <a class="el" href="Condition_8hpp_source.html#l00090">RTT::os::Condition::wait()</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4703380e45a26dd1a0ef62c6cb3069eb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RTT::ExecutionEngine::waitForFunctions </td>
-          <td>(</td>
-          <td class="paramtype">const boost::function&lt; bool(void)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>pred</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Call this if you wish to block on a function completing in the Execution Engine. </p>
-<p>Each time a function completes, waitForFunctions will return when pred() returns true. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pred</td><td>As long as !pred() blocks the calling thread. If pred() == true when entering this function, returns immediately.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>This function is for internal use only and is required for asynchronous function invocations. </p>
-
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">296</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
-
-<p>References <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00354">RTT::ExecutionEngine::waitAndProcessFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00321">RTT::ExecutionEngine::waitForMessagesInternal()</a>.</p>
-
-<p>Referenced by <a class="el" href="CallFunction_8hpp_source.html#l00096">RTT::scripting::CallFunction::execute()</a>.</p>
 
 </div>
 </div>
@@ -1236,9 +1191,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">281</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">RTT::ExecutionEngine::mmaster</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">RTT::ExecutionEngine::waitAndProcessMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00321">RTT::ExecutionEngine::waitForMessagesInternal()</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00320">RTT::ExecutionEngine::isSelf()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00257">RTT::ExecutionEngine::mmaster</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00338">RTT::ExecutionEngine::waitAndProcessMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00325">RTT::ExecutionEngine::waitForMessagesInternal()</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00294">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::collect_impl()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00294">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::collect_impl()</a>, <a class="el" href="CallFunction_8hpp_source.html#l00131">RTT::scripting::CallFunction::execute()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
 
 </div>
 </div>
@@ -1274,11 +1229,11 @@ false if the engine does not accept messages. </dd></dl>
 <p>This function is for internal use only and is required for asynchronous method invocations.</p>
 <dl class="section note"><dt>Note</dt><dd>waitForMessages requires another thread to execute <a class="el" href="classRTT_1_1ExecutionEngine.html#a081fe8bd03ae9984f5ff51435fa0da87">processMessages()</a> and may therefor not be called from within the component's Thread. Use <a class="el" href="classRTT_1_1ExecutionEngine.html#a9b1435416406d34e86fb03289ea2d53e" title="Call this if you wish to block on a message arriving in the Execution Engine and execute it...">waitAndProcessMessages()</a> instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00321">321</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00325">325</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">RTT::ExecutionEngine::msg_cond</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00258">RTT::ExecutionEngine::msg_lock</a>, and <a class="el" href="Condition_8hpp_source.html#l00090">RTT::os::Condition::wait()</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8hpp_source.html#l00257">RTT::ExecutionEngine::mmaster</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">RTT::ExecutionEngine::msg_cond</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00250">RTT::ExecutionEngine::msg_lock</a>, and <a class="el" href="Condition_8hpp_source.html#l00090">RTT::os::Condition::wait()</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">RTT::ExecutionEngine::waitForFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
 
 </div>
 </div>
@@ -1309,9 +1264,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1RunnableInterface.html#a578a2025eaf9af809a72d9783fdaa803">RTT::base::RunnableInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">376</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8cpp_source.html#l00365">365</a> of file <a class="el" href="ExecutionEngine_8cpp_source.html">ExecutionEngine.cpp</a>.</p>
 
-<p>References <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::IOReady</a>, <a class="el" href="TaskCore_8hpp_source.html#l00476">RTT::base::TaskCore::mCycleCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00480">RTT::base::TaskCore::mIOCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00484">RTT::base::TaskCore::mTimeOutCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00488">RTT::base::TaskCore::mTriggerCounter</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">RTT::ExecutionEngine::processFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00406">RTT::ExecutionEngine::processHooks()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">RTT::ExecutionEngine::processMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00224">RTT::ExecutionEngine::processPortCallbacks()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">RTT::ExecutionEngine::taskc</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::TimeOut</a>, and <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::Trigger</a>.</p>
+<p>References <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::IOReady</a>, <a class="el" href="TaskCore_8hpp_source.html#l00476">RTT::base::TaskCore::mCycleCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00480">RTT::base::TaskCore::mIOCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00484">RTT::base::TaskCore::mTimeOutCounter</a>, <a class="el" href="TaskCore_8hpp_source.html#l00488">RTT::base::TaskCore::mTriggerCounter</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">RTT::ExecutionEngine::processFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00395">RTT::ExecutionEngine::processHooks()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">RTT::ExecutionEngine::processMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00224">RTT::ExecutionEngine::processPortCallbacks()</a>, <a class="el" href="ExecutionEngine_8hpp_source.html#l00233">RTT::ExecutionEngine::taskc</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::TimeOut</a>, and <a class="el" href="RunnableInterface_8hpp_source.html#l00076">RTT::base::RunnableInterface::Trigger</a>.</p>
 
 </div>
 </div>
@@ -1336,7 +1291,7 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Stores all functions we're executing. </p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00256">256</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00248">248</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">RTT::ExecutionEngine::processFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00171">RTT::ExecutionEngine::removeSelfFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00077">RTT::ExecutionEngine::~ExecutionEngine()</a>.</p>
 
@@ -1363,9 +1318,9 @@ false if the engine does not accept messages. </dd></dl>
 <p>A master <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> which should process our messages. </p>
 <p>This is used for ExecutionEngines running in a SlaveActivity which forward incoming messages to their master engine. </p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00265">265</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00257">257</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00304">RTT::ExecutionEngine::setMaster()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">RTT::ExecutionEngine::waitAndProcessMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00312">RTT::ExecutionEngine::getThread()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00295">RTT::ExecutionEngine::setMaster()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00338">RTT::ExecutionEngine::waitAndProcessMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00325">RTT::ExecutionEngine::waitForMessagesInternal()</a>.</p>
 
 </div>
 </div>
@@ -1389,7 +1344,7 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>Our Message queue. </p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00246">246</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00238">238</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00194">RTT::ExecutionEngine::hasWork()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">RTT::ExecutionEngine::processMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00077">RTT::ExecutionEngine::~ExecutionEngine()</a>.</p>
 
@@ -1413,9 +1368,9 @@ false if the engine does not accept messages. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00259">259</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">251</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">RTT::ExecutionEngine::processFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">RTT::ExecutionEngine::processMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00354">RTT::ExecutionEngine::waitAndProcessFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">RTT::ExecutionEngine::waitAndProcessMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00321">RTT::ExecutionEngine::waitForMessagesInternal()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">RTT::ExecutionEngine::processFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">RTT::ExecutionEngine::processMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00338">RTT::ExecutionEngine::waitAndProcessMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00325">RTT::ExecutionEngine::waitForMessagesInternal()</a>.</p>
 
 </div>
 </div>
@@ -1437,9 +1392,9 @@ false if the engine does not accept messages. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00258">258</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00250">250</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">RTT::ExecutionEngine::processMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00354">RTT::ExecutionEngine::waitAndProcessFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00335">RTT::ExecutionEngine::waitAndProcessMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00321">RTT::ExecutionEngine::waitForMessagesInternal()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">RTT::ExecutionEngine::processMessages()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00338">RTT::ExecutionEngine::waitAndProcessMessages()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00325">RTT::ExecutionEngine::waitForMessagesInternal()</a>.</p>
 
 </div>
 </div>
@@ -1463,7 +1418,7 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>The port callback queue. </p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00251">251</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00243">243</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00262">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00224">RTT::ExecutionEngine::processPortCallbacks()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00077">RTT::ExecutionEngine::~ExecutionEngine()</a>.</p>
 
@@ -1489,9 +1444,9 @@ false if the engine does not accept messages. </dd></dl>
 
 <p>The parent or 'owner' of this <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>, may be null. </p>
 
-<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00241">241</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutionEngine_8hpp_source.html#l00233">233</a> of file <a class="el" href="ExecutionEngine_8hpp_source.html">ExecutionEngine.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00438">RTT::ExecutionEngine::breakLoop()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00094">RTT::ExecutionEngine::getParent()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00406">RTT::ExecutionEngine::processHooks()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00224">RTT::ExecutionEngine::processPortCallbacks()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00456">RTT::ExecutionEngine::setExceptionTask()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00376">RTT::ExecutionEngine::work()</a>.</p>
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00427">RTT::ExecutionEngine::breakLoop()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00094">RTT::ExecutionEngine::getParent()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00395">RTT::ExecutionEngine::processHooks()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00224">RTT::ExecutionEngine::processPortCallbacks()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">RTT::ExecutionEngine::setExceptionTask()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00365">RTT::ExecutionEngine::work()</a>.</p>
 
 </div>
 </div>
@@ -1502,7 +1457,7 @@ false if the engine does not accept messages. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 8 2018 21:42:38 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 9 2018 18:26:48 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

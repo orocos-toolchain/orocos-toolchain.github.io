@@ -71,7 +71,8 @@ Inheritance diagram for RTT::scripting::CallFunction:</div>
  <div class="center">
   <img src="classRTT_1_1scripting_1_1CallFunction.png" usemap="#RTT::scripting::CallFunction_map" alt=""/>
   <map id="RTT::scripting::CallFunction_map" name="RTT::scripting::CallFunction_map">
-<area href="classRTT_1_1base_1_1ActionInterface.html" title="Based on the software pattern &#39;command&#39;, this interface allows execution of action objects..." alt="RTT::base::ActionInterface" shape="rect" coords="0,0,165,24"/>
+<area href="classRTT_1_1base_1_1ActionInterface.html" title="Based on the software pattern &#39;command&#39;, this interface allows execution of action objects..." alt="RTT::base::ActionInterface" shape="rect" coords="0,0,185,24"/>
+<area href="classRTT_1_1base_1_1DisposableInterface.html" title="An object that is executable and is freed after execution. " alt="RTT::base::DisposableInterface" shape="rect" coords="195,0,380,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -80,6 +81,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a88bcca083175ea427aa22fabb850b578"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1ActionInterface.html">ActionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a88bcca083175ea427aa22fabb850b578">shared_ptr</a></td></tr>
 <tr class="memdesc:a88bcca083175ea427aa22fabb850b578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this type for shared pointer storage of an <a class="el" href="classRTT_1_1base_1_1ActionInterface.html" title="Based on the software pattern &#39;command&#39;, this interface allows execution of action objects...">ActionInterface</a> object.  <a href="#a88bcca083175ea427aa22fabb850b578">More...</a><br /></td></tr>
 <tr class="separator:a88bcca083175ea427aa22fabb850b578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac22230559dd1324a22259f0df18781d6"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html">DisposableInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#ac22230559dd1324a22259f0df18781d6">shared_ptr</a></td></tr>
+<tr class="memdesc:ac22230559dd1324a22259f0df18781d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this type for shared pointer storage of an <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html" title="An object that is executable and is freed after execution. ">DisposableInterface</a> object.  <a href="#ac22230559dd1324a22259f0df18781d6">More...</a><br /></td></tr>
+<tr class="separator:ac22230559dd1324a22259f0df18781d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -89,8 +93,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a33bc03178487dec8094ff97e62567fa1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a33bc03178487dec8094ff97e62567fa1">~CallFunction</a> ()</td></tr>
 <tr class="separator:a33bc03178487dec8094ff97e62567fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb07fbc8d362bcef372364d241c39b84"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84">execute</a> ()</td></tr>
-<tr class="memdesc:afb07fbc8d362bcef372364d241c39b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the functionality of this action.  <a href="#afb07fbc8d362bcef372364d241c39b84">More...</a><br /></td></tr>
+<tr class="memdesc:afb07fbc8d362bcef372364d241c39b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueue the function in the target engine (mrunner) and wait until it is finished or in error state.  <a href="#afb07fbc8d362bcef372364d241c39b84">More...</a><br /></td></tr>
 <tr class="separator:afb07fbc8d362bcef372364d241c39b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ea08c2180697ad1612185ad0b9e45c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a97ea08c2180697ad1612185ad0b9e45c">executeAndDispose</a> ()</td></tr>
+<tr class="memdesc:a97ea08c2180697ad1612185ad0b9e45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message callback that executes the function until it finishes or yields.  <a href="#a97ea08c2180697ad1612185ad0b9e45c">More...</a><br /></td></tr>
+<tr class="separator:a97ea08c2180697ad1612185ad0b9e45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e8fce405ce915016f9ff100c418a2c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a48e8fce405ce915016f9ff100c418a2c">dispose</a> ()</td></tr>
+<tr class="memdesc:a48e8fce405ce915016f9ff100c418a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just free this object without executing it.  <a href="#a48e8fce405ce915016f9ff100c418a2c">More...</a><br /></td></tr>
+<tr class="separator:a48e8fce405ce915016f9ff100c418a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eae3d09c2b1a0aa5a781cc8c0ba5507"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a2eae3d09c2b1a0aa5a781cc8c0ba5507">reset</a> ()</td></tr>
 <tr class="memdesc:a2eae3d09c2b1a0aa5a781cc8c0ba5507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset this action.  <a href="#a2eae3d09c2b1a0aa5a781cc8c0ba5507">More...</a><br /></td></tr>
 <tr class="separator:a2eae3d09c2b1a0aa5a781cc8c0ba5507"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,7 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abdf5178529eb9291ef423f3e77b824b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if this action was <em>executed</em> and <em>valid</em>.  <a href="#abdf5178529eb9291ef423f3e77b824b3">More...</a><br /></td></tr>
 <tr class="separator:abdf5178529eb9291ef423f3e77b824b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2de596d6e3f9146c4c7a393540e56c7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#ad2de596d6e3f9146c4c7a393540e56c7">readArguments</a> ()</td></tr>
-<tr class="memdesc:ad2de596d6e3f9146c4c7a393540e56c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is invoked some time before <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Execute the functionality of this action. ">execute()</a> at a time when the action may read its function arguments.  <a href="#ad2de596d6e3f9146c4c7a393540e56c7">More...</a><br /></td></tr>
+<tr class="memdesc:ad2de596d6e3f9146c4c7a393540e56c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is invoked some time before <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Enqueue the function in the target engine (mrunner) and wait until it is finished or in error state...">execute()</a> at a time when the action may read its function arguments.  <a href="#ad2de596d6e3f9146c4c7a393540e56c7">More...</a><br /></td></tr>
 <tr class="separator:ad2de596d6e3f9146c4c7a393540e56c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af88bf918f5c434900d61cf6657384b0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1ActionInterface.html">base::ActionInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#af88bf918f5c434900d61cf6657384b0f">clone</a> () const </td></tr>
 <tr class="memdesc:af88bf918f5c434900d61cf6657384b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Clone Software Pattern.  <a href="#af88bf918f5c434900d61cf6657384b0f">More...</a><br /></td></tr>
@@ -111,8 +121,32 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>An action which calls a FunctionFraph for execution in a <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>. </p>
 <p>Script functions are always executed in the thread of the component. </p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00060">60</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00061">61</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="ac22230559dd1324a22259f0df18781d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="classRTT_1_1base_1_1DisposableInterface.html">DisposableInterface</a>&gt; <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#ac22230559dd1324a22259f0df18781d6">RTT::base::DisposableInterface::shared_ptr</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Use this type for shared pointer storage of an <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html" title="An object that is executable and is freed after execution. ">DisposableInterface</a> object. </p>
+
+<p>Definition at line <a class="el" href="DisposableInterface_8hpp_source.html#l00060">60</a> of file <a class="el" href="DisposableInterface_8hpp_source.html">DisposableInterface.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a88bcca083175ea427aa22fabb850b578"></a>
 <div class="memitem">
 <div class="memproto">
@@ -192,7 +226,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00081">81</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00102">102</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -217,7 +251,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00091">91</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00112">112</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -247,7 +281,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a835bfbc61e66b94a4e0e5a62d8e22809">RTT::base::ActionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00133">133</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00240">240</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -280,7 +314,36 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a4d0a9b981d260d2f4e363b7c428a125f">RTT::base::ActionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00138">138</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00245">245</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48e8fce405ce915016f9ff100c418a2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RTT::scripting::CallFunction::dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Just free this object without executing it. </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#af51943bba34b7ba69c16d52ad74e1400">RTT::base::DisposableInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00225">225</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,14 +368,46 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Execute the functionality of this action. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the action was accepted, false otherwise </dd></dl>
+<p>Enqueue the function in the target engine (mrunner) and wait until it is finished or in error state. </p>
+<p>As a first attempt the function is enqueued in the process queue of the engine (</p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRTT_1_1ExecutionEngine.html#a9e0d36338cc3c7467325b8408f4f4648" title="Queue and execute (process) a given message. ">ExecutionEngine::process()</a>), which calls into <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a97ea08c2180697ad1612185ad0b9e45c" title="Message callback that executes the function until it finishes or yields. ">executeAndDispose()</a> for actual execution in its callback step. If <a class="el" href="classRTT_1_1scripting_1_1ProgramInterface.html#aaa33f09ad435ccb8d1ec8c2d18243195" title="Execute as much actions until the program needs to wait on a condition to become true. ">ProgramInterface::execute()</a> would return true and the program did not yet finish (e.g. as a result of a yield command), it will be enqueued in the function queue for synchronous execution with the next update step.</dd></dl>
+<p>() </p>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a85f558f65b156911f3c004fd2aeb5094">RTT::base::ActionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00096">96</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00131">131</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
-<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">RTT::ExecutionEngine::waitForFunctions()</a>.</p>
+<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00320">RTT::ExecutionEngine::isSelf()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>, and <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Warning</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a97ea08c2180697ad1612185ad0b9e45c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RTT::scripting::CallFunction::executeAndDispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Message callback that executes the function until it finishes or yields. </p>
+<p>Will be processed in the mrunner engine. If necessary, enqueue the function in the function queue for later synchronous execution if it did not finish after a single call (</p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Enqueue the function in the target engine (mrunner) and wait until it is finished or in error state...">execute()</a>).</dd></dl>
+<p>() </p>
+
+<p>Implements <a class="el" href="classRTT_1_1base_1_1DisposableInterface.html#aa219e67cd5ba6c860ef90e316cc7306d">RTT::base::DisposableInterface</a>.</p>
+
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00214">214</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -337,11 +432,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This is invoked some time before <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Execute the functionality of this action. ">execute()</a> at a time when the action may read its function arguments. </p>
+<p>This is invoked some time before <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Enqueue the function in the target engine (mrunner) and wait until it is finished or in error state...">execute()</a> at a time when the action may read its function arguments. </p>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#ac971ccfe3e4befa97513d715dba36098">RTT::base::ActionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00128">128</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00235">235</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -367,13 +462,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reset this action. </p>
-<p>Must be used after <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Execute the functionality of this action. ">execute()</a> failed. </p>
+<p>Must be used after <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Enqueue the function in the target engine (mrunner) and wait until it is finished or in error state...">execute()</a> failed. </p>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#aba0b4f6d3f57f0b4b8faad85686c9080">RTT::base::ActionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00118">118</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
-
-<p>References <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00227">227</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -399,11 +492,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Inspect if this action was <em>executed</em> and <em>valid</em>. </p>
-<p>This method may not be called before <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Execute the functionality of this action. ">execute()</a>. The default implementation returns always <em>true</em>, i.e. after <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Execute the functionality of this action. ">execute()</a>, it was executed. Override this method if it has more complex state semantics. </p>
+<p>This method may not be called before <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Enqueue the function in the target engine (mrunner) and wait until it is finished or in error state...">execute()</a>. The default implementation returns always <em>true</em>, i.e. after <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#afb07fbc8d362bcef372364d241c39b84" title="Enqueue the function in the target engine (mrunner) and wait until it is finished or in error state...">execute()</a>, it was executed. Override this method if it has more complex state semantics. </p>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1ActionInterface.html#a4e8772130b441a447e32e7774cc01c28">RTT::base::ActionInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00124">124</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
+<p>Definition at line <a class="el" href="CallFunction_8hpp_source.html#l00231">231</a> of file <a class="el" href="CallFunction_8hpp_source.html">CallFunction.hpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +506,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 8 2018 21:42:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 9 2018 18:26:50 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

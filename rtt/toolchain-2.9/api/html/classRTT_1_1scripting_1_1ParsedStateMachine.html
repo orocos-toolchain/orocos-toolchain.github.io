@@ -290,10 +290,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad5be91bf313562068d4fcfbb6a7b9476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the <a class="el" href="classRTT_1_1scripting_1_1StateMachine.html" title="A hierarchical StateMachine which is loaded in the Program Processor. ">StateMachine</a> is interruptible by events.  <a href="#ad5be91bf313562068d4fcfbb6a7b9476">More...</a><br /></td></tr>
 <tr class="separator:ad5be91bf313562068d4fcfbb6a7b9476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c879406f60b612a5cd254f684cc5219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#a1c879406f60b612a5cd254f684cc5219">loaded</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ee)</td></tr>
-<tr class="memdesc:a1c879406f60b612a5cd254f684cc5219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> <em>ee</em> to tell this object it is being loaded.  <a href="#a1c879406f60b612a5cd254f684cc5219">More...</a><br /></td></tr>
+<tr class="memdesc:a1c879406f60b612a5cd254f684cc5219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> <em>ee</em> or before synchronous execution to tell this object it is being loaded.  <a href="#a1c879406f60b612a5cd254f684cc5219">More...</a><br /></td></tr>
 <tr class="separator:a1c879406f60b612a5cd254f684cc5219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaca37926e68f7c7de74c043f8a2c267c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#aaca37926e68f7c7de74c043f8a2c267c">unloaded</a> ()</td></tr>
-<tr class="memdesc:aaca37926e68f7c7de74c043f8a2c267c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> <em>ee</em> to tell this object it is being unloaded.  <a href="#aaca37926e68f7c7de74c043f8a2c267c">More...</a><br /></td></tr>
+<tr class="memdesc:aaca37926e68f7c7de74c043f8a2c267c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> <em>ee</em> or after synchronous execution to tell this object it is being unloaded.  <a href="#aaca37926e68f7c7de74c043f8a2c267c">More...</a><br /></td></tr>
 <tr class="separator:aaca37926e68f7c7de74c043f8a2c267c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c5ee4ceb298d2917dbf891300c3223d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#a6c5ee4ceb298d2917dbf891300c3223d">isLoaded</a> ()</td></tr>
 <tr class="memdesc:a6c5ee4ceb298d2917dbf891300c3223d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this object is loaded in an <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>.  <a href="#a6c5ee4ceb298d2917dbf891300c3223d">More...</a><br /></td></tr>
@@ -948,7 +948,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="StateMachine_8cpp_source.html#l00500">500</a> of file <a class="el" href="StateMachine_8cpp_source.html">StateMachine.cpp</a>.</p>
 
-<p>References <a class="el" href="StateMachine_8cpp_source.html#l00409">RTT::scripting::StateMachine::changeState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00699">RTT::scripting::StateMachine::checkConditions()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="Logger_8cpp_source.html#l00383">RTT::Logger::endl()</a>, <a class="el" href="Logger_8hpp_source.html#l00121">RTT::Logger::Error</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="classRTT_1_1scripting_1_1ConditionInterface.html#a23baaceee26d7191efd77111ebdc2ad9">RTT::scripting::ConditionInterface::evaluate()</a>, <a class="el" href="StateMachine_8hpp_source.html#l00620">RTT::scripting::StateMachine::eventMap</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00102">RTT::base::ExecutableInterface::getEngine()</a>, <a class="el" href="classRTT_1_1scripting_1_1StateInterface.html#adb81ccfdaac79e0a0c4dc56b9aef5879">RTT::scripting::StateInterface::getName()</a>, <a class="el" href="StateMachine_8cpp_source.html#l01135">RTT::scripting::StateMachine::inTransition()</a>, <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="StateMachine_8hpp_source.html#l00608">RTT::scripting::StateMachine::stateMap</a>, <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a99f8cbfa2c5022c575e4b5e404cb02c8">RTT::base::ActivityInterface::timeout()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00050">TRACE</a>.</p>
+<p>References <a class="el" href="StateMachine_8cpp_source.html#l00409">RTT::scripting::StateMachine::changeState()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00699">RTT::scripting::StateMachine::checkConditions()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="Logger_8cpp_source.html#l00383">RTT::Logger::endl()</a>, <a class="el" href="Logger_8hpp_source.html#l00121">RTT::Logger::Error</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="classRTT_1_1scripting_1_1ConditionInterface.html#a23baaceee26d7191efd77111ebdc2ad9">RTT::scripting::ConditionInterface::evaluate()</a>, <a class="el" href="StateMachine_8hpp_source.html#l00620">RTT::scripting::StateMachine::eventMap</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00117">RTT::base::ExecutableInterface::getEngine()</a>, <a class="el" href="classRTT_1_1scripting_1_1StateInterface.html#adb81ccfdaac79e0a0c4dc56b9aef5879">RTT::scripting::StateInterface::getName()</a>, <a class="el" href="StateMachine_8cpp_source.html#l01135">RTT::scripting::StateMachine::inTransition()</a>, <a class="el" href="Logger_8cpp_source.html#l00117">RTT::Logger::log()</a>, <a class="el" href="StateMachine_8hpp_source.html#l00608">RTT::scripting::StateMachine::stateMap</a>, <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a99f8cbfa2c5022c575e4b5e404cb02c8">RTT::base::ActivityInterface::timeout()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00050">TRACE</a>.</p>
 
 </div>
 </div>
@@ -1409,7 +1409,7 @@ Protected Attributes</h2></td></tr>
 <p>Returns the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> this object is loaded into or null otherwise. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00102">102</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00117">117</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="StateMachine_8cpp_source.html#l00500">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00084">RTT::scripting::StateMachine::loading()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00114">RTT::scripting::FunctionGraph::~FunctionGraph()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00075">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
 
@@ -2141,7 +2141,7 @@ Protected Attributes</h2></td></tr>
 <p>Returns true if this object is loaded in an <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if so. </dd></dl>
 
-<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00095">95</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00110">110</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00142">RTT::RemoveMsg::done()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00173">RTT::scripting::FunctionGraph::pause()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00159">RTT::scripting::FunctionGraph::start()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00185">RTT::scripting::FunctionGraph::step()</a>, <a class="el" href="FunctionGraph_8cpp_source.html#l00114">RTT::scripting::FunctionGraph::~FunctionGraph()</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00075">RTT::scripting::StateMachine::~StateMachine()</a>.</p>
 
@@ -2309,7 +2309,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> <em>ee</em> to tell this object it is being loaded. </p>
+<p>Called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> <em>ee</em> or before synchronous execution to tell this object it is being loaded. </p>
 <p>The engine pointer is set first and the user's <a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#a95dfa05e8d4cee94f24dbe3fc6b60af6" title="Informs this object that it got loaded in an ExecutionEngine. ">loading()</a> function is called next. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ee</td><td>The pointer to the engine calling us. </td></tr>
@@ -2317,7 +2317,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00070">70</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00073">73</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="StateInterface_8cpp_source.html#l00055">RTT::scripting::StateInterface::loaded()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>.</p>
 
@@ -2351,7 +2351,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="StateMachine_8cpp_source.html#l00084">84</a> of file <a class="el" href="StateMachine_8cpp_source.html">StateMachine.cpp</a>.</p>
 
-<p>References <a class="el" href="StateMachine_8hpp_source.html#l00620">RTT::scripting::StateMachine::eventMap</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00102">RTT::base::ExecutableInterface::getEngine()</a>, <a class="el" href="StateMachine_8hpp_source.html#l00083">RTT::scripting::StateMachine::Status::inactive</a>, <a class="el" href="StateMachine_8hpp_source.html#l00105">RTT::scripting::StateMachine::smStatus</a>, <a class="el" href="StateMachine_8hpp_source.html#l00608">RTT::scripting::StateMachine::stateMap</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00050">TRACE</a>.</p>
+<p>References <a class="el" href="StateMachine_8hpp_source.html#l00620">RTT::scripting::StateMachine::eventMap</a>, <a class="el" href="ExecutableInterface_8hpp_source.html#l00117">RTT::base::ExecutableInterface::getEngine()</a>, <a class="el" href="StateMachine_8hpp_source.html#l00083">RTT::scripting::StateMachine::Status::inactive</a>, <a class="el" href="StateMachine_8hpp_source.html#l00105">RTT::scripting::StateMachine::smStatus</a>, <a class="el" href="StateMachine_8hpp_source.html#l00608">RTT::scripting::StateMachine::stateMap</a>, and <a class="el" href="StateMachine_8cpp_source.html#l00050">TRACE</a>.</p>
 
 </div>
 </div>
@@ -3263,10 +3263,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> <em>ee</em> to tell this object it is being unloaded. </p>
+<p>Called by the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> <em>ee</em> or after synchronous execution to tell this object it is being unloaded. </p>
 <p>The user's <a class="el" href="classRTT_1_1base_1_1ExecutableInterface.html#a95dfa05e8d4cee94f24dbe3fc6b60af6" title="Informs this object that it got loaded in an ExecutionEngine. ">loading()</a> function is called first and the engine pointer is cleared next. </p>
 
-<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00078">78</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00088">88</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00098">RTT::ExecutionEngine::processFunctions()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00077">RTT::ExecutionEngine::~ExecutionEngine()</a>.</p>
 
@@ -3391,7 +3391,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00061">61</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ExecutableInterface_8hpp_source.html#l00063">63</a> of file <a class="el" href="ExecutableInterface_8hpp_source.html">ExecutableInterface.hpp</a>.</p>
 
 </div>
 </div>
@@ -3507,7 +3507,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 8 2018 21:42:40 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 9 2018 18:26:51 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

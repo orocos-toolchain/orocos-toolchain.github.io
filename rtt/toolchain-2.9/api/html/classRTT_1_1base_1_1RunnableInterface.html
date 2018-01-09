@@ -299,7 +299,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="RunnableInterface_8hpp_source.html#l00175">175</a> of file <a class="el" href="RunnableInterface_8hpp_source.html">RunnableInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00500">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00374">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00271">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00261">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">RTT::base::OperationCallerInterface::isSend()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00276">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00266">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">RTT::ExecutionEngine::stopTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00083">RTT::base::TaskCore::update()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00296">RTT::ExecutionEngine::waitForFunctions()</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00281">RTT::ExecutionEngine::waitForMessages()</a>.</p>
+<p>Referenced by <a class="el" href="TaskCore_8cpp_source.html#l00228">RTT::base::TaskCore::activate()</a>, <a class="el" href="StateMachine_8cpp_source.html#l00500">RTT::scripting::StateMachine::createEventTransition()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00135">RTT::base::TaskCore::fatal()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00374">RTT::TaskContext::getActivity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00271">RTT::base::TaskCore::getCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00261">RTT::base::TaskCore::getPeriod()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00256">RTT::base::TaskCore::isActive()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00242">RTT::ExecutionEngine::process()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00145">RTT::ExecutionEngine::removeFunction()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00117">RTT::ExecutionEngine::runFunction()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00276">RTT::base::TaskCore::setCpuAffinity()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00266">RTT::base::TaskCore::setPeriod()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00434">RTT::ExecutionEngine::stopTask()</a>, <a class="el" href="TaskCore_8cpp_source.html#l00088">RTT::base::TaskCore::trigger()</a>, and <a class="el" href="TaskCore_8cpp_source.html#l00083">RTT::base::TaskCore::update()</a>.</p>
 
 </div>
 </div>
@@ -327,9 +327,13 @@ Public Member Functions</h2></td></tr>
 <p>Get the thread this object is run in. </p>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the thread or 0 if not run by a thread. </dd></dl>
 
+<p>Reimplemented in <a class="el" href="classRTT_1_1ExecutionEngine.html#a86d2daf43266db68945dc11cd53e4065">RTT::ExecutionEngine</a>.</p>
+
 <p>Definition at line <a class="el" href="CoreRunnableInterface_8cpp_source.html#l00082">82</a> of file <a class="el" href="CoreRunnableInterface_8cpp_source.html">CoreRunnableInterface.cpp</a>.</p>
 
 <p>References <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a190329785c1c7e4a542db833402a7811">RTT::base::ActivityInterface::thread()</a>.</p>
+
+<p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00312">RTT::ExecutionEngine::getThread()</a>.</p>
 
 </div>
 </div>
@@ -466,7 +470,7 @@ Public Member Functions</h2></td></tr>
 
 <p>References <a class="el" href="ActivityInterface_8hpp_source.html#l00073">RTT::base::ActivityInterface::disableRun()</a>.</p>
 
-<p>Referenced by <a class="el" href="ActivityInterface_8cpp_source.html#l00045">RTT::base::ActivityInterface::ActivityInterface()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00309">RTT::ExecutionEngine::setActivity()</a>, and <a class="el" href="ActivityInterface_8cpp_source.html#l00050">RTT::base::ActivityInterface::~ActivityInterface()</a>.</p>
+<p>Referenced by <a class="el" href="ActivityInterface_8cpp_source.html#l00045">RTT::base::ActivityInterface::ActivityInterface()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00300">RTT::ExecutionEngine::setActivity()</a>, and <a class="el" href="ActivityInterface_8cpp_source.html#l00050">RTT::base::ActivityInterface::~ActivityInterface()</a>.</p>
 
 </div>
 </div>
@@ -539,7 +543,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 8 2018 21:42:35 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 9 2018 18:26:45 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

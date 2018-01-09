@@ -243,7 +243,7 @@ template&lt;class F&gt; </div>
 
 <p>Just free this object without executing it. </p>
 
-<p>Implemented in <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ade71a27fafd17d9d068f8ead9004b987">RTT::internal::FusedMSignal&lt; Signature &gt;</a>, <a class="el" href="structRTT_1_1RemoveMsg.html#ab1e0b578308c1c283a7b1f0cb3321a50">RTT::RemoveMsg</a>, <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#a19b583d1028f50656cd17445e1d777f0">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#aa4bab9983dec19120c78794b65f036c3">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>.</p>
+<p>Implemented in <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ade71a27fafd17d9d068f8ead9004b987">RTT::internal::FusedMSignal&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a48e8fce405ce915016f9ff100c418a2c">RTT::scripting::CallFunction</a>, <a class="el" href="structRTT_1_1RemoveMsg.html#ab1e0b578308c1c283a7b1f0cb3321a50">RTT::RemoveMsg</a>, <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#a19b583d1028f50656cd17445e1d777f0">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#aa4bab9983dec19120c78794b65f036c3">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00077">RTT::ExecutionEngine::~ExecutionEngine()</a>.</p>
 
@@ -273,7 +273,7 @@ template&lt;class F&gt; </div>
 <p>Execute functionality and free this object. </p>
 <p>You may no longer use this object after calling this method. </p>
 
-<p>Implemented in <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ab44d9861778507ae7caa3eb1f0459f3e">RTT::internal::FusedMSignal&lt; Signature &gt;</a>, <a class="el" href="structRTT_1_1RemoveMsg.html#ad1b864b47dafa18802cd64a94ab80b1a">RTT::RemoveMsg</a>, <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#ad850ee6a0d3cebab3a64c65d238f38c8">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#af22e2c72a8c669b354f825f8d8159338">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>.</p>
+<p>Implemented in <a class="el" href="structRTT_1_1internal_1_1FusedMSignal.html#ab44d9861778507ae7caa3eb1f0459f3e">RTT::internal::FusedMSignal&lt; Signature &gt;</a>, <a class="el" href="classRTT_1_1scripting_1_1CallFunction.html#a97ea08c2180697ad1612185ad0b9e45c">RTT::scripting::CallFunction</a>, <a class="el" href="structRTT_1_1RemoveMsg.html#ad1b864b47dafa18802cd64a94ab80b1a">RTT::RemoveMsg</a>, <a class="el" href="classRTT_1_1internal_1_1LocalOperationCallerImpl.html#ad850ee6a0d3cebab3a64c65d238f38c8">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;</a>, and <a class="el" href="classRTT_1_1internal_1_1RemoteOperationCallerImpl.html#af22e2c72a8c669b354f825f8d8159338">RTT::internal::RemoteOperationCallerImpl&lt; OperationCallerT &gt;</a>.</p>
 
 <p>Referenced by <a class="el" href="ExecutionEngine_8cpp_source.html#l00199">RTT::ExecutionEngine::processMessages()</a>.</p>
 
@@ -359,7 +359,7 @@ template&lt;class F&gt; </div>
 
 <p>Definition at line <a class="el" href="OperationCallerInterface_8cpp_source.html#l00034">34</a> of file <a class="el" href="OperationCallerInterface_8cpp_source.html">OperationCallerInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="OperationBase_8hpp_source.html#l00059">RTT::ClientThread</a>, <a class="el" href="RunnableInterface_8hpp_source.html#l00175">RTT::base::RunnableInterface::getActivity()</a>, <a class="el" href="ThreadInterface_8cpp_source.html#l00058">RTT::os::ThreadInterface::isSelf()</a>, <a class="el" href="OperationCallerInterface_8hpp_source.html#l00088">RTT::base::OperationCallerInterface::met</a>, <a class="el" href="OperationCallerInterface_8hpp_source.html#l00086">RTT::base::OperationCallerInterface::myengine</a>, and <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a190329785c1c7e4a542db833402a7811">RTT::base::ActivityInterface::thread()</a>.</p>
+<p>References <a class="el" href="OperationBase_8hpp_source.html#l00059">RTT::ClientThread</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00320">RTT::ExecutionEngine::isSelf()</a>, <a class="el" href="OperationCallerInterface_8hpp_source.html#l00088">RTT::base::OperationCallerInterface::met</a>, and <a class="el" href="OperationCallerInterface_8hpp_source.html#l00086">RTT::base::OperationCallerInterface::myengine</a>.</p>
 
 <p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00352">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::call_impl()</a>.</p>
 
@@ -418,7 +418,7 @@ template&lt;class F&gt; </div>
 
 <p>Definition at line <a class="el" href="OperationCallerInterface_8cpp_source.html#l00052">52</a> of file <a class="el" href="OperationCallerInterface_8cpp_source.html">OperationCallerInterface.cpp</a>.</p>
 
-<p>References <a class="el" href="OperationCallerInterface_8hpp_source.html#l00086">RTT::base::OperationCallerInterface::myengine</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00456">RTT::ExecutionEngine::setExceptionTask()</a>.</p>
+<p>References <a class="el" href="OperationCallerInterface_8hpp_source.html#l00086">RTT::base::OperationCallerInterface::myengine</a>, and <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">RTT::ExecutionEngine::setExceptionTask()</a>.</p>
 
 <p>Referenced by <a class="el" href="FusedFunctorDataSource_8hpp_source.html#l00295">RTT::internal::FusedMCallDataSource&lt; Signature &gt;::evaluate()</a>, and <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>.</p>
 
@@ -629,7 +629,7 @@ template&lt;class F&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 8 2018 21:42:35 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 9 2018 18:26:45 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
