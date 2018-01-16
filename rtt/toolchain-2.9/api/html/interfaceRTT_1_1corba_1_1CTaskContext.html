@@ -113,6 +113,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a237adcdea575941782e06f7cbff7ab7b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html#a237adcdea575941782e06f7cbff7ab7b">stop</a> ()</td></tr>
 <tr class="memdesc:a237adcdea575941782e06f7cbff7ab7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop this component.  <a href="#a237adcdea575941782e06f7cbff7ab7b">More...</a><br /></td></tr>
 <tr class="separator:a237adcdea575941782e06f7cbff7ab7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a415b993d4682cdf61a9f73487b7c02c9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html#a415b993d4682cdf61a9f73487b7c02c9">recover</a> ()</td></tr>
+<tr class="memdesc:a415b993d4682cdf61a9f73487b7c02c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recover this component.  <a href="#a415b993d4682cdf61a9f73487b7c02c9">More...</a><br /></td></tr>
+<tr class="separator:a415b993d4682cdf61a9f73487b7c02c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe3ca0c389a7321dc9750f3ab1c850ea"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html#abe3ca0c389a7321dc9750f3ab1c850ea">resetException</a> ()</td></tr>
 <tr class="memdesc:abe3ca0c389a7321dc9750f3ab1c850ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asks the component to transition from an Exception state to the Stopped state.  <a href="#abe3ca0c389a7321dc9750f3ab1c850ea">More...</a><br /></td></tr>
 <tr class="separator:abe3ca0c389a7321dc9750f3ab1c850ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +137,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af5e84ac6208b504d28f61934092b2683"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html#af5e84ac6208b504d28f61934092b2683">inRunTimeError</a> ()</td></tr>
 <tr class="memdesc:af5e84ac6208b504d28f61934092b2683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component in a RunTime error state ?  <a href="#af5e84ac6208b504d28f61934092b2683">More...</a><br /></td></tr>
 <tr class="separator:af5e84ac6208b504d28f61934092b2683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef7408bab9c740fd723f6f0ce73b1b6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html#adef7408bab9c740fd723f6f0ce73b1b6">inException</a> ()</td></tr>
+<tr class="memdesc:adef7408bab9c740fd723f6f0ce73b1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is this component in an Exception error state ?  <a href="#adef7408bab9c740fd723f6f0ce73b1b6">More...</a><br /></td></tr>
+<tr class="separator:adef7408bab9c740fd723f6f0ce73b1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">CTaskContext services</div></td></tr>
 <tr class="memitem:a46e66025f32ad9882a7f2cd80c5059af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceRTT_1_1corba_1_1CService.html">CService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html#a46e66025f32ad9882a7f2cd80c5059af">getProvider</a> (in string service_name)</td></tr>
 <tr class="memdesc:a46e66025f32ad9882a7f2cd80c5059af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a service.  <a href="#a46e66025f32ad9882a7f2cd80c5059af">More...</a><br /></td></tr>
@@ -500,6 +506,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="adef7408bab9c740fd723f6f0ce73b1b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean RTT::corba::CTaskContext::inException </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is this component in an Exception error state ? </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad3f58ee59ba08f3c4cf7ab92bd7ff13e" title="Inspect if the component is in the Exception state. ">RTT::base::TaskCore::inException()</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ae2ef7c2c19775958e1573bf065ad9bd3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -608,6 +632,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a415b993d4682cdf61a9f73487b7c02c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean RTT::corba::CTaskContext::recover </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recover this component. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a28420e3f52d819fddbe0962cdef98707" title="Call this method in a RunTimeError or Exception state to indicate that the run-time error conditions ...">RTT::base::TaskCore::recover()</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ae5469855eeff1363041492a80a5a29f8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -687,7 +729,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 9 2018 18:26:46 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 16 2018 11:27:21 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

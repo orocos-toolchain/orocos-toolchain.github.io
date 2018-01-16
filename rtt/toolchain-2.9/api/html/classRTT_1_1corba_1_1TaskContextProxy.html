@@ -128,6 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a93f4379b062e7286e37c225996c0b709"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a93f4379b062e7286e37c225996c0b709">cleanup</a> ()</td></tr>
 <tr class="memdesc:a93f4379b062e7286e37c225996c0b709"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method instructs a stopped component to enter the pre-operational state again.  <a href="#a93f4379b062e7286e37c225996c0b709">More...</a><br /></td></tr>
 <tr class="separator:a93f4379b062e7286e37c225996c0b709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf31c50741b5ae4650daae92918db3a5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#adf31c50741b5ae4650daae92918db3a5">recover</a> ()</td></tr>
+<tr class="memdesc:adf31c50741b5ae4650daae92918db3a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this method in a RunTimeError or Exception state to indicate that the run-time error conditions are gone and nominal operation is resumed.  <a href="#adf31c50741b5ae4650daae92918db3a5">More...</a><br /></td></tr>
+<tr class="separator:adf31c50741b5ae4650daae92918db3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00904940f4bfcd7e23261a6e8325b06f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a00904940f4bfcd7e23261a6e8325b06f">isActive</a> () const </td></tr>
 <tr class="memdesc:a00904940f4bfcd7e23261a6e8325b06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the component's <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> is processing requests.  <a href="#a00904940f4bfcd7e23261a6e8325b06f">More...</a><br /></td></tr>
 <tr class="separator:a00904940f4bfcd7e23261a6e8325b06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,6 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae94d2e03dda53dcad5e4a2b4aea0032e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#ae94d2e03dda53dcad5e4a2b4aea0032e">inRunTimeError</a> () const </td></tr>
 <tr class="memdesc:ae94d2e03dda53dcad5e4a2b4aea0032e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the component is in the RunTimeError state.  <a href="#ae94d2e03dda53dcad5e4a2b4aea0032e">More...</a><br /></td></tr>
 <tr class="separator:ae94d2e03dda53dcad5e4a2b4aea0032e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70846662ce23e2d94dd33de070f96b0a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a70846662ce23e2d94dd33de070f96b0a">inException</a> () const </td></tr>
+<tr class="memdesc:a70846662ce23e2d94dd33de070f96b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the component is in the Exception state.  <a href="#a70846662ce23e2d94dd33de070f96b0a">More...</a><br /></td></tr>
+<tr class="separator:a70846662ce23e2d94dd33de070f96b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03fd594949ef8654daa21998e313a7c9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aec42df6b1b306b7a7102fa3bf8e2a296">TaskState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1TaskContextProxy.html#a03fd594949ef8654daa21998e313a7c9">getTaskState</a> () const </td></tr>
 <tr class="memdesc:a03fd594949ef8654daa21998e313a7c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current state of the TaskCore.  <a href="#a03fd594949ef8654daa21998e313a7c9">More...</a><br /></td></tr>
 <tr class="separator:a03fd594949ef8654daa21998e313a7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -319,9 +325,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ed3cee9867d1367b6c482a0584f5045"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a4ed3cee9867d1367b6c482a0584f5045">setCpuAffinity</a> (unsigned cpu)</td></tr>
 <tr class="memdesc:a4ed3cee9867d1367b6c482a0584f5045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the cpu affinity of this component.  <a href="#a4ed3cee9867d1367b6c482a0584f5045">More...</a><br /></td></tr>
 <tr class="separator:a4ed3cee9867d1367b6c482a0584f5045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3f58ee59ba08f3c4cf7ab92bd7ff13e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad3f58ee59ba08f3c4cf7ab92bd7ff13e">inException</a> () const </td></tr>
-<tr class="memdesc:ad3f58ee59ba08f3c4cf7ab92bd7ff13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspect if the component is in the Exception state.  <a href="#ad3f58ee59ba08f3c4cf7ab92bd7ff13e">More...</a><br /></td></tr>
-<tr class="separator:ad3f58ee59ba08f3c4cf7ab92bd7ff13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a940714024a53ffb17de749f3f909527d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a940714024a53ffb17de749f3f909527d">update</a> ()</td></tr>
 <tr class="memdesc:a940714024a53ffb17de749f3f909527d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke this method to <em>execute</em> the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> and the <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a940714024a53ffb17de749f3f909527d" title="Invoke this method to execute the ExecutionEngine and the update() method. ">update()</a> method.  <a href="#a940714024a53ffb17de749f3f909527d">More...</a><br /></td></tr>
 <tr class="separator:a940714024a53ffb17de749f3f909527d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,9 +334,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c3b01dff9aa92578d1657bdc3c0fb47"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a3c3b01dff9aa92578d1657bdc3c0fb47">error</a> ()</td></tr>
 <tr class="memdesc:a3c3b01dff9aa92578d1657bdc3c0fb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this method in a Running state to indicate a run-time error condition.  <a href="#a3c3b01dff9aa92578d1657bdc3c0fb47">More...</a><br /></td></tr>
 <tr class="separator:a3c3b01dff9aa92578d1657bdc3c0fb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28420e3f52d819fddbe0962cdef98707"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1TaskCore.html#a28420e3f52d819fddbe0962cdef98707">recover</a> ()</td></tr>
-<tr class="memdesc:a28420e3f52d819fddbe0962cdef98707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this method in a RunTimeError or Exception state to indicate that the run-time error conditions are gone and nominal operation is resumed.  <a href="#a28420e3f52d819fddbe0962cdef98707">More...</a><br /></td></tr>
-<tr class="separator:a28420e3f52d819fddbe0962cdef98707"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -770,9 +770,9 @@ Ports</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#adb5e6bc5f0eee821b3f62f9d5482c743">RTT::base::TaskCore</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00639">639</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00653">653</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -1189,9 +1189,9 @@ template&lt;class Signature &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#ac3d487151ec08587c525ea66ba9cb1c0">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00740">740</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00766">766</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00911">server()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00937">server()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>.</p>
 
 </div>
 </div>
@@ -1439,9 +1439,9 @@ template&lt;class T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a009c3d9b097d1904ca6eac98a5b48d0c">RTT::base::TaskCore</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00683">683</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00697">697</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -1501,7 +1501,7 @@ template&lt;class T &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContext_8cpp_source.html#l00381">381</a> of file <a class="el" href="TaskContext_8cpp_source.html">TaskContext.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00639">activate()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00740">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00683">cleanup()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00671">configure()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00795">connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00864">connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00879">connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00810">disconnectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00894">ready()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00769">removePeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00615">start()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00627">stop()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00118">RTT::TaskContext::~TaskContext()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00653">activate()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00766">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00697">cleanup()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00685">configure()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00821">connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00890">connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00905">connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00836">disconnectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00920">ready()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00639">recover()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00795">removePeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00615">start()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00627">stop()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>, and <a class="el" href="TaskContext_8cpp_source.html#l00118">RTT::TaskContext::~TaskContext()</a>.</p>
 
 </div>
 </div>
@@ -1532,9 +1532,9 @@ template&lt;class T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a492aed947a9bb2cbc25140884bc34e1b">RTT::base::TaskCore</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00671">671</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00685">685</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -1601,9 +1601,9 @@ template&lt;class T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#aac2ffdaa9d9af59f5cbaceb33ff118aa">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00795">795</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00821">821</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -1633,9 +1633,9 @@ template&lt;class T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a67511f726158ff9ebad751991651ec8a">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00864">864</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00890">890</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -1665,9 +1665,9 @@ template&lt;class T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a4b0cf7b019969abe36f40bcdaa9fb427">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00879">879</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00905">905</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00465">RTT::corba::TaskContextServer::server()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -1723,7 +1723,7 @@ template&lt;class T &gt; </div>
 
 <p>References <a class="el" href="corba_8h_source.html#l00068">CORBA_EXCEPTION_INFO</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Logger_8cpp_source.html#l00373">RTT::Logger::nl()</a>, <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00100">TaskContextProxy()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00075">RTT::corba::IllegalServer::what()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextFactory_8cpp_source.html#l00052">RTT::corba::TaskContextFactory::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00553">CreateFromFile()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00849">getPeer()</a>, and <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00338">RTT::corba::AnyConversion&lt; RTT::TaskContext * &gt;::update()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextFactory_8cpp_source.html#l00052">RTT::corba::TaskContextFactory::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00553">CreateFromFile()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00875">getPeer()</a>, and <a class="el" href="RTTCorbaConversion_8hpp_source.html#l00338">RTT::corba::AnyConversion&lt; RTT::TaskContext * &gt;::update()</a>.</p>
 
 </div>
 </div>
@@ -1985,9 +1985,9 @@ template&lt;class T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a9a76246c2720b22546dd18ce0d0b38bf">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00810">810</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00836">836</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -2449,7 +2449,7 @@ template&lt;typename T &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00117">117</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00248">RTT::TaskContext::addPeer()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00270">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00278">RTT::TaskContext::connectPeers()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00150">RTT::TaskContext::connectPorts()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00187">RTT::TaskContext::connectServices()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00433">RTT::corba::TaskContextServer::CreateServer()</a>, <a class="el" href="ExpressionParser_8cpp_source.html#l00081">RTT::scripting::DataCallParser::DataCallParser()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00288">RTT::TaskContext::disconnect()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00102">RTT_corba_CTaskContext_i::getName()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00194">RTT_corba_CTaskContext_i::getProvider()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00214">RTT_corba_CTaskContext_i::getRequester()</a>, <a class="el" href="CorbaDispatcher_8hpp_source.html#l00097">RTT::corba::CorbaDispatcher::Instance()</a>, <a class="el" href="PluginLoader_8cpp_source.html#l00347">RTT::plugin::PluginLoader::loadService()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00782">removePeer()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">RTT::ExecutionEngine::setExceptionTask()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00069">RTT::mqueue::MQSendRecv::setupStream()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00248">RTT::TaskContext::addPeer()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00270">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00278">RTT::TaskContext::connectPeers()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00150">RTT::TaskContext::connectPorts()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00187">RTT::TaskContext::connectServices()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00408">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00433">RTT::corba::TaskContextServer::CreateServer()</a>, <a class="el" href="ExpressionParser_8cpp_source.html#l00081">RTT::scripting::DataCallParser::DataCallParser()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00288">RTT::TaskContext::disconnect()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00102">RTT_corba_CTaskContext_i::getName()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00206">RTT_corba_CTaskContext_i::getProvider()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00226">RTT_corba_CTaskContext_i::getRequester()</a>, <a class="el" href="CorbaDispatcher_8hpp_source.html#l00097">RTT::corba::CorbaDispatcher::Instance()</a>, <a class="el" href="PluginLoader_8cpp_source.html#l00347">RTT::plugin::PluginLoader::loadService()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00808">removePeer()</a>, <a class="el" href="ExecutionEngine_8cpp_source.html#l00445">RTT::ExecutionEngine::setExceptionTask()</a>, <a class="el" href="MQSendRecv_8cpp_source.html#l00069">RTT::mqueue::MQSendRecv::setupStream()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>.</p>
 
 </div>
 </div>
@@ -2516,7 +2516,7 @@ template&lt;typename T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a7bb58076846edaf52dd0ad6a4d64b110">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00849">849</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00875">875</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContextProxy_8cpp_source.html#l00530">Create()</a>, and <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
@@ -2548,7 +2548,7 @@ template&lt;typename T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a9d294341f8464b87c4609b2f89b5ecb7">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00822">822</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00848">848</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
@@ -2762,7 +2762,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#aeebedaf344a1eae84f34b51ba052f299">RTT::base::TaskCore</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00725">725</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00751">751</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskCore_8hpp_source.html#l00100">RTT::base::TaskCore::Init</a>, and <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
@@ -2848,13 +2848,13 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a415123c0d3da013107eb7d0cf793a14d">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00838">838</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00864">864</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad3f58ee59ba08f3c4cf7ab92bd7ff13e"></a>
+<a class="anchor" id="a70846662ce23e2d94dd33de070f96b0a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2862,24 +2862,27 @@ template&lt;class ServiceType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool RTT::TaskCore::inException </td>
+          <td class="memname">bool RTT::corba::TaskContextProxy::inException </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Inspect if the component is in the Exception state. </p>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00248">248</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#ad3f58ee59ba08f3c4cf7ab92bd7ff13e">RTT::base::TaskCore</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, and <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00739">739</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+
+<p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
 </div>
 </div>
@@ -2910,7 +2913,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a17eced3a04772d8a2b36c9b37e5f630c">RTT::base::TaskCore</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00705">705</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00719">719</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
@@ -3038,7 +3041,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#ae96c196ff77840408229ccd5018fc9c9">RTT::base::TaskCore</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00715">715</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00729">729</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
@@ -3071,7 +3074,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a5d20397ed24caa3beea9d981823aa9a6">RTT::base::TaskCore</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00651">651</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00665">665</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
@@ -3104,7 +3107,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a536c8b64294fb60bb54ada1a75045510">RTT::base::TaskCore</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00695">695</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00709">709</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
@@ -3137,7 +3140,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a9168525a25ec73b7240042613688b6fa">RTT::base::TaskCore</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00661">661</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00675">675</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
@@ -3320,7 +3323,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00257">257</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00270">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00187">RTT::TaskContext::connectServices()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00056">RTT::marsh::MarshallingService::Create()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00065">RTT::scripting::ScriptingService::Create()</a>, <a class="el" href="Service_8cpp_source.html#l00050">RTT::Service::Create()</a>, <a class="el" href="StatementProcessor_8cpp_source.html#l00072">RTT::StatementProcessor::D::doPrint()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00108">RTT_corba_CTaskContext_i::getDescription()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00321">RTT::scripting::StateGraphParser::getParserResult()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00194">RTT_corba_CTaskContext_i::getProvider()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00229">RTT::TaskContext::loadService()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00734">RTT::scripting::ProgramGraphParser::parseFunction()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, <a class="el" href="Parser_8cpp_source.html#l00197">RTT::scripting::Parser::parseValueStatement()</a>, <a class="el" href="PeerParser_8cpp_source.html#l00151">RTT::scripting::PeerParser::reset()</a>, <a class="el" href="ScriptParser_8cpp_source.html#l00046">RTT::scripting::ScriptParser::ScriptParser()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00070">RTT::TaskContext::TaskContext()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00786">RTT::scripting::StateGraphParser::~StateGraphParser()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00270">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00187">RTT::TaskContext::connectServices()</a>, <a class="el" href="MarshallingService_8cpp_source.html#l00056">RTT::marsh::MarshallingService::Create()</a>, <a class="el" href="ScriptingService_8cpp_source.html#l00065">RTT::scripting::ScriptingService::Create()</a>, <a class="el" href="Service_8cpp_source.html#l00050">RTT::Service::Create()</a>, <a class="el" href="StatementProcessor_8cpp_source.html#l00072">RTT::StatementProcessor::D::doPrint()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00108">RTT_corba_CTaskContext_i::getDescription()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00321">RTT::scripting::StateGraphParser::getParserResult()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00206">RTT_corba_CTaskContext_i::getProvider()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00229">RTT::TaskContext::loadService()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00734">RTT::scripting::ProgramGraphParser::parseFunction()</a>, <a class="el" href="ProgramGraphParser_8cpp_source.html#l00276">RTT::scripting::ProgramGraphParser::parserUsed()</a>, <a class="el" href="Parser_8cpp_source.html#l00197">RTT::scripting::Parser::parseValueStatement()</a>, <a class="el" href="PeerParser_8cpp_source.html#l00151">RTT::scripting::PeerParser::reset()</a>, <a class="el" href="ScriptParser_8cpp_source.html#l00046">RTT::scripting::ScriptParser::ScriptParser()</a>, <a class="el" href="StateGraphParser_8cpp_source.html#l00873">RTT::scripting::StateGraphParser::storeOffset()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>, <a class="el" href="TaskContext_8cpp_source.html#l00070">RTT::TaskContext::TaskContext()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>, and <a class="el" href="StateGraphParser_8cpp_source.html#l00786">RTT::scripting::StateGraphParser::~StateGraphParser()</a>.</p>
 
 </div>
 </div>
@@ -3381,7 +3384,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Returns the default POA for all proxies. </p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00917">917</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00943">943</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="ApplicationServer_8hpp_source.html#l00062">RTT::corba::ApplicationServer::orb</a>, and <a class="el" href="TaskContextProxy_8hpp_source.html#l00128">proxy_poa</a>.</p>
 
@@ -3416,13 +3419,13 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#abdcbcf1f47651e911ed91ddec6ecac7d">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00894">894</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00920">920</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, and <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a28420e3f52d819fddbe0962cdef98707"></a>
+<a class="anchor" id="adf31c50741b5ae4650daae92918db3a5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3430,15 +3433,16 @@ template&lt;class ServiceType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool RTT::TaskCore::recover </td>
+          <td class="memname">bool RTT::corba::TaskContextProxy::recover </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -3446,11 +3450,11 @@ template&lt;class ServiceType &gt; </div>
 <p>Call this method in a RunTimeError or Exception state to indicate that the run-time error conditions are gone and nominal operation is resumed. </p>
 <p>Makes transition to Running or PreOperational, depending on the state it was in. </p><dl class="section return"><dt>Returns</dt><dd>false if not applicable in the current state. </dd></dl>
 
-<p>Definition at line <a class="el" href="TaskCore_8cpp_source.html#l00168">168</a> of file <a class="el" href="TaskCore_8cpp_source.html">TaskCore.cpp</a>.</p>
+<p>Reimplemented from <a class="el" href="classRTT_1_1base_1_1TaskCore.html#a28420e3f52d819fddbe0962cdef98707">RTT::base::TaskCore</a>.</p>
 
-<p>References <a class="el" href="TaskCore_8hpp_source.html#l00103">RTT::base::TaskCore::Exception</a>, <a class="el" href="TaskCore_8hpp_source.html#l00446">RTT::base::TaskCore::mTaskState</a>, <a class="el" href="TaskCore_8hpp_source.html#l00105">RTT::base::TaskCore::Running</a>, and <a class="el" href="TaskCore_8hpp_source.html#l00106">RTT::base::TaskCore::RunTimeError</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00639">639</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextI_8cpp_source.html#l00150">RTT_corba_CTaskContext_i::resetException()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -3480,9 +3484,9 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#a3c3c00069dfb5ad81a343d81e7bd30c4">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00769">769</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00795">795</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -3512,9 +3516,9 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1TaskContext.html#ae4364c541a521eaed563232606022061">RTT::TaskContext</a>.</p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00782">782</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00808">808</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00117">RTT::TaskContext::getName()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00117">RTT::TaskContext::getName()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -3543,7 +3547,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContext_8hpp_source.html#l00270">270</a> of file <a class="el" href="TaskContext_8hpp_source.html">TaskContext.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00187">RTT::TaskContext::connectServices()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00214">RTT_corba_CTaskContext_i::getRequester()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00213">synchronizeRequesters()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContext_8cpp_source.html#l00187">RTT::TaskContext::connectServices()</a>, <a class="el" href="TaskContextI_8cpp_source.html#l00226">RTT_corba_CTaskContext_i::getRequester()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00213">synchronizeRequesters()</a>.</p>
 
 </div>
 </div>
@@ -3591,11 +3595,11 @@ template&lt;class ServiceType &gt; </div>
 <p>Get the Corba Object of the <a class="el" href="interfaceRTT_1_1corba_1_1CTaskContext.html" title="A CTaskContext is the main entry point of a distributed component and maps to a RTT::TaskContext. ">CTaskContext</a>. </p>
 <p>You need to duplicate this object reference in case you wish to keep a reference to it. This object universally identifies the remote <a class="el" href="classRTT_1_1corba_1_1TaskContextServer.html" title="This class manages the creation of TaskContext Corba Servers and a Corba Object Request Broker (Orb) ...">TaskContextServer</a> and can be used to tell other (remote) objects where to find it. </p>
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00911">911</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00937">937</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
 <p>References <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00740">addPeer()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00766">addPeer()</a>.</p>
 
 </div>
 </div>
@@ -3695,9 +3699,9 @@ template&lt;class ServiceType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">735</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
+<p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">761</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00639">activate()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00740">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00683">cleanup()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00671">configure()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00795">connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00864">connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00879">connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00810">disconnectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00769">removePeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00615">start()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00627">stop()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00653">activate()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00766">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00697">cleanup()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00685">configure()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00821">connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00890">connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00905">connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00836">disconnectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00639">recover()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00795">removePeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00615">start()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00627">stop()</a>.</p>
 
 </div>
 </div>
@@ -3774,7 +3778,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00615">615</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -3843,7 +3847,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00627">627</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00735">setName()</a>.</p>
+<p>References <a class="el" href="TaskContext_8cpp_source.html#l00381">RTT::TaskContext::clear()</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00761">setName()</a>.</p>
 
 </div>
 </div>
@@ -3902,7 +3906,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>References <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">mtask</a>, <a class="el" href="TaskContext_8hpp_source.html#l00257">RTT::TaskContext::provides()</a>, <a class="el" href="TaskContext_8hpp_source.html#l00270">RTT::TaskContext::requires()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00213">synchronizeRequesters()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00232">synchronizeServices()</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00740">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00766">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>.</p>
 
 </div>
 </div>
@@ -3946,7 +3950,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00332">332</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="DataFlow_8idl_source.html#l00133">RTT::corba::CInput</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="PortInterface_8cpp_source.html#l00060">RTT::base::PortInterface::doc()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00168">RTT::types::TypeInfo::hasProtocol()</a>, <a class="el" href="TypeInfoRepository_8cpp_source.html#l00063">RTT::types::TypeInfoRepository::Instance()</a>, <a class="el" href="CorbaLib_8hpp_source.html#l00045">ORO_CORBA_PROTOCOL_ID</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00114">port_proxies</a>, <a class="el" href="Service_8idl_source.html#l00034">RTT::corba::CServiceDescription::ports</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00917">ProxyPOA()</a>, and <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Warning</a>.</p>
+<p>References <a class="el" href="DataFlow_8idl_source.html#l00133">RTT::corba::CInput</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="PortInterface_8cpp_source.html#l00060">RTT::base::PortInterface::doc()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00168">RTT::types::TypeInfo::hasProtocol()</a>, <a class="el" href="TypeInfoRepository_8cpp_source.html#l00063">RTT::types::TypeInfoRepository::Instance()</a>, <a class="el" href="CorbaLib_8hpp_source.html#l00045">ORO_CORBA_PROTOCOL_ID</a>, <a class="el" href="TaskContextProxy_8hpp_source.html#l00114">port_proxies</a>, <a class="el" href="Service_8idl_source.html#l00034">RTT::corba::CServiceDescription::ports</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00943">ProxyPOA()</a>, and <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Warning</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00232">synchronizeServices()</a>.</p>
 
@@ -4038,7 +4042,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8cpp_source.html#l00232">232</a> of file <a class="el" href="TaskContextProxy_8cpp_source.html">TaskContextProxy.cpp</a>.</p>
 
-<p>References <a class="el" href="Service_8idl_source.html#l00033">RTT::corba::CServiceDescription::attributes</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00222">RTT::types::TypeInfo::buildAttribute()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00173">RTT::types::TypeInfo::buildConstant()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00214">RTT::types::TypeInfo::buildProperty()</a>, <a class="el" href="Service_8idl_source.html#l00036">RTT::corba::CServiceDescription::children</a>, <a class="el" href="Service_8idl_source.html#l00037">RTT::corba::CServiceDescription::children_descriptions</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#af1174bdc669af819ce8efea3e5a61c7f">RTT::corba::CorbaTypeTransporter::createAttributeDataSource()</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a3f954d5fadeaaf475ad91d340988fa02">RTT::corba::CorbaTypeTransporter::createPropertyDataSource()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00305">RTT::findProperty()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00150">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00168">RTT::types::TypeInfo::hasProtocol()</a>, <a class="el" href="TypeInfoRepository_8cpp_source.html#l00063">RTT::types::TypeInfoRepository::Instance()</a>, <a class="el" href="Service_8idl_source.html#l00031">RTT::corba::CServiceDescription::operations</a>, <a class="el" href="CorbaLib_8hpp_source.html#l00045">ORO_CORBA_PROTOCOL_ID</a>, <a class="el" href="Service_8idl_source.html#l00032">RTT::corba::CServiceDescription::properties</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00917">ProxyPOA()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00384">RTT::storeProperty()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00332">synchronizePorts()</a>.</p>
+<p>References <a class="el" href="Service_8idl_source.html#l00033">RTT::corba::CServiceDescription::attributes</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00222">RTT::types::TypeInfo::buildAttribute()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00173">RTT::types::TypeInfo::buildConstant()</a>, <a class="el" href="TypeInfo_8hpp_source.html#l00214">RTT::types::TypeInfo::buildProperty()</a>, <a class="el" href="Service_8idl_source.html#l00036">RTT::corba::CServiceDescription::children</a>, <a class="el" href="Service_8idl_source.html#l00037">RTT::corba::CServiceDescription::children_descriptions</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#af1174bdc669af819ce8efea3e5a61c7f">RTT::corba::CorbaTypeTransporter::createAttributeDataSource()</a>, <a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a3f954d5fadeaaf475ad91d340988fa02">RTT::corba::CorbaTypeTransporter::createPropertyDataSource()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Debug</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00305">RTT::findProperty()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00150">RTT::types::TypeInfo::getProtocol()</a>, <a class="el" href="TypeInfo_8cpp_source.html#l00168">RTT::types::TypeInfo::hasProtocol()</a>, <a class="el" href="TypeInfoRepository_8cpp_source.html#l00063">RTT::types::TypeInfoRepository::Instance()</a>, <a class="el" href="Service_8idl_source.html#l00031">RTT::corba::CServiceDescription::operations</a>, <a class="el" href="CorbaLib_8hpp_source.html#l00045">ORO_CORBA_PROTOCOL_ID</a>, <a class="el" href="Service_8idl_source.html#l00032">RTT::corba::CServiceDescription::properties</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00943">ProxyPOA()</a>, <a class="el" href="PropertyBag_8cpp_source.html#l00384">RTT::storeProperty()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00332">synchronizePorts()</a>.</p>
 
 <p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>.</p>
 
@@ -4250,7 +4254,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8hpp_source.html#l00123">123</a> of file <a class="el" href="TaskContextProxy_8hpp_source.html">TaskContextProxy.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00639">activate()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00740">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00683">cleanup()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00671">configure()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00795">connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00864">connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00879">connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00810">disconnectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00849">getPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00822">getPeerList()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00725">getTaskState()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00838">hasPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00705">inFatalError()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00715">inRunTimeError()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00651">isActive()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00695">isConfigured()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00661">isRunning()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00894">ready()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00769">removePeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00911">server()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00615">start()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00627">stop()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00653">activate()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00766">addPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00697">cleanup()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00685">configure()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00821">connectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00890">connectPorts()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00905">connectServices()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00836">disconnectPeers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00875">getPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00848">getPeerList()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00751">getTaskState()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00864">hasPeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00739">inException()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00719">inFatalError()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00729">inRunTimeError()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00665">isActive()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00709">isConfigured()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00675">isRunning()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00920">ready()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00639">recover()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00795">removePeer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00937">server()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00615">start()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00627">stop()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00195">synchronize()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00172">TaskContextProxy()</a>.</p>
 
 </div>
 </div>
@@ -4378,7 +4382,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="ApplicationServer_8hpp_source.html#l00062">62</a> of file <a class="el" href="ApplicationServer_8hpp_source.html">ApplicationServer.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00270">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00258">RTT::corba::TaskContextServer::CleanupServers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00530">Create()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00412">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00553">CreateFromFile()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00437">RTT::corba::TaskContextServer::CreateServer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00512">DestroyOrb()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00378">RTT::corba::TaskContextServer::DestroyOrb()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00288">RTT::corba::TaskContextServer::DoShutdownOrb()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00489">RTT::corba::RemoteChannelElement&lt; T &gt;::getRemoteURI()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="ApplicationServer_8cpp_source.html#l00055">RTT::corba::ApplicationServer::InitOrb()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00917">ProxyPOA()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00084">RTT::corba::RemoteChannelElement&lt; T &gt;::RemoteChannelElement()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00316">RTT::corba::TaskContextServer::RunOrb()</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00362">RTT::corba::TaskContextServer::ThreadOrb()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextServer_8cpp_source.html#l00270">RTT::corba::TaskContextServer::CleanupServer()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00258">RTT::corba::TaskContextServer::CleanupServers()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00530">Create()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00412">RTT::corba::TaskContextServer::Create()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00553">CreateFromFile()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00437">RTT::corba::TaskContextServer::CreateServer()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00512">DestroyOrb()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00378">RTT::corba::TaskContextServer::DestroyOrb()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00288">RTT::corba::TaskContextServer::DoShutdownOrb()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00489">RTT::corba::RemoteChannelElement&lt; T &gt;::getRemoteURI()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00105">initFromURIOrTaskname()</a>, <a class="el" href="ApplicationServer_8cpp_source.html#l00055">RTT::corba::ApplicationServer::InitOrb()</a>, <a class="el" href="TaskContextProxy_8cpp_source.html#l00943">ProxyPOA()</a>, <a class="el" href="RemoteChannelElement_8hpp_source.html#l00084">RTT::corba::RemoteChannelElement&lt; T &gt;::RemoteChannelElement()</a>, <a class="el" href="TaskContextServer_8cpp_source.html#l00316">RTT::corba::TaskContextServer::RunOrb()</a>, and <a class="el" href="TaskContextServer_8cpp_source.html#l00362">RTT::corba::TaskContextServer::ThreadOrb()</a>.</p>
 
 </div>
 </div>
@@ -4455,7 +4459,7 @@ template&lt;class ServiceType &gt; </div>
 
 <p>Definition at line <a class="el" href="TaskContextProxy_8hpp_source.html#l00128">128</a> of file <a class="el" href="TaskContextProxy_8hpp_source.html">TaskContextProxy.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00917">ProxyPOA()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00075">RTT::corba::IllegalServer::what()</a>.</p>
+<p>Referenced by <a class="el" href="TaskContextProxy_8cpp_source.html#l00943">ProxyPOA()</a>, and <a class="el" href="TaskContextProxy_8cpp_source.html#l00075">RTT::corba::IllegalServer::what()</a>.</p>
 
 </div>
 </div>
@@ -4492,7 +4496,7 @@ template&lt;class ServiceType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 9 2018 18:26:46 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 16 2018 11:27:21 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

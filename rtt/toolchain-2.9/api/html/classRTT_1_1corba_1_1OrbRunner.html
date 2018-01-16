@@ -241,8 +241,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ab64f826491a648a1067e96c898d880c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6f518c5967ab1f28b15ed9868906ad9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#ab6f518c5967ab1f28b15ed9868906ad9">mstopRequested</a></td></tr>
 <tr class="separator:ab6f518c5967ab1f28b15ed9868906ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a159ee935879a03376aad074b9e6b5b20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#a159ee935879a03376aad074b9e6b5b20">mabswaitpolicy</a></td></tr>
-<tr class="separator:a159ee935879a03376aad074b9e6b5b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1fadfdfd34de32c693fd9f3ce097dfb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1Activity.html#ab1fadfdfd34de32c693fd9f3ce097dfb">mwaitpolicy</a></td></tr>
+<tr class="separator:ab1fadfdfd34de32c693fd9f3ce097dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0711c7e698f87ead4e89309c9fc84910"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRTT_1_1base_1_1RunnableInterface.html">RunnableInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a0711c7e698f87ead4e89309c9fc84910">runner</a></td></tr>
 <tr class="separator:a0711c7e698f87ead4e89309c9fc84910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94f375df5f026684f8724185b930c584"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Thread.html#a94f375df5f026684f8724185b930c584">msched_type</a></td></tr>
@@ -548,7 +548,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#aeabaef68a4faab68d398fa2deaf9ad04">RTT::base::ActivityInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00333">333</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00338">338</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
 <p>References <a class="el" href="Thread_8cpp_source.html#l00606">RTT::os::Thread::getCpuAffinity()</a>.</p>
 
@@ -612,7 +612,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, and <a class="el" href="gnulinux_2fosi__internal_8cpp_source.html#l00466">RTT::os::rtos_task_get_name()</a>.</p>
 
-<p>Referenced by <a class="el" href="CorbaDispatcher_8hpp_source.html#l00168">RTT::corba::CorbaDispatcher::initialize()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00086">RTT::extras::SimulationThread::SimulationThread()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>, and <a class="el" href="Thread_8cpp_source.html#l00325">RTT::os::Thread::~Thread()</a>.</p>
+<p>Referenced by <a class="el" href="CorbaDispatcher_8hpp_source.html#l00168">RTT::corba::CorbaDispatcher::initialize()</a>, <a class="el" href="SimulationThread_8cpp_source.html#l00086">RTT::extras::SimulationThread::SimulationThread()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>, and <a class="el" href="Thread_8cpp_source.html#l00325">RTT::os::Thread::~Thread()</a>.</p>
 
 </div>
 </div>
@@ -885,7 +885,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="Thread_8cpp_source.html#l00591">RTT::os::Thread::getPeriod()</a>, <a class="el" href="Thread_8hpp_source.html#l00295">RTT::os::Thread::lock_timeout_no_period_in_s</a>, <a class="el" href="Thread_8hpp_source.html#l00300">RTT::os::Thread::lock_timeout_period_factor</a>, <a class="el" href="Thread_8hpp_source.html#l00352">RTT::os::Thread::period</a>, and <a class="el" href="Thread_8hpp_source.html#l00357">RTT::os::Thread::stopTimeout</a>.</p>
 
-<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>.</p>
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>.</p>
 
 </div>
 </div>
@@ -1009,7 +1009,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a5b728aaf49da0fefabdf099f2c42ff7a">RTT::base::ActivityInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00325">325</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00330">330</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
 <p>References <a class="el" href="Thread_8cpp_source.html#l00464">RTT::os::Thread::isActive()</a>.</p>
 
@@ -1044,7 +1044,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a9fe788cc8d6d10f3e1a4d16b111a8b18">RTT::base::ActivityInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00329">329</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00334">334</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
 <p>References <a class="el" href="Thread_8cpp_source.html#l00581">RTT::os::Thread::isPeriodic()</a>, and <a class="el" href="Activity_8hpp_source.html#l00228">RTT::Activity::update_period</a>.</p>
 
@@ -1079,7 +1079,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a41ea7eb806cb34dac532c0acc12513dc">RTT::extras::FileDescriptorActivity</a>.</p>
 
-<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00321">321</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00326">326</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
 <p>References <a class="el" href="Thread_8cpp_source.html#l00459">RTT::os::Thread::isRunning()</a>.</p>
 
@@ -1213,7 +1213,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classRTT_1_1base_1_1ActivityInterface.html#a73f4d59d811f9ec4941f5c5bf84ce643">RTT::base::ActivityInterface</a>.</p>
 
-<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00338">338</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00343">343</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
 <p>References <a class="el" href="Thread_8cpp_source.html#l00601">RTT::os::Thread::setCpuAffinity()</a>.</p>
 
@@ -1611,9 +1611,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classRTT_1_1os_1_1Thread.html#a404bc82a8a3b36d7a2a95a457fd2a739">RTT::os::Thread</a>.</p>
 
-<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00343">343</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00348">348</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
-<p>References <a class="el" href="Activity_8hpp_source.html#l00235">RTT::Activity::mabswaitpolicy</a>, and <a class="el" href="ecos_2fosi_8h_source.html#l00052">ORO_WAIT_ABS</a>.</p>
+<p>References <a class="el" href="Activity_8hpp_source.html#l00235">RTT::Activity::mwaitpolicy</a>.</p>
 
 </div>
 </div>
@@ -1646,7 +1646,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a64ecda39f8c91afde14b64aa71b67f90">RTT::extras::FileDescriptorActivity</a>, and <a class="el" href="classRTT_1_1extras_1_1IRQActivity.html#aaea3053773a4c7b16cfb526d20ac84fb">RTT::extras::IRQActivity</a>.</p>
 
-<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00268">268</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00273">273</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
 <p>References <a class="el" href="Activity_8hpp_source.html#l00234">RTT::Activity::mstopRequested</a>, and <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>.</p>
 
@@ -1717,9 +1717,9 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classRTT_1_1extras_1_1FileDescriptorActivity.html#a311c8656b08744fa5dd3a7b28184a57b">RTT::extras::FileDescriptorActivity</a>.</p>
 
-<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00273">273</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
+<p>Definition at line <a class="el" href="Activity_8cpp_source.html#l00278">278</a> of file <a class="el" href="Activity_8cpp_source.html">Activity.cpp</a>.</p>
 
-<p>References <a class="el" href="Thread_8hpp_source.html#l00311">RTT::os::Thread::active</a>, <a class="el" href="Thread_8hpp_source.html#l00341">RTT::os::Thread::breaker</a>, <a class="el" href="Activity_8cpp_source.html#l00256">RTT::Activity::breakLoop()</a>, <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Activity_8cpp_source.html#l00262">RTT::Activity::finalize()</a>, <a class="el" href="Thread_8cpp_source.html#l00633">RTT::os::Thread::getName()</a>, <a class="el" href="Thread_8cpp_source.html#l00408">RTT::os::Thread::getStopTimeout()</a>, <a class="el" href="Thread_8hpp_source.html#l00321">RTT::os::Thread::inloop</a>, <a class="el" href="MutexLock_8hpp_source.html#l00168">RTT::os::MutexTimedLock::isSuccessful()</a>, <a class="el" href="Activity_8hpp_source.html#l00224">RTT::Activity::msg_cond</a>, <a class="el" href="Activity_8hpp_source.html#l00223">RTT::Activity::msg_lock</a>, <a class="el" href="Activity_8hpp_source.html#l00234">RTT::Activity::mstopRequested</a>, <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, <a class="el" href="ecos_2fosi__internal_8cpp_source.html#l00106">RTT::os::rtos_task_make_periodic()</a>, <a class="el" href="Thread_8hpp_source.html#l00326">RTT::os::Thread::running</a>, <a class="el" href="Activity_8hpp_source.html#l00228">RTT::Activity::update_period</a>, and <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Warning</a>.</p>
+<p>References <a class="el" href="Thread_8hpp_source.html#l00311">RTT::os::Thread::active</a>, <a class="el" href="Thread_8hpp_source.html#l00341">RTT::os::Thread::breaker</a>, <a class="el" href="Activity_8cpp_source.html#l00261">RTT::Activity::breakLoop()</a>, <a class="el" href="Condition_8hpp_source.html#l00113">RTT::os::Condition::broadcast()</a>, <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Error</a>, <a class="el" href="Activity_8cpp_source.html#l00267">RTT::Activity::finalize()</a>, <a class="el" href="Thread_8cpp_source.html#l00633">RTT::os::Thread::getName()</a>, <a class="el" href="Thread_8cpp_source.html#l00408">RTT::os::Thread::getStopTimeout()</a>, <a class="el" href="Thread_8hpp_source.html#l00321">RTT::os::Thread::inloop</a>, <a class="el" href="MutexLock_8hpp_source.html#l00168">RTT::os::MutexTimedLock::isSuccessful()</a>, <a class="el" href="Activity_8hpp_source.html#l00224">RTT::Activity::msg_cond</a>, <a class="el" href="Activity_8hpp_source.html#l00223">RTT::Activity::msg_lock</a>, <a class="el" href="Activity_8hpp_source.html#l00234">RTT::Activity::mstopRequested</a>, <a class="el" href="Thread_8hpp_source.html#l00331">RTT::os::Thread::rtos_task</a>, <a class="el" href="ecos_2fosi__internal_8cpp_source.html#l00106">RTT::os::rtos_task_make_periodic()</a>, <a class="el" href="Thread_8hpp_source.html#l00326">RTT::os::Thread::running</a>, <a class="el" href="Activity_8hpp_source.html#l00228">RTT::Activity::update_period</a>, and <a class="el" href="Logger_8hpp_source.html#l00345">RTT::Warning</a>.</p>
 
 <p>Referenced by <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00440">RTT::extras::FileDescriptorActivity::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00104">RTT::Activity::~Activity()</a>, and <a class="el" href="IRQActivity_8cpp_source.html#l00060">RTT::extras::IRQActivity::~IRQActivity()</a>.</p>
 
@@ -1982,7 +1982,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00311">311</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00226">RTT::os::Thread::emergencyStop()</a>, <a class="el" href="Thread_8cpp_source.html#l00464">RTT::os::Thread::isActive()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00621">RTT::os::Thread::terminate()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00226">RTT::os::Thread::emergencyStop()</a>, <a class="el" href="Thread_8cpp_source.html#l00464">RTT::os::Thread::isActive()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00621">RTT::os::Thread::terminate()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
 
 </div>
 </div>
@@ -2008,7 +2008,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00341">341</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
 
 </div>
 </div>
@@ -2058,7 +2058,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00321">321</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00226">RTT::os::Thread::emergencyStop()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00226">RTT::os::Thread::emergencyStop()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
 
 </div>
 </div>
@@ -2111,30 +2111,6 @@ Static Protected Attributes</h2></td></tr>
 <p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00300">300</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00408">RTT::os::Thread::getStopTimeout()</a>, and <a class="el" href="Thread_8cpp_source.html#l00073">RTT::os::Thread::setLockTimeoutPeriodFactor()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a159ee935879a03376aad074b9e6b5b20"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RTT::Activity::mabswaitpolicy</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00235">235</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
-
-<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00343">RTT::Activity::setWaitPeriodPolicy()</a>.</p>
 
 </div>
 </div>
@@ -2210,7 +2186,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00224">224</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00160">RTT::Activity::timeout()</a>, and <a class="el" href="Activity_8cpp_source.html#l00146">RTT::Activity::trigger()</a>.</p>
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00160">RTT::Activity::timeout()</a>, and <a class="el" href="Activity_8cpp_source.html#l00146">RTT::Activity::trigger()</a>.</p>
 
 </div>
 </div>
@@ -2234,7 +2210,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00223">223</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>.</p>
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>.</p>
 
 </div>
 </div>
@@ -2258,7 +2234,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00234">234</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Activity_8cpp_source.html#l00268">RTT::Activity::start()</a>, and <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>.</p>
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::start()</a>, and <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>.</p>
 
 </div>
 </div>
@@ -2285,6 +2261,30 @@ Static Protected Attributes</h2></td></tr>
 <p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00233">233</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
 
 <p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00160">RTT::Activity::timeout()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1fadfdfd34de32c693fd9f3ce097dfb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RTT::Activity::mwaitpolicy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00235">235</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00348">RTT::Activity::setWaitPeriodPolicy()</a>.</p>
 
 </div>
 </div>
@@ -2362,7 +2362,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00331">331</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00606">RTT::os::Thread::getCpuAffinity()</a>, <a class="el" href="Thread_8cpp_source.html#l00633">RTT::os::Thread::getName()</a>, <a class="el" href="Thread_8cpp_source.html#l00611">RTT::os::Thread::getPid()</a>, <a class="el" href="Thread_8cpp_source.html#l00586">RTT::os::Thread::getPriority()</a>, <a class="el" href="Thread_8cpp_source.html#l00488">RTT::os::Thread::getScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00601">RTT::os::Thread::setCpuAffinity()</a>, <a class="el" href="Thread_8cpp_source.html#l00542">RTT::os::Thread::setPeriod()</a>, <a class="el" href="Thread_8cpp_source.html#l00576">RTT::os::Thread::setPriority()</a>, <a class="el" href="Thread_8cpp_source.html#l00469">RTT::os::Thread::setScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00648">RTT::os::Thread::setWaitPeriodPolicy()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00621">RTT::os::Thread::terminate()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, and <a class="el" href="Thread_8cpp_source.html#l00616">RTT::os::Thread::yield()</a>.</p>
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00606">RTT::os::Thread::getCpuAffinity()</a>, <a class="el" href="Thread_8cpp_source.html#l00633">RTT::os::Thread::getName()</a>, <a class="el" href="Thread_8cpp_source.html#l00611">RTT::os::Thread::getPid()</a>, <a class="el" href="Thread_8cpp_source.html#l00586">RTT::os::Thread::getPriority()</a>, <a class="el" href="Thread_8cpp_source.html#l00488">RTT::os::Thread::getScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00601">RTT::os::Thread::setCpuAffinity()</a>, <a class="el" href="Thread_8cpp_source.html#l00542">RTT::os::Thread::setPeriod()</a>, <a class="el" href="Thread_8cpp_source.html#l00576">RTT::os::Thread::setPriority()</a>, <a class="el" href="Thread_8cpp_source.html#l00469">RTT::os::Thread::setScheduler()</a>, <a class="el" href="Thread_8cpp_source.html#l00648">RTT::os::Thread::setWaitPeriodPolicy()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>, <a class="el" href="Thread_8cpp_source.html#l00621">RTT::os::Thread::terminate()</a>, <a class="el" href="Thread_8cpp_source.html#l00236">RTT::os::Thread::Thread()</a>, and <a class="el" href="Thread_8cpp_source.html#l00616">RTT::os::Thread::yield()</a>.</p>
 
 </div>
 </div>
@@ -2386,7 +2386,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ActivityInterface_8hpp_source.html#l00065">65</a> of file <a class="el" href="ActivityInterface_8hpp_source.html">ActivityInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="ActivityInterface_8cpp_source.html#l00045">RTT::base::ActivityInterface::ActivityInterface()</a>, <a class="el" href="Activity_8cpp_source.html#l00256">RTT::Activity::breakLoop()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00202">RTT::extras::SlaveActivity::execute()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00214">RTT::extras::PeriodicActivity::finalize()</a>, <a class="el" href="Activity_8cpp_source.html#l00262">RTT::Activity::finalize()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00070">RTT::base::ActivityInterface::getRunner()</a>, <a class="el" href="Activity_8cpp_source.html#l00117">RTT::Activity::initialize()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00178">RTT::extras::PeriodicActivity::initialize()</a>, <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00102">RTT::extras::SequentialActivity::start()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00130">RTT::extras::SlaveActivity::start()</a>, <a class="el" href="Activity_8cpp_source.html#l00123">RTT::Activity::step()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00200">RTT::extras::PeriodicActivity::step()</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00424">RTT::extras::FileDescriptorActivity::step()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00117">RTT::extras::SequentialActivity::stop()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00154">RTT::extras::SlaveActivity::stop()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00145">RTT::extras::SequentialActivity::trigger()</a>, <a class="el" href="FileDescriptorSimulationActivity_8cpp_source.html#l00245">RTT::extras::FileDescriptorSimulationActivity::work()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00207">RTT::extras::PeriodicActivity::work()</a>, <a class="el" href="Activity_8cpp_source.html#l00128">RTT::Activity::work()</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00432">RTT::extras::FileDescriptorActivity::work()</a>, and <a class="el" href="ActivityInterface_8cpp_source.html#l00050">RTT::base::ActivityInterface::~ActivityInterface()</a>.</p>
+<p>Referenced by <a class="el" href="ActivityInterface_8cpp_source.html#l00045">RTT::base::ActivityInterface::ActivityInterface()</a>, <a class="el" href="Activity_8cpp_source.html#l00261">RTT::Activity::breakLoop()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00202">RTT::extras::SlaveActivity::execute()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00214">RTT::extras::PeriodicActivity::finalize()</a>, <a class="el" href="Activity_8cpp_source.html#l00267">RTT::Activity::finalize()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00070">RTT::base::ActivityInterface::getRunner()</a>, <a class="el" href="Activity_8cpp_source.html#l00117">RTT::Activity::initialize()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00178">RTT::extras::PeriodicActivity::initialize()</a>, <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="ActivityInterface_8cpp_source.html#l00057">RTT::base::ActivityInterface::run()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00102">RTT::extras::SequentialActivity::start()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00130">RTT::extras::SlaveActivity::start()</a>, <a class="el" href="Activity_8cpp_source.html#l00123">RTT::Activity::step()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00200">RTT::extras::PeriodicActivity::step()</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00424">RTT::extras::FileDescriptorActivity::step()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00117">RTT::extras::SequentialActivity::stop()</a>, <a class="el" href="SlaveActivity_8cpp_source.html#l00154">RTT::extras::SlaveActivity::stop()</a>, <a class="el" href="SequentialActivity_8cpp_source.html#l00145">RTT::extras::SequentialActivity::trigger()</a>, <a class="el" href="FileDescriptorSimulationActivity_8cpp_source.html#l00245">RTT::extras::FileDescriptorSimulationActivity::work()</a>, <a class="el" href="PeriodicActivity_8cpp_source.html#l00207">RTT::extras::PeriodicActivity::work()</a>, <a class="el" href="Activity_8cpp_source.html#l00128">RTT::Activity::work()</a>, <a class="el" href="FileDescriptorActivity_8cpp_source.html#l00432">RTT::extras::FileDescriptorActivity::work()</a>, and <a class="el" href="ActivityInterface_8cpp_source.html#l00050">RTT::base::ActivityInterface::~ActivityInterface()</a>.</p>
 
 </div>
 </div>
@@ -2412,7 +2412,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Thread_8hpp_source.html#l00326">326</a> of file <a class="el" href="Thread_8hpp_source.html">Thread.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00226">RTT::os::Thread::emergencyStop()</a>, <a class="el" href="Thread_8cpp_source.html#l00459">RTT::os::Thread::isRunning()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
+<p>Referenced by <a class="el" href="Thread_8cpp_source.html#l00226">RTT::os::Thread::emergencyStop()</a>, <a class="el" href="Thread_8cpp_source.html#l00459">RTT::os::Thread::isRunning()</a>, <a class="el" href="Thread_8cpp_source.html#l00338">RTT::os::Thread::start()</a>, <a class="el" href="Thread_8cpp_source.html#l00417">RTT::os::Thread::stop()</a>, <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>, and <a class="el" href="Thread_8cpp_source.html#l00075">RTT::os::thread_function()</a>.</p>
 
 </div>
 </div>
@@ -2517,7 +2517,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="Activity_8hpp_source.html#l00228">228</a> of file <a class="el" href="Activity_8hpp_source.html">Activity.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00142">RTT::Activity::getPeriod()</a>, <a class="el" href="Activity_8cpp_source.html#l00329">RTT::Activity::isPeriodic()</a>, <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Activity_8cpp_source.html#l00133">RTT::Activity::setPeriod()</a>, <a class="el" href="Activity_8cpp_source.html#l00273">RTT::Activity::stop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00160">RTT::Activity::timeout()</a>.</p>
+<p>Referenced by <a class="el" href="Activity_8cpp_source.html#l00142">RTT::Activity::getPeriod()</a>, <a class="el" href="Activity_8cpp_source.html#l00334">RTT::Activity::isPeriodic()</a>, <a class="el" href="Activity_8cpp_source.html#l00171">RTT::Activity::loop()</a>, <a class="el" href="Activity_8cpp_source.html#l00133">RTT::Activity::setPeriod()</a>, <a class="el" href="Activity_8cpp_source.html#l00278">RTT::Activity::stop()</a>, and <a class="el" href="Activity_8cpp_source.html#l00160">RTT::Activity::timeout()</a>.</p>
 
 </div>
 </div>
@@ -2527,7 +2527,7 @@ Static Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 9 2018 18:26:46 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 16 2018 11:27:21 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
