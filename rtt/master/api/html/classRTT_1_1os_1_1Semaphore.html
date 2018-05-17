@@ -82,12 +82,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a805375e0561af4478168bc6df96b319c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Semaphore.html#a805375e0561af4478168bc6df96b319c">trywait</a> ()</td></tr>
 <tr class="memdesc:a805375e0561af4478168bc6df96b319c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to wait on this semaphore.  <a href="#a805375e0561af4478168bc6df96b319c">More...</a><br /></td></tr>
 <tr class="separator:a805375e0561af4478168bc6df96b319c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a841946e02072fcb8710e04d2af7b0072"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Semaphore.html#a841946e02072fcb8710e04d2af7b0072">waitUntil</a> (<a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a> abs_time)</td></tr>
-<tr class="memdesc:a841946e02072fcb8710e04d2af7b0072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait on this semaphore until a maximum absolute time.  <a href="#a841946e02072fcb8710e04d2af7b0072">More...</a><br /></td></tr>
-<tr class="separator:a841946e02072fcb8710e04d2af7b0072"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9362178ac6312f24433a3326f97ff2cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Semaphore.html#a9362178ac6312f24433a3326f97ff2cb">waitUntil</a> (<a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a> abs_time)</td></tr>
-<tr class="memdesc:a9362178ac6312f24433a3326f97ff2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait on this semaphore until a maximum absolute time.  <a href="#a9362178ac6312f24433a3326f97ff2cb">More...</a><br /></td></tr>
-<tr class="separator:a9362178ac6312f24433a3326f97ff2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa602f2d61a401033f270089338e8856e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1os_1_1Semaphore.html#aa602f2d61a401033f270089338e8856e">value</a> ()</td></tr>
 <tr class="memdesc:aa602f2d61a401033f270089338e8856e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current count of this semaphore.  <a href="#aa602f2d61a401033f270089338e8856e">More...</a><br /></td></tr>
 <tr class="separator:aa602f2d61a401033f270089338e8856e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,8 +180,6 @@ Public Member Functions</h2></td></tr>
 
 <p>References <a class="el" href="fosi__interface_8h.html#ab626c40620b37327259017af0c248c9d">rtos_sem_signal()</a>.</p>
 
-<p>Referenced by <a class="el" href="Timer_8cpp_source.html#l00190">RTT::os::Timer::arm()</a>, and <a class="el" href="Timer_8cpp_source.html#l00171">RTT::os::Timer::startTimer()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a805375e0561af4478168bc6df96b319c"></a>
@@ -243,7 +235,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return the current count of this semaphore. </p>
 
-<p>Definition at line <a class="el" href="Semaphore_8hpp_source.html#l00145">145</a> of file <a class="el" href="Semaphore_8hpp_source.html">Semaphore.hpp</a>.</p>
+<p>Definition at line <a class="el" href="Semaphore_8hpp_source.html#l00117">117</a> of file <a class="el" href="Semaphore_8hpp_source.html">Semaphore.hpp</a>.</p>
 
 <p>References <a class="el" href="fosi__interface_8h.html#a61bf6cd54cd3daff752aba4735f52869">rtos_sem_value()</a>.</p>
 
@@ -279,101 +271,13 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a841946e02072fcb8710e04d2af7b0072"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RTT::os::Semaphore::waitUntil </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceRTT.html#ab93965f88bfbe72fbc2ece16c047c902">Seconds</a>&#160;</td>
-          <td class="paramname"><em>abs_time</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Wait on this semaphore until a maximum absolute time. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">abs_time</td><td>Absolute time in seconds until which to wait on this semaphore. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>if the semaphore was signaled before abs_time expired. </td></tr>
-    <tr><td class="paramname">false</td><td>if the semaphore was not signaled. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ecos_2fosi_8h.html#a86faa704540130956d12e5df711c48aa" title="Get &quot;system&quot; time in nanoseconds. ">rtos_get_time_ns()</a> to get the current time in nano seconds. </dd></dl>
-
-<p>Definition at line <a class="el" href="Semaphore_8hpp_source.html#l00120">120</a> of file <a class="el" href="Semaphore_8hpp_source.html">Semaphore.hpp</a>.</p>
-
-<p>References <a class="el" href="fosi__interface_8h.html#aa50d0fc11cb273e850e384dcbe85b5c3">rtos_sem_wait_until()</a>, and <a class="el" href="os_2Time_8hpp_source.html#l00107">RTT::Seconds_to_nsecs()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9362178ac6312f24433a3326f97ff2cb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RTT::os::Semaphore::waitUntil </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceRTT.html#af83330e8244855273c9246bd65c20682">nsecs</a>&#160;</td>
-          <td class="paramname"><em>abs_time</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Wait on this semaphore until a maximum absolute time. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">abs_time</td><td>Absolute time in nano seconds until which to wait on this semaphore. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>if the semaphore was signaled before abs_time expired. </td></tr>
-    <tr><td class="paramname">false</td><td>if the semaphore was not signaled. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ecos_2fosi_8h.html#a86faa704540130956d12e5df711c48aa" title="Get &quot;system&quot; time in nanoseconds. ">rtos_get_time_ns()</a> to get the current time in nano seconds. </dd></dl>
-
-<p>Definition at line <a class="el" href="Semaphore_8hpp_source.html#l00134">134</a> of file <a class="el" href="Semaphore_8hpp_source.html">Semaphore.hpp</a>.</p>
-
-<p>References <a class="el" href="fosi__interface_8h.html#aa50d0fc11cb273e850e384dcbe85b5c3">rtos_sem_wait_until()</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>rtt/os/<a class="el" href="Semaphore_8hpp_source.html">Semaphore.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 17 2018 10:16:58 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 17 2018 16:18:54 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

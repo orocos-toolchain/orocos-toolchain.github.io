@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Distributing Communication with Real-Time Message Queues</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><meta name="description" content="This document explains the principles of the MQueue Library of Orocos, the Open RObot COntrol Software project. It enables real-time communication between processes on the same node." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idm46291710267056"></a>Distributing Communication with Real-Time Message Queues</h2></div><div><p class="copyright">Copyright © 2009 Peter Soetens</p></div><div><div class="legalnotice"><a id="idm46291707022080"></a><p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Distributing Communication with Real-Time Message Queues</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><meta name="description" content="This document explains the principles of the MQueue Library of Orocos, the Open RObot COntrol Software project. It enables real-time communication between processes on the same node." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idm45096891620528"></a>Distributing Communication with Real-Time Message Queues</h2></div><div><p class="copyright">Copyright © 2009 Peter Soetens</p></div><div><div class="legalnotice"><a id="idm45096888245664"></a><p>
 	Permission is granted to copy, distribute and/or modify this document
 	under the terms of the GNU Free Documentation License, Version 1.1 or
 	any later version published by the Free Software Foundation, with no
@@ -11,16 +11,16 @@
 	<span class="emphasis"><em>MQueue Library</em></span> of <acronym class="acronym">Orocos</acronym>, the <span class="emphasis"><em>Open
 	RObot COntrol Software</em></span> project. It enables real-time
 	communication between processes on the same node.
-      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idm46291706218416">1. Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#idm46291706456240">1.1. Status</a></span></dt><dt><span class="section"><a href="#idm46291707990640">1.2. Requirements and Setup</a></span></dt></dl></dd><dt><span class="section"><a href="#idm46291706655568">2. Transporting user types.</a></span></dt><dd><dl><dt><span class="section"><a href="#idm46291705796560">2.1. Transporting 'simple' data types</a></span></dt><dt><span class="section"><a href="#idm46291710404384">2.2. Transporting 'complex' data types</a></span></dt></dl></dd><dt><span class="section"><a href="#idm46291708088208">3. Connecting ports using the MQueue transport</a></span></dt><dd><dl><dt><span class="section"><a href="#idm46291708085920">3.1. Bare C++ connection</a></span></dt><dt><span class="section"><a href="#idm46291708081040">3.2. CORBA managed connections</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46291706218416"></a>1. Overview</h2></div></div></div><p>
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#idm45096888788912">1. Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45096888295136">1.1. Status</a></span></dt><dt><span class="section"><a href="#idm45096888905232">1.2. Requirements and Setup</a></span></dt></dl></dd><dt><span class="section"><a href="#idm45096889489968">2. Transporting user types.</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45096888600784">2.1. Transporting 'simple' data types</a></span></dt><dt><span class="section"><a href="#idm45096891699520">2.2. Transporting 'complex' data types</a></span></dt></dl></dd><dt><span class="section"><a href="#idm45096889434352">3. Connecting ports using the MQueue transport</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45096889432064">3.1. Bare C++ connection</a></span></dt><dt><span class="section"><a href="#idm45096889427056">3.2. CORBA managed connections</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45096888788912"></a>1. Overview</h2></div></div></div><p>
       This transport allows to do inter-process communication between Orocos processes
       on the same node. It uses the POSIX messages queues where available. This includes
       GNU/Linux systems and Xenomai.
     </p><p>
       The MQueue transport provides:
       </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Connection and Communication of Orocos data flow streams between processes</p></li><li class="listitem"><p>The ability to set these up using C++ syntax.</p></li><li class="listitem"><p>The ability to set these up using the Corba transport by creating the MQueue as an 'Out-Of-Band' transport.</p></li></ul></div><p> 
-    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46291706456240"></a>1.1. Status</h3></div></div></div><p>
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45096888295136"></a>1.1. Status</h3></div></div></div><p>
 	As of this writing, MQueues only transport data flow as streams.
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46291707990640"></a>1.2. Requirements and Setup</h3></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45096888905232"></a>1.2. Requirements and Setup</h3></div></div></div><p>
 	You must enable the <code class="option">ENABLE_MQUEUE</code> flag in 
 	CMake. This will, depending on your target, try to detect
 	your mqueue.h header file and library. MQueue also requires the boost::serialization
@@ -35,11 +35,11 @@
 	library to transport your type and your type must be known to this framework.
       </p><p>
 	See below on how to do this.
-      </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46291706655568"></a>2. Transporting user types.</h2></div></div></div><p>
+      </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45096889489968"></a>2. Transporting user types.</h2></div></div></div><p>
       Be sure to read the 'Writing Plugins' manual such that your data type is already
       known to the RTT framework. This section extends that work to make the known data type
       transportable over MQueues.
-    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46291705796560"></a>2.1. Transporting 'simple' data types</h3></div></div></div><p>
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45096888600784"></a>2.1. Transporting 'simple' data types</h3></div></div></div><p>
 	Simple data types without pointers or dynamically sized objects,
 	can be transported quite easily. They are added as such:
       </p><pre class="programlisting">  // myapp.cpp
@@ -71,7 +71,7 @@
       </p><p>
 	In practice, you'll want to write a plugin which contains this code such that your data type is loaded in every
 	Orocos application that you start.
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46291710404384"></a>2.2. Transporting 'complex' data types</h3></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45096891699520"></a>2.2. Transporting 'complex' data types</h3></div></div></div><p>
 	Data types like std::vector or similar can't just be byte-copied.
 	They need special treatment for reading and writing their contents.
 	Orocos uses the boost::serialization library for this. This library
@@ -122,7 +122,7 @@
       a serialize() function, and used the MQSerializationProtocol instead of the MQTemplateProtocol
       to register our data transport. You can find a tutorial on writing your own serialization
       function on: <a class="ulink" href="http://www.boost.org/doc/libs/1_40_0/libs/serialization/doc/index.html" target="_top">The Boost Serialization Website</a>.
-    </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm46291708088208"></a>3. Connecting ports using the MQueue transport</h2></div></div></div><p>
+    </p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45096889434352"></a>3. Connecting ports using the MQueue transport</h2></div></div></div><p>
       Orocos will not try to use this transport by default when connecting
       data flow ports. You must tell it explicitly to do so. This is 
       done using the <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href="../api/html/classRTT_1_1ConnPolicy.html">ConnPolicy</a> object, which
@@ -132,7 +132,7 @@
       data stream on the output port, and an incomming data stream at the
       input port which you wish to connect. This can be done in C++ with
       or without the help from the CORBA transport.
-    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46291708085920"></a>3.1. Bare C++ connection</h3></div></div></div><p>
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45096889432064"></a>3.1. Bare C++ connection</h3></div></div></div><p>
 	If you don't want to use CORBA for setting up a connection,
 	you need to use the createStream function to setup a data flow
 	stream in each process. This requires you to choose a name
@@ -181,7 +181,7 @@
 	If you want proper connection management, you need to use
 	the CORBA approach below, which keeps track of appearing and
 	disappearing connections.
-      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm46291708081040"></a>3.2. CORBA managed connections</h3></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45096889427056"></a>3.2. CORBA managed connections</h3></div></div></div><p>
       The CORBA transport supports 'Out-Of-Band' (OOB) connections for data flow.
       This means that CORBA itself is used to setup the connection between
       both ports, but the actual data transfer is done using OOB protocol.
