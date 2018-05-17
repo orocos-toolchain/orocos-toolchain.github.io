@@ -242,10 +242,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ce632b8b4756316f80cf535c4f4ea49"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html">OperationCallerBase</a>&lt; FunctionT &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerBase.html#a0ce632b8b4756316f80cf535c4f4ea49">cloneI</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *<a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#afc3cd3a2cce0e1769b3187d0af9ac215">caller</a>) const =0</td></tr>
 <tr class="memdesc:a0ce632b8b4756316f80cf535c4f4ea49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new clone of this method using operator new().  <a href="#a0ce632b8b4756316f80cf535c4f4ea49">More...</a><br /></td></tr>
 <tr class="separator:a0ce632b8b4756316f80cf535c4f4ea49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38a9a28992b855d57543d238ddcaada2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a38a9a28992b855d57543d238ddcaada2">setOwner</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ee)</td></tr>
+<tr class="memitem:a38a9a28992b855d57543d238ddcaada2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#a38a9a28992b855d57543d238ddcaada2">setOwner</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ee)</td></tr>
 <tr class="memdesc:a38a9a28992b855d57543d238ddcaada2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the <a class="el" href="classRTT_1_1ExecutionEngine.html" title="An execution engine serialises (executes one after the other) the execution of all commands...">ExecutionEngine</a> of the task which owns this method.  <a href="#a38a9a28992b855d57543d238ddcaada2">More...</a><br /></td></tr>
 <tr class="separator:a38a9a28992b855d57543d238ddcaada2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb68aecd6596ce7e6760dd5e3da999e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#adb68aecd6596ce7e6760dd5e3da999e2">setCaller</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ee)</td></tr>
+<tr class="memitem:adb68aecd6596ce7e6760dd5e3da999e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#adb68aecd6596ce7e6760dd5e3da999e2">setCaller</a> (<a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *ee)</td></tr>
 <tr class="memdesc:adb68aecd6596ce7e6760dd5e3da999e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the caller's engine of this operation.  <a href="#adb68aecd6596ce7e6760dd5e3da999e2">More...</a><br /></td></tr>
 <tr class="separator:adb68aecd6596ce7e6760dd5e3da999e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb3ef74cecec973f485aa5b580d5ee73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1base_1_1OperationCallerInterface.html#adb3ef74cecec973f485aa5b580d5ee73">setThread</a> (<a class="el" href="namespaceRTT.html#a5bc5629360f41b73f0afd3e901ca4915">ExecutionThread</a> et, <a class="el" href="classRTT_1_1ExecutionEngine.html">ExecutionEngine</a> *executor)</td></tr>
@@ -2818,7 +2818,7 @@ template&lt;class T1 , class T2 , class T3 , class T4 , class T5 , class T6 , cl
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2835,7 +2835,7 @@ template&lt;class T1 , class T2 , class T3 , class T4 , class T5 , class T6 , cl
 
 <p>References <a class="el" href="OperationCallerInterface_8hpp_source.html#l00087">RTT::base::OperationCallerInterface::caller</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00667">RTT::internal::LocalOperationCaller&lt; bool(std::string) &gt;::LocalOperationCaller()</a>.</p>
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00667">RTT::internal::LocalOperationCaller&lt; bool(std::string) &gt;::LocalOperationCaller()</a>, <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00418">RTT::internal::RemoteOperationCaller&lt; OperationCallerT &gt;::RemoteOperationCaller()</a>, and <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00440">RTT::internal::RemoteOperationCaller&lt; OperationCallerT &gt;::setCaller()</a>.</p>
 
 </div>
 </div>
@@ -2856,7 +2856,7 @@ template&lt;class T1 , class T2 , class T3 , class T4 , class T5 , class T6 , cl
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2948,7 +2948,7 @@ template&lt;class T1 , class T2 , class T3 , class T4 , class T5 , class T6 , cl
 
 <p>Definition at line <a class="el" href="OperationCallerInterface_8hpp_source.html#l00087">87</a> of file <a class="el" href="OperationCallerInterface_8hpp_source.html">OperationCallerInterface.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00284">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::checkCaller()</a>, <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00437">RTT::internal::RemoteOperationCaller&lt; OperationCallerT &gt;::cloneI()</a>, <a class="el" href="LocalOperationCaller_8hpp_source.html#l00294">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::collect_impl()</a>, <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00024">RTT::base::OperationCallerInterface::setCaller()</a>, and <a class="el" href="OperationCallerBase_8hpp_source.html#l00061">RTT::base::OperationCallerBase&lt; FunctionT &gt;::~OperationCallerBase()</a>.</p>
+<p>Referenced by <a class="el" href="LocalOperationCaller_8hpp_source.html#l00284">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::checkCaller()</a>, <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00449">RTT::internal::RemoteOperationCaller&lt; OperationCallerT &gt;::cloneI()</a>, <a class="el" href="LocalOperationCaller_8hpp_source.html#l00294">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::collect_impl()</a>, <a class="el" href="LocalOperationCaller_8hpp_source.html#l00099">RTT::internal::LocalOperationCallerImpl&lt; FunctionT &gt;::executeAndDispose()</a>, <a class="el" href="RemoteOperationCaller_8hpp_source.html#l00418">RTT::internal::RemoteOperationCaller&lt; OperationCallerT &gt;::RemoteOperationCaller()</a>, <a class="el" href="OperationCallerInterface_8cpp_source.html#l00024">RTT::base::OperationCallerInterface::setCaller()</a>, and <a class="el" href="OperationCallerBase_8hpp_source.html#l00061">RTT::base::OperationCallerBase&lt; FunctionT &gt;::~OperationCallerBase()</a>.</p>
 
 </div>
 </div>
@@ -3033,7 +3033,7 @@ template&lt;class FunctionT&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 17 2018 10:27:25 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 17 2018 10:37:30 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
