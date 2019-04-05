@@ -78,7 +78,7 @@ Inheritance diagram for RTT::corba::CorbaTypeTransporter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9c31a1b39dd027f38958fbc6e444959e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceCORBA.html#adeac34d2ada149e3c68679f895121aaf">CORBA::Any_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a9c31a1b39dd027f38958fbc6e444959e">createAny</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> source) const =0</td></tr>
+<tr class="memitem:a9c31a1b39dd027f38958fbc6e444959e"><td class="memItemLeft" align="right" valign="top">virtual CORBA::Any_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a9c31a1b39dd027f38958fbc6e444959e">createAny</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> source) const =0</td></tr>
 <tr class="memdesc:a9c31a1b39dd027f38958fbc6e444959e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate <em>source</em> and create an any which contains the value of <em>source</em>.  <a href="#a9c31a1b39dd027f38958fbc6e444959e">More...</a><br /></td></tr>
 <tr class="separator:a9c31a1b39dd027f38958fbc6e444959e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25de6e28d4c3a70684e8a0a04f1c8744"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a25de6e28d4c3a70684e8a0a04f1c8744">updateAny</a> (<a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a> source, CORBA::Any &amp;any) const =0</td></tr>
@@ -94,7 +94,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9c629b397951df54e0455d9075b155e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a channel element for remote transport in both directions.  <a href="#a9c629b397951df54e0455d9075b155e8">More...</a><br /></td></tr>
 <tr class="separator:a9c629b397951df54e0455d9075b155e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a823843b549845093c1ec30e8f4451522"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1ChannelElementBase.html#a524e821b47261254ed309190fc3c46a1">base::ChannelElementBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a823843b549845093c1ec30e8f4451522">createStream</a> (<a class="el" href="classRTT_1_1base_1_1PortInterface.html">base::PortInterface</a> *, const <a class="el" href="classRTT_1_1ConnPolicy.html">ConnPolicy</a> &amp;, bool) const </td></tr>
-<tr class="memdesc:a823843b549845093c1ec30e8f4451522"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="namespaceCORBA.html">CORBA</a> transport does not support creating '<a class="el" href="namespaceCORBA.html">CORBA</a>' streams.  <a href="#a823843b549845093c1ec30e8f4451522">More...</a><br /></td></tr>
+<tr class="memdesc:a823843b549845093c1ec30e8f4451522"><td class="mdescLeft">&#160;</td><td class="mdescRight">The CORBA transport does not support creating 'CORBA' streams.  <a href="#a823843b549845093c1ec30e8f4451522">More...</a><br /></td></tr>
 <tr class="separator:a823843b549845093c1ec30e8f4451522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f954d5fadeaaf475ad91d340988fa02"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRTT_1_1corba_1_1CorbaTypeTransporter.html#a3f954d5fadeaaf475ad91d340988fa02">createPropertyDataSource</a> (CService_ptr serv, const std::string &amp;vname)=0</td></tr>
 <tr class="memdesc:a3f954d5fadeaaf475ad91d340988fa02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a data source for an attribute or property.  <a href="#a3f954d5fadeaaf475ad91d340988fa02">More...</a><br /></td></tr>
@@ -115,7 +115,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespaceCORBA.html#adeac34d2ada149e3c68679f895121aaf">CORBA::Any_ptr</a> RTT::corba::CorbaTypeTransporter::createAny </td>
+          <td class="memname">virtual CORBA::Any_ptr RTT::corba::CorbaTypeTransporter::createAny </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classRTT_1_1base_1_1DataSourceBase.html#af764490461a162f4a62c63770535fb7b">base::DataSourceBase::shared_ptr</a>&#160;</td>
           <td class="paramname"><em>source</em></td><td>)</td>
@@ -339,7 +339,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The <a class="el" href="namespaceCORBA.html">CORBA</a> transport does not support creating '<a class="el" href="namespaceCORBA.html">CORBA</a>' streams. </p>
+<p>The CORBA transport does not support creating 'CORBA' streams. </p>
 <dl class="section return"><dt>Returns</dt><dd>null </dd></dl>
 
 <p>Implements <a class="el" href="classRTT_1_1types_1_1TypeTransporter.html#a26b001061c666f942058d1e84db7bbc6">RTT::types::TypeTransporter</a>.</p>
@@ -437,7 +437,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 17 2018 16:18:51 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 5 2019 12:14:58 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

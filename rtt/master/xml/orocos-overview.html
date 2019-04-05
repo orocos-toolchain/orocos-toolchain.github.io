@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The OROCOS Project</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><meta name="description" content="This document gives an application oriented overview of Orocos, the Open RObot COntrol Software project." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idm45772522095760"></a>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The OROCOS Project</title><link rel="stylesheet" type="text/css" href="orocos-html.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><meta name="description" content="This document gives an application oriented overview of Orocos, the Open RObot COntrol Software project." /></head><body><div class="article"><div class="titlepage"><div><div><h2 class="title"><a id="idm45016623522992"></a>
       The OROCOS Project 
     </h2></div><div><h3 class="subtitle"><em><span class="emphasis"><em>Open RObot COntrol Software</em></span>
-    </em></h3></div><div><p class="copyright">Copyright © 2002-2007 Herman Bruyninckx, Peter Soetens</p></div><div><div class="legalnotice"><a id="idm45772525403328"></a><p>
+    </em></h3></div><div><p class="copyright">Copyright © 2002-2007 Herman Bruyninckx, Peter Soetens</p></div><div><div class="legalnotice"><a id="idm45016624065424"></a><p>
 	Permission is granted to copy, distribute and/or modify this document
 	under the terms of the GNU Free Documentation License, Version 1.1 or
 	any later version published by the Free Software Foundation, with no
@@ -14,7 +14,7 @@
 	This document gives an application oriented overview of
 	<a class="ulink" href="http://www.orocos.org" target="_top"><acronym class="acronym">Orocos</acronym></a>,
 	the <span class="emphasis"><em>Open RObot COntrol Software</em></span> project. 
-      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#whatis">1. What is Orocos?</a></span></dt><dt><span class="section"><a href="#audience">2. Target audience</a></span></dt><dt><span class="section"><a href="#idm45772525748656">3. Building Orocos Applications</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45772525742528">3.1. Application Templates</a></span></dt><dt><span class="section"><a href="#idm45772525739568">3.2. Control Components</a></span></dt></dl></dd><dt><span class="section"><a href="#idm45772521042720">4. Related 'Orocos' Projects</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="whatis"></a>1. What is Orocos?</h2></div></div></div><p>
+      </p></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#whatis">1. What is Orocos?</a></span></dt><dt><span class="section"><a href="#audience">2. Target audience</a></span></dt><dt><span class="section"><a href="#idm45016624191728">3. Building Orocos Applications</a></span></dt><dd><dl><dt><span class="section"><a href="#idm45016624185600">3.1. Application Templates</a></span></dt><dt><span class="section"><a href="#idm45016624182640">3.2. Control Components</a></span></dt></dl></dd><dt><span class="section"><a href="#idm45016619484720">4. Related 'Orocos' Projects</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="whatis"></a>1. What is Orocos?</h2></div></div></div><p>
       “<acronym class="acronym">Orocos</acronym>” is the acronym of the
       <span class="emphasis"><em><a class="ulink" href="http://www.orocos.org" target="_top">Open Robot Control
 	  Software</a></em></span> project. The project's aim is to develop
@@ -23,7 +23,7 @@
       The <acronym class="acronym">Orocos</acronym> project supports 4 C++ libraries: the Real-Time Toolkit, the
       Kinematics and Dynamics Library, the Bayesian Filtering Library and
       the Orocos Component Library.
-    </p><div class="figure"><a id="idm45772525400944"></a><p class="title"><strong>Figure 1. Orocos Libraries</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/RTT_KDL_BFL_400.png" alt="Orocos Libraries" /></div></div></div><br class="figure-break" /><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+    </p><div class="figure"><a id="idm45016624062976"></a><p class="title"><strong>Figure 1. Orocos Libraries</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/RTT_KDL_BFL_400.png" alt="Orocos Libraries" /></div></div></div><br class="figure-break" /><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
 	  The <acronym class="acronym">Orocos</acronym> Real-Time Toolkit (RTT) is not an application
 	  in itself, but it provides the infrastructure and the
 	  functionalities to build robotics applications in C++. The
@@ -109,7 +109,7 @@
       <span class="emphasis"><em>framework</em></span>, independent of any application
       architecture. Serving the needs of the End Users is left to
       (commercial and non-commercial) Application Builders.
-    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45772525748656"></a>3. Building Orocos Applications</h2></div></div></div><p>
+    </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45016624191728"></a>3. Building Orocos Applications</h2></div></div></div><p>
       Orocos applications are composed of software components, which form
       an application specific network. When using Orocos, you can choose
       to use predefined components, contributed by the community, or
@@ -117,7 +117,7 @@
       This section introduces both ways of building applications.
     </p><div class="figure"><a id="fig-orocos-toolkit"></a><p class="title"><strong>Figure 2. 
 	  Orocos Real-Time Toolkit
-	</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/RealTimeToolkit.png" alt="Orocos Real-Time Toolkit" /></div></div></div><br class="figure-break" /><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45772525742528"></a>3.1. Application Templates</h3></div></div></div><p>
+	</strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/RealTimeToolkit.png" alt="Orocos Real-Time Toolkit" /></div></div></div><br class="figure-break" /><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45016624185600"></a>3.1. Application Templates</h3></div></div></div><p>
 	  An "Application Template" is a set of components that work
 	  well together. For example, the application template for
 	  motion control contains components for path planning,
@@ -132,7 +132,7 @@
 	  architecture.
 	</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/icons/note.png" /></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>An application template has no relation to 'C++'
 	  templates.
-	  </p></td></tr></table></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45772525739568"></a>3.2. Control Components</h3></div></div></div><p>
+	  </p></td></tr></table></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm45016624182640"></a>3.2. Control Components</h3></div></div></div><p>
 	  Applications are constructed using the Orocos
 	  "Control Component". A distributable entity which has a
 	  control oriented interface.  
@@ -193,7 +193,7 @@
 	</p><div class="figure"><a id="fig-orocos-component-implementation"></a><p class="title"><strong>Figure 4. 
 	    Orocos Control Component State Machines.
 	  </strong></p><div class="figure-contents"><div class="mediaobject"><img src="images/ComponentImplementation.png" alt="Orocos Control Component State Machines." /></div></div></div><p><br class="figure-break" />
-	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45772521042720"></a>4. Related 'Orocos' Projects</h2></div></div></div><p>
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="idm45016619484720"></a>4. Related 'Orocos' Projects</h2></div></div></div><p>
       The Orocos project spawned a couple of largely independent
       software projects. The documentation you are reading is about
       the Real-Time Control Software located on the Orocos.org web page.

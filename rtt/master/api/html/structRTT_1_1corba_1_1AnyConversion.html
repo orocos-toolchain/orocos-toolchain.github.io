@@ -89,7 +89,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a73e01e04697a7f5ef6f868289a29bace"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion.html#a73e01e04697a7f5ef6f868289a29bace">update</a> (const CORBA::Any &amp;any, <a class="el" href="structRTT_1_1corba_1_1AnyConversion.html#ab42b2cb03addc3dce40057526b841f15">StdType</a> tp)</td></tr>
 <tr class="memdesc:a73e01e04697a7f5ef6f868289a29bace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates tp with the contents of any.  <a href="#a73e01e04697a7f5ef6f868289a29bace">More...</a><br /></td></tr>
 <tr class="separator:a73e01e04697a7f5ef6f868289a29bace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a582694cf9c500af369452f1e5bb8ae06"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceCORBA.html#adeac34d2ada149e3c68679f895121aaf">CORBA::Any_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion.html#a582694cf9c500af369452f1e5bb8ae06">createAny</a> (<a class="el" href="structRTT_1_1corba_1_1AnyConversion.html#ab42b2cb03addc3dce40057526b841f15">StdType</a> tp)</td></tr>
+<tr class="memitem:a582694cf9c500af369452f1e5bb8ae06"><td class="memItemLeft" align="right" valign="top">static CORBA::Any_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion.html#a582694cf9c500af369452f1e5bb8ae06">createAny</a> (<a class="el" href="structRTT_1_1corba_1_1AnyConversion.html#ab42b2cb03addc3dce40057526b841f15">StdType</a> tp)</td></tr>
 <tr class="memdesc:a582694cf9c500af369452f1e5bb8ae06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an CORBA::Any object out of a C++/IDL type.  <a href="#a582694cf9c500af369452f1e5bb8ae06">More...</a><br /></td></tr>
 <tr class="separator:a582694cf9c500af369452f1e5bb8ae06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd818c45208c7e4c26a2d940b350f877"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structRTT_1_1corba_1_1AnyConversion.html#acd818c45208c7e4c26a2d940b350f877">updateAny</a> (<a class="el" href="structRTT_1_1corba_1_1AnyConversion.html#ab42b2cb03addc3dce40057526b841f15">StdType</a> tp, CORBA::Any &amp;any)</td></tr>
@@ -175,7 +175,7 @@ template&lt;class Type&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="namespaceCORBA.html#adeac34d2ada149e3c68679f895121aaf">CORBA::Any_ptr</a> <a class="el" href="structRTT_1_1corba_1_1AnyConversion.html">RTT::corba::AnyConversion</a>&lt; Type &gt;::createAny </td>
+          <td class="memname">static CORBA::Any_ptr <a class="el" href="structRTT_1_1corba_1_1AnyConversion.html">RTT::corba::AnyConversion</a>&lt; Type &gt;::createAny </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structRTT_1_1corba_1_1AnyConversion.html#ab42b2cb03addc3dce40057526b841f15">StdType</a>&#160;</td>
           <td class="paramname"><em>tp</em></td><td>)</td>
@@ -243,7 +243,7 @@ template&lt;class Type&gt; </div>
 <p>Updates cb with the contents of tp. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cb</td><td>A <a class="el" href="namespaceCORBA.html">CORBA</a> type in which the contents of the tp are written. </td></tr>
+    <tr><td class="paramname">cb</td><td>A CORBA type in which the contents of the tp are written. </td></tr>
     <tr><td class="paramname">tp</td><td>Contains possibly data of a type convertible to cb </td></tr>
   </table>
   </dd>
@@ -295,7 +295,7 @@ template&lt;class Type&gt; </div>
 <p>Updates tp with the contents of cb. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tp</td><td>A C++ or <a class="el" href="namespaceCORBA.html">CORBA</a> type in which the contents of the cb are written. </td></tr>
+    <tr><td class="paramname">tp</td><td>A C++ or CORBA type in which the contents of the cb are written. </td></tr>
     <tr><td class="paramname">cb</td><td>Contains possibly data of a type convertible to tp </td></tr>
   </table>
   </dd>
@@ -348,7 +348,7 @@ template&lt;class Type&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">any</td><td>Contains possibly data of a type convertible to tp </td></tr>
-    <tr><td class="paramname">tp</td><td>A C++ or <a class="el" href="namespaceCORBA.html">CORBA</a> type in which the contents of the any are written. </td></tr>
+    <tr><td class="paramname">tp</td><td>A C++ or CORBA type in which the contents of the any are written. </td></tr>
   </table>
   </dd>
 </dl>
@@ -420,7 +420,7 @@ template&lt;class Type&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 17 2018 16:18:51 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 5 2019 12:14:58 for Orocos Real-Time Toolkit by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
